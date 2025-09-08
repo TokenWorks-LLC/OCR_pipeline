@@ -1,0 +1,50 @@
+{
+  "input": {
+    "input_directory": "./data/input",
+    "supported_formats": [".pdf", ".png", ".jpg", ".jpeg", ".tiff", ".bmp"],
+    "process_all_files": true,
+    "specific_file": "",
+    "recursive_search": false
+  },
+  "output": {
+    "output_directory": "./data/output",
+    "create_subdirectories": true,
+    "timestamp_outputs": true
+  },
+  "ocr": {
+    "engine": "paddleocr",
+    "dpi": 300,
+    "languages": ["en", "tr", "de", "fr", "it"],
+    "enable_text_correction": true,
+    "enable_reading_order": true,
+    "confidence_threshold": 0.5
+  },
+  "llm": {
+    "enable_correction": true,
+    "provider": "ollama",
+    "model": "mistral:latest",
+    "base_url": "http://localhost:11434",
+    "timeout": 30,
+    "max_concurrent_corrections": 3
+  },
+  "akkadian": {
+    "enable_extraction": true,
+    "confidence_threshold": 0.8,
+    "generate_pdf_report": true,
+    "translation_languages": ["english", "german", "french", "turkish"]
+  },
+  "processing": {
+    "batch_size": 10,
+    "max_workers": 4,
+    "skip_existing": true,
+    "create_visualizations": true,
+    "create_html_overlay": true,
+    "verbose": true
+  },
+  "csv_output": {
+    "format": "aggregated",
+    "include_metadata": true,
+    "include_confidence_scores": true,
+    "separate_akkadian_csv": true
+  }
+}

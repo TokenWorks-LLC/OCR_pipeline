@@ -19,6 +19,10 @@ from datetime import datetime
 sys.path.insert(0, str(Path(__file__).parent / 'src'))
 sys.path.insert(0, str(Path(__file__).parent / 'production'))
 
+# Import benchmark tracker for evaluation mode
+# Temporarily disabled due to file encoding issues
+BENCHMARK_AVAILABLE = False
+
 def load_config(config_path: str = "config.json") -> Dict[str, Any]:
     """Load configuration from JSON file."""
     try:
@@ -41,6 +45,18 @@ def validate_config(config: Dict[str, Any]) -> bool:
         if section not in config:
             print(f"❌ Missing required config section: {section}")
             return False
+    
+    # Validate evaluation section if present
+    if 'evaluation' in config:
+        eval_config = config['evaluation']
+        if not isinstance(eval_config, dict):
+            print("❌ Evaluation section must be a dictionary")
+            return False
+        
+        if eval_config.get('enable_benchmarking', False):
+            if 'output_file' not in eval_config:
+                print("❌ Evaluation output_file is required when benchmarking is enabled")
+                return False
     
     # Validate input directory
     input_dir = config['input']['input_directory']
@@ -221,6 +237,8 @@ def main():
                        help="Show what would be processed without actually processing")
     parser.add_argument("--validate-only", action="store_true", 
                        help="Only validate configuration and exit")
+    parser.add_argument("--eval-mode", action="store_true",
+                       help="Enable evaluation/benchmarking mode")
     
     args = parser.parse_args()
     
@@ -243,6 +261,24 @@ def main():
     
     # Setup logging
     logger = setup_logging(config)
+    
+    # Initialize evaluation/benchmarking if enabled
+    benchmark_tracker = None
+    eval_mode = args.eval_mode or config.get('evaluation', {}).get('enable_benchmarking', False)
+    
+    if eval_mode and BENCHMARK_AVAILABLE:
+        eval_config = config.get('evaluation', {})
+        mode_name = eval_config.get('mode_name', 'default')
+        output_file = eval_config.get('output_file', './data/eval_output/benchmark.json')
+        
+        benchmark_tracker = BenchmarkTracker(output_file, mode_name)
+        benchmark_tracker.start_benchmark()
+        
+        print(f"📊 Evaluation mode enabled: {mode_name}")
+        print(f"📈 Benchmark output: {output_file}")
+    elif eval_mode and not BENCHMARK_AVAILABLE:
+        print("⚠️  Evaluation mode requested but benchmark tracker not available")
+        print("   Continuing without benchmarking...")
     
     # Get files to process
     files_to_process = get_files_to_process(config)
@@ -288,6 +324,14 @@ def main():
     start_time = time.time()
     results = []
     
+    # Track evaluation metrics
+    total_pages_processed = 0
+    total_text_elements = 0
+    total_corrections = 0
+    total_akkadian_translations = 0
+    avg_confidence_sum = 0.0
+    confidence_count = 0
+    
     for i, file_path in enumerate(files_to_process, 1):
         print(f"\n📄 Processing file {i}/{len(files_to_process)}: {os.path.basename(file_path)}")
         
@@ -305,9 +349,62 @@ def main():
         result = process_single_file(file_path, config, pipeline_config, pipeline, logger)
         result['file'] = file_path  # Add file path to result for tracking
         results.append(result)
+        
+        # Update evaluation metrics
+        if 'error' not in result:
+            pages_processed = result.get('pages_processed', 0)
+            total_pages_processed += pages_processed
+            
+            # Extract metrics from page statistics if available
+            page_stats = result.get('page_statistics', [])
+            for page_stat in page_stats:
+                if 'error' not in page_stat:
+                    total_text_elements += page_stat.get('text_elements', 0)
+                    total_corrections += page_stat.get('corrections_made', 0)
+                    
+                    # Track confidence scores
+                    conf = page_stat.get('avg_confidence', 0.0)
+                    if conf > 0:
+                        avg_confidence_sum += conf
+                        confidence_count += 1
+            
+            # Track Akkadian translations
+            total_akkadian_translations += result.get('akkadian_translations_found', 0)
     
     # Print summary
     print_processing_summary(results, start_time, logger)
+    
+    # Update benchmark tracker with final metrics
+    if benchmark_tracker:
+        successful_files = len([r for r in results if 'error' not in r])
+        failed_files = len([r for r in results if 'error' in r])
+        avg_confidence = avg_confidence_sum / confidence_count if confidence_count > 0 else 0.0
+        
+        benchmark_tracker.update_file_stats(len(results), successful_files, failed_files)
+        benchmark_tracker.update_page_stats(
+            total_pages_processed, 
+            total_text_elements, 
+            avg_confidence, 
+            total_corrections, 
+            total_akkadian_translations
+        )
+        
+        # End benchmark and save results
+        benchmark_tracker.end_benchmark()
+        
+        # Print evaluation summary
+        summary_stats = benchmark_tracker.get_summary_stats()
+        if summary_stats:
+            print(f"\n📊 EVALUATION SUMMARY")
+            print(f"   Mode: {benchmark_tracker.mode_name}")
+            print(f"   Total processing time: {summary_stats.get('total_processing_time', 0):.2f}s")
+            print(f"   Files processed: {summary_stats.get('total_files_processed', 0)}")
+            print(f"   Pages processed: {summary_stats.get('total_pages_processed', 0)}")
+            print(f"   Success rate: {summary_stats.get('success_rate', 0):.1%}")
+            print(f"   Avg confidence: {summary_stats.get('avg_confidence', 0):.3f}")
+            print(f"   Total corrections: {summary_stats.get('total_corrections', 0)}")
+            print(f"   Akkadian translations: {summary_stats.get('total_akkadian_translations', 0)}")
+            print(f"   Benchmark saved: {benchmark_tracker.output_file}")
     
     # Save processing report
     output_dir = config['output']['output_directory']
@@ -322,7 +419,14 @@ def main():
                 'successful': len([r for r in results if 'error' not in r]),
                 'failed': len([r for r in results if 'error' in r]),
                 'config': config,
-                'results': results
+                'results': results,
+                'evaluation_metrics': {
+                    'total_pages_processed': total_pages_processed,
+                    'total_text_elements': total_text_elements,
+                    'total_corrections': total_corrections,
+                    'total_akkadian_translations': total_akkadian_translations,
+                    'avg_confidence': avg_confidence_sum / confidence_count if confidence_count > 0 else 0.0
+                } if eval_mode else None
             }, f, indent=2, ensure_ascii=False)
         
         print(f"\n📋 Processing report saved: {report_path}")

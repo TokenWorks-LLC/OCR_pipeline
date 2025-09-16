@@ -374,3 +374,34 @@ def create_llm_corrector(config: Dict[str, Any] = None) -> LLMCorrector:
         timeout=config.get('timeout', 30),
         max_workers=config.get('max_workers', 3)
     )
+
+
+
+'''
+Function takes OCR output and makes sure the text looks like Akkadian language
+@param text a string that is checked by each character
+@return a boolean, true if the character is a common akkadian character
+'''
+# set the threshold
+LOW_CONFIDENCE_THRESHOLD = 0.75
+
+# takes in an argument text, type string, outputs a boolean
+def is_likely_akkadian(text: str) -> bool:
+    return any(char in text for char in ['š', 'ḫ', 'ṭ', 'ē', 'šum', 'niš', '-', '.'])
+
+
+'''
+Function filters OCR results for low-confidence Akkadian
+@param ocr_results, list of results returned from paddleOCR
+@param ocr_results, list contains [box (coordinates of the text region in image), text (actual OCR string), confidence (between 0.0-0.1 representing how confident the OCR engine is)]
+@return to_correct, list of text spans (slices of text) for the LLM to correct 
+'''
+
+def send_low_confidence_akkadian_spans(ocr_results):
+    to_correct = []
+
+    for box, (text, confidence) in ocr_results:
+        if confidence < LOW_CONFIDENCE_THRESHOLD and is_likely_akkadian(text):
+            to_correct.append(text)
+    
+    return to_correct

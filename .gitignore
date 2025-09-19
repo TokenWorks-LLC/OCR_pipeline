@@ -24,6 +24,7 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+
 # Virtual environments
 .env
 .venv
@@ -32,6 +33,12 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.venv/
+data/output/
+logs/
+*.pyc
+__pycache__/
+
 
 # IDE
 .vscode/

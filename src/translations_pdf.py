@@ -103,11 +103,11 @@ class TranslationsPDFGenerator:
             # Build the PDF
             doc.build(story)
             
-            print(f"✓ Translations PDF generated: {output_path}")
+            print(f"SUCCESS: Translations PDF generated: {output_path}")
             return True
             
         except Exception as e:
-            print(f"✗ Error generating translations PDF: {e}")
+            print(f"ERROR: Error generating translations PDF: {e}")
             return False
     
     def _create_title_page(
@@ -419,11 +419,11 @@ class TranslationsPDFGenerator:
             
             doc.build(story)
             
-            print(f"✓ Empty translations PDF generated: {output_path}")
+            print(f"SUCCESS: Empty translations PDF generated: {output_path}")
             return True
             
         except Exception as e:
-            print(f"✗ Error generating empty translations PDF: {e}")
+            print(f"ERROR: Error generating empty translations PDF: {e}")
             return False
 
 
@@ -489,4 +489,4 @@ if __name__ == "__main__":
         "Sample Akkadian Document"
     )
     
-    print(f"Test report generation: {'✓ Success' if success else '✗ Failed'}")
+    print(f"Test report generation: {'SUCCESS' if success else 'FAILED'}")

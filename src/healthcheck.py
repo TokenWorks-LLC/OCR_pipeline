@@ -651,28 +651,21 @@ def print_health_report(health_results: Dict[str, Any]):
     
     # Overall status
     status = summary.get('overall_status', 'unknown')
-    status_icons = {
-        'healthy': '✅',
-        'healthy_with_warnings': '⚠️',
-        'degraded': '🟡',
-        'unhealthy': '❌'
-    }
-    
-    print(f"\\n{status_icons.get(status, '❓')} OVERALL STATUS: {status.upper()}")
+    print(f"\nOVERALL STATUS: {status.upper()}")
     print(f"   Success Rate: {summary.get('success_rate', 0)*100:.1f}% ({summary.get('passed_checks', 0)}/{summary.get('total_checks', 0)} checks passed)")
     print(f"   Total Time: {summary.get('total_time', 0):.2f}s")
     
     # Critical failures
     failures = summary.get('critical_failures', [])
     if failures:
-        print(f"\\n❌ CRITICAL ISSUES ({len(failures)}):")
+        print(f"\nCRITICAL ISSUES ({len(failures)}):")
         for failure in failures:
             print(f"   • {failure}")
     
     # Warnings
     warnings = summary.get('warnings', [])
     if warnings:
-        print(f"\\n⚠️  WARNINGS ({len(warnings)}):")
+        print(f"\nWARNINGS ({len(warnings)}):")
         for warning in warnings:
             print(f"   • {warning}")
     
@@ -685,9 +678,9 @@ def print_health_report(health_results: Dict[str, Any]):
     # Preflight
     preflight = checks.get('preflight', {})
     if preflight.get('passed'):
-        print("   ✅ Preflight: All dependencies OK")
+        print("   Preflight: All dependencies OK")
     else:
-        print(f"   ❌ Preflight: {preflight.get('error_count', 0)} errors, {preflight.get('warning_count', 0)} warnings")
+        print(f"   Preflight: {preflight.get('error_count', 0)} errors, {preflight.get('warning_count', 0)} warnings")
     
     # OCR Engines
     ocr = checks.get('ocr_engines', {})
@@ -695,7 +688,7 @@ def print_health_report(health_results: Dict[str, Any]):
         passed_tests = len([t for t in ocr.values() if isinstance(t, dict) and t.get('passed')])
         total_tests = len([t for t in ocr.values() if isinstance(t, dict)])
         if passed_tests == total_tests:
-            print(f"   ✅ OCR Engines: {passed_tests}/{total_tests} tests passed")
+            print(f"   OCR Engines: {passed_tests}/{total_tests} tests passed")
         else:
             print(f"   🟡 OCR Engines: {passed_tests}/{total_tests} tests passed")
     
@@ -704,7 +697,7 @@ def print_health_report(health_results: Dict[str, Any]):
     if pdf:
         pdf_tests = [k for k, v in pdf.items() if isinstance(v, dict) and v.get('passed')]
         if len(pdf_tests) > 0:
-            print(f"   ✅ PDF Processing: {len(pdf_tests)} tests passed")
+            print(f"   PDF Processing: {len(pdf_tests)} tests passed")
         else:
             print("   ❌ PDF Processing: Tests failed")
     
@@ -712,7 +705,7 @@ def print_health_report(health_results: Dict[str, Any]):
     llama = checks.get('llama_integration', {})
     if llama and llama.get('availability', {}).get('available'):
         if llama.get('correction_test', {}).get('passed'):
-            print("   ✅ LLaMA Integration: Available and functional")
+            print("   LLaMA Integration: Available and functional")
         else:
             print("   🟡 LLaMA Integration: Available but test failed")
     else:
@@ -721,7 +714,7 @@ def print_health_report(health_results: Dict[str, Any]):
     # E2E Pipeline
     e2e = checks.get('e2e_pipeline', {})
     if e2e and e2e.get('passed'):
-        print(f"   ✅ End-to-End Pipeline: Working ({e2e.get('processing_time', 0):.2f}s)")
+        print(f"   End-to-End Pipeline: Working ({e2e.get('processing_time', 0):.2f}s)")
     else:
         print("   ❌ End-to-End Pipeline: Failed")
     

@@ -126,7 +126,7 @@ def process_single_file(args: tuple) -> Optional[str]:
                         continue
             
             if successful_pages > 0:
-                logging.info(f"🎉 Successfully processed {successful_pages}/{len(images)} pages from {Path(file_path).name}")
+                logging.info(f"Successfully processed {successful_pages}/{len(images)} pages from {Path(file_path).name}")
                 if extract_all:
                     logging.info(f"📊 Total text lines extracted: {len(all_translations)}")
                     return f"{successful_pages} pages processed, {len(all_translations)} text lines"

@@ -568,31 +568,31 @@ def print_preflight_report(results: List[PreflightResult]):
     
     # Print errors first
     if errors:
-        print(f"\n❌ ERRORS ({len(errors)}):")
+        print(f"\nERRORS ({len(errors)}):")
         for result in errors:
             print(f"  • {result.component}: {result.message}")
     
     # Then warnings
     if warnings:
-        print(f"\n⚠️  WARNINGS ({len(warnings)}):")
+        print(f"\nWARNINGS ({len(warnings)}):")
         for result in warnings:
             print(f"  • {result.component}: {result.message}")
     
     # Then successes
     if success:
-        print(f"\n✅ OK ({len(success)}):")
+        print(f"\nOK ({len(success)}):")
         for result in success:
             print(f"  • {result.component}: {result.message}")
     
     # Summary
     print("\n" + "-"*60)
     if errors:
-        print(f"❌ PIPELINE NOT READY - {len(errors)} critical errors")
+        print(f"PIPELINE NOT READY - {len(errors)} critical errors")
         print("   Please resolve errors before processing")
     elif warnings:
-        print(f"⚠️  PIPELINE READY WITH WARNINGS - {len(warnings)} warnings")
+        print(f"PIPELINE READY WITH WARNINGS - {len(warnings)} warnings")
         print("   Consider resolving warnings for optimal performance")
     else:
-        print("✅ PIPELINE FULLY READY - All checks passed!")
+        print("PIPELINE FULLY READY - All checks passed!")
     
     print("="*60 + "\n")

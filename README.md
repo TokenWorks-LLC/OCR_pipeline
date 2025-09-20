@@ -59,12 +59,12 @@ This OCR pipeline is designed for **academic and professional document processin
 
 This project has been **significantly streamlined** for better performance and maintainability:
 
-- **✅ Unified Entry Point**: Single `run_pipeline.py` replaces multiple legacy scripts
-- **✅ Centralized Configuration**: All settings managed through `config.json`
-- **✅ Reduced File Count**: Cleaned from 50+ files to 17 essential modules (66% reduction)
-- **✅ Space Efficient**: Removed 2-3GB tessdata directory (using PaddleOCR's built-in models)
-- **✅ Production Focus**: Single optimized pipeline in `production/comprehensive_pipeline.py`
-- **✅ Clean Architecture**: No redundant files, clear module responsibilities
+- **Unified Entry Point**: Single `run_pipeline.py` replaces multiple legacy scripts
+- **Centralized Configuration**: All settings managed through `config.json`
+- **Reduced File Count**: Cleaned from 50+ files to 17 essential modules (66% reduction)
+- **Space Efficient**: Removed 2-3GB tessdata directory (using PaddleOCR's built-in models)
+- **Production Focus**: Single optimized pipeline in `production/comprehensive_pipeline.py`
+- **Clean Architecture**: No redundant files, clear module responsibilities
 
 **Benefits**: Faster startup, easier deployment, reduced complexity, improved maintainability.
 

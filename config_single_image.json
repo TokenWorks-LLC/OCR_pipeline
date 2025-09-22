@@ -1,0 +1,58 @@
+{
+  "input": {
+    "input_directory": "./data/samples",
+    "supported_formats": [
+      ".png",
+      ".jpg",
+      ".jpeg"
+    ],
+    "process_all_files": false,
+    "specific_file": "./data/samples/test_document.jpg",
+    "recursive_search": false
+  },
+  "output": {
+    "output_directory": "./data/output/single_image_test",
+    "create_subdirectories": false,
+    "timestamp_outputs": true
+  },
+  "ocr": {
+    "engine": "paddleocr",
+    "dpi": 300,
+    "languages": [
+      "en"
+    ],
+    "enable_text_correction": true,
+    "enable_reading_order": true,
+    "confidence_threshold": 0.6
+  },
+  "llm": {
+    "enable_correction": true,
+    "provider": "ollama",
+    "model": "mistral:latest",
+    "base_url": "http://localhost:11434",
+    "timeout": 30,
+    "max_concurrent_corrections": 1
+  },
+  "akkadian": {
+    "enable_extraction": false,
+    "confidence_threshold": 0.8,
+    "generate_pdf_report": false,
+    "translation_languages": [
+      "english"
+    ]
+  },
+  "processing": {
+    "batch_size": 1,
+    "max_workers": 1,
+    "skip_existing": false,
+    "create_visualizations": true,
+    "create_html_overlay": true,
+    "verbose": true
+  },
+  "csv_output": {
+    "format": "aggregated",
+    "include_metadata": true,
+    "include_confidence_scores": true,
+    "separate_akkadian_csv": false
+  }
+}

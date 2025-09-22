@@ -19,9 +19,14 @@ docker build -t tokenworks-ocr:latest .
 
 # Option 2: Using Docker Compose
 docker compose build
+
+# Option 3: For Apple Silicon if main build fails
+docker build -f Dockerfile.arm64 -t tokenworks-ocr:latest .
 ```
 
 **Note**: First build downloads the base image and Python packages. PaddleOCR will download model weights (~100MB) on first run.
+
+**Apple Silicon Users**: If the main Dockerfile fails with PyMuPDF build errors, use `Dockerfile.arm64` which has enhanced ARM64 compatibility.
 
 ### 2. Run OCR on a PDF
 
@@ -142,6 +147,31 @@ docker run --rm -v "$PWD":/app tokenworks-ocr:latest python your_script.py
 - **CPU-only**: This setup runs on CPU everywhere (no GPU dependencies)
 
 ## Troubleshooting
+
+### Docker Build Issues
+
+#### PyMuPDF Build Failure (Apple Silicon)
+If you see `make: not found` or `Failed building wheel for pymupdf` during Docker build:
+
+**Problem**: PyMuPDF tries to compile from source but build tools are missing.
+
+**Solution**: The updated Dockerfile includes build dependencies. If still failing:
+```bash
+# Option 1: Use the fixed Dockerfile (recommended)
+docker build --platform=linux/arm64 -t tokenworks-ocr:latest .
+
+# Option 2: Force AMD64 if ARM64 continues to fail
+docker build --platform=linux/amd64 -t tokenworks-ocr:latest .
+```
+
+**Alternative workaround** if build still fails:
+```bash
+# Build without PyMuPDF initially, then install separately
+# Edit Dockerfile temporarily to comment out pymupdf line, then:
+docker build -t tokenworks-ocr:temp .
+docker run --rm -it tokenworks-ocr:temp bash
+# Inside container: pip install --only-binary=all pymupdf
+```
 
 ### PDF2Image Issues
 If you see Poppler-related errors, ensure you're running inside the Docker container (not host Python):

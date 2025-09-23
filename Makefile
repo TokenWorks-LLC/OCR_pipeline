@@ -14,10 +14,15 @@ help:
 	@echo "Examples:"
 	@echo "  make ocr FILE=\"data/input/sample.pdf\""
 	@echo "  make ocr FILE=\"data/input/Innaya_v2 copy.pdf\""
+	@echo "  make build-arm64  - Build ARM64-optimized image (Apple Silicon)"
 
 # Build the Docker image
 build:
 	docker build -t tokenworks-ocr:latest .
+
+# Build ARM64-optimized image for Apple Silicon
+build-arm64:
+	docker build -f Dockerfile.arm64 -t tokenworks-ocr:latest .
 
 # Run OCR on a file (default to sample file)
 FILE ?= "data/input/Innaya_v2 copy.pdf"

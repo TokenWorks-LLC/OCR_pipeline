@@ -665,6 +665,38 @@ python -c "from src.healthcheck import run_health_check; run_health_check()"
 
 ---
 
+## macOS (Apple Silicon) — Fast Docker Build
+
+We pin packages to versions that publish **linux/aarch64 wheels** and set `PIP_ONLY_BINARY=:all:` so pip never compiles C/C++ from source.
+
+### Quick Build Command
+```bash
+DOCKER_BUILDKIT=1 docker build \
+  --progress=plain \
+  --platform=linux/arm64/v8 \
+  -t ocrx:dev -f docker/Dockerfile .
+```
+
+### Why This Works
+- **Binary wheels only**: `PIP_ONLY_BINARY=:all:` prevents source compilation
+- **Pinned versions**: OpenCV 4.10.0.84 and PaddlePaddle 2.6.1 have reliable ARM64 wheels
+- **Official ARM64 index**: PaddlePaddle pulls from `https://www.paddlepaddle.org.cn/whl/linux/aarch64/`
+- **Build caching**: `--mount=type=cache` speeds up rebuilds
+- **Platform targeting**: `--platform=linux/arm64/v8` ensures correct architecture
+
+### Verification
+Check that pip is pulling wheels (not compiling):
+```bash
+# Look for "Using cached" or "Downloading" messages (good)
+# Avoid "Building wheel" or "Running setup.py" (slow compilation)
+docker build --progress=plain ...
+```
+
+### Fallback
+If wheels aren't available, the build will fail fast. See `docs/docker_mac_arm64.md` for troubleshooting.
+
+---
+
 **Happy Processing!**
 
 > For additional help, check the `doc/` directory or run `python quick_start.py` for interactive tutorials.

@@ -21,15 +21,21 @@ def _ensure_odd(n: int) -> int:
 def _clip01(x: np.ndarray) -> np.ndarray:
     return np.clip(x, 0.0, 1.0)
 
+
+
 def apply_gamma(img: np.ndarray, gamma: float = None) -> np.ndarray:
     """Apply gamma correction to brighten dark images."""
     if gamma is None:
         gamma = PREPROCESSING['gamma_correction']
-    
+
+    if img.dtype != np.uint8:
+        img = img.astype(np.uint8)
     # Convert to float and apply gamma correction
     img_float = img.astype(np.float32) / 255.0
-    corrected = adjust_gamma(img_float, gamma)
-    return (corrected * 255).astype(np.uint8)
+    corrected = adjust_gamma(_clip01(img_float), gamma)
+    out = (_clip01(corrected) * 255.0).astype(np.uint8)
+    return out
+
 
 
 def clahe_rgb(img: np.ndarray, clip_limit: float = None, grid_size: Tuple[int, int] = None) -> np.ndarray:

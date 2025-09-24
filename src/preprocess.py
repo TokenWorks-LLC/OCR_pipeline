@@ -156,9 +156,12 @@ def invert_if_better(img: np.ndarray, confidence_func, min_gain_ratio: float = 1
         return img
 
 
-def preprocess_faded(img: np.ndarray, apply_dilation: bool = True) -> np.ndarray:
+def preprocess_faded(img: np.ndarray, apply_dilation: bool = None) -> np.ndarray:
     """Apply preprocessing pipeline for faded/low-contrast images."""
     try:
+        if apply_dilation is None:
+            apply_dilation = bool(PREPROCESSING.get('apply_dilation', False))
+        
         # Step 1: Gamma correction
         result = apply_gamma(img)
         
@@ -170,10 +173,10 @@ def preprocess_faded(img: np.ndarray, apply_dilation: bool = True) -> np.ndarray
         
         # Step 4: Optional mild dilation to connect broken characters
         if apply_dilation:
-            kernel_size = PREPROCESSING['dilation_kernel_size']
-            kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (kernel_size, kernel_size))
+            kernel_size = int(PREPROCESSING['dilation_kernel_size'])
+            kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (max(1, kernel_size), max(1, kernel_size)))
             
-            if len(result.shape) == 3:
+            if result.ndim == 3:
                 gray = cv2.cvtColor(result, cv2.COLOR_BGR2GRAY)
                 dilated = cv2.dilate(gray, kernel, iterations=1)
                 result = cv2.cvtColor(dilated, cv2.COLOR_GRAY2BGR)
@@ -186,28 +189,30 @@ def preprocess_faded(img: np.ndarray, apply_dilation: bool = True) -> np.ndarray
         logger.warning(f"Faded preprocessing failed: {e}")
         return img
 
-
-def preprocess_pipeline(img: np.ndarray, confidence_func) -> np.ndarray:
+def preprocess_pipeline(img: np.ndarray, confidence_func) -> dict:
     """
     Main preprocessing pipeline that applies all corrections.
-    
-    Args:
-        img: Input image
-        confidence_func: Function to evaluate OCR confidence for inversion check
-    
+
     Returns:
-        Preprocessed image
+        dict with:
+          - 'pretty': enhanced BGR for OCR
+          - 'binary': binarized for layout ops
+          - 'angle': applied deskew angle (float)
     """
     logger.debug("Starting preprocessing pipeline")
-    
-    # Step 1: Deskew small angles
-    result = deskew_small(img)
-    
-    # Step 2: Apply faded image enhancements
-    result = preprocess_faded(result)
-    
-    # Step 3: Check if inversion improves OCR
-    result = invert_if_better(result, confidence_func)
-    
+    # 1) Deskew (works on original image)
+    deskewed = deskew_small(img)
+    # 2) Build a pretty RGB for OCR (gamma + CLAHE), no binarization here
+    pretty = clahe_rgb(apply_gamma(deskewed))
+    # 3) Binary for layout ops (from pretty, more stable)
+    binary = binarize_sauvola(pretty)
+
+    # 4) Consider inversion only for OCR image, not binary layout
+    pretty_inv_decided = invert_if_better(pretty, confidence_func)
+
     logger.debug("Preprocessing pipeline complete")
-    return result
+    return {
+        "pretty": pretty_inv_decided,
+        "binary": binary,
+        "angle": 0.0  # Optional: record angle if you store it inside deskew_small
+    }

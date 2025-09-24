@@ -14,6 +14,12 @@ from config import PREPROCESSING
 
 logger = logging.getLogger(__name__)
 
+def _ensure_odd(n: int) -> int:
+    n = int(n)
+    return n if n % 2 == 1 else n + 1
+
+def _clip01(x: np.ndarray) -> np.ndarray:
+    return np.clip(x, 0.0, 1.0)
 
 def apply_gamma(img: np.ndarray, gamma: float = None) -> np.ndarray:
     """Apply gamma correction to brighten dark images."""

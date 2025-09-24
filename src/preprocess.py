@@ -106,35 +106,29 @@ def binarize_sauvola(img: np.ndarray, window_size: int = None, k: float = None) 
     if k is None:
         k = PREPROCESSING['binarize_k']
     
+    ws = _ensure_odd(window_size)
+    
     # Convert to grayscale if needed
-    if len(img.shape) == 3:
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    else:
-        gray = img.copy()
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) if img.ndim == 3 else img.copy()
     
     try:
         # Apply Sauvola threshold
-        threshold = filters.threshold_sauvola(gray, window_size=window_size, k=k)
-        binary = gray > threshold
-        
-        # Convert back to uint8
-        result = (binary * 255).astype(np.uint8)
+        threshold = filters.threshold_sauvola(gray, window_size=ws, k=float(k))
+        binary = (gray > threshold).astype(np.uint8) * 255
         
         # Convert back to 3-channel if input was 3-channel
-        if len(img.shape) == 3:
-            result = cv2.cvtColor(result, cv2.COLOR_GRAY2BGR)
+        if img.ndim == 3:
+            binary = cv2.cvtColor(binary, cv2.COLOR_GRAY2BGR)
         
-        return result
+        return binary
         
     except Exception as e:
         logger.warning(f"Sauvola binarization failed: {e}")
         # Fallback to simple adaptive threshold
-        if len(img.shape) == 3:
-            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         adaptive = cv2.adaptiveThreshold(
-            gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, window_size, 2
+            gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, ws, 2
         )
-        if len(img.shape) == 3:
+        if img.ndim == 3:
             adaptive = cv2.cvtColor(adaptive, cv2.COLOR_GRAY2BGR)
         return adaptive
 

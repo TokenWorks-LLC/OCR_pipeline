@@ -69,40 +69,27 @@ def deskew_small(img: np.ndarray, angle_threshold: float = None) -> np.ndarray:
     
     try:
         # Convert to grayscale
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) if img.ndim == 3 else img
+        h, w = gray.shape[:2]
         
-        # Apply binary threshold
-        _, binary = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        # NEW: Projection variance sweep across ±threshold angles
+        steps = max(7, int(angle_threshold * 4) | 1)  # odd num steps
+        angles = np.linspace(-float(angle_threshold), float(angle_threshold), steps)
         
-        # Find contours
-        contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        best_angle, best_var = 0.0, -1.0
+        for ang in angles:
+            M = cv2.getRotationMatrix2D((w // 2, h // 2), ang, 1.0)
+            rot = cv2.warpAffine(gray, M, (w, h), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
+            proj = np.sum(rot, axis=1).astype(np.float32)
+            var = float(np.var(proj))
+            if var > best_var:
+                best_var, best_angle = var, ang
         
-        if not contours:
-            return img
-        
-        # Get the largest contour (assuming it's the page)
-        largest_contour = max(contours, key=cv2.contourArea)
-        
-        # Get minimum area rectangle
-        rect = cv2.minAreaRect(largest_contour)
-        angle = rect[2]
-        
-        # Normalize angle
-        if angle < -45:
-            angle = 90 + angle
-        elif angle > 45:
-            angle = angle - 90
-        
-        # Only correct small angles
-        if abs(angle) < angle_threshold and abs(angle) > 0.5:
-            # Get rotation matrix
-            h, w = img.shape[:2]
-            center = (w // 2, h // 2)
-            matrix = cv2.getRotationMatrix2D(center, angle, 1.0)
-            
-            # Apply rotation
-            rotated = cv2.warpAffine(img, matrix, (w, h), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
-            logger.debug(f"Deskewed image by {angle:.2f} degrees")
+        # Only correct if meaningful (>=0.2° skew)
+        if abs(best_angle) >= 0.2:
+            M = cv2.getRotationMatrix2D((w // 2, h // 2), best_angle, 1.0)
+            rotated = cv2.warpAffine(img, M, (w, h), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
+            logger.debug(f"Deskewed image by {best_angle:.2f} degrees")
             return rotated
         
         return img

@@ -37,25 +37,29 @@ def apply_gamma(img: np.ndarray, gamma: float = None) -> np.ndarray:
     return out
 
 
-
 def clahe_rgb(img: np.ndarray, clip_limit: float = None, grid_size: Tuple[int, int] = None) -> np.ndarray:
     """Apply CLAHE (Contrast Limited Adaptive Histogram Equalization) to RGB image."""
     if clip_limit is None:
         clip_limit = PREPROCESSING['clahe_clip_limit']
     if grid_size is None:
         grid_size = PREPROCESSING['clahe_grid_size']
-    
+    gx, gy = max(1, int(grid_size[0])), max(1, int(grid_size[1]))
+
+    if img.ndim == 2:
+        img = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
+
     # Convert to LAB color space
     lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
-    l_channel, a_channel, b_channel = cv2.split(lab)
-    
-    # Apply CLAHE to L channel
-    clahe = cv2.createCLAHE(clipLimit=clip_limit, tileGridSize=grid_size)
-    l_channel = clahe.apply(l_channel)
-    
+    l, a, b = cv2.split(lab)
+
+     # Apply CLAHE to L channel
+    clahe = cv2.createCLAHE(clipLimit=float(clip_limit), tileGridSize=(gx, gy))
+    l2 = clahe.apply(l)
+
     # Merge channels and convert back to BGR
-    lab = cv2.merge([l_channel, a_channel, b_channel])
-    return cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
+    lab2 = cv2.merge([l2, a, b])
+    return cv2.cvtColor(lab2, cv2.COLOR_LAB2BGR)
+
 
 
 def deskew_small(img: np.ndarray, angle_threshold: float = None) -> np.ndarray:

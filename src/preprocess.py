@@ -133,17 +133,19 @@ def binarize_sauvola(img: np.ndarray, window_size: int = None, k: float = None) 
         return adaptive
 
 
-def invert_if_better(img: np.ndarray, confidence_func) -> np.ndarray:
+
+def invert_if_better(img: np.ndarray, confidence_func, min_gain_ratio: float = 1.1, min_gain_abs: float = 0.02) -> np.ndarray:
     """Invert image if the inverted version has better OCR confidence."""
     try:
         # Get confidence for normal image
-        normal_conf = confidence_func(img)
+        normal_conf = float(confidence_func(img))
         
         # Invert image
-        inverted = 255 - img
-        inverted_conf = confidence_func(inverted)
+        inverted = (255 - img).astype(np.uint8)
+        inverted_conf = float(confidence_func(inverted))
         
-        if inverted_conf > normal_conf * 1.2:  # 20% improvement threshold
+        # NEW: require both ratio and absolute gain
+        if (inverted_conf >= normal_conf * min_gain_ratio) and ((inverted_conf - normal_conf) >= min_gain_abs):
             logger.debug(f"Using inverted image (conf: {inverted_conf:.3f} vs {normal_conf:.3f})")
             return inverted
         

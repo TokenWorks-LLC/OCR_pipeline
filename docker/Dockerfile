@@ -1,86 +1,54 @@
 # syntax=docker/dockerfile:1.6
-# Optimized Dockerfile for Apple Silicon (arm64) - Fast, deterministic builds
-# This Dockerfile ensures pip only pulls binary wheels (no source compilation)
 FROM --platform=linux/arm64/v8 python:3.10-slim
 
-# Python optimization environment variables
+# Keep Python output clean and installs predictable
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
     PIP_PROGRESS_BAR=off \
-    DEBIAN_FRONTEND=noninteractive
+    PIP_ONLY_BINARY=:all: \
+    PIP_VERBOSE=1
 
-# Runtime dependencies for OpenCV (binary) and general OCR needs
-# These are minimal runtime deps for headless OpenCV wheels
+# Runtime libs for OpenCV, Pillow, pdf2image, etc.
+# Note: poppler-utils supports pdf2image without compiling anything.
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    libglib2.0-0 \
-    libsm6 \
-    libxrender1 \
-    libxext6 \
-    libgl1 \
-    ffmpeg \
-    poppler-utils \
-    libgomp1 \
-    && rm -rf /var/lib/apt/lists/* \
-    && apt-get clean
+    libglib2.0-0 libsm6 libxrender1 libxext6 libgl1 ffmpeg poppler-utils \
+  && rm -rf /var/lib/apt/lists/*
 
-# Keep pip modern - this ensures compatibility with latest wheel formats
+# Keep pip toolchain modern
 RUN python -m pip install -U pip wheel setuptools
 
-# CRITICAL: Fail fast if a wheel is missing (no source builds allowed)
-# This prevents the long compilation times that plague arm64 builds
-ENV PIP_ONLY_BINARY=:all:
-# Show which packages resolve to wheels vs builds (useful in CI logs)
-ENV PIP_VERBOSE=1
-
-# Install OpenCV + Numpy (versions that publish linux/aarch64 wheels)
-# OpenCV 4.10.0.84 has reliable arm64 wheels, numpy 1.26.* series is stable
+# IMPORTANT: Pin PyMuPDF to a prebuilt manylinux2014 aarch64 wheel to avoid SWIG
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install \
-    "opencv-python-headless==4.10.0.84" \
-    "numpy==1.26.*"
+    pip install "pymupdf==1.24.10"
 
-# PaddlePaddle (linux/aarch64 wheels via official index)
-# Using official PaddlePaddle wheel repository for ARM64
+# OpenCV + NumPy: versions known to publish linux/aarch64 wheels
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install "paddlepaddle==2.6.1" \
-    -f https://www.paddlepaddle.org.cn/whl/linux/aarch64/
+    pip install "opencv-python-headless==4.10.0.84" "numpy==1.26.*"
 
-# PaddleOCR (pure Python, but depends on Paddle being installed first)
+# PaddlePaddle aarch64 wheels come from Paddle's index; PaddleOCR is pure Python
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install "paddleocr==2.7.0.3"
-
-# Additional OCR dependencies with wheel-available versions
+    pip install "paddlepaddle==2.6.1" -f https://www.paddlepaddle.org.cn/whl/linux/aarch64/
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install \
-    "pdf2image>=3.1.0" \
-    "Pillow>=10.0.0" \
-    "requests>=2.31.0" \
-    "pytesseract>=0.3.10"
+    pip install "paddleocr==2.7.0.3" "Pillow>=10.0.0" "requests>=2.31.0" "pdf2image"
 
-# PyMuPDF - Install with fallback strategy
-# First try binary-only, then allow source build as last resort
-RUN --mount=type=cache,target=/root/.cache/pip \
-    (pip install --only-binary=all "PyMuPDF>=1.24.0" || \
-     echo "Warning: PyMuPDF wheel not found, trying source build..." && \
-     pip install "PyMuPDF>=1.24.0")
-
-# Set working directory
+# Copy application code
+COPY . /app
 WORKDIR /app
 
-# Copy source code
-COPY . /app
-
-# Install any additional requirements from requirements.txt if they exist
-# This allows for project-specific dependencies while maintaining wheel-only policy
+# Install remaining project dependencies
 RUN --mount=type=cache,target=/root/.cache/pip \
-    if [ -f requirements.txt ]; then \
-        pip install -r requirements.txt; \
-    fi
+    pip install -r requirements.txt
 
-# Health check to verify OCR components are working
+# Health check to verify OCR components
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD python -c "import cv2, paddleocr; print('OCR components loaded successfully')" || exit 1
+    CMD python -c "import paddleocr, cv2, pymupdf; print('OCR components OK')" || exit 1
 
-# Default command - can be overridden
-CMD ["python", "-m", "src.cli", "--help"]
+# Default command
+CMD ["python", "run_pipeline.py", "--help"]
+
+# Notes / Fallbacks:
+# - If a future OpenCV pin lacks an arm64 wheel, either:
+#   A) switch to another pinned version with wheels, or
+#   B) apt-get install the distro package: `apt-get update && apt-get install -y --no-install-recommends python3-opencv`
+#      and REMOVE any pip `opencv-python(-headless)` installs.

@@ -243,14 +243,37 @@ def main():
     print(f"   Dry run:             python run_pipeline.py -c config.json --dry-run")
     print(f"   Help:                python run_pipeline.py --help")
     
+    print(f"\n📊 Analysis Commands:")
+    print(f"   Summary analysis:    python run_analysis_menu.py")
+    print(f"   Compare modes:       python src/summary_analysis.py <eval_dir1> <eval_dir2>")
+    
     # Interactive mode
     while True:
         print(f"\n" + "="*50)
-        choice = input("Would you like to run an example? (1-4, or 'q' to quit): ").strip().lower()
+        print("Options:")
+        print("1-4. Run example configurations")
+        print("5. 📊 Run Summary Analysis")
+        print("q. Quit")
+        choice = input("Select option (1-5, or 'q' to quit): ").strip().lower()
         
         if choice == 'q' or choice == 'quit':
             print("👋 Goodbye!")
             break
+        
+        elif choice == '5':
+            # Run summary analysis
+            print("\n📊 Starting Summary Analysis...")
+            try:
+                import subprocess
+                result = subprocess.run([sys.executable, "run_analysis_menu.py"], check=True)
+                print("✅ Analysis completed!")
+            except subprocess.CalledProcessError as e:
+                print(f"❌ Analysis failed with exit code {e.returncode}")
+            except FileNotFoundError:
+                print("❌ Analysis menu not found. Please ensure run_analysis_menu.py exists.")
+            except Exception as e:
+                print(f"❌ Error running analysis: {e}")
+            continue
         
         try:
             example_num = int(choice)

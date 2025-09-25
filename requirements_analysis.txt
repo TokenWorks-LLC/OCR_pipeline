@@ -1,0 +1,6 @@
+# Simplified requirements for OCR Pipeline Analysis
+# Install with: pip install -r requirements_analysis.txt
+
+# Core dependencies only
+matplotlib>=3.5.0
+pandas>=1.3.0

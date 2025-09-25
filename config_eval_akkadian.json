@@ -1,6 +1,6 @@
 {
   "input": {
-    "input_directory": "./data/input",
+    "input_directory": "./data/input_pdfs",
     "supported_formats": [
       ".pdf",
       ".png",

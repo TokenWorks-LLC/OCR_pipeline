@@ -14,6 +14,20 @@ from pathlib import Path
 from typing import List, Dict, Optional, Any
 from datetime import datetime
 
+# Enhanced monitoring dependencies
+try:
+    import psutil
+    PSUTIL_AVAILABLE = True
+except ImportError:
+    PSUTIL_AVAILABLE = False
+
+# GPU monitoring
+try:
+    import GPUtil
+    GPUTIL_AVAILABLE = True
+except ImportError:
+    GPUTIL_AVAILABLE = False
+
 # Add necessary directories to path
 sys.path.insert(0, str(Path(__file__).parent / 'src'))
 sys.path.insert(0, str(Path(__file__).parent / 'production'))
@@ -43,6 +57,124 @@ def get_pdf_page_count(pdf_path: str) -> int:
         print(f"❌ Error reading PDF: {e}")
         return 0
 
+def get_gpu_usage() -> Dict[str, Any]:
+    """Get GPU usage metrics if available."""
+    if not GPUTIL_AVAILABLE:
+        return {
+            'utilization': 0.0,
+            'memory_used_mb': 0.0,
+            'memory_total_mb': 0.0,
+            'temperature': 0.0,
+            'available': False
+        }
+    
+    try:
+        gpus = GPUtil.getGPUs()
+        if gpus:
+            gpu = gpus[0]  # First GPU
+            return {
+                'utilization': gpu.load * 100,  # Convert to percentage
+                'memory_used_mb': gpu.memoryUsed,
+                'memory_total_mb': gpu.memoryTotal,
+                'temperature': gpu.temperature,
+                'available': True
+            }
+    except Exception as e:
+        print(f"⚠️  GPU monitoring failed: {e}")
+    
+    return {
+        'utilization': 0.0,
+        'memory_used_mb': 0.0,
+        'memory_total_mb': 0.0,
+        'temperature': 0.0,
+        'available': False
+    }
+
+def get_process_tree_resources() -> Dict[str, Any]:
+    """Get resource usage for OCR process tree (main + children)."""
+    if not PSUTIL_AVAILABLE:
+        return {
+            'total_cpu_percent': 0.0,
+            'total_memory_mb': 0.0,
+            'process_count': 0,
+            'available': False
+        }
+    
+    try:
+        # Get current process and all children
+        main_process = psutil.Process()
+        children = main_process.children(recursive=True)
+        all_processes = [main_process] + children
+        
+        # Aggregate CPU and memory across all processes
+        total_cpu = 0.0
+        total_memory = 0.0
+        
+        for proc in all_processes:
+            try:
+                # CPU percentage (non-blocking)
+                cpu_percent = proc.cpu_percent()
+                total_cpu += cpu_percent
+                
+                # Memory usage
+                memory_info = proc.memory_info()
+                total_memory += memory_info.rss / 1024 / 1024  # Convert to MB
+                
+            except (psutil.NoSuchProcess, psutil.AccessDenied):
+                # Process might have terminated or we don't have access
+                continue
+        
+        return {
+            'total_cpu_percent': total_cpu,
+            'total_memory_mb': total_memory,
+            'process_count': len(all_processes),
+            'available': True
+        }
+        
+    except Exception as e:
+        print(f"⚠️  Process tree monitoring failed: {e}")
+        return {
+            'total_cpu_percent': 0.0,
+            'total_memory_mb': 0.0,
+            'process_count': 0,
+            'available': False
+        }
+
+def get_io_counters() -> Dict[str, Any]:
+    """Get I/O operation counters."""
+    if not PSUTIL_AVAILABLE:
+        return {
+            'read_mb': 0.0,
+            'write_mb': 0.0,
+            'available': False
+        }
+    
+    try:
+        io_counters = psutil.disk_io_counters()
+        if io_counters:
+            return {
+                'read_mb': io_counters.read_bytes / 1024 / 1024,
+                'write_mb': io_counters.write_bytes / 1024 / 1024,
+                'available': True
+            }
+    except Exception as e:
+        print(f"⚠️  I/O monitoring failed: {e}")
+    
+    return {
+        'read_mb': 0.0,
+        'write_mb': 0.0,
+        'available': False
+    }
+
+def get_enhanced_monitoring() -> Dict[str, Any]:
+    """Get comprehensive monitoring data including process tree, GPU, and I/O."""
+    return {
+        'timestamp': time.time(),
+        'process_tree': get_process_tree_resources(),
+        'gpu': get_gpu_usage(),
+        'io': get_io_counters()
+    }
+
 def save_incremental_progress(output_dir: str, page_num: int, total_pages: int, 
                             page_result, processing_stats: Dict, 
                             cumulative_stats: Dict, config: Dict):
@@ -62,10 +194,44 @@ def save_incremental_progress(output_dir: str, page_num: int, total_pages: int,
             cumulative_stats['page_statistics'] = []
         cumulative_stats['page_statistics'].append(processing_stats)
         
-        # Update text elements count
+        # Update aggregated counts
         if page_result:
             cumulative_stats['total_text_elements'] = cumulative_stats.get('total_text_elements', 0) + processing_stats.get('text_elements', 0)
             cumulative_stats['total_corrections'] = cumulative_stats.get('total_corrections', 0) + processing_stats.get('corrections_made', 0)
+            # Add new cost of compute metrics
+            cumulative_stats['total_word_count'] = cumulative_stats.get('total_word_count', 0) + processing_stats.get('word_count', 0)
+            cumulative_stats['total_token_count'] = cumulative_stats.get('total_token_count', 0) + processing_stats.get('token_count', 0)
+            
+            # Aggregate enhanced monitoring data
+            if 'enhanced_monitoring' in processing_stats:
+                enhanced = processing_stats['enhanced_monitoring']
+                
+                # Initialize enhanced monitoring aggregates if not present
+                if 'enhanced_monitoring_aggregates' not in cumulative_stats:
+                    cumulative_stats['enhanced_monitoring_aggregates'] = {
+                        'total_cpu_delta': 0.0,
+                        'total_memory_delta_mb': 0.0,
+                        'max_gpu_utilization': 0.0,
+                        'max_gpu_memory_mb': 0.0,
+                        'total_io_read_delta_mb': 0.0,
+                        'total_io_write_delta_mb': 0.0,
+                        'pages_with_gpu_usage': 0,
+                        'pages_with_cpu_usage': 0
+                    }
+                
+                # Aggregate enhanced monitoring metrics
+                agg = cumulative_stats['enhanced_monitoring_aggregates']
+                agg['total_cpu_delta'] += enhanced.get('cpu_delta', 0.0)
+                agg['total_memory_delta_mb'] += enhanced.get('memory_delta_mb', 0.0)
+                agg['max_gpu_utilization'] = max(agg['max_gpu_utilization'], enhanced.get('gpu_utilization', 0.0))
+                agg['max_gpu_memory_mb'] = max(agg['max_gpu_memory_mb'], enhanced.get('gpu_memory_mb', 0.0))
+                agg['total_io_read_delta_mb'] += enhanced.get('io_read_delta_mb', 0.0)
+                agg['total_io_write_delta_mb'] += enhanced.get('io_write_delta_mb', 0.0)
+                
+                if enhanced.get('gpu_utilization', 0.0) > 0:
+                    agg['pages_with_gpu_usage'] += 1
+                if enhanced.get('cpu_delta', 0.0) > 0:
+                    agg['pages_with_cpu_usage'] += 1
         
         # Save incremental progress
         progress_file = os.path.join(output_dir, "comprehensive_report.json")
@@ -118,16 +284,45 @@ def process_pdf_incremental(pdf_path: str, config: Dict[str, Any], pipeline, log
     for page_num in range(1, total_pages + 1):
         print(f"📄 Processing page {page_num}/{total_pages} ({page_num/total_pages*100:.1f}%)")
         
+        # Get enhanced monitoring data before processing
+        pre_monitoring = get_enhanced_monitoring()
+        
         try:
             # Process single page
             page_result, processing_stats = pipeline.process_single_page(
                 pdf_path, page_num, output_dir, Path(pdf_path).stem
             )
             
+            # Get enhanced monitoring data after processing
+            post_monitoring = get_enhanced_monitoring()
+            
+            # Calculate resource usage during this page
+            page_resource_usage = {
+                'pre_monitoring': pre_monitoring,
+                'post_monitoring': post_monitoring,
+                'cpu_delta': post_monitoring['process_tree']['total_cpu_percent'] - pre_monitoring['process_tree']['total_cpu_percent'],
+                'memory_delta_mb': post_monitoring['process_tree']['total_memory_mb'] - pre_monitoring['process_tree']['total_memory_mb'],
+                'gpu_utilization': post_monitoring['gpu']['utilization'],
+                'gpu_memory_mb': post_monitoring['gpu']['memory_used_mb'],
+                'io_read_delta_mb': post_monitoring['io']['read_mb'] - pre_monitoring['io']['read_mb'],
+                'io_write_delta_mb': post_monitoring['io']['write_mb'] - pre_monitoring['io']['write_mb']
+            }
+            
+            # Add enhanced monitoring to processing stats
+            processing_stats['enhanced_monitoring'] = page_resource_usage
+            
             if page_result:
                 cumulative_stats['successful_pages'] += 1
                 print(f"   ✅ Success: {processing_stats.get('text_elements', 0)} elements, "
                       f"lang={processing_stats.get('language', 'unknown')}")
+                
+                # Print enhanced monitoring info
+                if page_resource_usage['cpu_delta'] > 0:
+                    print(f"   📊 CPU: {page_resource_usage['cpu_delta']:.1f}%, "
+                          f"Memory: {page_resource_usage['memory_delta_mb']:.1f}MB")
+                if page_resource_usage['gpu_utilization'] > 0:
+                    print(f"   🎮 GPU: {page_resource_usage['gpu_utilization']:.1f}%, "
+                          f"VRAM: {page_resource_usage['gpu_memory_mb']:.1f}MB")
             else:
                 cumulative_stats['failed_pages'] += 1
                 print(f"   ⚠️  No text detected on page {page_num}")
@@ -168,6 +363,23 @@ def process_pdf_incremental(pdf_path: str, config: Dict[str, Any], pipeline, log
     print(f"⏱️  Total time: {cumulative_stats['total_processing_time']:.1f}s")
     print(f"📝 Text elements: {cumulative_stats['total_text_elements']}")
     print(f"🔧 Corrections: {cumulative_stats['total_corrections']}")
+    print(f"📖 Word count: {cumulative_stats.get('total_word_count', 0)}")
+    print(f"🎯 Token count: {cumulative_stats.get('total_token_count', 0)}")
+    
+    # Enhanced monitoring summary
+    if 'enhanced_monitoring_aggregates' in cumulative_stats:
+        agg = cumulative_stats['enhanced_monitoring_aggregates']
+        print("\n🔍 ENHANCED MONITORING")
+        print("-" * 30)
+        print(f"💻 Total CPU delta: {agg['total_cpu_delta']:.1f}%")
+        print(f"🧠 Total memory delta: {agg['total_memory_delta_mb']:.1f}MB")
+        print(f"🎮 Max GPU utilization: {agg['max_gpu_utilization']:.1f}%")
+        print(f"🎮 Max GPU memory: {agg['max_gpu_memory_mb']:.1f}MB")
+        print(f"💾 Total I/O read: {agg['total_io_read_delta_mb']:.1f}MB")
+        print(f"💾 Total I/O write: {agg['total_io_write_delta_mb']:.1f}MB")
+        print(f"🎮 Pages with GPU usage: {agg['pages_with_gpu_usage']}")
+        print(f"💻 Pages with CPU usage: {agg['pages_with_cpu_usage']}")
+    
     print(f"📋 Report saved: {final_report_path}")
     
     return cumulative_stats
@@ -267,3 +479,8 @@ def main():
 
 if __name__ == "__main__":
     exit(main())
+
+
+
+
+

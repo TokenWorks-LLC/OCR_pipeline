@@ -1,0 +1,169 @@
+{
+  "pdf_path": "./data/input_pdfs\\00147___e55f6b7791852491584f2c71ae97575f.pdf",
+  "total_pages": 1,
+  "pages_processed": 1,
+  "progress_percent": 100.0,
+  "total_processing_time": 24.429096460342407,
+  "total_text_elements": 25,
+  "total_corrections": 0,
+  "successful_pages": 1,
+  "failed_pages": 0,
+  "config": {
+    "input": {
+      "input_directory": "./data/input_pdfs",
+      "supported_formats": [
+        ".pdf",
+        ".png",
+        ".jpg",
+        ".jpeg"
+      ],
+      "process_all_files": true,
+      "specific_file": "",
+      "recursive_search": true
+    },
+    "output": {
+      "output_directory": "./data/eval_output/eval_research_results_akkadian",
+      "create_subdirectories": true,
+      "timestamp_outputs": false
+    },
+    "ocr": {
+      "engine": "paddleocr",
+      "dpi": 600,
+      "languages": [
+        "en",
+        "tr",
+        "de",
+        "fr"
+      ],
+      "enable_text_correction": true,
+      "enable_reading_order": true,
+      "confidence_threshold": 0.7
+    },
+    "llm": {
+      "enable_correction": true,
+      "provider": "ollama",
+      "model": "mistral:latest",
+      "base_url": "http://localhost:11434",
+      "timeout": 60,
+      "max_concurrent_corrections": 3
+    },
+    "akkadian": {
+      "enable_extraction": true,
+      "confidence_threshold": 0.8,
+      "generate_pdf_report": true,
+      "translation_languages": [
+        "english",
+        "german",
+        "french",
+        "turkish"
+      ]
+    },
+    "processing": {
+      "batch_size": 5,
+      "max_workers": 2,
+      "skip_existing": true,
+      "create_visualizations": true,
+      "create_html_overlay": true,
+      "verbose": true
+    },
+    "csv_output": {
+      "format": "aggregated",
+      "include_metadata": true,
+      "include_confidence_scores": true,
+      "separate_akkadian_csv": true
+    },
+    "evaluation": {
+      "enable_benchmarking": true,
+      "mode_name": "akkadian",
+      "output_file": "./data/eval_output/benchmark_akkadian.json"
+    }
+  },
+  "page_statistics": [
+    {
+      "page_num": 1,
+      "processing_time": 24.404253244400024,
+      "ocr_time": 24.056007385253906,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 25,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.961,
+      "word_count": 277,
+      "token_count": 25,
+      "text_elements_count": 25,
+      "resource_usage": {
+        "cpu_percent": 1047.2,
+        "memory_mb": 1681.921875,
+        "timestamp": 1758766344.986626,
+        "available": true
+      },
+      "enhanced_monitoring": {
+        "pre_monitoring": {
+          "timestamp": 1758766320.5733085,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 499.8984375,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 290620.7021484375,
+            "write_mb": 257902.44384765625,
+            "available": true
+          }
+        },
+        "post_monitoring": {
+          "timestamp": 1758766344.9891567,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 1589.9140625,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 290625.4716796875,
+            "write_mb": 258159.67431640625,
+            "available": true
+          }
+        },
+        "cpu_delta": 0.0,
+        "memory_delta_mb": 1090.015625,
+        "gpu_utilization": 0.0,
+        "gpu_memory_mb": 0.0,
+        "io_read_delta_mb": 4.76953125,
+        "io_write_delta_mb": 257.23046875
+      }
+    }
+  ],
+  "start_time": 1758766320.569275,
+  "last_updated": "2025-09-24T19:12:24.996863",
+  "total_word_count": 277,
+  "total_token_count": 25,
+  "enhanced_monitoring_aggregates": {
+    "total_cpu_delta": 0.0,
+    "total_memory_delta_mb": 1090.015625,
+    "max_gpu_utilization": 0.0,
+    "max_gpu_memory_mb": 0.0,
+    "total_io_read_delta_mb": 4.76953125,
+    "total_io_write_delta_mb": 257.23046875,
+    "pages_with_gpu_usage": 0,
+    "pages_with_cpu_usage": 0
+  },
+  "avg_time_per_page": 24.429096460342407,
+  "completion_time": "2025-09-24T19:12:24.998371"
+}

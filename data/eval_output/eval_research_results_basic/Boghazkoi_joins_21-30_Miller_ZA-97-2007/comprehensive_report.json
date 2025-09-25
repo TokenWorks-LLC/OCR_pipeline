@@ -1,0 +1,720 @@
+{
+  "pdf_path": "./data/input_pdfs\\Boghazkoi_joins_21-30_Miller_ZA-97-2007.pdf",
+  "total_pages": 9,
+  "pages_processed": 9,
+  "progress_percent": 100.0,
+  "total_processing_time": 164.0447714328766,
+  "total_text_elements": 468,
+  "total_corrections": 0,
+  "successful_pages": 9,
+  "failed_pages": 0,
+  "config": {
+    "input": {
+      "input_directory": "./data/input_pdfs",
+      "supported_formats": [
+        ".pdf"
+      ],
+      "process_all_files": true,
+      "specific_file": "",
+      "recursive_search": false
+    },
+    "output": {
+      "output_directory": "./data/eval_output/eval_research_results_basic",
+      "create_subdirectories": true,
+      "timestamp_outputs": false
+    },
+    "ocr": {
+      "engine": "paddleocr",
+      "dpi": 300,
+      "languages": [
+        "en"
+      ],
+      "enable_text_correction": false,
+      "enable_reading_order": true,
+      "confidence_threshold": 0.5
+    },
+    "llm": {
+      "enable_correction": false,
+      "provider": "none",
+      "model": "",
+      "base_url": "",
+      "timeout": 30,
+      "max_concurrent_corrections": 1
+    },
+    "akkadian": {
+      "enable_extraction": false,
+      "confidence_threshold": 0.8,
+      "generate_pdf_report": false,
+      "translation_languages": [
+        "english"
+      ]
+    },
+    "processing": {
+      "batch_size": 10,
+      "max_workers": 2,
+      "skip_existing": true,
+      "create_visualizations": false,
+      "create_html_overlay": false,
+      "verbose": true
+    },
+    "csv_output": {
+      "format": "aggregated",
+      "include_metadata": true,
+      "include_confidence_scores": true,
+      "separate_akkadian_csv": false
+    },
+    "evaluation": {
+      "enable_benchmarking": true,
+      "mode_name": "basic",
+      "output_file": "./data/eval_output/benchmark_basic.json"
+    }
+  },
+  "page_statistics": [
+    {
+      "page_num": 1,
+      "processing_time": 18.693520307540894,
+      "ocr_time": 18.5309636592865,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 47,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.977,
+      "word_count": 366,
+      "token_count": 47,
+      "text_elements_count": 47,
+      "resource_usage": {
+        "cpu_percent": 752.8,
+        "memory_mb": 1683.42578125,
+        "timestamp": 1758763340.5459754,
+        "available": true
+      },
+      "enhanced_monitoring": {
+        "pre_monitoring": {
+          "timestamp": 1758763321.829863,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 2521.42578125,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 288438.951171875,
+            "write_mb": 256612.8837890625,
+            "available": true
+          }
+        },
+        "post_monitoring": {
+          "timestamp": 1758763340.5484567,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 1650.890625,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 288522.54052734375,
+            "write_mb": 256617.9208984375,
+            "available": true
+          }
+        },
+        "cpu_delta": 0.0,
+        "memory_delta_mb": -870.53515625,
+        "gpu_utilization": 0.0,
+        "gpu_memory_mb": 0.0,
+        "io_read_delta_mb": 83.58935546875,
+        "io_write_delta_mb": 5.037109375
+      }
+    },
+    {
+      "page_num": 2,
+      "processing_time": 18.1762113571167,
+      "ocr_time": 18.01589035987854,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 50,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.969,
+      "word_count": 255,
+      "token_count": 50,
+      "text_elements_count": 50,
+      "resource_usage": {
+        "cpu_percent": 1047.2,
+        "memory_mb": 1602.5,
+        "timestamp": 1758763358.7535572,
+        "available": true
+      },
+      "enhanced_monitoring": {
+        "pre_monitoring": {
+          "timestamp": 1758763340.5634706,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 1650.89453125,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 288523.56396484375,
+            "write_mb": 256617.9208984375,
+            "available": true
+          }
+        },
+        "post_monitoring": {
+          "timestamp": 1758763358.7545729,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 1569.9140625,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 288631.1376953125,
+            "write_mb": 256639.4833984375,
+            "available": true
+          }
+        },
+        "cpu_delta": 0.0,
+        "memory_delta_mb": -80.98046875,
+        "gpu_utilization": 0.0,
+        "gpu_memory_mb": 0.0,
+        "io_read_delta_mb": 107.57373046875,
+        "io_write_delta_mb": 21.5625
+      }
+    },
+    {
+      "page_num": 3,
+      "processing_time": 19.02340579032898,
+      "ocr_time": 18.866963863372803,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 61,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.966,
+      "word_count": 232,
+      "token_count": 61,
+      "text_elements_count": 61,
+      "resource_usage": {
+        "cpu_percent": 1163.6,
+        "memory_mb": 1745.37109375,
+        "timestamp": 1758763377.8041961,
+        "available": true
+      },
+      "enhanced_monitoring": {
+        "pre_monitoring": {
+          "timestamp": 1758763358.7686884,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 1569.92578125,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 288631.2158203125,
+            "write_mb": 256639.4833984375,
+            "available": true
+          }
+        },
+        "post_monitoring": {
+          "timestamp": 1758763377.8052018,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 1712.78515625,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 288685.32373046875,
+            "write_mb": 256661.5341796875,
+            "available": true
+          }
+        },
+        "cpu_delta": 0.0,
+        "memory_delta_mb": 142.859375,
+        "gpu_utilization": 0.0,
+        "gpu_memory_mb": 0.0,
+        "io_read_delta_mb": 54.10791015625,
+        "io_write_delta_mb": 22.05078125
+      }
+    },
+    {
+      "page_num": 4,
+      "processing_time": 17.206631422042847,
+      "ocr_time": 17.051826238632202,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 40,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.906,
+      "word_count": 200,
+      "token_count": 40,
+      "text_elements_count": 40,
+      "resource_usage": {
+        "cpu_percent": 1279.9,
+        "memory_mb": 1835.2734375,
+        "timestamp": 1758763395.0388296,
+        "available": true
+      },
+      "enhanced_monitoring": {
+        "pre_monitoring": {
+          "timestamp": 1758763377.8203547,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 1712.796875,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 288685.85498046875,
+            "write_mb": 256661.5341796875,
+            "available": true
+          }
+        },
+        "post_monitoring": {
+          "timestamp": 1758763395.0403383,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 1802.69140625,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 288700.798828125,
+            "write_mb": 256669.8857421875,
+            "available": true
+          }
+        },
+        "cpu_delta": 0.0,
+        "memory_delta_mb": 89.89453125,
+        "gpu_utilization": 0.0,
+        "gpu_memory_mb": 0.0,
+        "io_read_delta_mb": 14.94384765625,
+        "io_write_delta_mb": 8.3515625
+      }
+    },
+    {
+      "page_num": 5,
+      "processing_time": 17.214510202407837,
+      "ocr_time": 17.06471586227417,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 41,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.974,
+      "word_count": 279,
+      "token_count": 41,
+      "text_elements_count": 41,
+      "resource_usage": {
+        "cpu_percent": 1103.8,
+        "memory_mb": 1756.98046875,
+        "timestamp": 1758763412.276854,
+        "available": true
+      },
+      "enhanced_monitoring": {
+        "pre_monitoring": {
+          "timestamp": 1758763395.0533683,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 1802.703125,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 288700.798828125,
+            "write_mb": 256669.8857421875,
+            "available": true
+          }
+        },
+        "post_monitoring": {
+          "timestamp": 1758763412.27886,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 1724.40625,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 288733.71240234375,
+            "write_mb": 256680.95703125,
+            "available": true
+          }
+        },
+        "cpu_delta": 0.0,
+        "memory_delta_mb": -78.296875,
+        "gpu_utilization": 0.0,
+        "gpu_memory_mb": 0.0,
+        "io_read_delta_mb": 32.91357421875,
+        "io_write_delta_mb": 11.0712890625
+      }
+    },
+    {
+      "page_num": 6,
+      "processing_time": 19.759052753448486,
+      "ocr_time": 19.59102964401245,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 74,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.978,
+      "word_count": 381,
+      "token_count": 74,
+      "text_elements_count": 74,
+      "resource_usage": {
+        "cpu_percent": 1146.9,
+        "memory_mb": 1780.21875,
+        "timestamp": 1758763432.0844848,
+        "available": true
+      },
+      "enhanced_monitoring": {
+        "pre_monitoring": {
+          "timestamp": 1758763412.303347,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 1724.4453125,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 288734.29833984375,
+            "write_mb": 256680.95703125,
+            "available": true
+          }
+        },
+        "post_monitoring": {
+          "timestamp": 1758763432.0854907,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 1747.6328125,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 288736.79833984375,
+            "write_mb": 256684.08203125,
+            "available": true
+          }
+        },
+        "cpu_delta": 0.0,
+        "memory_delta_mb": 23.1875,
+        "gpu_utilization": 0.0,
+        "gpu_memory_mb": 0.0,
+        "io_read_delta_mb": 2.5,
+        "io_write_delta_mb": 3.125
+      }
+    },
+    {
+      "page_num": 7,
+      "processing_time": 18.931402921676636,
+      "ocr_time": 18.77216649055481,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 61,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.97,
+      "word_count": 321,
+      "token_count": 61,
+      "text_elements_count": 61,
+      "resource_usage": {
+        "cpu_percent": 960.4,
+        "memory_mb": 1664.66796875,
+        "timestamp": 1758763451.060086,
+        "available": true
+      },
+      "enhanced_monitoring": {
+        "pre_monitoring": {
+          "timestamp": 1758763432.1075943,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 1747.66796875,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 288737.33349609375,
+            "write_mb": 256684.08203125,
+            "available": true
+          }
+        },
+        "post_monitoring": {
+          "timestamp": 1758763451.0615969,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 1632.08203125,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 288775.853515625,
+            "write_mb": 256690.68359375,
+            "available": true
+          }
+        },
+        "cpu_delta": 0.0,
+        "memory_delta_mb": -115.5859375,
+        "gpu_utilization": 0.0,
+        "gpu_memory_mb": 0.0,
+        "io_read_delta_mb": 38.52001953125,
+        "io_write_delta_mb": 6.6015625
+      }
+    },
+    {
+      "page_num": 8,
+      "processing_time": 18.903212308883667,
+      "ocr_time": 18.749479293823242,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 56,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.979,
+      "word_count": 285,
+      "token_count": 56,
+      "text_elements_count": 56,
+      "resource_usage": {
+        "cpu_percent": 947.5,
+        "memory_mb": 1849.39453125,
+        "timestamp": 1758763469.987523,
+        "available": true
+      },
+      "enhanced_monitoring": {
+        "pre_monitoring": {
+          "timestamp": 1758763451.0747352,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 1632.09765625,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 288775.853515625,
+            "write_mb": 256690.68359375,
+            "available": true
+          }
+        },
+        "post_monitoring": {
+          "timestamp": 1758763469.9885373,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 1816.80859375,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 288813.72119140625,
+            "write_mb": 256700.44140625,
+            "available": true
+          }
+        },
+        "cpu_delta": 0.0,
+        "memory_delta_mb": 184.7109375,
+        "gpu_utilization": 0.0,
+        "gpu_memory_mb": 0.0,
+        "io_read_delta_mb": 37.86767578125,
+        "io_write_delta_mb": 9.7578125
+      }
+    },
+    {
+      "page_num": 9,
+      "processing_time": 15.7958402633667,
+      "ocr_time": 15.65268874168396,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 38,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.978,
+      "word_count": 125,
+      "token_count": 38,
+      "text_elements_count": 38,
+      "resource_usage": {
+        "cpu_percent": 1246.7,
+        "memory_mb": 1681.8828125,
+        "timestamp": 1758763485.8050117,
+        "available": true
+      },
+      "enhanced_monitoring": {
+        "pre_monitoring": {
+          "timestamp": 1758763469.9995613,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 1816.81640625,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 288813.72119140625,
+            "write_mb": 256700.44140625,
+            "available": true
+          }
+        },
+        "post_monitoring": {
+          "timestamp": 1758763485.8065193,
+          "process_tree": {
+            "total_cpu_percent": 0.0,
+            "total_memory_mb": 1649.296875,
+            "process_count": 1,
+            "available": true
+          },
+          "gpu": {
+            "utilization": 0.0,
+            "memory_used_mb": 0.0,
+            "memory_total_mb": 0.0,
+            "temperature": 0.0,
+            "available": false
+          },
+          "io": {
+            "read_mb": 288827.87939453125,
+            "write_mb": 256705.92578125,
+            "available": true
+          }
+        },
+        "cpu_delta": 0.0,
+        "memory_delta_mb": -167.51953125,
+        "gpu_utilization": 0.0,
+        "gpu_memory_mb": 0.0,
+        "io_read_delta_mb": 14.158203125,
+        "io_write_delta_mb": 5.484375
+      }
+    }
+  ],
+  "start_time": 1758763321.7823164,
+  "last_updated": "2025-09-24T18:24:45.822566",
+  "total_word_count": 2444,
+  "total_token_count": 468,
+  "enhanced_monitoring_aggregates": {
+    "total_cpu_delta": 0.0,
+    "total_memory_delta_mb": -872.265625,
+    "max_gpu_utilization": 0.0,
+    "max_gpu_memory_mb": 0.0,
+    "total_io_read_delta_mb": 386.17431640625,
+    "total_io_write_delta_mb": 93.0419921875,
+    "pages_with_gpu_usage": 0,
+    "pages_with_cpu_usage": 0
+  },
+  "avg_time_per_page": 18.227196825875176,
+  "completion_time": "2025-09-24T18:24:45.827087"
+}

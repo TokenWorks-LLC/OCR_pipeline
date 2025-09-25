@@ -47,8 +47,8 @@ python quick_start.py
 ```bash
 # 1. Build optimized image (Apple Silicon users)
 DOCKER_BUILDKIT=1 docker buildx build \
-  --platform=linux/arm64/v8 -t ocr-pipeline:latest \
-  -f docker/Dockerfile .
+  --no-cache --platform=linux/arm64/v8 \
+  -t ocr-pipeline:latest -f docker/Dockerfile .
 
 # 2. Run with your files
 docker run --rm -v "$PWD":/workspace -w /workspace ocr-pipeline:latest
@@ -705,11 +705,19 @@ docker run --rm -v "$PWD":/workspace -w /workspace ocr-pipeline:latest
 - PaddlePaddle may pull wrong architecture or compile
 
 ### Our Solution: Binary-Only Builds
-We pin packages to versions that publish **linux/aarch64 wheels** and set `PIP_ONLY_BINARY=:all:` so pip never compiles C/C++ from source.
+We pin packages to versions that publish **linux/aarch64 wheels** and use multiple pip flags to ensure absolutely no source compilation:
+
+- `PIP_ONLY_BINARY=:all:` - Forces wheel-only installation
+- `PIP_PREFER_BINARY=1` - Prefers binary distributions
+- `PIP_NO_BUILD_ISOLATION=1` - Prevents isolated build environments
+- `--only-binary=:all:` - Per-command wheel enforcement
+
+This multi-layered approach ensures pip never attempts source compilation, even if a wheel seems unavailable initially.
 
 ### Quick Build Command
 ```bash
 DOCKER_BUILDKIT=1 docker buildx build \
+  --no-cache \
   --progress=plain \
   --platform=linux/arm64/v8 \
   -t ocr-pipeline:latest \
@@ -743,8 +751,9 @@ docker run --rm \
 
 ### Why This Works
 - **Binary wheels only**: `PIP_ONLY_BINARY=:all:` prevents source compilation
+- **Enhanced wheel preference**: Additional flags ensure pip never falls back to source builds
 - **Compatibility pins**: 
-  - PyMuPDF==1.20.2 (compatible with PaddleOCR 2.7.0.3, has ARM64 wheels)
+  - PyMuPDF==1.24.10 (latest stable with reliable ARM64 wheels)
   - pdf2image==1.17.0 (correct latest version)
   - OpenCV 4.10.0.84 (reliable ARM64 wheels)
 - **Official ARM64 index**: PaddlePaddle pulls from `https://www.paddlepaddle.org.cn/whl/linux/aarch64/`
@@ -756,7 +765,7 @@ docker run --rm \
 #### 1. Build Success Indicators
 Check your build logs for these **good** patterns:
 ```
-✅ Using cached PyMuPDF-1.20.2-cp310-cp310-linux_aarch64.whl
+✅ Using cached PyMuPDF-1.24.10-cp310-cp310-linux_aarch64.whl
 ✅ Downloading pdf2image-1.17.0-py3-none-any.whl
 ✅ Downloading opencv_python_headless-4.10.0.84-cp310-cp310-linux_aarch64.whl
 ```
@@ -765,6 +774,8 @@ Avoid these **bad** patterns:
 ```
 ❌ Building wheel for PyMuPDF (setup.py)
 ❌ Running setup.py bdist_wheel for opencv-python
+❌ PyMuPDF/setup.py
+❌ thirdparty/tesseract
 ❌ error: command 'swig' failed: No such file or directory
 ```
 
@@ -779,7 +790,7 @@ print('✅ All OCR components loaded successfully')
 "
 
 # Expected output:
-# ✅ PyMuPDF: 1.20.2
+# ✅ PyMuPDF: 1.24.10
 # ✅ OpenCV: 4.10.0.84
 # ✅ All OCR components loaded successfully
 ```
@@ -809,11 +820,12 @@ Compare to problematic builds:
 
 #### Issue 1: "error: command 'swig' failed"
 **Cause**: PyMuPDF trying to compile from source
-**Solution**: Already fixed with PyMuPDF==1.20.2 pin
+**Solution**: Already fixed with PyMuPDF==1.24.10 pin and strict wheel-only settings
 ```bash
 # Verify the pin is working
 docker build --progress=plain ... 2>&1 | grep -i pymupdf
-# Should show: "Downloading PyMuPDF-1.20.2...aarch64.whl"
+# Should show: "Using cached PyMuPDF-1.24.10...aarch64.whl"
+# Must NOT show: "PyMuPDF/setup.py" or "thirdparty/tesseract"
 ```
 
 #### Issue 2: "Building wheel for opencv-python"
@@ -839,12 +851,17 @@ docker build --progress=plain ... 2>&1 | grep -A2 paddlepaddle
 ```bash
 docker build --progress=plain ... 2>&1 | grep -i "building wheel"
 # Should return NO results (empty output)
+
+# Also check for MuPDF/Tesseract compilation attempts
+docker build --progress=plain ... 2>&1 | grep -E "(thirdparty|tesseract|swig)"
+# Should return NO results (empty output)
 ```
 
-**Solution**: If you see "Building wheel", something is still compiling:
+**Solution**: If you see "Building wheel" or compilation messages:
 1. Use `--no-cache` to clear problematic cached layers
-2. Check if a dependency pulled in a package that doesn't have wheels
-3. Verify `PIP_ONLY_BINARY=:all:` is set in the logs
+2. Verify `PIP_ONLY_BINARY=:all:` and related flags are set in logs
+3. Check if a dependency pulled in a package that doesn't have wheels
+4. Ensure PyMuPDF==1.24.10 is being installed (not an older version)
 
 #### Issue 5: Import errors at runtime
 ```bash

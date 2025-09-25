@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1.6
 FROM --platform=linux/arm64/v8 python:3.10-slim
 
-# Keep Python output clean and installs predictable
+# Predictable Python/pip behavior + binary-only wheels (no source builds)
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
@@ -9,8 +9,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PIP_ONLY_BINARY=:all: \
     PIP_VERBOSE=1
 
-# Runtime libs for OpenCV, Pillow, pdf2image, etc.
-# Note: poppler-utils supports pdf2image without compiling anything.
+# Runtime libs; poppler-utils enables pdf2image (no compile)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libglib2.0-0 libsm6 libxrender1 libxext6 libgl1 ffmpeg poppler-utils \
   && rm -rf /var/lib/apt/lists/*
@@ -18,19 +17,24 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Keep pip toolchain modern
 RUN python -m pip install -U pip wheel setuptools
 
-# IMPORTANT: Pin PyMuPDF to a prebuilt manylinux2014 aarch64 wheel to avoid SWIG
+# 1) PyMuPDF must be <1.21.0 for paddleocr==2.7.0.3; pin to aarch64 wheel
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install "pymupdf==1.24.10"
+    pip install "PyMuPDF==1.20.2"
 
-# OpenCV + NumPy: versions known to publish linux/aarch64 wheels
-RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install "opencv-python-headless==4.10.0.84" "numpy==1.26.*"
-
-# PaddlePaddle aarch64 wheels come from Paddle's index; PaddleOCR is pure Python
+# 2) Core OCR stack (all wheels for arm64 as pinned)
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install "paddlepaddle==2.6.1" -f https://www.paddlepaddle.org.cn/whl/linux/aarch64/
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install "paddleocr==2.7.0.3" "Pillow>=10.0.0" "requests>=2.31.0" "pdf2image"
+    pip install "paddleocr==2.7.0.3" \
+                "opencv-python-headless==4.10.0.84" \
+                "numpy==1.26.*"
+
+# 3) PDF helpers + IO
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install "pdf2image==1.17.0" "Pillow>=10.0.0" "requests>=2.31.0" "pytesseract>=0.3.10"
+
+# (Optional) In case GUI OpenCV wheels were pulled transitively, remove them to keep image lean/headless
+RUN pip uninstall -y opencv-python opencv-contrib-python || true
 
 # Copy application code
 COPY . /app
@@ -47,8 +51,7 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 # Default command
 CMD ["python", "run_pipeline.py", "--help"]
 
-# Notes / Fallbacks:
-# - If a future OpenCV pin lacks an arm64 wheel, either:
-#   A) switch to another pinned version with wheels, or
-#   B) apt-get install the distro package: `apt-get update && apt-get install -y --no-install-recommends python3-opencv`
-#      and REMOVE any pip `opencv-python(-headless)` installs.
+# Notes:
+# - If a future OpenCV pin lacks an arm64 wheel, pick another pinned version with wheels
+#   or install distro package: `apt-get update && apt-get install -y --no-install-recommends python3-opencv`
+#   and REMOVE any pip opencv-* installs.

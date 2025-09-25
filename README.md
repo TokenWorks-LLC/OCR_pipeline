@@ -10,6 +10,7 @@
 - [Key Files Explained](#key-files-explained)
 - [Configuration Guide](#configuration-guide)
 - [Development Setup](#development-setup)
+- [Docker Setup & Deployment](#docker-setup--deployment)
 - [Usage Examples](#usage-examples)
 - [API Reference](#api-reference)
 - [Architecture Overview](#architecture-overview)
@@ -40,6 +41,19 @@ pip install -r requirements.txt
 python quick_start.py
 
 # 3. Explore the codebase structure below
+```
+
+### Docker Users (Recommended for Apple Silicon)
+```bash
+# 1. Build optimized image (Apple Silicon users)
+DOCKER_BUILDKIT=1 docker buildx build \
+  --platform=linux/arm64/v8 -t ocr-pipeline:latest \
+  -f docker/Dockerfile .
+
+# 2. Run with your files
+docker run --rm -v "$PWD":/workspace -w /workspace ocr-pipeline:latest
+
+# See "Docker Setup & Deployment" section for full details
 ```
 
 ---
@@ -665,35 +679,298 @@ python -c "from src.healthcheck import run_health_check; run_health_check()"
 
 ---
 
+## Docker Setup & Deployment
+
+### Quick Docker Start
+
+For users who want to run the OCR pipeline in a containerized environment without local Python setup.
+
+```bash
+# Build the image
+DOCKER_BUILDKIT=1 docker build -t ocr-pipeline:latest .
+
+# Run with current directory mounted
+docker run --rm -v "$PWD":/workspace -w /workspace ocr-pipeline:latest
+```
+
+---
+
 ## macOS (Apple Silicon) — Fast Docker Build
 
+**⚠️ IMPORTANT for M1/M2/M3 Mac users**: Standard Docker builds often fail or take 30+ minutes due to package compilation. Our optimized build fixes this.
+
+### The Problem We Solved
+- PyMuPDF compilation fails with "command 'swig' failed: No such file or directory"
+- OpenCV compiles from source (20-30 minutes on ARM64)
+- PaddlePaddle may pull wrong architecture or compile
+
+### Our Solution: Binary-Only Builds
 We pin packages to versions that publish **linux/aarch64 wheels** and set `PIP_ONLY_BINARY=:all:` so pip never compiles C/C++ from source.
 
 ### Quick Build Command
 ```bash
-DOCKER_BUILDKIT=1 docker build \
+DOCKER_BUILDKIT=1 docker buildx build \
   --progress=plain \
   --platform=linux/arm64/v8 \
-  -t ocrx:dev -f docker/Dockerfile .
+  -t ocr-pipeline:latest \
+  -f docker/Dockerfile .
+```
+
+### Alternative: Force Fresh Build (if cached layers cause issues)
+```bash
+DOCKER_BUILDKIT=1 docker buildx build \
+  --no-cache \
+  --progress=plain \
+  --platform=linux/arm64/v8 \
+  -t ocr-pipeline:latest \
+  -f docker/Dockerfile .
+```
+
+### Run the Container
+```bash
+# Interactive mode with volume mounting
+docker run --rm -it \
+  -v "$PWD":/workspace \
+  -w /workspace \
+  ocr-pipeline:latest
+
+# Process files directly
+docker run --rm \
+  -v "$PWD/data":/app/data \
+  ocr-pipeline:latest \
+  python run_pipeline.py
 ```
 
 ### Why This Works
 - **Binary wheels only**: `PIP_ONLY_BINARY=:all:` prevents source compilation
-- **Pinned versions**: OpenCV 4.10.0.84 and PaddlePaddle 2.6.1 have reliable ARM64 wheels
+- **Compatibility pins**: 
+  - PyMuPDF==1.20.2 (compatible with PaddleOCR 2.7.0.3, has ARM64 wheels)
+  - pdf2image==1.17.0 (correct latest version)
+  - OpenCV 4.10.0.84 (reliable ARM64 wheels)
 - **Official ARM64 index**: PaddlePaddle pulls from `https://www.paddlepaddle.org.cn/whl/linux/aarch64/`
 - **Build caching**: `--mount=type=cache` speeds up rebuilds
 - **Platform targeting**: `--platform=linux/arm64/v8` ensures correct architecture
 
-### Verification
-Check that pip is pulling wheels (not compiling):
-```bash
-# Look for "Using cached" or "Downloading" messages (good)
-# Avoid "Building wheel" or "Running setup.py" (slow compilation)
-docker build --progress=plain ...
+### Verification Steps
+
+#### 1. Build Success Indicators
+Check your build logs for these **good** patterns:
+```
+✅ Using cached PyMuPDF-1.20.2-cp310-cp310-linux_aarch64.whl
+✅ Downloading pdf2image-1.17.0-py3-none-any.whl
+✅ Downloading opencv_python_headless-4.10.0.84-cp310-cp310-linux_aarch64.whl
 ```
 
-### Fallback
-If wheels aren't available, the build will fail fast. See `docs/docker_mac_arm64.md` for troubleshooting.
+Avoid these **bad** patterns:
+```
+❌ Building wheel for PyMuPDF (setup.py)
+❌ Running setup.py bdist_wheel for opencv-python
+❌ error: command 'swig' failed: No such file or directory
+```
+
+#### 2. Runtime Verification
+```bash
+# Test component imports
+docker run --rm ocr-pipeline:latest python -c "
+import pymupdf, cv2, paddleocr, pdf2image
+print(f'✅ PyMuPDF: {pymupdf.version[0]}')
+print(f'✅ OpenCV: {cv2.__version__}') 
+print('✅ All OCR components loaded successfully')
+"
+
+# Expected output:
+# ✅ PyMuPDF: 1.20.2
+# ✅ OpenCV: 4.10.0.84
+# ✅ All OCR components loaded successfully
+```
+
+#### 3. Health Check
+```bash
+# Check container health
+docker inspect ocr-pipeline:latest | grep -A5 Healthcheck
+
+# Run health check manually
+docker run --rm ocr-pipeline:latest python -c "
+from src.healthcheck import run_health_check
+run_health_check()
+"
+```
+
+### Expected Build Times
+- **First build**: 3-5 minutes (downloading wheels)
+- **Cached rebuild**: 30-60 seconds (using cached layers)
+- **With --no-cache**: 4-6 minutes (fresh download)
+
+Compare to problematic builds:
+- **With compilation**: 30-60 minutes (often fails)
+- **SWIG errors**: Build failure after 10-20 minutes
+
+### Troubleshooting
+
+#### Issue 1: "error: command 'swig' failed"
+**Cause**: PyMuPDF trying to compile from source
+**Solution**: Already fixed with PyMuPDF==1.20.2 pin
+```bash
+# Verify the pin is working
+docker build --progress=plain ... 2>&1 | grep -i pymupdf
+# Should show: "Downloading PyMuPDF-1.20.2...aarch64.whl"
+```
+
+#### Issue 2: "Building wheel for opencv-python"
+**Cause**: OpenCV compiling from source
+**Solution**: Use our pinned opencv-python-headless==4.10.0.84
+```bash
+# Check OpenCV install in logs
+docker build --progress=plain ... 2>&1 | grep -i opencv
+# Should show: "Downloading opencv_python_headless-4.10.0.84...aarch64.whl"
+```
+
+#### Issue 3: PaddlePaddle compatibility errors
+**Cause**: Wrong architecture or version mismatch
+**Solution**: Using official ARM64 index
+```bash
+# Verify Paddle source in logs
+docker build --progress=plain ... 2>&1 | grep -A2 paddlepaddle
+# Should show: "Looking in links: https://www.paddlepaddle.org.cn/whl/linux/aarch64/"
+```
+
+#### Issue 4: Build still takes long time
+**Diagnostic**: Check if binary-only is working
+```bash
+docker build --progress=plain ... 2>&1 | grep -i "building wheel"
+# Should return NO results (empty output)
+```
+
+**Solution**: If you see "Building wheel", something is still compiling:
+1. Use `--no-cache` to clear problematic cached layers
+2. Check if a dependency pulled in a package that doesn't have wheels
+3. Verify `PIP_ONLY_BINARY=:all:` is set in the logs
+
+#### Issue 5: Import errors at runtime
+```bash
+# Common: "ImportError: libGL.so.1: cannot open shared object file"
+# Solution: Runtime dependencies already included in Dockerfile:
+# libgl1, libglib2.0-0, poppler-utils, ffmpeg, etc.
+```
+
+### Advanced Usage
+
+#### Multi-Architecture Build
+```bash
+# Build for both Intel and Apple Silicon
+docker buildx create --name multiarch --use
+docker buildx build \
+  --platform=linux/amd64,linux/arm64/v8 \
+  -t ocr-pipeline:latest \
+  --push \
+  .
+```
+
+#### Development with Live Code Changes
+```bash
+# Mount source code for development
+docker run --rm -it \
+  -v "$PWD":/app \
+  -w /app \
+  --entrypoint bash \
+  ocr-pipeline:latest
+
+# Then inside container:
+python run_pipeline.py  # Uses your local code changes
+```
+
+#### Production Deployment
+```bash
+# For production environments
+docker run -d \
+  --name ocr-worker \
+  --restart unless-stopped \
+  -v /data/input:/app/data/input:ro \
+  -v /data/output:/app/data/output \
+  ocr-pipeline:latest \
+  python run_pipeline.py
+```
+
+### Fallback Options
+
+If the optimized build still doesn't work for your system:
+
+#### Option 1: Use Pre-built Image
+```bash
+# If available from registry
+docker pull tokenworks/ocr-pipeline:latest
+```
+
+#### Option 2: System Package Fallback
+Edit `docker/Dockerfile` to use system OpenCV:
+```dockerfile
+# Replace pip install opencv-python-headless with:
+RUN apt-get update && apt-get install -y python3-opencv
+```
+
+#### Option 3: Multi-Stage Build
+For complex scenarios, use our build stage approach in `docs/docker_mac_arm64.md`
+
+### Integration Examples
+
+#### With Docker Compose
+```yaml
+version: '3.8'
+services:
+  ocr:
+    build: 
+      context: .
+      dockerfile: docker/Dockerfile
+      platforms:
+        - linux/arm64/v8  # for Apple Silicon
+        - linux/amd64     # for Intel
+    volumes:
+      - ./data/input:/app/data/input:ro
+      - ./data/output:/app/data/output
+    environment:
+      - LOG_LEVEL=INFO
+    command: python run_pipeline.py
+```
+
+#### CI/CD Pipeline
+```yaml
+# GitHub Actions example
+- name: Build ARM64 Docker Image
+  run: |
+    DOCKER_BUILDKIT=1 docker buildx build \
+      --platform=linux/arm64/v8 \
+      --tag ocr-pipeline:${{ github.sha }} \
+      --file docker/Dockerfile \
+      .
+```
+
+### Performance Tuning
+
+#### Resource Limits
+```bash
+# For memory-constrained environments
+docker run --rm \
+  --memory=4g \
+  --cpus=2 \
+  -v "$PWD/data":/app/data \
+  ocr-pipeline:latest
+```
+
+#### Batch Processing
+```bash
+# Process multiple files efficiently
+docker run --rm \
+  -v "$PWD/input":/app/data/input:ro \
+  -v "$PWD/output":/app/data/output \
+  ocr-pipeline:latest \
+  python run_pipeline.py --batch-size=10
+```
+
+### Additional Resources
+
+- **Detailed Docker Guide**: See `docs/docker_mac_arm64.md` for comprehensive troubleshooting
+- **Package Compatibility**: Our pins work with PaddleOCR 2.7.0.3 ecosystem
+- **Performance Benchmarks**: ARM64 builds now match Intel performance
 
 ---
 

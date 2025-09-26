@@ -1,0 +1,60 @@
+# Docker ignore file for OCR Pipeline
+# Prevents unnecessary files from being copied into Docker build context
+
+# Python virtual environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# PaddleOCR model caches (can be large, let container download fresh)
+# Uncomment these if you want to exclude cached models:
+# .paddlex/
+# ~/.paddle/
+# ~/.paddleocr/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Docker files themselves
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Logs and temporary files
+*.log
+*.tmp
+temp/
+tmp/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/

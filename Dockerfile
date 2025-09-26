@@ -14,12 +14,14 @@ ENV PIP_NO_CACHE_DIR=1 \
 # - poppler-utils: PDF utilities (pdfinfo, pdftoppm) for pdf2image
 # - build-essential: C compiler and build tools for PyMuPDF compilation
 # - cmake: Build system generator for PyMuPDF
+# - swig: Interface generator for PyMuPDF bindings
 RUN apt-get update && apt-get install -y \
     libgl1 \
     libglib2.0-0 \
     poppler-utils \
     build-essential \
     cmake \
+    swig \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
 

@@ -12,6 +12,9 @@ import csv
 import datetime
 import subprocess as sp
 
+import random
+import numpy as np
+
 def iso_timestamp_for_dir(ts=None):
     ts = ts or datetime.datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
     return ts.replace(":", "-")  # make filename safe
@@ -39,12 +42,12 @@ def get_input_files(path):
                 files.append(os.path.join(root, f))
     return sorted(files)
 
-def call_pipeline_for_doc(doc_path, doc_out_dir, skip_llm=False, formats=None):
+def call_pipeline_for_doc(doc_path, doc_out_dir, skip_llm=False, export_formats=None):
     cmd = ["python", "run_pipeline.py", "--input", doc_path, "--output", doc_out_dir]
     if skip_llm:
         cmd.append("--skip-llm")
-    if formats:
-        cmd += ["--formats", formats]
+    if export_formats:
+        cmd += ["--export", export_formats]
     print("Running:", " ".join(cmd))
     subprocess.run(cmd, check=True)
 
@@ -62,6 +65,11 @@ def aggregate_results(run_dir, per_doc_results):
     print("Wrote aggregates:", csv_path, json_path)
 
 def main(args):
+    # make outputs deterministic
+    random.seed(42)
+    np.random.seed(42)
+
+
     run_dir, ts = make_run_dir(args.output_root, args.run_name, args.timestamp)
 
     input_files = get_input_files(args.input)
@@ -75,7 +83,7 @@ def main(args):
         os.makedirs(doc_out_dir, exist_ok=True)
 
         try:
-            call_pipeline_for_doc(doc, doc_out_dir, skip_llm=args.skip_llm, formats=args.formats)
+            call_pipeline_for_doc(doc, doc_out_dir, skip_llm=args.skip_llm, formats=args.export)
         except subprocess.CalledProcessError as e:
             print(f"Pipeline failed for {doc}: {e}")
             continue
@@ -97,6 +105,9 @@ if __name__ == "__main__":
     p.add_argument("--run-name", default="demo", help="short name for the run")
     p.add_argument("--timestamp", default=None, help="optional ISO timestamp override")
     p.add_argument("--skip-llm", action="store_true", help="skip LLM calls (useful for tests)")
-    p.add_argument("--formats", default="json,csv,overlay", help="comma-separated output formats")
+    p.add_argument("--languages", default="en", help="comma-separated list of OCR languages (default: en)")
+    p.add_argument("--profile", choices=["fast", "quality"], default="fast", help="OCR/LLM profile: fast vs quality")
+    p.add_argument("--export", default="csv,json,overlay", help="comma-separated outputs to save")
+
     args = p.parse_args()
     main(args)

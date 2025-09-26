@@ -1622,7 +1622,7 @@ docker pull tokenworks/ocr-pipeline:latest
 ```
 
 #### Option 2: System Package Fallback
-Edit `docker/Dockerfile` to use system OpenCV:
+Edit `Dockerfile.arm64` to use system OpenCV:
 ```dockerfile
 # Replace pip install opencv-python-headless with:
 RUN apt-get update && apt-get install -y python3-opencv
@@ -1640,7 +1640,7 @@ services:
   ocr:
     build: 
       context: .
-      dockerfile: docker/Dockerfile
+      dockerfile: Dockerfile.arm64
       platforms:
         - linux/arm64/v8  # for Apple Silicon
         - linux/amd64     # for Intel
@@ -1660,7 +1660,7 @@ services:
     DOCKER_BUILDKIT=1 docker buildx build \
       --platform=linux/arm64/v8 \
       --tag ocr-pipeline:${{ github.sha }} \
-      --file docker/Dockerfile \
+      --file Dockerfile.arm64 \
       .
 ```
 

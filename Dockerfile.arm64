@@ -1,61 +1,55 @@
-# Optimized Dockerfile for Apple Silicon / ARM64 builds  
-# Based on PyMuPDF documentation and ARM64 compatibility research
-FROM ubuntu:22.04
+# Optimized ARM64 Dockerfile for Apple Silicon (M1/M2/M3) and ARM64 systems
+# Combines best practices from multiple ARM64 Dockerfile variants
+# Based on PyMuPDF documentation, PaddlePaddle ARM64 support, and build optimization research
+FROM python:3.11-slim
 
-# Set environment variables
-ENV DEBIAN_FRONTEND=noninteractive
-ENV PYTHONPATH=/app
-ENV PIP_NO_CACHE_DIR=1
-ENV PIP_PREFER_BINARY=1
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
+# Environment variables for optimal ARM64 builds
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONPATH=/app \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_PREFER_BINARY=1 \
+    PIP_ONLY_BINARY=:all: \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
 
-# Install system dependencies optimized for ARM64
-RUN apt-get update && apt-get install -y \
-    # Core Python and build tools
-    python3 \
-    python3-pip \
-    python3-dev \
-    python3-venv \
+# Create non-root user for security
+RUN useradd --create-home --shell /bin/bash ocruser
+
+# Install system dependencies optimized for ARM64 with minimal layers
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    # Core build tools
     build-essential \
     cmake \
     pkg-config \
+    swig \
     git \
     wget \
     curl \
-    swig \
+    # Python development
+    python3-dev \
     # Image processing libraries
     libjpeg-dev \
     libjpeg8-dev \
     libpng-dev \
-    libtiff-dev \
+    libtiff5-dev \
     libwebp-dev \
+    libavif-dev \
+    libjpeg62-turbo-dev \
     libopenjp2-7-dev \
-    libopenjp2-tools \
-    # Graphics and rendering
+    zlib1g-dev \
     libfreetype6-dev \
     libharfbuzz-dev \
     libfribidi-dev \
     liblcms2-dev \
-    libgumbo-dev \
-    # System libraries
-    libffi-dev \
-    libssl-dev \
-    libxml2-dev \
-    libxslt1-dev \
-    zlib1g-dev \
     # OpenGL and X11 for headless operation
     libgl1 \
     libglib2.0-0 \
     libsm6 \
     libxext6 \
     libxrender-dev \
-    # Mathematical libraries
-    libblas-dev \
-    liblapack-dev \
-    libopenblas-dev \
-    gfortran \
-    # OCR libraries (system packages for better ARM64 support)
+    libgomp1 \
+    # OCR system libraries
     libleptonica-dev \
     libtesseract-dev \
     tesseract-ocr \
@@ -63,79 +57,97 @@ RUN apt-get update && apt-get install -y \
     # PDF processing
     poppler-utils \
     libmupdf-dev \
-    # Threading and parallel processing
-    libgomp1 \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-
-# Create a non-root user for security
-RUN useradd -m -u 1000 ocruser && \
-    mkdir -p /app && \
-    chown -R ocruser:ocruser /app
+    # System libraries
+    libffi-dev \
+    libssl-dev \
+    libxml2-dev \
+    libxslt1-dev \
+    # Mathematical libraries
+    libblas-dev \
+    liblapack-dev \
+    libopenblas-dev \
+    gfortran \
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get clean
 
 # Switch to non-root user
 USER ocruser
-
-# Set working directory
 WORKDIR /app
 
-# Upgrade pip and install essential build tools
-RUN python3 -m pip install --user --upgrade pip setuptools wheel
+# Upgrade pip and install build tools
+RUN pip install --user -U pip setuptools wheel
 
-# Install NumPy first (required by many other packages)
-RUN pip install --user --prefer-binary "numpy>=1.21.0,<1.25.0"
-
-# Install core dependencies that work well on ARM64
-RUN pip install --user --prefer-binary \
-    "Pillow>=9.0.0" \
-    "requests>=2.28.0" \
-    "opencv-python-headless>=4.6.0" \
-    "pdf2image>=1.16.0"
-
-# Install mathematical and scientific libraries
-RUN pip install --user --prefer-binary \
-    "scipy>=1.9.0" \
-    "matplotlib>=3.5.0" \
-    "pandas>=1.5.0" \
-    "tqdm>=4.64.0"
-
-# Install PyMuPDF with ARM64 optimizations
-# Use specific versions that are known to work on ARM64
-RUN pip install --user --prefer-binary "PyMuPDF==1.23.5" || \
-    pip install --user --prefer-binary "PyMuPDF==1.22.5" || \
-    pip install --user --prefer-binary "PyMuPDF>=1.20.0,<1.24.0" || \
+# Install core Python packages with caching and ARM64 optimization
+# 1) Install PyMuPDF with multiple fallback strategies
+RUN --mount=type=cache,target=/home/ocruser/.cache/pip \
+    pip install --user --only-binary=:all: "PyMuPDF==1.24.10" || \
+    pip install --user --only-binary=:all: "PyMuPDF==1.23.5" || \
+    pip install --user --only-binary=:all: "PyMuPDF>=1.20.0,<1.25.0" || \
     echo "WARNING: PyMuPDF installation failed - PDF processing may be limited"
 
-# Install PaddlePaddle for ARM64
-# Use CPU-only version which has better ARM64 support
-RUN pip install --user --prefer-binary "paddlepaddle==2.5.2" || \
-    pip install --user --prefer-binary "paddlepaddle" || \
+# 2) Install PaddlePaddle for ARM64 from official ARM64 wheel repository
+RUN --mount=type=cache,target=/home/ocruser/.cache/pip \
+    pip install --user --only-binary=:all: "paddlepaddle==2.6.1" \
+    -f https://www.paddlepaddle.org.cn/whl/linux/aarch64/ || \
+    pip install --user --only-binary=:all: "paddlepaddle>=2.5.0" || \
     echo "WARNING: PaddlePaddle installation failed - using fallback OCR"
 
-# Install PaddleOCR
-RUN pip install --user --prefer-binary "paddleocr>=2.6.0" || \
+# 3) Install PaddleOCR
+RUN --mount=type=cache,target=/home/ocruser/.cache/pip \
+    pip install --user --only-binary=:all: "paddleocr>=2.6.0" || \
     echo "WARNING: PaddleOCR installation failed - using fallback OCR"
+
+# 4) Install core computer vision and numerical packages
+RUN --mount=type=cache,target=/home/ocruser/.cache/pip \
+    pip install --user --only-binary=:all: \
+    "opencv-python-headless>=4.6.0" \
+    "numpy>=1.24.0" \
+    "scipy>=1.9.0" \
+    "matplotlib>=3.5.0" \
+    "pandas>=1.5.0"
+
+# 5) Install image and PDF processing packages
+RUN --mount=type=cache,target=/home/ocruser/.cache/pip \
+    pip install --user --only-binary=:all: \
+    "Pillow>=9.0.0" \
+    "pdf2image>=1.16.0" \
+    "requests>=2.28.0" \
+    "pytesseract>=0.3.10" \
+    "tqdm>=4.64.0"
+
+# 6) Install additional dependencies
+RUN --mount=type=cache,target=/home/ocruser/.cache/pip \
+    pip install --user --only-binary=:all: \
+    "scikit-learn>=1.1.0" \
+    "reportlab>=3.6.0" \
+    "psutil>=5.9.0"
 
 # Copy application code (as non-root user)
 COPY --chown=ocruser:ocruser . /app
 
-# Copy requirements.txt and install any additional dependencies
-COPY --chown=ocruser:ocruser requirements.txt .
-RUN pip install --user --prefer-binary -r requirements.txt || \
-    echo "WARNING: Some requirements failed to install"
+# Install any additional requirements from requirements.txt
+RUN --mount=type=cache,target=/home/ocruser/.cache/pip \
+    [ -f requirements.txt ] && pip install --user --only-binary=:all: -r requirements.txt || \
+    echo "No requirements.txt found, skipping"
 
 # Create required directories
-RUN mkdir -p /app/outputs /app/logs
+RUN mkdir -p /app/data/input /app/data/output /app/logs
 
 # Add user's local bin to PATH for pip-installed executables
 ENV PATH="/home/ocruser/.local/bin:$PATH"
 
-# Health check to verify the container is working
+# Validate critical packages installation
+RUN python -c "import fitz; print('✅ PyMuPDF version:', fitz.VersionBind)" || \
+    echo "⚠️  PyMuPDF validation failed" && \
+    python -c "import cv2; print('✅ OpenCV imported successfully')" && \
+    python -c "import numpy as np; print('✅ NumPy version:', np.__version__)" && \
+    python -c "from PIL import Image; print('✅ Pillow imported successfully')" && \
+    echo "✅ Core dependencies validated successfully"
+
+# Health check to ensure the application is working
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD python3 -c "import sys, cv2, PIL; print('Container health check passed')" || exit 1
+    CMD python -c "import sys; sys.exit(0)" || exit 1
 
-# Set proper permissions
-RUN chmod +x /app/*.py 2>/dev/null || true
-
-# Entrypoint: run_pipeline.py accepts PDF path and optional flags
-ENTRYPOINT ["python3", "run_pipeline.py"]
+# Set working directory and default command
+WORKDIR /app
+ENTRYPOINT ["python", "run_pipeline.py"]

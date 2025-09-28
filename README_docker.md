@@ -1,219 +1,202 @@
 # Docker Setup for OCR Pipeline
 
-This Docker setup provides a unified Linux environment for the OCR pipeline that works consistently across **macOS** (Intel + Apple Silicon), **Windows** (Docker Desktop), and **Linux**. 
+This Docker setup provides a unified Linux environment for the OCR pipeline that works consistently across **Windows**, **Intel Macs**, and **Apple Silicon Macs**. 
 
 ## Why Docker?
 
-- **Solves macOS segfaults**: Unified Linux userspace with prebuilt wheels eliminates platform-specific issues
+- **Solves platform issues**: Unified Linux environment with prebuilt wheels eliminates platform-specific compilation failures
 - **Cross-platform consistency**: Same environment and dependencies everywhere
 - **Simplified dependencies**: No need to install system libraries (OpenGL, Poppler) on host
 - **Isolated environment**: No conflicts with other Python projects
 
-## Quick Start
+## Platform-Specific Build Instructions
 
-### 1. Build the Image
+**⚠️ IMPORTANT**: Choose the correct build path for your system. Do NOT mix Intel/AMD64 and Apple Silicon instructions.
 
+### Intel/AMD64 Platforms (Windows, Intel Macs, Linux servers)
+
+#### Build and Run
 ```bash
-# Option 1: Using Docker directly
+# Build the image
 docker build -t tokenworks-ocr:latest .
 
-# Option 2: Using Docker Compose
-docker compose build
+# Run OCR on a PDF
+docker run --rm -v "$PWD":/app -w /app tokenworks-ocr:latest python run_pipeline.py "data/input/your-file.pdf"
 
-# Option 3: For Apple Silicon if main build fails
-docker build -f Dockerfile.arm64 -t tokenworks-ocr:latest .
+# Using Docker Compose (recommended)
+docker compose run --rm ocr "data/input/your-file.pdf"
 ```
 
-**Note**: First build downloads the base image and Python packages. PaddleOCR will download model weights (~100MB) on first run.
+**⚠️ Warning**: Do NOT use `Dockerfile.arm64` or ARM64 platform flags on Intel/AMD64 systems.
 
-**Apple Silicon Users**: If the main Dockerfile fails with PyMuPDF build errors, use `Dockerfile.arm64` which has enhanced ARM64 compatibility.
+### Apple Silicon (M1/M2/M3 Macs)
 
-### 2. Run OCR on a PDF
+#### Build and Run
+```bash
+# Build the ARM64-optimized image
+docker build -f Dockerfile.arm64 -t tokenworks-ocr:latest .
+
+# Run OCR on a PDF
+docker run --rm -v "$PWD":/app -w /app tokenworks-ocr:latest python run_pipeline.py "data/input/your-file.pdf"
+
+# Using Docker Compose (use the ARM64 service)
+docker compose run --rm ocr-arm64 "data/input/your-file.pdf"
+```
+
+**⚠️ Warning**: Do NOT use the root `Dockerfile` or AMD64 platform flags on Apple Silicon systems.
+
+## Quick Start Examples
+
+### 1. Process a Single PDF
 
 #### macOS/Linux (Bash/Zsh)
 ```bash
-# Using Docker Compose (recommended)
-docker compose run --rm ocr "data/input/Innaya_v2 copy.pdf"
-docker compose run --rm ocr "data/input/your-file.pdf"
+# Intel/AMD64 systems
+docker compose run --rm ocr "data/input/sample.pdf"
 
-# Using Docker directly
-docker run --rm -v "$PWD":/app tokenworks-ocr:latest "data/input/your-file.pdf"
-
-# With additional flags
-docker compose run --rm ocr "data/input/sample.pdf" --dpi 300
+# Apple Silicon systems  
+docker compose run --rm ocr-arm64 "data/input/sample.pdf"
 ```
 
 #### Windows PowerShell
 ```powershell
-# Using Docker Compose (recommended)
-docker compose run --rm ocr "data/input/Innaya_v2 copy.pdf"
-docker compose run --rm ocr "data/input/your-file.pdf"
+# Intel/AMD64 systems (most Windows machines)
+docker compose run --rm ocr "data/input/sample.pdf"
 
 # Using Docker directly
-docker run --rm -v "${PWD}:/app" tokenworks-ocr:latest "data/input/your-file.pdf"
+docker run --rm -v "${PWD}:/app" -w /app tokenworks-ocr:latest python run_pipeline.py "data/input/sample.pdf"
 ```
 
 #### Windows CMD
 ```cmd
 # Using Docker Compose (recommended)
-docker compose run --rm ocr "data/input/Innaya_v2 copy.pdf"
-docker compose run --rm ocr "data/input\your-file.pdf"
+docker compose run --rm ocr "data/input/sample.pdf"
 
 # Using Docker directly
-docker run --rm -v %cd%:/app tokenworks-ocr:latest "data/input/your-file.pdf"
+docker run --rm -v "%cd%:/app" -w /app tokenworks-ocr:latest python run_pipeline.py "data/input/sample.pdf"
+```
+
+### 2. Interactive Development
+
+#### Open Shell for Development
+```bash
+# Intel/AMD64 systems
+docker run --rm -it -v "$PWD":/app -w /app tokenworks-ocr:latest bash
+
+# Apple Silicon systems
+docker run --rm -it -v "$PWD":/app -w /app tokenworks-ocr:latest bash
 ```
 
 ### 3. Makefile Shortcuts (macOS/Linux)
 
 ```bash
-# Build image
-make build
+# Build for your platform
+make build          # Intel/AMD64
+make build-arm64     # Apple Silicon
 
 # Run with default file
 make ocr
 
-# Run with custom file
+# Run with custom file  
 make ocr FILE="data/input/sample.pdf"
 
 # Open interactive shell
 make sh
 ```
 
-## Platform-Specific Notes
+## Validation and Troubleshooting
 
-### Apple Silicon (M1/M2/M3 Macs)
-The Docker setup automatically uses ARM64 images. If you encounter issues, force the platform:
+### Import Test
+After building, verify all components work:
 
 ```bash
-# Build for ARM64 specifically
-docker build --platform=linux/arm64 -t tokenworks-ocr:latest .
-
-# Or uncomment this line in docker-compose.yml:
-# platform: linux/arm64
+# Test critical imports
+docker run --rm tokenworks-ocr:latest python -c "import fitz, cv2, paddleocr; print('✅ All OCR components working')"
 ```
 
-### Intel Macs/Windows/Linux
-Usually works automatically. If needed, force AMD64:
+### Common Issues
 
-```bash
-# Build for AMD64 specifically
-docker build --platform=linux/amd64 -t tokenworks-ocr:latest .
+#### Issue 1: PyMuPDF Build Errors
+**Symptom**: `Failed to build installable wheels for some pyproject.toml based projects → PyMuPDF`  
+**Cause**: Using wrong Dockerfile for your platform  
+**Solution**: 
+- Intel/AMD64: Use `docker build -t tokenworks-ocr:latest .`  
+- Apple Silicon: Use `docker build -f Dockerfile.arm64 -t tokenworks-ocr:latest .`
 
-# Or uncomment this line in docker-compose.yml:
-# platform: linux/amd64
+#### Issue 2: Platform Mismatch
+**Symptom**: Long build times or compilation errors  
+**Cause**: Mixed platform instructions  
+**Solution**: Follow platform-specific instructions exactly, don't mix them
+
+#### Issue 3: Import Errors at Runtime
+**Symptom**: `ModuleNotFoundError` for opencv, paddleocr, or fitz  
+**Solution**: Rebuild image ensuring validation step passes
+
+## File Structure
+
+Your project directory should be mounted to `/app` in the container:
+
 ```
-
-### Linux File Permissions
-If output files are created as root, run with your user ID:
-
-```bash
-# Set permissions to match your user
-docker run --rm -u $(id -u):$(id -g) -v "$PWD":/app tokenworks-ocr:latest "data/input/file.pdf"
-
-# Or in docker-compose.yml, uncomment and set:
-# user: "${UID}:${GID}"
-# Then export UID=$(id -u) GID=$(id -g) before running compose
-```
-
-## Advanced Usage
-
-### Interactive Shell
-```bash
-# Get a bash shell inside the container
-docker run --rm -it -v "$PWD":/app tokenworks-ocr:latest bash
-
-# Or using Make
-make sh
-```
-
-### Sanity Check
-Verify the environment is working:
-```bash
-docker run --rm -v "$PWD":/app tokenworks-ocr:latest \
-  -c "import paddle, cv2, platform; print('PaddlePaddle:', paddle.__version__, 'OpenCV: OK', 'Platform:', platform.machine())"
-```
-
-### Custom Commands
-Run any Python script in the container:
-```bash
-docker run --rm -v "$PWD":/app tokenworks-ocr:latest python your_script.py
+/app/                          # Container working directory
+├── run_pipeline.py           # Main entry point
+├── src/                      # Source code  
+├── data/
+│   ├── input/               # Input files (mount your files here)
+│   └── output/              # Output results
+├── config.json              # Configuration
+└── requirements.txt         # Python dependencies
 ```
 
 ## Performance Notes
 
-- **First run**: Downloads Docker image + PaddleOCR models (~300MB total)
-- **Subsequent runs**: Fast startup, models are cached
-- **Model caching**: PaddleOCR caches models in `~/.paddleocr/` inside container
-- **CPU-only**: This setup runs on CPU everywhere (no GPU dependencies)
+- **First build**: Downloads base image and wheels (~5-10 minutes)
+- **Subsequent builds**: Use cached layers (~1-2 minutes)
+- **First run**: PaddleOCR downloads models (~100MB, one-time)
+- **Processing speed**: ~10-30 seconds per page depending on DPI and LLM settings
 
-## Troubleshooting
+## Binary-Only Installation
 
-### Docker Build Issues
+Both Dockerfiles use `PIP_ONLY_BINARY=:all:` to prevent source compilation:
+- ✅ **PyMuPDF 1.24.10**: Uses prebuilt wheels
+- ✅ **OpenCV 4.10.0.84**: Headless version with reliable wheels
+- ✅ **pdf2image 1.17.0**: Latest stable version
+- ✅ **PaddlePaddle**: Uses official ARM64 index for Apple Silicon
 
-#### PyMuPDF Build Failure (Apple Silicon)
-If you see `make: not found` or `Failed building wheel for pymupdf` during Docker build:
+This ensures fast, reliable builds without compilation failures.
 
-**Problem**: PyMuPDF tries to compile from source but build tools are missing.
+## Advanced Usage
 
-**Solution**: The updated Dockerfile includes build dependencies. If still failing:
+### Custom Configuration
 ```bash
-# Option 1: Use the fixed Dockerfile (recommended)
-docker build --platform=linux/arm64 -t tokenworks-ocr:latest .
-
-# Option 2: Force AMD64 if ARM64 continues to fail
-docker build --platform=linux/amd64 -t tokenworks-ocr:latest .
+# Mount custom config
+docker run --rm \
+  -v "$PWD":/app \
+  -v "$PWD/custom-config.json:/app/config.json" \
+  -w /app \
+  tokenworks-ocr:latest python run_pipeline.py
 ```
 
-**Alternative workaround** if build still fails:
+### Batch Processing
 ```bash
-# Build without PyMuPDF initially, then install separately
-# Edit Dockerfile temporarily to comment out pymupdf line, then:
-docker build -t tokenworks-ocr:temp .
-docker run --rm -it tokenworks-ocr:temp bash
-# Inside container: pip install --only-binary=all pymupdf
+# Process multiple files
+for file in data/input/*.pdf; do
+  docker compose run --rm ocr "$file"
+done
 ```
 
-### PDF2Image Issues
-If you see Poppler-related errors, ensure you're running inside the Docker container (not host Python):
+### Persistent Model Cache
 ```bash
-# Wrong: This uses your host Python
-python run_pipeline.py "file.pdf"
+# Create volume for PaddleOCR models
+docker volume create paddleocr-models
 
-# Correct: This uses Docker container with Poppler installed
-docker compose run --rm ocr "file.pdf"
+# Use persistent cache
+docker run --rm \
+  -v "$PWD":/app \
+  -v paddleocr-models:/root/.paddleocr \
+  -w /app \
+  tokenworks-ocr:latest python run_pipeline.py "data/input/sample.pdf"
 ```
 
-### Segfaults on macOS
-The Docker setup eliminates these by using Linux userspace with properly compiled wheels.
+---
 
-### File Path Issues
-- Always use quotes around file paths with spaces: `"Innaya_v2 copy.pdf"`
-- On Windows, both forward slashes and backslashes work: `data/input/file.pdf` or `data\input\file.pdf`
-- Relative paths are resolved from the repo root (mounted at `/app` in container)
-
-### Model Download Issues
-If PaddleOCR model downloads fail:
-```bash
-# Run with verbose output to see download progress
-docker compose run --rm ocr "file.pdf" --verbose
-
-# Or check network connectivity from container
-docker run --rm -it tokenworks-ocr:latest bash
-# Then: ping github.com
-```
-
-### Memory Issues
-For large PDFs, you might need to increase Docker memory limits:
-- **Docker Desktop**: Settings → Resources → Memory (increase to 4GB+)
-- **Linux**: No limits by default, but monitor with `docker stats`
-
-## File Structure
-
-The Docker setup includes:
-- `Dockerfile`: Multi-arch Linux environment with all dependencies
-- `docker-compose.yml`: Easy service orchestration
-- `.dockerignore`: Excludes unnecessary files from build context
-- `Makefile`: Convenience commands for macOS/Linux
-- This `README_docker.md`: Complete usage guide
-
-All OCR output is written to the mounted repository directory, so results persist on your host machine.
+**Next Steps**: See the main [README.md](README.md) for configuration options and usage examples.

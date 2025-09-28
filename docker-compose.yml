@@ -2,6 +2,7 @@
 version: '3.8'
 
 services:
+  # Default service for Intel/AMD64 platforms
   ocr:
     build: .
     image: tokenworks-ocr:latest
@@ -13,17 +14,31 @@ services:
     
     # Default command: process the sample PDF
     # Override with: docker compose run --rm ocr "path/to/your/file.pdf"
-    command: ["data/input/Innaya_v2 copy.pdf"]
+    command: ["python", "run_pipeline.py", "data/input/Innaya_v2 copy.pdf"]
     
-    # Platform override options (uncomment if needed):
-    # Force Apple Silicon (ARM64):
+    # Platform-specific builds (uncomment ONE based on your system):
+    
+    # Intel/AMD64 (Windows, Intel Macs, most Linux servers):
+    platform: linux/amd64
+    
+    # Apple Silicon (ARM64) - ALSO change build context to Dockerfile.arm64:
     # platform: linux/arm64
-    # Force Intel/AMD64 (Windows, Intel Macs, most Linux):
-    # platform: linux/amd64
-    # 
-    # By default, Docker Desktop automatically pulls the right architecture
-    # for your system from multi-arch base images
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile.arm64
     
     # Linux file permissions fix (uncomment for Linux hosts if needed):
     # user: "${UID:-1000}:${GID:-1000}"
     # Set UID/GID in your shell: export UID=$(id -u) GID=$(id -g)
+
+  # Alternative service for Apple Silicon users
+  ocr-arm64:
+    build:
+      context: .
+      dockerfile: Dockerfile.arm64
+    image: tokenworks-ocr:latest
+    working_dir: /app
+    platform: linux/arm64
+    volumes:
+      - ./:/app
+    command: ["python", "run_pipeline.py", "data/input/Innaya_v2 copy.pdf"]

@@ -1,53 +1,64 @@
 # Multi-architecture Docker image for OCR Pipeline
-# Supports: linux/amd64 (Intel), linux/arm64 (Apple Silicon, ARM servers)
+# Optimized for Intel/AMD64 platforms with binary-only wheel installs
+# For Apple Silicon (ARM64), use Dockerfile.arm64 instead
 FROM python:3.11-slim
 
-# Environment variables for Python optimization
-ENV PIP_NO_CACHE_DIR=1 \
+# Environment variables for Python optimization and binary-only installs
+ENV PIP_ONLY_BINARY=:all: \
+    PIP_PREFER_BINARY=1 \
+    PIP_NO_CACHE_DIR=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     DEBIAN_FRONTEND=noninteractive
 
-# Install system dependencies required for OCR and image processing
+# Install runtime dependencies (no build tools to prevent source compilation)
 # - libgl1: OpenGL library required by opencv-python-headless
-# - libglib2.0-0: GLib library for low-level system operations
+# - libglib2.0-0: GLib library for low-level system operations  
 # - poppler-utils: PDF utilities (pdfinfo, pdftoppm) for pdf2image
-# - build-essential: C compiler and build tools for PyMuPDF compilation
-# - cmake: Build system generator for PyMuPDF
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     libgl1 \
     libglib2.0-0 \
+    libsm6 \
+    libxrender1 \
+    libxext6 \
+    ffmpeg \
     poppler-utils \
-    build-essential \
-    cmake \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
 
 # Upgrade pip and install build tools
 RUN pip install -U pip setuptools wheel
 
-# Install Python dependencies with pinned versions for stability
-# Note: Using opencv-python-headless instead of opencv-python because:
-#   1. Headless version has no GUI dependencies (smaller image)
-#   2. Prevents X11/display issues in containerized environments
-#   3. All CV operations work the same, just no imshow/GUI functions
-RUN pip install \
-    paddlepaddle==2.6.1 \
-    paddleocr==2.7.0 \
-    opencv-python-headless>=4.8.0 \
-    pdf2image \
-    numpy>=1.24.0 \
-    requests>=2.31.0 \
-    Pillow>=10.0.0
+# Install Python dependencies with pinned versions for reliability
+# Using --only-binary=:all: to ensure no source compilation
+RUN pip install --only-binary=:all: \
+    "PyMuPDF==1.24.10" \
+    "opencv-python-headless==4.10.0.84" \
+    "pdf2image==1.17.0" \
+    "numpy>=1.24.0" \
+    "requests>=2.31.0" \
+    "Pillow>=10.0.0"
 
-# Install PyMuPDF separately with specific handling for ARM64
-# This avoids compilation issues on Apple Silicon by using pre-built wheels when available
-RUN pip install --only-binary=all pymupdf>=1.24 || \
-    pip install pymupdf>=1.24
+# Install OCR packages - PaddlePaddle and PaddleOCR
+RUN pip install --only-binary=:all: \
+    "paddlepaddle==2.6.1" \
+    "paddleocr==2.7.0.3" \
+    "pytesseract>=0.3.10"
 
-# Clean up build dependencies to reduce image size (optional)
-# Uncomment the next line if you want a smaller final image
-# RUN apt-get remove -y build-essential cmake && apt-get autoremove -y
+# Set working directory
+WORKDIR /app
+
+# Copy application code
+COPY . /app
+
+# Install additional requirements if present
+RUN if [ -f requirements.txt ]; then pip install --only-binary=:all: -r requirements.txt; fi
+
+# Validation step: ensure all critical imports work
+RUN python -c "import fitz, cv2, paddleocr; print('✅ All OCR components loaded successfully')"
+
+# Default command: run pipeline with help
+CMD ["python", "run_pipeline.py", "--help"]
 
 # Set working directory
 WORKDIR /app

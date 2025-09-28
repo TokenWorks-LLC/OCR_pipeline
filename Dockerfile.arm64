@@ -1,49 +1,50 @@
-# Alternative Dockerfile for Apple Silicon / ARM64 builds
-# Use this if the main Dockerfile fails on PyMuPDF compilation
+# Docker image for Apple Silicon (ARM64) OCR Pipeline
+# Optimized for ARM64/Apple Silicon with binary-only wheel installs
+# Do NOT use this for Intel/AMD64 - use the root Dockerfile instead
 FROM python:3.11-slim
 
-# Environment variables for Python optimization
-ENV PIP_NO_CACHE_DIR=1 \
+# Environment variables for Python optimization and binary-only installs
+ENV PIP_ONLY_BINARY=:all: \
+    PIP_PREFER_BINARY=1 \
+    PIP_NO_CACHE_DIR=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     DEBIAN_FRONTEND=noninteractive
 
-# Install system dependencies required for OCR and image processing
-RUN apt-get update && apt-get install -y \
+# Install runtime dependencies (no build tools to prevent source compilation)
+RUN apt-get update && apt-get install -y --no-install-recommends \
     libgl1 \
     libglib2.0-0 \
+    libsm6 \
+    libxrender1 \
+    libxext6 \
+    ffmpeg \
     poppler-utils \
-    build-essential \
-    cmake \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
 
 # Upgrade pip and install build tools
 RUN pip install -U pip setuptools wheel
 
-# Install core dependencies first (most stable)
-RUN pip install \
-    numpy>=1.24.0 \
-    requests>=2.31.0 \
-    Pillow>=10.0.0 \
-    pdf2image
+# Install Python dependencies with ARM64-optimized pins
+# Using --only-binary=:all: to ensure no source compilation
+RUN pip install --only-binary=:all: \
+    "PyMuPDF==1.24.10" \
+    "opencv-python-headless==4.10.0.84" \
+    "pdf2image==1.17.0" \
+    "numpy>=1.24.0" \
+    "requests>=2.31.0" \
+    "Pillow>=10.0.0"
 
-# Install CV and OCR packages
-RUN pip install \
-    opencv-python-headless>=4.8.0 \
-    paddlepaddle==2.6.1 \
-    paddleocr==2.7.0
+# Install PaddlePaddle from ARM64-specific wheel index
+RUN pip install --only-binary=:all: \
+    "paddlepaddle==2.6.1" \
+    -f https://www.paddlepaddle.org.cn/whl/linux/aarch64/
 
-# Handle PyMuPDF separately with fallback strategies
-RUN pip install --only-binary=all "pymupdf>=1.24" || \
-    pip install --no-binary pymupdf "pymupdf>=1.24" || \
-    pip install "pymupdf==1.23.26"
-
-# Clean up build dependencies to reduce image size
-RUN apt-get remove -y build-essential cmake && \
-    apt-get autoremove -y && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+# Install PaddleOCR and other OCR tools
+RUN pip install --only-binary=:all: \
+    "paddleocr==2.7.0.3" \
+    "pytesseract>=0.3.10"
 
 # Set working directory
 WORKDIR /app
@@ -51,5 +52,11 @@ WORKDIR /app
 # Copy application code
 COPY . /app
 
-# Entrypoint: run_pipeline.py accepts PDF path and optional flags
-ENTRYPOINT ["python", "run_pipeline.py"]
+# Install additional requirements if present
+RUN if [ -f requirements.txt ]; then pip install --only-binary=:all: -r requirements.txt; fi
+
+# Validation step: ensure all critical imports work
+RUN python -c "import fitz, cv2, paddleocr; print('✅ All OCR components loaded successfully')"
+
+# Default command: run pipeline with help
+CMD ["python", "run_pipeline.py", "--help"]

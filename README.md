@@ -43,15 +43,15 @@ python quick_start.py
 # 3. Explore the codebase structure below
 ```
 
-### Docker Users (Recommended for Apple Silicon)
+### Docker Users
 ```bash
-# 1. Build optimized image (Apple Silicon users)
-DOCKER_BUILDKIT=1 docker buildx build \
-  --no-cache --platform=linux/arm64/v8 \
-  -t ocr-pipeline:latest -f docker/Dockerfile .
+# Intel/AMD64 (Windows, Intel Macs, Linux)
+docker build -t tokenworks-ocr:latest .
+docker run --rm -v "$PWD":/app -w /app tokenworks-ocr:latest python run_pipeline.py
 
-# 2. Run with your files
-docker run --rm -v "$PWD":/workspace -w /workspace ocr-pipeline:latest
+# Apple Silicon (M1/M2/M3 Macs)  
+docker build -f Dockerfile.arm64 -t tokenworks-ocr:latest .
+docker run --rm -v "$PWD":/app -w /app tokenworks-ocr:latest python run_pipeline.py
 
 # See "Docker Setup & Deployment" section for full details
 ```
@@ -681,23 +681,69 @@ python -c "from src.healthcheck import run_health_check; run_health_check()"
 
 ## Docker Setup & Deployment
 
-### Quick Docker Start
+**Choose the correct build path for your system:**
 
-For users who want to run the OCR pipeline in a containerized environment without local Python setup.
+### Intel/AMD64 Platforms (Windows, Intel Macs, Linux)
 
 ```bash
-# Build the image
-DOCKER_BUILDKIT=1 docker build -t ocr-pipeline:latest .
+# Build and run
+docker build -t tokenworks-ocr:latest .
+docker run --rm -v "$PWD":/app -w /app tokenworks-ocr:latest python run_pipeline.py "data/input/sample.pdf"
 
-# Run with current directory mounted
-docker run --rm -v "$PWD":/workspace -w /workspace ocr-pipeline:latest
+# Using Docker Compose
+docker compose run --rm ocr "data/input/sample.pdf"
 ```
+
+**⚠️ Warning**: Do NOT use `Dockerfile.arm64` on Intel/AMD64 systems.
+
+### Apple Silicon (M1/M2/M3 Macs)
+
+```bash  
+# Build ARM64-optimized image
+docker build -f Dockerfile.arm64 -t tokenworks-ocr:latest .
+docker run --rm -v "$PWD":/app -w /app tokenworks-ocr:latest python run_pipeline.py "data/input/sample.pdf"
+
+# Using Docker Compose  
+docker compose run --rm ocr-arm64 "data/input/sample.pdf"
+```
+
+**⚠️ Warning**: Do NOT use the root `Dockerfile` on Apple Silicon systems.
+
+### Why Binary-Only Builds Work
+
+Both Dockerfiles use strict binary-only installation:
+- **PyMuPDF 1.24.10**: Prebuilt wheels, no MuPDF/SWIG compilation
+- **OpenCV 4.10.0.84**: Headless version with reliable wheels  
+- **PaddlePaddle**: Official ARM64 index for Apple Silicon
+- **pdf2image 1.17.0**: Latest stable with wheels
+
+Environment flags prevent source compilation:
+- `PIP_ONLY_BINARY=:all:` - Forces wheel-only installation
+- `PIP_PREFER_BINARY=1` - Prefers binary distributions  
+- `--only-binary=:all:` - Per-command wheel enforcement
+
+### Validation
+
+After building, verify all components work:
+```bash
+# Test critical imports - use 'fitz' for PyMuPDF
+docker run --rm tokenworks-ocr:latest python -c "import fitz, cv2, paddleocr; print('✅ All OCR components working')"
+```
+
+### Troubleshooting
+
+**Issue**: PyMuPDF build errors or long build times  
+**Solution**: Use the correct Dockerfile for your platform:
+- Intel/AMD64: `docker build -t tokenworks-ocr:latest .`
+- Apple Silicon: `docker build -f Dockerfile.arm64 -t tokenworks-ocr:latest .`
+
+For comprehensive Docker troubleshooting, see [README_docker.md](README_docker.md).
 
 ---
 
-## macOS (Apple Silicon) — Fast Docker Build
+**Happy Processing!**
 
-**⚠️ IMPORTANT for M1/M2/M3 Mac users**: Standard Docker builds often fail or take 30+ minutes due to package compilation. Our optimized build fixes this.
+> For additional help, check the `doc/` directory or run `python quick_start.py` for interactive tutorials.
 
 ### The Problem We Solved
 - PyMuPDF compilation fails with "command 'swig' failed: No such file or directory"

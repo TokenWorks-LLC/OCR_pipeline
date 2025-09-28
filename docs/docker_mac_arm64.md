@@ -10,7 +10,7 @@ By default, pip will compile packages from source when binary wheels aren't avai
 
 ## The Solution
 
-Our optimized `docker/Dockerfile` uses these strategies:
+Our optimized `Dockerfile.arm64` uses these strategies:
 
 ### 1. Force Binary-Only Installation
 ```dockerfile
@@ -50,7 +50,7 @@ Caches downloaded wheels across builds for faster rebuilds.
 DOCKER_BUILDKIT=1 docker build \
   --progress=plain \
   --platform=linux/arm64/v8 \
-  -t ocrx:dev -f docker/Dockerfile .
+  -t ocrx:dev -f Dockerfile.arm64 .
 ```
 
 ### With Cache Debugging
@@ -59,7 +59,7 @@ DOCKER_BUILDKIT=1 docker build \
   --progress=plain \
   --no-cache \
   --platform=linux/arm64/v8 \
-  -t ocrx:dev -f docker/Dockerfile .
+  -t ocrx:dev -f Dockerfile.arm64 .
 ```
 
 ### Build with Compose
@@ -269,7 +269,7 @@ jobs:
         run: |
           DOCKER_BUILDKIT=1 docker build \
             --platform=linux/arm64/v8 \
-            -t ocrx:arm64 -f docker/Dockerfile .
+            -t ocrx:arm64 -f Dockerfile.arm64 .
 ```
 
 ### Multi-Architecture Build
@@ -280,7 +280,7 @@ docker buildx create --name multiarch --use
 # Build for both platforms
 docker buildx build \
   --platform=linux/amd64,linux/arm64/v8 \
-  -t ocrx:latest -f docker/Dockerfile \
+  -t ocrx:latest -f Dockerfile.arm64 \
   --push .
 ```
 

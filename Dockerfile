@@ -59,17 +59,3 @@ RUN python -c "import fitz, cv2, paddleocr; print('✅ All OCR components loaded
 
 # Default command: run pipeline with help
 CMD ["python", "run_pipeline.py", "--help"]
-
-# Set working directory
-WORKDIR /app
-
-# Copy application code
-COPY . /app
-
-# Important: PaddleOCR downloads models on first run (~100MB)
-# Models are cached in ~/.paddleocr/ and persist between container runs
-# if you mount a volume or use the same container instance
-
-# Entrypoint: run_pipeline.py accepts PDF path and optional flags
-# Usage: docker run [image] "path/to/file.pdf" --dpi 300
-ENTRYPOINT ["python", "run_pipeline.py"]

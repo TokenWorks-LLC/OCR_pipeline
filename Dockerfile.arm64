@@ -1,18 +1,21 @@
-# Docker image for Apple Silicon (ARM64) OCR Pipeline
-# Optimized for ARM64/Apple Silicon with binary-only wheel installs
+# Optimized ARM64 Dockerfile for Apple Silicon (M1/M2/M3) and ARM64 systems
+# Combines binary-only wheel installation with ARM64-specific optimizations
 # Do NOT use this for Intel/AMD64 - use the root Dockerfile instead
 FROM python:3.11-slim
 
-# Environment variables for Python optimization and binary-only installs
-ENV PIP_ONLY_BINARY=:all: \
-    PIP_PREFER_BINARY=1 \
+# Environment variables for optimal ARM64 builds and binary-only installations
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONPATH=/app \
     PIP_NO_CACHE_DIR=1 \
+    PIP_PREFER_BINARY=1 \
+    PIP_ONLY_BINARY=:all: \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
     PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1 \
-    DEBIAN_FRONTEND=noninteractive
+    PYTHONUNBUFFERED=1
 
-# Install runtime dependencies (no build tools to prevent source compilation)
+# Install runtime dependencies (minimal for binary wheels)
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    # Core runtime libraries
     libgl1 \
     libglib2.0-0 \
     libsm6 \
@@ -20,8 +23,20 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxext6 \
     ffmpeg \
     poppler-utils \
+    # Additional ARM64 runtime support
+    libjpeg62-turbo \
+    libpng16-16 \
+    libtiff5 \
+    libwebp6 \
+    libopenjp2-7 \
+    zlib1g \
+    libfreetype6 \
+    liblcms2-2 \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
+
+# Create non-root user for security
+RUN useradd --create-home --shell /bin/bash ocruser
 
 # Upgrade pip and install build tools
 RUN pip install -U pip setuptools wheel
@@ -49,14 +64,18 @@ RUN pip install --only-binary=:all: \
 # Set working directory
 WORKDIR /app
 
-# Copy application code
+# Copy application code and set ownership
 COPY . /app
+RUN chown -R ocruser:ocruser /app
 
 # Install additional requirements if present
 RUN if [ -f requirements.txt ]; then pip install --only-binary=:all: -r requirements.txt; fi
 
 # Validation step: ensure all critical imports work
 RUN python -c "import fitz, cv2, paddleocr; print('✅ All OCR components loaded successfully')"
+
+# Switch to non-root user
+USER ocruser
 
 # Default command: run pipeline with help
 CMD ["python", "run_pipeline.py", "--help"]

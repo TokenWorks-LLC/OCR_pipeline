@@ -11,6 +11,10 @@
 - [Configuration Guide](#configuration-guide)
 - [Development Setup](#development-setup)
 - [Usage Examples](#usage-examples)
+- [Evaluation Modes](#evaluation-modes)
+- [Gold Pages System](#gold-pages-system)
+- [Analysis System](#analysis-system)
+- [Smart LLM Triggering](#smart-llm-triggering)
 - [API Reference](#api-reference)
 - [Architecture Overview](#architecture-overview)
 - [Contributing](#contributing)
@@ -417,6 +421,496 @@ result = pipeline.process_image(
 print(f"Processed {result['pages_processed']} pages")
 print(f"Output: {result['output_csv']}")
 ```
+
+---
+
+## Evaluation Modes
+
+The OCR pipeline includes three specialized evaluation modes for testing and benchmarking different processing configurations.
+
+### Available Evaluation Modes
+
+#### **1. Basic Mode** (`config_eval_basic.json`)
+- **Purpose**: Standard OCR processing without advanced features
+- **Features**: 
+  - Basic OCR with PaddleOCR
+  - Confidence threshold: 0.7
+  - LLM correction: Disabled
+  - Benchmark recording: Enabled
+- **Use Case**: Baseline performance measurement
+
+#### **2. Advanced Mode** (`config_eval_advanced.json`)
+- **Purpose**: Full-featured processing with LLM correction
+- **Features**:
+  - OCR with confidence threshold: 0.7
+  - LLM correction: Enabled
+  - Reading order detection: Enabled
+  - Akkadian extraction: Disabled
+  - Benchmark recording: Enabled
+- **Use Case**: Quality-focused processing
+
+#### **3. Akkadian Mode** (`config_eval_akkadian.json`)
+- **Purpose**: Academic research with specialized Akkadian text extraction
+- **Features**:
+  - OCR with confidence threshold: 0.7
+  - LLM correction: Enabled
+  - Akkadian extraction: Enabled
+  - Translation PDF generation: Enabled
+  - Akkadian confidence threshold: 0.8
+  - Benchmark recording: Enabled
+- **Use Case**: Archaeological and linguistic research
+
+### Running Evaluations
+
+```bash
+# Basic evaluation
+python run_eval_incremental.py -c config_eval_basic.json
+
+# Advanced evaluation
+python run_eval_incremental.py -c config_eval_advanced.json
+
+# Akkadian evaluation
+python run_eval_incremental.py -c config_eval_akkadian.json
+
+# Smart LLM evaluation (optimized performance)
+python run_eval_smart_llm.py -c config_eval_akkadian_smart.json
+```
+
+### Evaluation Output Structure
+
+```
+data/eval_output/
+├── eval_research_results_basic/          # Basic mode results
+├── eval_research_results_advanced/       # Advanced mode results
+├── eval_research_results_akkadian/       # Akkadian mode results
+└── eval_research_results_akkadian_smart/ # Smart LLM results
+    ├── document_name/
+    │   ├── comprehensive_report.json     # Detailed results
+    │   ├── comprehensive_results.csv     # CSV data
+    │   └── translations_report.pdf       # Akkadian translations (if enabled)
+    └── processing_report_YYYYMMDD_HHMMSS.json
+```
+
+---
+
+## Gold Pages System
+
+The Gold Pages system provides ground truth integration for accuracy measurement and LLM correction evaluation. This system allows you to measure the effectiveness of OCR and LLM corrections against manually verified reference data.
+
+### What Are Gold Pages?
+
+Gold Pages are **manually verified ground truth data** containing:
+- **Akkadian-translation pairs**: Expert-verified text and translations
+- **Confidence scores**: Quality ratings for each entry
+- **Document references**: Source document and page information
+- **Verification metadata**: Who verified the data and when
+
+### Gold Pages Data Structure
+
+```json
+{
+  "metadata": {
+    "total_entries": 150,
+    "last_updated": "2024-01-15T10:30:00",
+    "version": "1.0"
+  },
+  "entries": [
+    {
+      "document_id": "akkadian_doc_001",
+      "page_number": 1,
+      "akkadian_text": "lugal",
+      "translation_text": "king",
+      "confidence_score": 0.95,
+      "verified_by": "expert_linguist",
+      "created_date": "2024-01-15T10:30:00",
+      "notes": "Common Akkadian term"
+    }
+  ]
+}
+```
+
+### How to Use Gold Pages
+
+#### **Step 1: Add Ground Truth Data**
+```python
+from src.gold_pages_manager import create_gold_pages_manager
+
+# Initialize Gold Pages Manager
+manager = create_gold_pages_manager("./data/gold_pages")
+
+# Add your intern's ground truth data
+manager.add_gold_page(
+    document_id="doc_001",
+    page_number=1,
+    akkadian_text="lugal",
+    translation_text="king",
+    confidence_score=0.95,
+    verified_by="expert_linguist",
+    notes="Common Akkadian term"
+)
+```
+
+#### **Step 2: Run Gold Pages Evaluation**
+```bash
+# V2 Gold Pages + Smart LLM evaluation (RECOMMENDED)
+python run_eval_gold_pages_v2.py -c config_eval_gold_pages_akkadian_v2.json
+
+# Basic Gold Pages evaluation (legacy)
+python run_eval_gold_pages.py -c config_eval_gold_pages_akkadian.json
+```
+
+#### **Step 3: Analyze Results**
+```bash
+# Run analysis menu
+python run_analysis_menu.py
+
+# Select options:
+# 1. Run Summary Analysis
+# 2. Run Comprehensive Analysis
+# 3. View Available Evaluations
+```
+
+### Gold Pages Configuration
+
+```json
+{
+  "gold_pages": {
+    "enable_gold_pages": true,
+    "gold_pages_directory": "./data/gold_pages",
+    "enable_accuracy_measurement": true,
+    "enable_before_after_comparison": true,
+    "success_thresholds": {
+      "min_improvement": 0.05,
+      "max_time_increase": 0.5,
+      "cost_per_accuracy_point": 0.10
+    }
+  }
+}
+```
+
+### What You Get from Gold Pages
+
+#### **Accuracy Measurements**
+- **Character-level accuracy**: Precise character-by-character comparison
+- **Word-level accuracy**: Word recognition accuracy metrics
+- **Line-level accuracy**: Text line recognition accuracy
+- **Before/after LLM comparison**: Measure LLM improvement effectiveness
+
+#### **Success Metrics**
+- **Minimum improvement**: +5% accuracy improvement required
+- **Maximum time increase**: +50% processing time limit
+- **Cost per accuracy point**: <$0.10 cost efficiency threshold
+- **ROI justification**: Data-driven cost-benefit analysis
+
+#### **Generated Reports**
+- `gold_pages_analysis_report.json`: Detailed accuracy data
+- `accuracy_measurements.json`: Before/after comparison metrics
+- `gold_pages_summary.md`: Human-readable analysis report
+- Visual charts and graphs showing improvements
+
+### Integration Points
+
+1. **Data Storage**: `./data/gold_pages/gold_pages.json`
+2. **Evaluation Configs**: `config_eval_gold_pages_*.json`
+3. **Evaluation Runners**: `run_eval_gold_pages.py`
+4. **Analysis**: `run_analysis_menu.py`
+
+**Important**: Gold Pages only affect evaluation mode - the main OCR pipeline remains unchanged!
+
+### Intern Integration Guide
+
+When your intern completes the ground truth data, follow these steps to integrate it:
+
+#### **Step 1: Add Gold Pages Data**
+```python
+from src.gold_pages_manager import create_gold_pages_manager
+
+# Initialize Gold Pages Manager
+manager = create_gold_pages_manager("./data/gold_pages")
+
+# Add each ground truth entry
+manager.add_gold_page(
+    document_id="doc_001",
+    page_number=1,
+    akkadian_text="lugal",
+    translation_text="king",
+    confidence_score=0.95,
+    verified_by="intern_name",
+    notes="Verified by intern on [date]"
+)
+```
+
+#### **Step 2: Validate Data**
+```python
+# Check data integrity
+validation = manager.validate_gold_pages()
+print(f"Valid: {validation['is_valid']}")
+print(f"Total entries: {validation['statistics']['total_entries']}")
+```
+
+#### **Step 3: Run V2 Evaluation**
+```bash
+# Run V2 evaluation with Gold Pages data
+python run_eval_gold_pages_v2.py -c config_eval_gold_pages_akkadian_v2.json
+```
+
+#### **Step 4: Analyze Results**
+```bash
+# Run analysis to see accuracy improvements
+python run_analysis_menu.py
+```
+
+#### **Expected Results**
+- Character/word/line accuracy measurements
+- Before/after LLM comparison
+- Cost-benefit analysis
+- Success threshold compliance
+
+---
+
+## Analysis System
+
+A comprehensive analysis and comparison system for OCR pipeline evaluation results, providing detailed performance metrics, visualizations, and baseline accuracy assessment.
+
+### Quick Start
+
+```bash
+# Install analysis dependencies
+pip install -r requirements_analysis.txt
+
+# Run analysis menu
+python run_analysis_menu.py
+
+# Or use integrated menus
+python quick_start.py  # → Option 5
+run_ocr.bat           # → Option 6
+```
+
+### Analysis Features
+
+#### **Summary Analysis**
+- **Mode Comparison**: Compare Basic vs Akkadian vs Advanced modes
+- **Performance Metrics**: Success rate, confidence, processing time
+- **Visual Charts**: Bar charts, heatmaps, distribution plots
+- **Detailed Reports**: Markdown and JSON output formats
+
+#### **Baseline Accuracy Assessment**
+- **Character-Level Accuracy**: Precise character-by-character comparison
+- **Word-Level Accuracy**: Word recognition accuracy metrics
+- **Line-Level Accuracy**: Text line recognition accuracy
+- **Ground Truth Management**: Store and manage reference data
+
+#### **Interactive Menu System**
+- **Mode Selection**: Choose which evaluation modes to compare
+- **Custom Comparisons**: Select specific modes for detailed analysis
+- **Quick Analysis**: Analyze all available modes at once
+- **Baseline Generation**: Create baseline accuracy guidelines
+
+### Analysis Outputs
+
+#### **Visualizations**
+- **Mode Comparison Chart**: Bar charts comparing success rates, confidence, and processing time
+- **Confidence Distribution**: Histogram showing OCR confidence score distribution
+- **Performance Heatmap**: Heatmap of all performance metrics across modes
+
+#### **Reports**
+- **Detailed Markdown Report**: Comprehensive analysis with recommendations
+- **JSON Summary**: Machine-readable summary for programmatic access
+- **Baseline Assessment**: Guidelines for establishing OCR accuracy baselines
+
+#### **Metrics Tracked**
+- **Success Rate**: Percentage of successfully processed pages
+- **Average Confidence**: Mean OCR confidence score
+- **Processing Time**: Time per page and total processing time
+- **Text Elements**: Number of text elements extracted per page
+- **Corrections Made**: Number of LLM corrections applied
+- **Akkadian Translations**: Number of specialized translations found
+
+### Baseline Accuracy Implementation
+
+#### **Setting Up Ground Truth**
+```bash
+# Create ground truth directory
+mkdir -p ./data/ground_truth
+
+# Add ground truth files
+./data/ground_truth/
+├── document1_page_001.txt
+├── document1_page_001_metadata.json
+├── document1_page_002.txt
+└── document1_page_002_metadata.json
+```
+
+#### **Using Ground Truth Manager**
+```python
+from src.baseline_accuracy import GroundTruthManager
+
+gt_manager = GroundTruthManager()
+
+# Save ground truth
+gt_manager.save_ground_truth(
+    document_id="document1",
+    page_num=1,
+    ground_truth_text="Reference text here"
+)
+
+# Load ground truth
+gt_text = gt_manager.load_ground_truth("document1", 1)
+```
+
+#### **Accuracy Thresholds**
+| Mode | Character Accuracy | Word Accuracy | Line Accuracy |
+|------|-------------------|---------------|---------------|
+| Basic | >95% | >90% | >85% |
+| Akkadian | >92% | >87% | >80% |
+| Advanced | >97% | >93% | >88% |
+
+### Analysis File Structure
+
+```
+OCR_pipeline/
+├── src/
+│   ├── summary_analysis.py      # Main analysis engine
+│   └── baseline_accuracy.py     # Accuracy calculation functions
+├── run_analysis_menu.py         # Interactive analysis menu
+├── demo_analysis.py             # Demo and examples
+├── requirements_analysis.txt    # Analysis dependencies
+└── data/
+    ├── eval_output/             # Evaluation results
+    │   ├── eval_research_results_basic/
+    │   ├── eval_research_results_akkadian/
+    │   └── eval_research_results_advanced/
+    └── analysis_output/         # Analysis results
+        ├── mode_comparison.png
+        ├── confidence_distribution.png
+        ├── metrics_heatmap.png
+        ├── detailed_analysis_report.md
+        └── analysis_summary.json
+```
+
+---
+
+## Smart LLM Triggering
+
+An optimization system that intelligently triggers LLM correction based on confidence scores and language type, significantly reducing processing time while maintaining quality.
+
+### How Smart LLM Triggering Works
+
+#### **For Akkadian Text**
+- **Always sends to LLM** (regardless of confidence)
+- **Reason**: Specialized language needs expert correction
+- **Detection**: Uses regex patterns for Akkadian characters (ā, ē, ī, ū, š, ṣ, ṭ, ḫ)
+
+#### **For Modern Languages (EN, TR, DE, FR)**
+- **Only sends to LLM if confidence < 0.8**
+- **Skips LLM if confidence ≥ 0.8**
+- **Reason**: High-confidence modern text is already good
+
+### Expected Performance Impact
+
+- **LLM Calls**: ~40-60% reduction (only Akkadian + low-confidence modern)
+- **Processing Time**: ~40-60% reduction
+- **Quality**: Same or better (high-confidence text stays unchanged)
+
+### Smart LLM Configuration
+
+```json
+{
+  "llm": {
+    "enable_correction": true,
+    "smart_triggering": true,
+    "modern_lang_max_confidence": 0.8,
+    "akkadian_always_correct": true
+  }
+}
+```
+
+### Running Smart LLM Evaluation
+
+```bash
+# Run smart LLM evaluation
+python run_eval_smart_llm.py -c config_eval_akkadian_smart.json
+
+# Run performance comparison
+python test_smart_llm_performance.py
+```
+
+### Smart LLM Output
+
+The smart evaluation shows detailed statistics:
+```
+🧠 Applying smart LLM correction to page 1...
+   ✅ Smart LLM: 15 changed, 25 skipped
+```
+
+This means:
+- **15 lines** were corrected by LLM (Akkadian + low-confidence modern)
+- **25 lines** were skipped (high-confidence modern text)
+- **Total**: 40 lines processed, 37.5% LLM call reduction
+
+### Smart LLM Files
+
+- `src/smart_llm_correction.py`: Smart LLM triggering logic
+- `config_eval_akkadian_smart.json`: Smart LLM evaluation config
+- `run_eval_smart_llm.py`: Smart LLM evaluation runner
+- `test_smart_llm_performance.py`: Performance testing script
+
+**Important**: Smart LLM triggering only affects evaluation mode - the main OCR pipeline remains unchanged!
+
+---
+
+## V2 Evaluation Mode (Complete Solution)
+
+The V2 evaluation mode combines Smart LLM triggering with Gold Pages integration for maximum performance and accuracy measurement.
+
+### V2 Features
+
+- **Smart LLM Triggering**: Only Akkadian + low-confidence text sent to LLM
+- **Gold Pages Integration**: Ground truth accuracy measurement
+- **Enhanced Analysis**: Smart LLM metrics in reports
+- **Performance Optimization**: 40-60% LLM call reduction
+
+### V2 Configuration Files
+
+- `config_eval_gold_pages_akkadian_v2.json` - Akkadian + Smart LLM + Gold Pages
+- `config_eval_gold_pages_basic_v2.json` - Basic + Smart LLM + Gold Pages
+- `config_eval_gold_pages_advanced_v2.json` - Advanced + Smart LLM + Gold Pages
+
+### Running V2 Evaluation
+
+```bash
+# V2 Akkadian evaluation (recommended)
+python run_eval_gold_pages_v2.py -c config_eval_gold_pages_akkadian_v2.json
+
+# V2 Basic evaluation
+python run_eval_gold_pages_v2.py -c config_eval_gold_pages_basic_v2.json
+
+# V2 Advanced evaluation
+python run_eval_gold_pages_v2.py -c config_eval_gold_pages_advanced_v2.json
+```
+
+### V2 Output Structure
+
+```
+data/eval_output/
+├── eval_research_results_gold_pages_akkadian_v2/    # V2 Akkadian results
+├── eval_research_results_gold_pages_basic_v2/       # V2 Basic results
+└── eval_research_results_gold_pages_advanced_v2/    # V2 Advanced results
+    ├── document_name/
+    │   ├── comprehensive_report.json                # Detailed results with Smart LLM metrics
+    │   ├── comprehensive_results.csv                # CSV data
+    │   └── translations_report.pdf                  # Akkadian translations (if enabled)
+    └── processing_report_YYYYMMDD_HHMMSS.json
+```
+
+### V2 Analysis Integration
+
+V2 results are automatically included in analysis reports with:
+- Smart LLM efficiency metrics
+- LLM call reduction percentages
+- Gold Pages accuracy measurements
+- Before/after LLM comparisons
+- Cost-benefit analysis
 
 ---
 

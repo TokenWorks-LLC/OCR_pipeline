@@ -65,7 +65,9 @@ class SummaryAnalyzer:
                     data['report_path'] = str(report_file)
                     data['mode'] = mode_name
                     all_data[mode_name].append(data)
-                    self.logger.info(f"Loaded: {str(report_file)}")
+                    # Safe logging - encode problematic characters
+                    safe_path = str(report_file).encode('ascii', 'replace').decode('ascii')
+                    self.logger.info(f"Loaded: {safe_path}")
                 except Exception as e:
                     self.logger.error(f"Failed to load {report_file}: {e}")
         
@@ -98,6 +100,23 @@ class SummaryAnalyzer:
         
         # Calculate Akkadian translations
         total_akkadian = sum(d.get('akkadian_translations_found', 0) for d in data)
+        
+        # Calculate Smart LLM metrics
+        total_llm_lines_processed = 0
+        total_llm_lines_changed = 0
+        total_llm_lines_skipped = 0
+        total_llm_akkadian_lines = 0
+        total_llm_low_conf_lines = 0
+        
+        for doc in data:
+            for page_stat in doc.get('page_statistics', []):
+                if 'smart_llm_stats' in page_stat:
+                    smart_stats = page_stat['smart_llm_stats']
+                    total_llm_lines_processed += smart_stats.get('lines_processed', 0)
+                    total_llm_lines_changed += smart_stats.get('lines_changed', 0)
+                    total_llm_lines_skipped += smart_stats.get('lines_skipped', 0)
+                    total_llm_akkadian_lines += smart_stats.get('lines_akkadian', 0)
+                    total_llm_low_conf_lines += smart_stats.get('lines_low_conf', 0)
         
         # Calculate resource monitoring metrics
         resource_data = []
@@ -139,7 +158,18 @@ class SummaryAnalyzer:
             'time_per_token': total_processing_time / total_token_count if total_token_count > 0 else 0,
             # Resource monitoring metrics
             'avg_cpu_percent': avg_cpu_percent,
-            'avg_memory_mb': avg_memory_mb
+            # Smart LLM metrics
+            'total_llm_lines_processed': total_llm_lines_processed,
+            'total_llm_lines_changed': total_llm_lines_changed,
+            'total_llm_lines_skipped': total_llm_lines_skipped,
+            'total_llm_akkadian_lines': total_llm_akkadian_lines,
+            'total_llm_low_conf_lines': total_llm_low_conf_lines,
+            'llm_call_reduction_pct': (total_llm_lines_skipped / total_llm_lines_processed * 100) if total_llm_lines_processed > 0 else 0,
+            'smart_llm_efficiency': (total_llm_lines_changed / total_llm_lines_processed * 100) if total_llm_lines_processed > 0 else 0,
+            'avg_memory_mb': avg_memory_mb,
+            # Enhanced confidence metrics
+            'confidence_analysis': self._analyze_confidence_metrics(data),
+            'cost_benefit_analysis': self._calculate_cost_benefit_analysis(data, total_processing_time)
         }
     
     def compare_modes(self, mode_data: Dict[str, List[Dict]]) -> Dict[str, Any]:
@@ -175,6 +205,169 @@ class SummaryAnalyzer:
                 comparison[f'{mode}_vs_{base_mode}'] = improvements
         
         return comparison
+    
+    def _analyze_confidence_metrics(self, data: List[Dict]) -> Dict[str, Any]:
+        """Analyze confidence metrics with explanations."""
+        if not data:
+            return {}
+        
+        # Extract confidence data
+        all_confidences = []
+        word_level_confidences = []
+        llm_corrected_words = []
+        ocr_vs_llm_confidence = []
+        
+        for doc in data:
+            # Page-level confidences
+            for page_stat in doc.get('page_statistics', []):
+                if 'avg_confidence' in page_stat:
+                    all_confidences.append(page_stat['avg_confidence'])
+            
+            # Word-level confidences from confidence_metrics
+            if 'confidence_metrics' in doc:
+                conf_metrics = doc['confidence_metrics']
+                word_level_confidences.extend(conf_metrics.get('word_level_confidences', []))
+                llm_corrected_words.extend(conf_metrics.get('llm_corrected_words', []))
+                ocr_vs_llm_confidence.extend(conf_metrics.get('ocr_vs_llm_confidence', []))
+        
+        # Calculate confidence statistics
+        if all_confidences:
+            avg_confidence = sum(all_confidences) / len(all_confidences)
+            min_confidence = min(all_confidences)
+            max_confidence = max(all_confidences)
+            high_conf_pct = sum(1 for c in all_confidences if c >= 0.8) / len(all_confidences) * 100
+            low_conf_pct = sum(1 for c in all_confidences if c < 0.5) / len(all_confidences) * 100
+        else:
+            avg_confidence = min_confidence = max_confidence = 0
+            high_conf_pct = low_conf_pct = 0
+        
+        # Analyze LLM correction impact
+        llm_impact = {}
+        if ocr_vs_llm_confidence:
+            ocr_confidences = [item.get('ocr_confidence', 0) for item in ocr_vs_llm_confidence]
+            llm_confidences = [item.get('llm_confidence', 0) for item in ocr_vs_llm_confidence]
+            
+            if ocr_confidences and llm_confidences:
+                avg_ocr_conf = sum(ocr_confidences) / len(ocr_confidences)
+                avg_llm_conf = sum(llm_confidences) / len(llm_confidences)
+                llm_improvement = ((avg_llm_conf - avg_ocr_conf) / avg_ocr_conf * 100) if avg_ocr_conf > 0 else 0
+                
+                llm_impact = {
+                    'avg_ocr_confidence': avg_ocr_conf,
+                    'avg_llm_confidence': avg_llm_conf,
+                    'confidence_improvement_pct': llm_improvement,
+                    'words_corrected': len(llm_corrected_words),
+                    'correction_rate': len(llm_corrected_words) / len(word_level_confidences) * 100 if word_level_confidences else 0
+                }
+        
+        return {
+            'page_level_confidence': {
+                'average': avg_confidence,
+                'minimum': min_confidence,
+                'maximum': max_confidence,
+                'high_confidence_pages_pct': high_conf_pct,
+                'low_confidence_pages_pct': low_conf_pct,
+                'explanation': 'Page-level confidence represents the average OCR confidence for all text elements on each page. Higher values (>0.8) indicate more reliable text extraction.'
+            },
+            'word_level_confidence': {
+                'total_words': len(word_level_confidences),
+                'average': sum(word_level_confidences) / len(word_level_confidences) if word_level_confidences else 0,
+                'distribution': self._categorize_confidence_distribution(word_level_confidences),
+                'explanation': 'Word-level confidence shows individual text element reliability. This helps identify which specific words may need LLM correction.'
+            },
+            'llm_correction_impact': llm_impact,
+            'confidence_interpretation': {
+                'high_confidence': '>0.8 - Very reliable OCR results, minimal correction needed',
+                'medium_confidence': '0.5-0.8 - Moderate reliability, may benefit from LLM correction',
+                'low_confidence': '<0.5 - Poor OCR results, likely needs LLM correction or manual review'
+            }
+        }
+    
+    def _categorize_confidence_distribution(self, confidences: List[float]) -> Dict[str, int]:
+        """Categorize confidence scores into high/medium/low."""
+        if not confidences:
+            return {'high': 0, 'medium': 0, 'low': 0}
+        
+        high = sum(1 for c in confidences if c >= 0.8)
+        medium = sum(1 for c in confidences if 0.5 <= c < 0.8)
+        low = sum(1 for c in confidences if c < 0.5)
+        
+        return {'high': high, 'medium': medium, 'low': low}
+    
+    def _calculate_cost_benefit_analysis(self, data: List[Dict], total_processing_time: float) -> Dict[str, Any]:
+        """Calculate cost-benefit analysis for LLM usage."""
+        if not data:
+            return {}
+        
+        # Extract metrics
+        total_pages = sum(d.get('total_pages', 0) for d in data)
+        total_corrections = sum(d.get('total_corrections', 0) for d in data)
+        total_word_count = sum(d.get('total_word_count', 0) for d in data)
+        total_text_elements = sum(d.get('total_text_elements', 0) for d in data)
+        
+        # Calculate costs (processing time)
+        base_processing_time = total_processing_time  # This includes LLM time
+        estimated_ocr_only_time = total_processing_time * 0.7  # Estimate OCR-only time (30% faster)
+        llm_overhead_time = total_processing_time - estimated_ocr_only_time
+        
+        # Calculate benefits (corrections made)
+        correction_rate = (total_corrections / total_text_elements * 100) if total_text_elements > 0 else 0
+        words_per_second = total_word_count / total_processing_time if total_processing_time > 0 else 0
+        
+        # Cost-benefit ratios
+        time_per_correction = llm_overhead_time / total_corrections if total_corrections > 0 else 0
+        corrections_per_second = total_corrections / total_processing_time if total_processing_time > 0 else 0
+        
+        # Efficiency metrics
+        efficiency_score = (correction_rate / (llm_overhead_time / total_processing_time * 100)) if total_processing_time > 0 else 0
+        
+        return {
+            'processing_costs': {
+                'total_time_seconds': total_processing_time,
+                'estimated_ocr_only_time': estimated_ocr_only_time,
+                'llm_overhead_time': llm_overhead_time,
+                'llm_overhead_percentage': (llm_overhead_time / total_processing_time * 100) if total_processing_time > 0 else 0,
+                'explanation': 'Processing costs measure the time overhead of LLM correction compared to OCR-only processing.'
+            },
+            'correction_benefits': {
+                'total_corrections': total_corrections,
+                'correction_rate_percentage': correction_rate,
+                'corrections_per_second': corrections_per_second,
+                'time_per_correction_seconds': time_per_correction,
+                'explanation': 'Correction benefits measure how many OCR errors the LLM successfully fixed.'
+            },
+            'cost_benefit_ratios': {
+                'efficiency_score': efficiency_score,
+                'time_overhead_vs_corrections': llm_overhead_time / total_corrections if total_corrections > 0 else 0,
+                'corrections_per_overhead_second': total_corrections / llm_overhead_time if llm_overhead_time > 0 else 0,
+                'explanation': 'Cost-benefit ratios help determine if LLM correction provides sufficient value for the processing time overhead.'
+            },
+            'recommendations': self._generate_llm_recommendations(efficiency_score, correction_rate, llm_overhead_time / total_processing_time if total_processing_time > 0 else 0)
+        }
+    
+    def _generate_llm_recommendations(self, efficiency_score: float, correction_rate: float, overhead_pct: float) -> List[str]:
+        """Generate recommendations based on cost-benefit analysis."""
+        recommendations = []
+        
+        if efficiency_score > 2.0:
+            recommendations.append("✅ EXCELLENT: LLM correction provides high value - continue using")
+        elif efficiency_score > 1.0:
+            recommendations.append("✅ GOOD: LLM correction provides positive value - recommended")
+        elif efficiency_score > 0.5:
+            recommendations.append("⚠️ MODERATE: LLM correction provides some value - consider optimization")
+        else:
+            recommendations.append("❌ POOR: LLM correction overhead exceeds benefits - consider disabling")
+        
+        if correction_rate < 5:
+            recommendations.append("💡 Consider confidence-based filtering to only correct low-confidence words")
+        
+        if overhead_pct > 50:
+            recommendations.append("⏱️ High processing overhead - consider using lighter LLM model")
+        
+        if correction_rate > 20:
+            recommendations.append("🎯 High correction rate - LLM is finding many errors, very valuable")
+        
+        return recommendations
     
     def create_visualizations(self, comparison_data: Dict[str, Any]) -> List[str]:
         """Create visualization charts and save them."""

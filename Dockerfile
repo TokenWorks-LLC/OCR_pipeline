@@ -39,10 +39,24 @@ RUN pip install --only-binary=:all: \
     "requests>=2.31.0" \
     "Pillow>=10.0.0"
 
-# Install OCR packages - PaddlePaddle and PaddleOCR
+# Install PaddlePaddle
+RUN pip install --only-binary=:all: "paddlepaddle==2.6.1"
+
+# Install PaddleOCR without deps to avoid its legacy PyMuPDF<1.21 pin
+RUN pip install --only-binary=:all: --no-deps "paddleocr==2.7.0.3"
+
+# Manually install required runtime deps PaddleOCR expects (binary wheels only)
 RUN pip install --only-binary=:all: \
-    "paddlepaddle==2.6.1" \
-    "paddleocr==2.7.0.3" \
+    "shapely==2.1.2" \
+    "scikit-image==0.25.2" \
+    "imgaug==0.4.0" \
+    "pyclipper==1.3.0.post6" \
+    "lmdb==1.7.3" \
+    "rapidfuzz==3.14.1" \
+    "lxml==6.0.2" \
+    "premailer==3.10.0" \
+    "openpyxl==3.1.5" \
+    "tqdm==4.67.1" \
     "pytesseract>=0.3.10"
 
 # Set working directory
@@ -55,7 +69,7 @@ COPY . /app
 RUN if [ -f requirements.txt ]; then pip install --only-binary=:all: -r requirements.txt; fi
 
 # Validation step: ensure all critical imports work
-RUN python -c "import fitz, cv2, paddleocr; print('✅ All OCR components loaded successfully')"
+RUN python -c "import fitz, cv2, paddleocr, PIL, pdf2image; print('✅ PyMuPDF, OpenCV, PaddleOCR, Pillow, pdf2image OK')"
 
 # Default command: run pipeline with help
 CMD ["python", "run_pipeline.py", "--help"]

@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased] – Resolve PaddleOCR ↔ PyMuPDF conflict
+- Docker: Install `paddleocr==2.7.0.3` with `--no-deps`; explicitly install required runtime deps.
+- Keep `PyMuPDF==1.24.10` for Python 3.11 compatibility (binary wheels).
+- Update Docker docs: add note about PaddleOCR's legacy `PyMuPDF<1.21` pin and our resolution.
+- Preserve ARM64 PaddlePaddle index and binary-only strategy.
+
 ## [2025-09-28] Docker Platform Standardization
 
 ### Fixed Platform Confusion

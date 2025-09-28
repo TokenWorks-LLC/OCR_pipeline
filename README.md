@@ -1386,6 +1386,10 @@ docker run --rm tokenworks-ocr:latest python -c "import fitz, cv2, paddleocr; pr
 - Intel/AMD64: `docker build -t tokenworks-ocr:latest .`
 - Apple Silicon: `docker build -f Dockerfile.arm64 -t tokenworks-ocr:latest .`
 
+**Issue**: PaddleOCR dependency conflict with PyMuPDF  
+**Background**: On Python 3.11, we keep PyMuPDF==1.24.x for optimal performance and compatibility. Some PaddleOCR releases (including 2.7.0.3) declare PyMuPDF<1.21, which conflicts with 3.11 binary wheels.  
+**Solution**: We intentionally install paddleocr with --no-deps and explicitly install its runtime dependencies. Our pipeline uses pdf2image/fitz directly for PDFs, so PaddleOCR's legacy PyMuPDF constraint is not required.
+
 For comprehensive Docker troubleshooting, see [README_docker.md](README_docker.md).
 
 ---

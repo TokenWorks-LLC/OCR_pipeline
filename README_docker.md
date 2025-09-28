@@ -111,7 +111,7 @@ After building, verify all components work:
 
 ```bash
 # Test critical imports
-docker run --rm tokenworks-ocr:latest python -c "import fitz, cv2, paddleocr; print('✅ All OCR components working')"
+docker run --rm tokenworks-ocr:latest python -c "import fitz, cv2, paddleocr, PIL, pdf2image; print('✅ PyMuPDF, OpenCV, PaddleOCR, Pillow, pdf2image OK')"
 ```
 
 ### Common Issues
@@ -123,12 +123,17 @@ docker run --rm tokenworks-ocr:latest python -c "import fitz, cv2, paddleocr; pr
 - Intel/AMD64: Use `docker build -t tokenworks-ocr:latest .`  
 - Apple Silicon: Use `docker build -f Dockerfile.arm64 -t tokenworks-ocr:latest .`
 
-#### Issue 2: Platform Mismatch
+#### Issue 2: Dependency Resolution Note
+**Symptom**: `No matching distribution found for PyMuPDF<1.21.0` or `paddleocr has requirement PyMuPDF<1.21.0`  
+**Cause**: PaddleOCR 2.7.0.3 declares PyMuPDF<1.21 but we use PyMuPDF==1.24.10 for Python 3.11  
+**Fix Implemented**: We install `paddleocr` with `--no-deps` and explicitly install its runtime dependencies. Our pipeline uses pdf2image/fitz directly, so PaddleOCR's legacy PyMuPDF constraint doesn't apply. All installations use binary-only wheels (`--only-binary=:all:`).
+
+#### Issue 3: Platform Mismatch
 **Symptom**: Long build times or compilation errors  
 **Cause**: Mixed platform instructions  
 **Solution**: Follow platform-specific instructions exactly, don't mix them
 
-#### Issue 3: Import Errors at Runtime
+#### Issue 4: Import Errors at Runtime
 **Symptom**: `ModuleNotFoundError` for opencv, paddleocr, or fitz  
 **Solution**: Rebuild image ensuring validation step passes
 

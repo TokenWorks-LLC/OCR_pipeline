@@ -64,9 +64,9 @@ def get_paddle() -> Optional[PaddleOCR]:
     if _paddle_ocr is None:
         # Try different language configurations
         configs_to_try = [
-            {'use_angle_cls': True, 'lang': 'en', 'show_log': False},
-            {'use_angle_cls': True, 'lang': 'ch', 'show_log': False},  # Chinese (often works for multilingual)
-            {'use_angle_cls': False, 'lang': 'en', 'show_log': False},  # Without angle classification
+            {'use_textline_orientation': True, 'lang': 'en'},
+            {'use_textline_orientation': True, 'lang': 'ch'},  # Chinese (often works for multilingual)
+            {'use_textline_orientation': False, 'lang': 'en'},  # Without angle classification
             {'lang': 'en'},  # Minimal config
         ]
         

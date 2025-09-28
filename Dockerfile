@@ -39,11 +39,11 @@ RUN pip install --only-binary=:all: \
     "requests>=2.31.0" \
     "Pillow>=10.0.0"
 
-# Install PaddlePaddle
-RUN pip install --only-binary=:all: "paddlepaddle==2.6.1"
+# Install PaddlePaddle (upgrade to 3.x for PaddleOCR 3.2.0 + PaddleX 3.2.1 compatibility)
+RUN pip install --only-binary=:all: "paddlepaddle>=3.0.0,<4.0.0"
 
-# Install PaddleOCR without deps to avoid its legacy PyMuPDF<1.21 pin
-RUN pip install --only-binary=:all: --no-deps "paddleocr==2.7.0.3"
+# Install PaddleOCR without deps (newer version compatible with PaddlePaddle 3.x)
+RUN pip install --only-binary=:all: --no-deps "paddleocr>=3.2.0"
 
 # Manually install required runtime deps PaddleOCR expects (binary wheels only)
 RUN pip install --only-binary=:all: \
@@ -57,7 +57,10 @@ RUN pip install --only-binary=:all: \
     "premailer==3.10.0" \
     "openpyxl==3.1.5" \
     "tqdm==4.67.1" \
-    "pytesseract>=0.3.10"
+    "pytesseract>=0.3.10" \
+    "PyYAML>=6.0" \
+    "typing-extensions>=4.12" \
+    "paddlex>=3.2.0"
 
 # Set working directory
 WORKDIR /app

@@ -173,7 +173,8 @@ class PreflightChecker:
             from paddleocr import PaddleOCR
             
             # Test PaddleOCR initialization
-            paddle = PaddleOCR(use_angle_cls=True, lang='en', show_log=False)
+            try:
+                paddle = PaddleOCR(use_textline_orientation=True, lang='en')
             
             # Test OCR functionality
             test_img = np.ones((100, 300, 3), dtype=np.uint8) * 255
@@ -507,7 +508,7 @@ class PreflightChecker:
             
             try:
                 from paddleocr import PaddleOCR
-                paddle = PaddleOCR(use_angle_cls=False, lang='en', show_log=False)
+                paddle = PaddleOCR(use_textline_orientation=False, lang='en')
                 paddle_result = paddle.ocr(test_img)
                 paddle_time = time.time() - start_time
                 paddle_text_len = len(' '.join([r[1][0] for r in paddle_result[0]]) if paddle_result[0] else "")

@@ -716,8 +716,11 @@ cp data/samples/* data/input/
 python -c "import paddleocr; print('PaddleOCR OK')"
 python -c "from src.ocr_utils import test_ocr; test_ocr()"
 
-# Fix: Reinstall OCR dependencies
-pip install --force-reinstall paddleocr opencv-python-headless
+# Fix: Reinstall PaddlePaddle 3.x ecosystem dependencies
+pip install --force-reinstall "paddlepaddle>=3.0.0,<4.0.0" "paddleocr>=3.2.0" opencv-python-headless
+
+# If still issues, ensure PaddleX dependencies are installed
+pip install --force-reinstall "PyYAML>=6.0" "typing-extensions>=4.12"
 ```
 
 #### **Issue 4: Docker build issues on Apple Silicon**

@@ -125,15 +125,20 @@ docker run --rm tokenworks-ocr:latest python -c "import fitz, cv2, paddleocr, PI
 
 #### Issue 2: Dependency Resolution Note
 **Symptom**: `No matching distribution found for PyMuPDF<1.21.0` or `paddleocr has requirement PyMuPDF<1.21.0`  
-**Cause**: PaddleOCR 2.7.0.3 declares PyMuPDF<1.21 but we use PyMuPDF==1.24.10 for Python 3.11  
-**Fix Implemented**: We install `paddleocr` with `--no-deps` and explicitly install its runtime dependencies. Our pipeline uses pdf2image/fitz directly, so PaddleOCR's legacy PyMuPDF constraint doesn't apply. All installations use binary-only wheels (`--only-binary=:all:`).
+**Cause**: PaddleOCR 2.x declared restrictive PyMuPDF<1.21 but we need PyMuPDF==1.24.10 for Python 3.11  
+**Fix Implemented**: Upgraded to PaddleOCR 3.2.0 ecosystem which removes legacy constraints. All packages installed with `--only-binary=:all:` for reliability.
 
-#### Issue 3: Platform Mismatch
+#### Issue 3: PaddleX set_optimization_level Error (RESOLVED)
+**Symptom**: `AttributeError: 'AnalysisConfig' object has no attribute 'set_optimization_level'`  
+**Root Cause**: PaddleOCR 3.x auto-installs PaddleX 3.2.1 which requires PaddlePaddle 3.x API methods  
+**Fix Implemented**: Upgraded to PaddlePaddle 3.2.0 + PaddleOCR 3.2.0 ecosystem for full API compatibility
+
+#### Issue 4: Platform Mismatch
 **Symptom**: Long build times or compilation errors  
 **Cause**: Mixed platform instructions  
 **Solution**: Follow platform-specific instructions exactly, don't mix them
 
-#### Issue 4: Import Errors at Runtime
+#### Issue 5: Import Errors at Runtime
 **Symptom**: `ModuleNotFoundError` for opencv, paddleocr, or fitz  
 **Solution**: Rebuild image ensuring validation step passes
 
@@ -162,12 +167,14 @@ Your project directory should be mounted to `/app` in the container:
 ## Binary-Only Installation
 
 Both Dockerfiles use `PIP_ONLY_BINARY=:all:` to prevent source compilation:
-- ✅ **PyMuPDF 1.24.10**: Uses prebuilt wheels
-- ✅ **OpenCV 4.10.0.84**: Headless version with reliable wheels
-- ✅ **pdf2image 1.17.0**: Latest stable version
-- ✅ **PaddlePaddle**: Uses official ARM64 index for Apple Silicon
+- ✅ **PyMuPDF 1.24.10**: Uses prebuilt wheels for reliable PDF processing
+- ✅ **OpenCV 4.10.0.84**: Headless version with reliable computer vision wheels
+- ✅ **pdf2image 1.17.0**: Latest stable PDF-to-image conversion
+- ✅ **PaddlePaddle 3.2.0**: Modern deep learning framework with full API compatibility
+- ✅ **PaddleOCR 3.2.0**: Latest OCR models with PaddleX 3.2.1 ecosystem support
+- ✅ **PaddleX Dependencies**: PyYAML>=6.0, typing-extensions>=4.12 for model management
 
-This ensures fast, reliable builds without compilation failures.
+This ensures fast, reliable builds without compilation failures and resolves all API compatibility issues.
 
 ## Advanced Usage
 
@@ -191,13 +198,15 @@ done
 
 ### Persistent Model Cache
 ```bash
-# Create volume for PaddleOCR models
+# Create volumes for model cache (PaddleOCR 3.2.0 uses PaddleX for models)
 docker volume create paddleocr-models
+docker volume create paddlex-models
 
-# Use persistent cache
+# Use persistent cache for both PaddleOCR and PaddleX models
 docker run --rm \
   -v "$PWD":/app \
   -v paddleocr-models:/root/.paddleocr \
+  -v paddlex-models:/root/.paddlex \
   -w /app \
   tokenworks-ocr:latest python run_pipeline.py "data/input/sample.pdf"
 ```

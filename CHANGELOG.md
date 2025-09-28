@@ -1,5 +1,28 @@
 # Changelog
 
+## [2025-09-28] – Upgrade to PaddlePaddle 3.x + PaddleOCR 3.2.0 ecosystem
+
+### Major Version Upgrade
+- **Upgraded**: PaddlePaddle from 2.6.x to 3.2.0 (major version jump for API compatibility)
+- **Upgraded**: PaddleOCR from 2.7.0.3 to 3.2.0 (latest stable with modern API)
+- **Added**: Explicit PaddleX>=3.2.0, PyYAML>=6.0, typing-extensions>=4.12 dependencies
+- **Fixed**: AttributeError: 'AnalysisConfig' object has no attribute 'set_optimization_level'
+
+### API Parameter Updates
+- **Updated**: `use_angle_cls` → `use_textline_orientation` (PaddleOCR 3.2.0 API)
+- **Removed**: Deprecated `show_log` parameter from PaddleOCR initialization
+- **Updated**: All source files (preflight.py, ocr_utils.py, setup.py) with new parameters
+
+### Documentation Updates
+- **Updated**: README.md troubleshooting with PaddlePaddle 3.x installation instructions
+- **Updated**: README_docker.md with resolved set_optimization_level issue and version details
+- **Updated**: requirements.txt with PaddlePaddle 3.x constraints and new dependencies
+
+### Build Strategy
+- **Maintained**: --no-deps installation strategy and binary-only wheels for reliability
+- **Enhanced**: Docker builds now include PaddleX model cache volumes (/root/.paddlex)
+- **Verified**: Full Docker build and pipeline initialization testing completed
+
 ## [Unreleased] – Resolve PaddleOCR ↔ PyMuPDF conflict
 - Docker: Install `paddleocr==2.7.0.3` with `--no-deps`; explicitly install required runtime deps.
 - Keep `PyMuPDF==1.24.10` for Python 3.11 compatibility (binary wheels).

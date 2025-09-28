@@ -1,5 +1,4 @@
 # Docker Compose configuration for OCR Pipeline (Compose v2)
-version: '3.8'
 
 services:
   # Default service for Intel/AMD64 platforms

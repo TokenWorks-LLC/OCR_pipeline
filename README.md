@@ -669,8 +669,8 @@ python -c "from src.healthcheck import run_health_check; run_health_check()"
 **Health checks & validation:**
 ```bash
 python -c "from src.healthcheck import run_health_check; run_health_check()"  # Full system check
-python run_pipeline.py --validate-only    # Config validation
-python -m src.preflight                    # Pre-run system validation  
+python -c "import src.pipeline; print('✅ Core modules OK')"
+python -c "import production.comprehensive_pipeline; print('✅ Production module OK')"
 ```
 
 **Testing & debugging:**
@@ -704,7 +704,7 @@ source .env/bin/activate    # Linux/Mac
 ```bash
 # Check your directory structure
 ls -la data/input/      # Should have files here
-ls -la data/samples/    # Sample files for testing
+ls -la data/samples/    # Sample files to test with
 
 # Fix: Copy test files
 cp data/samples/* data/input/
@@ -732,7 +732,7 @@ docker build -f Dockerfile.arm64 -t ocr-dev .
 docker build --no-cache -f Dockerfile.arm64 -t ocr-dev .
 
 # Check for success indicators in build logs
-docker build -f Dockerfile.arm64 -t ocr-dev . 2>&1 | grep -E "(cached|wheel)"
+docker build -f Dockerfile.arm64 -t ocr-dev 2>&1 | grep -E "(cached|wheel)"
 ```
 
 #### **Issue 5: Configuration not taking effect**
@@ -1063,7 +1063,10 @@ cd OCR_pipeline
 
 # 2. Set up environment (choose one)
 # Docker (recommended):
-docker build -f Dockerfile.arm64 -t ocr-dev .
+docker build -f Dockerfile.arm64 -t ocr-dev .    # Apple Silicon
+docker build -t ocr-dev .                        # Intel/AMD64
+
+# Start development environment  
 docker run --rm -it -v "$PWD":/workspace -w /workspace ocr-dev bash
 
 # OR Local Python:
@@ -1162,705 +1165,52 @@ When adding new features, extend `config.json` thoughtfully:
 }
 ```
 
-### 🎯 **Specific Areas Where We Need Help**
+### 🚀 **Deployment Readiness Checklist**
 
-#### **🐳 Docker & Infrastructure**
-- **ARM64 build optimization**: Further reduce build times
-- **Multi-stage builds**: Separate dev/prod images
-- **Docker Compose**: Add complete development stack
-- **CI/CD integration**: Automated testing pipelines
+Before deploying, ensure you've validated:
 
-#### **🤖 OCR & AI Features**  
-- **New OCR engines**: Integrate EasyOCR, TrOCR, or commercial APIs
-- **LLM providers**: Add OpenAI, Anthropic, local models beyond Ollama
-- **Accuracy improvements**: Better preprocessing, post-processing
-- **Performance tuning**: Speed vs accuracy optimizations
-
-#### **🏛️ Academic & Specialized Features**
-- **Ancient languages**: Extend beyond Akkadian (Sanskrit, Hebrew, etc.)
-- **Manuscript processing**: Handwriting recognition improvements  
-- **Citation formats**: Academic output formatting
-- **Translation workflows**: Multi-language processing pipelines
-
-#### **🚀 Performance & Scalability**
-- **Batch processing**: Parallel processing optimizations
-- **Memory management**: Handle large document collections
-- **Progress tracking**: Better user feedback during processing
-- **Error recovery**: Robust handling of problematic files
-
-### 🏆 **Recognition & Community**
-
-**We value all contributions!** Whether you fix a typo or add a major feature:
-
-- **📜 Contributors listed** in `doc/AUTHORS` 
-- **🎉 Pull requests celebrated** with detailed reviews and feedback
-- **📚 Good contributions documented** as examples for future contributors
-- **🚀 Major contributions** get highlighted in release notes
-
-**Questions?** Open an issue or start a discussion - we're here to help make your contribution successful!
-- Optimize memory usage
-
-### 🚀 **Easy Ways to Start**
-
-#### **Documentation**
-- Add examples to this README
-- Improve code comments
-- Write tutorials for specific use cases
-- Document configuration options
-
-#### **Testing**
-- Add test cases for edge cases
-- Create sample files for testing
-- Write integration tests
-- Add performance benchmarks
-
-#### **Configuration**
-- Add configuration templates
-- Create use-case specific configs
-- Add validation rules
-- Improve error messages
-
-### 🎉 **Recognition**
-
-Contributors will be:
-- Added to `doc/AUTHORS` file
-- Mentioned in release notes
-- Given credit in documentation
-- Invited to maintain their contributions
-
-### 📞 **Getting Help**
-
-- Check existing issues and discussions
-- Read the codebase - it's well-organized now!
-- Test your changes with Docker for consistency
-- Ask questions in issues/discussions
-
----
-
-## Troubleshooting
-
-### Common Issues
-
-#### **Configuration Errors**
+**✅ System Requirements:**
 ```bash
-# Problem: "Config file not found"
-# Solution: Ensure config.json exists in project root
-python setup.py  # Creates default config
+# Check your system
+uname -m                    # Verify architecture (x86_64 or arm64)
+docker --version            # Ensure Docker 20.10+ installed
+python --version            # Ensure Python 3.8+ for native installs
 
-# Problem: "Invalid JSON in config"
-# Solution: Validate JSON syntax
-python -m json.tool config.json
+# Verify resources
+docker system info | grep "Total Memory"  # 4GB+ RAM recommended
+df -h                      # 10GB+ free disk space
 ```
 
-#### **Import Errors**
+**✅ Platform-Specific Setup:**
 ```bash
-# Problem: "Module not found"
-# Solution: Install dependencies
-pip install -r requirements.txt
+# Apple Silicon (M1/M2/M3) - Use optimized build:
+docker build -f Dockerfile.arm64 -t ocr-pipeline .
 
-# Problem: "PaddleOCR not working"
-# Solution: Check installation
-python -c "import paddleocr; print('OK')"
+# Intel/AMD64 (Windows, Intel Macs, Linux) - Use standard build:  
+docker build -t ocr-pipeline .
+
+# Windows users - Use PowerShell for best compatibility:
+# PowerShell: docker run --rm -v "${PWD}:/workspace" -w /workspace ocr-pipeline python run_pipeline.py
 ```
 
-#### **Processing Errors**
+**✅ Functionality Validation:**
 ```bash
-# Problem: "No files found to process"
-# Solution: Check input directory and file formats
-ls data/input/  # Verify files exist
-
-# Problem: "LLM connection failed"
-# Solution: Check Ollama service
-curl http://localhost:11434/api/tags
-```
-
-#### **Performance Issues**
-```json
-// Problem: Processing too slow
-// Solution: Adjust performance settings in config.json
-{
-  "processing": {
-    "batch_size": 5,        // Reduce batch size
-    "max_workers": 2        // Reduce parallel processing
-  },
-  "llm": {
-    "timeout": 60,          // Increase timeout
-    "max_concurrent_corrections": 1  // Reduce LLM load
-  }
-}
-```
-
-### Debug Mode
-
-```bash
-# Enable verbose logging
-export LOG_LEVEL=DEBUG
-python run_pipeline.py
-
-# Check processing logs
-tail -f pipeline.log
-
-# Health check
+# Quick health check (run after installation):
 python -c "from src.healthcheck import run_health_check; run_health_check()"
+
+# Test Docker container:
+docker run --rm ocr-pipeline python -c "import cv2, fitz, paddleocr; print('✅ All dependencies working')"
+
+# Validate with sample file:
+docker run --rm -v "$PWD:/workspace" -w /workspace ocr-pipeline python run_pipeline.py --dry-run
 ```
 
-### Getting Help
-
-1. **Check Logs**: Look at `pipeline.log` for detailed error messages
-2. **Run Health Check**: `python setup.py` includes system diagnostics
-3. **Test Configuration**: Use `--validate-only` and `--dry-run` flags
-4. **Start Simple**: Try processing a single small file first
-
----
-
-## Performance Guidelines
-
-### Recommended Settings by Use Case
-
-| Use Case | DPI | LLM | Batch Size | Expected Speed |
-|----------|-----|-----|------------|----------------|
-| **Quick Processing** | 150 | Disabled | 20 | ~1 page/sec |
-| **Standard Quality** | 300 | Enabled | 10 | ~10 sec/page |
-| **High Quality** | 600 | Enabled | 5 | ~30 sec/page |
-| **Academic Research** | 600 | Enabled + Akkadian | 3 | ~60 sec/page |
-
-### System Requirements
-
-- **Minimum**: 4GB RAM, 2 CPU cores
-- **Recommended**: 8GB RAM, 4 CPU cores
-- **High Performance**: 16GB RAM, 8 CPU cores, SSD storage
-- **GPU Support**: Optional for PaddleOCR acceleration
-
----
-
-## Docker Setup & Deployment
-
-**Choose the correct build path for your system:**
-
-### Intel/AMD64 Platforms (Windows, Intel Macs, Linux)
-# Build and run
-docker build -t tokenworks-ocr:latest .
-docker run --rm -v "$PWD":/app -w /app tokenworks-ocr:latest python run_pipeline.py "data/input/sample.pdf"
-
-# Using Docker Compose
-docker compose run --rm ocr "data/input/sample.pdf"
-```
-
-**⚠️ Warning**: Do NOT use `Dockerfile.arm64` on Intel/AMD64 systems.
-
-### Apple Silicon (M1/M2/M3 Macs)
-
-```bash  
-# Build ARM64-optimized image
-docker build -f Dockerfile.arm64 -t tokenworks-ocr:latest .
-docker run --rm -v "$PWD":/app -w /app tokenworks-ocr:latest python run_pipeline.py "data/input/sample.pdf"
-
-# Using Docker Compose  
-docker compose run --rm ocr-arm64 "data/input/sample.pdf"
-```
-
-**⚠️ Warning**: Do NOT use the root `Dockerfile` on Apple Silicon systems.
-
-### Why Binary-Only Builds Work
-
-Both Dockerfiles use strict binary-only installation:
-- **PyMuPDF 1.24.10**: Prebuilt wheels, no MuPDF/SWIG compilation
-- **OpenCV 4.10.0.84**: Headless version with reliable wheels  
-- **PaddlePaddle**: Official ARM64 index for Apple Silicon
-- **pdf2image 1.17.0**: Latest stable with wheels
-
-Environment flags prevent source compilation:
-- `PIP_ONLY_BINARY=:all:` - Forces wheel-only installation
-- `PIP_PREFER_BINARY=1` - Prefers binary distributions  
-- `--only-binary=:all:` - Per-command wheel enforcement
-
-### Validation
-
-After building, verify all components work:
-```bash
-# Test critical imports - use 'fitz' for PyMuPDF
-docker run --rm tokenworks-ocr:latest python -c "import fitz, cv2, paddleocr; print('✅ All OCR components working')"
-```
-
-### Troubleshooting
-
-**Issue**: PyMuPDF build errors or long build times  
-**Solution**: Use the correct Dockerfile for your platform:
-- Intel/AMD64: `docker build -t tokenworks-ocr:latest .`
-- Apple Silicon: `docker build -f Dockerfile.arm64 -t tokenworks-ocr:latest .`
-
-**Issue**: PaddleOCR dependency conflict with PyMuPDF  
-**Background**: On Python 3.11, we keep PyMuPDF==1.24.x for optimal performance and compatibility. Some PaddleOCR releases (including 2.7.0.3) declare PyMuPDF<1.21, which conflicts with 3.11 binary wheels.  
-**Solution**: We intentionally install paddleocr with --no-deps and explicitly install its runtime dependencies. Our pipeline uses pdf2image/fitz directly for PDFs, so PaddleOCR's legacy PyMuPDF constraint is not required.
-
-For comprehensive Docker troubleshooting, see [README_docker.md](README_docker.md).
-
----
-
-**Happy Processing!**
-
-> For additional help, check the `doc/` directory or run `python quick_start.py` for interactive tutorials.
-
-### The Problem We Solved
-- PyMuPDF compilation fails with "command 'swig' failed: No such file or directory"
-- OpenCV compiles from source (20-30 minutes on ARM64)
-- PaddlePaddle may pull wrong architecture or compile
-
-### Our Solution: Binary-Only Builds
-We pin packages to versions that publish **linux/aarch64 wheels** and use multiple pip flags to ensure absolutely no source compilation:
-
-- `PIP_ONLY_BINARY=:all:` - Forces wheel-only installation
-- `PIP_PREFER_BINARY=1` - Prefers binary distributions
-- `PIP_NO_BUILD_ISOLATION=1` - Prevents isolated build environments
-- `--only-binary=:all:` - Per-command wheel enforcement
-
-This multi-layered approach ensures pip never attempts source compilation, even if a wheel seems unavailable initially.
-
-### Quick Build Command
-```bash
-DOCKER_BUILDKIT=1 docker buildx build \
-  --no-cache \
-  --progress=plain \
-  --platform=linux/arm64/v8 \
-  -t ocr-pipeline:latest \
-  -f docker/Dockerfile .
-```
-
-### Alternative: Force Fresh Build (if cached layers cause issues)
-```bash
-DOCKER_BUILDKIT=1 docker buildx build \
-  --no-cache \
-  --progress=plain \
-  --platform=linux/arm64/v8 \
-  -t ocr-pipeline:latest \
-  -f docker/Dockerfile .
-```
-
-### Run the Container
-```bash
-# Interactive mode with volume mounting
-docker run --rm -it \
-  -v "$PWD":/app \
-  -w /app \
-  tokenworks-ocr:latest
-
-# Process files directly
-docker run --rm -v "$PWD/data":/app/data tokenworks-ocr:latest python run_pipeline.py
-```
-
-#### **Intel/AMD64 Systems** 🖥️
-```bash
-# Standard build
-docker build -t ocr-pipeline:latest .
-
-# Run interactively  
-docker run --rm -it -v "$PWD":/workspace -w /workspace ocr-pipeline:latest
-```
-
-### 🎯 **Why Our ARM64 Build is Special**
-
-**The Problem We Solved:**
-- ❌ Standard Docker builds fail on Apple Silicon with PyMuPDF compilation errors
-- ❌ Builds take 30+ minutes compiling OpenCV from source
-- ❌ PaddlePaddle architecture mismatches cause runtime failures
-
-**Our Solution:**
-- ✅ **Pre-compiled binary wheels** - No source compilation needed
-- ✅ **Version-pinned dependencies** - Guaranteed compatibility
-- ✅ **Multi-fallback strategy** - Automatic version fallbacks if needed
-- ✅ **8-70 second builds** - Fast development cycles
-- ✅ **Docker layer caching** - Subsequent builds in <10 seconds
-
-**Technical Details:**
-```dockerfile
-# Our optimized strategy
-RUN pip install --user --prefer-binary "PyMuPDF==1.23.5" || \
-    pip install --user --prefer-binary "PyMuPDF==1.22.5" || \
-    echo "WARNING: Using fallback PyMuPDF"
-```
-
-### 📋 **Build Verification**
-
-Test your built image:
-```bash
-# Verify all packages work
-docker run --rm --entrypoint python3 ocr-pipeline-arm64:latest -c "
-import fitz; import cv2; import numpy as np; import pandas;
-print('✅ All critical packages working!')
-print(f'✅ PyMuPDF version: {fitz.VersionBind}')
-"
-
-# Check image details
-docker images | grep ocr-pipeline
-```
-
-### 🛠️ **Development Workflow**
-
-```bash
-# 1. Clone repository
-git clone <your-repo-url>
-cd OCR_pipeline
-
-# 2. Build appropriate image
-# For Apple Silicon:
-docker build -f Dockerfile.arm64 -t ocr-pipeline-dev .
-
-# For Intel/AMD:
-docker build -t ocr-pipeline-dev .
-
-# 3. Development mode with live code changes
-docker run --rm -it \
-  -v "$PWD":/workspace \
-  -v "$PWD/data":/workspace/data \
-  -w /workspace \
-  ocr-pipeline-dev bash
-
-# 4. Inside container, run your code
-python run_pipeline.py
-```
-
-### 🔧 **Production Deployment**
-
-```bash
-# Build production image
-docker build -f Dockerfile.arm64 -t ocr-pipeline:production .
-
-# Run in production
-docker run -d \
-  --name ocr-worker \
-  -v /host/input:/app/data/input \
-  -v /host/output:/app/data/output \
-  ocr-pipeline:production \
-  python run_pipeline.py --config production.json
-```
-
-### 🚨 **Troubleshooting**
-
-#### Build Issues
-```bash
-# Force clean build (removes cached layers)
-docker build --no-cache -f Dockerfile.arm64 -t ocr-pipeline-arm64:latest .
-
-# Check build logs for errors
-docker build -f Dockerfile.arm64 -t ocr-pipeline-arm64:latest . 2>&1 | tee build.log
-```
-
-#### Runtime Issues
-```bash
-# Debug container
-docker run --rm -it ocr-pipeline-arm64:latest bash
-
-# Check package installations
-docker run --rm ocr-pipeline-arm64:latest pip list | grep -E "PyMuPDF|opencv|paddle"
-```
-
-#### Apple Silicon Specific
-If you still encounter issues on Apple Silicon:
-```bash
-# Force ARM64 platform
-docker build --platform linux/arm64 -f Dockerfile.arm64 -t ocr-pipeline-arm64:latest .
-
-# Check Docker settings: Docker Desktop → Settings → Features in Development → "Use Rosetta for x86/amd64 emulation" (should be OFF)
-```
-
-### Why This Works
-- **Binary wheels only**: `PIP_ONLY_BINARY=:all:` prevents source compilation
-- **Enhanced wheel preference**: Additional flags ensure pip never falls back to source builds
-- **Compatibility pins**: 
-  - PyMuPDF==1.24.10 (latest stable with reliable ARM64 wheels)
-  - pdf2image==1.17.0 (correct latest version)
-  - OpenCV 4.10.0.84 (reliable ARM64 wheels)
-- **Official ARM64 index**: PaddlePaddle pulls from `https://www.paddlepaddle.org.cn/whl/linux/aarch64/`
-- **Build caching**: `--mount=type=cache` speeds up rebuilds
-- **Platform targeting**: `--platform=linux/arm64/v8` ensures correct architecture
-
-### Verification Steps
-
-#### 1. Build Success Indicators
-Check your build logs for these **good** patterns:
-```
-✅ Using cached PyMuPDF-1.24.10-cp310-cp310-linux_aarch64.whl
-✅ Downloading pdf2image-1.17.0-py3-none-any.whl
-✅ Downloading opencv_python_headless-4.10.0.84-cp310-cp310-linux_aarch64.whl
-```
-
-Avoid these **bad** patterns:
-```
-❌ Building wheel for PyMuPDF (setup.py)
-❌ Running setup.py bdist_wheel for opencv-python
-❌ PyMuPDF/setup.py
-❌ thirdparty/tesseract
-❌ error: command 'swig' failed: No such file or directory
-```
-
-#### 2. Runtime Verification
-```bash
-# Test component imports
-docker run --rm ocr-pipeline:latest python -c "
-import pymupdf, cv2, paddleocr, pdf2image
-print(f'✅ PyMuPDF: {pymupdf.version[0]}')
-print(f'✅ OpenCV: {cv2.__version__}') 
-print('✅ All OCR components loaded successfully')
-"
-
-# Expected output:
-# ✅ PyMuPDF: 1.24.10
-# ✅ OpenCV: 4.10.0.84
-# ✅ All OCR components loaded successfully
-```
-
-#### 3. Health Check
-```bash
-# Check container health
-docker inspect ocr-pipeline:latest | grep -A5 Healthcheck
-
-# Run health check manually
-docker run --rm ocr-pipeline:latest python -c "
-from src.healthcheck import run_health_check
-run_health_check()
-"
-```
-
-### Expected Build Times
-- **First build**: 3-5 minutes (downloading wheels)
-- **Cached rebuild**: 30-60 seconds (using cached layers)
-- **With --no-cache**: 4-6 minutes (fresh download)
-
-Compare to problematic builds:
-- **With compilation**: 30-60 minutes (often fails)
-- **SWIG errors**: Build failure after 10-20 minutes
-
-### Troubleshooting
-
-#### Issue 1: "error: command 'swig' failed"
-**Cause**: PyMuPDF trying to compile from source
-**Solution**: Already fixed with PyMuPDF==1.24.10 pin and strict wheel-only settings
-```bash
-# Verify the pin is working
-docker build --progress=plain ... 2>&1 | grep -i pymupdf
-# Should show: "Using cached PyMuPDF-1.24.10...aarch64.whl"
-# Must NOT show: "PyMuPDF/setup.py" or "thirdparty/tesseract"
-```
-
-#### Issue 2: "Building wheel for opencv-python"
-**Cause**: OpenCV compiling from source
-**Solution**: Use our pinned opencv-python-headless==4.10.0.84
-```bash
-# Check OpenCV install in logs
-docker build --progress=plain ... 2>&1 | grep -i opencv
-# Should show: "Downloading opencv_python_headless-4.10.0.84...aarch64.whl"
-```
-
-#### Issue 3: PaddlePaddle compatibility errors
-**Cause**: Wrong architecture or version mismatch
-**Solution**: Using official ARM64 index
-```bash
-# Verify Paddle source in logs
-docker build --progress=plain ... 2>&1 | grep -A2 paddlepaddle
-# Should show: "Looking in links: https://www.paddlepaddle.org.cn/whl/linux/aarch64/"
-```
-
-#### Issue 4: Build still takes long time
-**Diagnostic**: Check if binary-only is working
-```bash
-docker build --progress=plain ... 2>&1 | grep -i "building wheel"
-# Should return NO results (empty output)
-
-# Also check for MuPDF/Tesseract compilation attempts
-docker build --progress=plain ... 2>&1 | grep -E "(thirdparty|tesseract|swig)"
-# Should return NO results (empty output)
-```
-
-**Solution**: If you see "Building wheel" or compilation messages:
-1. Use `--no-cache` to clear problematic cached layers
-2. Verify `PIP_ONLY_BINARY=:all:` and related flags are set in logs
-3. Check if a dependency pulled in a package that doesn't have wheels
-4. Ensure PyMuPDF==1.24.10 is being installed (not an older version)
-
-#### Issue 5: Import errors at runtime
-```bash
-# Common: "ImportError: libGL.so.1: cannot open shared object file"
-# Solution: Runtime dependencies already included in Dockerfile:
-# libgl1, libglib2.0-0, poppler-utils, ffmpeg, etc.
-```
-
-### Advanced Usage
-
-#### Multi-Architecture Build
-```bash
-# Build for both Intel and Apple Silicon
-docker buildx create --name multiarch --use
-docker buildx build \
-  --platform=linux/amd64,linux/arm64/v8 \
-  -t ocr-pipeline:latest \
-  --push \
-  .
-```
-
-#### Development with Live Code Changes
-```bash
-# Mount source code for development
-docker run --rm -it \
-  -v "$PWD":/app \
-  -w /app \
-  --entrypoint bash \
-  ocr-pipeline:latest
-
-# Then inside container:
-python run_pipeline.py  # Uses your local code changes
-```
-
-#### Production Deployment
-```bash
-# For production environments
-docker run -d \
-  --name ocr-worker \
-  --restart unless-stopped \
-  -v /data/input:/app/data/input:ro \
-  -v /data/output:/app/data/output \
-  ocr-pipeline:latest \
-  python run_pipeline.py
-```
-
-### Fallback Options
-
-If the optimized build still doesn't work for your system:
-
-#### Option 1: Use Pre-built Image
-```bash
-# If available from registry
-docker pull tokenworks/ocr-pipeline:latest
-```
-
-#### Option 2: System Package Fallback
-Edit `Dockerfile.arm64` to use system OpenCV:
-```dockerfile
-# Replace pip install opencv-python-headless with:
-RUN apt-get update && apt-get install -y python3-opencv
-```
-
-#### Option 3: Multi-Stage Build
-For complex scenarios, use our build stage approach in `docs/docker_mac_arm64.md`
-
-### Integration Examples
-
-#### With Docker Compose
-```yaml
-version: '3.8'
-services:
-  ocr:
-    build: 
-      context: .
-      dockerfile: Dockerfile.arm64
-      platforms:
-        - linux/arm64/v8  # for Apple Silicon
-        - linux/amd64     # for Intel
-    volumes:
-      - ./data/input:/app/data/input:ro
-      - ./data/output:/app/data/output
-    environment:
-      - LOG_LEVEL=INFO
-    command: python run_pipeline.py
-```
-
-#### CI/CD Pipeline
-```yaml
-# GitHub Actions example
-- name: Build ARM64 Docker Image
-  run: |
-    DOCKER_BUILDKIT=1 docker buildx build \
-      --platform=linux/arm64/v8 \
-      --tag ocr-pipeline:${{ github.sha }} \
-      --file Dockerfile.arm64 \
-      .
-```
-
-### Performance Tuning
-
-#### Resource Limits
-```bash
-# For memory-constrained environments
-docker run --rm \
-  --memory=4g \
-  --cpus=2 \
-  -v "$PWD/data":/app/data \
-  ocr-pipeline:latest
-```
-
-#### Batch Processing
-```bash
-# Process multiple files efficiently
-docker run --rm \
-  -v "$PWD/input":/app/data/input:ro \
-  -v "$PWD/output":/app/data/output \
-  ocr-pipeline:latest \
-  python run_pipeline.py --batch-size=10
-```
-
----
-
-## 🎉 Summary: You're Ready to Go!
-
-### 🚀 **What You've Got**
-- **⚡ Fast setup**: 5-minute Docker builds (especially on Apple Silicon)
-- **🎯 Simple usage**: Single command (`python run_pipeline.py`) processes any documents
-- **🧠 AI-powered**: Optional LLM text correction for maximum accuracy
-- **🌍 Multi-language**: English, Turkish, German, French, Italian support
-- **🏛️ Academic features**: Specialized Akkadian text extraction for research
-- **🐳 Production ready**: Docker deployment with enterprise-grade error handling
-
-### 📋 **Quick Reference Card**
-
-**🏃‍♂️ I just want to process documents:**
-```bash
-python setup.py && python run_pipeline.py
-```
-
-**🐳 I want the most reliable setup (Docker):**
-```bash
-docker build -f Dockerfile.arm64 -t ocr-pipeline . && docker run --rm -v "$PWD":/workspace -w /workspace ocr-pipeline python run_pipeline.py
-```
-
-**💻 I want to develop/contribute:**
-```bash
-python quick_start.py  # Learn the codebase interactively
-```
-
-**⚙️ I want to customize settings:**
-```bash
-nano config.json  # Edit configuration, then run normally
-```
-
-**🚨 Something's not working:**
-```bash
-python -c "from src.healthcheck import run_health_check; run_health_check()"
-```
-
-### 🌟 **Why This Pipeline Rocks**
-
-1. **🎯 Developer-focused**: Clear architecture, good documentation, easy setup
-2. **⚡ Performance optimized**: Especially fast ARM64/Apple Silicon Docker builds  
-3. **🧠 AI-enhanced**: Modern LLM integration for superior text correction
-4. **🏛️ Academic-friendly**: Specialized features for scholarly text processing
-5. **🚀 Production-ready**: Used in real document processing workflows
-6. **🤝 Community-driven**: Easy to contribute, welcoming to new developers
-
-### 📚 **Additional Resources**
-
-- **📖 Interactive tutorials**: Run `python quick_start.py` for hands-on learning
-- **🐳 Docker deep-dive**: See `README_docker.md` for comprehensive Docker usage, docker-compose workflows, and platform-specific troubleshooting
-- **🏛️ Academic features**: Check `doc/AKKADIAN_FEATURE.md` for specialized capabilities
-- **🤝 Contributing**: This README has everything you need to start contributing
-- **⚙️ Configuration examples**: Multiple scenarios covered in the Configuration Guide above
-
----
-
-**🎉 Happy Document Processing!**
-
-> **Questions?** Open an issue, check the `doc/` directory, or run `python quick_start.py` for interactive help.
->
-> **Contributing?** We'd love your help! Start with the Contributing section above - there are opportunities for every skill level.
-
----
-
-*Built with ❤️ by the OCR Pipeline community • Optimized for modern Python and Apple Silicon • Academic research meets production reliability*
+**✅ Common Issues Resolved:**
+- ✅ **PyMuPDF compilation errors** → Fixed with binary-only wheels in ARM64 builds
+- ✅ **Platform architecture mismatches** → Clear Dockerfile selection guide
+- ✅ **Windows path separator issues** → PowerShell examples with proper path handling  
+- ✅ **Corporate firewall problems** → Proxy configuration examples
+- ✅ **Permission denied on Linux** → Docker group setup instructions
+- ✅ **Memory issues** → Resource allocation and batch size recommendations
+
+> **🔧 Need Help?** Check the comprehensive [Troubleshooting](#troubleshooting) section above, or see `README_docker.md` for Docker-specific deployment guides across Windows, macOS, and Linux.

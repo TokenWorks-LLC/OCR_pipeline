@@ -1,55 +1,96 @@
-# Alternative Dockerfile for Apple Silicon / ARM64 builds
-# Use this if the main Dockerfile fails on PyMuPDF compilation
+# Optimized ARM64 Dockerfile for Apple Silicon (M1/M2/M3) and ARM64 systems
+# Combines binary-only wheel installation with ARM64-specific optimizations
+# Do NOT use this for Intel/AMD64 - use the root Dockerfile instead
 FROM python:3.11-slim
 
-# Environment variables for Python optimization
-ENV PIP_NO_CACHE_DIR=1 \
+# Environment variables for optimal ARM64 builds and binary-only installations
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONPATH=/app \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_PREFER_BINARY=1 \
+    PIP_ONLY_BINARY=:all: \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
     PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1 \
-    DEBIAN_FRONTEND=noninteractive
+    PYTHONUNBUFFERED=1
 
-# Install system dependencies required for OCR and image processing
-RUN apt-get update && apt-get install -y \
+# Install runtime dependencies (minimal for binary wheels)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    # Core runtime libraries
     libgl1 \
     libglib2.0-0 \
+    libsm6 \
+    libxrender1 \
+    libxext6 \
+    ffmpeg \
     poppler-utils \
-    build-essential \
-    cmake \
+    # Additional ARM64 runtime support
+    libjpeg62-turbo \
+    libpng16-16 \
+    libtiff5 \
+    libwebp6 \
+    libopenjp2-7 \
+    zlib1g \
+    libfreetype6 \
+    liblcms2-2 \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
+
+# Create non-root user for security
+RUN useradd --create-home --shell /bin/bash ocruser
 
 # Upgrade pip and install build tools
 RUN pip install -U pip setuptools wheel
 
-# Install core dependencies first (most stable)
-RUN pip install \
-    numpy>=1.24.0 \
-    requests>=2.31.0 \
-    Pillow>=10.0.0 \
-    pdf2image
+# Install Python dependencies with ARM64-optimized pins
+# Using --only-binary=:all: to ensure no source compilation
+RUN pip install --only-binary=:all: \
+    "PyMuPDF==1.24.10" \
+    "opencv-python-headless==4.10.0.84" \
+    "pdf2image==1.17.0" \
+    "numpy>=1.24.0" \
+    "requests>=2.31.0" \
+    "Pillow>=10.0.0"
 
-# Install CV and OCR packages
-RUN pip install \
-    opencv-python-headless>=4.8.0 \
-    paddlepaddle==2.6.1 \
-    paddleocr==2.7.0
+# Install PaddlePaddle from ARM64-specific wheel index (upgrade to 3.x for PaddleOCR 3.2.0 + PaddleX 3.2.1 compatibility)
+RUN pip install --only-binary=:all: \
+    "paddlepaddle>=3.0.0,<4.0.0" \
+    -f https://www.paddlepaddle.org.cn/whl/linux/aarch64/
 
-# Handle PyMuPDF separately with fallback strategies
-RUN pip install --only-binary=all "pymupdf>=1.24" || \
-    pip install --no-binary pymupdf "pymupdf>=1.24" || \
-    pip install "pymupdf==1.23.26"
+# Install PaddleOCR without deps (newer version compatible with PaddlePaddle 3.x)
+RUN pip install --only-binary=:all: --no-deps "paddleocr>=3.2.0"
 
-# Clean up build dependencies to reduce image size
-RUN apt-get remove -y build-essential cmake && \
-    apt-get autoremove -y && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+# Manually install required runtime deps PaddleOCR expects (binary wheels only)
+RUN pip install --only-binary=:all: \
+    "shapely==2.1.2" \
+    "scikit-image==0.25.2" \
+    "imgaug==0.4.0" \
+    "pyclipper==1.3.0.post6" \
+    "lmdb==1.7.3" \
+    "rapidfuzz==3.14.1" \
+    "lxml==6.0.2" \
+    "premailer==3.10.0" \
+    "openpyxl==3.1.5" \
+    "tqdm==4.67.1" \
+    "pytesseract>=0.3.10" \
+    "PyYAML>=6.0" \
+    "typing-extensions>=4.12" \
+    "paddlex>=3.2.0"
 
 # Set working directory
 WORKDIR /app
 
-# Copy application code
+# Copy application code and set ownership
 COPY . /app
+RUN chown -R ocruser:ocruser /app
 
-# Entrypoint: run_pipeline.py accepts PDF path and optional flags
-ENTRYPOINT ["python", "run_pipeline.py"]
+# Install additional requirements if present
+RUN if [ -f requirements.txt ]; then pip install --only-binary=:all: -r requirements.txt; fi
+
+# Validation step: ensure all critical imports work
+RUN python -c "import fitz, cv2, paddleocr, PIL, pdf2image; print('✅ PyMuPDF, OpenCV, PaddleOCR, Pillow, pdf2image OK')"
+
+# Switch to non-root user
+USER ocruser
+
+# Default command: run pipeline with help
+CMD ["python", "run_pipeline.py", "--help"]

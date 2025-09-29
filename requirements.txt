@@ -1,13 +1,80 @@
 # OCR Pipeline Requirements
-opencv-python>=4.8.0
-paddlepaddle>=2.5.0
-paddleocr>=2.7.0
-pytesseract>=0.3.10
-PyMuPDF==1.24.10
-numpy>=1.24.0
-requests>=2.31.0
-Pillow>=10.0.0
+# 
+# Version Strategy:
+# - Core packages: Minimum versions for stability and feature compatibility
+# - PyMuPDF: Version range to handle ARM64/Apple Silicon compatibility issues  
+# - PaddlePaddle/PaddleOCR: PaddlePaddle 3.x ecosystem for latest model support and API compatibility
+# - Development tools: Latest stable versions
+#
+# Installation:
+#   pip install -r requirements.txt
+#
+# Validation:
+#   python validate_requirements.py
+#
+# Docker (recommended for complex dependencies):
+#   docker build -f Dockerfile.arm64 -t ocr-pipeline .    # Apple Silicon
+#   docker build -t ocr-pipeline .                        # Intel/AMD64
 
-# Optional: For development/testing
-pytest>=7.4.0
-black>=23.0.0
+# ============================================================================
+# Core OCR and Computer Vision packages
+# ============================================================================
+opencv-python-headless>=4.6.0    # Headless OpenCV for image processing (works better in containers)
+paddlepaddle>=3.0.0,<4.0.0       # PaddlePaddle 3.x framework (CPU version) - required for latest PaddleOCR
+paddleocr>=3.2.0                 # PaddleOCR 3.2.0+ for latest models and API compatibility
+pytesseract>=0.3.10               # Tesseract OCR Python wrapper
+PyMuPDF>=1.20.0,<1.25.0          # PDF processing (fitz) - version range for ARM64 compatibility
+
+# PaddleOCR 3.x ecosystem dependencies
+PyYAML>=6.0                       # YAML configuration parsing (required by PaddleX)
+typing-extensions>=4.12           # Extended type hints (required by PaddleX)
+
+# ============================================================================
+# Image and PDF processing
+# ============================================================================
+Pillow>=9.0.0                     # Python Imaging Library
+pdf2image>=1.16.0                 # PDF to image conversion
+numpy>=1.24.0                     # Numerical computing
+scipy>=1.9.0                      # Scientific computing library
+
+# ============================================================================
+# Data handling and output
+# ============================================================================
+pandas>=1.5.0                     # Data manipulation and CSV handling
+scikit-learn>=1.1.0               # Machine learning (used for reading order clustering)
+
+# ============================================================================  
+# Web requests and networking  
+# ============================================================================
+requests>=2.28.0                  # HTTP requests for LLM APIs and model downloads
+
+# ============================================================================
+# Progress and user interface
+# ============================================================================
+tqdm>=4.64.0                      # Progress bars for batch processing
+
+# ============================================================================
+# PDF generation and reporting
+# ============================================================================
+reportlab>=3.6.0                  # PDF generation for academic reports
+
+# ============================================================================
+# System monitoring (optional, used in health checks)
+# ============================================================================
+psutil>=5.9.0                     # System and process utilities
+
+# ============================================================================
+# Development and testing tools (optional)
+# ============================================================================
+pytest>=7.4.0                    # Testing framework
+black>=23.0.0                    # Code formatting
+flake8>=6.0.0                     # Code linting
+
+# ============================================================================
+# Optional packages (for advanced features)
+# Uncomment these lines if you need these specific features:
+# ============================================================================
+# easyocr>=1.7.0                  # Alternative OCR engine (more languages, slower)
+# transformers>=4.21.0           # Hugging Face transformers for TrOCR (requires PyTorch)
+# torch>=1.12.0                  # PyTorch (needed for transformers, large download)
+# llama-cpp-python>=0.1.0        # Local LLM support (alternative to Ollama)

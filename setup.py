@@ -179,7 +179,7 @@ def test_ocr_functionality():
         
         # Try to initialize PaddleOCR (this may take a while on first run)
         print("   📥 Initializing PaddleOCR (this may take a while on first run)...")
-        ocr = PaddleOCR(use_textline_orientation=True, lang='en', show_log=False)
+        ocr = PaddleOCR(use_textline_orientation=True, lang='en')
         print("   ✅ PaddleOCR initialization successful")
         
         return True

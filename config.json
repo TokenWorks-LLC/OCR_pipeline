@@ -2,8 +2,8 @@
   "input": {
     "input_directory": "./data/input",
     "supported_formats": [".pdf", ".png", ".jpg", ".jpeg", ".tiff", ".bmp"],
-    "process_all_files": true,
-    "specific_file": "",
+    "process_all_files": false,
+    "specific_file": "data/input/test.pdf",
     "recursive_search": false
   },
   "output": {

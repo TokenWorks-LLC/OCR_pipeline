@@ -1,0 +1,76 @@
+{
+  "input": {
+    "input_directory": "./data/input_pdfs",
+    "supported_formats": [
+      ".pdf",
+      ".png",
+      ".jpg",
+      ".jpeg"
+    ],
+    "process_all_files": true,
+    "specific_file": "",
+    "recursive_search": true
+  },
+  "output": {
+    "output_directory": "./data/eval_output/eval_research_results_akkadian_v3",
+    "create_subdirectories": true,
+    "timestamp_outputs": false
+  },
+  "ocr": {
+    "engine": "paddleocr",
+    "dpi": 600,
+    "languages": [
+      "en",
+      "tr",
+      "de",
+      "fr"
+    ],
+    "enable_text_correction": true,
+    "enable_reading_order": true,
+    "confidence_threshold": 0.7
+  },
+  "llm": {
+    "enable_correction": true,
+    "provider": "ollama",
+    "model": "llama3.2:latest",
+    "base_url": "http://localhost:11434",
+    "timeout": 60,
+    "max_concurrent_corrections": 3
+  },
+  "akkadian": {
+    "enable_extraction": true,
+    "confidence_threshold": 0.8,
+    "generate_pdf_report": true,
+    "translation_languages": [
+      "english",
+      "german",
+      "french",
+      "turkish"
+    ]
+  },
+  "processing": {
+    "batch_size": 5,
+    "max_workers": 2,
+    "skip_existing": true,
+    "create_visualizations": true,
+    "create_html_overlay": true,
+    "verbose": true
+  },
+  "csv_output": {
+    "format": "aggregated",
+    "include_metadata": true,
+    "include_confidence_scores": true,
+    "separate_akkadian_csv": true
+  },
+  "evaluation": {
+    "enable_benchmarking": true,
+    "mode_name": "akkadian_v3",
+    "output_file": "./data/eval_output/benchmark_akkadian_v3.json"
+  },
+  "language_detection": {
+    "enable_enhanced_detection": true,
+    "fallback_threshold": 0.5,
+    "verbose_output": true,
+    "track_metrics": true
+  }
+}

@@ -118,6 +118,46 @@ class SummaryAnalyzer:
                     total_llm_akkadian_lines += smart_stats.get('lines_akkadian', 0)
                     total_llm_low_conf_lines += smart_stats.get('lines_low_conf', 0)
         
+        # Calculate Language Detection V3 metrics
+        language_detection_metrics = {}
+        total_lang_pages = 0
+        total_advanced_detections = 0
+        total_character_based_detections = 0
+        total_fallback_detections = 0
+        language_distribution = {}
+        total_fallback_percentage = 0.0
+        threshold_exceeded_count = 0
+        
+        for doc in data:
+            lang_metrics = doc.get('language_detection_v3', {})
+            if lang_metrics:
+                total_lang_pages += lang_metrics.get('total_pages', 0)
+                total_advanced_detections += lang_metrics.get('advanced_detections', 0)
+                total_character_based_detections += lang_metrics.get('character_based_detections', 0)
+                total_fallback_detections += lang_metrics.get('fallback_detections', 0)
+                total_fallback_percentage += lang_metrics.get('fallback_percentage', 0.0)
+                if lang_metrics.get('threshold_exceeded', False):
+                    threshold_exceeded_count += 1
+                
+                # Aggregate language distribution
+                doc_dist = lang_metrics.get('language_distribution', {})
+                for lang, count in doc_dist.items():
+                    language_distribution[lang] = language_distribution.get(lang, 0) + count
+        
+        if total_lang_pages > 0:
+            language_detection_metrics = {
+                'total_pages_analyzed': total_lang_pages,
+                'advanced_detections': total_advanced_detections,
+                'character_based_detections': total_character_based_detections,
+                'fallback_detections': total_fallback_detections,
+                'advanced_success_rate': total_advanced_detections / total_lang_pages,
+                'character_based_success_rate': total_character_based_detections / total_lang_pages,
+                'fallback_rate': total_fallback_detections / total_lang_pages,
+                'avg_fallback_percentage': total_fallback_percentage / len(data) if data else 0,
+                'threshold_exceeded_documents': threshold_exceeded_count,
+                'language_distribution': language_distribution
+            }
+        
         # Calculate resource monitoring metrics
         resource_data = []
         for doc in data:
@@ -169,7 +209,9 @@ class SummaryAnalyzer:
             'avg_memory_mb': avg_memory_mb,
             # Enhanced confidence metrics
             'confidence_analysis': self._analyze_confidence_metrics(data),
-            'cost_benefit_analysis': self._calculate_cost_benefit_analysis(data, total_processing_time)
+            'cost_benefit_analysis': self._calculate_cost_benefit_analysis(data, total_processing_time),
+            # Language Detection V3 metrics
+            'language_detection_v3': language_detection_metrics
         }
     
     def compare_modes(self, mode_data: Dict[str, List[Dict]]) -> Dict[str, Any]:

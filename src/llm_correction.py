@@ -26,7 +26,7 @@ class LLMCorrector:
     
     def __init__(self, 
                  provider: str = "ollama",
-                 model: str = "llama3.1:8b",
+                 model: str = "llama3.2:latest",
                  base_url: str = "http://localhost:11434",
                  timeout: int = 30,
                  max_workers: int = 3):
@@ -369,8 +369,61 @@ def create_llm_corrector(config: Dict[str, Any] = None) -> LLMCorrector:
     
     return LLMCorrector(
         provider=config.get('provider', 'ollama'),
-        model=config.get('model', 'llama3.1:8b'),
+        model=config.get('model', 'llama3.2:latest'),
         base_url=config.get('base_url', 'http://localhost:11434'),
         timeout=config.get('timeout', 30),
         max_workers=config.get('max_workers', 3)
     )
+
+
+def correct_ocr_lines(lines, language_hint=None):
+    """
+    Correct OCR lines using LLM.
+    
+    Args:
+        lines: List of Line objects from OCR
+        language_hint: Optional language hint
+        
+    Returns:
+        Tuple of (corrected_lines, correction_stats)
+    """
+    if not lines:
+        return lines, {'available': False, 'lines_processed': 0, 'lines_changed': 0}
+    
+    # Create LLM corrector
+    corrector = LLMCorrector()
+    
+    if corrector.provider == 'none':
+        return lines, {'available': False, 'lines_processed': 0, 'lines_changed': 0}
+    
+    # Extract texts for correction
+    texts = [line.text for line in lines]
+    
+    # Correct texts
+    correction_results = corrector.correct_multiple_texts(texts, language_hint)
+    
+    # Apply corrections to lines
+    corrected_lines = []
+    lines_changed = 0
+    
+    for i, (line, correction) in enumerate(zip(lines, correction_results)):
+        if correction.corrected_text != correction.original_text:
+            # Create new line with corrected text
+            corrected_line = type(line)(
+                text=correction.corrected_text,
+                conf=line.conf,
+                bbox=line.bbox,
+                engine=line.engine
+            )
+            corrected_lines.append(corrected_line)
+            lines_changed += 1
+        else:
+            corrected_lines.append(line)
+    
+    correction_stats = {
+        'available': True,
+        'lines_processed': len(lines),
+        'lines_changed': lines_changed
+    }
+    
+    return corrected_lines, correction_stats

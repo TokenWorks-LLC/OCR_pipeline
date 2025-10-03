@@ -22,6 +22,10 @@ sys.path.insert(0, str(Path(__file__).parent / 'production'))
 from gold_pages_manager import GoldPagesManager, create_gold_pages_manager
 from accuracy_measurement import AccuracyMeasurer, create_accuracy_measurer
 
+# Import V3 language detection
+from language_detection_v3 import initialize_language_detection_v3, cleanup_language_detection_v3, print_language_detection_summary
+from language_metrics_patch import patch_comprehensive_pipeline_metrics, unpatch_comprehensive_pipeline_metrics
+
 def load_config(config_path: str = "config.json") -> Dict[str, Any]:
     """Load configuration from JSON file."""
     try:
@@ -216,6 +220,26 @@ def run_gold_pages_evaluation(config_path: str, validate_only: bool = False) -> 
     else:
         print(f"📊 Found {gold_pages_count} Gold Pages entries for reference")
     
+    # Setup V3 Language Detection if enabled
+    is_v3_config = 'v3' in config_path.lower() or 'language_detection' in config
+    if is_v3_config:
+        print("\n🔧 Setting up V3 Language Detection...")
+        try:
+            if initialize_language_detection_v3(config):
+                print("✅ V3 Language Detection initialized successfully")
+                # Patch metrics collection
+                if patch_comprehensive_pipeline_metrics():
+                    print("✅ Language detection metrics patching applied")
+                else:
+                    print("⚠️  Language detection metrics patching failed")
+            else:
+                print("⚠️  V3 Language Detection initialization failed, continuing with standard detection")
+        except Exception as e:
+            print(f"⚠️  V3 Language Detection setup failed: {e}")
+            print("   Continuing with standard language detection")
+    else:
+        print("\n📝 Using standard language detection (V2 mode)")
+    
     # Run the standard evaluation with Gold Pages enhancement
     print("\n🔄 Running enhanced evaluation...")
     
@@ -271,6 +295,18 @@ def run_gold_pages_evaluation(config_path: str, validate_only: bool = False) -> 
     except Exception as e:
         print(f"❌ Gold Pages analysis failed: {e}")
         return 1
+    
+    # Print V3 Language Detection summary if enabled
+    if is_v3_config:
+        print("\n📊 V3 Language Detection Summary:")
+        print_language_detection_summary()
+    
+    # Cleanup V3 Language Detection
+    if is_v3_config:
+        print("\n🧹 Cleaning up V3 Language Detection...")
+        cleanup_language_detection_v3()
+        unpatch_comprehensive_pipeline_metrics()
+        print("✅ V3 Language Detection cleanup completed")
     
     print("\n🎉 Gold Pages evaluation completed successfully!")
     return 0

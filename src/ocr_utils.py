@@ -62,18 +62,26 @@ def get_paddle() -> Optional[PaddleOCR]:
         return None
     
     if _paddle_ocr is None:
-        # Try different language configurations
+        # Set up device with modern Paddle API
+        try:
+            import paddle
+            device = "gpu" if paddle.is_compiled_with_cuda() and paddle.device.cuda.device_count() > 0 else "cpu"
+            paddle.device.set_device(device)
+        except ImportError:
+            device = "cpu"
+        
+        # Try different language configurations with modern parameters
         configs_to_try = [
+            {'use_textline_orientation': True, 'lang': 'latin'},
             {'use_textline_orientation': True, 'lang': 'en'},
-            {'use_textline_orientation': True, 'lang': 'ch'},  # Chinese (often works for multilingual)
-            {'use_textline_orientation': False, 'lang': 'en'},  # Without angle classification
-            {'lang': 'en'},  # Minimal config
+            {'use_textline_orientation': False, 'lang': 'latin'},  # Without angle classification
+            {'lang': 'latin'},  # Minimal config
         ]
         
         for i, config in enumerate(configs_to_try):
             try:
                 _paddle_ocr = PaddleOCR(**config)
-                logger.info(f"PaddleOCR initialized successfully with config {i+1}: {config}")
+                logger.info(f"PaddleOCR initialized successfully with config {i+1}: {config} on {device}")
                 break
             except Exception as e:
                 logger.debug(f"PaddleOCR config {i+1} failed: {e}")

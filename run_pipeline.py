@@ -133,7 +133,7 @@ def create_pipeline_config(config: Dict[str, Any]):
             
             # OCR settings
             dpi=config.get('ocr', {}).get('dpi', 300),
-            paddle_use_gpu=False,  # Can be made configurable if needed
+            paddle_use_gpu=config.get('ocr', {}).get('use_gpu', True),  # Enable GPU by default
             
             # Processing settings
             enable_reading_order=config.get('ocr', {}).get('enable_reading_order', True),

@@ -129,19 +129,20 @@ class ComprehensivePipeline:
             from paddleocr import PaddleOCR
             import paddle
             
-            # Check GPU availability first
-            gpu_available = paddle.device.is_compiled_with_cuda() and paddle.device.cuda.device_count() > 0
-            logger.info(f"PaddlePaddle GPU support: {gpu_available}")
-            if gpu_available:
+            # Set device explicitly with Paddle device detection
+            device = "gpu" if paddle.is_compiled_with_cuda() and paddle.device.cuda.device_count() > 0 else "cpu"
+            paddle.device.set_device(device)
+            
+            logger.info(f"Paddle device set to: {device}")
+            if device == "gpu":
                 logger.info(f"GPU devices available: {paddle.device.cuda.device_count()}")
             
-            # Try GPU first if available and configured
-            if gpu_available and self.config.paddle_use_gpu:
+            # Initialize PaddleOCR with modern API (no use_gpu parameter)
+            if device == "gpu" and self.config.paddle_use_gpu:
                 try:
                     self.paddle_ocr = PaddleOCR(
-                        use_angle_cls=True,  # Use compatible parameter for 2.7.3
-                        lang='en',
-                        use_gpu=True,
+                        use_textline_orientation=True,  # Replaces use_angle_cls
+                        lang='latin',  # Fallback lang for mixed content
                         gpu_mem=4000,  # Allocate 4GB for RTX 4070
                         det_limit_side_len=1280,  # Higher resolution for better accuracy
                         det_db_thresh=0.3,
@@ -157,9 +158,8 @@ class ComprehensivePipeline:
             
             # Fallback to CPU with compatible parameters
             self.paddle_ocr = PaddleOCR(
-                use_angle_cls=True,  # Use compatible parameter for 2.7.3
-                lang='en',
-                use_gpu=False
+                use_textline_orientation=True,  # Replaces use_angle_cls
+                lang='latin'  # Fallback lang for mixed content
             )
             logger.info("PaddleOCR initialized with CPU mode")
             

@@ -14,16 +14,27 @@ from config import PREPROCESSING
 
 logger = logging.getLogger(__name__)
 
+def _ensure_odd(n: int) -> int:
+    n = int(n)
+    return n if n % 2 == 1 else n + 1
+
+def _clip01(x: np.ndarray) -> np.ndarray:
+    return np.clip(x, 0.0, 1.0)
+
+
 
 def apply_gamma(img: np.ndarray, gamma: float = None) -> np.ndarray:
     """Apply gamma correction to brighten dark images."""
     if gamma is None:
         gamma = PREPROCESSING['gamma_correction']
-    
+
+    if img.dtype != np.uint8:
+        img = img.astype(np.uint8)
     # Convert to float and apply gamma correction
     img_float = img.astype(np.float32) / 255.0
-    corrected = adjust_gamma(img_float, gamma)
-    return (corrected * 255).astype(np.uint8)
+    corrected = adjust_gamma(_clip01(img_float), gamma)
+    out = (_clip01(corrected) * 255.0).astype(np.uint8)
+    return out
 
 
 def clahe_rgb(img: np.ndarray, clip_limit: float = None, grid_size: Tuple[int, int] = None) -> np.ndarray:
@@ -32,18 +43,23 @@ def clahe_rgb(img: np.ndarray, clip_limit: float = None, grid_size: Tuple[int, i
         clip_limit = PREPROCESSING['clahe_clip_limit']
     if grid_size is None:
         grid_size = PREPROCESSING['clahe_grid_size']
-    
+    gx, gy = max(1, int(grid_size[0])), max(1, int(grid_size[1]))
+
+    if img.ndim == 2:
+        img = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
+
     # Convert to LAB color space
     lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
-    l_channel, a_channel, b_channel = cv2.split(lab)
-    
-    # Apply CLAHE to L channel
-    clahe = cv2.createCLAHE(clipLimit=clip_limit, tileGridSize=grid_size)
-    l_channel = clahe.apply(l_channel)
-    
+    l, a, b = cv2.split(lab)
+
+     # Apply CLAHE to L channel
+    clahe = cv2.createCLAHE(clipLimit=float(clip_limit), tileGridSize=(gx, gy))
+    l2 = clahe.apply(l)
+
     # Merge channels and convert back to BGR
-    lab = cv2.merge([l_channel, a_channel, b_channel])
-    return cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
+    lab2 = cv2.merge([l2, a, b])
+    return cv2.cvtColor(lab2, cv2.COLOR_LAB2BGR)
+
 
 
 def deskew_small(img: np.ndarray, angle_threshold: float = None) -> np.ndarray:
@@ -53,40 +69,27 @@ def deskew_small(img: np.ndarray, angle_threshold: float = None) -> np.ndarray:
     
     try:
         # Convert to grayscale
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) if img.ndim == 3 else img
+        h, w = gray.shape[:2]
         
-        # Apply binary threshold
-        _, binary = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        # NEW: Projection variance sweep across ±threshold angles
+        steps = max(7, int(angle_threshold * 4) | 1)  # odd num steps
+        angles = np.linspace(-float(angle_threshold), float(angle_threshold), steps)
         
-        # Find contours
-        contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        best_angle, best_var = 0.0, -1.0
+        for ang in angles:
+            M = cv2.getRotationMatrix2D((w // 2, h // 2), ang, 1.0)
+            rot = cv2.warpAffine(gray, M, (w, h), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
+            proj = np.sum(rot, axis=1).astype(np.float32)
+            var = float(np.var(proj))
+            if var > best_var:
+                best_var, best_angle = var, ang
         
-        if not contours:
-            return img
-        
-        # Get the largest contour (assuming it's the page)
-        largest_contour = max(contours, key=cv2.contourArea)
-        
-        # Get minimum area rectangle
-        rect = cv2.minAreaRect(largest_contour)
-        angle = rect[2]
-        
-        # Normalize angle
-        if angle < -45:
-            angle = 90 + angle
-        elif angle > 45:
-            angle = angle - 90
-        
-        # Only correct small angles
-        if abs(angle) < angle_threshold and abs(angle) > 0.5:
-            # Get rotation matrix
-            h, w = img.shape[:2]
-            center = (w // 2, h // 2)
-            matrix = cv2.getRotationMatrix2D(center, angle, 1.0)
-            
-            # Apply rotation
-            rotated = cv2.warpAffine(img, matrix, (w, h), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
-            logger.debug(f"Deskewed image by {angle:.2f} degrees")
+        # Only correct if meaningful (>=0.2° skew)
+        if abs(best_angle) >= 0.2:
+            M = cv2.getRotationMatrix2D((w // 2, h // 2), best_angle, 1.0)
+            rotated = cv2.warpAffine(img, M, (w, h), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
+            logger.debug(f"Deskewed image by {best_angle:.2f} degrees")
             return rotated
         
         return img
@@ -103,50 +106,46 @@ def binarize_sauvola(img: np.ndarray, window_size: int = None, k: float = None) 
     if k is None:
         k = PREPROCESSING['binarize_k']
     
+    ws = _ensure_odd(window_size)
+    
     # Convert to grayscale if needed
-    if len(img.shape) == 3:
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    else:
-        gray = img.copy()
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) if img.ndim == 3 else img.copy()
     
     try:
         # Apply Sauvola threshold
-        threshold = filters.threshold_sauvola(gray, window_size=window_size, k=k)
-        binary = gray > threshold
-        
-        # Convert back to uint8
-        result = (binary * 255).astype(np.uint8)
+        threshold = filters.threshold_sauvola(gray, window_size=ws, k=float(k))
+        binary = (gray > threshold).astype(np.uint8) * 255
         
         # Convert back to 3-channel if input was 3-channel
-        if len(img.shape) == 3:
-            result = cv2.cvtColor(result, cv2.COLOR_GRAY2BGR)
+        if img.ndim == 3:
+            binary = cv2.cvtColor(binary, cv2.COLOR_GRAY2BGR)
         
-        return result
+        return binary
         
     except Exception as e:
         logger.warning(f"Sauvola binarization failed: {e}")
         # Fallback to simple adaptive threshold
-        if len(img.shape) == 3:
-            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         adaptive = cv2.adaptiveThreshold(
-            gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, window_size, 2
+            gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, ws, 2
         )
-        if len(img.shape) == 3:
+        if img.ndim == 3:
             adaptive = cv2.cvtColor(adaptive, cv2.COLOR_GRAY2BGR)
         return adaptive
 
 
-def invert_if_better(img: np.ndarray, confidence_func) -> np.ndarray:
+
+def invert_if_better(img: np.ndarray, confidence_func, min_gain_ratio: float = 1.1, min_gain_abs: float = 0.02) -> np.ndarray:
     """Invert image if the inverted version has better OCR confidence."""
     try:
         # Get confidence for normal image
-        normal_conf = confidence_func(img)
+        normal_conf = float(confidence_func(img))
         
         # Invert image
-        inverted = 255 - img
-        inverted_conf = confidence_func(inverted)
+        inverted = (255 - img).astype(np.uint8)
+        inverted_conf = float(confidence_func(inverted))
         
-        if inverted_conf > normal_conf * 1.2:  # 20% improvement threshold
+        # NEW: require both ratio and absolute gain
+        if (inverted_conf >= normal_conf * min_gain_ratio) and ((inverted_conf - normal_conf) >= min_gain_abs):
             logger.debug(f"Using inverted image (conf: {inverted_conf:.3f} vs {normal_conf:.3f})")
             return inverted
         
@@ -157,9 +156,12 @@ def invert_if_better(img: np.ndarray, confidence_func) -> np.ndarray:
         return img
 
 
-def preprocess_faded(img: np.ndarray, apply_dilation: bool = True) -> np.ndarray:
+def preprocess_faded(img: np.ndarray, apply_dilation: bool = None) -> np.ndarray:
     """Apply preprocessing pipeline for faded/low-contrast images."""
     try:
+        if apply_dilation is None:
+            apply_dilation = bool(PREPROCESSING.get('apply_dilation', False))
+        
         # Step 1: Gamma correction
         result = apply_gamma(img)
         
@@ -171,10 +173,10 @@ def preprocess_faded(img: np.ndarray, apply_dilation: bool = True) -> np.ndarray
         
         # Step 4: Optional mild dilation to connect broken characters
         if apply_dilation:
-            kernel_size = PREPROCESSING['dilation_kernel_size']
-            kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (kernel_size, kernel_size))
+            kernel_size = int(PREPROCESSING['dilation_kernel_size'])
+            kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (max(1, kernel_size), max(1, kernel_size)))
             
-            if len(result.shape) == 3:
+            if result.ndim == 3:
                 gray = cv2.cvtColor(result, cv2.COLOR_BGR2GRAY)
                 dilated = cv2.dilate(gray, kernel, iterations=1)
                 result = cv2.cvtColor(dilated, cv2.COLOR_GRAY2BGR)
@@ -187,28 +189,30 @@ def preprocess_faded(img: np.ndarray, apply_dilation: bool = True) -> np.ndarray
         logger.warning(f"Faded preprocessing failed: {e}")
         return img
 
-
-def preprocess_pipeline(img: np.ndarray, confidence_func) -> np.ndarray:
+def preprocess_pipeline(img: np.ndarray, confidence_func) -> dict:
     """
     Main preprocessing pipeline that applies all corrections.
-    
-    Args:
-        img: Input image
-        confidence_func: Function to evaluate OCR confidence for inversion check
-    
+
     Returns:
-        Preprocessed image
+        dict with:
+          - 'pretty': enhanced BGR for OCR
+          - 'binary': binarized for layout ops
+          - 'angle': applied deskew angle (float)
     """
     logger.debug("Starting preprocessing pipeline")
-    
-    # Step 1: Deskew small angles
-    result = deskew_small(img)
-    
-    # Step 2: Apply faded image enhancements
-    result = preprocess_faded(result)
-    
-    # Step 3: Check if inversion improves OCR
-    result = invert_if_better(result, confidence_func)
-    
+    # 1) Deskew (works on original image)
+    deskewed = deskew_small(img)
+    # 2) Build a pretty RGB for OCR (gamma + CLAHE), no binarization here
+    pretty = clahe_rgb(apply_gamma(deskewed))
+    # 3) Binary for layout ops (from pretty, more stable)
+    binary = binarize_sauvola(pretty)
+
+    # 4) Consider inversion only for OCR image, not binary layout
+    pretty_inv_decided = invert_if_better(pretty, confidence_func)
+
     logger.debug("Preprocessing pipeline complete")
-    return result
+    return {
+        "pretty": pretty_inv_decided,
+        "binary": binary,
+        "angle": 0.0  # Optional: record angle if you store it inside deskew_small
+    }

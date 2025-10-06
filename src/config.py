@@ -42,14 +42,16 @@ OUTPUT_DIRS = {
 
 # Image preprocessing parameters
 PREPROCESSING = {
-    'gamma_correction': 1.2,
-    'clahe_clip_limit': 3.0,
-    'clahe_grid_size': (8, 8),
-    'binarize_window_size': 15,
-    'binarize_k': 0.2,
-    'dilation_kernel_size': 2,
-    'deskew_angle_threshold': 45.0,
+    'gamma_correction': 0.9,          # Slightly <1.0 lifts shadows, keeps faint text
+    'clahe_clip_limit': 3.0,          # Contrast enhancement strength
+    'clahe_grid_size': (8, 8),        # Tile size for CLAHE
+    'binarize_window_size': 31,       # Odd & >=3 (Sauvola requirement)
+    'binarize_k': 0.2,                # Contrast parameter for Sauvola
+    'dilation_kernel_size': 1,        # Mild dilation; 1px by default
+    'deskew_angle_threshold': 3.0,    # Max angle (degrees) for deskew sweep
+    'apply_dilation': False           # Off by default to avoid CER regressions
 }
+
 
 # Language label patterns (case-insensitive)
 LANGUAGE_LABELS: Dict[str, List[str]] = {

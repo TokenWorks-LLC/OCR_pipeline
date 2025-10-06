@@ -6,6 +6,7 @@ import sys
 import logging
 import json
 import time
+import re
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Optional, Any, Tuple
@@ -14,6 +15,13 @@ from dataclasses import dataclass, asdict
 import cv2
 import numpy as np
 import fitz
+
+# Resource monitoring
+try:
+    import psutil
+    PSUTIL_AVAILABLE = True
+except ImportError:
+    PSUTIL_AVAILABLE = False
 
 # Add src to path for imports
 sys.path.append(str(Path(__file__).parent.parent / 'src'))
@@ -262,6 +270,75 @@ class ComprehensivePipeline:
         
         return 'english'
     
+    def _count_words_and_tokens(self, text_elements: List[Dict], detected_language: str) -> Dict[str, int]:
+        """
+        Count words and tokens from text elements.
+        
+        Args:
+            text_elements: List of text elements with 'text' field
+            detected_language: Detected language code
+            
+        Returns:
+            Dictionary with word_count, token_count, and text_elements_count
+        """
+        if not text_elements:
+            return {'word_count': 0, 'token_count': 0, 'text_elements_count': 0}
+        
+        # Count text elements (used as token count for Akkadian/limited languages)
+        text_elements_count = len(text_elements)
+        
+        # Count words for modern languages only
+        word_count = 0
+        if detected_language in ['english', 'russian', 'arabic', 'chinese', 'german', 'french', 'turkish']:
+            all_text = ' '.join([elem.get('text', '') for elem in text_elements])
+            # Simple word counting - split on whitespace and filter empty strings
+            words = [word for word in re.split(r'\s+', all_text) if word.strip()]
+            word_count = len(words)
+        
+        # Use text_elements as token count (as requested)
+        token_count = text_elements_count
+        
+        return {
+            'word_count': word_count,
+            'token_count': token_count,
+            'text_elements_count': text_elements_count
+        }
+    
+    def _monitor_resources(self) -> Dict[str, Any]:
+        """
+        Monitor system resources during processing.
+        
+        Returns:
+            Dictionary with resource usage metrics
+        """
+        if not PSUTIL_AVAILABLE:
+            return {
+                'cpu_percent': 0.0,
+                'memory_mb': 0.0,
+                'timestamp': time.time(),
+                'available': False
+            }
+        
+        try:
+            process = psutil.Process()
+            # CPU percentage with interval parameter for accurate measurement
+            cpu_percent = process.cpu_percent(interval=0.1)
+            
+            return {
+                'cpu_percent': cpu_percent,
+                'memory_mb': process.memory_info().rss / 1024 / 1024,
+                'timestamp': time.time(),
+                'available': True
+            }
+        except Exception as e:
+            logger.warning(f"Resource monitoring failed: {e}")
+            return {
+                'cpu_percent': 0.0,
+                'memory_mb': 0.0,
+                'timestamp': time.time(),
+                'available': False
+            }
+    
     def process_single_page(self, pdf_path: str, page_num: int, output_dir: str, 
                           base_filename: str) -> Tuple[Optional[PageResult], Dict[str, Any]]:
         """
@@ -296,13 +373,19 @@ class ComprehensivePipeline:
             
             if not text_elements:
                 logger.warning(f"No text detected on page {page_num}")
+                # Monitor resources even for failed pages
+                resource_usage = self._monitor_resources()
                 return None, {
                     'page_num': page_num,
                     'processing_time': time.time() - start_time,
                     'ocr_time': ocr_time,
                     'text_elements': 0,
                     'language': 'unknown',
-                    'corrections_made': 0
+                    'corrections_made': 0,
+                    'word_count': 0,
+                    'token_count': 0,
+                    'text_elements_count': 0,
+                    'resource_usage': resource_usage
                 }
             
             # Apply reading order
@@ -339,6 +422,12 @@ class ComprehensivePipeline:
             
             correction_time = time.time() - correction_start
             
+            # Count words and tokens
+            word_token_counts = self._count_words_and_tokens(ordered_elements, detected_language)
+            
+            # Monitor resources
+            resource_usage = self._monitor_resources()
+            
             # Create page result
             page_id = f"page_{page_num:03d}"
             
@@ -368,7 +457,12 @@ class ComprehensivePipeline:
                 'text_elements': len(ordered_elements),
                 'language': detected_language,
                 'corrections_made': corrections_made,
-                'avg_confidence': page_result.conf_mean if page_result else 0.0
+                'avg_confidence': page_result.conf_mean if page_result else 0.0,
+                # New metrics for cost of compute
+                'word_count': word_token_counts['word_count'],
+                'token_count': word_token_counts['token_count'],
+                'text_elements_count': word_token_counts['text_elements_count'],
+                'resource_usage': resource_usage
             }
             
             logger.info(f"Processed page {page_num}: {len(ordered_elements)} elements, "
@@ -381,10 +475,16 @@ class ComprehensivePipeline:
             import traceback
             traceback.print_exc()
             
+            # Monitor resources even for error cases
+            resource_usage = self._monitor_resources()
             return None, {
                 'page_num': page_num,
                 'processing_time': time.time() - start_time,
-                'error': str(e)
+                'error': str(e),
+                'word_count': 0,
+                'token_count': 0,
+                'text_elements_count': 0,
+                'resource_usage': resource_usage
             }
     
     def process_pdf(self, pdf_path: str, output_dir: str, 
@@ -527,6 +627,21 @@ class ComprehensivePipeline:
         pages_processed = len([s for s in processing_stats if 'error' not in s])
         total_akkadian_translations = sum(len(trans) for trans in akkadian_translations_by_page.values())
         
+        # Calculate new metrics for cost of compute
+        total_text_elements = sum(s.get('text_elements', 0) for s in processing_stats if 'error' not in s)
+        total_word_count = sum(s.get('word_count', 0) for s in processing_stats if 'error' not in s)
+        total_token_count = sum(s.get('token_count', 0) for s in processing_stats if 'error' not in s)
+        
+        # Calculate resource usage averages
+        resource_usage_list = [s.get('resource_usage', {}) for s in processing_stats if 'resource_usage' in s]
+        avg_cpu_percent = 0.0
+        avg_memory_mb = 0.0
+        if resource_usage_list:
+            cpu_values = [r.get('cpu_percent', 0) for r in resource_usage_list if r.get('available', False)]
+            memory_values = [r.get('memory_mb', 0) for r in resource_usage_list if r.get('available', False)]
+            avg_cpu_percent = sum(cpu_values) / len(cpu_values) if cpu_values else 0.0
+            avg_memory_mb = sum(memory_values) / len(memory_values) if memory_values else 0.0
+        
         summary_report = {
             'pdf_path': str(pdf_path),
             'pages_processed': pages_processed,
@@ -537,6 +652,18 @@ class ComprehensivePipeline:
             'akkadian_translations_found': total_akkadian_translations,
             'akkadian_translations_pdf': str(translations_pdf_path) if translations_pdf_path else None,
             'pipeline_config': asdict(self.config),
+            # New cost of compute metrics
+            'total_text_elements': total_text_elements,
+            'total_word_count': total_word_count,
+            'total_token_count': total_token_count,
+            'avg_text_elements_per_page': round(total_text_elements / pages_processed, 2) if pages_processed > 0 else 0,
+            'avg_word_count_per_page': round(total_word_count / pages_processed, 2) if pages_processed > 0 else 0,
+            'avg_token_count_per_page': round(total_token_count / pages_processed, 2) if pages_processed > 0 else 0,
+            'time_per_text_element': round(total_time / total_text_elements, 4) if total_text_elements > 0 else 0,
+            'time_per_word': round(total_time / total_word_count, 4) if total_word_count > 0 else 0,
+            'time_per_token': round(total_time / total_token_count, 4) if total_token_count > 0 else 0,
+            'avg_cpu_percent': round(avg_cpu_percent, 2),
+            'avg_memory_mb': round(avg_memory_mb, 2),
             **summary_stats
         }
         

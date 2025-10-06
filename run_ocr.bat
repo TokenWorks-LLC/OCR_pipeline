@@ -33,18 +33,20 @@ echo 2. Run Quick Start Examples
 echo 3. Process files with default config
 echo 4. Process files with custom config
 echo 5. Validate configuration
-echo 6. View help
-echo 7. Exit
+echo 6. Run Summary Analysis
+echo 7. View help
+echo 8. Exit
 echo.
-set /p choice="Enter your choice (1-7): "
+set /p choice="Enter your choice (1-8): "
 
 if "%choice%"=="1" goto setup
 if "%choice%"=="2" goto quickstart  
 if "%choice%"=="3" goto default_run
 if "%choice%"=="4" goto custom_run
 if "%choice%"=="5" goto validate
-if "%choice%"=="6" goto help
-if "%choice%"=="7" goto exit
+if "%choice%"=="6" goto analysis
+if "%choice%"=="7" goto help
+if "%choice%"=="8" goto exit
 echo Invalid choice. Please try again.
 goto menu
 
@@ -98,6 +100,19 @@ if not exist "config.json" (
 )
 echo Validating configuration...
 python run_pipeline.py --validate-only
+pause
+goto menu
+
+:analysis
+echo.
+echo Running Summary Analysis...
+if not exist "run_analysis_menu.py" (
+    echo ERROR: run_analysis_menu.py not found
+    echo Please ensure the analysis module is available
+    pause
+    goto menu
+)
+python run_analysis_menu.py
 pause
 goto menu
 

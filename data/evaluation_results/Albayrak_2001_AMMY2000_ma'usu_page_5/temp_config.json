@@ -1,0 +1,32 @@
+{
+  "input": {
+    "input_directory": "data/input_pdfs",
+    "file_formats": [
+      ".pdf"
+    ],
+    "specific_files": [
+      "Albayrak_2001_AMMY2000_ma'usu.PDF"
+    ]
+  },
+  "output": {
+    "output_directory": "data/evaluation_results\\Albayrak_2001_AMMY2000_ma'usu_page_5",
+    "create_subdirectories": false
+  },
+  "processing": {
+    "skip_existing": false,
+    "specific_pages": [
+      5
+    ]
+  },
+  "ocr": {
+    "engine": "paddleocr",
+    "dpi": 300,
+    "confidence_threshold": 0.5
+  },
+  "llm": {
+    "enable_correction": false
+  },
+  "akkadian": {
+    "enable_extraction": false
+  }
+}

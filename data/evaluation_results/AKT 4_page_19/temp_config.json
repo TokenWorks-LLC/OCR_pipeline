@@ -1,0 +1,32 @@
+{
+  "input": {
+    "input_directory": "data/input_pdfs",
+    "file_formats": [
+      ".pdf"
+    ],
+    "specific_files": [
+      "AKT 4.pdf"
+    ]
+  },
+  "output": {
+    "output_directory": "data/evaluation_results\\AKT 4_page_19",
+    "create_subdirectories": false
+  },
+  "processing": {
+    "skip_existing": false,
+    "specific_pages": [
+      19
+    ]
+  },
+  "ocr": {
+    "engine": "paddleocr",
+    "dpi": 300,
+    "confidence_threshold": 0.5
+  },
+  "llm": {
+    "enable_correction": false
+  },
+  "akkadian": {
+    "enable_extraction": false
+  }
+}

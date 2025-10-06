@@ -1,0 +1,4221 @@
+{
+  "pdf_path": "data/input_pdfs/AKT 1, 1990.pdf",
+  "pages_processed": 209,
+  "pages_requested": 209,
+  "total_processing_time": 2387.44,
+  "avg_time_per_page": 11.42,
+  "output_csv": "data/working_evaluation/AKT 2, 1995_page_36/AKT 1, 1990/comprehensive_results.csv",
+  "akkadian_translations_found": 0,
+  "akkadian_translations_pdf": null,
+  "pipeline_config": {
+    "llm_provider": "none",
+    "llm_model": "",
+    "llm_base_url": "",
+    "llm_timeout": 30,
+    "dpi": 300,
+    "paddle_use_gpu": false,
+    "enable_reading_order": true,
+    "enable_llm_correction": false,
+    "max_concurrent_corrections": 1,
+    "enable_akkadian_extraction": false,
+    "generate_translations_pdf": false,
+    "akkadian_confidence_threshold": 0.8,
+    "output_csv_metadata": true,
+    "create_html_overlay": false,
+    "create_visualization": false
+  },
+  "total_text_elements": 8352,
+  "total_word_count": 51575,
+  "total_token_count": 8352,
+  "avg_text_elements_per_page": 39.96,
+  "avg_word_count_per_page": 246.77,
+  "avg_token_count_per_page": 39.96,
+  "time_per_text_element": 0.2859,
+  "time_per_word": 0.0463,
+  "time_per_token": 0.2859,
+  "avg_cpu_percent": 907.29,
+  "avg_memory_mb": 3264.63,
+  "total_pages": 205,
+  "total_text_lines": 8352,
+  "total_characters": 331899,
+  "avg_lines_per_page": 40.74146341463415,
+  "avg_chars_per_page": 1619.019512195122,
+  "avg_confidence": 0.879,
+  "pages_with_warnings": 5,
+  "warning_rate": 0.024390243902439025,
+  "language_distribution": {
+    "turkish": 103,
+    "french": 30,
+    "english": 72
+  },
+  "page_statistics": [
+    {
+      "page_num": 1,
+      "processing_time": 9.7908935546875,
+      "ocr_time": 9.558486461639404,
+      "reading_order_time": 1.9550323486328125e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 6,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.988,
+      "word_count": 6,
+      "token_count": 6,
+      "text_elements_count": 6,
+      "resource_usage": {
+        "cpu_percent": 906.1,
+        "memory_mb": 2304.82421875,
+        "timestamp": 1759769843.6103969,
+        "available": true
+      }
+    },
+    {
+      "page_num": 2,
+      "processing_time": 9.047899723052979,
+      "ocr_time": 8.868173599243164,
+      "reading_order_time": 3.2901763916015625e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 14,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.982,
+      "word_count": 37,
+      "token_count": 14,
+      "text_elements_count": 14,
+      "resource_usage": {
+        "cpu_percent": 909.1,
+        "memory_mb": 2282.28515625,
+        "timestamp": 1759769852.6583483,
+        "available": true
+      }
+    },
+    {
+      "page_num": 3,
+      "processing_time": 7.9860007762908936,
+      "ocr_time": 7.831564426422119,
+      "reading_order_time": 1.9788742065429688e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 2,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.983,
+      "word_count": 5,
+      "token_count": 2,
+      "text_elements_count": 2,
+      "resource_usage": {
+        "cpu_percent": 918.6,
+        "memory_mb": 2249.0546875,
+        "timestamp": 1759769860.6443734,
+        "available": true
+      }
+    },
+    {
+      "page_num": 4,
+      "processing_time": 9.34007453918457,
+      "ocr_time": 9.188621520996094,
+      "reading_order_time": 3.3855438232421875e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 27,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.96,
+      "word_count": 52,
+      "token_count": 27,
+      "text_elements_count": 27,
+      "resource_usage": {
+        "cpu_percent": 898.3,
+        "memory_mb": 2285.98046875,
+        "timestamp": 1759769869.9844644,
+        "available": true
+      }
+    },
+    {
+      "page_num": 5,
+      "processing_time": 9.237777471542358,
+      "ocr_time": 9.083141803741455,
+      "reading_order_time": 2.9802322387695312e-05,
+      "correction_time": 1.1920928955078125e-06,
+      "text_elements": 32,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.984,
+      "word_count": 50,
+      "token_count": 32,
+      "text_elements_count": 32,
+      "resource_usage": {
+        "cpu_percent": 908.6,
+        "memory_mb": 2288.6015625,
+        "timestamp": 1759769879.2222786,
+        "available": true
+      }
+    },
+    {
+      "page_num": 6,
+      "processing_time": 10.110923051834106,
+      "ocr_time": 9.96746301651001,
+      "reading_order_time": 2.384185791015625e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 35,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.976,
+      "word_count": 387,
+      "token_count": 35,
+      "text_elements_count": 35,
+      "resource_usage": {
+        "cpu_percent": 909.1,
+        "memory_mb": 2291.8671875,
+        "timestamp": 1759769889.3332589,
+        "available": true
+      }
+    },
+    {
+      "page_num": 7,
+      "processing_time": 9.604201555252075,
+      "ocr_time": 9.460957527160645,
+      "reading_order_time": 2.2649765014648438e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 26,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.976,
+      "word_count": 241,
+      "token_count": 26,
+      "text_elements_count": 26,
+      "resource_usage": {
+        "cpu_percent": 896.0,
+        "memory_mb": 2295.37109375,
+        "timestamp": 1759769898.9374993,
+        "available": true
+      }
+    },
+    {
+      "page_num": 8,
+      "processing_time": 10.887623310089111,
+      "ocr_time": 10.74403715133667,
+      "reading_order_time": 1.430511474609375e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 33,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.99,
+      "word_count": 404,
+      "token_count": 33,
+      "text_elements_count": 33,
+      "resource_usage": {
+        "cpu_percent": 909.6,
+        "memory_mb": 2322.140625,
+        "timestamp": 1759769909.8251362,
+        "available": true
+      }
+    },
+    {
+      "page_num": 9,
+      "processing_time": 11.07019829750061,
+      "ocr_time": 10.932429075241089,
+      "reading_order_time": 3.504753112792969e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 34,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.988,
+      "word_count": 351,
+      "token_count": 34,
+      "text_elements_count": 34,
+      "resource_usage": {
+        "cpu_percent": 918.3,
+        "memory_mb": 2323.5078125,
+        "timestamp": 1759769920.8953836,
+        "available": true
+      }
+    },
+    {
+      "page_num": 10,
+      "processing_time": 11.09438180923462,
+      "ocr_time": 10.94389820098877,
+      "reading_order_time": 2.86102294921875e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 56,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.994,
+      "word_count": 251,
+      "token_count": 56,
+      "text_elements_count": 56,
+      "resource_usage": {
+        "cpu_percent": 899.4,
+        "memory_mb": 2294.75,
+        "timestamp": 1759769931.989801,
+        "available": true
+      }
+    },
+    {
+      "page_num": 11,
+      "processing_time": 11.698073148727417,
+      "ocr_time": 11.546158075332642,
+      "reading_order_time": 3.647804260253906e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 71,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.993,
+      "word_count": 283,
+      "token_count": 71,
+      "text_elements_count": 71,
+      "resource_usage": {
+        "cpu_percent": 919.2,
+        "memory_mb": 2294.4765625,
+        "timestamp": 1759769943.6878939,
+        "available": true
+      }
+    },
+    {
+      "page_num": 12,
+      "processing_time": 11.05936884880066,
+      "ocr_time": 10.894778966903687,
+      "reading_order_time": 4.553794860839844e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 48,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.988,
+      "word_count": 132,
+      "token_count": 48,
+      "text_elements_count": 48,
+      "resource_usage": {
+        "cpu_percent": 871.0,
+        "memory_mb": 2371.12109375,
+        "timestamp": 1759769954.7473042,
+        "available": true
+      }
+    },
+    {
+      "page_num": 13,
+      "processing_time": 9.301457405090332,
+      "ocr_time": 9.128915548324585,
+      "text_elements": 0,
+      "language": "unknown",
+      "corrections_made": 0,
+      "word_count": 0,
+      "token_count": 0,
+      "text_elements_count": 0,
+      "resource_usage": {
+        "cpu_percent": 918.5,
+        "memory_mb": 2344.953125,
+        "timestamp": 1759769964.048837,
+        "available": true
+      }
+    },
+    {
+      "page_num": 14,
+      "processing_time": 11.846316814422607,
+      "ocr_time": 11.679315328598022,
+      "reading_order_time": 3.910064697265625e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 72,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.917,
+      "word_count": 174,
+      "token_count": 72,
+      "text_elements_count": 72,
+      "resource_usage": {
+        "cpu_percent": 919.2,
+        "memory_mb": 2393.2578125,
+        "timestamp": 1759769975.895116,
+        "available": true
+      }
+    },
+    {
+      "page_num": 15,
+      "processing_time": 12.607323408126831,
+      "ocr_time": 12.460570096969604,
+      "reading_order_time": 4.2438507080078125e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 85,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.941,
+      "word_count": 223,
+      "token_count": 85,
+      "text_elements_count": 85,
+      "resource_usage": {
+        "cpu_percent": 892.2,
+        "memory_mb": 2420.25,
+        "timestamp": 1759769988.5024624,
+        "available": true
+      }
+    },
+    {
+      "page_num": 16,
+      "processing_time": 12.15845274925232,
+      "ocr_time": 12.010301113128662,
+      "reading_order_time": 4.124641418457031e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 80,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.97,
+      "word_count": 225,
+      "token_count": 80,
+      "text_elements_count": 80,
+      "resource_usage": {
+        "cpu_percent": 919.2,
+        "memory_mb": 2274.3203125,
+        "timestamp": 1759770000.6609428,
+        "available": true
+      }
+    },
+    {
+      "page_num": 17,
+      "processing_time": 13.952303886413574,
+      "ocr_time": 13.802241563796997,
+      "reading_order_time": 6.532669067382812e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 103,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.99,
+      "word_count": 259,
+      "token_count": 103,
+      "text_elements_count": 103,
+      "resource_usage": {
+        "cpu_percent": 881.6,
+        "memory_mb": 2276.328125,
+        "timestamp": 1759770014.613254,
+        "available": true
+      }
+    },
+    {
+      "page_num": 18,
+      "processing_time": 14.109121322631836,
+      "ocr_time": 13.952590465545654,
+      "reading_order_time": 7.224082946777344e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 89,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.988,
+      "word_count": 248,
+      "token_count": 89,
+      "text_elements_count": 89,
+      "resource_usage": {
+        "cpu_percent": 909.2,
+        "memory_mb": 2289.8671875,
+        "timestamp": 1759770028.7224174,
+        "available": true
+      }
+    },
+    {
+      "page_num": 19,
+      "processing_time": 10.20103931427002,
+      "ocr_time": 10.045127153396606,
+      "text_elements": 0,
+      "language": "unknown",
+      "corrections_made": 0,
+      "word_count": 0,
+      "token_count": 0,
+      "text_elements_count": 0,
+      "resource_usage": {
+        "cpu_percent": 919.0,
+        "memory_mb": 2371.28515625,
+        "timestamp": 1759770038.9235685,
+        "available": true
+      }
+    },
+    {
+      "page_num": 20,
+      "processing_time": 13.121406316757202,
+      "ocr_time": 12.959280014038086,
+      "reading_order_time": 3.743171691894531e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 38,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.974,
+      "word_count": 415,
+      "token_count": 38,
+      "text_elements_count": 38,
+      "resource_usage": {
+        "cpu_percent": 899.0,
+        "memory_mb": 2378.32421875,
+        "timestamp": 1759770052.0449562,
+        "available": true
+      }
+    },
+    {
+      "page_num": 21,
+      "processing_time": 12.038466215133667,
+      "ocr_time": 11.881120920181274,
+      "reading_order_time": 6.508827209472656e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 49,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.977,
+      "word_count": 550,
+      "token_count": 49,
+      "text_elements_count": 49,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 2321.85546875,
+        "timestamp": 1759770064.0834105,
+        "available": true
+      }
+    },
+    {
+      "page_num": 22,
+      "processing_time": 12.071345567703247,
+      "ocr_time": 11.918154239654541,
+      "reading_order_time": 2.7894973754882812e-05,
+      "correction_time": 0.0,
+      "text_elements": 43,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.981,
+      "word_count": 485,
+      "token_count": 43,
+      "text_elements_count": 43,
+      "resource_usage": {
+        "cpu_percent": 887.1,
+        "memory_mb": 2460.52734375,
+        "timestamp": 1759770076.1547983,
+        "available": true
+      }
+    },
+    {
+      "page_num": 23,
+      "processing_time": 13.000500440597534,
+      "ocr_time": 12.831001281738281,
+      "reading_order_time": 3.600120544433594e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 47,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.984,
+      "word_count": 499,
+      "token_count": 47,
+      "text_elements_count": 47,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 2485.77734375,
+        "timestamp": 1759770089.1553705,
+        "available": true
+      }
+    },
+    {
+      "page_num": 24,
+      "processing_time": 11.36971926689148,
+      "ocr_time": 11.209181070327759,
+      "reading_order_time": 2.8133392333984375e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 45,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.982,
+      "word_count": 494,
+      "token_count": 45,
+      "text_elements_count": 45,
+      "resource_usage": {
+        "cpu_percent": 919.3,
+        "memory_mb": 2423.65625,
+        "timestamp": 1759770100.5251179,
+        "available": true
+      }
+    },
+    {
+      "page_num": 25,
+      "processing_time": 13.063758850097656,
+      "ocr_time": 12.881697177886963,
+      "reading_order_time": 4.220008850097656e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 49,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.978,
+      "word_count": 584,
+      "token_count": 49,
+      "text_elements_count": 49,
+      "resource_usage": {
+        "cpu_percent": 909.0,
+        "memory_mb": 2547.9453125,
+        "timestamp": 1759770113.5889099,
+        "available": true
+      }
+    },
+    {
+      "page_num": 26,
+      "processing_time": 9.520681142807007,
+      "ocr_time": 9.370402097702026,
+      "reading_order_time": 1.71661376953125e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 12,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.982,
+      "word_count": 103,
+      "token_count": 12,
+      "text_elements_count": 12,
+      "resource_usage": {
+        "cpu_percent": 919.2,
+        "memory_mb": 2564.7421875,
+        "timestamp": 1759770123.109643,
+        "available": true
+      }
+    },
+    {
+      "page_num": 27,
+      "processing_time": 8.767389059066772,
+      "ocr_time": 8.61667776107788,
+      "text_elements": 0,
+      "language": "unknown",
+      "corrections_made": 0,
+      "word_count": 0,
+      "token_count": 0,
+      "text_elements_count": 0,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 2793.0625,
+        "timestamp": 1759770131.8770912,
+        "available": true
+      }
+    },
+    {
+      "page_num": 28,
+      "processing_time": 11.332162618637085,
+      "ocr_time": 11.1886727809906,
+      "reading_order_time": 3.933906555175781e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 36,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.989,
+      "word_count": 415,
+      "token_count": 36,
+      "text_elements_count": 36,
+      "resource_usage": {
+        "cpu_percent": 898.8,
+        "memory_mb": 2759.24609375,
+        "timestamp": 1759770143.2092073,
+        "available": true
+      }
+    },
+    {
+      "page_num": 29,
+      "processing_time": 11.20864462852478,
+      "ocr_time": 11.047669172286987,
+      "reading_order_time": 3.62396240234375e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 47,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.984,
+      "word_count": 560,
+      "token_count": 47,
+      "text_elements_count": 47,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 2724.99609375,
+        "timestamp": 1759770154.4179206,
+        "available": true
+      }
+    },
+    {
+      "page_num": 30,
+      "processing_time": 11.784869194030762,
+      "ocr_time": 11.617183923721313,
+      "reading_order_time": 2.9325485229492188e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 47,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.989,
+      "word_count": 557,
+      "token_count": 47,
+      "text_elements_count": 47,
+      "resource_usage": {
+        "cpu_percent": 887.1,
+        "memory_mb": 2672.7890625,
+        "timestamp": 1759770166.2027771,
+        "available": true
+      }
+    },
+    {
+      "page_num": 31,
+      "processing_time": 11.6115140914917,
+      "ocr_time": 11.465681552886963,
+      "reading_order_time": 2.6941299438476562e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 44,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.988,
+      "word_count": 526,
+      "token_count": 44,
+      "text_elements_count": 44,
+      "resource_usage": {
+        "cpu_percent": 909.2,
+        "memory_mb": 2699.80859375,
+        "timestamp": 1759770177.8143687,
+        "available": true
+      }
+    },
+    {
+      "page_num": 32,
+      "processing_time": 11.749126434326172,
+      "ocr_time": 11.602516412734985,
+      "reading_order_time": 2.9087066650390625e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 47,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.987,
+      "word_count": 545,
+      "token_count": 47,
+      "text_elements_count": 47,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 2736.20703125,
+        "timestamp": 1759770189.5635219,
+        "available": true
+      }
+    },
+    {
+      "page_num": 33,
+      "processing_time": 11.870392084121704,
+      "ocr_time": 11.728535175323486,
+      "reading_order_time": 2.6464462280273438e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 43,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.989,
+      "word_count": 519,
+      "token_count": 43,
+      "text_elements_count": 43,
+      "resource_usage": {
+        "cpu_percent": 896.7,
+        "memory_mb": 2698.83203125,
+        "timestamp": 1759770201.4339147,
+        "available": true
+      }
+    },
+    {
+      "page_num": 34,
+      "processing_time": 10.353409051895142,
+      "ocr_time": 10.201370239257812,
+      "reading_order_time": 2.4557113647460938e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 23,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.977,
+      "word_count": 225,
+      "token_count": 23,
+      "text_elements_count": 23,
+      "resource_usage": {
+        "cpu_percent": 908.5,
+        "memory_mb": 2759.84375,
+        "timestamp": 1759770211.787385,
+        "available": true
+      }
+    },
+    {
+      "page_num": 35,
+      "processing_time": 11.45119595527649,
+      "ocr_time": 11.30116868019104,
+      "reading_order_time": 2.7179718017578125e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 44,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.977,
+      "word_count": 501,
+      "token_count": 44,
+      "text_elements_count": 44,
+      "resource_usage": {
+        "cpu_percent": 909.3,
+        "memory_mb": 2759.125,
+        "timestamp": 1759770223.2386255,
+        "available": true
+      }
+    },
+    {
+      "page_num": 36,
+      "processing_time": 11.917765140533447,
+      "ocr_time": 11.746706247329712,
+      "reading_order_time": 3.552436828613281e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 41,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.977,
+      "word_count": 467,
+      "token_count": 41,
+      "text_elements_count": 41,
+      "resource_usage": {
+        "cpu_percent": 898.3,
+        "memory_mb": 2707.7421875,
+        "timestamp": 1759770235.1563642,
+        "available": true
+      }
+    },
+    {
+      "page_num": 37,
+      "processing_time": 10.879014492034912,
+      "ocr_time": 10.693897724151611,
+      "reading_order_time": 3.695487976074219e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 32,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.976,
+      "word_count": 312,
+      "token_count": 32,
+      "text_elements_count": 32,
+      "resource_usage": {
+        "cpu_percent": 918.8,
+        "memory_mb": 2741.73828125,
+        "timestamp": 1759770246.0354517,
+        "available": true
+      }
+    },
+    {
+      "page_num": 38,
+      "processing_time": 10.410643100738525,
+      "ocr_time": 10.25670313835144,
+      "reading_order_time": 2.3126602172851562e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 26,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.974,
+      "word_count": 230,
+      "token_count": 26,
+      "text_elements_count": 26,
+      "resource_usage": {
+        "cpu_percent": 871.1,
+        "memory_mb": 2702.6796875,
+        "timestamp": 1759770256.446169,
+        "available": true
+      }
+    },
+    {
+      "page_num": 39,
+      "processing_time": 11.139332294464111,
+      "ocr_time": 10.979183673858643,
+      "reading_order_time": 2.3603439331054688e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 33,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.975,
+      "word_count": 342,
+      "token_count": 33,
+      "text_elements_count": 33,
+      "resource_usage": {
+        "cpu_percent": 909.4,
+        "memory_mb": 2708.5,
+        "timestamp": 1759770267.5855272,
+        "available": true
+      }
+    },
+    {
+      "page_num": 40,
+      "processing_time": 11.025764226913452,
+      "ocr_time": 10.874844789505005,
+      "reading_order_time": 2.7179718017578125e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 40,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.981,
+      "word_count": 425,
+      "token_count": 40,
+      "text_elements_count": 40,
+      "resource_usage": {
+        "cpu_percent": 909.0,
+        "memory_mb": 2761.67578125,
+        "timestamp": 1759770278.6113157,
+        "available": true
+      }
+    },
+    {
+      "page_num": 41,
+      "processing_time": 11.860142230987549,
+      "ocr_time": 11.682485342025757,
+      "reading_order_time": 2.9802322387695312e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 46,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.981,
+      "word_count": 517,
+      "token_count": 46,
+      "text_elements_count": 46,
+      "resource_usage": {
+        "cpu_percent": 893.9,
+        "memory_mb": 2762.30859375,
+        "timestamp": 1759770290.4714775,
+        "available": true
+      }
+    },
+    {
+      "page_num": 42,
+      "processing_time": 11.967515707015991,
+      "ocr_time": 11.796756267547607,
+      "reading_order_time": 3.3855438232421875e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 42,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.978,
+      "word_count": 478,
+      "token_count": 42,
+      "text_elements_count": 42,
+      "resource_usage": {
+        "cpu_percent": 909.0,
+        "memory_mb": 2768.59375,
+        "timestamp": 1759770302.4390006,
+        "available": true
+      }
+    },
+    {
+      "page_num": 43,
+      "processing_time": 12.140917778015137,
+      "ocr_time": 11.989436864852905,
+      "reading_order_time": 2.765655517578125e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 45,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.976,
+      "word_count": 556,
+      "token_count": 45,
+      "text_elements_count": 45,
+      "resource_usage": {
+        "cpu_percent": 919.4,
+        "memory_mb": 2708.78125,
+        "timestamp": 1759770314.5799866,
+        "available": true
+      }
+    },
+    {
+      "page_num": 44,
+      "processing_time": 11.724548578262329,
+      "ocr_time": 11.536877632141113,
+      "reading_order_time": 3.647804260253906e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 39,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.98,
+      "word_count": 405,
+      "token_count": 39,
+      "text_elements_count": 39,
+      "resource_usage": {
+        "cpu_percent": 899.0,
+        "memory_mb": 2813.43359375,
+        "timestamp": 1759770326.3045604,
+        "available": true
+      }
+    },
+    {
+      "page_num": 45,
+      "processing_time": 10.768840074539185,
+      "ocr_time": 10.60779356956482,
+      "reading_order_time": 2.8848648071289062e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 34,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.965,
+      "word_count": 332,
+      "token_count": 34,
+      "text_elements_count": 34,
+      "resource_usage": {
+        "cpu_percent": 919.0,
+        "memory_mb": 2812.609375,
+        "timestamp": 1759770337.0733979,
+        "available": true
+      }
+    },
+    {
+      "page_num": 46,
+      "processing_time": 11.025604963302612,
+      "ocr_time": 10.855118989944458,
+      "reading_order_time": 2.6702880859375e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 32,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.972,
+      "word_count": 305,
+      "token_count": 32,
+      "text_elements_count": 32,
+      "resource_usage": {
+        "cpu_percent": 890.2,
+        "memory_mb": 2900.12890625,
+        "timestamp": 1759770348.0990682,
+        "available": true
+      }
+    },
+    {
+      "page_num": 47,
+      "processing_time": 11.183172941207886,
+      "ocr_time": 11.024027824401855,
+      "reading_order_time": 2.7418136596679688e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 40,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.976,
+      "word_count": 426,
+      "token_count": 40,
+      "text_elements_count": 40,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 2866.80078125,
+        "timestamp": 1759770359.2822762,
+        "available": true
+      }
+    },
+    {
+      "page_num": 48,
+      "processing_time": 11.325161218643188,
+      "ocr_time": 11.17814826965332,
+      "reading_order_time": 2.5272369384765625e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 38,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.98,
+      "word_count": 441,
+      "token_count": 38,
+      "text_elements_count": 38,
+      "resource_usage": {
+        "cpu_percent": 909.2,
+        "memory_mb": 2875.12109375,
+        "timestamp": 1759770370.607451,
+        "available": true
+      }
+    },
+    {
+      "page_num": 49,
+      "processing_time": 10.986907482147217,
+      "ocr_time": 10.831358909606934,
+      "reading_order_time": 2.4080276489257812e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 35,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.98,
+      "word_count": 338,
+      "token_count": 35,
+      "text_elements_count": 35,
+      "resource_usage": {
+        "cpu_percent": 895.8,
+        "memory_mb": 2900.3984375,
+        "timestamp": 1759770381.5943947,
+        "available": true
+      }
+    },
+    {
+      "page_num": 50,
+      "processing_time": 10.90486478805542,
+      "ocr_time": 10.733433723449707,
+      "reading_order_time": 3.9577484130859375e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 37,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.98,
+      "word_count": 407,
+      "token_count": 37,
+      "text_elements_count": 37,
+      "resource_usage": {
+        "cpu_percent": 908.9,
+        "memory_mb": 2875.0625,
+        "timestamp": 1759770392.4992816,
+        "available": true
+      }
+    },
+    {
+      "page_num": 51,
+      "processing_time": 10.893737316131592,
+      "ocr_time": 10.734890222549438,
+      "reading_order_time": 3.075599670410156e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 38,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.979,
+      "word_count": 448,
+      "token_count": 38,
+      "text_elements_count": 38,
+      "resource_usage": {
+        "cpu_percent": 909.4,
+        "memory_mb": 2874.45703125,
+        "timestamp": 1759770403.3931055,
+        "available": true
+      }
+    },
+    {
+      "page_num": 52,
+      "processing_time": 11.909749746322632,
+      "ocr_time": 11.76228666305542,
+      "reading_order_time": 3.8623809814453125e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 45,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.978,
+      "word_count": 486,
+      "token_count": 45,
+      "text_elements_count": 45,
+      "resource_usage": {
+        "cpu_percent": 909.1,
+        "memory_mb": 2901.99609375,
+        "timestamp": 1759770415.3028738,
+        "available": true
+      }
+    },
+    {
+      "page_num": 53,
+      "processing_time": 11.368866443634033,
+      "ocr_time": 11.21782112121582,
+      "reading_order_time": 3.790855407714844e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 38,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.978,
+      "word_count": 419,
+      "token_count": 38,
+      "text_elements_count": 38,
+      "resource_usage": {
+        "cpu_percent": 918.6,
+        "memory_mb": 2874.5625,
+        "timestamp": 1759770426.671761,
+        "available": true
+      }
+    },
+    {
+      "page_num": 54,
+      "processing_time": 11.129586935043335,
+      "ocr_time": 10.976383924484253,
+      "reading_order_time": 3.838539123535156e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 36,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.974,
+      "word_count": 390,
+      "token_count": 36,
+      "text_elements_count": 36,
+      "resource_usage": {
+        "cpu_percent": 881.6,
+        "memory_mb": 2905.1328125,
+        "timestamp": 1759770437.8013892,
+        "available": true
+      }
+    },
+    {
+      "page_num": 55,
+      "processing_time": 11.792162895202637,
+      "ocr_time": 11.619003772735596,
+      "reading_order_time": 1.7881393432617188e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 45,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.98,
+      "word_count": 558,
+      "token_count": 45,
+      "text_elements_count": 45,
+      "resource_usage": {
+        "cpu_percent": 908.0,
+        "memory_mb": 2904.6015625,
+        "timestamp": 1759770449.5935528,
+        "available": true
+      }
+    },
+    {
+      "page_num": 56,
+      "processing_time": 11.161690711975098,
+      "ocr_time": 11.011216878890991,
+      "reading_order_time": 2.7894973754882812e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 41,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.964,
+      "word_count": 430,
+      "token_count": 41,
+      "text_elements_count": 41,
+      "resource_usage": {
+        "cpu_percent": 919.0,
+        "memory_mb": 2891.5234375,
+        "timestamp": 1759770460.755307,
+        "available": true
+      }
+    },
+    {
+      "page_num": 57,
+      "processing_time": 11.515896797180176,
+      "ocr_time": 11.344066619873047,
+      "reading_order_time": 1.6689300537109375e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 38,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.98,
+      "word_count": 395,
+      "token_count": 38,
+      "text_elements_count": 38,
+      "resource_usage": {
+        "cpu_percent": 908.1,
+        "memory_mb": 2839.8984375,
+        "timestamp": 1759770472.2712228,
+        "available": true
+      }
+    },
+    {
+      "page_num": 58,
+      "processing_time": 10.880507707595825,
+      "ocr_time": 10.724428415298462,
+      "reading_order_time": 2.7418136596679688e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 39,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.979,
+      "word_count": 456,
+      "token_count": 39,
+      "text_elements_count": 39,
+      "resource_usage": {
+        "cpu_percent": 909.2,
+        "memory_mb": 2874.0078125,
+        "timestamp": 1759770483.1517575,
+        "available": true
+      }
+    },
+    {
+      "page_num": 59,
+      "processing_time": 11.016430139541626,
+      "ocr_time": 10.865168571472168,
+      "reading_order_time": 3.314018249511719e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 36,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.975,
+      "word_count": 386,
+      "token_count": 36,
+      "text_elements_count": 36,
+      "resource_usage": {
+        "cpu_percent": 908.9,
+        "memory_mb": 2874.10546875,
+        "timestamp": 1759770494.1681957,
+        "available": true
+      }
+    },
+    {
+      "page_num": 60,
+      "processing_time": 11.699049949645996,
+      "ocr_time": 11.549467325210571,
+      "reading_order_time": 3.8623809814453125e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 41,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.966,
+      "word_count": 526,
+      "token_count": 41,
+      "text_elements_count": 41,
+      "resource_usage": {
+        "cpu_percent": 909.0,
+        "memory_mb": 2902.65625,
+        "timestamp": 1759770505.8673136,
+        "available": true
+      }
+    },
+    {
+      "page_num": 61,
+      "processing_time": 11.045065641403198,
+      "ocr_time": 10.8918297290802,
+      "reading_order_time": 2.384185791015625e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 38,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.98,
+      "word_count": 453,
+      "token_count": 38,
+      "text_elements_count": 38,
+      "resource_usage": {
+        "cpu_percent": 918.1,
+        "memory_mb": 2933.04296875,
+        "timestamp": 1759770516.9123857,
+        "available": true
+      }
+    },
+    {
+      "page_num": 62,
+      "processing_time": 11.440356016159058,
+      "ocr_time": 11.281850814819336,
+      "reading_order_time": 2.765655517578125e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 37,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.975,
+      "word_count": 417,
+      "token_count": 37,
+      "text_elements_count": 37,
+      "resource_usage": {
+        "cpu_percent": 877.4,
+        "memory_mb": 2983.67578125,
+        "timestamp": 1759770528.3527813,
+        "available": true
+      }
+    },
+    {
+      "page_num": 63,
+      "processing_time": 11.413284063339233,
+      "ocr_time": 11.244678974151611,
+      "reading_order_time": 3.743171691894531e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 36,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.973,
+      "word_count": 357,
+      "token_count": 36,
+      "text_elements_count": 36,
+      "resource_usage": {
+        "cpu_percent": 909.1,
+        "memory_mb": 2875.42578125,
+        "timestamp": 1759770539.7661412,
+        "available": true
+      }
+    },
+    {
+      "page_num": 64,
+      "processing_time": 12.478532552719116,
+      "ocr_time": 12.314685821533203,
+      "reading_order_time": 2.7418136596679688e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 48,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.977,
+      "word_count": 594,
+      "token_count": 48,
+      "text_elements_count": 48,
+      "resource_usage": {
+        "cpu_percent": 928.5,
+        "memory_mb": 3002.8671875,
+        "timestamp": 1759770552.2446651,
+        "available": true
+      }
+    },
+    {
+      "page_num": 65,
+      "processing_time": 12.008769989013672,
+      "ocr_time": 11.860973834991455,
+      "reading_order_time": 3.695487976074219e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 47,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.978,
+      "word_count": 550,
+      "token_count": 47,
+      "text_elements_count": 47,
+      "resource_usage": {
+        "cpu_percent": 899.4,
+        "memory_mb": 2943.90625,
+        "timestamp": 1759770564.2534928,
+        "available": true
+      }
+    },
+    {
+      "page_num": 66,
+      "processing_time": 11.474488019943237,
+      "ocr_time": 11.305055379867554,
+      "reading_order_time": 2.6226043701171875e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 37,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.979,
+      "word_count": 395,
+      "token_count": 37,
+      "text_elements_count": 37,
+      "resource_usage": {
+        "cpu_percent": 909.3,
+        "memory_mb": 2995.4296875,
+        "timestamp": 1759770575.72803,
+        "available": true
+      }
+    },
+    {
+      "page_num": 67,
+      "processing_time": 11.24631118774414,
+      "ocr_time": 11.093017101287842,
+      "reading_order_time": 3.62396240234375e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 40,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.977,
+      "word_count": 417,
+      "token_count": 40,
+      "text_elements_count": 40,
+      "resource_usage": {
+        "cpu_percent": 879.2,
+        "memory_mb": 2943.8203125,
+        "timestamp": 1759770586.9743521,
+        "available": true
+      }
+    },
+    {
+      "page_num": 68,
+      "processing_time": 11.03414535522461,
+      "ocr_time": 10.882694244384766,
+      "reading_order_time": 3.886222839355469e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 38,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.976,
+      "word_count": 451,
+      "token_count": 38,
+      "text_elements_count": 38,
+      "resource_usage": {
+        "cpu_percent": 909.1,
+        "memory_mb": 2994.55859375,
+        "timestamp": 1759770598.0085366,
+        "available": true
+      }
+    },
+    {
+      "page_num": 69,
+      "processing_time": 11.006910800933838,
+      "ocr_time": 10.86637258529663,
+      "reading_order_time": 2.6702880859375e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 40,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.977,
+      "word_count": 608,
+      "token_count": 40,
+      "text_elements_count": 40,
+      "resource_usage": {
+        "cpu_percent": 909.2,
+        "memory_mb": 2994.3046875,
+        "timestamp": 1759770609.0155034,
+        "available": true
+      }
+    },
+    {
+      "page_num": 70,
+      "processing_time": 11.528661012649536,
+      "ocr_time": 11.382706642150879,
+      "reading_order_time": 2.6941299438476562e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 42,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.977,
+      "word_count": 484,
+      "token_count": 42,
+      "text_elements_count": 42,
+      "resource_usage": {
+        "cpu_percent": 890.9,
+        "memory_mb": 2978.203125,
+        "timestamp": 1759770620.5442078,
+        "available": true
+      }
+    },
+    {
+      "page_num": 71,
+      "processing_time": 10.338492155075073,
+      "ocr_time": 10.18679404258728,
+      "reading_order_time": 5.173683166503906e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 28,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.976,
+      "word_count": 268,
+      "token_count": 28,
+      "text_elements_count": 28,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 2977.15625,
+        "timestamp": 1759770630.8827267,
+        "available": true
+      }
+    },
+    {
+      "page_num": 72,
+      "processing_time": 10.76689100265503,
+      "ocr_time": 10.604448795318604,
+      "reading_order_time": 2.384185791015625e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 34,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.974,
+      "word_count": 333,
+      "token_count": 34,
+      "text_elements_count": 34,
+      "resource_usage": {
+        "cpu_percent": 918.9,
+        "memory_mb": 2977.8359375,
+        "timestamp": 1759770641.6496637,
+        "available": true
+      }
+    },
+    {
+      "page_num": 73,
+      "processing_time": 11.237587690353394,
+      "ocr_time": 11.070413827896118,
+      "reading_order_time": 2.5510787963867188e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 35,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.978,
+      "word_count": 345,
+      "token_count": 35,
+      "text_elements_count": 35,
+      "resource_usage": {
+        "cpu_percent": 893.5,
+        "memory_mb": 3028.58203125,
+        "timestamp": 1759770652.8872528,
+        "available": true
+      }
+    },
+    {
+      "page_num": 74,
+      "processing_time": 11.861051797866821,
+      "ocr_time": 11.700594186782837,
+      "reading_order_time": 3.933906555175781e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 42,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.975,
+      "word_count": 474,
+      "token_count": 42,
+      "text_elements_count": 42,
+      "resource_usage": {
+        "cpu_percent": 908.5,
+        "memory_mb": 2995.28125,
+        "timestamp": 1759770664.748339,
+        "available": true
+      }
+    },
+    {
+      "page_num": 75,
+      "processing_time": 10.557582139968872,
+      "ocr_time": 10.405144214630127,
+      "reading_order_time": 3.5762786865234375e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 27,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.975,
+      "word_count": 220,
+      "token_count": 27,
+      "text_elements_count": 27,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 2994.2421875,
+        "timestamp": 1759770675.3060308,
+        "available": true
+      }
+    },
+    {
+      "page_num": 76,
+      "processing_time": 10.940393686294556,
+      "ocr_time": 10.798224210739136,
+      "reading_order_time": 3.528594970703125e-05,
+      "correction_time": 1.1920928955078125e-06,
+      "text_elements": 36,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.976,
+      "word_count": 399,
+      "token_count": 36,
+      "text_elements_count": 36,
+      "resource_usage": {
+        "cpu_percent": 909.2,
+        "memory_mb": 2994.8515625,
+        "timestamp": 1759770686.2464457,
+        "available": true
+      }
+    },
+    {
+      "page_num": 77,
+      "processing_time": 11.73029899597168,
+      "ocr_time": 11.568618774414062,
+      "reading_order_time": 1.811981201171875e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 46,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.978,
+      "word_count": 519,
+      "token_count": 46,
+      "text_elements_count": 46,
+      "resource_usage": {
+        "cpu_percent": 909.1,
+        "memory_mb": 2994.4765625,
+        "timestamp": 1759770697.9767342,
+        "available": true
+      }
+    },
+    {
+      "page_num": 78,
+      "processing_time": 11.422406435012817,
+      "ocr_time": 11.26528024673462,
+      "reading_order_time": 2.6226043701171875e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 37,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.974,
+      "word_count": 412,
+      "token_count": 37,
+      "text_elements_count": 37,
+      "resource_usage": {
+        "cpu_percent": 887.4,
+        "memory_mb": 3007.578125,
+        "timestamp": 1759770709.3992176,
+        "available": true
+      }
+    },
+    {
+      "page_num": 79,
+      "processing_time": 10.593132019042969,
+      "ocr_time": 10.443036079406738,
+      "reading_order_time": 3.361701965332031e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 33,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.954,
+      "word_count": 306,
+      "token_count": 33,
+      "text_elements_count": 33,
+      "resource_usage": {
+        "cpu_percent": 908.9,
+        "memory_mb": 3006.96875,
+        "timestamp": 1759770719.9923587,
+        "available": true
+      }
+    },
+    {
+      "page_num": 80,
+      "processing_time": 10.905710697174072,
+      "ocr_time": 10.750795364379883,
+      "reading_order_time": 2.3603439331054688e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 35,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.974,
+      "word_count": 360,
+      "token_count": 35,
+      "text_elements_count": 35,
+      "resource_usage": {
+        "cpu_percent": 919.3,
+        "memory_mb": 3028.8828125,
+        "timestamp": 1759770730.8981397,
+        "available": true
+      }
+    },
+    {
+      "page_num": 81,
+      "processing_time": 10.689186096191406,
+      "ocr_time": 10.54083800315857,
+      "reading_order_time": 1.5020370483398438e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 30,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.973,
+      "word_count": 318,
+      "token_count": 30,
+      "text_elements_count": 30,
+      "resource_usage": {
+        "cpu_percent": 890.8,
+        "memory_mb": 3039.203125,
+        "timestamp": 1759770741.5873716,
+        "available": true
+      }
+    },
+    {
+      "page_num": 82,
+      "processing_time": 10.725446224212646,
+      "ocr_time": 10.573894500732422,
+      "reading_order_time": 3.3855438232421875e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 33,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.974,
+      "word_count": 290,
+      "token_count": 33,
+      "text_elements_count": 33,
+      "resource_usage": {
+        "cpu_percent": 919.3,
+        "memory_mb": 3111.94921875,
+        "timestamp": 1759770752.3128536,
+        "available": true
+      }
+    },
+    {
+      "page_num": 83,
+      "processing_time": 10.392601728439331,
+      "ocr_time": 10.235817432403564,
+      "reading_order_time": 1.4066696166992188e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 30,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.98,
+      "word_count": 279,
+      "token_count": 30,
+      "text_elements_count": 30,
+      "resource_usage": {
+        "cpu_percent": 918.3,
+        "memory_mb": 3004.015625,
+        "timestamp": 1759770762.7054489,
+        "available": true
+      }
+    },
+    {
+      "page_num": 84,
+      "processing_time": 11.371485948562622,
+      "ocr_time": 11.19875168800354,
+      "reading_order_time": 2.6702880859375e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 40,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.954,
+      "word_count": 426,
+      "token_count": 40,
+      "text_elements_count": 40,
+      "resource_usage": {
+        "cpu_percent": 898.2,
+        "memory_mb": 3008.26171875,
+        "timestamp": 1759770774.0769923,
+        "available": true
+      }
+    },
+    {
+      "page_num": 85,
+      "processing_time": 11.195077657699585,
+      "ocr_time": 11.047072410583496,
+      "reading_order_time": 2.574920654296875e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 37,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.977,
+      "word_count": 427,
+      "token_count": 37,
+      "text_elements_count": 37,
+      "resource_usage": {
+        "cpu_percent": 918.6,
+        "memory_mb": 3008.7265625,
+        "timestamp": 1759770785.2720752,
+        "available": true
+      }
+    },
+    {
+      "page_num": 86,
+      "processing_time": 10.443131923675537,
+      "ocr_time": 10.287402868270874,
+      "reading_order_time": 3.457069396972656e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 34,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.975,
+      "word_count": 341,
+      "token_count": 34,
+      "text_elements_count": 34,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 2995.9140625,
+        "timestamp": 1759770795.7152622,
+        "available": true
+      }
+    },
+    {
+      "page_num": 87,
+      "processing_time": 11.03078007698059,
+      "ocr_time": 10.869696855545044,
+      "reading_order_time": 2.47955322265625e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 35,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.973,
+      "word_count": 356,
+      "token_count": 35,
+      "text_elements_count": 35,
+      "resource_usage": {
+        "cpu_percent": 909.5,
+        "memory_mb": 2978.3984375,
+        "timestamp": 1759770806.746085,
+        "available": true
+      }
+    },
+    {
+      "page_num": 88,
+      "processing_time": 10.835557699203491,
+      "ocr_time": 10.680389642715454,
+      "reading_order_time": 2.2649765014648438e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 33,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.975,
+      "word_count": 336,
+      "token_count": 33,
+      "text_elements_count": 33,
+      "resource_usage": {
+        "cpu_percent": 909.3,
+        "memory_mb": 3006.078125,
+        "timestamp": 1759770817.5816846,
+        "available": true
+      }
+    },
+    {
+      "page_num": 89,
+      "processing_time": 10.448533296585083,
+      "ocr_time": 10.306069374084473,
+      "reading_order_time": 1.5497207641601562e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 32,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.963,
+      "word_count": 294,
+      "token_count": 32,
+      "text_elements_count": 32,
+      "resource_usage": {
+        "cpu_percent": 916.7,
+        "memory_mb": 3009.40234375,
+        "timestamp": 1759770828.0301476,
+        "available": true
+      }
+    },
+    {
+      "page_num": 90,
+      "processing_time": 10.35267162322998,
+      "ocr_time": 10.20599913597107,
+      "reading_order_time": 2.288818359375e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 29,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.974,
+      "word_count": 277,
+      "token_count": 29,
+      "text_elements_count": 29,
+      "resource_usage": {
+        "cpu_percent": 898.6,
+        "memory_mb": 2978.22265625,
+        "timestamp": 1759770838.3829331,
+        "available": true
+      }
+    },
+    {
+      "page_num": 91,
+      "processing_time": 10.507790803909302,
+      "ocr_time": 10.35730266571045,
+      "reading_order_time": 3.075599670410156e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 29,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.966,
+      "word_count": 238,
+      "token_count": 29,
+      "text_elements_count": 29,
+      "resource_usage": {
+        "cpu_percent": 909.1,
+        "memory_mb": 3002.8203125,
+        "timestamp": 1759770848.8907568,
+        "available": true
+      }
+    },
+    {
+      "page_num": 92,
+      "processing_time": 11.516595363616943,
+      "ocr_time": 11.333336353302002,
+      "reading_order_time": 4.1484832763671875e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 38,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.979,
+      "word_count": 429,
+      "token_count": 38,
+      "text_elements_count": 38,
+      "resource_usage": {
+        "cpu_percent": 876.9,
+        "memory_mb": 3196.25,
+        "timestamp": 1759770860.4073577,
+        "available": true
+      }
+    },
+    {
+      "page_num": 93,
+      "processing_time": 10.752324342727661,
+      "ocr_time": 10.576863765716553,
+      "reading_order_time": 3.504753112792969e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 32,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.976,
+      "word_count": 318,
+      "token_count": 32,
+      "text_elements_count": 32,
+      "resource_usage": {
+        "cpu_percent": 919.0,
+        "memory_mb": 2978.203125,
+        "timestamp": 1759770871.1597576,
+        "available": true
+      }
+    },
+    {
+      "page_num": 94,
+      "processing_time": 11.280728816986084,
+      "ocr_time": 11.127224445343018,
+      "reading_order_time": 2.956390380859375e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 35,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.975,
+      "word_count": 386,
+      "token_count": 35,
+      "text_elements_count": 35,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 3007.11328125,
+        "timestamp": 1759770882.4404953,
+        "available": true
+      }
+    },
+    {
+      "page_num": 95,
+      "processing_time": 10.69533371925354,
+      "ocr_time": 10.520849227905273,
+      "reading_order_time": 2.4080276489257812e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 32,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.949,
+      "word_count": 311,
+      "token_count": 32,
+      "text_elements_count": 32,
+      "resource_usage": {
+        "cpu_percent": 893.1,
+        "memory_mb": 3007.55078125,
+        "timestamp": 1759770893.1358888,
+        "available": true
+      }
+    },
+    {
+      "page_num": 96,
+      "processing_time": 10.347646236419678,
+      "ocr_time": 10.195486783981323,
+      "reading_order_time": 8.0108642578125e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 29,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.977,
+      "word_count": 281,
+      "token_count": 29,
+      "text_elements_count": 29,
+      "resource_usage": {
+        "cpu_percent": 918.8,
+        "memory_mb": 3003.4609375,
+        "timestamp": 1759770903.483545,
+        "available": true
+      }
+    },
+    {
+      "page_num": 97,
+      "processing_time": 10.332321882247925,
+      "ocr_time": 10.185911417007446,
+      "reading_order_time": 3.314018249511719e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 31,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.962,
+      "word_count": 301,
+      "token_count": 31,
+      "text_elements_count": 31,
+      "resource_usage": {
+        "cpu_percent": 917.8,
+        "memory_mb": 3008.48046875,
+        "timestamp": 1759770913.8159258,
+        "available": true
+      }
+    },
+    {
+      "page_num": 98,
+      "processing_time": 11.294739484786987,
+      "ocr_time": 11.14598822593689,
+      "reading_order_time": 2.3603439331054688e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 31,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.972,
+      "word_count": 304,
+      "token_count": 31,
+      "text_elements_count": 31,
+      "resource_usage": {
+        "cpu_percent": 898.3,
+        "memory_mb": 3091.67578125,
+        "timestamp": 1759770925.1106803,
+        "available": true
+      }
+    },
+    {
+      "page_num": 99,
+      "processing_time": 11.21425747871399,
+      "ocr_time": 11.05899715423584,
+      "reading_order_time": 3.0517578125e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 36,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.976,
+      "word_count": 369,
+      "token_count": 36,
+      "text_elements_count": 36,
+      "resource_usage": {
+        "cpu_percent": 918.7,
+        "memory_mb": 3040.1171875,
+        "timestamp": 1759770936.3250072,
+        "available": true
+      }
+    },
+    {
+      "page_num": 100,
+      "processing_time": 10.454043626785278,
+      "ocr_time": 10.300475120544434,
+      "reading_order_time": 2.6226043701171875e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 30,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.972,
+      "word_count": 280,
+      "token_count": 30,
+      "text_elements_count": 30,
+      "resource_usage": {
+        "cpu_percent": 909.2,
+        "memory_mb": 3054.53125,
+        "timestamp": 1759770946.779077,
+        "available": true
+      }
+    },
+    {
+      "page_num": 101,
+      "processing_time": 10.83434772491455,
+      "ocr_time": 10.654691457748413,
+      "reading_order_time": 2.2649765014648438e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 28,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.957,
+      "word_count": 284,
+      "token_count": 28,
+      "text_elements_count": 28,
+      "resource_usage": {
+        "cpu_percent": 898.2,
+        "memory_mb": 3055.02734375,
+        "timestamp": 1759770957.6134481,
+        "available": true
+      }
+    },
+    {
+      "page_num": 102,
+      "processing_time": 10.675134181976318,
+      "ocr_time": 10.498570203781128,
+      "reading_order_time": 2.7418136596679688e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 30,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.97,
+      "word_count": 276,
+      "token_count": 30,
+      "text_elements_count": 30,
+      "resource_usage": {
+        "cpu_percent": 929.1,
+        "memory_mb": 3273.34375,
+        "timestamp": 1759770968.2886078,
+        "available": true
+      }
+    },
+    {
+      "page_num": 103,
+      "processing_time": 10.62957239151001,
+      "ocr_time": 10.482208251953125,
+      "reading_order_time": 2.1696090698242188e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 30,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.978,
+      "word_count": 279,
+      "token_count": 30,
+      "text_elements_count": 30,
+      "resource_usage": {
+        "cpu_percent": 866.3,
+        "memory_mb": 3246.3359375,
+        "timestamp": 1759770978.9182434,
+        "available": true
+      }
+    },
+    {
+      "page_num": 104,
+      "processing_time": 10.92824935913086,
+      "ocr_time": 10.783477783203125,
+      "reading_order_time": 5.9604644775390625e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 30,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.974,
+      "word_count": 304,
+      "token_count": 30,
+      "text_elements_count": 30,
+      "resource_usage": {
+        "cpu_percent": 909.0,
+        "memory_mb": 3292.47265625,
+        "timestamp": 1759770989.846493,
+        "available": true
+      }
+    },
+    {
+      "page_num": 105,
+      "processing_time": 10.865485668182373,
+      "ocr_time": 10.721141576766968,
+      "reading_order_time": 3.504753112792969e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 35,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.959,
+      "word_count": 353,
+      "token_count": 35,
+      "text_elements_count": 35,
+      "resource_usage": {
+        "cpu_percent": 919.0,
+        "memory_mb": 3283.66796875,
+        "timestamp": 1759771000.7120483,
+        "available": true
+      }
+    },
+    {
+      "page_num": 106,
+      "processing_time": 10.511273384094238,
+      "ocr_time": 10.361102104187012,
+      "reading_order_time": 3.600120544433594e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 32,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.973,
+      "word_count": 322,
+      "token_count": 32,
+      "text_elements_count": 32,
+      "resource_usage": {
+        "cpu_percent": 887.2,
+        "memory_mb": 3284.3125,
+        "timestamp": 1759771011.2233448,
+        "available": true
+      }
+    },
+    {
+      "page_num": 107,
+      "processing_time": 11.036678075790405,
+      "ocr_time": 10.887281656265259,
+      "reading_order_time": 2.5510787963867188e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 35,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.977,
+      "word_count": 379,
+      "token_count": 35,
+      "text_elements_count": 35,
+      "resource_usage": {
+        "cpu_percent": 919.2,
+        "memory_mb": 3283.89453125,
+        "timestamp": 1759771022.2600589,
+        "available": true
+      }
+    },
+    {
+      "page_num": 108,
+      "processing_time": 10.362451314926147,
+      "ocr_time": 10.201918601989746,
+      "reading_order_time": 3.170967102050781e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 28,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.979,
+      "word_count": 253,
+      "token_count": 28,
+      "text_elements_count": 28,
+      "resource_usage": {
+        "cpu_percent": 918.9,
+        "memory_mb": 3284.41015625,
+        "timestamp": 1759771032.6225495,
+        "available": true
+      }
+    },
+    {
+      "page_num": 109,
+      "processing_time": 10.879815340042114,
+      "ocr_time": 10.714270830154419,
+      "reading_order_time": 5.984306335449219e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 35,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.977,
+      "word_count": 379,
+      "token_count": 35,
+      "text_elements_count": 35,
+      "resource_usage": {
+        "cpu_percent": 891.9,
+        "memory_mb": 3327.921875,
+        "timestamp": 1759771043.5023203,
+        "available": true
+      }
+    },
+    {
+      "page_num": 110,
+      "processing_time": 10.299036264419556,
+      "ocr_time": 10.156046628952026,
+      "reading_order_time": 3.266334533691406e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 28,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.979,
+      "word_count": 253,
+      "token_count": 28,
+      "text_elements_count": 28,
+      "resource_usage": {
+        "cpu_percent": 908.9,
+        "memory_mb": 3292.92578125,
+        "timestamp": 1759771053.8014495,
+        "available": true
+      }
+    },
+    {
+      "page_num": 111,
+      "processing_time": 10.9694983959198,
+      "ocr_time": 10.799120903015137,
+      "reading_order_time": 2.47955322265625e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 38,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.975,
+      "word_count": 427,
+      "token_count": 38,
+      "text_elements_count": 38,
+      "resource_usage": {
+        "cpu_percent": 909.3,
+        "memory_mb": 3319.9921875,
+        "timestamp": 1759771064.7710056,
+        "available": true
+      }
+    },
+    {
+      "page_num": 112,
+      "processing_time": 10.951412916183472,
+      "ocr_time": 10.79383635520935,
+      "reading_order_time": 2.4080276489257812e-05,
+      "correction_time": 0.0,
+      "text_elements": 30,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.978,
+      "word_count": 258,
+      "token_count": 30,
+      "text_elements_count": 30,
+      "resource_usage": {
+        "cpu_percent": 885.2,
+        "memory_mb": 3302.4609375,
+        "timestamp": 1759771075.7224379,
+        "available": true
+      }
+    },
+    {
+      "page_num": 113,
+      "processing_time": 10.570610284805298,
+      "ocr_time": 10.419023036956787,
+      "reading_order_time": 5.364418029785156e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 33,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.971,
+      "word_count": 350,
+      "token_count": 33,
+      "text_elements_count": 33,
+      "resource_usage": {
+        "cpu_percent": 898.4,
+        "memory_mb": 3318.73828125,
+        "timestamp": 1759771086.2930954,
+        "available": true
+      }
+    },
+    {
+      "page_num": 114,
+      "processing_time": 10.53865909576416,
+      "ocr_time": 10.383134365081787,
+      "reading_order_time": 5.507469177246094e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 29,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.967,
+      "word_count": 253,
+      "token_count": 29,
+      "text_elements_count": 29,
+      "resource_usage": {
+        "cpu_percent": 917.4,
+        "memory_mb": 3346.78125,
+        "timestamp": 1759771096.8317628,
+        "available": true
+      }
+    },
+    {
+      "page_num": 115,
+      "processing_time": 10.857118129730225,
+      "ocr_time": 10.703829526901245,
+      "reading_order_time": 2.1696090698242188e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 30,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.975,
+      "word_count": 285,
+      "token_count": 30,
+      "text_elements_count": 30,
+      "resource_usage": {
+        "cpu_percent": 898.5,
+        "memory_mb": 3342.4453125,
+        "timestamp": 1759771107.6889303,
+        "available": true
+      }
+    },
+    {
+      "page_num": 116,
+      "processing_time": 11.182406902313232,
+      "ocr_time": 11.038625717163086,
+      "reading_order_time": 3.8623809814453125e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 31,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.978,
+      "word_count": 305,
+      "token_count": 31,
+      "text_elements_count": 31,
+      "resource_usage": {
+        "cpu_percent": 919.0,
+        "memory_mb": 3292.796875,
+        "timestamp": 1759771118.8713913,
+        "available": true
+      }
+    },
+    {
+      "page_num": 117,
+      "processing_time": 10.98893117904663,
+      "ocr_time": 10.843576431274414,
+      "reading_order_time": 2.574920654296875e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 39,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.974,
+      "word_count": 418,
+      "token_count": 39,
+      "text_elements_count": 39,
+      "resource_usage": {
+        "cpu_percent": 876.4,
+        "memory_mb": 3267.15625,
+        "timestamp": 1759771129.860332,
+        "available": true
+      }
+    },
+    {
+      "page_num": 118,
+      "processing_time": 11.37850284576416,
+      "ocr_time": 11.197959423065186,
+      "reading_order_time": 2.7179718017578125e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 41,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.978,
+      "word_count": 414,
+      "token_count": 41,
+      "text_elements_count": 41,
+      "resource_usage": {
+        "cpu_percent": 899.2,
+        "memory_mb": 3232.5703125,
+        "timestamp": 1759771141.2388892,
+        "available": true
+      }
+    },
+    {
+      "page_num": 119,
+      "processing_time": 11.74144697189331,
+      "ocr_time": 11.582730531692505,
+      "reading_order_time": 2.7418136596679688e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 46,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.98,
+      "word_count": 524,
+      "token_count": 46,
+      "text_elements_count": 46,
+      "resource_usage": {
+        "cpu_percent": 909.2,
+        "memory_mb": 3266.67578125,
+        "timestamp": 1759771152.9803782,
+        "available": true
+      }
+    },
+    {
+      "page_num": 120,
+      "processing_time": 11.890405893325806,
+      "ocr_time": 11.745097875595093,
+      "reading_order_time": 4.1961669921875e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 46,
+      "language": "french",
+      "corrections_made": 0,
+      "avg_confidence": 0.974,
+      "word_count": 491,
+      "token_count": 46,
+      "text_elements_count": 46,
+      "resource_usage": {
+        "cpu_percent": 885.1,
+        "memory_mb": 3266.9765625,
+        "timestamp": 1759771164.8708065,
+        "available": true
+      }
+    },
+    {
+      "page_num": 121,
+      "processing_time": 11.684208154678345,
+      "ocr_time": 11.529555559158325,
+      "reading_order_time": 2.6464462280273438e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 46,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.979,
+      "word_count": 508,
+      "token_count": 46,
+      "text_elements_count": 46,
+      "resource_usage": {
+        "cpu_percent": 909.3,
+        "memory_mb": 3297.7890625,
+        "timestamp": 1759771176.5550332,
+        "available": true
+      }
+    },
+    {
+      "page_num": 122,
+      "processing_time": 11.218827486038208,
+      "ocr_time": 11.055007696151733,
+      "reading_order_time": 5.507469177246094e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 40,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.978,
+      "word_count": 367,
+      "token_count": 40,
+      "text_elements_count": 40,
+      "resource_usage": {
+        "cpu_percent": 918.7,
+        "memory_mb": 3295.21484375,
+        "timestamp": 1759771187.7739115,
+        "available": true
+      }
+    },
+    {
+      "page_num": 123,
+      "processing_time": 10.369574785232544,
+      "ocr_time": 10.222448825836182,
+      "reading_order_time": 2.5272369384765625e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 26,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.975,
+      "word_count": 254,
+      "token_count": 26,
+      "text_elements_count": 26,
+      "resource_usage": {
+        "cpu_percent": 909.1,
+        "memory_mb": 3293.6171875,
+        "timestamp": 1759771198.143518,
+        "available": true
+      }
+    },
+    {
+      "page_num": 124,
+      "processing_time": 10.068946361541748,
+      "ocr_time": 9.916221380233765,
+      "reading_order_time": 2.9802322387695312e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 23,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.974,
+      "word_count": 250,
+      "token_count": 23,
+      "text_elements_count": 23,
+      "resource_usage": {
+        "cpu_percent": 909.1,
+        "memory_mb": 3293.0703125,
+        "timestamp": 1759771208.2124999,
+        "available": true
+      }
+    },
+    {
+      "page_num": 125,
+      "processing_time": 8.69508147239685,
+      "ocr_time": 8.55369234085083,
+      "text_elements": 0,
+      "language": "unknown",
+      "corrections_made": 0,
+      "word_count": 0,
+      "token_count": 0,
+      "text_elements_count": 0,
+      "resource_usage": {
+        "cpu_percent": 917.8,
+        "memory_mb": 3396.1484375,
+        "timestamp": 1759771216.9076478,
+        "available": true
+      }
+    },
+    {
+      "page_num": 126,
+      "processing_time": 10.4447922706604,
+      "ocr_time": 10.292543888092041,
+      "reading_order_time": 5.936622619628906e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 40,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.984,
+      "word_count": 107,
+      "token_count": 40,
+      "text_elements_count": 40,
+      "resource_usage": {
+        "cpu_percent": 897.8,
+        "memory_mb": 3290.9375,
+        "timestamp": 1759771227.3524168,
+        "available": true
+      }
+    },
+    {
+      "page_num": 127,
+      "processing_time": 11.881025075912476,
+      "ocr_time": 11.736749410629272,
+      "reading_order_time": 4.696846008300781e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 54,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.969,
+      "word_count": 243,
+      "token_count": 54,
+      "text_elements_count": 54,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 3256.828125,
+        "timestamp": 1759771239.2334654,
+        "available": true
+      }
+    },
+    {
+      "page_num": 128,
+      "processing_time": 12.201706647872925,
+      "ocr_time": 12.057650327682495,
+      "reading_order_time": 4.9114227294921875e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 54,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.977,
+      "word_count": 287,
+      "token_count": 54,
+      "text_elements_count": 54,
+      "resource_usage": {
+        "cpu_percent": 871.8,
+        "memory_mb": 3283.78125,
+        "timestamp": 1759771251.435206,
+        "available": true
+      }
+    },
+    {
+      "page_num": 129,
+      "processing_time": 13.393048286437988,
+      "ocr_time": 13.242797374725342,
+      "reading_order_time": 9.512901306152344e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 54,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.975,
+      "word_count": 285,
+      "token_count": 54,
+      "text_elements_count": 54,
+      "resource_usage": {
+        "cpu_percent": 908.6,
+        "memory_mb": 3291.8984375,
+        "timestamp": 1759771264.8282168,
+        "available": true
+      }
+    },
+    {
+      "page_num": 130,
+      "processing_time": 12.972113609313965,
+      "ocr_time": 12.791293144226074,
+      "reading_order_time": 4.410743713378906e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 54,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.982,
+      "word_count": 277,
+      "token_count": 54,
+      "text_elements_count": 54,
+      "resource_usage": {
+        "cpu_percent": 909.0,
+        "memory_mb": 3297.140625,
+        "timestamp": 1759771277.8004236,
+        "available": true
+      }
+    },
+    {
+      "page_num": 131,
+      "processing_time": 13.034102201461792,
+      "ocr_time": 12.889607429504395,
+      "reading_order_time": 2.002716064453125e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 53,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.978,
+      "word_count": 193,
+      "token_count": 53,
+      "text_elements_count": 53,
+      "resource_usage": {
+        "cpu_percent": 909.1,
+        "memory_mb": 3266.91015625,
+        "timestamp": 1759771290.8345518,
+        "available": true
+      }
+    },
+    {
+      "page_num": 132,
+      "processing_time": 15.486261367797852,
+      "ocr_time": 15.334819793701172,
+      "reading_order_time": 3.838539123535156e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 53,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.971,
+      "word_count": 232,
+      "token_count": 53,
+      "text_elements_count": 53,
+      "resource_usage": {
+        "cpu_percent": 919.3,
+        "memory_mb": 3292.2734375,
+        "timestamp": 1759771306.3208318,
+        "available": true
+      }
+    },
+    {
+      "page_num": 133,
+      "processing_time": 14.309715032577515,
+      "ocr_time": 14.161420822143555,
+      "reading_order_time": 5.1021575927734375e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 54,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.978,
+      "word_count": 177,
+      "token_count": 54,
+      "text_elements_count": 54,
+      "resource_usage": {
+        "cpu_percent": 898.9,
+        "memory_mb": 3293.16015625,
+        "timestamp": 1759771320.6305847,
+        "available": true
+      }
+    },
+    {
+      "page_num": 134,
+      "processing_time": 13.13213324546814,
+      "ocr_time": 12.97417664527893,
+      "reading_order_time": 3.719329833984375e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 53,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.985,
+      "word_count": 176,
+      "token_count": 53,
+      "text_elements_count": 53,
+      "resource_usage": {
+        "cpu_percent": 909.2,
+        "memory_mb": 3317.9453125,
+        "timestamp": 1759771333.7627563,
+        "available": true
+      }
+    },
+    {
+      "page_num": 135,
+      "processing_time": 13.798968076705933,
+      "ocr_time": 13.643147468566895,
+      "reading_order_time": 8.58306884765625e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 55,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.966,
+      "word_count": 238,
+      "token_count": 55,
+      "text_elements_count": 55,
+      "resource_usage": {
+        "cpu_percent": 897.6,
+        "memory_mb": 3298.35546875,
+        "timestamp": 1759771347.5617876,
+        "available": true
+      }
+    },
+    {
+      "page_num": 136,
+      "processing_time": 11.988376379013062,
+      "ocr_time": 11.827429294586182,
+      "reading_order_time": 3.8623809814453125e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 54,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.979,
+      "word_count": 260,
+      "token_count": 54,
+      "text_elements_count": 54,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 3302.16796875,
+        "timestamp": 1759771359.5502274,
+        "available": true
+      }
+    },
+    {
+      "page_num": 137,
+      "processing_time": 12.078407764434814,
+      "ocr_time": 11.917616844177246,
+      "reading_order_time": 3.4332275390625e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 55,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.96,
+      "word_count": 221,
+      "token_count": 55,
+      "text_elements_count": 55,
+      "resource_usage": {
+        "cpu_percent": 874.3,
+        "memory_mb": 3267.765625,
+        "timestamp": 1759771371.6287158,
+        "available": true
+      }
+    },
+    {
+      "page_num": 138,
+      "processing_time": 12.076049566268921,
+      "ocr_time": 11.915836811065674,
+      "reading_order_time": 3.886222839355469e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 50,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.976,
+      "word_count": 201,
+      "token_count": 50,
+      "text_elements_count": 50,
+      "resource_usage": {
+        "cpu_percent": 909.1,
+        "memory_mb": 3306.25,
+        "timestamp": 1759771383.7047956,
+        "available": true
+      }
+    },
+    {
+      "page_num": 139,
+      "processing_time": 12.529231309890747,
+      "ocr_time": 12.37355899810791,
+      "reading_order_time": 3.4809112548828125e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 61,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.956,
+      "word_count": 242,
+      "token_count": 61,
+      "text_elements_count": 61,
+      "resource_usage": {
+        "cpu_percent": 929.2,
+        "memory_mb": 3267.3515625,
+        "timestamp": 1759771396.2340527,
+        "available": true
+      }
+    },
+    {
+      "page_num": 140,
+      "processing_time": 13.387470960617065,
+      "ocr_time": 13.218735218048096,
+      "reading_order_time": 3.0994415283203125e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 53,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.978,
+      "word_count": 327,
+      "token_count": 53,
+      "text_elements_count": 53,
+      "resource_usage": {
+        "cpu_percent": 899.5,
+        "memory_mb": 3265.83984375,
+        "timestamp": 1759771409.6215591,
+        "available": true
+      }
+    },
+    {
+      "page_num": 141,
+      "processing_time": 13.494798421859741,
+      "ocr_time": 13.34204387664795,
+      "reading_order_time": 3.218650817871094e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 57,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.983,
+      "word_count": 252,
+      "token_count": 57,
+      "text_elements_count": 57,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 3266.2421875,
+        "timestamp": 1759771423.1163902,
+        "available": true
+      }
+    },
+    {
+      "page_num": 142,
+      "processing_time": 13.689829111099243,
+      "ocr_time": 13.535005807876587,
+      "reading_order_time": 4.935264587402344e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 58,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.983,
+      "word_count": 339,
+      "token_count": 58,
+      "text_elements_count": 58,
+      "resource_usage": {
+        "cpu_percent": 894.7,
+        "memory_mb": 3267.0,
+        "timestamp": 1759771436.806289,
+        "available": true
+      }
+    },
+    {
+      "page_num": 143,
+      "processing_time": 12.540765762329102,
+      "ocr_time": 12.381105899810791,
+      "reading_order_time": 2.9802322387695312e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 58,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.982,
+      "word_count": 264,
+      "token_count": 58,
+      "text_elements_count": 58,
+      "resource_usage": {
+        "cpu_percent": 918.7,
+        "memory_mb": 3266.92578125,
+        "timestamp": 1759771449.3470938,
+        "available": true
+      }
+    },
+    {
+      "page_num": 144,
+      "processing_time": 11.535396575927734,
+      "ocr_time": 11.372327327728271,
+      "reading_order_time": 2.574920654296875e-05,
+      "correction_time": 1.1920928955078125e-06,
+      "text_elements": 17,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.98,
+      "word_count": 86,
+      "token_count": 17,
+      "text_elements_count": 17,
+      "resource_usage": {
+        "cpu_percent": 908.8,
+        "memory_mb": 3369.28515625,
+        "timestamp": 1759771460.8825407,
+        "available": true
+      }
+    },
+    {
+      "page_num": 145,
+      "processing_time": 11.652774333953857,
+      "ocr_time": 11.48015022277832,
+      "reading_order_time": 8.821487426757812e-06,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 4,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.782,
+      "word_count": 4,
+      "token_count": 4,
+      "text_elements_count": 4,
+      "resource_usage": {
+        "cpu_percent": 899.0,
+        "memory_mb": 3551.80859375,
+        "timestamp": 1759771472.5353591,
+        "available": true
+      }
+    },
+    {
+      "page_num": 146,
+      "processing_time": 10.75675654411316,
+      "ocr_time": 10.611407995223999,
+      "reading_order_time": 1.1444091796875e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 4,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.782,
+      "word_count": 4,
+      "token_count": 4,
+      "text_elements_count": 4,
+      "resource_usage": {
+        "cpu_percent": 908.8,
+        "memory_mb": 3523.60546875,
+        "timestamp": 1759771483.2921262,
+        "available": true
+      }
+    },
+    {
+      "page_num": 147,
+      "processing_time": 12.073054790496826,
+      "ocr_time": 11.867846965789795,
+      "reading_order_time": 3.9577484130859375e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 36,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.639,
+      "word_count": 39,
+      "token_count": 36,
+      "text_elements_count": 36,
+      "resource_usage": {
+        "cpu_percent": 892.5,
+        "memory_mb": 3603.3828125,
+        "timestamp": 1759771495.3652327,
+        "available": true
+      }
+    },
+    {
+      "page_num": 148,
+      "processing_time": 11.821280241012573,
+      "ocr_time": 11.64427638053894,
+      "reading_order_time": 4.482269287109375e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 48,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.679,
+      "word_count": 54,
+      "token_count": 48,
+      "text_elements_count": 48,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 3576.09375,
+        "timestamp": 1759771507.186545,
+        "available": true
+      }
+    },
+    {
+      "page_num": 149,
+      "processing_time": 11.394808292388916,
+      "ocr_time": 11.234531164169312,
+      "reading_order_time": 2.9087066650390625e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 37,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.67,
+      "word_count": 40,
+      "token_count": 37,
+      "text_elements_count": 37,
+      "resource_usage": {
+        "cpu_percent": 918.7,
+        "memory_mb": 3575.40625,
+        "timestamp": 1759771518.581399,
+        "available": true
+      }
+    },
+    {
+      "page_num": 150,
+      "processing_time": 12.750666856765747,
+      "ocr_time": 12.570381164550781,
+      "reading_order_time": 2.9087066650390625e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 43,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.639,
+      "word_count": 45,
+      "token_count": 43,
+      "text_elements_count": 43,
+      "resource_usage": {
+        "cpu_percent": 909.1,
+        "memory_mb": 3629.92578125,
+        "timestamp": 1759771531.3320782,
+        "available": true
+      }
+    },
+    {
+      "page_num": 151,
+      "processing_time": 12.315726041793823,
+      "ocr_time": 12.148829460144043,
+      "reading_order_time": 2.5510787963867188e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 37,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.725,
+      "word_count": 41,
+      "token_count": 37,
+      "text_elements_count": 37,
+      "resource_usage": {
+        "cpu_percent": 929.1,
+        "memory_mb": 3683.22265625,
+        "timestamp": 1759771543.6478202,
+        "available": true
+      }
+    },
+    {
+      "page_num": 152,
+      "processing_time": 12.837632417678833,
+      "ocr_time": 12.659979581832886,
+      "reading_order_time": 3.218650817871094e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 53,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.689,
+      "word_count": 67,
+      "token_count": 53,
+      "text_elements_count": 53,
+      "resource_usage": {
+        "cpu_percent": 892.5,
+        "memory_mb": 3738.40234375,
+        "timestamp": 1759771556.4854605,
+        "available": true
+      }
+    },
+    {
+      "page_num": 153,
+      "processing_time": 12.003961563110352,
+      "ocr_time": 11.822427749633789,
+      "reading_order_time": 3.0517578125e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 43,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.635,
+      "word_count": 47,
+      "token_count": 43,
+      "text_elements_count": 43,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 3792.7734375,
+        "timestamp": 1759771568.4894826,
+        "available": true
+      }
+    },
+    {
+      "page_num": 154,
+      "processing_time": 11.857638835906982,
+      "ocr_time": 11.697970151901245,
+      "reading_order_time": 3.0040740966796875e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 46,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.633,
+      "word_count": 49,
+      "token_count": 46,
+      "text_elements_count": 46,
+      "resource_usage": {
+        "cpu_percent": 919.0,
+        "memory_mb": 3784.0078125,
+        "timestamp": 1759771580.3471231,
+        "available": true
+      }
+    },
+    {
+      "page_num": 155,
+      "processing_time": 11.279039859771729,
+      "ocr_time": 11.124559164047241,
+      "reading_order_time": 3.790855407714844e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 34,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.617,
+      "word_count": 37,
+      "token_count": 34,
+      "text_elements_count": 34,
+      "resource_usage": {
+        "cpu_percent": 908.9,
+        "memory_mb": 3765.85546875,
+        "timestamp": 1759771591.6262395,
+        "available": true
+      }
+    },
+    {
+      "page_num": 156,
+      "processing_time": 11.37992262840271,
+      "ocr_time": 11.22987961769104,
+      "reading_order_time": 3.5762786865234375e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 37,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.607,
+      "word_count": 41,
+      "token_count": 37,
+      "text_elements_count": 37,
+      "resource_usage": {
+        "cpu_percent": 919.0,
+        "memory_mb": 3766.1328125,
+        "timestamp": 1759771603.006159,
+        "available": true
+      }
+    },
+    {
+      "page_num": 157,
+      "processing_time": 11.871838808059692,
+      "ocr_time": 11.7039053440094,
+      "reading_order_time": 2.5033950805664062e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 32,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.634,
+      "word_count": 35,
+      "token_count": 32,
+      "text_elements_count": 32,
+      "resource_usage": {
+        "cpu_percent": 881.1,
+        "memory_mb": 3793.3046875,
+        "timestamp": 1759771614.8780766,
+        "available": true
+      }
+    },
+    {
+      "page_num": 158,
+      "processing_time": 12.246980905532837,
+      "ocr_time": 12.079781293869019,
+      "reading_order_time": 4.458427429199219e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 44,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.582,
+      "word_count": 48,
+      "token_count": 44,
+      "text_elements_count": 44,
+      "resource_usage": {
+        "cpu_percent": 908.8,
+        "memory_mb": 3846.71875,
+        "timestamp": 1759771627.1250434,
+        "available": true
+      }
+    },
+    {
+      "page_num": 159,
+      "processing_time": 11.387189626693726,
+      "ocr_time": 11.225623369216919,
+      "reading_order_time": 2.3126602172851562e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 29,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.597,
+      "word_count": 35,
+      "token_count": 29,
+      "text_elements_count": 29,
+      "resource_usage": {
+        "cpu_percent": 909.0,
+        "memory_mb": 3928.890625,
+        "timestamp": 1759771638.5123124,
+        "available": true
+      }
+    },
+    {
+      "page_num": 160,
+      "processing_time": 12.11013913154602,
+      "ocr_time": 11.94681167602539,
+      "reading_order_time": 2.9802322387695312e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 34,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.678,
+      "word_count": 37,
+      "token_count": 34,
+      "text_elements_count": 34,
+      "resource_usage": {
+        "cpu_percent": 897.8,
+        "memory_mb": 3955.8125,
+        "timestamp": 1759771650.6224568,
+        "available": true
+      }
+    },
+    {
+      "page_num": 161,
+      "processing_time": 10.302778244018555,
+      "ocr_time": 10.115534543991089,
+      "reading_order_time": 3.409385681152344e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 26,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.777,
+      "word_count": 39,
+      "token_count": 26,
+      "text_elements_count": 26,
+      "resource_usage": {
+        "cpu_percent": 908.9,
+        "memory_mb": 3946.41015625,
+        "timestamp": 1759771660.9253044,
+        "available": true
+      }
+    },
+    {
+      "page_num": 162,
+      "processing_time": 12.999836206436157,
+      "ocr_time": 12.835566997528076,
+      "reading_order_time": 4.00543212890625e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 71,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.597,
+      "word_count": 77,
+      "token_count": 71,
+      "text_elements_count": 71,
+      "resource_usage": {
+        "cpu_percent": 877.1,
+        "memory_mb": 3892.58984375,
+        "timestamp": 1759771673.9251065,
+        "available": true
+      }
+    },
+    {
+      "page_num": 163,
+      "processing_time": 13.532172441482544,
+      "ocr_time": 13.372087001800537,
+      "reading_order_time": 3.4332275390625e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 64,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.666,
+      "word_count": 74,
+      "token_count": 64,
+      "text_elements_count": 64,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 3928.74609375,
+        "timestamp": 1759771687.4573662,
+        "available": true
+      }
+    },
+    {
+      "page_num": 164,
+      "processing_time": 12.561968564987183,
+      "ocr_time": 12.380314350128174,
+      "reading_order_time": 3.5762786865234375e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 63,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.617,
+      "word_count": 71,
+      "token_count": 63,
+      "text_elements_count": 63,
+      "resource_usage": {
+        "cpu_percent": 909.3,
+        "memory_mb": 3929.7421875,
+        "timestamp": 1759771700.0193534,
+        "available": true
+      }
+    },
+    {
+      "page_num": 165,
+      "processing_time": 13.652273654937744,
+      "ocr_time": 13.502377033233643,
+      "reading_order_time": 4.291534423828125e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 69,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.625,
+      "word_count": 77,
+      "token_count": 69,
+      "text_elements_count": 69,
+      "resource_usage": {
+        "cpu_percent": 898.9,
+        "memory_mb": 3955.82421875,
+        "timestamp": 1759771713.6716151,
+        "available": true
+      }
+    },
+    {
+      "page_num": 166,
+      "processing_time": 12.913739204406738,
+      "ocr_time": 12.730146646499634,
+      "reading_order_time": 3.266334533691406e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 62,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.639,
+      "word_count": 74,
+      "token_count": 62,
+      "text_elements_count": 62,
+      "resource_usage": {
+        "cpu_percent": 919.2,
+        "memory_mb": 3974.171875,
+        "timestamp": 1759771726.5854304,
+        "available": true
+      }
+    },
+    {
+      "page_num": 167,
+      "processing_time": 12.252679347991943,
+      "ocr_time": 12.098378419876099,
+      "reading_order_time": 2.86102294921875e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 47,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.671,
+      "word_count": 52,
+      "token_count": 47,
+      "text_elements_count": 47,
+      "resource_usage": {
+        "cpu_percent": 893.8,
+        "memory_mb": 3974.39453125,
+        "timestamp": 1759771738.838134,
+        "available": true
+      }
+    },
+    {
+      "page_num": 168,
+      "processing_time": 12.344037055969238,
+      "ocr_time": 12.18154501914978,
+      "reading_order_time": 5.14984130859375e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 62,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.697,
+      "word_count": 70,
+      "token_count": 62,
+      "text_elements_count": 62,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 3974.68359375,
+        "timestamp": 1759771751.182246,
+        "available": true
+      }
+    },
+    {
+      "page_num": 169,
+      "processing_time": 11.779372930526733,
+      "ocr_time": 11.592622518539429,
+      "reading_order_time": 3.147125244140625e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 51,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.763,
+      "word_count": 63,
+      "token_count": 51,
+      "text_elements_count": 51,
+      "resource_usage": {
+        "cpu_percent": 919.3,
+        "memory_mb": 3955.82421875,
+        "timestamp": 1759771762.9616287,
+        "available": true
+      }
+    },
+    {
+      "page_num": 170,
+      "processing_time": 11.356498718261719,
+      "ocr_time": 11.205405712127686,
+      "reading_order_time": 2.5033950805664062e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 28,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.657,
+      "word_count": 31,
+      "token_count": 28,
+      "text_elements_count": 28,
+      "resource_usage": {
+        "cpu_percent": 909.0,
+        "memory_mb": 3956.61328125,
+        "timestamp": 1759771774.3181512,
+        "available": true
+      }
+    },
+    {
+      "page_num": 171,
+      "processing_time": 10.85796570777893,
+      "ocr_time": 10.699784755706787,
+      "reading_order_time": 2.2411346435546875e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 23,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.666,
+      "word_count": 26,
+      "token_count": 23,
+      "text_elements_count": 23,
+      "resource_usage": {
+        "cpu_percent": 919.2,
+        "memory_mb": 3983.00390625,
+        "timestamp": 1759771785.1761672,
+        "available": true
+      }
+    },
+    {
+      "page_num": 172,
+      "processing_time": 12.00083041191101,
+      "ocr_time": 11.839031457901001,
+      "reading_order_time": 4.887580871582031e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 52,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.696,
+      "word_count": 61,
+      "token_count": 52,
+      "text_elements_count": 52,
+      "resource_usage": {
+        "cpu_percent": 891.7,
+        "memory_mb": 3947.53515625,
+        "timestamp": 1759771797.1770377,
+        "available": true
+      }
+    },
+    {
+      "page_num": 173,
+      "processing_time": 12.033817052841187,
+      "ocr_time": 11.869389772415161,
+      "reading_order_time": 2.47955322265625e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 60,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.702,
+      "word_count": 69,
+      "token_count": 60,
+      "text_elements_count": 60,
+      "resource_usage": {
+        "cpu_percent": 899.3,
+        "memory_mb": 3974.26171875,
+        "timestamp": 1759771809.2108827,
+        "available": true
+      }
+    },
+    {
+      "page_num": 174,
+      "processing_time": 10.969319581985474,
+      "ocr_time": 10.80283498764038,
+      "reading_order_time": 4.38690185546875e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 42,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.777,
+      "word_count": 46,
+      "token_count": 42,
+      "text_elements_count": 42,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 3956.359375,
+        "timestamp": 1759771820.1802473,
+        "available": true
+      }
+    },
+    {
+      "page_num": 175,
+      "processing_time": 10.748448371887207,
+      "ocr_time": 10.59630560874939,
+      "reading_order_time": 2.574920654296875e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 30,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.713,
+      "word_count": 32,
+      "token_count": 30,
+      "text_elements_count": 30,
+      "resource_usage": {
+        "cpu_percent": 897.4,
+        "memory_mb": 3955.984375,
+        "timestamp": 1759771830.9287212,
+        "available": true
+      }
+    },
+    {
+      "page_num": 176,
+      "processing_time": 10.83877158164978,
+      "ocr_time": 10.68093228340149,
+      "reading_order_time": 2.6464462280273438e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 34,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.739,
+      "word_count": 50,
+      "token_count": 34,
+      "text_elements_count": 34,
+      "resource_usage": {
+        "cpu_percent": 909.1,
+        "memory_mb": 3955.29296875,
+        "timestamp": 1759771841.767555,
+        "available": true
+      }
+    },
+    {
+      "page_num": 177,
+      "processing_time": 10.091444969177246,
+      "ocr_time": 9.927820444107056,
+      "reading_order_time": 2.2649765014648438e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 18,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.625,
+      "word_count": 20,
+      "token_count": 18,
+      "text_elements_count": 18,
+      "resource_usage": {
+        "cpu_percent": 909.2,
+        "memory_mb": 4037.48046875,
+        "timestamp": 1759771851.8590424,
+        "available": true
+      }
+    },
+    {
+      "page_num": 178,
+      "processing_time": 12.033258438110352,
+      "ocr_time": 11.8498694896698,
+      "reading_order_time": 2.6941299438476562e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 36,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.721,
+      "word_count": 51,
+      "token_count": 36,
+      "text_elements_count": 36,
+      "resource_usage": {
+        "cpu_percent": 917.5,
+        "memory_mb": 4091.4921875,
+        "timestamp": 1759771863.8923311,
+        "available": true
+      }
+    },
+    {
+      "page_num": 179,
+      "processing_time": 11.910541772842407,
+      "ocr_time": 11.73609972000122,
+      "reading_order_time": 2.6226043701171875e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 36,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.671,
+      "word_count": 46,
+      "token_count": 36,
+      "text_elements_count": 36,
+      "resource_usage": {
+        "cpu_percent": 909.3,
+        "memory_mb": 4146.24609375,
+        "timestamp": 1759771875.8029516,
+        "available": true
+      }
+    },
+    {
+      "page_num": 180,
+      "processing_time": 11.855205059051514,
+      "ocr_time": 11.6889009475708,
+      "reading_order_time": 3.123283386230469e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 46,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.742,
+      "word_count": 54,
+      "token_count": 46,
+      "text_elements_count": 46,
+      "resource_usage": {
+        "cpu_percent": 878.8,
+        "memory_mb": 4109.28125,
+        "timestamp": 1759771887.6581829,
+        "available": true
+      }
+    },
+    {
+      "page_num": 181,
+      "processing_time": 11.517210721969604,
+      "ocr_time": 11.344539403915405,
+      "reading_order_time": 3.0040740966796875e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 47,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.734,
+      "word_count": 57,
+      "token_count": 47,
+      "text_elements_count": 47,
+      "resource_usage": {
+        "cpu_percent": 909.2,
+        "memory_mb": 4109.015625,
+        "timestamp": 1759771899.1754224,
+        "available": true
+      }
+    },
+    {
+      "page_num": 182,
+      "processing_time": 11.632737636566162,
+      "ocr_time": 11.478419780731201,
+      "reading_order_time": 3.409385681152344e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 52,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.682,
+      "word_count": 67,
+      "token_count": 52,
+      "text_elements_count": 52,
+      "resource_usage": {
+        "cpu_percent": 919.3,
+        "memory_mb": 4081.5859375,
+        "timestamp": 1759771910.808184,
+        "available": true
+      }
+    },
+    {
+      "page_num": 183,
+      "processing_time": 10.985036611557007,
+      "ocr_time": 10.807698965072632,
+      "reading_order_time": 2.5510787963867188e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 33,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.688,
+      "word_count": 42,
+      "token_count": 33,
+      "text_elements_count": 33,
+      "resource_usage": {
+        "cpu_percent": 897.9,
+        "memory_mb": 4118.8203125,
+        "timestamp": 1759771921.7932684,
+        "available": true
+      }
+    },
+    {
+      "page_num": 184,
+      "processing_time": 10.18417239189148,
+      "ocr_time": 10.02398157119751,
+      "reading_order_time": 2.2411346435546875e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 16,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.457,
+      "word_count": 16,
+      "token_count": 16,
+      "text_elements_count": 16,
+      "resource_usage": {
+        "cpu_percent": 919.0,
+        "memory_mb": 4119.9609375,
+        "timestamp": 1759771931.977483,
+        "available": true
+      }
+    },
+    {
+      "page_num": 185,
+      "processing_time": 11.631406307220459,
+      "ocr_time": 11.465977430343628,
+      "reading_order_time": 4.6253204345703125e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 45,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.679,
+      "word_count": 58,
+      "token_count": 45,
+      "text_elements_count": 45,
+      "resource_usage": {
+        "cpu_percent": 927.6,
+        "memory_mb": 4174.05859375,
+        "timestamp": 1759771943.608878,
+        "available": true
+      }
+    },
+    {
+      "page_num": 186,
+      "processing_time": 11.280818939208984,
+      "ocr_time": 11.09965443611145,
+      "reading_order_time": 2.8848648071289062e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 45,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.676,
+      "word_count": 52,
+      "token_count": 45,
+      "text_elements_count": 45,
+      "resource_usage": {
+        "cpu_percent": 909.3,
+        "memory_mb": 4137.5,
+        "timestamp": 1759771954.8897448,
+        "available": true
+      }
+    },
+    {
+      "page_num": 187,
+      "processing_time": 11.503836631774902,
+      "ocr_time": 11.34351396560669,
+      "reading_order_time": 6.389617919921875e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 48,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.747,
+      "word_count": 59,
+      "token_count": 48,
+      "text_elements_count": 48,
+      "resource_usage": {
+        "cpu_percent": 918.9,
+        "memory_mb": 4109.48046875,
+        "timestamp": 1759771966.3935852,
+        "available": true
+      }
+    },
+    {
+      "page_num": 188,
+      "processing_time": 11.979463338851929,
+      "ocr_time": 11.823106527328491,
+      "reading_order_time": 2.7894973754882812e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 47,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.729,
+      "word_count": 53,
+      "token_count": 47,
+      "text_elements_count": 47,
+      "resource_usage": {
+        "cpu_percent": 896.9,
+        "memory_mb": 4146.34765625,
+        "timestamp": 1759771978.3730936,
+        "available": true
+      }
+    },
+    {
+      "page_num": 189,
+      "processing_time": 11.46635127067566,
+      "ocr_time": 11.312743663787842,
+      "reading_order_time": 2.9325485229492188e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 42,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.713,
+      "word_count": 54,
+      "token_count": 42,
+      "text_elements_count": 42,
+      "resource_usage": {
+        "cpu_percent": 919.0,
+        "memory_mb": 4146.3046875,
+        "timestamp": 1759771989.8394935,
+        "available": true
+      }
+    },
+    {
+      "page_num": 190,
+      "processing_time": 11.205158710479736,
+      "ocr_time": 11.049378871917725,
+      "reading_order_time": 1.9788742065429688e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 46,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.76,
+      "word_count": 52,
+      "token_count": 46,
+      "text_elements_count": 46,
+      "resource_usage": {
+        "cpu_percent": 918.5,
+        "memory_mb": 4146.11328125,
+        "timestamp": 1759772001.0446978,
+        "available": true
+      }
+    },
+    {
+      "page_num": 191,
+      "processing_time": 11.575913190841675,
+      "ocr_time": 11.382047176361084,
+      "reading_order_time": 2.6702880859375e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 35,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.738,
+      "word_count": 49,
+      "token_count": 35,
+      "text_elements_count": 35,
+      "resource_usage": {
+        "cpu_percent": 908.3,
+        "memory_mb": 4200.8828125,
+        "timestamp": 1759772012.6207,
+        "available": true
+      }
+    },
+    {
+      "page_num": 192,
+      "processing_time": 11.085902214050293,
+      "ocr_time": 10.899906158447266,
+      "reading_order_time": 3.075599670410156e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 36,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.776,
+      "word_count": 42,
+      "token_count": 36,
+      "text_elements_count": 36,
+      "resource_usage": {
+        "cpu_percent": 919.2,
+        "memory_mb": 4191.00390625,
+        "timestamp": 1759772023.7066288,
+        "available": true
+      }
+    },
+    {
+      "page_num": 193,
+      "processing_time": 10.927457094192505,
+      "ocr_time": 10.762150764465332,
+      "reading_order_time": 2.7894973754882812e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 41,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.694,
+      "word_count": 52,
+      "token_count": 41,
+      "text_elements_count": 41,
+      "resource_usage": {
+        "cpu_percent": 918.0,
+        "memory_mb": 4191.09375,
+        "timestamp": 1759772034.6341033,
+        "available": true
+      }
+    },
+    {
+      "page_num": 194,
+      "processing_time": 10.967377185821533,
+      "ocr_time": 10.812589406967163,
+      "reading_order_time": 2.6464462280273438e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 33,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.774,
+      "word_count": 40,
+      "token_count": 33,
+      "text_elements_count": 33,
+      "resource_usage": {
+        "cpu_percent": 919.3,
+        "memory_mb": 4245.94921875,
+        "timestamp": 1759772045.6015365,
+        "available": true
+      }
+    },
+    {
+      "page_num": 195,
+      "processing_time": 11.363790273666382,
+      "ocr_time": 11.20607042312622,
+      "reading_order_time": 3.0279159545898438e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 46,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.669,
+      "word_count": 60,
+      "token_count": 46,
+      "text_elements_count": 46,
+      "resource_usage": {
+        "cpu_percent": 909.1,
+        "memory_mb": 4228.171875,
+        "timestamp": 1759772056.965315,
+        "available": true
+      }
+    },
+    {
+      "page_num": 196,
+      "processing_time": 12.497478246688843,
+      "ocr_time": 12.31955885887146,
+      "reading_order_time": 2.4557113647460938e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 61,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.65,
+      "word_count": 73,
+      "token_count": 61,
+      "text_elements_count": 61,
+      "resource_usage": {
+        "cpu_percent": 891.2,
+        "memory_mb": 4228.3828125,
+        "timestamp": 1759772069.462816,
+        "available": true
+      }
+    },
+    {
+      "page_num": 197,
+      "processing_time": 12.791888236999512,
+      "ocr_time": 12.626731157302856,
+      "reading_order_time": 3.457069396972656e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 61,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.66,
+      "word_count": 82,
+      "token_count": 61,
+      "text_elements_count": 61,
+      "resource_usage": {
+        "cpu_percent": 919.1,
+        "memory_mb": 4229.2734375,
+        "timestamp": 1759772082.2548056,
+        "available": true
+      }
+    },
+    {
+      "page_num": 198,
+      "processing_time": 11.525558710098267,
+      "ocr_time": 11.334845304489136,
+      "reading_order_time": 2.9087066650390625e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 48,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.701,
+      "word_count": 68,
+      "token_count": 48,
+      "text_elements_count": 48,
+      "resource_usage": {
+        "cpu_percent": 918.8,
+        "memory_mb": 4192.0234375,
+        "timestamp": 1759772093.780375,
+        "available": true
+      }
+    },
+    {
+      "page_num": 199,
+      "processing_time": 12.369849443435669,
+      "ocr_time": 12.199951171875,
+      "reading_order_time": 3.600120544433594e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 59,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.666,
+      "word_count": 82,
+      "token_count": 59,
+      "text_elements_count": 59,
+      "resource_usage": {
+        "cpu_percent": 908.8,
+        "memory_mb": 4191.08984375,
+        "timestamp": 1759772106.150226,
+        "available": true
+      }
+    },
+    {
+      "page_num": 200,
+      "processing_time": 10.901830434799194,
+      "ocr_time": 10.743170499801636,
+      "reading_order_time": 3.504753112792969e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 40,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.691,
+      "word_count": 53,
+      "token_count": 40,
+      "text_elements_count": 40,
+      "resource_usage": {
+        "cpu_percent": 919.2,
+        "memory_mb": 4227.99609375,
+        "timestamp": 1759772117.052107,
+        "available": true
+      }
+    },
+    {
+      "page_num": 201,
+      "processing_time": 11.783923864364624,
+      "ocr_time": 11.61338472366333,
+      "reading_order_time": 4.0531158447265625e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 39,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.7,
+      "word_count": 57,
+      "token_count": 39,
+      "text_elements_count": 39,
+      "resource_usage": {
+        "cpu_percent": 888.4,
+        "memory_mb": 4228.02734375,
+        "timestamp": 1759772128.836082,
+        "available": true
+      }
+    },
+    {
+      "page_num": 202,
+      "processing_time": 12.427728414535522,
+      "ocr_time": 12.25816297531128,
+      "reading_order_time": 2.5272369384765625e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 65,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.662,
+      "word_count": 76,
+      "token_count": 65,
+      "text_elements_count": 65,
+      "resource_usage": {
+        "cpu_percent": 909.3,
+        "memory_mb": 4282.04296875,
+        "timestamp": 1759772141.263824,
+        "available": true
+      }
+    },
+    {
+      "page_num": 203,
+      "processing_time": 11.649916887283325,
+      "ocr_time": 11.493851900100708,
+      "reading_order_time": 3.314018249511719e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 51,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.648,
+      "word_count": 68,
+      "token_count": 51,
+      "text_elements_count": 51,
+      "resource_usage": {
+        "cpu_percent": 909.1,
+        "memory_mb": 4336.73828125,
+        "timestamp": 1759772152.9137406,
+        "available": true
+      }
+    },
+    {
+      "page_num": 204,
+      "processing_time": 11.014203786849976,
+      "ocr_time": 10.841012239456177,
+      "reading_order_time": 2.5987625122070312e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 37,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.643,
+      "word_count": 41,
+      "token_count": 37,
+      "text_elements_count": 37,
+      "resource_usage": {
+        "cpu_percent": 907.4,
+        "memory_mb": 4218.80078125,
+        "timestamp": 1759772163.928037,
+        "available": true
+      }
+    },
+    {
+      "page_num": 205,
+      "processing_time": 10.876533269882202,
+      "ocr_time": 10.712515830993652,
+      "reading_order_time": 1.9311904907226562e-05,
+      "correction_time": 4.76837158203125e-07,
+      "text_elements": 39,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.569,
+      "word_count": 44,
+      "token_count": 39,
+      "text_elements_count": 39,
+      "resource_usage": {
+        "cpu_percent": 909.3,
+        "memory_mb": 4191.58984375,
+        "timestamp": 1759772174.8045866,
+        "available": true
+      }
+    },
+    {
+      "page_num": 206,
+      "processing_time": 10.923034429550171,
+      "ocr_time": 10.766572713851929,
+      "reading_order_time": 2.0742416381835938e-05,
+      "correction_time": 7.152557373046875e-07,
+      "text_elements": 39,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.569,
+      "word_count": 44,
+      "token_count": 39,
+      "text_elements_count": 39,
+      "resource_usage": {
+        "cpu_percent": 919.7,
+        "memory_mb": 4227.27734375,
+        "timestamp": 1759772185.7276545,
+        "available": true
+      }
+    },
+    {
+      "page_num": 207,
+      "processing_time": 11.988490343093872,
+      "ocr_time": 11.79487156867981,
+      "reading_order_time": 2.86102294921875e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 47,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.612,
+      "word_count": 49,
+      "token_count": 47,
+      "text_elements_count": 47,
+      "resource_usage": {
+        "cpu_percent": 908.9,
+        "memory_mb": 4229.265625,
+        "timestamp": 1759772197.7161663,
+        "available": true
+      }
+    },
+    {
+      "page_num": 208,
+      "processing_time": 11.292128324508667,
+      "ocr_time": 11.128285884857178,
+      "reading_order_time": 1.7642974853515625e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 36,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.52,
+      "word_count": 36,
+      "token_count": 36,
+      "text_elements_count": 36,
+      "resource_usage": {
+        "cpu_percent": 919.3,
+        "memory_mb": 4310.16015625,
+        "timestamp": 1759772209.0083396,
+        "available": true
+      }
+    },
+    {
+      "page_num": 209,
+      "processing_time": 12.197180986404419,
+      "ocr_time": 12.024869680404663,
+      "reading_order_time": 3.0994415283203125e-05,
+      "correction_time": 2.384185791015625e-07,
+      "text_elements": 45,
+      "language": "english",
+      "corrections_made": 0,
+      "avg_confidence": 0.464,
+      "word_count": 46,
+      "token_count": 45,
+      "text_elements_count": 45,
+      "resource_usage": {
+        "cpu_percent": 894.4,
+        "memory_mb": 4392.21484375,
+        "timestamp": 1759772221.2055426,
+        "available": true
+      }
+    }
+  ]
+}

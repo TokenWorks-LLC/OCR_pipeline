@@ -1,0 +1,55 @@
+{
+  "input": {
+    "input_directory": "./data/input_pdfs",
+    "supported_formats": [
+      ".pdf"
+    ],
+    "process_all_files": true,
+    "specific_file": "",
+    "recursive_search": false
+  },
+  "output": {
+    "output_directory": "./data/working_evaluation/AKT 1, 1990_page_21",
+    "create_subdirectories": true,
+    "timestamp_outputs": false
+  },
+  "processing": {
+    "skip_existing": false,
+    "batch_size": 1,
+    "max_workers": 1,
+    "create_visualizations": false,
+    "create_html_overlay": false,
+    "verbose": true
+  },
+  "ocr": {
+    "engine": "paddleocr",
+    "dpi": 300,
+    "languages": [
+      "en"
+    ],
+    "enable_text_correction": false,
+    "enable_reading_order": true,
+    "confidence_threshold": 0.5
+  },
+  "llm": {
+    "enable_correction": false,
+    "provider": "none",
+    "model": "",
+    "base_url": "",
+    "timeout": 30,
+    "max_concurrent_corrections": 1
+  },
+  "akkadian": {
+    "enable_extraction": false,
+    "confidence_threshold": 0.8,
+    "generate_pdf_report": false,
+    "translation_languages": [
+      "english"
+    ]
+  },
+  "csv_output": {
+    "include_bounding_boxes": true,
+    "include_confidence_scores": true,
+    "include_page_info": true
+  }
+}

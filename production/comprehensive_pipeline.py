@@ -10,7 +10,7 @@ import re
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Optional, Any, Tuple
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, field
 
 import cv2
 import numpy as np
@@ -27,9 +27,10 @@ except ImportError:
 sys.path.append(str(Path(__file__).parent.parent / 'src'))
 
 from aggregated_csv import AggregatedCSVWriter, PageResult
-from llm_correction import LLMCorrector, CorrectionResult
+from enhanced_llm_correction import EnhancedLLMCorrector, CorrectionResult, OCRSpan, BoundingBox
 from akkadian_extract import AkkadianExtractor
 from translations_pdf import generate_translations_report
+from telemetry import get_telemetry, PageTiming
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -46,12 +47,25 @@ class PipelineConfig:
     
     # OCR settings
     dpi: int = 300
-    paddle_use_gpu: bool = False
+    paddle_use_gpu: bool = True  # Enable GPU by default for RTX 4070
+    ocr_languages: List[str] = field(default_factory=lambda: ['en', 'tr', 'de', 'fr', 'it'])
+    
+    # OCR Parameters by language
+    ocr_params: Dict[str, Dict[str, float]] = field(default_factory=lambda: {
+        'en': {'det_db_thresh': 0.3, 'det_db_box_thresh': 0.6, 'rec_score_thresh': 0.5},
+        'tr': {'det_db_thresh': 0.2, 'det_db_box_thresh': 0.5, 'rec_score_thresh': 0.4},
+        'de': {'det_db_thresh': 0.3, 'det_db_box_thresh': 0.6, 'rec_score_thresh': 0.5},
+        'fr': {'det_db_thresh': 0.3, 'det_db_box_thresh': 0.6, 'rec_score_thresh': 0.5},
+        'it': {'det_db_thresh': 0.3, 'det_db_box_thresh': 0.6, 'rec_score_thresh': 0.5}
+    })
     
     # Processing settings
     enable_reading_order: bool = True
     enable_llm_correction: bool = True
     max_concurrent_corrections: int = 3
+    
+    # Performance profiles
+    performance_profile: str = "quality"  # 'fast' or 'quality'
     
     # Akkadian translation extraction
     enable_akkadian_extraction: bool = True
@@ -78,27 +92,86 @@ class ComprehensivePipeline:
         self.csv_writer = AggregatedCSVWriter()
         self.processing_stats = {}
         
+        # Initialize telemetry system
+        self.telemetry = get_telemetry()
+        
         self._initialize_engines()
     
+    def get_ocr_for_language(self, language: str) -> Any:
+        """Get the appropriate OCR engine for a specific language."""
+        # Map language codes to PaddleOCR language codes
+        lang_mapping = {
+            'english': 'en',
+            'turkish': 'tr', 
+            'german': 'de',
+            'french': 'fr',
+            'italian': 'it',
+            'en': 'en',
+            'tr': 'tr',
+            'de': 'de', 
+            'fr': 'fr',
+            'it': 'it'
+        }
+        
+        paddle_lang = lang_mapping.get(language.lower(), 'en')
+        
+        if paddle_lang in self.paddle_ocrs:
+            return self.paddle_ocrs[paddle_lang]
+        else:
+            # Fallback to default (English or first available)
+            logger.warning(f"No OCR available for language {language}, using default")
+            return self.paddle_ocr
+    
     def _initialize_engines(self):
-        """Initialize OCR and LLM engines."""
-        # Initialize PaddleOCR
+        """Initialize OCR and LLM engines with GPU detection for RTX 4070."""
+        # Initialize PaddleOCR with GPU support
         try:
             from paddleocr import PaddleOCR
+            import paddle
+            
+            # Check GPU availability first
+            gpu_available = paddle.device.is_compiled_with_cuda() and paddle.device.cuda.device_count() > 0
+            logger.info(f"PaddlePaddle GPU support: {gpu_available}")
+            if gpu_available:
+                logger.info(f"GPU devices available: {paddle.device.cuda.device_count()}")
+            
+            # Try GPU first if available and configured
+            if gpu_available and self.config.paddle_use_gpu:
+                try:
+                    self.paddle_ocr = PaddleOCR(
+                        use_angle_cls=True,  # Use compatible parameter for 2.7.3
+                        lang='en',
+                        use_gpu=True,
+                        gpu_mem=4000,  # Allocate 4GB for RTX 4070
+                        det_limit_side_len=1280,  # Higher resolution for better accuracy
+                        det_db_thresh=0.3,
+                        det_db_box_thresh=0.6,
+                        rec_score_thresh=0.5
+                    )
+                    logger.info("✅ PaddleOCR initialized successfully with GPU acceleration")
+                    return
+                    
+                except Exception as gpu_e:
+                    logger.warning(f"GPU initialization failed: {gpu_e}")
+                    logger.info("Falling back to CPU mode...")
+            
+            # Fallback to CPU with compatible parameters
             self.paddle_ocr = PaddleOCR(
-                use_textline_orientation=True, 
-                lang='en'
+                use_angle_cls=True,  # Use compatible parameter for 2.7.3
+                lang='en',
+                use_gpu=False
             )
-            logger.info("PaddleOCR initialized successfully")
+            logger.info("PaddleOCR initialized with CPU mode")
             
         except Exception as e:
             logger.error(f"Failed to initialize PaddleOCR: {e}")
+            raise
             raise
         
         # Initialize LLM corrector
         if self.config.enable_llm_correction and self.config.llm_provider != 'none':
             try:
-                self.llm_corrector = LLMCorrector(
+                self.llm_corrector = EnhancedLLMCorrector(
                     provider=self.config.llm_provider,
                     model=self.config.llm_model,
                     base_url=self.config.llm_base_url,
@@ -127,7 +200,7 @@ class ComprehensivePipeline:
             logger.info("Akkadian extraction disabled")
     
     def _extract_text_from_paddle_result(self, paddle_result):
-        """Extract text data from PaddleOCR result format."""
+        """Extract text data from PaddleOCR result format and convert to OCRSpan objects."""
         try:
             if not paddle_result or len(paddle_result) == 0:
                 return []
@@ -154,7 +227,7 @@ class ComprehensivePipeline:
             
             logger.debug(f"Extracted {len(texts)} text elements from PaddleOCR")
             
-            ocr_results = []
+            ocr_spans = []
             for i, text in enumerate(texts):
                 if not text or not text.strip():
                     continue
@@ -173,25 +246,50 @@ class ComprehensivePipeline:
                     y_coords = [point[1] for point in poly]
                     x, y = int(min(x_coords)), int(min(y_coords))
                     w, h = int(max(x_coords) - min(x_coords)), int(max(y_coords) - min(y_coords))
+                    
+                    bbox_obj = BoundingBox(x=x, y=y, width=w, height=h)
                 else:
                     # Default bbox if no polygon data
-                    x, y, w, h = 0, i * 25, 200, 20
+                    bbox_obj = BoundingBox(x=0, y=i * 25, width=200, height=20)
                 
                 # Clean and normalize text
                 cleaned_text = text.strip()
                 if cleaned_text:
-                    ocr_results.append({
-                        'text': cleaned_text,
-                        'bbox': (x, y, w, h),
-                        'conf': float(conf),
-                        'engine': 'paddle'
-                    })
+                    span = OCRSpan(
+                        text=cleaned_text,
+                        confidence=float(conf),
+                        bbox=bbox_obj,
+                        language=None,  # Will be detected by LLM corrector
+                        is_akkadian=False,  # Will be detected by LLM corrector
+                        char_density=0.0
+                    )
+                    ocr_spans.append(span)
             
-            return ocr_results
+            return ocr_spans
             
         except Exception as e:
             logger.error(f"Error extracting text from PaddleOCR result: {e}")
             return []
+    
+    def _convert_spans_to_legacy_format(self, spans: List[OCRSpan]) -> List[Dict]:
+        """Convert OCRSpan objects back to legacy format for compatibility."""
+        legacy_results = []
+        for span in spans:
+            if span.bbox:
+                bbox = (span.bbox.x, span.bbox.y, span.bbox.width, span.bbox.height)
+            else:
+                bbox = (0, 0, 200, 20)
+            
+            legacy_results.append({
+                'text': span.text,
+                'bbox': bbox,
+                'conf': span.confidence,
+                'engine': 'paddle',
+                'language': span.language,
+                'is_akkadian': span.is_akkadian
+            })
+        
+        return legacy_results
     
     def _apply_simple_reading_order(self, text_elements: List[Dict], page_width: int = 800) -> List[Dict]:
         """
@@ -348,6 +446,16 @@ class ComprehensivePipeline:
             Tuple of (PageResult, processing_stats)
         """
         start_time = time.time()
+        page_id = f"page_{page_num:03d}"
+        
+        # Check kill switch
+        if self.telemetry.kill_switch.is_killed:
+            logger.warning(f"Processing stopped by kill switch on {page_id}")
+            return None, {"error": "killed_by_switch"}
+        
+        # Start telemetry timing
+        timing = self.telemetry.start_page_timing(page_id)
+        preprocessing_start = time.time()
         
         try:
             # Load PDF page
@@ -363,29 +471,35 @@ class ComprehensivePipeline:
             page_width = img.shape[1]
             doc.close()
             
+            timing.preprocessing_time = time.time() - preprocessing_start
             # Run OCR
             ocr_start = time.time()
+            
+            # Check OCR kill switch
+            if self.telemetry.kill_switch.is_ocr_disabled:
+                logger.warning(f"OCR disabled by kill switch on {page_id}")
+                return None, {"error": "ocr_disabled"}
+            
             paddle_result = self.paddle_ocr.predict(img)
-            ocr_time = time.time() - ocr_start
+            timing.ocr_time = time.time() - ocr_start
             
             # Extract text elements
             text_elements = self._extract_text_from_paddle_result(paddle_result)
             
             if not text_elements:
                 logger.warning(f"No text detected on page {page_num}")
-                # Monitor resources even for failed pages
-                resource_usage = self._monitor_resources()
+                timing.total_time = time.time() - start_time
+                self.telemetry.record_page_timing(timing)
                 return None, {
                     'page_num': page_num,
-                    'processing_time': time.time() - start_time,
-                    'ocr_time': ocr_time,
+                    'processing_time': timing.total_time,
+                    'ocr_time': timing.ocr_time,
                     'text_elements': 0,
                     'language': 'unknown',
                     'corrections_made': 0,
                     'word_count': 0,
                     'token_count': 0,
-                    'text_elements_count': 0,
-                    'resource_usage': resource_usage
+                    'text_elements_count': 0
                 }
             
             # Apply reading order
@@ -394,39 +508,74 @@ class ComprehensivePipeline:
                 ordered_elements = self._apply_simple_reading_order(text_elements, page_width)
             else:
                 ordered_elements = sorted(text_elements, key=lambda e: (e['bbox'][1], e['bbox'][0]))
-            reading_order_time = time.time() - reading_order_start
+            timing.reading_order_time = time.time() - reading_order_start
             
             # Detect language
+            lang_detect_start = time.time()
             detected_language = self._detect_page_language(ordered_elements)
+            timing.language_detection_time = time.time() - lang_detect_start
             
             # Apply LLM corrections
             correction_start = time.time()
             corrections_made = 0
             correction_stats = None
             
-            if self.llm_corrector and ordered_elements:
-                texts_to_correct = [elem['text'] for elem in ordered_elements]
-                correction_results = self.llm_corrector.correct_multiple_texts(
-                    texts_to_correct, detected_language
-                )
-                
-                # Apply corrections to elements
-                for i, correction in enumerate(correction_results):
-                    if i < len(ordered_elements) and correction.corrected_text != correction.original_text:
-                        ordered_elements[i]['text'] = correction.corrected_text
-                        ordered_elements[i]['original_text'] = correction.original_text
-                        ordered_elements[i]['corrections'] = correction.corrections_made
-                        corrections_made += 1
-                
-                correction_stats = self.llm_corrector.get_correction_stats()
+            if self.llm_corrector and ordered_elements and not self.telemetry.kill_switch.is_llm_disabled:
+                # Check LLM timeout
+                if self.telemetry.kill_switch.check_llm_timeout(correction_start, page_id):
+                    logger.warning(f"LLM timeout on {page_id} - skipping corrections")
+                    correction_stats = None
+                else:
+                    # Convert elements to OCRSpan objects for enhanced LLM processing
+                    ocr_spans = []
+                    for elem in ordered_elements:
+                        # Create bounding box from element coordinates
+                        bbox = BoundingBox(
+                            left=elem.get('x', 0),
+                            top=elem.get('y', 0),
+                            right=elem.get('x', 0) + elem.get('width', 0),
+                            bottom=elem.get('y', 0) + elem.get('height', 0)
+                        )
+                        ocr_span = OCRSpan(
+                            text=elem['text'],
+                            confidence=elem.get('confidence', 0.0),
+                            bounding_box=bbox
+                        )
+                        ocr_spans.append(ocr_span)
+                    
+                    # Apply enhanced LLM corrections
+                    correction_results = self.llm_corrector.correct_spans(
+                        ocr_spans, detected_language
+                    )
+                    
+                    # Apply corrections to elements
+                    for i, corrected_span in enumerate(correction_results):
+                        if i < len(ordered_elements) and corrected_span.text != ocr_spans[i].text:
+                            ordered_elements[i]['text'] = corrected_span.text
+                            ordered_elements[i]['original_text'] = ocr_spans[i].text
+                            ordered_elements[i]['corrections'] = [f"Enhanced LLM correction applied"]
+                            corrections_made += 1
+                    
+                    correction_stats = self.llm_corrector.get_correction_stats()
             
-            correction_time = time.time() - correction_start
+            timing.llm_correction_time = time.time() - correction_start
+            
+            # Post-processing
+            post_processing_start = time.time()
             
             # Count words and tokens
             word_token_counts = self._count_words_and_tokens(ordered_elements, detected_language)
             
-            # Monitor resources
-            resource_usage = self._monitor_resources()
+            # Calculate telemetry metrics
+            timing.lines_processed = len(ordered_elements)
+            timing.characters_processed = sum(len(elem['text']) for elem in ordered_elements)
+            timing.corrections_made = corrections_made
+            timing.post_processing_time = time.time() - post_processing_start
+            timing.total_time = time.time() - start_time
+            
+            # Check for timeout
+            if self.telemetry.kill_switch.check_page_timeout(start_time, page_id):
+                return None, {"error": "page_timeout"}
             
             # Create page result
             page_id = f"page_{page_num:03d}"
@@ -438,11 +587,14 @@ class ComprehensivePipeline:
                 language=detected_language,
                 correction_stats=correction_stats,
                 reading_order_stats={
-                    'processing_time': reading_order_time,
+                    'processing_time': timing.reading_order_time,
                     'elements_processed': len(ordered_elements),
                     'columns_detected': 2 if len(set(elem['bbox'][0] for elem in ordered_elements)) > page_width * 0.3 else 1
                 }
             )
+            
+            # Record telemetry
+            self.telemetry.record_page_timing(timing)
             
             # Get page result from CSV writer
             page_result = self.csv_writer.pages_data.get(page_id)
@@ -450,10 +602,10 @@ class ComprehensivePipeline:
             # Create processing stats
             processing_stats = {
                 'page_num': page_num,
-                'processing_time': time.time() - start_time,
-                'ocr_time': ocr_time,
-                'reading_order_time': reading_order_time,
-                'correction_time': correction_time,
+                'processing_time': timing.total_time,
+                'ocr_time': timing.ocr_time,
+                'reading_order_time': timing.reading_order_time,
+                'correction_time': timing.llm_correction_time,
                 'text_elements': len(ordered_elements),
                 'language': detected_language,
                 'corrections_made': corrections_made,
@@ -462,7 +614,11 @@ class ComprehensivePipeline:
                 'word_count': word_token_counts['word_count'],
                 'token_count': word_token_counts['token_count'],
                 'text_elements_count': word_token_counts['text_elements_count'],
-                'resource_usage': resource_usage
+                'telemetry': {
+                    'lines_per_second': timing.lines_per_second,
+                    'characters_per_second': timing.characters_per_second,
+                    'ms_per_page': timing.ms_per_page
+                }
             }
             
             logger.info(f"Processed page {page_num}: {len(ordered_elements)} elements, "
@@ -475,16 +631,17 @@ class ComprehensivePipeline:
             import traceback
             traceback.print_exc()
             
-            # Monitor resources even for error cases
-            resource_usage = self._monitor_resources()
+            # Record failed timing
+            timing.total_time = time.time() - start_time
+            self.telemetry.record_page_timing(timing)
+            
             return None, {
                 'page_num': page_num,
-                'processing_time': time.time() - start_time,
+                'processing_time': timing.total_time,
                 'error': str(e),
                 'word_count': 0,
                 'token_count': 0,
-                'text_elements_count': 0,
-                'resource_usage': resource_usage
+                'text_elements_count': 0
             }
     
     def process_pdf(self, pdf_path: str, output_dir: str, 
@@ -761,17 +918,34 @@ class ComprehensivePipeline:
             correction_stats = None
             
             if self.llm_corrector and ordered_elements:
-                texts_to_correct = [elem['text'] for elem in ordered_elements]
-                correction_results = self.llm_corrector.correct_multiple_texts(
-                    texts_to_correct, detected_language
+                # Convert elements to OCRSpan objects for enhanced LLM processing
+                ocr_spans = []
+                for elem in ordered_elements:
+                    # Create bounding box from element coordinates
+                    bbox = BoundingBox(
+                        left=elem.get('x', 0),
+                        top=elem.get('y', 0),
+                        right=elem.get('x', 0) + elem.get('width', 0),
+                        bottom=elem.get('y', 0) + elem.get('height', 0)
+                    )
+                    ocr_span = OCRSpan(
+                        text=elem['text'],
+                        confidence=elem.get('confidence', 0.0),
+                        bounding_box=bbox
+                    )
+                    ocr_spans.append(ocr_span)
+                
+                # Apply enhanced LLM corrections
+                correction_results = self.llm_corrector.correct_spans(
+                    ocr_spans, detected_language
                 )
                 
                 # Apply corrections to elements
-                for i, correction in enumerate(correction_results):
-                    if i < len(ordered_elements) and correction.corrected_text != correction.original_text:
-                        ordered_elements[i]['text'] = correction.corrected_text
-                        ordered_elements[i]['original_text'] = correction.original_text
-                        ordered_elements[i]['corrections'] = correction.corrections_made
+                for i, corrected_span in enumerate(correction_results):
+                    if i < len(ordered_elements) and corrected_span.text != ocr_spans[i].text:
+                        ordered_elements[i]['text'] = corrected_span.text
+                        ordered_elements[i]['original_text'] = ocr_spans[i].text
+                        ordered_elements[i]['corrections'] = [f"Enhanced LLM correction applied"]
                         corrections_made += 1
                 
                 correction_stats = self.llm_corrector.get_correction_stats()
@@ -904,6 +1078,22 @@ class ComprehensivePipeline:
                 'error': str(e),
                 'output_csv': None
             }
+    
+    def export_telemetry(self, output_dir: Path) -> None:
+        """Export telemetry data and performance metrics."""
+        try:
+            telemetry_path = output_dir / "telemetry_report.json"
+            self.telemetry.export_metrics(str(telemetry_path))
+            
+            # Also save LLM cache
+            if self.llm_corrector:
+                self.llm_corrector.save_cache()
+                logger.info("LLM cache saved to disk")
+            
+            logger.info(f"Telemetry exported to {telemetry_path}")
+            
+        except Exception as e:
+            logger.error(f"Failed to export telemetry: {e}")
 
 
 def main():

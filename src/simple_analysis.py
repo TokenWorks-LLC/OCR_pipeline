@@ -329,23 +329,23 @@ class SimpleAnalyzer:
             if total_words > 0:
                 # Modern languages: use word-based efficiency
                 if time_per_word < 0.05:
-                    efficiency_rating = "⚡ **Excellent** - Very fast processing"
+                    efficiency_rating = " **Excellent** - Very fast processing"
                 elif time_per_word < 0.1:
-                    efficiency_rating = "✅ **Good** - Efficient processing"
+                    efficiency_rating = " **Good** - Efficient processing"
                 elif time_per_word < 0.2:
-                    efficiency_rating = "⚠️ **Moderate** - Acceptable speed"
+                    efficiency_rating = "️ **Moderate** - Acceptable speed"
                 else:
-                    efficiency_rating = "❌ **Slow** - Needs optimization"
+                    efficiency_rating = " **Slow** - Needs optimization"
             else:
                 # Akkadian/limited languages: use token-based efficiency
                 if time_per_token < 0.1:
-                    efficiency_rating = "⚡ **Excellent** - Very fast processing"
+                    efficiency_rating = " **Excellent** - Very fast processing"
                 elif time_per_token < 0.2:
-                    efficiency_rating = "✅ **Good** - Efficient processing"
+                    efficiency_rating = " **Good** - Efficient processing"
                 elif time_per_token < 0.5:
-                    efficiency_rating = "⚠️ **Moderate** - Acceptable speed"
+                    efficiency_rating = "️ **Moderate** - Acceptable speed"
                 else:
-                    efficiency_rating = "❌ **Slow** - Needs optimization"
+                    efficiency_rating = " **Slow** - Needs optimization"
             
             report_lines.append(f"- **Processing Speed**: {efficiency_rating}")
             # Calculate throughput based on what's available
@@ -359,18 +359,18 @@ class SimpleAnalyzer:
             memory_usage = metrics.get('avg_memory_mb', 0)
             
             if cpu_usage > 500:
-                cpu_efficiency = "🔥 **High CPU usage** - Consider optimization"
+                cpu_efficiency = " **High CPU usage** - Consider optimization"
             elif cpu_usage > 200:
-                cpu_efficiency = "⚠️ **Moderate CPU usage** - Monitor performance"
+                cpu_efficiency = "️ **Moderate CPU usage** - Monitor performance"
             else:
-                cpu_efficiency = "✅ **Efficient CPU usage** - Good resource utilization"
+                cpu_efficiency = " **Efficient CPU usage** - Good resource utilization"
             
             if memory_usage > 2000:
-                memory_efficiency = "🧠 **High memory usage** - Consider memory optimization"
+                memory_efficiency = " **High memory usage** - Consider memory optimization"
             elif memory_usage > 1000:
-                memory_efficiency = "⚠️ **Moderate memory usage** - Monitor consumption"
+                memory_efficiency = "️ **Moderate memory usage** - Monitor consumption"
             else:
-                memory_efficiency = "✅ **Efficient memory usage** - Good memory management"
+                memory_efficiency = " **Efficient memory usage** - Good memory management"
             
             report_lines.append(f"- **CPU Efficiency**: {cpu_efficiency}")
             report_lines.append(f"- **Memory Efficiency**: {memory_efficiency}")
@@ -411,15 +411,15 @@ class SimpleAnalyzer:
                 akkadian_efficiency = akkadian_metrics.get('time_per_word', 0)
                 
                 if akkadian_efficiency < basic_efficiency:
-                    report_lines.append(f"✅ **{akkadian_mode} mode is more cost-efficient** - {akkadian_efficiency:.4f}s/word vs {basic_efficiency:.4f}s/word")
+                    report_lines.append(f" **{akkadian_mode} mode is more cost-efficient** - {akkadian_efficiency:.4f}s/word vs {basic_efficiency:.4f}s/word")
                 else:
-                    report_lines.append(f"⚠️ **{basic_mode} mode is more cost-efficient** - {basic_efficiency:.4f}s/word vs {akkadian_efficiency:.4f}s/word")
+                    report_lines.append(f"️ **{basic_mode} mode is more cost-efficient** - {basic_efficiency:.4f}s/word vs {akkadian_efficiency:.4f}s/word")
                 
                 # Success rate comparison
                 if akkadian_metrics.get('success_rate', 0) > basic_metrics.get('success_rate', 0):
-                    report_lines.append(f"✅ **{akkadian_mode} mode has better success rate** - consider for critical documents")
+                    report_lines.append(f" **{akkadian_mode} mode has better success rate** - consider for critical documents")
                 else:
-                    report_lines.append(f"⚠️ **{basic_mode} mode has better success rate** - {akkadian_mode} mode may need optimization")
+                    report_lines.append(f"️ **{basic_mode} mode has better success rate** - {akkadian_mode} mode may need optimization")
         else:
             # Single mode analysis recommendations
             mode_name = list(comparison_data.keys())[0]
@@ -428,38 +428,38 @@ class SimpleAnalyzer:
             # Performance analysis
             success_rate = metrics.get('success_rate', 0)
             if success_rate >= 0.95:
-                report_lines.append(f"✅ **Excellent success rate** ({success_rate:.1%}) - {mode_name} mode is performing well")
+                report_lines.append(f" **Excellent success rate** ({success_rate:.1%}) - {mode_name} mode is performing well")
             elif success_rate >= 0.90:
-                report_lines.append(f"⚠️ **Good success rate** ({success_rate:.1%}) - {mode_name} mode is acceptable but could be improved")
+                report_lines.append(f"️ **Good success rate** ({success_rate:.1%}) - {mode_name} mode is acceptable but could be improved")
             else:
-                report_lines.append(f"❌ **Low success rate** ({success_rate:.1%}) - {mode_name} mode needs optimization")
+                report_lines.append(f" **Low success rate** ({success_rate:.1%}) - {mode_name} mode needs optimization")
             
             # Resource usage analysis
             cpu_usage = metrics.get('avg_cpu_percent', 0)
             if cpu_usage > 500:
-                report_lines.append(f"🔥 **High CPU usage** ({cpu_usage:.1f}%) - Consider optimizing for better efficiency")
+                report_lines.append(f" **High CPU usage** ({cpu_usage:.1f}%) - Consider optimizing for better efficiency")
             elif cpu_usage > 200:
-                report_lines.append(f"⚠️ **Moderate CPU usage** ({cpu_usage:.1f}%) - Monitor for performance impact")
+                report_lines.append(f"️ **Moderate CPU usage** ({cpu_usage:.1f}%) - Monitor for performance impact")
             else:
-                report_lines.append(f"✅ **Efficient CPU usage** ({cpu_usage:.1f}%) - Good resource utilization")
+                report_lines.append(f" **Efficient CPU usage** ({cpu_usage:.1f}%) - Good resource utilization")
             
             # Memory usage analysis
             memory_usage = metrics.get('avg_memory_mb', 0)
             if memory_usage > 2000:
-                report_lines.append(f"🧠 **High memory usage** ({memory_usage:.0f}MB) - Consider memory optimization")
+                report_lines.append(f" **High memory usage** ({memory_usage:.0f}MB) - Consider memory optimization")
             elif memory_usage > 1000:
-                report_lines.append(f"⚠️ **Moderate memory usage** ({memory_usage:.0f}MB) - Monitor memory consumption")
+                report_lines.append(f"️ **Moderate memory usage** ({memory_usage:.0f}MB) - Monitor memory consumption")
             else:
-                report_lines.append(f"✅ **Efficient memory usage** ({memory_usage:.0f}MB) - Good memory management")
+                report_lines.append(f" **Efficient memory usage** ({memory_usage:.0f}MB) - Good memory management")
             
             # Cost efficiency analysis
             time_per_word = metrics.get('time_per_word', 0)
             if time_per_word < 0.05:
-                report_lines.append(f"⚡ **Excellent processing speed** ({time_per_word:.4f}s/word) - Very efficient")
+                report_lines.append(f" **Excellent processing speed** ({time_per_word:.4f}s/word) - Very efficient")
             elif time_per_word < 0.1:
-                report_lines.append(f"✅ **Good processing speed** ({time_per_word:.4f}s/word) - Efficient processing")
+                report_lines.append(f" **Good processing speed** ({time_per_word:.4f}s/word) - Efficient processing")
             else:
-                report_lines.append(f"⚠️ **Slow processing speed** ({time_per_word:.4f}s/word) - Consider optimization")
+                report_lines.append(f"️ **Slow processing speed** ({time_per_word:.4f}s/word) - Consider optimization")
         
         report_lines.append("")
         report_lines.append("## Notes")
@@ -542,11 +542,11 @@ def main():
         results = analyzer.run_analysis(args.eval_dirs)
         
         print("\n" + "="*60)
-        print("📊 SIMPLIFIED ANALYSIS COMPLETE")
+        print(" SIMPLIFIED ANALYSIS COMPLETE")
         print("="*60)
-        print(f"📄 Report: {results['markdown_report']}")
-        print(f"📊 JSON Summary: {results['json_summary']}")
-        print(f"📈 Charts: {len(results['charts'])} generated")
+        print(f" Report: {results['markdown_report']}")
+        print(f" JSON Summary: {results['json_summary']}")
+        print(f" Charts: {len(results['charts'])} generated")
         for chart in results['charts']:
             print(f"   - {chart}")
         print("="*60)

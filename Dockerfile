@@ -44,9 +44,9 @@ ENV PIP_ONLY_BINARY=:all: \
 # Upgrade pip and install build tools
 RUN python -m pip install -U pip setuptools wheel
 
-# Install core dependencies with pinned versions
+# Install core dependencies with compatible versions
 RUN python -m pip install --only-binary=:all: \
-    "PyMuPDF==1.24.10" \
+    "PyMuPDF>=1.21.0" \
     "opencv-python-headless==4.10.0.84" \
     "pdf2image==1.17.0" \
     "numpy>=1.24.0" \
@@ -57,8 +57,31 @@ RUN python -m pip install --only-binary=:all: \
 RUN python -m pip uninstall -y paddlepaddle paddlepaddle-gpu || true \
     && python -m pip install --no-cache-dir paddlepaddle-gpu==2.6.1
 
-# Install PaddleOCR 2.7.x stable
-RUN python -m pip install paddleocr==2.7.0.3
+# Install PaddleOCR latest version (compatible with newer PyMuPDF)
+RUN python -m pip install paddleocr>=2.8.0
+
+# Install PyTorch for docTR and other engines (CUDA 12.1 compatible)
+RUN python -m pip install --extra-index-url https://download.pytorch.org/whl/cu121 \
+    torch==2.1.0+cu121 \
+    torchvision==0.16.0+cu121 \
+    torchaudio==2.1.0+cu121
+
+# Install optional OCR engines (with error handling for optional dependencies)
+# Install rapidfuzz first (required for docTR)
+RUN python -m pip install "rapidfuzz>=3.0.0" || echo "⚠️ rapidfuzz installation failed"
+
+# docTR installation with dependencies
+RUN python -m pip install python-doctr[torch] || echo "⚠️ docTR installation failed, skipping"
+
+# MMOCR dependencies with correct MMCV version constraint
+RUN python -m pip install openmim && \
+    mim install mmengine "mmcv>=2.0.0rc4,<2.2.0" mmdet || echo "⚠️ MMOCR dependencies installation failed, skipping"
+
+# Install MMOCR
+RUN python -m pip install mmocr || echo "⚠️ MMOCR installation failed, skipping"
+
+# Install Kraken with dependencies
+RUN python -m pip install "lxml>=4.0" "click>=8.0" "kraken[cuda]" || echo "⚠️ Kraken installation failed, skipping"
 
 # Manually install required runtime deps PaddleOCR expects (binary wheels only)
 RUN python -m pip install --only-binary=:all: \

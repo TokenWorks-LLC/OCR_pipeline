@@ -143,7 +143,7 @@ def calculate_similarity(text1, text2):
         'ocr_length': len(text2)
     }
 
-def run_pipeline_on_page(pdf_path, page_num, output_dir):
+def run_pipeline_on_page(pdf_path, page_num, output_dir, base_config=None):
     """Run the OCR pipeline on a specific page"""
     logger = logging.getLogger(__name__)
     
@@ -152,8 +152,26 @@ def run_pipeline_on_page(pdf_path, page_num, output_dir):
         page_output_dir = os.path.join(output_dir, f"{Path(pdf_path).stem}_page_{page_num}")
         os.makedirs(page_output_dir, exist_ok=True)
         
-        # Create a temporary config for this specific run
-        temp_config = {
+        # Start with base config if provided, otherwise use minimal config
+        if base_config:
+            temp_config = base_config.copy()
+        else:
+            temp_config = {
+                "ocr": {
+                    "engine": "paddleocr", 
+                    "dpi": 300,
+                    "confidence_threshold": 0.5
+                },
+                "llm": {
+                    "enable_correction": False
+                },
+                "akkadian": {
+                    "enable_extraction": False
+                }
+            }
+        
+        # Override specific settings for this page
+        temp_config.update({
             "input": {
                 "input_directory": os.path.dirname(pdf_path),
                 "file_formats": [".pdf"],
@@ -166,19 +184,8 @@ def run_pipeline_on_page(pdf_path, page_num, output_dir):
             "processing": {
                 "skip_existing": False,
                 "specific_pages": [page_num]
-            },
-            "ocr": {
-                "engine": "paddleocr",
-                "dpi": 300,
-                "confidence_threshold": 0.5
-            },
-            "llm": {
-                "enable_correction": False
-            },
-            "akkadian": {
-                "enable_extraction": False
             }
-        }
+        })
         
         config_file = os.path.join(page_output_dir, 'temp_config.json')
         with open(config_file, 'w', encoding='utf-8') as f:
@@ -189,7 +196,7 @@ def run_pipeline_on_page(pdf_path, page_num, output_dir):
         cmd = [sys.executable, 'run_pipeline.py', '--config', config_file]
         
         logger.info(f"Running pipeline: {' '.join(cmd)}")
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+        result = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8', timeout=300)
         
         if result.returncode != 0:
             logger.error(f"Pipeline failed: {result.stderr}")
@@ -238,8 +245,32 @@ def run_pipeline_on_page(pdf_path, page_num, output_dir):
 
 def main():
     """Main evaluation function"""
+    import argparse
+    
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description="Gold Standard OCR Evaluation")
+    parser.add_argument("--config", default="reports/best_config.json", 
+                       help="Path to configuration file (default: reports/best_config.json)")
+    args = parser.parse_args()
+    
     logger = setup_logging()
     logger.info("Starting gold standard evaluation")
+    
+    # Load base configuration
+    base_config = None
+    if args.config and os.path.exists(args.config):
+        logger.info(f"Loading base configuration from: {args.config}")
+        try:
+            with open(args.config, 'r', encoding='utf-8') as f:
+                import json
+                base_config = json.load(f)
+            logger.info("Successfully loaded base configuration for quality processing")
+        except Exception as e:
+            logger.warning(f"Failed to load config {args.config}: {e}")
+            logger.info("Continuing with minimal configuration")
+    else:
+        logger.warning(f"Config file not found: {args.config}")
+        logger.info("Using minimal configuration")
     
     # Configuration
     gold_data_path = "data/gold_data/gold_pages.csv"
@@ -270,8 +301,8 @@ def main():
     for i, task in enumerate(tasks, 1):
         logger.info(f"Processing task {i}/{len(tasks)}: {task['pdf_name']} page {task['page']}")
         
-        # Run pipeline
-        ocr_text = run_pipeline_on_page(task['pdf_path'], task['page'], output_dir)
+        # Run pipeline with base config
+        ocr_text = run_pipeline_on_page(task['pdf_path'], task['page'], output_dir, base_config)
         
         if ocr_text is None:
             logger.warning(f"Failed to get OCR result for {task['pdf_name']} page {task['page']}")

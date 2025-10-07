@@ -30,11 +30,11 @@ def load_config(config_path: str = "config.json") -> Dict[str, Any]:
             config = json.load(f)
         return config
     except FileNotFoundError:
-        print(f"❌ Config file not found: {config_path}")
+        print(f"Config file not found: {config_path}")
         print("Please ensure config.json exists in the project root directory.")
         sys.exit(1)
     except json.JSONDecodeError as e:
-        print(f"❌ Invalid JSON in config file: {e}")
+        print(f"Invalid JSON in config file: {e}")
         sys.exit(1)
 
 def validate_config(config: Dict[str, Any]) -> bool:
@@ -43,36 +43,36 @@ def validate_config(config: Dict[str, Any]) -> bool:
     
     for section in required_sections:
         if section not in config:
-            print(f"❌ Missing required config section: {section}")
+            print(f" Missing required config section: {section}")
             return False
     
     # Validate evaluation section if present
     if 'evaluation' in config:
         eval_config = config['evaluation']
         if not isinstance(eval_config, dict):
-            print("❌ Evaluation section must be a dictionary")
+            print(" Evaluation section must be a dictionary")
             return False
         
         if eval_config.get('enable_benchmarking', False):
             if 'output_file' not in eval_config:
-                print("❌ Evaluation output_file is required when benchmarking is enabled")
+                print(" Evaluation output_file is required when benchmarking is enabled")
                 return False
     
     # Validate input directory
     input_dir = config['input']['input_directory']
-    if not config['input']['process_all_files']:
+    if not config['input'].get('process_all_files', True):
         # Check specific file
-        specific_file = config['input']['specific_file']
+        specific_file = config['input'].get('specific_file', '')
         if not specific_file:
-            print("❌ When process_all_files is false, specific_file must be provided")
+            print(" When process_all_files is false, specific_file must be provided")
             return False
         if not os.path.exists(specific_file):
-            print(f"❌ Specific file not found: {specific_file}")
+            print(f" Specific file not found: {specific_file}")
             return False
     else:
         # Check input directory
         if not os.path.exists(input_dir):
-            print(f"❌ Input directory not found: {input_dir}")
+            print(f" Input directory not found: {input_dir}")
             return False
     
     return True
@@ -81,15 +81,15 @@ def get_files_to_process(config: Dict[str, Any]) -> List[str]:
     """Get list of files to process based on configuration."""
     files_to_process = []
     
-    if not config['input']['process_all_files']:
+    if not config['input'].get('process_all_files', True):
         # Process single file
-        specific_file = config['input']['specific_file']
+        specific_file = config['input'].get('specific_file', '')
         if os.path.exists(specific_file):
             files_to_process.append(specific_file)
     else:
         # Process all files in directory
         input_dir = config['input']['input_directory']
-        supported_formats = config['input']['supported_formats']
+        supported_formats = config['input'].get('supported_formats', ['.pdf', '.png', '.jpg', '.jpeg', '.tiff', '.bmp'])
         recursive = config['input'].get('recursive_search', False)
         
         search_pattern = "**/*" if recursive else "*"
@@ -154,13 +154,13 @@ def create_pipeline_config(config: Dict[str, Any]):
         return pipeline_config
         
     except ImportError:
-        print("❌ Unable to import comprehensive_pipeline module")
+        print(" Unable to import comprehensive_pipeline module")
         print("Please ensure all required modules are available")
         sys.exit(1)
 
 def process_single_file(file_path: str, config: Dict[str, Any], pipeline_config, pipeline, logger) -> Dict[str, Any]:
     """Process a single file."""
-    logger.info(f"📄 Processing: {file_path}")
+    logger.info(f" Processing: {file_path}")
     
     # Determine output directory
     output_dir = config['output']['output_directory']
@@ -191,7 +191,7 @@ def process_single_file(file_path: str, config: Dict[str, Any], pipeline_config,
         return result
         
     except Exception as e:
-        logger.error(f"❌ Failed to process {file_path}: {str(e)}")
+        logger.error(f" Failed to process {file_path}: {str(e)}")
         return {'error': str(e), 'file': file_path}
 
 def print_processing_summary(results: List[Dict[str, Any]], start_time: float, logger):
@@ -203,30 +203,30 @@ def print_processing_summary(results: List[Dict[str, Any]], start_time: float, l
     failed = [r for r in results if 'error' in r]
     
     print("\n" + "="*60)
-    print("📊 PROCESSING SUMMARY")
+    print(" PROCESSING SUMMARY")
     print("="*60)
     print(f"⏱️  Total processing time: {total_time:.2f} seconds")
-    print(f"📁 Files processed: {len(results)}")
-    print(f"✅ Successful: {len(successful)}")
-    print(f"❌ Failed: {len(failed)}")
+    print(f" Files processed: {len(results)}")
+    print(f" Successful: {len(successful)}")
+    print(f" Failed: {len(failed)}")
     
     if successful:
-        print(f"\n✅ Successfully processed files:")
+        print(f"\n Successfully processed files:")
         for result in successful:
             if 'output_csv' in result:
-                print(f"   📄 {result.get('file', 'Unknown')} → {result['output_csv']}")
+                print(f"    {result.get('file', 'Unknown')} → {result['output_csv']}")
             
             # Show Akkadian results if available
             akkadian_count = result.get('akkadian_translations_found', 0)
             if akkadian_count > 0:
-                print(f"      🏛️  Akkadian translations found: {akkadian_count}")
+                print(f"      ️  Akkadian translations found: {akkadian_count}")
                 if result.get('akkadian_translations_pdf'):
-                    print(f"      📋 PDF report: {result['akkadian_translations_pdf']}")
+                    print(f"       PDF report: {result['akkadian_translations_pdf']}")
     
     if failed:
-        print(f"\n❌ Failed files:")
+        print(f"\n Failed files:")
         for result in failed:
-            print(f"   📄 {result.get('file', 'Unknown')}: {result.get('error', 'Unknown error')}")
+            print(f"    {result.get('file', 'Unknown')}: {result.get('error', 'Unknown error')}")
 
 def main():
     """Main execution function."""
@@ -242,21 +242,21 @@ def main():
     
     args = parser.parse_args()
     
-    print("🚀 OCR Pipeline - Unified Document Processor")
+    print("OCR Pipeline - Unified Document Processor")
     print("=" * 50)
     
     # Load configuration
-    print(f"📄 Loading configuration from: {args.config}")
+    print(f"Loading configuration from: {args.config}")
     config = load_config(args.config)
     
     # Validate configuration
-    print("🔍 Validating configuration...")
+    print(" Validating configuration...")
     if not validate_config(config):
         sys.exit(1)
-    print("✅ Configuration valid")
+    print(" Configuration valid")
     
     if args.validate_only:
-        print("✅ Configuration validation completed successfully")
+        print(" Configuration validation completed successfully")
         return 0
     
     # Setup logging
@@ -274,53 +274,56 @@ def main():
         benchmark_tracker = BenchmarkTracker(output_file, mode_name)
         benchmark_tracker.start_benchmark()
         
-        print(f"📊 Evaluation mode enabled: {mode_name}")
-        print(f"📈 Benchmark output: {output_file}")
+        print(f" Evaluation mode enabled: {mode_name}")
+        print(f" Benchmark output: {output_file}")
     elif eval_mode and not BENCHMARK_AVAILABLE:
-        print("⚠️  Evaluation mode requested but benchmark tracker not available")
+        print("️  Evaluation mode requested but benchmark tracker not available")
         print("   Continuing without benchmarking...")
     
     # Get files to process
     files_to_process = get_files_to_process(config)
     
     if not files_to_process:
-        print("❌ No files found to process")
+        print(" No files found to process")
         print("Please check your input directory and file formats configuration")
         return 1
     
-    print(f"\n📁 Found {len(files_to_process)} file(s) to process:")
+    print(f"\n Found {len(files_to_process)} file(s) to process:")
     for i, file_path in enumerate(files_to_process, 1):
-        print(f"   {i}. {file_path}")
+        try:
+            print(f"   {i}. {file_path}")
+        except UnicodeEncodeError:
+            print(f"   {i}. {file_path.encode('ascii', 'replace').decode('ascii')}")
     
     if args.dry_run:
-        print("\n🏃 Dry run completed - no files were processed")
+        print("\n Dry run completed - no files were processed")
         return 0
     
     # Create pipeline configuration and initialize pipeline
-    print("\n🔧 Initializing OCR pipeline...")
+    print("\n Initializing OCR pipeline...")
     try:
         from comprehensive_pipeline import ComprehensivePipeline
         
         pipeline_config = create_pipeline_config(config)
         pipeline = ComprehensivePipeline(pipeline_config)
         
-        print("✅ Pipeline initialized successfully")
+        print(" Pipeline initialized successfully")
         
         # Display configuration summary
-        print(f"\n⚙️  Configuration Summary:")
-        print(f"   🔧 OCR Engine: {config.get('ocr', {}).get('engine', 'paddleocr')}")
-        print(f"   🎯 DPI: {config.get('ocr', {}).get('dpi', 300)}")
-        print(f"   🧠 LLM Correction: {'Enabled' if config.get('llm', {}).get('enable_correction', True) else 'Disabled'}")
-        print(f"   🏛️  Akkadian Extraction: {'Enabled' if config.get('akkadian', {}).get('enable_extraction', True) else 'Disabled'}")
+        print(f"\n️  Configuration Summary:")
+        print(f"    OCR Engine: {config.get('ocr', {}).get('engine', 'paddleocr')}")
+        print(f"    DPI: {config.get('ocr', {}).get('dpi', 300)}")
+        print(f"    LLM Correction: {'Enabled' if config.get('llm', {}).get('enable_correction', True) else 'Disabled'}")
+        print(f"   ️  Akkadian Extraction: {'Enabled' if config.get('akkadian', {}).get('enable_extraction', True) else 'Disabled'}")
         
     except Exception as e:
-        print(f"❌ Failed to initialize pipeline: {e}")
+        print(f" Failed to initialize pipeline: {e}")
         import traceback
         traceback.print_exc()
         return 1
     
     # Process files
-    print(f"\n🚀 Starting processing of {len(files_to_process)} file(s)...")
+    print(f"\n Starting processing of {len(files_to_process)} file(s)...")
     start_time = time.time()
     results = []
     
@@ -333,7 +336,7 @@ def main():
     confidence_count = 0
     
     for i, file_path in enumerate(files_to_process, 1):
-        print(f"\n📄 Processing file {i}/{len(files_to_process)}: {os.path.basename(file_path)}")
+        print(f"\n Processing file {i}/{len(files_to_process)}: {os.path.basename(file_path)}")
         
         # Check if we should skip existing files
         if config.get('processing', {}).get('skip_existing', True):
@@ -395,7 +398,7 @@ def main():
         # Print evaluation summary
         summary_stats = benchmark_tracker.get_summary_stats()
         if summary_stats:
-            print(f"\n📊 EVALUATION SUMMARY")
+            print(f"\n EVALUATION SUMMARY")
             print(f"   Mode: {benchmark_tracker.mode_name}")
             print(f"   Total processing time: {summary_stats.get('total_processing_time', 0):.2f}s")
             print(f"   Files processed: {summary_stats.get('total_files_processed', 0)}")
@@ -429,7 +432,7 @@ def main():
                 } if eval_mode else None
             }, f, indent=2, ensure_ascii=False)
         
-        print(f"\n📋 Processing report saved: {report_path}")
+        print(f"\n Processing report saved: {report_path}")
         
     except Exception as e:
         logger.warning(f"Could not save processing report: {e}")
@@ -437,13 +440,13 @@ def main():
     # Return exit code based on results
     failed_count = len([r for r in results if 'error' in r])
     if failed_count == 0:
-        print("\n🎉 All files processed successfully!")
+        print("\n All files processed successfully!")
         return 0
     elif failed_count < len(results):
-        print(f"\n⚠️  Processing completed with {failed_count} failures")
+        print(f"\n️  Processing completed with {failed_count} failures")
         return 0
     else:
-        print(f"\n❌ All files failed to process")
+        print(f"\n All files failed to process")
         return 1
 
 if __name__ == "__main__":

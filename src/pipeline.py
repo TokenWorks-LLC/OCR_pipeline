@@ -9,7 +9,7 @@ import numpy as np
 
 from config import ROTATION_CANDIDATES
 from preprocess import preprocess_pipeline
-from ocr_utils import quick_ocr_conf, ocr_ensemble
+from ocr_utils import quick_ocr_conf, ocr_ensemble, ocr_with_engine
 from lang_and_extract import extract_translations, detect_lang
 from llama_correction import correct_ocr_lines
 
@@ -92,13 +92,17 @@ def preprocess_image_pipeline(img: np.ndarray) -> np.ndarray:
     return img
 
 
-def process_image(img: np.ndarray, extract_all_text: bool = True) -> List[dict]:
+def process_image(img: np.ndarray, extract_all_text: bool = True, 
+                 ocr_engine: str = None, ocr_profile: str = None, ocr_device: str = None) -> List[dict]:
     """
     Complete pipeline: preprocess image, run OCR ensemble, extract text.
     
     Args:
         img: Input image (BGR format from cv2.imread)
         extract_all_text: If True, extract all OCR'd text; if False, only extract translation patterns
+        ocr_engine: OCR engine to use (None = use config default)
+        ocr_profile: OCR performance profile (None = use config default)
+        ocr_device: Device for OCR (None = use config default)
     
     Returns:
         List of text dictionaries
@@ -109,9 +113,15 @@ def process_image(img: np.ndarray, extract_all_text: bool = True) -> List[dict]:
         # Step 1: Preprocess image
         preprocessed_img = preprocess_image_pipeline(img)
         
-        # Step 2: Run OCR ensemble
-        ocr_lines = ocr_ensemble(preprocessed_img)
-        logger.info(f"OCR found {len(ocr_lines)} text lines")
+        # Step 2: Run OCR with configurable engine
+        if ocr_engine or ocr_profile or ocr_device:
+            # Use specified OCR configuration
+            ocr_lines = ocr_with_engine(preprocessed_img, ocr_engine, ocr_profile, ocr_device)
+            logger.info(f"OCR with {ocr_engine or 'default'} engine found {len(ocr_lines)} text lines")
+        else:
+            # Use legacy ensemble for backward compatibility
+            ocr_lines = ocr_ensemble(preprocessed_img)
+            logger.info(f"OCR ensemble found {len(ocr_lines)} text lines")
         
         # Step 2.5: Apply LLM correction if available
         # Try to detect dominant language for better correction

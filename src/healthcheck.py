@@ -690,7 +690,7 @@ def print_health_report(health_results: Dict[str, Any]):
         if passed_tests == total_tests:
             print(f"   OCR Engines: {passed_tests}/{total_tests} tests passed")
         else:
-            print(f"   🟡 OCR Engines: {passed_tests}/{total_tests} tests passed")
+            print(f"    OCR Engines: {passed_tests}/{total_tests} tests passed")
     
     # PDF Processing
     pdf = checks.get('pdf_processing', {})
@@ -699,7 +699,7 @@ def print_health_report(health_results: Dict[str, Any]):
         if len(pdf_tests) > 0:
             print(f"   PDF Processing: {len(pdf_tests)} tests passed")
         else:
-            print("   ❌ PDF Processing: Tests failed")
+            print("    PDF Processing: Tests failed")
     
     # LLaMA Integration
     llama = checks.get('llama_integration', {})
@@ -707,21 +707,21 @@ def print_health_report(health_results: Dict[str, Any]):
         if llama.get('correction_test', {}).get('passed'):
             print("   LLaMA Integration: Available and functional")
         else:
-            print("   🟡 LLaMA Integration: Available but test failed")
+            print("    LLaMA Integration: Available but test failed")
     else:
-        print("   ⚪ LLaMA Integration: Not available/disabled")
+        print("    LLaMA Integration: Not available/disabled")
     
     # E2E Pipeline
     e2e = checks.get('e2e_pipeline', {})
     if e2e and e2e.get('passed'):
         print(f"   End-to-End Pipeline: Working ({e2e.get('processing_time', 0):.2f}s)")
     else:
-        print("   ❌ End-to-End Pipeline: Failed")
+        print("    End-to-End Pipeline: Failed")
     
     # Performance
     perf = checks.get('performance', {})
     if perf:
         avg_time = np.mean([v.get('ocr_time', 0) for v in perf.values() if isinstance(v, dict) and 'ocr_time' in v])
-        print(f"   📊 Performance: Avg OCR time {avg_time:.2f}s")
+        print(f"    Performance: Avg OCR time {avg_time:.2f}s")
     
     print("="*70 + "\\n")

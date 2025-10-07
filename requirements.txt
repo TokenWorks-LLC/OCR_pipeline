@@ -71,10 +71,19 @@ black>=23.0.0                    # Code formatting
 flake8>=6.0.0                     # Code linting
 
 # ============================================================================
+# Advanced OCR engines for quality pipeline
+# ============================================================================
+easyocr>=1.7.0                   # Alternative OCR engine (needed for PARSeq simulation)
+transformers>=4.21.0             # Hugging Face transformers for ABINet/TrOCR models
+torch>=1.12.0                    # PyTorch (needed for transformers and quality models)
+torchvision>=0.13.0              # Computer vision models for PyTorch
+scikit-image>=0.19.0             # Advanced image processing (Radon transform, Sauvola binarization)
+
+# docTR - Advanced document OCR
+python-doctr[torch]>=0.6.0       # docTR with PyTorch backend for quality recognition
+
+# ============================================================================
 # Optional packages (for advanced features)
 # Uncomment these lines if you need these specific features:
 # ============================================================================
-# easyocr>=1.7.0                  # Alternative OCR engine (more languages, slower)
-# transformers>=4.21.0           # Hugging Face transformers for TrOCR (requires PyTorch)
-# torch>=1.12.0                  # PyTorch (needed for transformers, large download)
 # llama-cpp-python>=0.1.0        # Local LLM support (alternative to Ollama)

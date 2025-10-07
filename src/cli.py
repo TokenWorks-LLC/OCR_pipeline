@@ -60,22 +60,22 @@ def process_single_file(args: tuple) -> Optional[str]:
     try:
         if is_pdf_file(file_path):
             # Handle PDF file - extract images first
-            logging.info(f"📄 Processing PDF: {Path(file_path).name}")
+            logging.info(f" Processing PDF: {Path(file_path).name}")
             
             # Get PDF info
             pdf_info = get_pdf_info(file_path)
             total_pages = pdf_info.get('pages', 0)
-            logging.info(f"📖 PDF has {total_pages} pages")
+            logging.info(f" PDF has {total_pages} pages")
             
             # Extract images from PDF
-            logging.info(f"🔍 Extracting images from PDF at {dpi} DPI...")
+            logging.info(f" Extracting images from PDF at {dpi} DPI...")
             images = extract_images_from_pdf(file_path, dpi=dpi)
             
             if not images:
-                logging.error(f"❌ No images extracted from PDF: {Path(file_path).name}")
+                logging.error(f" No images extracted from PDF: {Path(file_path).name}")
                 return None
             
-            logging.info(f"✓ Extracted {len(images)} images from PDF")
+            logging.info(f" Extracted {len(images)} images from PDF")
             # Optionally limit pages via environment variable for testing
             try:
                 max_pages_env = os.getenv('MAX_PAGES')
@@ -108,53 +108,53 @@ def process_single_file(args: tuple) -> Optional[str]:
                             all_translations.extend(text_results)
                             successful_pages += 1
                             if extract_all:
-                                logging.info(f"✓ Completed {page_id} ({len(text_results)} text lines extracted)")
+                                logging.info(f" Completed {page_id} ({len(text_results)} text lines extracted)")
                             else:
-                                logging.info(f"✓ Completed {page_id} ({len(text_results)} translations found)")
+                                logging.info(f" Completed {page_id} ({len(text_results)} translations found)")
                         else:
                             if extract_all:
-                                logging.warning(f"⚠ {page_id}: No text detected by OCR")
+                                logging.warning(f" {page_id}: No text detected by OCR")
                             else:
-                                logging.warning(f"⚠ {page_id}: No translations found (text was OCR'd but no language patterns detected)")
+                                logging.warning(f" {page_id}: No translations found (text was OCR'd but no language patterns detected)")
                             
                         # Update progress bar
                         pbar.update(1)
                         
                     except Exception as e:
-                        logging.error(f"✗ Error processing {page_id}: {e}")
+                        logging.error(f" Error processing {page_id}: {e}")
                         pbar.update(1)  # Still update progress even on error
                         continue
             
             if successful_pages > 0:
                 logging.info(f"Successfully processed {successful_pages}/{len(images)} pages from {Path(file_path).name}")
                 if extract_all:
-                    logging.info(f"📊 Total text lines extracted: {len(all_translations)}")
+                    logging.info(f" Total text lines extracted: {len(all_translations)}")
                     return f"{successful_pages} pages processed, {len(all_translations)} text lines"
                 else:
-                    logging.info(f"📊 Total translations extracted: {len(all_translations)}")
+                    logging.info(f" Total translations extracted: {len(all_translations)}")
                     return f"{successful_pages} pages processed, {len(all_translations)} translations"
             else:
-                logging.warning(f"❌ No pages successfully processed from {Path(file_path).name}")
+                logging.warning(f" No pages successfully processed from {Path(file_path).name}")
                 return None
         
         else:
             # Handle regular image file
-            logging.info(f"🖼️ Processing image: {Path(file_path).name}")
+            logging.info(f"️ Processing image: {Path(file_path).name}")
             
             img = cv2.imread(str(file_path))
             if img is None:
-                logging.error(f"❌ Failed to load image: {Path(file_path).name}")
+                logging.error(f" Failed to load image: {Path(file_path).name}")
                 return None
             
             # Process image through pipeline
-            logging.info(f"🔍 Running OCR and text extraction...")
+            logging.info(f" Running OCR and text extraction...")
             text_results = process_image(img, extract_all_text=extract_all)
             
             if not text_results:
                 if extract_all:
-                    logging.warning(f"⚠ {Path(file_path).name}: No text detected by OCR")
+                    logging.warning(f" {Path(file_path).name}: No text detected by OCR")
                 else:
-                    logging.warning(f"⚠ {Path(file_path).name}: No translations found (text was OCR'd but no language patterns detected)")
+                    logging.warning(f" {Path(file_path).name}: No translations found (text was OCR'd but no language patterns detected)")
                 return None
             
             # Write CSV output
@@ -163,10 +163,10 @@ def process_single_file(args: tuple) -> Optional[str]:
             write_csv(output_path, text_results, page_id)
             
             if extract_all:
-                logging.info(f"✓ Completed {Path(file_path).name} ({len(text_results)} text lines extracted)")
+                logging.info(f" Completed {Path(file_path).name} ({len(text_results)} text lines extracted)")
                 return f"1 image processed, {len(text_results)} text lines"
             else:
-                logging.info(f"✓ Completed {Path(file_path).name} ({len(text_results)} translations found)")
+                logging.info(f" Completed {Path(file_path).name} ({len(text_results)} translations found)")
                 return f"1 image processed, {len(text_results)} translations"
         
     except Exception as e:

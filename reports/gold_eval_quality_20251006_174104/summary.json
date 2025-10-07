@@ -1,0 +1,81 @@
+{
+  "total_pages": 39,
+  "processed_pages": 15,
+  "failed_pages": 0,
+  "by_language": {
+    "unknown": {
+      "count": 15,
+      "cer_sum": 15.0,
+      "wer_sum": 15.0,
+      "avg_cer": 1.0,
+      "avg_wer": 1.0
+    }
+  },
+  "by_pdf": {
+    "AKT 1, 1990.pdf": {
+      "count": 1,
+      "cer_sum": 1.0,
+      "wer_sum": 1.0,
+      "avg_cer": 1.0,
+      "avg_wer": 1.0
+    },
+    "AKT 2, 1995.pdf": {
+      "count": 1,
+      "cer_sum": 1.0,
+      "wer_sum": 1.0,
+      "avg_cer": 1.0,
+      "avg_wer": 1.0
+    },
+    "AKT 4, 2006.pdf": {
+      "count": 1,
+      "cer_sum": 1.0,
+      "wer_sum": 1.0,
+      "avg_cer": 1.0,
+      "avg_wer": 1.0
+    },
+    "AKT 4.pdf": {
+      "count": 1,
+      "cer_sum": 1.0,
+      "wer_sum": 1.0,
+      "avg_cer": 1.0,
+      "avg_wer": 1.0
+    },
+    "AKT 4b, 2006.pdf": {
+      "count": 1,
+      "cer_sum": 1.0,
+      "wer_sum": 1.0,
+      "avg_cer": 1.0,
+      "avg_wer": 1.0
+    },
+    "Albayrak_1998_3UHKB_Koloni caginda_p1-14.pdf": {
+      "count": 2,
+      "cer_sum": 2.0,
+      "wer_sum": 2.0,
+      "avg_cer": 1.0,
+      "avg_wer": 1.0
+    },
+    "Albayrak_2000_ArAn4_testament.pdf": {
+      "count": 2,
+      "cer_sum": 2.0,
+      "wer_sum": 2.0,
+      "avg_cer": 1.0,
+      "avg_wer": 1.0
+    },
+    "Albayrak_2001_AMMY2000_ma'usu.PDF": {
+      "count": 2,
+      "cer_sum": 2.0,
+      "wer_sum": 2.0,
+      "avg_cer": 1.0,
+      "avg_wer": 1.0
+    },
+    "": {
+      "count": 4,
+      "cer_sum": 4.0,
+      "wer_sum": 4.0,
+      "avg_cer": 1.0,
+      "avg_wer": 1.0
+    }
+  },
+  "overall_cer": 1.0,
+  "overall_wer": 1.0
+}

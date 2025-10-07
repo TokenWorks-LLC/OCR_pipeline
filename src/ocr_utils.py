@@ -27,11 +27,21 @@ except ImportError:
     PADDLE_AVAILABLE = False
 
 from config import (
-    TESSERACT_CONFIG, TESSERACT_LANGUAGES, PADDLE_CONFIG,
+    TESSERACT_CONFIG, TESSERACT_LANGUAGES, 
     QUICK_OCR_MAX_WORDS, QUICK_OCR_CONFIDENCE_THRESHOLD,
-    CONFIDENCE_THRESHOLD, NMS_IOU_THRESHOLD, TESSERACT_CMD, TESSDATA_PREFIX
+    CONFIDENCE_THRESHOLD, NMS_IOU_THRESHOLD, TESSERACT_CMD, TESSDATA_PREFIX,
+    OCR_ENGINE, get_ocr_engine_config
 )
-from turkish_corrections import apply_turkish_corrections
+
+# Optional Turkish corrections
+try:
+    from turkish_corrections import apply_turkish_corrections
+    TURKISH_CORRECTIONS_AVAILABLE = True
+except ImportError:
+    TURKISH_CORRECTIONS_AVAILABLE = False
+    def apply_turkish_corrections(text: str) -> str:
+        """Fallback function when turkish_corrections is not available."""
+        return text
 
 # Configure Tesseract paths after import
 if TESSERACT_AVAILABLE:
@@ -376,3 +386,172 @@ def ocr_ensemble(img: np.ndarray) -> List[Line]:
     logger.info(f"OCR ensemble: {len(paddle_lines)} paddle + {len(tesseract_lines)} tesseract → {len(merged_lines)} merged")
     
     return merged_lines
+
+
+# Enhanced OCR functions supporting multiple engines
+def ocr_with_engine(img: np.ndarray, engine: str = None, profile: str = None, device: str = None) -> List[Line]:
+    """
+    Run OCR using specified engine with fallback support.
+    
+    Args:
+        img: Input image
+        engine: OCR engine name (defaults to config)
+        profile: Performance profile (defaults to config)  
+        device: Device to use (defaults to config)
+        
+    Returns:
+        List of detected text lines
+    """
+    engine = engine or OCR_ENGINE['engine']
+    profile = profile or OCR_ENGINE['profile']
+    device = device or OCR_ENGINE['device']
+    
+    # Get engine configuration
+    engine_config = get_ocr_engine_config(engine, profile)
+    engine_config['device'] = device
+    
+    # Try primary engine
+    try:
+        lines = _run_single_engine(img, engine, engine_config)
+        if lines:
+            logger.info(f"OCR successful with {engine}: {len(lines)} lines detected")
+            return lines
+        else:
+            logger.warning(f"No lines detected with {engine}, trying fallback")
+    except Exception as e:
+        logger.error(f"OCR failed with {engine}: {e}")
+    
+    # Try fallback engines
+    fallback_engines = OCR_ENGINE.get('fallback_engines', ['paddle'])
+    for fallback_engine in fallback_engines:
+        if fallback_engine != engine:  # Don't retry the same engine
+            try:
+                logger.info(f"Trying fallback engine: {fallback_engine}")
+                fallback_config = get_ocr_engine_config(fallback_engine, profile)
+                fallback_config['device'] = device
+                lines = _run_single_engine(img, fallback_engine, fallback_config)
+                if lines:
+                    logger.info(f"Fallback successful with {fallback_engine}: {len(lines)} lines detected")
+                    return lines
+            except Exception as e:
+                logger.error(f"Fallback engine {fallback_engine} failed: {e}")
+    
+    # Final fallback to original ensemble if all else fails
+    logger.warning("All configured engines failed, using original ensemble")
+    return ocr_ensemble(img)
+
+
+def _run_single_engine(img: np.ndarray, engine: str, config: dict) -> List[Line]:
+    """
+    Run OCR using a single engine.
+    
+    Args:
+        img: Input image
+        engine: Engine name
+        config: Engine configuration
+        
+    Returns:
+        List of detected text lines
+    """
+    if engine == 'paddle':
+        return ocr_paddle_lines(img)
+    elif engine == 'tesseract':
+        return ocr_tesseract_lines(img)
+    elif engine in ['doctr', 'mmocr', 'kraken']:
+        return _run_new_engine(img, engine, config)
+    else:
+        raise ValueError(f"Unknown OCR engine: {engine}")
+
+
+def _run_new_engine(img: np.ndarray, engine: str, config: dict) -> List[Line]:
+    """
+    Run OCR using new engine implementations (docTR, MMOCR, Kraken).
+    
+    Args:
+        img: Input image (OpenCV format)
+        engine: Engine name
+        config: Engine configuration
+        
+    Returns:
+        List of detected text lines
+    """
+    try:
+        from engines import create_engine
+        
+        # Create engine instance
+        engine_instance = create_engine(engine, config.get('profile', 'balanced'), config.get('device', 'auto'))
+        
+        # Convert OpenCV image to PIL Image
+        from PIL import Image
+        if len(img.shape) == 3:
+            # BGR to RGB conversion for OpenCV images
+            img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+            pil_image = Image.fromarray(img_rgb)
+        else:
+            pil_image = Image.fromarray(img)
+        
+        # Run inference
+        spans = engine_instance.infer_page(pil_image)
+        
+        # Convert spans to Line objects
+        lines = []
+        for span in spans:
+            # Convert bbox from [x1, y1, x2, y2] to (x, y, w, h)
+            x1, y1, x2, y2 = span['bbox']
+            bbox = (x1, y1, x2 - x1, y2 - y1)
+            
+            line = Line(
+                text=span['text'],
+                conf=span['conf'],
+                bbox=bbox,
+                engine=engine
+            )
+            lines.append(line)
+        
+        logger.debug(f"{engine} extracted {len(lines)} lines")
+        return lines
+        
+    except ImportError as e:
+        logger.error(f"Engine {engine} not available: {e}")
+        return []
+    except Exception as e:
+        logger.error(f"Engine {engine} failed: {e}")
+        return []
+
+
+def get_engine_info() -> dict:
+    """
+    Get information about available OCR engines.
+    
+    Returns:
+        Dictionary with engine availability and versions
+    """
+    try:
+        from engines import check_engine_dependencies
+        return check_engine_dependencies()
+    except ImportError:
+        # Fallback to basic info
+        info = {}
+        
+        # Check PaddleOCR
+        if PADDLE_AVAILABLE:
+            try:
+                from paddleocr import PaddleOCR
+                info['paddle'] = {'available': True, 'version': 'unknown'}
+            except:
+                info['paddle'] = {'available': False, 'error': 'import failed'}
+        else:
+            info['paddle'] = {'available': False, 'error': 'not installed'}
+            
+        # Check Tesseract
+        if TESSERACT_AVAILABLE:
+            try:
+                import pytesseract
+                version = pytesseract.get_tesseract_version()
+                info['tesseract'] = {'available': True, 'version': str(version)}
+            except:
+                info['tesseract'] = {'available': True, 'version': 'unknown'}
+        else:
+            info['tesseract'] = {'available': False, 'error': 'not installed'}
+        
+        return info

@@ -142,7 +142,7 @@ class ComprehensivePipeline:
                 try:
                     self.paddle_ocr = PaddleOCR(
                         use_textline_orientation=True,  # Replaces use_angle_cls
-                        lang='latin',  # Fallback lang for mixed content
+                        lang='en',  # English language for mixed content
                         gpu_mem=4000,  # Allocate 4GB for RTX 4070
                         det_limit_side_len=1280,  # Higher resolution for better accuracy
                         det_db_thresh=0.3,
@@ -159,7 +159,7 @@ class ComprehensivePipeline:
             # Fallback to CPU with compatible parameters
             self.paddle_ocr = PaddleOCR(
                 use_textline_orientation=True,  # Replaces use_angle_cls
-                lang='latin'  # Fallback lang for mixed content
+                lang='en'  # English language for mixed content
             )
             logger.info("PaddleOCR initialized with CPU mode")
             

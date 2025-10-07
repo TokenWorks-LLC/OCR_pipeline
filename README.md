@@ -3,6 +3,8 @@
 > **🚀 A production-ready document processing system with AI-powered OCR, multi-language support, and specialized academic text extraction capabilities.**
 > 
 > **⚡ NEW:** Optimized for Apple Silicon (M1/M2/M3) with 8-70 second Docker builds!
+> 
+> **🔥 LATEST:** Multi-engine OCR support - Choose from PaddleOCR, docTR, MMOCR, or Kraken engines!
 
 ## 🎯 Perfect For
 - **Document digitization** projects with high-volume requirements
@@ -10,6 +12,33 @@
 - **Multi-language** document processing workflows
 - **AI-enhanced** OCR accuracy with LLM text correction
 - **Batch processing** of PDFs, images, and mixed document types
+- **Multi-engine comparison** and accuracy optimization
+
+## 🚀 New Multi-Engine OCR Support
+
+Choose the best OCR engine for your specific use case:
+
+| Engine | Best For | License | Key Features |
+|--------|----------|---------|--------------|
+| **PaddleOCR** | General purpose (default) | Apache-2.0 | Multi-language, production-ready |
+| **docTR** | Fast processing | Apache-2.0 | PyTorch-based, end-to-end |
+| **MMOCR** | High accuracy | Apache-2.0 | OpenMMLab, state-of-the-art models |
+| **Kraken** | Historical documents | Apache-2.0 | BiDi support, specialized for manuscripts |
+
+```bash
+# Quick engine comparison
+python tools/run_enhanced_eval.py --engines paddle,doctr,mmocr,kraken
+
+# Use specific engine
+python run_pipeline.py --engine doctr --input-dir data/samples
+
+# Engine smoke tests
+make gpu-smoke-doctr    # Test docTR availability
+make gpu-smoke-mmocr    # Test MMOCR availability  
+make gpu-smoke-kraken   # Test Kraken availability
+```
+
+📖 **Full Documentation**: [OCR Backend Implementation Notes](docs/ocr_backends_notes.md)
 
 ## 📋 Table of Contents
 

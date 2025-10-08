@@ -248,6 +248,106 @@ class SummaryAnalyzer:
         
         return comparison
     
+    def _analyze_llm_v3_metrics(self, data: List[Dict]) -> Dict[str, Any]:
+        """Analyze LLM V3 specific metrics including CER/WER deltas and telemetry."""
+        v3_metrics = {
+            'llm_v3_detected': False,
+            'total_pages_with_v3': 0,
+            'total_spans_processed': 0,
+            'avg_cer_improvement': 0.0,
+            'avg_wer_improvement': 0.0,
+            'avg_time_per_page': 0.0,
+            'avg_correction_rate': 0.0,
+            'cache_hit_rate': 0.0,
+            'total_llm_calls': 0,
+            'language_metrics': {},
+            'errors': 0,
+            'failed_pages': []
+        }
+
+        v3_pages = []
+        for page in data:
+            if page.get('correction_stats', {}).get('llm_enabled', False):
+                v3_pages.append(page)
+                v3_metrics['llm_v3_detected'] = True
+
+        if not v3_pages:
+            return v3_metrics
+
+        v3_metrics['total_pages_with_v3'] = len(v3_pages)
+
+        # Extract metrics from correction stats
+        cer_improvements = []
+        wer_improvements = []
+        times = []
+        correction_rates = []
+        cache_hit_rates = []
+        total_llm_calls = []
+        language_stats = defaultdict(lambda: {'pages': 0, 'cer_improvements': [], 'wer_improvements': [], 'correction_rates': []})
+
+        for page in v3_pages:
+            correction_stats = page.get('correction_stats', {})
+
+            # CER/WER improvements (if available from gold pages integration)
+            if 'cer_improvement' in correction_stats:
+                cer_improvements.append(correction_stats['cer_improvement'])
+            if 'wer_improvement' in correction_stats:
+                wer_improvements.append(correction_stats['wer_improvement'])
+
+            # Processing times
+            if 'total_processing_time' in correction_stats:
+                times.append(correction_stats['total_processing_time'])
+
+            # Correction rates
+            if 'correction_rate' in correction_stats:
+                correction_rates.append(correction_stats['correction_rate'])
+
+            # Cache hit rates
+            if 'cache_hit_rate' in correction_stats:
+                cache_hit_rates.append(correction_stats['cache_hit_rate'])
+
+            # Total LLM calls
+            if 'total_llm_calls' in correction_stats:
+                total_llm_calls.append(correction_stats['total_llm_calls'])
+
+            # Language-specific metrics
+            if 'language_stats' in correction_stats:
+                for lang, stats in correction_stats['language_stats'].items():
+                    lang_data = language_stats[lang]
+                    lang_data['pages'] += 1
+                    if 'cer_improvement' in stats:
+                        lang_data['cer_improvements'].append(stats['cer_improvement'])
+                    if 'wer_improvement' in stats:
+                        lang_data['wer_improvements'].append(stats['wer_improvement'])
+                    if 'correction_rate' in stats:
+                        lang_data['correction_rates'].append(stats['correction_rate'])
+
+        # Calculate averages
+        if cer_improvements:
+            v3_metrics['avg_cer_improvement'] = statistics.mean(cer_improvements)
+        if wer_improvements:
+            v3_metrics['avg_wer_improvement'] = statistics.mean(wer_improvements)
+        if times:
+            v3_metrics['avg_time_per_page'] = statistics.mean(times)
+        if correction_rates:
+            v3_metrics['avg_correction_rate'] = statistics.mean(correction_rates)
+        if cache_hit_rates:
+            v3_metrics['cache_hit_rate'] = statistics.mean(cache_hit_rates)
+        if total_llm_calls:
+            v3_metrics['total_llm_calls'] = sum(total_llm_calls)
+
+        # Process language-specific metrics
+        for lang, lang_data in language_stats.items():
+            if lang_data['pages'] > 0:
+                v3_metrics['language_metrics'][lang] = {
+                    'pages': lang_data['pages'],
+                    'avg_cer_improvement': statistics.mean(lang_data['cer_improvements']) if lang_data['cer_improvements'] else 0.0,
+                    'avg_wer_improvement': statistics.mean(lang_data['wer_improvements']) if lang_data['wer_improvements'] else 0.0,
+                    'avg_correction_rate': statistics.mean(lang_data['correction_rates']) if lang_data['correction_rates'] else 0.0
+                }
+
+        return v3_metrics
+
     def _analyze_confidence_metrics(self, data: List[Dict]) -> Dict[str, Any]:
         """Analyze confidence metrics with explanations."""
         if not data:
@@ -665,6 +765,57 @@ class SummaryAnalyzer:
             report_lines.append(f"- **Fastest Processing**: {best_speed} ({comparison_data[best_speed].get('avg_processing_time_per_page', 0):.1f}s/page)")
             report_lines.append("")
         
+        # LLM V3 Analysis (if available)
+        v3_sections = [k for k in comparison_data.keys() if k.endswith('_llm_v3')]
+        if v3_sections:
+            report_lines.append("## LLM-in-the-loop V3 Analysis")
+            report_lines.append("")
+
+            for v3_key in v3_sections:
+                mode_name = v3_key.replace('_llm_v3', '')
+                v3_metrics = comparison_data[v3_key]
+
+                report_lines.append(f"### {mode_name.upper()} Mode - LLM V3 Metrics")
+                report_lines.append("")
+
+                if v3_metrics.get('llm_v3_detected', False):
+                    report_lines.append(f"- **LLM V3 Detected**: ✅ Yes")
+                    report_lines.append(f"- **Pages with V3**: {v3_metrics.get('total_pages_with_v3', 0)}")
+                    report_lines.append(f"- **Total Spans Processed**: {v3_metrics.get('total_spans_processed', 0)}")
+
+                    if v3_metrics.get('avg_cer_improvement', 0) > 0:
+                        report_lines.append(f"- **Average CER Improvement**: {v3_metrics['avg_cer_improvement']:.4f}")
+                    if v3_metrics.get('avg_wer_improvement', 0) > 0:
+                        report_lines.append(f"- **Average WER Improvement**: {v3_metrics['avg_wer_improvement']:.4f}")
+
+                    report_lines.append(f"- **Average Time per Page**: {v3_metrics.get('avg_time_per_page', 0):.3f}s")
+                    report_lines.append(f"- **Average Correction Rate**: {v3_metrics.get('avg_correction_rate', 0):.3f}")
+                    report_lines.append(f"- **Cache Hit Rate**: {v3_metrics.get('cache_hit_rate', 0):.3f}")
+                    report_lines.append(f"- **Total LLM Calls**: {v3_metrics.get('total_llm_calls', 0)}")
+
+                    # Language-specific metrics
+                    if v3_metrics.get('language_metrics'):
+                        report_lines.append("\n**Language-Specific Metrics:**")
+                        for lang, lang_metrics in v3_metrics['language_metrics'].items():
+                            report_lines.append(f"- **{lang.upper()}**:")
+                            report_lines.append(f"  - Pages: {lang_metrics.get('pages', 0)}")
+                            if 'avg_cer_improvement' in lang_metrics:
+                                report_lines.append(f"  - Avg CER Improvement: {lang_metrics['avg_cer_improvement']:.4f}")
+                            if 'avg_wer_improvement' in lang_metrics:
+                                report_lines.append(f"  - Avg WER Improvement: {lang_metrics['avg_wer_improvement']:.4f}")
+                            if 'avg_correction_rate' in lang_metrics:
+                                report_lines.append(f"  - Avg Correction Rate: {lang_metrics['avg_correction_rate']:.3f}")
+
+                    if v3_metrics.get('errors', 0) > 0:
+                        report_lines.append(f"- **Errors**: {v3_metrics['errors']}")
+                    if v3_metrics.get('failed_pages'):
+                        report_lines.append(f"- **Failed Pages**: {len(v3_metrics['failed_pages'])}")
+                else:
+                    report_lines.append(f"- **LLM V3 Detected**: ❌ No")
+                    report_lines.append("- **Status**: LLM V3 correction not used in this mode")
+
+                report_lines.append("")
+
         # Recommendations
         report_lines.append("## Recommendations")
         report_lines.append("")
@@ -813,7 +964,14 @@ class SummaryAnalyzer:
         
         # Compare modes
         comparison_data = self.compare_modes(mode_data)
-        
+
+        # Analyze LLM V3 metrics if present
+        for mode_name, data in mode_data.items():
+            v3_metrics = self._analyze_llm_v3_metrics(data)
+            if v3_metrics['llm_v3_detected']:
+                comparison_data[f'{mode_name}_llm_v3'] = v3_metrics
+                self.logger.info(f"LLM V3 metrics found for mode: {mode_name}")
+
         # Generate visualizations
         charts = self.create_visualizations(comparison_data)
         

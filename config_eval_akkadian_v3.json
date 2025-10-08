@@ -31,11 +31,24 @@
   },
   "llm": {
     "enable_correction": true,
+    "enable_llm_v3": true,
+    "kill_switch": false,
     "provider": "ollama",
     "model": "llama3.2:latest",
     "base_url": "http://localhost:11434",
     "timeout": 60,
-    "max_concurrent_corrections": 3
+    "max_concurrent_corrections": 3,
+    "prompt_version": "v3_strict_typo_only",
+    "cache_enabled": true,
+    "cache_max_size": 10000,
+    "enable_telemetry": true,
+    "telemetry_log_interval": 100,
+    "akkadian_transliteration_guard": true,
+    "language_detection_per_span": true,
+    "min_span_length": 3,
+    "max_span_length": 1000,
+    "filter_numeric_only": true,
+    "filter_tables": true
   },
   "akkadian": {
     "enable_extraction": true,
@@ -72,5 +85,36 @@
     "fallback_threshold": 0.5,
     "verbose_output": true,
     "track_metrics": true
+  },
+  "llm_v3": {
+    "confidence_thresholds": {
+      "akkadian": 0.95,
+      "turkish": 0.85,
+      "german": 0.80,
+      "french": 0.80,
+      "english": 0.75,
+      "default": 0.70
+    },
+    "language_contexts": {
+      "akkadian": "Ancient Mesopotamian cuneiform transliteration. DO NOT modify transliteration.",
+      "turkish": "Turkish language context. Fix OCR errors, correct diacritics (ç,ğ,ı,ö,ş,ü).",
+      "german": "German language context. Fix OCR errors, correct umlauts (ä,ö,ü,ß).",
+      "french": "French language context. Fix OCR errors, correct accents (à,â,ä,é,è,ê,ë,ï,î,ô,ù,û,ü,ÿ,ç).",
+      "italian": "Italian language context. Fix OCR errors, correct accents (à,è,é,ì,í,î,ò,ó,ù,ú).",
+      "english": "English language context. Fix OCR errors."
+    },
+    "strict_typo_rules": [
+      "Fix ONLY obvious OCR misreadings (e.g., 'sencsi' → 'senesi', 'kollcksiyonunun' → 'kolleksiyonunun')",
+      "Correct missing or wrong diacritics/accents ONLY if 100% certain",
+      "Fix obvious number misreadings (e.g., '7955' → '1955' in date contexts)",
+      "DO NOT change proper nouns, technical terms, or transliterations",
+      "DO NOT translate, paraphrase, or reword",
+      "DO NOT change sentence structure or meaning",
+      "DO NOT add or remove words unless fixing clear OCR errors",
+      "Keep original punctuation, capitalization, and formatting"
+    ]
   }
 }
+
+
+

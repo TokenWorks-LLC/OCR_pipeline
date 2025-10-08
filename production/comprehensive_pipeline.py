@@ -28,6 +28,7 @@ sys.path.append(str(Path(__file__).parent.parent / 'src'))
 
 from aggregated_csv import AggregatedCSVWriter, PageResult
 from llm_correction import LLMCorrector, CorrectionResult
+from llm_correction_v3 import initialize_llm_v3, get_llm_v3_corrector, cleanup_llm_v3
 from akkadian_extract import AkkadianExtractor
 from translations_pdf import generate_translations_report
 
@@ -40,7 +41,7 @@ class PipelineConfig:
     """Configuration for the comprehensive OCR pipeline."""
     # LLM settings
     llm_provider: str = "ollama"  # 'ollama', 'llamacpp', or 'none'
-    llm_model: str = "mistral:latest"  # Updated to use available model
+    llm_model: str = "llama3.2:latest"  # Updated to use available model
     llm_base_url: str = "http://localhost:11434"
     llm_timeout: int = 30
     
@@ -51,6 +52,7 @@ class PipelineConfig:
     # Processing settings
     enable_reading_order: bool = True
     enable_llm_correction: bool = True
+    enable_llm_v3: bool = False  # Enable LLM-in-the-loop V3 for evaluation
     max_concurrent_corrections: int = 3
     
     # Akkadian translation extraction
@@ -74,11 +76,20 @@ class ComprehensivePipeline:
         self.config = config or PipelineConfig()
         self.paddle_ocr = None
         self.llm_corrector = None
+        self.llm_v3_corrector = None
         self.akkadian_extractor = None
         self.csv_writer = AggregatedCSVWriter()
         self.processing_stats = {}
         
         self._initialize_engines()
+
+    def cleanup(self):
+        """Cleanup resources including LLM V3 system."""
+        try:
+            cleanup_llm_v3()
+            logger.info("LLM V3 system cleaned up")
+        except Exception as e:
+            logger.warning(f"Error during LLM V3 cleanup: {e}")
     
     def _initialize_engines(self):
         """Initialize OCR and LLM engines."""
@@ -95,8 +106,9 @@ class ComprehensivePipeline:
             logger.error(f"Failed to initialize PaddleOCR: {e}")
             raise
         
-        # Initialize LLM corrector
-        if self.config.enable_llm_correction and self.config.llm_provider != 'none':
+        # Initialize LLM corrector (legacy mode)
+        enable_llm_v3 = getattr(self.config, 'enable_llm_v3', False)
+        if self.config.enable_llm_correction and not enable_llm_v3 and self.config.llm_provider != 'none':
             try:
                 self.llm_corrector = LLMCorrector(
                     provider=self.config.llm_provider,
@@ -109,6 +121,33 @@ class ComprehensivePipeline:
             except Exception as e:
                 logger.warning(f"LLM corrector initialization failed: {e}")
                 self.llm_corrector = None
+        elif enable_llm_v3:
+            # Initialize LLM V3 system for evaluation mode
+            try:
+                # Initialize LLM V3 system with config values
+                llm_v3_section = getattr(self.config, 'llm_v3', {})
+                v3_config = {
+                    'llm': {
+                        'llm_enabled': True,
+                        'kill_switch': getattr(self.config, 'kill_switch', False),
+                        'model_id': self.config.llm_model,
+                        'prompt_version': getattr(self.config, 'prompt_version', 'v3_strict_typo_only'),
+                        'cache_enabled': getattr(self.config, 'cache_enabled', True),
+                        'max_workers': self.config.max_concurrent_corrections,
+                        'timeout': self.config.llm_timeout,
+                        'enable_telemetry': getattr(self.config, 'enable_telemetry', True)
+                    }
+                }
+
+                if initialize_llm_v3(v3_config):
+                    self.llm_v3_corrector = get_llm_v3_corrector()
+                    logger.info("LLM V3 corrector initialized for evaluation mode")
+                else:
+                    logger.error("Failed to initialize LLM V3 corrector")
+                    self.llm_v3_corrector = None
+            except Exception as e:
+                logger.error(f"LLM V3 initialization failed: {e}")
+                self.llm_v3_corrector = None
         else:
             logger.info("LLM correction disabled")
         
@@ -398,18 +437,45 @@ class ComprehensivePipeline:
             
             # Detect language
             detected_language = self._detect_page_language(ordered_elements)
-            
+
             # Apply LLM corrections
             correction_start = time.time()
             corrections_made = 0
             correction_stats = None
-            
-            if self.llm_corrector and ordered_elements:
+
+            if self.llm_v3_corrector and ordered_elements:
+                # Use LLM V3 system for evaluation mode
+                spans = []
+                for i, elem in enumerate(ordered_elements):
+                    spans.append({
+                        'text': elem['text'],
+                        'confidence': elem.get('confidence', 0.8),  # Default confidence if not available
+                        'bbox': elem.get('bbox', []),
+                        'id': f"span_{i}"
+                    })
+
+                corrected_spans, v3_stats = self.llm_v3_corrector.correct_spans(spans)
+
+                # Apply corrections to elements
+                for i, (elem, corrected_span) in enumerate(zip(ordered_elements, corrected_spans)):
+                    if corrected_span['text'] != corrected_span.get('original_text', ''):
+                        ordered_elements[i]['text'] = corrected_span['text']
+                        ordered_elements[i]['original_text'] = corrected_span.get('original_text', '')
+                        ordered_elements[i]['corrections'] = corrected_span.get('corrections', [])
+                        ordered_elements[i]['llm_language'] = corrected_span.get('llm_language', 'unknown')
+                        ordered_elements[i]['llm_processing_time'] = corrected_span.get('llm_processing_time', 0.0)
+                        ordered_elements[i]['cache_hit'] = corrected_span.get('cache_hit', False)
+                        corrections_made += 1
+
+                correction_stats = v3_stats
+
+            elif self.llm_corrector and ordered_elements:
+                # Legacy LLM correction
                 texts_to_correct = [elem['text'] for elem in ordered_elements]
                 correction_results = self.llm_corrector.correct_multiple_texts(
                     texts_to_correct, detected_language
                 )
-                
+
                 # Apply corrections to elements
                 for i, correction in enumerate(correction_results):
                     if i < len(ordered_elements) and correction.corrected_text != correction.original_text:
@@ -417,11 +483,11 @@ class ComprehensivePipeline:
                         ordered_elements[i]['original_text'] = correction.original_text
                         ordered_elements[i]['corrections'] = correction.corrections_made
                         corrections_made += 1
-                
+
                 correction_stats = self.llm_corrector.get_correction_stats()
-            
+
             correction_time = time.time() - correction_start
-            
+
             # Count words and tokens
             word_token_counts = self._count_words_and_tokens(ordered_elements, detected_language)
             
@@ -754,18 +820,45 @@ class ComprehensivePipeline:
             
             # Detect language
             detected_language = self._detect_page_language(ordered_elements)
-            
+
             # Apply LLM corrections
             correction_start = time.time()
             corrections_made = 0
             correction_stats = None
-            
-            if self.llm_corrector and ordered_elements:
+
+            if self.llm_v3_corrector and ordered_elements:
+                # Use LLM V3 system for evaluation mode
+                spans = []
+                for i, elem in enumerate(ordered_elements):
+                    spans.append({
+                        'text': elem['text'],
+                        'confidence': elem.get('confidence', 0.8),  # Default confidence if not available
+                        'bbox': elem.get('bbox', []),
+                        'id': f"span_{i}"
+                    })
+
+                corrected_spans, v3_stats = self.llm_v3_corrector.correct_spans(spans)
+
+                # Apply corrections to elements
+                for i, (elem, corrected_span) in enumerate(zip(ordered_elements, corrected_spans)):
+                    if corrected_span['text'] != corrected_span.get('original_text', ''):
+                        ordered_elements[i]['text'] = corrected_span['text']
+                        ordered_elements[i]['original_text'] = corrected_span.get('original_text', '')
+                        ordered_elements[i]['corrections'] = corrected_span.get('corrections', [])
+                        ordered_elements[i]['llm_language'] = corrected_span.get('llm_language', 'unknown')
+                        ordered_elements[i]['llm_processing_time'] = corrected_span.get('llm_processing_time', 0.0)
+                        ordered_elements[i]['cache_hit'] = corrected_span.get('cache_hit', False)
+                        corrections_made += 1
+
+                correction_stats = v3_stats
+
+            elif self.llm_corrector and ordered_elements:
+                # Legacy LLM correction
                 texts_to_correct = [elem['text'] for elem in ordered_elements]
                 correction_results = self.llm_corrector.correct_multiple_texts(
                     texts_to_correct, detected_language
                 )
-                
+
                 # Apply corrections to elements
                 for i, correction in enumerate(correction_results):
                     if i < len(ordered_elements) and correction.corrected_text != correction.original_text:
@@ -773,11 +866,11 @@ class ComprehensivePipeline:
                         ordered_elements[i]['original_text'] = correction.original_text
                         ordered_elements[i]['corrections'] = correction.corrections_made
                         corrections_made += 1
-                
+
                 correction_stats = self.llm_corrector.get_correction_stats()
-            
+
             correction_time = time.time() - correction_start
-            
+
             # Create page result
             page_id = "image_001"
             
@@ -919,7 +1012,7 @@ def main():
     # Pipeline configuration
     parser.add_argument('--llm-provider', choices=['ollama', 'llamacpp', 'none'], 
                        default='ollama', help='LLM provider for corrections')
-    parser.add_argument('--llm-model', default='mistral:latest', help='LLM model name')
+    parser.add_argument('--llm-model', default='llama3.2:latest', help='LLM model name')
     parser.add_argument('--disable-corrections', action='store_true', 
                        help='Disable LLM corrections')
     parser.add_argument('--disable-reading-order', action='store_true',

@@ -1,0 +1,436 @@
+{
+  "pdf_path": "./data/input_pdfs\\06 REYHAN, Esma -  Hitit Büyü Ritüellerinin Uygulama Şekilleri Üzerine Bir İnceleme.pdf",
+  "total_pages": 32,
+  "pages_processed": 32,
+  "progress_percent": 100.0,
+  "total_processing_time": 1214.552809715271,
+  "total_text_elements": 2319,
+  "total_corrections": 0,
+  "successful_pages": 31,
+  "failed_pages": 1,
+  "config": {
+    "input": {
+      "input_directory": "./data/input_pdfs",
+      "supported_formats": [
+        ".pdf",
+        ".png",
+        ".jpg",
+        ".jpeg"
+      ],
+      "process_all_files": true,
+      "specific_file": "",
+      "recursive_search": true
+    },
+    "output": {
+      "output_directory": "./data/eval_output/eval_research_results_akkadian",
+      "create_subdirectories": true,
+      "timestamp_outputs": false
+    },
+    "ocr": {
+      "engine": "paddleocr",
+      "dpi": 600,
+      "languages": [
+        "en",
+        "tr",
+        "de",
+        "fr"
+      ],
+      "enable_text_correction": true,
+      "enable_reading_order": true,
+      "confidence_threshold": 0.7
+    },
+    "llm": {
+      "enable_correction": true,
+      "provider": "ollama",
+      "model": "mistral:latest",
+      "base_url": "http://localhost:11434",
+      "timeout": 60,
+      "max_concurrent_corrections": 3
+    },
+    "akkadian": {
+      "enable_extraction": true,
+      "confidence_threshold": 0.8,
+      "generate_pdf_report": true,
+      "translation_languages": [
+        "english",
+        "german",
+        "french",
+        "turkish"
+      ]
+    },
+    "processing": {
+      "batch_size": 5,
+      "max_workers": 2,
+      "skip_existing": true,
+      "create_visualizations": true,
+      "create_html_overlay": true,
+      "verbose": true
+    },
+    "csv_output": {
+      "format": "aggregated",
+      "include_metadata": true,
+      "include_confidence_scores": true,
+      "separate_akkadian_csv": true
+    },
+    "evaluation": {
+      "enable_benchmarking": true,
+      "mode_name": "akkadian",
+      "output_file": "./data/eval_output/benchmark_akkadian.json"
+    }
+  },
+  "page_statistics": [
+    {
+      "page_num": 1,
+      "processing_time": 33.71702527999878,
+      "ocr_time": 32.94864773750305,
+      "reading_order_time": 0.0015027523040771484,
+      "correction_time": 0.0,
+      "text_elements": 69,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.97
+    },
+    {
+      "page_num": 2,
+      "processing_time": 36.626142740249634,
+      "ocr_time": 35.84987711906433,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0015091896057128906,
+      "text_elements": 87,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.974
+    },
+    {
+      "page_num": 3,
+      "processing_time": 43.14456486701965,
+      "ocr_time": 42.335389852523804,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 91,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.977
+    },
+    {
+      "page_num": 4,
+      "processing_time": 40.616971015930176,
+      "ocr_time": 39.8212730884552,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 101,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.98
+    },
+    {
+      "page_num": 5,
+      "processing_time": 43.60474252700806,
+      "ocr_time": 42.830804109573364,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 111,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.976
+    },
+    {
+      "page_num": 6,
+      "processing_time": 44.290066957473755,
+      "ocr_time": 43.46450710296631,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0005030632019042969,
+      "text_elements": 105,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.965
+    },
+    {
+      "page_num": 7,
+      "processing_time": 38.670968532562256,
+      "ocr_time": 37.7857391834259,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 79,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.976
+    },
+    {
+      "page_num": 8,
+      "processing_time": 38.779850244522095,
+      "ocr_time": 37.99181771278381,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0005061626434326172,
+      "text_elements": 65,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.977
+    },
+    {
+      "page_num": 9,
+      "processing_time": 37.9027304649353,
+      "ocr_time": 37.031808853149414,
+      "reading_order_time": 0.0,
+      "correction_time": 0.009057044982910156,
+      "text_elements": 62,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.971
+    },
+    {
+      "page_num": 10,
+      "processing_time": 39.67653560638428,
+      "ocr_time": 38.77619814872742,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 75,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.965
+    },
+    {
+      "page_num": 11,
+      "processing_time": 37.066853284835815,
+      "ocr_time": 36.25860667228699,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 80,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.975
+    },
+    {
+      "page_num": 12,
+      "processing_time": 36.262125968933105,
+      "ocr_time": 35.43281006813049,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 55,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.961
+    },
+    {
+      "page_num": 13,
+      "processing_time": 36.5833842754364,
+      "ocr_time": 35.79090857505798,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 62,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.957
+    },
+    {
+      "page_num": 14,
+      "processing_time": 37.277965784072876,
+      "ocr_time": 36.47804021835327,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 82,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.967
+    },
+    {
+      "page_num": 15,
+      "processing_time": 40.5058536529541,
+      "ocr_time": 39.704798460006714,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 77,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.964
+    },
+    {
+      "page_num": 16,
+      "processing_time": 36.888323068618774,
+      "ocr_time": 36.10643911361694,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 69,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.969
+    },
+    {
+      "page_num": 17,
+      "processing_time": 39.55679202079773,
+      "ocr_time": 38.702316761016846,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 75,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.979
+    },
+    {
+      "page_num": 18,
+      "processing_time": 37.782429695129395,
+      "ocr_time": 36.96521711349487,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 69,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.969
+    },
+    {
+      "page_num": 19,
+      "processing_time": 37.90599489212036,
+      "ocr_time": 37.10332703590393,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 65,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.977
+    },
+    {
+      "page_num": 20,
+      "processing_time": 37.749592542648315,
+      "ocr_time": 36.93346548080444,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0005049705505371094,
+      "text_elements": 79,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.977
+    },
+    {
+      "page_num": 21,
+      "processing_time": 36.89424204826355,
+      "ocr_time": 36.09717297554016,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 75,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.973
+    },
+    {
+      "page_num": 22,
+      "processing_time": 40.88528609275818,
+      "ocr_time": 40.03535771369934,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0010058879852294922,
+      "text_elements": 87,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.974
+    },
+    {
+      "page_num": 23,
+      "processing_time": 34.786383390426636,
+      "ocr_time": 33.99607825279236,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 60,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.958
+    },
+    {
+      "page_num": 24,
+      "processing_time": 39.343058347702026,
+      "ocr_time": 38.499242067337036,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 73,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.965
+    },
+    {
+      "page_num": 25,
+      "processing_time": 34.65501546859741,
+      "ocr_time": 33.85944223403931,
+      "reading_order_time": 0.0,
+      "correction_time": 0.00099945068359375,
+      "text_elements": 55,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.975
+    },
+    {
+      "page_num": 26,
+      "processing_time": 37.343485593795776,
+      "ocr_time": 36.54024410247803,
+      "reading_order_time": 0.0005028247833251953,
+      "correction_time": 0.0,
+      "text_elements": 60,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.981
+    },
+    {
+      "page_num": 27,
+      "processing_time": 33.70223259925842,
+      "ocr_time": 32.921308279037476,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 55,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.967
+    },
+    {
+      "page_num": 28,
+      "processing_time": 39.75782322883606,
+      "ocr_time": 38.91849493980408,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 75,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.971
+    },
+    {
+      "page_num": 29,
+      "processing_time": 37.31531357765198,
+      "ocr_time": 36.457454442977905,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 70,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.977
+    },
+    {
+      "page_num": 30,
+      "processing_time": 38.73288822174072,
+      "ocr_time": 37.93513488769531,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 81,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.985
+    },
+    {
+      "page_num": 31,
+      "processing_time": 38.664652824401855,
+      "ocr_time": 37.8627347946167,
+      "reading_order_time": 0.0,
+      "correction_time": 0.0,
+      "text_elements": 70,
+      "language": "turkish",
+      "corrections_made": 0,
+      "avg_confidence": 0.964
+    },
+    {
+      "page_num": 32,
+      "processing_time": 27.577932119369507,
+      "ocr_time": 26.734045267105103,
+      "text_elements": 0,
+      "language": "unknown",
+      "corrections_made": 0
+    }
+  ],
+  "start_time": 1758506673.5976636,
+  "last_updated": "2025-09-21T19:24:48.147652",
+  "avg_time_per_page": 37.95477530360222,
+  "completion_time": "2025-09-21T19:24:48.150473"
+}

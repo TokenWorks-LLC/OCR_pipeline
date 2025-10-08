@@ -283,31 +283,35 @@ class ComprehensivePipeline:
         return ordered_elements
     
     def _detect_page_language(self, text_elements: List[Dict]) -> str:
+        # TODO: This implementation is very basic and should be replaced with a proper language detection library
+        # utilize the functions in src/lang_and_extract.py if possible.
+        
         """Detect the primary language of the page."""
-        all_text = ' '.join([elem['text'] for elem in text_elements])
+
+        from lang_and_extract import detect_lang
+
+        text_lines = [text_elem['text'] for text_elem in text_elements if 'text' in text_elem]
+        language_counts = {}
+
+        for line in text_lines:
+            lang = detect_lang(line)
+            if lang:
+                language_counts[lang] = language_counts.get(lang, 0) + 1
+
+        if not language_counts:
+            return 'unknown' # TODO: test this functionality
         
-        if not all_text:
-            return 'unknown'
-        
-        # Simple language detection based on character patterns
-        text_lower = all_text.lower()
-        
-        # Count language-specific characters
-        char_counts = {
-            'turkish': len([c for c in all_text if c in 'çğıöşüÇĞIİÖŞÜ']),
-            'german': len([c for c in all_text if c in 'äöüßÄÖÜ']),
-            'french': len([c for c in all_text if c in 'àâäéèêëïîôùûüÿçÀÂÄÉÈÊËÏÎÔÙÛÜŸÇ']),
-            'italian': len([c for c in all_text if c in 'àèéìíîòóùúÀÈÉÌÍÎÒÓÙÚ'])
-        }
-        
-        # Find language with most characteristic characters
-        max_chars = max(char_counts.values())
-        if max_chars > len(all_text) * 0.02:  # At least 2% special characters
-            for lang, count in char_counts.items():
-                if count == max_chars:
-                    return lang
-        
-        return 'english'
+
+        # get language proportions
+        total_counts = sum(language_counts.values())
+        language_proportions = {lang: count / total_counts for lang, count in language_counts.items()}
+
+        # this function can support returning multiple languages if needed (ex: 60% English, 40% Turkish)
+        # currently just return the top language
+
+        primary_language = max(language_proportions, key=language_proportions.get)
+
+        return primary_language
     
     def _count_words_and_tokens(self, text_elements: List[Dict], detected_language: str) -> Dict[str, int]:
         """

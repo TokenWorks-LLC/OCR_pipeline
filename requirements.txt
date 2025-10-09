@@ -8,6 +8,9 @@ numpy>=1.24.0
 requests>=2.31.0
 Pillow>=10.0.0
 
+# AWS Cloud Dependencies
+boto3>=1.28.0
+
 # Optional: For development/testing
 pytest>=7.4.0
 black>=23.0.0

@@ -1,0 +1,194 @@
+{
+  "_comment": "Akkadian Strict Profile - Optimized for Akkadian transliteration safety",
+  "_version": "1.1.0",
+  "_created": "2025-10-07",
+  "_updated": "2025-10-09 - Added block_clean for split+role filtering",
+  
+  "block_clean": {
+    "_comment": "Split mixed-content blocks and tag roles BEFORE detection/pairing",
+    "split_enabled": true,
+    "role_tagging": true,
+    "exclude_roles_in_pairing": ["reference_meta", "header_footer", "figure_caption"]
+  },
+  
+  "rendering": {
+    "dpi": 300,
+    "format": "png",
+    "color_mode": "RGB"
+  },
+  
+  "engines": {
+    "enabled": ["paddle", "doctr", "mmocr", "kraken"],
+    "min_confidence": 0.55,
+    "per_engine_timeout_s": 30,
+    "max_lines_per_page": 1000
+  },
+  
+  "fusion": {
+    "method": "rover",
+    "weights": {
+      "paddle": 1.0,
+      "doctr": 1.0,
+      "mmocr": 1.0,
+      "kraken": 1.0
+    },
+    "min_agreement": 2,
+    "confidence_calibration": true
+  },
+  
+  "llm": {
+    "enabled": true,
+    "provider": "ollama",
+    "model": "qwen2.5:7b-instruct",
+    "base_url": "http://localhost:11434",
+    "timeout_s": 120,
+    "batch_size": 8,
+    "temperature": 0.2,
+    "top_p": 0.2,
+    "max_tokens": 700,
+    "max_retries": 2,
+    "retry_temperature": 0.0,
+    "json_mode": true,
+    "system_prompt_version": "pairing_v2"
+  },
+  
+  "guardrails": {
+    "edit_budget_akkadian": 0.03,
+    "edit_budget_non_akkadian": 0.15,
+    "max_new_vocab_ratio": 1.6,
+    "preserve_diacritics": true,
+    "preserve_superscripts": true,
+    "preserve_brackets": true,
+    "preserve_chars": ["š","ṣ","ṭ","ḫ","ā","ē","ī","ū","ᵈ","ᵐ","ᶠ","[","]","(",")"],
+    "line_count_must_match": true,
+    "validate_schema": true
+  },
+  
+  "language_detection": {
+    "enabled": true,
+    "detect_akkadian": true,
+    "min_akkadian_confidence": 0.5,
+    "batch_by_language": true,
+    "no_mix_akkadian": true
+  },
+  
+  "akkadian_detection": {
+    "threshold": 0.25,
+    "require_diacritic_or_marker": true,
+    "min_diacritics_per_line": 1,
+    "min_syllabic_tokens": 3,
+    "min_syllabic_ratio": 0.25,
+    "aggregation_mode": "any-line",
+    "aggregation_qual_lines_min": 3,
+    "aggregation_qual_ratio_min": 0.25,
+    "markers_strict": true,
+    "ppl_boosts": {
+      "lt20": 0.3,
+      "lt40": 0.1
+    },
+    "negative_lexicon": [
+      "der", "die", "das", "und", "den", "des", "dem", "im", "vom", "zum", "zur", "für", "mit", "nach", "bei", "über", "auf", "aus", "nicht", "auch", "nur", "sich",
+      "ve", "ile", "için", "bu", "bir", "veya", "de", "da", "olarak", "gibi", "ki", "mi",
+      "the", "and", "of", "to", "in", "a", "is", "was", "are", "were", "been", "being", "have", "has", "had", "do", "does", "did", "will", "would", "should", "could", "may", "might", "must", "can"
+    ],
+    "neg_penalty_cap": 0.15,
+    "hyphen_token": {
+      "max_len": 4,
+      "min_groups": 3
+    },
+    "notes": "CALIBRATED 2025-10-09: Threshold lowered to 0.25 after sweep on known positives. Uses any-line aggregation: block=Akkadian if (qual_lines>=3) OR (qual_ratio>=0.25). Achieved 75% recall on 4 test PDFs. Domain-prior guardrails with strict markers, function-words-only negative lexicon (penalty cap 0.15)."
+  },
+  
+  "cache": {
+    "enabled": true,
+    "max_size_gb": 50.0,
+    "cache_dir": "cache/pipeline",
+    "verify_integrity": true
+  },
+  
+  "quality": {
+    "confidence_threshold": 0.55,
+    "min_text_height": 8,
+    "max_rotation_degrees": 5,
+    "enable_deskew": true
+  },
+  
+  "output": {
+    "format": "csv",
+    "include_bboxes": true,
+    "include_confidence": true,
+    "include_provenance": true,
+    "generate_overlays": false
+  },
+  
+  "pairing": {
+    "_comment": "Tiered pairing strategy with normalized distance and relaxed thresholds for multi-column layouts",
+    "solver": "hungarian",
+    "fallback": "greedy",
+    "cross_page_continuation": true,
+    "languages": ["de", "tr", "en", "fr", "it"],
+    "distance_decay": 0.35,
+    "max_dist_norm": 0.50,
+    "weights": {
+      "distance": 0.30,
+      "column": 0.30,
+      "language": 0.15,
+      "markers": 0.15,
+      "reading_order": 0.10
+    },
+    "commentary_penalty_words": [
+      "notlar",
+      "anmerkungen",
+      "remarks",
+      "discussion",
+      "vgl.",
+      "bkz.",
+      "cf.",
+      "catalog",
+      "env.",
+      "sceau"
+    ],
+    "commentary_penalty": 0.35,
+    "strategy": {
+      "tier1": {
+        "_comment": "Relaxed: same column AND (below OR side-by-side)",
+        "min_score": 0.48
+      },
+      "tier2": {
+        "_comment": "Adjacent columns OK if markers present",
+        "adjacent_ok_with_markers": true,
+        "min_score": 0.44,
+        "adjacent_markers": [
+          "übersetzung",
+          "çeviri",
+          "çevirisi",
+          "translation",
+          "traduction",
+          "transl.",
+          "übers."
+        ]
+      },
+      "tier3": {
+        "_comment": "Interlinear fallback with wider window",
+        "allow_interlinear": true,
+        "window_px": 120,
+        "min_score": 0.40
+      }
+    },
+    "min_translation_chars": 15,
+    "max_translation_punct_ratio": 0.40,
+    "min_lang_conf": 0.15,
+    "lexical_markers": [
+      "übersetzung",
+      "translation",
+      "çeviri",
+      "çevirisi",
+      "transl",
+      "transl.",
+      "übers.",
+      "traducción",
+      "traduction",
+      "traduzione"
+    ]
+  }
+}

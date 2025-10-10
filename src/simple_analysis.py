@@ -113,6 +113,23 @@ class SimpleAnalyzer:
         total_corrections = sum(d.get('total_corrections', 0) for d in data)
         total_akkadian = sum(d.get('akkadian_translations_found', 0) for d in data)
         
+        # Calculate Smart LLM metrics
+        total_llm_lines_processed = 0
+        total_llm_lines_changed = 0
+        total_llm_lines_skipped = 0
+        total_llm_akkadian_lines = 0
+        total_llm_low_conf_lines = 0
+        
+        for doc in data:
+            for page_stat in doc.get('page_statistics', []):
+                if 'smart_llm_stats' in page_stat:
+                    smart_stats = page_stat['smart_llm_stats']
+                    total_llm_lines_processed += smart_stats.get('lines_processed', 0)
+                    total_llm_lines_changed += smart_stats.get('lines_changed', 0)
+                    total_llm_lines_skipped += smart_stats.get('lines_skipped', 0)
+                    total_llm_akkadian_lines += smart_stats.get('lines_akkadian', 0)
+                    total_llm_low_conf_lines += smart_stats.get('lines_low_conf', 0)
+        
         # Calculate averages
         avg_confidence = statistics.mean(confidence_scores) if confidence_scores else 0
         avg_cpu_percent = 0.0
@@ -146,7 +163,15 @@ class SimpleAnalyzer:
             'total_akkadian_translations': total_akkadian,
             'avg_cpu_percent': avg_cpu_percent,
             'avg_memory_mb': avg_memory_mb,
-            'confidence_scores': confidence_scores
+            'confidence_scores': confidence_scores,
+            # Smart LLM metrics
+            'total_llm_lines_processed': total_llm_lines_processed,
+            'total_llm_lines_changed': total_llm_lines_changed,
+            'total_llm_lines_skipped': total_llm_lines_skipped,
+            'total_llm_akkadian_lines': total_llm_akkadian_lines,
+            'total_llm_low_conf_lines': total_llm_low_conf_lines,
+            'llm_call_reduction_pct': (total_llm_lines_skipped / total_llm_lines_processed * 100) if total_llm_lines_processed > 0 else 0,
+            'smart_llm_efficiency': (total_llm_lines_changed / total_llm_lines_processed * 100) if total_llm_lines_processed > 0 else 0
         }
     
     def compare_modes(self, mode_data: Dict[str, List[Dict]]) -> Dict[str, Any]:

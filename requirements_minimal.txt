@@ -1,0 +1,25 @@
+# Minimal dependencies for page-text pipeline in AWS Batch
+PyMuPDF>=1.23.0
+Pillow>=10.0.0
+numpy>=1.24.0
+tqdm>=4.65.0
+boto3>=1.28.0
+# requests>=2.28.0                 # HTTP requests
+
+# ============================================================================
+# Progress and UI
+# ============================================================================
+tqdm>=4.65.0                      # Progress bars
+
+# ============================================================================
+# Akkadian Detection (Optional - improves accuracy)
+# ============================================================================
+# python-char-lm>=0.1.0            # Character language model for Akkadian detection
+# Note: If not installed, Akkadian detection falls back to pattern-based only
+
+# ============================================================================
+# Development and Testing
+# ============================================================================
+# pytest>=7.0.0                    # Testing framework
+# black>=22.0.0                    # Code formatter
+# flake8>=5.0.0                    # Linter

@@ -350,21 +350,54 @@ def quick_ocr_conf(img: np.ndarray, max_words: int = None) -> float:
         return 0.0
 
 
-def ocr_ensemble(img: np.ndarray) -> List[Line]:
-    """Run both OCR engines and merge results."""
+def ocr_ensemble(img: np.ndarray, engine: str = "ensemble") -> List[Line]:
+    """
+    Run OCR engines and merge results.
+
+    Args:
+        img: Input image
+        engine: Which OCR engine to use:
+            - "ensemble": Run all available engines (default)
+            - "paddle": PaddleOCR only
+            - "tesseract": Tesseract only
+            - "deepseek": DeepSeek-OCR only
+    """
     all_lines = []
-    
-    # Run PaddleOCR
-    paddle_lines = ocr_paddle_lines(img)
-    all_lines.extend(paddle_lines)
-    
-    # Run Tesseract
-    tesseract_lines = ocr_tesseract_lines(img)
-    all_lines.extend(tesseract_lines)
-    
-    # Merge overlapping detections
-    merged_lines = merge_lines_nms(all_lines)
-    
-    logger.info(f"OCR ensemble: {len(paddle_lines)} paddle + {len(tesseract_lines)} tesseract → {len(merged_lines)} merged")
-    
-    return merged_lines
+
+    if engine in ["ensemble", "paddle"]:
+        # Run PaddleOCR
+        paddle_lines = ocr_paddle_lines(img)
+        all_lines.extend(paddle_lines)
+        logger.debug(f"PaddleOCR found {len(paddle_lines)} lines")
+
+    if engine in ["ensemble", "tesseract"]:
+        # Run Tesseract
+        tesseract_lines = ocr_tesseract_lines(img)
+        all_lines.extend(tesseract_lines)
+        logger.debug(f"Tesseract found {len(tesseract_lines)} lines")
+
+    if engine in ["ensemble", "deepseek"]:
+        # Run DeepSeek-OCR
+        try:
+            from deepseek_ocr import ocr_deepseek_lines, DeepSeekOCRError
+            deepseek_lines = ocr_deepseek_lines(img)
+            all_lines.extend(deepseek_lines)
+            logger.debug(f"DeepSeek-OCR found {len(deepseek_lines)} lines")
+        except DeepSeekOCRError as e:
+            logger.warning(f"DeepSeek-OCR failed: {e}")
+        except ImportError:
+            logger.warning("DeepSeek-OCR not available")
+
+    # Merge overlapping detections if multiple engines were used
+    if len(all_lines) > 0 and engine == "ensemble":
+        merged_lines = merge_lines_nms(all_lines)
+        paddle_count = len([l for l in all_lines if l.engine == "paddle"])
+        tesseract_count = len([l for l in all_lines if l.engine == "tesseract"])
+        deepseek_count = len([l for l in all_lines if l.engine == "deepseek"])
+
+        logger.info(f"OCR ensemble: {paddle_count} paddle + {tesseract_count} tesseract + {deepseek_count} deepseek → {len(merged_lines)} merged")
+        return merged_lines
+    else:
+        # Single engine mode - no merging needed
+        logger.info(f"OCR {engine}: {len(all_lines)} lines")
+        return all_lines

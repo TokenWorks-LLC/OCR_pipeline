@@ -44,8 +44,9 @@ class PipelineConfig:
     llm_model: str = "llama3.2:latest"  # Updated to use available model
     llm_base_url: str = "http://localhost:11434"
     llm_timeout: int = 30
-    
+
     # OCR settings
+    ocr_engine: str = "ensemble"  # 'ensemble', 'paddle', 'tesseract', 'deepseek'
     dpi: int = 300
     paddle_use_gpu: bool = False
     
@@ -164,7 +165,79 @@ class ComprehensivePipeline:
                 self.akkadian_extractor = None
         else:
             logger.info("Akkadian extraction disabled")
-    
+
+    def _run_ocr(self, img: np.ndarray) -> List[Dict]:
+        """
+        Run OCR based on configured engine.
+
+        Args:
+            img: OpenCV image
+
+        Returns:
+            List of text elements with 'text', 'bbox', 'conf', 'engine' keys
+        """
+        engine = getattr(self.config, 'ocr_engine', 'ensemble')
+
+        if engine == 'paddle' or (engine == 'ensemble' and self.paddle_ocr):
+            # Use PaddleOCR
+            try:
+                paddle_result = self.paddle_ocr.predict(img)
+                return self._extract_text_from_paddle_result(paddle_result)
+            except Exception as e:
+                logger.error(f"PaddleOCR failed: {e}")
+                if engine == 'paddle':
+                    raise  # Fail if PaddleOCR was explicitly requested
+                # Continue to other engines for ensemble mode
+
+        if engine == 'deepseek' or (engine == 'ensemble'):
+            # Use DeepSeek-OCR
+            try:
+                from deepseek_ocr import ocr_deepseek_lines, DeepSeekOCRError
+                lines = ocr_deepseek_lines(img)
+                # Convert Line objects to text element dictionaries
+                text_elements = []
+                for line in lines:
+                    text_elements.append({
+                        'text': line.text,
+                        'bbox': line.bbox,
+                        'conf': line.conf,
+                        'engine': line.engine
+                    })
+                if engine == 'deepseek':
+                    return text_elements
+                # For ensemble, add to results
+            except (ImportError, DeepSeekOCRError) as e:
+                logger.warning(f"DeepSeek-OCR failed: {e}")
+                if engine == 'deepseek':
+                    raise  # Fail if DeepSeek was explicitly requested
+
+        if engine == 'tesseract' or engine == 'ensemble':
+            # Use Tesseract
+            try:
+                from ocr_utils import ocr_tesseract_lines
+                lines = ocr_tesseract_lines(img)
+                # Convert Line objects to text element dictionaries
+                text_elements = []
+                for line in lines:
+                    text_elements.append({
+                        'text': line.text,
+                        'bbox': line.bbox,
+                        'conf': line.conf,
+                        'engine': line.engine
+                    })
+                return text_elements
+            except Exception as e:
+                logger.error(f"Tesseract failed: {e}")
+                if engine == 'tesseract':
+                    raise  # Fail if Tesseract was explicitly requested
+
+        # If we get here, no OCR engines worked
+        if engine != 'ensemble':
+            raise RuntimeError(f"OCR engine '{engine}' failed or not available")
+
+        logger.warning("All OCR engines failed, returning empty results")
+        return []
+
     def _extract_text_from_paddle_result(self, paddle_result):
         """Extract text data from PaddleOCR result format."""
         try:
@@ -382,37 +455,34 @@ class ComprehensivePipeline:
                 'available': False
             }
     
-    def process_single_page(self, pdf_path: str, page_num: int, output_dir: str, 
+    def process_single_page(self, pdf_path: str, page_num: int, output_dir: str,
                           base_filename: str) -> Tuple[Optional[PageResult], Dict[str, Any]]:
         """
         Process a single PDF page with comprehensive pipeline.
-        
+
         Returns:
             Tuple of (PageResult, processing_stats)
         """
         start_time = time.time()
-        
+
         try:
             # Load PDF page
             doc = fitz.open(pdf_path)
             page = doc.load_page(page_num - 1)  # fitz uses 0-based indexing
-            
+
             # Render page to image
             mat = fitz.Matrix(self.config.dpi / 72, self.config.dpi / 72)
             pix = page.get_pixmap(matrix=mat)
             img_array = np.frombuffer(pix.tobytes("ppm"), dtype=np.uint8)
             img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
-            
+
             page_width = img.shape[1]
             doc.close()
-            
-            # Run OCR
+
+            # Run OCR based on configured engine
             ocr_start = time.time()
-            paddle_result = self.paddle_ocr.predict(img)
+            text_elements = self._run_ocr(img)
             ocr_time = time.time() - ocr_start
-            
-            # Extract text elements
-            text_elements = self._extract_text_from_paddle_result(paddle_result)
             
             if not text_elements:
                 logger.warning(f"No text detected on page {page_num}")
@@ -796,13 +866,10 @@ class ComprehensivePipeline:
             
             page_width = img.shape[1]
             
-            # Run OCR
+            # Run OCR based on configured engine
             ocr_start = time.time()
-            paddle_result = self.paddle_ocr.predict(img)
+            text_elements = self._run_ocr(img)
             ocr_time = time.time() - ocr_start
-            
-            # Extract text elements
-            text_elements = self._extract_text_from_paddle_result(paddle_result)
             
             if not text_elements:
                 logger.warning(f"No text detected in image")

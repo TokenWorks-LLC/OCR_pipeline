@@ -92,3 +92,10 @@ PADDLE_CONFIG = {
 
 # Quick OCR settings for orientation detection
 QUICK_OCR_MAX_WORDS = 60
+
+# DeepSeek-OCR Configuration
+DEEPSEEK_MODEL = os.getenv('DEEPSEEK_MODEL', 'deepseek-ai/DeepSeek-OCR')
+DEEPSEEK_DEVICE = os.getenv('DEEPSEEK_DEVICE', 'auto')  # 'auto', 'cpu', 'cuda'
+DEEPSEEK_PROMPT = os.getenv('DEEPSEEK_PROMPT', '<image>\n<|grounding|>Convert the document to markdown.')
+DEEPSEEK_BASE_SIZE = int(os.getenv('DEEPSEEK_BASE_SIZE', '1024'))
+DEEPSEEK_IMAGE_SIZE = int(os.getenv('DEEPSEEK_IMAGE_SIZE', '640'))

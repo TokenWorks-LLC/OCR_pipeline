@@ -77,3 +77,28 @@ temp/
 .pytest_cache/
 .tox/
 htmlcov/
+
+# AWS specific (removed from repository)
+cloud/
+infra/aws/
+*aws*.ps1
+*batch*.ps1
+*reprocess*.ps1
+
+# Batch processing results
+batch_results*/
+manifests/
+*.job_id.txt
+
+# Test files
+test_worker_simulation/
+test_*.csv
+test_*.png
+test_*.html
+sample_*.txt
+sample_*.csv
+shard_*.csv
+
+# Session documents
+*_SESSION_*.md
+*_SUMMARY_*.md

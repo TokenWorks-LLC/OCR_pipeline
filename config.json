@@ -1,0 +1,82 @@
+{
+  "_comment": "OCR Pipeline Production Configuration",
+  "_version": "2.0.0",
+  "_updated": "2025-10-07",
+  
+  "ocr": {
+    "engine": "paddle",
+    "dpi": 300,
+    "enable_gpu": true,
+    "use_angle_cls": true,
+    "det_db_thresh": 0.3,
+    "det_db_box_thresh": 0.6,
+    "rec_algorithm": "SVTR_LCNet",
+    "use_textline_orientation": true,
+    "lang": "en"
+  },
+  
+  "llm_correction": {
+    "enabled": true,
+    "provider": "ollama",
+    "base_url": "http://localhost:11434",
+    "model": "qwen2.5:7b-instruct",
+    "timeout_s": 120,
+    "edit_budget": 0.12,
+    "cache_enabled": true,
+    "language_thresholds": {
+      "en": 0.86,
+      "de": 0.85,
+      "fr": 0.84,
+      "it": 0.84,
+      "tr": 0.83,
+      "unknown": 0.80
+    }
+  },
+  
+  "akkadian": {
+    "enabled": true,
+    "min_confidence": 0.5,
+    "extract_translations": true,
+    "generate_pdf": true,
+    "protection_mode": {
+      "max_edit_ratio": 0.03,
+      "detect_transliteration": true
+    }
+  },
+  
+  "reading_order": {
+    "enabled": true,
+    "algorithm": "xy-cut",
+    "column_threshold": 50,
+    "line_threshold": 10
+  },
+  
+  "output": {
+    "format": "csv",
+    "include_confidence": true,
+    "include_coordinates": true,
+    "save_annotated_images": false,
+    "generate_translations_pdf": true
+  },
+  
+  "paths": {
+    "input_dir": "data/input_pdfs",
+    "gold_data_dir": "data/gold_data",
+    "output_dir": "data/output",
+    "cache_dir": ".cache"
+  },
+  
+  "evaluation": {
+    "enabled": false,
+    "metrics": ["cer", "wer", "accuracy"],
+    "generate_report": true,
+    "output_dir": "evaluation_results"
+  },
+  
+  "performance": {
+    "max_workers": 4,
+    "batch_size": 10,
+    "memory_limit_mb": 4096,
+    "enable_telemetry": true
+  }
+}

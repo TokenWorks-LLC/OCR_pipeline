@@ -1,0 +1,43 @@
+pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
+"PNC (YOS 13.1), 1928",24,p24_c3_b3_f1,"En-na-. . . , Babyl. VI, p. 189, 3:3.
+En-nam-A-a, E-nam-A-a, E-na-
+ma-a,
+1. f. of A-ur-na-da, BIN IV,
+196:18.
+2. f. of d¯ama-ba-ni, LC,
+239:21.
+3. BIN IV, 230:6, 16; Gol.,
+8:2.
+En-nam-dAdad, En-um-dAdad,
+1. f. of Buzur-A-ur, BIN IV,
+192:8.
+2. NBC, 3770:10, 14.
+En-na-ma-nim,
+En-nam-ma-nim,
+En-na-nim, En-na-ni, En-
+na-ni-a, En-na-nu, En-
+na-nu-um, E-na-ma-nim,
+E-na-ni-a, E-na-nim, E-
+na-nu-um,
+1. s. of A-be-a, CCT I, 40c:11.
+2. s. of A-bu-di, CCT II, 10:47.
+3. s. of Am-ri-a, BIN IV,
+122:17.
+4. s. of Ku-ku-a, KTS, 44a:16.
+5. s. of Kúr-ub-I tar, LTC IV,
+117:2.
+6. s. of U-Hu-bur, CCT IV,
+49a:37.
+7. s. of Za-zi-a, TTC, 19:6.
+8. f. of A-bi-a-a, KTS, 50a:14.
+9. f. of ...-A-r, BIN IV,
+165:7.
+10. f. of A-ur-i-me-ti, BIN IV,
+29:1; 173:2, 11, 19, 33;
+CCT III, 19b:19.
+11. f. of A-ur-ma-lik, CCT I,
+49a:18; LTC IV, 82:1.
+12. f. of A-ur-ták-lá-ku, CCT I,
+1a:25.
+13. f. of A-ur-âbu, CCT I,
+4:40.","1152,73,2195,2308",3,p24_c3_b3_f0,LIST OF PERSONAL NAMES,en,"1152,73,2195,2308",3,0.9000000000000001,0.0,True,False,True

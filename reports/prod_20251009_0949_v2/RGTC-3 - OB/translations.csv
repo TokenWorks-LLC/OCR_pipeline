@@ -1,0 +1,31 @@
+pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
+RGTC-3 - OB,227,p227_c0_b0_f0,"Qattun(n)
+qa-at-tu-na-an
+lum qa-at-tu-na-an
+hala qa-at-tu-na-nim
+halas qa-at-tu-na-an
+qa-tu-na-an
+qa-at-tu-na-a
+ga-at-tu-na-nim
+ga-tu-na-nim
+KASKAL ga-at-tu-na-an/nim
+ekal qa-tu-na'-an
+qa-tu-na-[n]im
+Kq
+ki
+ga-ta-nim
+LU qa-at-tu-na-na-ju
+LU
+qa-at-tu-na-an
+unsichere Belege:
+[..ga-at-tu-na-a]n
+[qa-at-t]u-na-a[nk1]
+QutGm, Gutium
+ki
+gu-ti-um
+63,42,27
+sabe gu-tu-um
+LU/MAR.TU gu-ti-um","106,117,447,2519",0,p227_c1_b1_f0,"ARM 1,7,26.27; 21,4'!.5'; 37,12'.16.31'; 62,19
+(-[anki1); 98,21?; 2,41,7; 69,12'; 78,33; 79,7; 80,14; 81,9; 99,25;
+:02*∠'ll :g'01'tl :,8'∠ε :91'll'9ε'εI 1W8 :∠'0∠' :2l',6'tl'ε :9'62l
+27,4°.8.24.26; 59,9; 60,17 (<na>)'; 63,8; 68,2'; 105,9; 112,13;",en,"166,158,1001,2544",1,0.5282605520403031,341.220236797292,False,False,True

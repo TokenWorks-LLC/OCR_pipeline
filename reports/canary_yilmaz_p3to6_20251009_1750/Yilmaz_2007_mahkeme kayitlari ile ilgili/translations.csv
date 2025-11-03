@@ -1,0 +1,33 @@
+pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
+Yilmaz_2007_mahkeme kayitlari ile ilgili,6,p6_c1_b1_f0,"ilmi para olmad1 için tadmiqtum'dan ayrilmaktadr. AKT I s. 22 vd. no. 6;
+St. 9) baltum ""yaamak, emin ekilde tutmak, teslim etmek"" anlamlar1
+Bir eein fiati olan 10 mina kalayin, ister Kani'te, ister Puruhattum'da
+necei ile ilgili Kani-Krum'unun kararinin bildirildii bir mahkeme kayddr.
+inde babalarnin isimleri de yazilan iki ahit bulunmaktadr.
+I-li-ba-ni MAKIM
+a A-ta-ta / Lá-qi-pu-um
+ù Ma-nu-um-ba-lim-A-ùr
+is-bu-tu-ni-a-ti-ma
+10 ma-na AN.NA / i-im
+ANE a A-ur-dUTUsi
+DUMU ú-sú-a /i-nu-mi
+me-er-ú / A-ta-ta
+i-a-qú-lu-ni
+Ma-nu-um-ba-lúm-A-ur
+DUMU A-ur-ma-lik
+10 ma-na AN.NA
+a-na me-er-e
+A-ta-ta / i-a-qal
+lu i-na Kà-ni-i
+lu i-na Pu-ru-u-ha-tim
+a-na a-wa-tim a-ni-a-tim
+kà-ru-um Kà-ni-i
+i-di-ni-a-ti-ma
+IGI GÍR Sa A-ur
+i-bu-ti-ni /ni-di-in
+IGI A-ùr-ba-ni <DUMU> I-ku-pi-a
+IGI A-ur-i-di
+DUMU A-mur-A-ur
+U-sú-a /kà-sa-ar
+I-ku-nim / ta-pá-i-ni","0,104,764,2444",1,p6_c0_b0_f2,"Kt. j/k 430
+ö.y.",tr,"0,132,336,2126",0,0.40260996452486963,250.9123352886422,False,False,True

@@ -1,0 +1,24 @@
+============================================================
+MANIFEST PROCESSING SUMMARY
+============================================================
+Timestamp: 2025-10-09 16:39:10
+Manifest: manifests\canary_roles_60.txt
+Detection config: profiles\akkadian_strict.json
+
+RESULTS:
+  Total pages: 60
+  Successful: 60
+  Failed: 0
+  Akkadian blocks: 13
+  Translation pairs: 9
+
+PERFORMANCE:
+  Total time: 5.1 minutes
+  Avg time per page: 5.14s
+  Throughput: 0.2 pages/min
+
+OUTPUTS:
+  Client CSV: reports\canary_roles_20251009_163353\client_translations.csv
+  Progress CSV: reports\canary_roles_20251009_163353\progress.csv
+  Output directory: reports\canary_roles_20251009_163353
+============================================================

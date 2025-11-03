@@ -1,0 +1,2 @@
+pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
+"CMK, 2001",507,p507_c0_b0_f0,La correspondance féminine 497,"28.69499969482422,37.296485900878906,351.22550201416016,931.6694869995117",0,p507_c0_b0_f2,"383 (AKT 1, 14)",en,"28.69499969482422,37.296485900878906,351.22550201416016,931.6694869995117",0,0.9000000000000001,0.0,True,False,True

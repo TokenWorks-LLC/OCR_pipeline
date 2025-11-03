@@ -1,0 +1,4 @@
+pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
+"Özgüç, Tashin - Kültepe-Kaniš. The Palaces and Temples of Kültepe-Kaniš. TTKY V 46, 1999(cut)",100,p100_c0_b0_f0,"foundations of the south wing, but again could not find any tablets.
+Hrozny16 < Le Kültépé n'est pas un cratère, comme le croit M. Chantre ».
+Karum, we shall briefly explain the excavations on the city mound:","72,613,854,2201",0,p100_c2_b2_f0,THE PALACES AND TEMPLES OF KULTEPE,en,"69,103,1116,2644",2,0.33968592057687924,315.6204207588603,False,False,False

@@ -1,0 +1,38 @@
+pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
+Hrozny_1949_ArOr17_biblio,1,p1_c1_b1_f1,"DE BEDRICH HROZNY.')
+Par Václav Cihar, Praha.
+Ouvrages et articles publiés de 1902 à Juin 1949.
+1. Mémoire pour le doctorat ès lettres (dissertation) de I'Université de Vienne:
+Südarabische Grafitti, 1901, inédit. A paraitre dans la série des Publications de
+Annals of Archaeology and Anthropology
+Archives d'Histoire du Droit Oriental
+Bulletin de la Société de Linguistique
+Comptes Rendus des Séances de l'Académie des Inscriptions et Belles-Lettres
+Denkschriften der Akademie der Wissenschaften in Wien
+Internationales Archiv für Ethnographie
+Journal of the Royal Asiatic Society
+Journal of Society of Oriental Research
+Mitteilungen der Deutschen Orientgesellschaft
+Mitteilungen der Vorderasiatischen Gesellschaft
+Orientalistische Literaturzeitung
+Quarterly Statement of the Palestine Exploration Fund","986,158,1914,2168",1,p1_c1_b1_f0,BIBLIOGRAPHIE DES TRAVAUX,tr,"986,158,1914,2168",1,0.9000000000000001,0.0,True,False,True
+Hrozny_1949_ArOr17_biblio,1,p1_c2_b2_f0,l'expédition archéologique en Arabie méridionale.,"1011,421,1515,1948",2,p1_c2_b2_f1,"Archivio Glottologico Italiano
+American Journal of Archaeology
+Archiv für Orientforschung
+Archivum Orientale Pragense
+Archiv Orientálni
+Beiträge zur Assyriologie
+Bibliotheca Orientalis
+Boghazköi-Studien
+Cesky asopis filologicky
+Deutsche Literatur-Zeitung
+Indogermanische Forschungen
+Illustrated London News
+Journal Asiatique
+Jaarbericht Ex Oriente Lux
+Journal des Savants
+Listy filologické
+Literarisches Zentralblatt
+Le Muséon
+Orientalia
+Philologische Wochenschrift",en,"1011,421,1515,1948",2,0.9000000000000001,0.0,True,False,True

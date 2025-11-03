@@ -1,0 +1,265 @@
+{
+  "pdf_path": "data\\input_pdfs\\Alexander, Robert L. - Native Group Cylinder Seal Engravers of Karum Kanish Level II. Belleten 43 (171-172), 1979 573-618.pdf",
+  "pages_processed": 1,
+  "pages_requested": 1,
+  "total_processing_time": 15.37,
+  "avg_time_per_page": 15.37,
+  "output_csv": "evaluation_results\\Alexander, Robert L. - Native Group Cylinder Seal Engravers of Karum Kanish Level II. Belleten 43 (171-172), 1979 573-618_page_5\\comprehensive_results.csv",
+  "akkadian_translations_found": 0,
+  "akkadian_translations_pdf": null,
+  "pipeline_config": {
+    "llm_provider": "ollama",
+    "llm_model": "mistral:latest",
+    "llm_base_url": "http://localhost:11434",
+    "llm_timeout": 30,
+    "enable_new_llm_correction": true,
+    "llm_correction_model": "qwen2.5:7b-instruct",
+    "llm_correction_edit_budget": 0.12,
+    "llm_correction_cache_enabled": true,
+    "dpi": 300,
+    "paddle_use_gpu": true,
+    "ocr_languages": [
+      "en",
+      "tr",
+      "de",
+      "fr",
+      "it"
+    ],
+    "ocr_params": {
+      "en": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      },
+      "tr": {
+        "det_db_thresh": 0.2,
+        "det_db_box_thresh": 0.5,
+        "rec_score_thresh": 0.4
+      },
+      "de": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      },
+      "fr": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      },
+      "it": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      }
+    },
+    "enable_reading_order": true,
+    "enable_llm_correction": true,
+    "max_concurrent_corrections": 3,
+    "performance_profile": "quality",
+    "enable_akkadian_extraction": true,
+    "generate_translations_pdf": true,
+    "akkadian_confidence_threshold": 0.8,
+    "output_csv_metadata": true,
+    "create_html_overlay": true,
+    "create_visualization": true,
+    "preserve_transliteration": {
+      "enable": false
+    },
+    "metrics": {
+      "enable_grapheme_metrics": false
+    },
+    "research": {
+      "enable_char_lm_decoding": false,
+      "enable_rover_ensemble": false,
+      "enable_lexicon_bias": false,
+      "enable_tta": false,
+      "enable_confusion_prior": false,
+      "enable_header_footer_lr": false
+    }
+  },
+  "total_text_elements": 29,
+  "total_word_count": 275,
+  "total_token_count": 29,
+  "avg_text_elements_per_page": 29.0,
+  "avg_word_count_per_page": 275.0,
+  "avg_token_count_per_page": 29.0,
+  "time_per_text_element": 0.5301,
+  "time_per_word": 0.0559,
+  "time_per_token": 0.5301,
+  "avg_cpu_percent": 0.0,
+  "avg_memory_mb": 0.0,
+  "total_pages": 15,
+  "total_text_lines": 720,
+  "total_characters": 34997,
+  "avg_lines_per_page": 48.0,
+  "avg_chars_per_page": 2333.133333333333,
+  "avg_confidence": 0.974,
+  "pages_with_warnings": 0,
+  "warning_rate": 0.0,
+  "language_distribution": {
+    "turkish": 7,
+    "akkadian": 2,
+    "akkadian_mixed": 1,
+    "english_mixed": 2,
+    "english": 2,
+    "turkish_mixed": 1
+  },
+  "page_statistics": [
+    {
+      "page_num": 5,
+      "processing_time": 15.36138129234314,
+      "ocr_time": 15.28914189338684,
+      "reading_order_time": 3.6716461181640625e-05,
+      "research_enhancement_time": 1.1920928955078125e-06,
+      "diacritic_restoration_time": 0.0,
+      "correction_time": 7.462501525878906e-05,
+      "text_elements": 29,
+      "language": "english",
+      "language_analysis": {
+        "primary_language": "english",
+        "language_counts": {
+          "english": 28,
+          "akkadian": 1
+        },
+        "is_mixed": false,
+        "per_line_languages": [
+          [
+            0,
+            "english"
+          ],
+          [
+            1,
+            "english"
+          ],
+          [
+            2,
+            "english"
+          ],
+          [
+            3,
+            "english"
+          ],
+          [
+            4,
+            "akkadian"
+          ],
+          [
+            5,
+            "english"
+          ],
+          [
+            6,
+            "english"
+          ],
+          [
+            7,
+            "english"
+          ],
+          [
+            8,
+            "english"
+          ],
+          [
+            9,
+            "english"
+          ],
+          [
+            10,
+            "english"
+          ],
+          [
+            11,
+            "english"
+          ],
+          [
+            12,
+            "english"
+          ],
+          [
+            13,
+            "english"
+          ],
+          [
+            14,
+            "english"
+          ],
+          [
+            15,
+            "english"
+          ],
+          [
+            16,
+            "english"
+          ],
+          [
+            17,
+            "english"
+          ],
+          [
+            18,
+            "english"
+          ],
+          [
+            19,
+            "english"
+          ],
+          [
+            20,
+            "english"
+          ],
+          [
+            21,
+            "english"
+          ],
+          [
+            22,
+            "english"
+          ],
+          [
+            23,
+            "english"
+          ],
+          [
+            24,
+            "english"
+          ],
+          [
+            25,
+            "english"
+          ],
+          [
+            26,
+            "english"
+          ],
+          [
+            27,
+            "english"
+          ],
+          [
+            28,
+            "english"
+          ]
+        ]
+      },
+      "corrections_made": 0,
+      "research_corrections": 0,
+      "diacritic_corrections": 0,
+      "avg_confidence": 0.989,
+      "research_features_applied": {
+        "char_lm": false,
+        "lexicon_bias": false,
+        "confusion_prior": false,
+        "rover_ensemble": false,
+        "diacritic_restoration": false
+      },
+      "word_count": 275,
+      "token_count": 29,
+      "text_elements_count": 29,
+      "telemetry": {
+        "lines_per_second": 1.8878510628764231,
+        "characters_per_second": 112.03419583483877,
+        "ms_per_page": 15361.38129234314
+      }
+    }
+  ]
+}

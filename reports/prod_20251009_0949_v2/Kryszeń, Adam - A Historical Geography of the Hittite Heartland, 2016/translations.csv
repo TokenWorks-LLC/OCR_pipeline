@@ -1,0 +1,6 @@
+pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
+"Kryszeń, Adam - A Historical Geography of the Hittite Heartland, 2016",185,p185_c0_b0_f5,"11. [KUR
+12. [ (KUR Ip-pa-a-a-na-ma) da]n-na-at-ta-an e-e-ta
+URU
+13. [ p(a-ra-a I-NA KUR","131,39,947,2511",0,p185_c0_b0_f0,"350
+5. More than Two Days from Hattua?",en,"131,39,947,2511",0,0.9000000000000001,0.0,True,False,True

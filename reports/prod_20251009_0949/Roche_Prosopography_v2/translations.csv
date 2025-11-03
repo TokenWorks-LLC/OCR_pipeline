@@ -1,0 +1,13 @@
+pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
+Roche_Prosopography_v2,78,p78_c1_b1,"(1) Yanhamu, fils de Napakku
+(2) Yanhamu, fils de Ginatanu
+Nous pouvons avancer deux hypothèses :
+pour l'autre, un nom de personne féminin 306.
+verbe (w)ablu est au singulier (3ème p.) :
+Cf. la proposition de J. Nougayrol présentée en Introduction.
+grande dame > ou encore < soeur de aukamuwa, roi d'Amurru ».
+rmy(y) >, < dumu ramiya > ou encore, < dumu mí ramiya >.","0,207,709,2730",1,p78_c0_b0,"pouvant être confondus304.
+3.4.2.2. Taghulinu
+304
+305
+306",fr,"0,519,309,2179",0,0.6031179269207069,203.30334478310976,False,False,True

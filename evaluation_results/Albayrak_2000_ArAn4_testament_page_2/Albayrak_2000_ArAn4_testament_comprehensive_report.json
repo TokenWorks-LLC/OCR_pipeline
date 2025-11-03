@@ -1,0 +1,370 @@
+{
+  "pdf_path": "data\\input_pdfs\\Albayrak_2000_ArAn4_testament.pdf",
+  "pages_processed": 1,
+  "pages_requested": 1,
+  "total_processing_time": 16.94,
+  "avg_time_per_page": 16.94,
+  "output_csv": "evaluation_results\\Albayrak_2000_ArAn4_testament_page_2\\comprehensive_results.csv",
+  "akkadian_translations_found": 0,
+  "akkadian_translations_pdf": "evaluation_results\\Albayrak_2000_ArAn4_testament_page_2\\Albayrak_2000_ArAn4_testament_akkadian_translations.pdf",
+  "pipeline_config": {
+    "llm_provider": "ollama",
+    "llm_model": "mistral:latest",
+    "llm_base_url": "http://localhost:11434",
+    "llm_timeout": 30,
+    "enable_new_llm_correction": true,
+    "llm_correction_model": "qwen2.5:7b-instruct",
+    "llm_correction_edit_budget": 0.12,
+    "llm_correction_cache_enabled": true,
+    "dpi": 300,
+    "paddle_use_gpu": true,
+    "ocr_languages": [
+      "en",
+      "tr",
+      "de",
+      "fr",
+      "it"
+    ],
+    "ocr_params": {
+      "en": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      },
+      "tr": {
+        "det_db_thresh": 0.2,
+        "det_db_box_thresh": 0.5,
+        "rec_score_thresh": 0.4
+      },
+      "de": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      },
+      "fr": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      },
+      "it": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      }
+    },
+    "enable_reading_order": true,
+    "enable_llm_correction": true,
+    "max_concurrent_corrections": 3,
+    "performance_profile": "quality",
+    "enable_akkadian_extraction": true,
+    "generate_translations_pdf": true,
+    "akkadian_confidence_threshold": 0.8,
+    "output_csv_metadata": true,
+    "create_html_overlay": true,
+    "create_visualization": true,
+    "preserve_transliteration": {
+      "enable": false
+    },
+    "metrics": {
+      "enable_grapheme_metrics": false
+    },
+    "research": {
+      "enable_char_lm_decoding": false,
+      "enable_rover_ensemble": false,
+      "enable_lexicon_bias": false,
+      "enable_tta": false,
+      "enable_confusion_prior": false,
+      "enable_header_footer_lr": false
+    }
+  },
+  "total_text_elements": 55,
+  "total_word_count": 0,
+  "total_token_count": 55,
+  "avg_text_elements_per_page": 55.0,
+  "avg_word_count_per_page": 0.0,
+  "avg_token_count_per_page": 55.0,
+  "time_per_text_element": 0.3079,
+  "time_per_word": 0,
+  "time_per_token": 0.3079,
+  "avg_cpu_percent": 0.0,
+  "avg_memory_mb": 0.0,
+  "total_pages": 7,
+  "total_text_lines": 335,
+  "total_characters": 13474,
+  "avg_lines_per_page": 47.857142857142854,
+  "avg_chars_per_page": 1924.857142857143,
+  "avg_confidence": 0.97,
+  "pages_with_warnings": 0,
+  "warning_rate": 0.0,
+  "language_distribution": {
+    "turkish": 2,
+    "akkadian": 2,
+    "akkadian_mixed": 2,
+    "german_mixed": 1
+  },
+  "page_statistics": [
+    {
+      "page_num": 2,
+      "processing_time": 16.922677755355835,
+      "ocr_time": 16.790777444839478,
+      "reading_order_time": 5.698204040527344e-05,
+      "research_enhancement_time": 1.6689300537109375e-06,
+      "diacritic_restoration_time": 2.384185791015625e-07,
+      "correction_time": 0.00010466575622558594,
+      "text_elements": 55,
+      "language": "german_mixed",
+      "language_analysis": {
+        "primary_language": "german",
+        "language_counts": {
+          "unknown": 2,
+          "english": 7,
+          "akkadian": 13,
+          "turkish": 1,
+          "german": 32
+        },
+        "is_mixed": true,
+        "per_line_languages": [
+          [
+            0,
+            "unknown"
+          ],
+          [
+            1,
+            "unknown"
+          ],
+          [
+            2,
+            "english"
+          ],
+          [
+            3,
+            "akkadian"
+          ],
+          [
+            4,
+            "akkadian"
+          ],
+          [
+            5,
+            "akkadian"
+          ],
+          [
+            6,
+            "akkadian"
+          ],
+          [
+            7,
+            "akkadian"
+          ],
+          [
+            8,
+            "english"
+          ],
+          [
+            9,
+            "english"
+          ],
+          [
+            10,
+            "akkadian"
+          ],
+          [
+            11,
+            "akkadian"
+          ],
+          [
+            12,
+            "akkadian"
+          ],
+          [
+            13,
+            "akkadian"
+          ],
+          [
+            14,
+            "akkadian"
+          ],
+          [
+            15,
+            "akkadian"
+          ],
+          [
+            16,
+            "english"
+          ],
+          [
+            17,
+            "akkadian"
+          ],
+          [
+            18,
+            "turkish"
+          ],
+          [
+            19,
+            "german"
+          ],
+          [
+            20,
+            "german"
+          ],
+          [
+            21,
+            "german"
+          ],
+          [
+            22,
+            "german"
+          ],
+          [
+            23,
+            "german"
+          ],
+          [
+            24,
+            "german"
+          ],
+          [
+            25,
+            "german"
+          ],
+          [
+            26,
+            "german"
+          ],
+          [
+            27,
+            "german"
+          ],
+          [
+            28,
+            "german"
+          ],
+          [
+            29,
+            "german"
+          ],
+          [
+            30,
+            "german"
+          ],
+          [
+            31,
+            "german"
+          ],
+          [
+            32,
+            "german"
+          ],
+          [
+            33,
+            "akkadian"
+          ],
+          [
+            34,
+            "german"
+          ],
+          [
+            35,
+            "german"
+          ],
+          [
+            36,
+            "german"
+          ],
+          [
+            37,
+            "german"
+          ],
+          [
+            38,
+            "german"
+          ],
+          [
+            39,
+            "german"
+          ],
+          [
+            40,
+            "german"
+          ],
+          [
+            41,
+            "german"
+          ],
+          [
+            42,
+            "german"
+          ],
+          [
+            43,
+            "german"
+          ],
+          [
+            44,
+            "german"
+          ],
+          [
+            45,
+            "german"
+          ],
+          [
+            46,
+            "german"
+          ],
+          [
+            47,
+            "german"
+          ],
+          [
+            48,
+            "english"
+          ],
+          [
+            49,
+            "german"
+          ],
+          [
+            50,
+            "english"
+          ],
+          [
+            51,
+            "english"
+          ],
+          [
+            52,
+            "german"
+          ],
+          [
+            53,
+            "german"
+          ],
+          [
+            54,
+            "german"
+          ]
+        ]
+      },
+      "corrections_made": 0,
+      "research_corrections": 0,
+      "diacritic_corrections": 0,
+      "avg_confidence": 0.971,
+      "research_features_applied": {
+        "char_lm": false,
+        "lexicon_bias": false,
+        "confusion_prior": false,
+        "rover_ensemble": false,
+        "diacritic_restoration": false
+      },
+      "word_count": 0,
+      "token_count": 55,
+      "text_elements_count": 55,
+      "telemetry": {
+        "lines_per_second": 3.2500766601546336,
+        "characters_per_second": 119.307359579131,
+        "ms_per_page": 16922.677755355835
+      }
+    }
+  ]
+}

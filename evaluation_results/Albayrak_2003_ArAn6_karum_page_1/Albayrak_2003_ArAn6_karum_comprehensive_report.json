@@ -1,0 +1,304 @@
+{
+  "pdf_path": "data\\input_pdfs\\Albayrak_2003_ArAn6_karum.pdf",
+  "pages_processed": 1,
+  "pages_requested": 1,
+  "total_processing_time": 16.77,
+  "avg_time_per_page": 16.77,
+  "output_csv": "evaluation_results\\Albayrak_2003_ArAn6_karum_page_1\\comprehensive_results.csv",
+  "akkadian_translations_found": 0,
+  "akkadian_translations_pdf": "evaluation_results\\Albayrak_2003_ArAn6_karum_page_1\\Albayrak_2003_ArAn6_karum_akkadian_translations.pdf",
+  "pipeline_config": {
+    "llm_provider": "ollama",
+    "llm_model": "mistral:latest",
+    "llm_base_url": "http://localhost:11434",
+    "llm_timeout": 30,
+    "enable_new_llm_correction": true,
+    "llm_correction_model": "qwen2.5:7b-instruct",
+    "llm_correction_edit_budget": 0.12,
+    "llm_correction_cache_enabled": true,
+    "dpi": 300,
+    "paddle_use_gpu": true,
+    "ocr_languages": [
+      "en",
+      "tr",
+      "de",
+      "fr",
+      "it"
+    ],
+    "ocr_params": {
+      "en": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      },
+      "tr": {
+        "det_db_thresh": 0.2,
+        "det_db_box_thresh": 0.5,
+        "rec_score_thresh": 0.4
+      },
+      "de": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      },
+      "fr": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      },
+      "it": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      }
+    },
+    "enable_reading_order": true,
+    "enable_llm_correction": true,
+    "max_concurrent_corrections": 3,
+    "performance_profile": "quality",
+    "enable_akkadian_extraction": true,
+    "generate_translations_pdf": true,
+    "akkadian_confidence_threshold": 0.8,
+    "output_csv_metadata": true,
+    "create_html_overlay": true,
+    "create_visualization": true,
+    "preserve_transliteration": {
+      "enable": false
+    },
+    "metrics": {
+      "enable_grapheme_metrics": false
+    },
+    "research": {
+      "enable_char_lm_decoding": false,
+      "enable_rover_ensemble": false,
+      "enable_lexicon_bias": false,
+      "enable_tta": false,
+      "enable_confusion_prior": false,
+      "enable_header_footer_lr": false
+    }
+  },
+  "total_text_elements": 39,
+  "total_word_count": 271,
+  "total_token_count": 39,
+  "avg_text_elements_per_page": 39.0,
+  "avg_word_count_per_page": 271.0,
+  "avg_token_count_per_page": 39.0,
+  "time_per_text_element": 0.43,
+  "time_per_word": 0.0619,
+  "time_per_token": 0.43,
+  "avg_cpu_percent": 0.0,
+  "avg_memory_mb": 0.0,
+  "total_pages": 14,
+  "total_text_lines": 605,
+  "total_characters": 26231,
+  "avg_lines_per_page": 43.214285714285715,
+  "avg_chars_per_page": 1873.642857142857,
+  "avg_confidence": 0.971,
+  "pages_with_warnings": 0,
+  "warning_rate": 0.0,
+  "language_distribution": {
+    "turkish": 9,
+    "akkadian": 3,
+    "akkadian_mixed": 2
+  },
+  "page_statistics": [
+    {
+      "page_num": 1,
+      "processing_time": 16.761548280715942,
+      "ocr_time": 16.6622953414917,
+      "reading_order_time": 4.458427429199219e-05,
+      "research_enhancement_time": 1.6689300537109375e-06,
+      "diacritic_restoration_time": 0.0,
+      "correction_time": 9.703636169433594e-05,
+      "text_elements": 39,
+      "language": "turkish",
+      "language_analysis": {
+        "primary_language": "turkish",
+        "language_counts": {
+          "akkadian": 1,
+          "turkish": 28,
+          "unknown": 4,
+          "english": 6
+        },
+        "is_mixed": false,
+        "per_line_languages": [
+          [
+            0,
+            "akkadian"
+          ],
+          [
+            1,
+            "turkish"
+          ],
+          [
+            2,
+            "turkish"
+          ],
+          [
+            3,
+            "turkish"
+          ],
+          [
+            4,
+            "turkish"
+          ],
+          [
+            5,
+            "turkish"
+          ],
+          [
+            6,
+            "turkish"
+          ],
+          [
+            7,
+            "turkish"
+          ],
+          [
+            8,
+            "turkish"
+          ],
+          [
+            9,
+            "turkish"
+          ],
+          [
+            10,
+            "turkish"
+          ],
+          [
+            11,
+            "turkish"
+          ],
+          [
+            12,
+            "turkish"
+          ],
+          [
+            13,
+            "turkish"
+          ],
+          [
+            14,
+            "turkish"
+          ],
+          [
+            15,
+            "turkish"
+          ],
+          [
+            16,
+            "turkish"
+          ],
+          [
+            17,
+            "turkish"
+          ],
+          [
+            18,
+            "turkish"
+          ],
+          [
+            19,
+            "turkish"
+          ],
+          [
+            20,
+            "unknown"
+          ],
+          [
+            21,
+            "turkish"
+          ],
+          [
+            22,
+            "turkish"
+          ],
+          [
+            23,
+            "unknown"
+          ],
+          [
+            24,
+            "turkish"
+          ],
+          [
+            25,
+            "turkish"
+          ],
+          [
+            26,
+            "turkish"
+          ],
+          [
+            27,
+            "unknown"
+          ],
+          [
+            28,
+            "turkish"
+          ],
+          [
+            29,
+            "english"
+          ],
+          [
+            30,
+            "turkish"
+          ],
+          [
+            31,
+            "english"
+          ],
+          [
+            32,
+            "turkish"
+          ],
+          [
+            33,
+            "unknown"
+          ],
+          [
+            34,
+            "english"
+          ],
+          [
+            35,
+            "english"
+          ],
+          [
+            36,
+            "english"
+          ],
+          [
+            37,
+            "english"
+          ],
+          [
+            38,
+            "turkish"
+          ]
+        ]
+      },
+      "corrections_made": 0,
+      "research_corrections": 0,
+      "diacritic_corrections": 0,
+      "avg_confidence": 0.962,
+      "research_features_applied": {
+        "char_lm": false,
+        "lexicon_bias": false,
+        "confusion_prior": false,
+        "rover_ensemble": false,
+        "diacritic_restoration": false
+      },
+      "word_count": 271,
+      "token_count": 39,
+      "text_elements_count": 39,
+      "telemetry": {
+        "lines_per_second": 2.326754029332079,
+        "characters_per_second": 118.5451347764831,
+        "ms_per_page": 16761.548280715942
+      }
+    }
+  ]
+}

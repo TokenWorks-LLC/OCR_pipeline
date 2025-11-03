@@ -1,0 +1,8 @@
+pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
+PRU III combined,351,p351_c1_b1_f0,"royale se relàche, la fonction devient I'accessoire du fief, une charge dont le tenancier cherche à se libérer
+ou, au moins, à atténuer le poids, en substituant au service personnel des redevances ou des corvées
+exécutées par des remplaçants. En méme temps, le caractère patrimonial s'étend aux emplois supérieurs de
+ladministration, faisantéchec à Fexercice direct de lautorité royale sur ses agents inférieurs. Les services
+rendus par ceux-ci, plus ou moins transformés en prestations de caractère économique, sont perçus à titre
+de revenu par les agents supérieurs qui n'en rendent plus compte au trésor royal. Ces phénomènes que I'on
+constate à Ugarit ne sont pas exceptionnels et correspondent à une évolution juridique qui semble avoir","96,90,1079,2612",1,p351_c1_b1_f1,LE STATUT DES PERSONNES ET LE DROIT DE LA FAMILLE,fr,"96,90,1079,2612",1,0.9000000000000001,0.0,True,False,True

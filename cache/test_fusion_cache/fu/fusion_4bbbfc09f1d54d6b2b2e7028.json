@@ -1,0 +1,12 @@
+{
+  "text": "Fused output",
+  "confidence": 0.92,
+  "provenance": {
+    "method": "rover"
+  },
+  "engines": [
+    "engine1",
+    "engine2",
+    "engine3"
+  ]
+}

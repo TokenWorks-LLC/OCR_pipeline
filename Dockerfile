@@ -26,8 +26,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     gnupg2 \
     curl \
     ca-certificates \
+    unzip \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
+
+# Install AWS CLI v2
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
+    && unzip awscliv2.zip \
+    && ./aws/install \
+    && rm -rf aws awscliv2.zip
 
 # Make Python 3.11 the default python3
 RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1 \

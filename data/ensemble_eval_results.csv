@@ -1,0 +1,6 @@
+pdf_name,page,fusion_cer,fusion_wer,fusion_conf,best_engine,best_cer,best_wer,fusion_wins,time_sec,paddle_cer,paddle_wer,paddle_success,easyocr_cer,easyocr_wer,easyocr_success
+document_0.pdf,1,1.0000,1.0000,0.000,none,1.0000,1.0000,yes,0.00,1.0000,1.0000,no,1.0000,1.0000,no
+document_0.pdf,2,1.0000,1.0000,0.000,none,1.0000,1.0000,yes,0.00,1.0000,1.0000,no,1.0000,1.0000,no
+document_0.pdf,3,1.0000,1.0000,0.000,none,1.0000,1.0000,yes,0.00,1.0000,1.0000,no,1.0000,1.0000,no
+document_0.pdf,4,1.0000,1.0000,0.000,none,1.0000,1.0000,yes,0.00,1.0000,1.0000,no,1.0000,1.0000,no
+document_0.pdf,5,1.0000,1.0000,0.000,none,1.0000,1.0000,yes,0.00,1.0000,1.0000,no,1.0000,1.0000,no

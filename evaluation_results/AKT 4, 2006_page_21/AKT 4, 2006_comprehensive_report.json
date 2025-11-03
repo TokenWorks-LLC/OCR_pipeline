@@ -1,0 +1,363 @@
+{
+  "pdf_path": "data\\input_pdfs\\AKT 4, 2006.pdf",
+  "pages_processed": 1,
+  "pages_requested": 1,
+  "total_processing_time": 22.41,
+  "avg_time_per_page": 22.41,
+  "output_csv": "evaluation_results\\AKT 4, 2006_page_21\\comprehensive_results.csv",
+  "akkadian_translations_found": 0,
+  "akkadian_translations_pdf": "evaluation_results\\AKT 4, 2006_page_21\\AKT 4, 2006_akkadian_translations.pdf",
+  "pipeline_config": {
+    "llm_provider": "ollama",
+    "llm_model": "mistral:latest",
+    "llm_base_url": "http://localhost:11434",
+    "llm_timeout": 30,
+    "enable_new_llm_correction": true,
+    "llm_correction_model": "qwen2.5:7b-instruct",
+    "llm_correction_edit_budget": 0.12,
+    "llm_correction_cache_enabled": true,
+    "dpi": 300,
+    "paddle_use_gpu": true,
+    "ocr_languages": [
+      "en",
+      "tr",
+      "de",
+      "fr",
+      "it"
+    ],
+    "ocr_params": {
+      "en": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      },
+      "tr": {
+        "det_db_thresh": 0.2,
+        "det_db_box_thresh": 0.5,
+        "rec_score_thresh": 0.4
+      },
+      "de": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      },
+      "fr": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      },
+      "it": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      }
+    },
+    "enable_reading_order": true,
+    "enable_llm_correction": true,
+    "max_concurrent_corrections": 3,
+    "performance_profile": "quality",
+    "enable_akkadian_extraction": true,
+    "generate_translations_pdf": true,
+    "akkadian_confidence_threshold": 0.8,
+    "output_csv_metadata": true,
+    "create_html_overlay": true,
+    "create_visualization": true,
+    "preserve_transliteration": {
+      "enable": false
+    },
+    "metrics": {
+      "enable_grapheme_metrics": false
+    },
+    "research": {
+      "enable_char_lm_decoding": false,
+      "enable_rover_ensemble": false,
+      "enable_lexicon_bias": false,
+      "enable_tta": false,
+      "enable_confusion_prior": false,
+      "enable_header_footer_lr": false
+    }
+  },
+  "total_text_elements": 54,
+  "total_word_count": 0,
+  "total_token_count": 54,
+  "avg_text_elements_per_page": 54.0,
+  "avg_word_count_per_page": 0.0,
+  "avg_token_count_per_page": 54.0,
+  "time_per_text_element": 0.4151,
+  "time_per_word": 0,
+  "time_per_token": 0.4151,
+  "avg_cpu_percent": 0.0,
+  "avg_memory_mb": 0.0,
+  "total_pages": 3,
+  "total_text_lines": 132,
+  "total_characters": 7283,
+  "avg_lines_per_page": 44.0,
+  "avg_chars_per_page": 2427.6666666666665,
+  "avg_confidence": 0.973,
+  "pages_with_warnings": 0,
+  "warning_rate": 0.0,
+  "language_distribution": {
+    "turkish": 2,
+    "akkadian": 1
+  },
+  "page_statistics": [
+    {
+      "page_num": 21,
+      "processing_time": 22.40279483795166,
+      "ocr_time": 22.332218408584595,
+      "reading_order_time": 5.626678466796875e-05,
+      "research_enhancement_time": 1.430511474609375e-06,
+      "diacritic_restoration_time": 0.0,
+      "correction_time": 0.00011944770812988281,
+      "text_elements": 54,
+      "language": "akkadian",
+      "language_analysis": {
+        "primary_language": "akkadian",
+        "language_counts": {
+          "akkadian": 35,
+          "unknown": 9,
+          "english": 9,
+          "german": 1
+        },
+        "is_mixed": false,
+        "per_line_languages": [
+          [
+            0,
+            "akkadian"
+          ],
+          [
+            1,
+            "unknown"
+          ],
+          [
+            2,
+            "unknown"
+          ],
+          [
+            3,
+            "unknown"
+          ],
+          [
+            4,
+            "unknown"
+          ],
+          [
+            5,
+            "unknown"
+          ],
+          [
+            6,
+            "unknown"
+          ],
+          [
+            7,
+            "english"
+          ],
+          [
+            8,
+            "unknown"
+          ],
+          [
+            9,
+            "unknown"
+          ],
+          [
+            10,
+            "unknown"
+          ],
+          [
+            11,
+            "akkadian"
+          ],
+          [
+            12,
+            "akkadian"
+          ],
+          [
+            13,
+            "english"
+          ],
+          [
+            14,
+            "akkadian"
+          ],
+          [
+            15,
+            "akkadian"
+          ],
+          [
+            16,
+            "akkadian"
+          ],
+          [
+            17,
+            "english"
+          ],
+          [
+            18,
+            "akkadian"
+          ],
+          [
+            19,
+            "akkadian"
+          ],
+          [
+            20,
+            "akkadian"
+          ],
+          [
+            21,
+            "akkadian"
+          ],
+          [
+            22,
+            "akkadian"
+          ],
+          [
+            23,
+            "english"
+          ],
+          [
+            24,
+            "akkadian"
+          ],
+          [
+            25,
+            "german"
+          ],
+          [
+            26,
+            "english"
+          ],
+          [
+            27,
+            "akkadian"
+          ],
+          [
+            28,
+            "akkadian"
+          ],
+          [
+            29,
+            "akkadian"
+          ],
+          [
+            30,
+            "akkadian"
+          ],
+          [
+            31,
+            "akkadian"
+          ],
+          [
+            32,
+            "akkadian"
+          ],
+          [
+            33,
+            "akkadian"
+          ],
+          [
+            34,
+            "akkadian"
+          ],
+          [
+            35,
+            "akkadian"
+          ],
+          [
+            36,
+            "akkadian"
+          ],
+          [
+            37,
+            "akkadian"
+          ],
+          [
+            38,
+            "english"
+          ],
+          [
+            39,
+            "akkadian"
+          ],
+          [
+            40,
+            "english"
+          ],
+          [
+            41,
+            "akkadian"
+          ],
+          [
+            42,
+            "akkadian"
+          ],
+          [
+            43,
+            "akkadian"
+          ],
+          [
+            44,
+            "akkadian"
+          ],
+          [
+            45,
+            "akkadian"
+          ],
+          [
+            46,
+            "akkadian"
+          ],
+          [
+            47,
+            "akkadian"
+          ],
+          [
+            48,
+            "english"
+          ],
+          [
+            49,
+            "akkadian"
+          ],
+          [
+            50,
+            "akkadian"
+          ],
+          [
+            51,
+            "english"
+          ],
+          [
+            52,
+            "akkadian"
+          ],
+          [
+            53,
+            "akkadian"
+          ]
+        ]
+      },
+      "corrections_made": 0,
+      "research_corrections": 0,
+      "diacritic_corrections": 0,
+      "avg_confidence": 0.961,
+      "research_features_applied": {
+        "char_lm": false,
+        "lexicon_bias": false,
+        "confusion_prior": false,
+        "rover_ensemble": false,
+        "diacritic_restoration": false
+      },
+      "word_count": 0,
+      "token_count": 54,
+      "text_elements_count": 54,
+      "telemetry": {
+        "lines_per_second": 2.4104135394982418,
+        "characters_per_second": 81.64159932856082,
+        "ms_per_page": 22402.79483795166
+      }
+    }
+  ]
+}

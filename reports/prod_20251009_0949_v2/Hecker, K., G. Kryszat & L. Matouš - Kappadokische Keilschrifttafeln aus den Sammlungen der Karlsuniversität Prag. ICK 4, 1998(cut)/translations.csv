@@ -1,0 +1,32 @@
+pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
+"Hecker, K., G. Kryszat & L. Matouš - Kappadokische Keilschrifttafeln aus den Sammlungen der Karlsuniversität Prag. ICK 4, 1998(cut)",316,p316_c2_b2_f0,"rötlich-braune Tafel, 5,8 x 5 x 1,8 cm; Kopie Tafel CXXVII.
+Summe entsprechenden Betrag und zwei vom Karum bereitgestellte M. Silber.
+É A-ur-ma-lik ni-kà-
+¯u-ma-li-bi4-i-li-a
+ù A-ur-ma-lik ma-ah-ri-ni
+i-si-ú-ma 7 2/3 ma-na 4 2/3 GíN
+K∪.BABBAR sa-ru-pá-am i-li-bi4
+A-ur-ma-lik u-ma-li-bi4-i-lí-a
+i-dí um-ma Su-ma-li-bi4-i-lí-a-ma
+a-na A-ur-ma-lik-ma
+i-tù MU.1.È K.BABBARpí
+tù-kà-al  u4-ma-am
+tù-sa-áb-ma 5 ITU.KAM
+tù-kà-al-ma tup-pá-kà
+lá-ah-ri-im um-ma
+A-ur-ma-lik-ma a-na
+u-a-li-bi-ì-lí-a-ma
+ù a-na-ku i-nu-mì
+a-na a-limki ta-lu-ku
+i-tù 7 2/3 ma-na 4 ²/3 GíN
+K.BABBARáp-kà ú-a-bu-ú-kà
+ù 7 2/3 ma-na 4 2/3 GíN
+Kù.BABBAR a-da-na-ku-ma
+ù a-ta ta-be-el ú tup-pá-kà
+lá a-ha-ri-im um-ma
+Su-ma-li-bi4-i-li-a-ma
+a-na A-ur-ma-lik-ma
+2 ma-na K∪.BABBAR a É
+kà-ri-im a a-sé-er","123,485,988,2642",2,p316_c0_b0_f0,"Prager KUlTEPe-TEXTE
+,,soll Zins zahlen"" (für ussab).
+Vs.",en,"107,86,462,2918",0,0.31194027056348245,382.04973498224024,False,False,False

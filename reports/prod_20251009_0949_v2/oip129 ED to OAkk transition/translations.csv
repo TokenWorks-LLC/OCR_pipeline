@@ -1,0 +1,4 @@
+pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
+oip129 ED to OAkk transition,203,p203_c1_b1_f2,"Obverse 1. 1 ªEn-líl-da 2. 1 x [x x] 3. 1 [x x x] 4. 1 x [x x] 5. 1 «lú» x (possibly [hun-g]á[?]) 6. 1 Na-«ba»-LUL 7. 1 DINGIR.AL-é 8. 1 Ur-åe-um-[u]m(?) 9. Lugal-SAR¯DIÅ-d[a] 10. x x Ur-ªE[n-líl(?)]
+Reverse 1. lú-udu-k[a-x(?)] 2. «lú»-aåa£(GÁN)-[gí]d(?)
+Rest uninscribed","80.99987030029297,126.79706573486328,257.5052719116211,1398.0929489135742",1,p203_c1_b1_f1,TRANSLITERATION,tr,"80.99987030029297,126.79706573486328,257.5052719116211,1398.0929489135742",1,1.0,0.0,True,True,True

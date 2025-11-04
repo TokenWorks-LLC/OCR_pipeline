@@ -1,0 +1,55 @@
+# Docker Compose configuration for OCR Pipeline (Compose v2) with GPU support
+
+services:
+  # Default service for Intel/AMD64 platforms with NVIDIA GPU support
+  ocr:
+    build: .
+    image: tokenworks-ocr:latest
+    working_dir: /app
+    
+    # Enable GPU support for NVIDIA RTX 4070 (Compose v2+ format)
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: ["gpu"]
+    # Fallback for local non-swarm usage
+    gpus: all
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    
+    # Bind mount the entire repo so code changes and output persist on host
+    volumes:
+      - ./:/app
+    
+    # Default command: test GPU detection and initialization
+    # Override with: docker compose run --rm ocr "path/to/your/file.pdf"  
+    command: ["python", "-c", "import paddle; print('🔍 PaddlePaddle version:', paddle.__version__); print('🔍 CUDA compiled:', paddle.device.is_compiled_with_cuda()); print('🔍 GPU count:', paddle.device.cuda.device_count() if paddle.device.is_compiled_with_cuda() else 0); import paddleocr; ocr = paddleocr.PaddleOCR(use_textline_orientation=True, lang='latin'); print('✅ GPU OCR ready')"]
+    
+    # Platform-specific builds (uncomment ONE based on your system):
+    
+    # Intel/AMD64 (Windows, Intel Macs, most Linux servers):
+    platform: linux/amd64
+    
+    # Apple Silicon (ARM64) - ALSO change build context to Dockerfile.arm64:
+    # platform: linux/arm64
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile.arm64
+    
+    # Linux file permissions fix (uncomment for Linux hosts if needed):
+    # user: "${UID:-1000}:${GID:-1000}"
+    # Set UID/GID in your shell: export UID=$(id -u) GID=$(id -g)
+
+  # Alternative service for Apple Silicon users
+  ocr-arm64:
+    build:
+      context: .
+      dockerfile: Dockerfile.arm64
+    image: tokenworks-ocr:latest
+    working_dir: /app
+    platform: linux/arm64
+    volumes:
+      - ./:/app
+    command: ["python", "run_pipeline.py", "data/input/Innaya_v2 copy.pdf"]

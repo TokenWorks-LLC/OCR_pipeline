@@ -1,0 +1,35 @@
+pdf_path	page_no	original_pdf	original_page	gold_text
+data\gold_pages_only\Albayrak_2001_AMMY2000_ma'usu_page_2.pdf	1	Albayrak_2001_AMMY2000_ma'usu.PDF	2	"Sumerce kaynaklarda A isareti ile gösterilen ve Akadea karsiligi
+mû olan ""su"" kelimesi, Kültepe metinlerinde ma-u/ma-e/ma-i seklinde
+yazilmistir. Koloni Devri Tabletlerinde çok az geçen bu kelime, tespit
+ettigimiz kadariyla, yalnizca bir yerde, içme suyunu ifade etmek üzere
+kullanilmistir. Geçtigi diger metinlerde ise, bazen bir isimle
+iliskilendirilerek, hurasum sa ma-e-u ""yikanmis altin"", TUG sa ma-e-su
+""yi lcanmis kumas""... gibi, bir sifat seklinde, bazen de bir fülle birlikte,
+çogu zaman iyi anlasilamayan mecazi mânâlarda kullanilmistir.
+
+""Su"" kelimesinin geçtigi metinlerden ilk olarak, yukarida
+bahsettigimiz üzere, mecâzi bir anlatim olmaksizin, maunun içme
+suyu karsiliginda kullanildigi Kt. 87/k 3374 env. nolu belgenin ilgili
+kisimlarini ele almak istiyoruz. Amur-Istar taraf indan Assur-ré'î adli
+bir kimseye yazilan bu mektubun ilgili satirlarinda sunlar
+kaydedilmektedir:
+
+a-na A-sùr-SIPA qi-bi-ma ')um-ma A-mur-
+Istar-ma a-na su-mi URUDU mi-su-um
+
+ i-na tup-pi-kà tù-sa-la-ni a-ta 30 ma-
+na.TA hi-la-tim ta-di-am a-na-ku 40 ma-
+na.TA a-di -ma ù ü-sé-er  qâ-dum NINDA ù
+ma-e sa-nu-um la ma-aq-tâm
+""Assur-ré'î'ye söyle, Amur-Istar söyle
+(söylüyor): Bakirdan dolayi mektubunda
+niçin bana soruyorsun? Sen 30'ar mina
+reçine benim için depoladin. Ben (de) 40'ar
+mina depoladim ve serbest biraktim.
+
+Bu belge K. Hecker tarafindan yayina hazirlandmaktadir. Metnin ilgili kismini kullanmain
+hususunda gösterdini anlayis için kendisine tesekkür ediyorum.
+Akadeasi hilum olan bu kelimeye AHW s. 345'de ""Harz"" ve CAD H s. 188 ""exudation of
+plants, resin""de ""reçine"" anlami verilmektedir.
+"

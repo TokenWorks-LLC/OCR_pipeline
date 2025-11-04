@@ -1,0 +1,10 @@
+pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
+"Michel, Cécile - Innāya dans les Tablettes Paléo-Assyriennes I, Analyse. ERC 1, 1991",32,p32_c1_b1,"le scribe s'est contenté du seul nom du témoin17.
+un nom identique 105, 26-28 :
+dNoms bisexués","133,555,610,1361",1,p32_c0_b0,"30
+perdues.
+du document16.
+l'un des homonymes.
+16
+17
+18",fr,"127,77,354,2247",0,0.552096745059703,138.49548729110273,False,False,False

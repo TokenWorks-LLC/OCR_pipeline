@@ -11,7 +11,7 @@ from config import ROTATION_CANDIDATES
 from preprocess import preprocess_pipeline
 from ocr_utils import quick_ocr_conf, ocr_ensemble
 from lang_and_extract import extract_translations, detect_lang
-from llama_correction import correct_ocr_lines
+from llm_correction import correct_ocr_lines
 
 logger = logging.getLogger(__name__)
 

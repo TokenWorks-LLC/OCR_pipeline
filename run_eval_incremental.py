@@ -202,6 +202,39 @@ def save_incremental_progress(output_dir: str, page_num: int, total_pages: int,
             cumulative_stats['total_word_count'] = cumulative_stats.get('total_word_count', 0) + processing_stats.get('word_count', 0)
             cumulative_stats['total_token_count'] = cumulative_stats.get('total_token_count', 0) + processing_stats.get('token_count', 0)
             
+            # Add confidence tracking metrics
+            if 'confidence_metrics' in processing_stats:
+                conf_metrics = processing_stats['confidence_metrics']
+                if 'confidence_metrics' not in cumulative_stats:
+                    cumulative_stats['confidence_metrics'] = {
+                        'word_level_confidences': [],
+                        'llm_corrected_words': [],
+                        'ocr_vs_llm_confidence': [],
+                        'confidence_distribution': {'high': 0, 'medium': 0, 'low': 0}
+                    }
+                
+                # Aggregate word-level confidences
+                cumulative_stats['confidence_metrics']['word_level_confidences'].extend(
+                    conf_metrics.get('word_level_confidences', [])
+                )
+                
+                # Track LLM corrected words
+                cumulative_stats['confidence_metrics']['llm_corrected_words'].extend(
+                    conf_metrics.get('llm_corrected_words', [])
+                )
+                
+                # Track OCR vs LLM confidence comparison
+                cumulative_stats['confidence_metrics']['ocr_vs_llm_confidence'].extend(
+                    conf_metrics.get('ocr_vs_llm_confidence', [])
+                )
+                
+                # Update confidence distribution
+                dist = cumulative_stats['confidence_metrics']['confidence_distribution']
+                page_dist = conf_metrics.get('confidence_distribution', {})
+                dist['high'] += page_dist.get('high', 0)
+                dist['medium'] += page_dist.get('medium', 0)
+                dist['low'] += page_dist.get('low', 0)
+            
             # Aggregate enhanced monitoring data
             if 'enhanced_monitoring' in processing_stats:
                 enhanced = processing_stats['enhanced_monitoring']

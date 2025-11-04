@@ -1,0 +1,48 @@
+{
+  "concurrency": {
+    "pages": 6,
+    "gpu_workers": 1,
+    "recognition_batch": 16,
+    "llm_workers": 2,
+    "max_workers_auto": true,
+    "max_workers_limit": 8
+  },
+  "pipeline": {
+    "queue_size": 12,
+    "keep_order": true,
+    "enable_pipelining": true
+  },
+  "determinism": {
+    "torch_deterministic": true,
+    "cublas_workspace_config": ":16:8",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "use_deterministic_algorithms": true
+  },
+  "blas_threads": 1,
+  "cache": {
+    "enabled": true,
+    "cache_dir": "cache/pipeline",
+    "max_size_gb": 10,
+    "cache_render": true,
+    "cache_orientation": true,
+    "cache_detection": true,
+    "verify_roundtrip": true
+  },
+  "io": {
+    "use_memory_mapped": true,
+    "preallocate_arrays": true,
+    "buffer_logs": true,
+    "coalesce_writes": true
+  },
+  "gpu": {
+    "pinned_memory": true,
+    "non_blocking_transfer": true,
+    "warmup_iterations": 3
+  },
+  "fallback": {
+    "auto_disable_on_parity_fail": true,
+    "log_parity_failures": true,
+    "serial_fallback_threshold": 0.01
+  }
+}

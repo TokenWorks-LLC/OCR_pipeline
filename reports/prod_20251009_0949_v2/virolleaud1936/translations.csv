@@ -1,0 +1,14 @@
+pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
+virolleaud1936,16,p16_c2_b2_f0,"(14) Baal s'assied sur [le] tro[ne de sa royauté]
+(15) (et) le Fils de Dagon, sur [le] siè[ge de sa souveraineté].
+(17) (et) le . . ., la voix de la (bete) craintive [?].
+(19) dans les (pays) agréables, dans les beaux (pays).
+(21) le (taureau) ebr, elle (le) met bas [pour Baal et Had].
+(22) et (elle met bas) le bæuf sauvage pour le Chevaucheur des nuécs.
+(28) Elle est douce, la voix, dans sa bouche (quand elle dit):
+(32) par la vertu (enclose) dans le (vase) jr de tleyt.
+(33) Elle appelle le Maitre (= Aleyn-Baal) (pour lui dire) :
+(34) < Les bonnes nouvelles de El, an[nonce(-les)] à Baal!
+(36) < Et (c'est aussi qu'il y a) un (taureau) ebr pour Baal [et Had?]
+(37) < et un bouf sauvage pour le Chevaucheur des nuées.","336,147,1159,2188",2,p16_c3_b3_f0,"SYRIA
+a Le (vase) gr (29) de mslmt, (je le mets ?) dans le (vase) gr de tleyt.",fr,"391,102,1206,1538",3,0.5133724999832033,378.23570693418145,False,False,True

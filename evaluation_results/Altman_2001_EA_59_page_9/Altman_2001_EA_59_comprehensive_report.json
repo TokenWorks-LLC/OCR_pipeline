@@ -1,0 +1,600 @@
+{
+  "pdf_path": "data\\input_pdfs\\Altman_2001_EA_59.PDF",
+  "pages_processed": 1,
+  "pages_requested": 1,
+  "total_processing_time": 27.68,
+  "avg_time_per_page": 27.68,
+  "output_csv": "evaluation_results\\Altman_2001_EA_59_page_9\\comprehensive_results.csv",
+  "akkadian_translations_found": 0,
+  "akkadian_translations_pdf": "evaluation_results\\Altman_2001_EA_59_page_9\\Altman_2001_EA_59_akkadian_translations.pdf",
+  "pipeline_config": {
+    "llm_provider": "ollama",
+    "llm_model": "mistral:latest",
+    "llm_base_url": "http://localhost:11434",
+    "llm_timeout": 30,
+    "enable_new_llm_correction": true,
+    "llm_correction_model": "qwen2.5:7b-instruct",
+    "llm_correction_edit_budget": 0.12,
+    "llm_correction_cache_enabled": true,
+    "dpi": 300,
+    "paddle_use_gpu": true,
+    "ocr_languages": [
+      "en",
+      "tr",
+      "de",
+      "fr",
+      "it"
+    ],
+    "ocr_params": {
+      "en": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      },
+      "tr": {
+        "det_db_thresh": 0.2,
+        "det_db_box_thresh": 0.5,
+        "rec_score_thresh": 0.4
+      },
+      "de": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      },
+      "fr": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      },
+      "it": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      }
+    },
+    "enable_reading_order": true,
+    "enable_llm_correction": true,
+    "max_concurrent_corrections": 3,
+    "performance_profile": "quality",
+    "enable_akkadian_extraction": true,
+    "generate_translations_pdf": true,
+    "akkadian_confidence_threshold": 0.8,
+    "output_csv_metadata": true,
+    "create_html_overlay": true,
+    "create_visualization": true,
+    "preserve_transliteration": {
+      "enable": false
+    },
+    "metrics": {
+      "enable_grapheme_metrics": false
+    },
+    "research": {
+      "enable_char_lm_decoding": false,
+      "enable_rover_ensemble": false,
+      "enable_lexicon_bias": false,
+      "enable_tta": false,
+      "enable_confusion_prior": false,
+      "enable_header_footer_lr": false
+    }
+  },
+  "total_text_elements": 112,
+  "total_word_count": 1145,
+  "total_token_count": 112,
+  "avg_text_elements_per_page": 112.0,
+  "avg_word_count_per_page": 1145.0,
+  "avg_token_count_per_page": 112.0,
+  "time_per_text_element": 0.2472,
+  "time_per_word": 0.0242,
+  "time_per_token": 0.2472,
+  "avg_cpu_percent": 0.0,
+  "avg_memory_mb": 0.0,
+  "total_pages": 15,
+  "total_text_lines": 864,
+  "total_characters": 44364,
+  "avg_lines_per_page": 57.6,
+  "avg_chars_per_page": 2957.6,
+  "avg_confidence": 0.974,
+  "pages_with_warnings": 0,
+  "warning_rate": 0.0,
+  "language_distribution": {
+    "english": 3,
+    "akkadian": 2,
+    "turkish": 6,
+    "akkadian_mixed": 1,
+    "english_mixed": 1,
+    "german_mixed": 1,
+    "turkish_mixed": 1
+  },
+  "page_statistics": [
+    {
+      "page_num": 9,
+      "processing_time": 27.676386833190918,
+      "ocr_time": 27.476637840270996,
+      "reading_order_time": 9.250640869140625e-05,
+      "research_enhancement_time": 1.1920928955078125e-06,
+      "diacritic_restoration_time": 2.384185791015625e-07,
+      "correction_time": 0.00014710426330566406,
+      "text_elements": 112,
+      "language": "english",
+      "language_analysis": {
+        "primary_language": "english",
+        "language_counts": {
+          "unknown": 16,
+          "english": 94,
+          "akkadian": 1,
+          "italian": 1
+        },
+        "is_mixed": false,
+        "per_line_languages": [
+          [
+            0,
+            "unknown"
+          ],
+          [
+            1,
+            "english"
+          ],
+          [
+            2,
+            "english"
+          ],
+          [
+            3,
+            "english"
+          ],
+          [
+            4,
+            "english"
+          ],
+          [
+            5,
+            "english"
+          ],
+          [
+            6,
+            "english"
+          ],
+          [
+            7,
+            "english"
+          ],
+          [
+            8,
+            "unknown"
+          ],
+          [
+            9,
+            "english"
+          ],
+          [
+            10,
+            "english"
+          ],
+          [
+            11,
+            "english"
+          ],
+          [
+            12,
+            "english"
+          ],
+          [
+            13,
+            "english"
+          ],
+          [
+            14,
+            "english"
+          ],
+          [
+            15,
+            "english"
+          ],
+          [
+            16,
+            "english"
+          ],
+          [
+            17,
+            "english"
+          ],
+          [
+            18,
+            "english"
+          ],
+          [
+            19,
+            "english"
+          ],
+          [
+            20,
+            "english"
+          ],
+          [
+            21,
+            "english"
+          ],
+          [
+            22,
+            "english"
+          ],
+          [
+            23,
+            "english"
+          ],
+          [
+            24,
+            "english"
+          ],
+          [
+            25,
+            "english"
+          ],
+          [
+            26,
+            "unknown"
+          ],
+          [
+            27,
+            "english"
+          ],
+          [
+            28,
+            "unknown"
+          ],
+          [
+            29,
+            "english"
+          ],
+          [
+            30,
+            "english"
+          ],
+          [
+            31,
+            "english"
+          ],
+          [
+            32,
+            "english"
+          ],
+          [
+            33,
+            "english"
+          ],
+          [
+            34,
+            "english"
+          ],
+          [
+            35,
+            "english"
+          ],
+          [
+            36,
+            "english"
+          ],
+          [
+            37,
+            "english"
+          ],
+          [
+            38,
+            "english"
+          ],
+          [
+            39,
+            "english"
+          ],
+          [
+            40,
+            "english"
+          ],
+          [
+            41,
+            "english"
+          ],
+          [
+            42,
+            "english"
+          ],
+          [
+            43,
+            "english"
+          ],
+          [
+            44,
+            "english"
+          ],
+          [
+            45,
+            "english"
+          ],
+          [
+            46,
+            "english"
+          ],
+          [
+            47,
+            "unknown"
+          ],
+          [
+            48,
+            "english"
+          ],
+          [
+            49,
+            "english"
+          ],
+          [
+            50,
+            "unknown"
+          ],
+          [
+            51,
+            "english"
+          ],
+          [
+            52,
+            "unknown"
+          ],
+          [
+            53,
+            "akkadian"
+          ],
+          [
+            54,
+            "english"
+          ],
+          [
+            55,
+            "english"
+          ],
+          [
+            56,
+            "english"
+          ],
+          [
+            57,
+            "english"
+          ],
+          [
+            58,
+            "english"
+          ],
+          [
+            59,
+            "unknown"
+          ],
+          [
+            60,
+            "english"
+          ],
+          [
+            61,
+            "english"
+          ],
+          [
+            62,
+            "english"
+          ],
+          [
+            63,
+            "english"
+          ],
+          [
+            64,
+            "unknown"
+          ],
+          [
+            65,
+            "english"
+          ],
+          [
+            66,
+            "english"
+          ],
+          [
+            67,
+            "unknown"
+          ],
+          [
+            68,
+            "english"
+          ],
+          [
+            69,
+            "english"
+          ],
+          [
+            70,
+            "english"
+          ],
+          [
+            71,
+            "english"
+          ],
+          [
+            72,
+            "unknown"
+          ],
+          [
+            73,
+            "english"
+          ],
+          [
+            74,
+            "english"
+          ],
+          [
+            75,
+            "english"
+          ],
+          [
+            76,
+            "english"
+          ],
+          [
+            77,
+            "english"
+          ],
+          [
+            78,
+            "english"
+          ],
+          [
+            79,
+            "english"
+          ],
+          [
+            80,
+            "english"
+          ],
+          [
+            81,
+            "english"
+          ],
+          [
+            82,
+            "english"
+          ],
+          [
+            83,
+            "english"
+          ],
+          [
+            84,
+            "english"
+          ],
+          [
+            85,
+            "english"
+          ],
+          [
+            86,
+            "english"
+          ],
+          [
+            87,
+            "unknown"
+          ],
+          [
+            88,
+            "english"
+          ],
+          [
+            89,
+            "english"
+          ],
+          [
+            90,
+            "unknown"
+          ],
+          [
+            91,
+            "english"
+          ],
+          [
+            92,
+            "english"
+          ],
+          [
+            93,
+            "english"
+          ],
+          [
+            94,
+            "english"
+          ],
+          [
+            95,
+            "unknown"
+          ],
+          [
+            96,
+            "english"
+          ],
+          [
+            97,
+            "english"
+          ],
+          [
+            98,
+            "english"
+          ],
+          [
+            99,
+            "english"
+          ],
+          [
+            100,
+            "english"
+          ],
+          [
+            101,
+            "english"
+          ],
+          [
+            102,
+            "unknown"
+          ],
+          [
+            103,
+            "english"
+          ],
+          [
+            104,
+            "english"
+          ],
+          [
+            105,
+            "english"
+          ],
+          [
+            106,
+            "english"
+          ],
+          [
+            107,
+            "english"
+          ],
+          [
+            108,
+            "english"
+          ],
+          [
+            109,
+            "unknown"
+          ],
+          [
+            110,
+            "english"
+          ],
+          [
+            111,
+            "italian"
+          ]
+        ]
+      },
+      "corrections_made": 0,
+      "research_corrections": 0,
+      "diacritic_corrections": 0,
+      "avg_confidence": 0.967,
+      "research_features_applied": {
+        "char_lm": false,
+        "lexicon_bias": false,
+        "confusion_prior": false,
+        "rover_ensemble": false,
+        "diacritic_restoration": false
+      },
+      "word_count": 1145,
+      "token_count": 112,
+      "text_elements_count": 112,
+      "telemetry": {
+        "lines_per_second": 4.046771013681741,
+        "characters_per_second": 236.7722361844326,
+        "ms_per_page": 27676.386833190918
+      }
+    }
+  ]
+}

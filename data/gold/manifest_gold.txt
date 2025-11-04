@@ -1,0 +1,798 @@
+pdf_path	page_no	original_pdf	original_page	gold_text
+data\gold_pages_only\27_arastirma_3-libre_page_9.pdf	1	27_arastirma_3-libre.pdf	9	"Yüzey araştırmasına Prof.Dr. Kutlu Emre, Doç.Dr. Ryoichi Kontani,
+Doç.Dr. Hiroomi Tsumura, Arkeolog Gökhan Turan, Arkeolog
+Sabahattin Ezer, Arkeolog Emrah Çankaya ve öğrenci Michiko Katayama
+katılmışlardır8
+.
+Projenin ilk sezonunda veri toplama metotlarının oluşturulması ve gelişmiş bir
+“database” sisteminin kurulması öngörülmektedir. Bu nedenle, arazideki yüzey
+araştırmalarından ziyade, özellikle dijital ortamda sistemin hazırlanarak Kültepe
+kazısı ile birlikte ortak bir sunucuda verilerin depolanması ve araştırmacılara
+sunulabilmesi için teorik ve deneysel çalışmalara ağırlık verilmiştir.
+Bu kapsamda, örnek olarak seçilen araştırma güzergâhlarında ve yerleşim
+alanlarında veri toplama metotları oluşturulmaya çalışılmıştır. Arkeolojik
+olarak incelenen alanlarda, “mobil total station” ile dijital topograik
+harita hazırlık modellenmesi ile alanın 360 ̊ görüntülenmesi çalışmaları
+gerçekleştirilmiştir. Ayrıca, GPR yöntemi ile araştırılacak alanların yeraltı
+radar görüntüleme çalışmaları için ön keşiler yapılmıştır.
+2008 yılı Kayseri arkeolojik yüzey araştırması projesinin gerçekleştirilmesinde katkıları geçen
+tüm kurum ve kuruluşlar ile yöneticilerine teşekkürlerimi sunarım. Başta Kültür ve Turizm
+Bakanlığı Kültür Varlıkları ve Müzeler Genel Müdürü Sayın Orhan Düzgün olmak üzere,
+Kazılar ve Müzeler Dairesi Başkanı Sayın Melik Ayaz, Kazılar Şubesi Müdürü Sayın Gökhan
+Bozkurtlar ve Kazılar Şubesi Müze Araştırmacısı Şeniz Altunel’e teşekkürlerimi sunarım.
+2008 yılı Kayseri arkeolojik yüzey araştırması Projesi T.C. Kültür ve Turizm Bakanlığı
+DÖSİM Müdürlüğü ile Kayseri Valiliği, Kayseri Büyükşehir Belediyesi Başkanlığı tarafından
+sağlanan maddi ve lojistik kaynaklarla gerçekleştirildi.
+Kayseri Valisi Sayın Mevlüt Bilici çalışmalarımızı her aşamada destekledi. 2008 yılı Kayseri
+Arkeolojik Yüzey Araştırması Projesi’nin başarıyla tamamlanmasında Sayın Vali Mevlüt
+Bilici’nin bu desteği önemli bir rol oynadı. Kayseri Valisi Sayın Mevlüt Bilici ve Vali
+Yardımcıları Sayın Fahri Oluk ve Sayın Mehmet Polat, Sayın Uğur Aladağ ve Sayın Turgay
+Ergin’e teşekkürlerimi sunarım. Özellikle Sayın Vali Yardımcısı Fahri Oluk’un, Avrupa
+Birliği projelerinden sağladığı maddî destek, bilimsel çalışmalarımıza yerel yöneticilerin
+katılımı açısından örnek teşkil etmektedir. Ayrıca, Felahiye ilçesinde gerçekleştirdiğimiz
+çalışmalarda bize hem maddî hem de manevî açıdan destek veren Felahiye Kaymakamı
+Sayın Ahmet Gencer’e ekibim adıma teşekkür ederim.
+Kayseri Müzesi Müdürlüğü, 2008 yılı Kayseri arkeolojik yüzey araştırması projesinin
+gerçekleştirilmesi için her türlü katkıyı yaptı. Çalışmalarımızın sağlıklı bir şekilde
+gerçekleştirilmesini sağlayan Kayseri Müzesi Müdürlüğü’ne başta Sayın Müdür Hamdi Biçer
+olmak üzere tüm Müze çalışanlarına teşekkür ederim. Bakanlık Uzmanı olarak kazılarımızda
+görev alan Serdar Okur’un katkıları sayesinde, çalışmalarımız çok daha sağlıklı bir şekilde
+yürütülebildi. Kendilerine ayrıca teşekkür ederim."
+data\gold_pages_only\28_arastirma_3-libre_page_9.pdf	1	28_arastirma_3-libre.pdf	9	Felahiye İlçesi, Kepiç Köyü sınırları içinde yer almaktadır. Söz konusu yapının Geç Roma Çağı’na ait bir mezar anıtı olduğu bilinmektedir10 (Resim: 9). Bu yapının yanında doğal kaya üzerinde, Roma Çağı’na ait bir höyük yer almaktadır. Yapı, geçmişten günümüze değin define arayanların ve eski eser kaçakçılarının hedefi olmuş ve bu nedenle pek çok tahribata uğramıştır (Resim: 10). Yapının bir bölümü çökmüş; tonoz üst örtüsü ile arka cephesindeki alınlık penceresi yıkılmıştır. Yapının içindeki ayaklarca taşınan kemer sayesinde, tonozun yıkılması belli bir noktada, kemer hizasında durmuştur. Fakat tonozun çöküşü sırasında, kemerde de statik sorunlar oluşmuş, çökmeler başlamış; kemer tonozdan ayrılmış ve aşağıya doğru sarkmıştır (Resim: 11). Kemerin kilit taşı da dahil olmak üzere ortasındaki üç kemer bloğu parçalanmış ve yerinden kaymıştır. Bu blokların herhangi bir sarsıntı ya da zaman içindeki bozulmaları sonucunda, yerlerinden aşağıya düşmeleri neticesinde, öncelikle kemer tamamen çökecek, ardından yapının tonozundaki yıkılma devam edecek ve yapıdaki tahribat büyük ölçüde artacaktır. Mevcut durumu ile kemerdeki bozulmalar, yapıda ciddi bir çökme tehlikesi yaratmaktadır. Bu şekli ile yapının içine girilmesi can güvenliğini de tehdit etmektedir. Bu tehlikenin yanı sıra, yapıya müdahale edilmemesi durumunda meydana gelecek olası bir çökme, yapının yıkım sürecini başlatacağı gibi, bu çökmenin ardından yapılacak restorasyon da daha zor ve maliyetli olacaktır. Ayrıca böyle bir yıkım sonucu yapının özgünlüğü bozulacak olmasından dolayı yapı telafisi mümkün olmayan büyük bir zarara uğramış olacaktır. Bütün bu sebeplerden ötürü, bölge için eşsiz olan ve insan eliyle yapılan tüm tahribatlara rağmen halen ayakta duran bu anıtsal yapıya acil olarak müdahale edilmesi ve gerekli koruma önlemlerinin alınması gerekmektedir.
+data\gold_pages_only\AKT_1_1990_page_21.pdf	1	AKT 1, 1990.pdf	21	"Bu metin, gözden geçirilecek olursa,
+bunun mektup üslûbunda, yerli beylikler ve beylerle ilgili dikkate değer bilgileri ihtivâ eden
+bir enteresan vesikâ olduğu görülür. Metnin başında Ili-idi'nin muhâtabı Uşur-sa Assur â,
+
+kendisine hâvâle edilen maksat için saraya çekip haber ulaştırdığı ve hangi yerin kralı oldu-
+ğu bildirilmeyen şahsen ""Dikkat edilmesi gerekli olan bir husûs ölçüsünde, verdiği sözü tu-
+tacağı..."" belirtilmektedir. Burada ayrıca ayni kralın ""Altın (mevzûuna) ve Suluat'ın bana
+
+gönderdiği habere gelince: Wahsusana'ya ayağinı basmamalısın! Purushattum, Usunala ve
+Wahsusana rube' 'um'larına rabi sikkitim yemin edeceğine göre (o) buraya gelmesin! ...""
+denmektedir.
+
+Bu metindeki mühim olan noktalardan birisi KTP 14 ve f/k 183 (P. Garelli, Les Assyri-
+ens en Cappadoce, s. 329 v.d.) metinlerinde şâhit olduğumuz gibi, yemin usûlünün sâdece
+
+yerli beyler ve beyliklerle Kârum Dâireleri arasinda veyâ sâdece dînî mes'elelerde ve şâhit-
+lik gibi hukuki işlerde cereyan etmiş olmasi yaninda, gerektikçe yerli kırallarla, yerli yük-
+sek idâre kademesi mensupları arasinda da baş vurulmakta olan bir muamele ve bir teminat
+
+usûlü olduğunun ortaya çıkmasıdır.
+Bu bakimdan üzerinde dikkatle durulmasi gereken husûs, rabi sikkitim sıfatındaki yüksek
+memûrun sira ile Purushattum, Usunala ve nihâyet Wahsusana kırallarının üçüne birden
+yemin etmek durumunda olmasi ve yemin etmesidir.
+
+Çok önceden Purushattum'un rubâ'um rabium'u yâni ""büyük kıralı"" bulunduğu (Lands-
+berger, ArOr XVIII 1-2, s. 338; Hardy, AJSL 58, s. 177-216; Bilgiç, DTCFD VI, 5, s. 506)
+
+bilindiğine göre, burada ilk defâ karşılaştığımız Usunala'nın kıralı ile öteden beri bilinen
+
+Wahsusana'nın kıralının Purushattum büyük kırallığı çevresinde ona bağlı diğer kırallık-
+lar olduklari kabûl edilmek gereklidir. Böylece, bu metne göre en azindan üçü birarada
+
+olan bu büyük kırallık ve kırallıkların idari bir bütün teşkil ettikleri neticesine varilmasi
+tabiîdir.
+Söz konusu metnin 17-20. satırları, şimdiye kadar karşılaşmadığımız mat aria ""Saria
+
+memleketi"" ve ""Sabuâ'iû = Sabua'lılar"" ifâdelerini ihtivâ etmesi itibâriyle de büyük ehem-
+miyeti hâizdir. Bunlarin geçtiği fıkra aynen şöyledir: a-na-kam i-ma-at Sa-ar-la Sa-bu-a-i-
+û 4a-ra-na-am û-kâ-i-lu-ni-a-ti-ma i-şa-âb-tù-ni-a-ti.... Sarla memleketinde Sabua'lılar bi-
+ze yolu kapadılar ve bizi alıkoydular"". Bu ifâde yepyeni olarak hem ""Sarla memleketi"" hem
+
+de Sabuâiû ""Sabua'lılar"" halk adini bize ifşâ ettikten başka, bir içtimâî hâdiseyi, bir reak-
+siyonerlik hâdisesini de ortaya koymakta ve Sabua'lılar'ın devlete rağmen kendi kendileri-
+ne bir yol kapatma ve tevkif hâdisesine cür'et ettiklerine işâret etmektedir.
+
+Aşağıda bu, 78 No'lu dikkate değer metnin açiklanmasinda temas edildiği üzere, 19. sa-
+tırda geçen Sabua'lılar'la ilgili 17-20. satırlar, yukarıda transkripsiyon ve tercümesini ver-
+diğimiz şekilde okunmak ve bir tam cümle olarak alinmak durumundadır. K. Balkan'ın
+
+Anum-Hinbi Mektubu, s. 66, n. 95, 4'de yaptıği şekilde bu cümle: a-na-kam i ma-at Sa-ar-
+la sa Bu-a-i-û ha-ra-na-am û-kà-i-lu-ni biçimde subjonktif ve yarım bir cümle değildir. Bun-
+dan dolayi da burada yer adi Bua (!) değil Sabua ve oraya izâfe edilen halk ise Sabuâ'iû'dur.
+
+Bu cildimize ait yer adlari listesinde 10 No.lu, kalay ve kumaşlardan ibâret mallarin
+şâhitler huzûrunda iâde edildiği yer olarak gösterilen Zu-ba-na yazılışlı yeni yer adi henüz
+
+başka metinlerde geçmemiştir ve yeri hakkinda bir bilgi vermek de mümkün değildir. An-
+cak başkaca da benzerleri görüldüğü üzere bu yer adi (YA), diğer iki metinde ayni yazılışla
+
+şahıs adi (ŞA) olarak da görülmekte, bunlardan Ank. 14-1-180, 4'de Uswana'nın babasi ola-
+rak geçmektedir. Bu tablet C. Günbattı tarafindan yeni olarak DTCFD XXXI, 1-2 (Cumhu-
+riyetin 60. Yıldönümü Armanağı, 1987), s. 190 da neşredilmiştir. Şahıs adi olarak geçtiği
+
+ikinci yer ise TC III 270, 42'dir."
+data\gold_pages_only\AKT_2_1995_page_36.pdf	1	AKT 2, 1995.pdf	36	"6,7: Bu satırlarda geçen şahıs ismi, B. Kienast tarafindan önce ATHE 21 A, 1.3.19; 43,
+15'de Zu-ba, sonra FAOS Beih. 1, 1984, 8, 15'de Sfı-pâ olarak yazilmiştir. K. Balkan ise;
+AS 23'te Ingilizcesi yayinlanan Belleten c. LI, sa. 200, s. 420 ve n. 5'teki makalesinde ismi,
+Zuba olarak okumakta ve muhtelif yönleriyle ele almaktadır. AKT 125, 54.57; 45 z. 1 ve
+67,15'te de geçen isim, Supa olarak kaydedilmiştir.
+17-19: Bu satırlardaki ""lu i şa'ûdim lu ina iserätim imti"" ifâdesi içerisinde geçen;
+
+şa'ûdum, AHw s. 1074a'daki şâdu II, şuâdu ""eriyip yok olmak"", II. kalipta ""erimek, ergi-
+mek; tasfiye etmek"" ve CAD Ş s. 59'daki şâdu B ""erimiş olmak, erimek; tasfiye etmek""
+
+fiiilinden yapilmiş bir isim olduğu açiktir.
+""i-sé-ra-tim"" kelimesinin ise; AHw s. 394b'de isertum III, CAD I-J s. 224-5'de isaru'nun
+feminen formu olarak kabul edilen ise/arzu şeklinde kaydedilen ve ""normâl, normâl miktar""
+mânâsındaki kelimeyle aynılığından şüphe edilmemelidir. Nitekim, CAD M I s. 429b'de, TCL
+1414, 23'den alıntı yapılan 5 GIN ina iserâtim im-ti ifâdesi ""normâl miktardan 5 seq el azaldı""
+diye tercüme edilmiştir.
+Ifâde, aşağıda sıralayacağımız metinlerde farkla yazilış şekilleriyle de geçmektedir:
+1) CAD M I s. 430'da, HUCA 39,26'dan aktarilan L 29-569 metni st. 23 v.d. ""x kaspum
+
+lu ina Şa-fı-dim lu ina iserâtim im-ti"" cümlesi tercüme edilmemiş, ifâdenin gümüşün tasfi-
+yesiyle ilgili olduğunu belirten kayit konmuştur.
+
+2) AfO 12, s. 347 ve AC s. 194, n. 3'te kaydedilen KTP 45: 2[...] ma-na KÙ.BABBAR
+3[û-]sé-bi4-1ac-ma lu i-na 4[i-]sé-ra-tim lu i-na 5şa-fı-dim 1/3 ma-na i-bi-ti-iq (!)
+3) CCT IV 4a 411u i-na şa-ru-pi-im 421u i-na sé-ra-tim 43mu-tâ e...
+4) Kay.13: x+20[ ] lu nu-şa-id lu i-/na] 214é(!)-ra-tim im-ti
+5) Yine AfO 12 s. 347'de kaydedilen TC II 14 metni: 213 2/3 GIN sa Şax-e-dim 225 GIN
+i-na
+Bu ifâde içerisinde geçen şa'ûdum münasebetiyle M.T. Larsen'in OACP s. 42'deki
+""sa'udum"" ile ilgili açiklamalarina göz atalım: M.T. Larsen, adi geçen yerde P. Garelli'nixı
+sa'udum için ""(eşeğin) koşum takımı ile münâsebetli materyâlden bir nesne"" dediğini ve
+
+bunun mümkün olabileceğini belirtmektedir. Ayrica, kendisi, sa'udum'da textillerin depo-
+lanabileceğinden ve kayiplarin meydana gelebileceğinden bahsederek, kelimenin daha çok
+
+textil yüküyle ilgili metinlerde göründüğünü, yalniz metal bulunduran yükler sözkonusu
+olan yerlerde aslâ görünmediğini açiklamaktadir.
+Metnimiz ise sadece 12 mina gümüş ve bunun nerelere verildiğini belirtmekte ve eğer
+kelimeler farkla köklerden değilse M.T. Larsen'in bu konuda yanıldiğıni ortaya koymaktadir.
+
+Kanaatimizce kumaşlarin bahsedildiği metinlerdeki sa'udum ile metallerin bahsedildi-
+ği metinlerdeki şa'ûdum'u ayırmamak gerekir. Lugatlerde s ile sa'udum kelimesine rastla-
+yamamış bulunuyoruz. AHw s. 1002 b'deki sâdum ""vurup öldürmek"" fiilinin sözkonusu
+
+kelimesiyle irtibatı olması, sadece kelimeye verilen mina dikkate alındığında dahi mümkün
+görünmemektedir. Biz, sa'udum ile birleştirmek istediğimiz şa'ûdum kelimesinin,
+
+şâdum/şuâdum fiilinden türetildiğini ve hem tekstil ürünleri hem de mâdenler bahis konu-
+su olduğunda kullanıldığını düşünüyoruz. Metnimizde ve transkripsiyonlarıni verdiğimiz
+
+ANKARA KÜLTEPE TABLETLERİ H 21
+diğer metinlerde görünen ""lu ina şa'ûdim lu ina iser a tim imti"" teriminin biri midenin
+eritilmesi esnıâsındaı , diğeri durduğu yerde, tabiî şartlarinda kayba sebeb olan iki durumu
+ifâdede kullanıldığını söylemek mümkündür."
+data\gold_pages_only\AKT_4_2006_page_21.pdf	1	AKT 4, 2006.pdf	21	[x ma-na ku`].babbar s.a-ru-p ́a-am i-[s. ́e]-er / Su-li ˇ dumu Me-ra-l ́ı [H ̆ u-ni-a i]-ˇsu / itu.kam t ́e-i-na-tim / li-mu-um I-l ́ı-dan ` [99/124] 20 a-na [ˇsa]-na-at / i-ˇsa-qal / ˇsu-[ma] l ́a iˇs-q ́u-ul 1/3 ma-na a-na 1 ma-na-im s. ́ı-ib-[t ́am]  ́u-s.a- ́ab kiˇsib S`a-ak-li-a dumu Su-Iˇstar ˇ kiˇsib A-ˇs`ur-[ni]-ˇsu dumu A-mur-Iˇstar kiˇsib Il 5-ba-ni dumu A-mur-Iˇstar / 2 ma-na 10 g ́ın ku.babbar ` s.a-ru-p ́a-am / i-s. ́e-er Il 5-ba-ni dumu A-mur-Iˇs[tar ] 25 <H ̆ u-ni-a> dumu A-ˇs`ur-i-m`ı-t ́ı / i-ˇsu iˇs-t`u h ̆ a-mu-uˇs-[tim] ˇsa A-ˇs`ur-t ́ak-l ́a-[ku] dumu A-l ́a-h ̆ i-im / a-na 20 h ̆ a-am-ˇsa-tim i-ˇsa-qal / ˇsu-ma / l ́a iˇs-q ́u-ul 1 1/2 g ́ın.ta / a-na 1 ma-na-im i-itu.kam s. ́ı-ib-t ́am /  ́u-s.a- ́ab itu.kam k ́an-mar-ta li-mu-um / A-ˇs`ur-i-m`ı-t ́ı / ma-l ́a-h ̆ u-um [107] 30 kiˇsib [Puzur 4-A]-ˇs`ur dumu Su-Be-lim ˇ / kiˇsib A-gi-a dumu [. . .]-im [kiˇsib P ́a-ta]-a dumu L ́a-q ́e-p`ı-im / 5/6 ma-na 2 g ́ın [ku.babbar] ` [s.a]-ru-p ́a-am i-s. ́e-er P ́a-ta-a dumu [L ́a-q ́e-p`ı-im] [H ̆ u]-ni-a i-ˇsu iˇs-t`u / itu.kam ma-h ̆ u-ur-[dingir] a-na 1 ma-na-em / i-itu.kam s. ́ı-ib-t ́a[m  ́u-s.a- ́ab] 35 a-li e-mu-ru-ˇsu / ku.babbar ` ́ap-ˇsu i-l ́a-[q ́e] kiˇsib S ́a-ak-li-a [dumu Suˇ ]-Ku-bi-im / kiˇsib S`a-[. . . kiˇsib I-[ku]-p ́ı-im dumu A-ˇs`ur-i-m`ı-t ́ı / kiˇsib [. . . dumu Dan-A-ˇs`ur / 2 ma-na ku.babbar ` s.a-ru-p ́a-am [i-s. ́e-er ] S ́a-ak-li-a dumu Su-Ku-bi ˇ 4-im H ̆ u ! -ni-[a] i-ˇsu NB: nach Foto! 40 iˇs-t`u / h ̆ a-mu-<uˇs>-tim ˇsa En-um-A-ˇs`ur dumu S ́al-ma-hi-im ˇ a-na 10 h ̆ a-am-ˇsa-tim / i-ˇsa-qal / ˇsu-ma l ́a iˇs-q ́u-ul 1 1/ 2 g ́ın.ta ku.babbar ` a-na 1 ma-na-im s. ́ı-ib-t ́am / i-na itu.kamim /  ́u-s.a-ab itu.kam s. ́ı-ip-im / li-mu-um A-ˇs`ur-i-m`ı-t ́ı [107] 45 kiˇsib S`a-ak-li-a dumu Su-Iˇstar ˇ Rs. kiˇsib I-ku-p`ı-A-ˇs`ur dumu Puz ́ur-Iˇstar kiˇsib Ir-ma-A-ˇs`ur dumu Ni-de8-ba-ni i-na 1/3 ma-[na ku`].babbar ˇsa U-s  ́ .ur-ˇsa-Iˇstar `u H ̆ u-ni-a / [i]-na q ́a-t ́ı / Ir-ma-A-ˇs`ur 50 <dumu> Ni-de8-ba-ni / um-ma Ir-ma-A-ˇs`ur-ma ˇsa.ba 5 g `  ́ın ku.babbar ` / a-na a-limki a-s ́ı ˇsa ki-ma / i-a-t ́ı /  ́u-ta-e-er um-ma a-na-ku-ma / a-na U-s  ́ .ur-ˇsa-Iˇstar `u H ̆ u-ni-a / d ́ı-in / ˇsu-ma 5 g ́ın ku.babbar ` 55 i-na a-limki / ˇsa ki-ma Ir-ma-A-ˇs`ur / a-na U-s  ́ .ur-ˇsa-Iˇstar /  ́u H ̆ u-ni-a / l ́a i-d ́ı-in
+data\gold_pages_only\AKT_4_page_19.pdf	1	AKT 4.pdf	19	"kiˇsib A-du-da dumu ru-ba-im kiˇsib Ma-s`a-a
+dumu A-ˇsur-ni-im-ri kiˇsib Iˇs-me-li-il 5
+dumu Su-Ku-bi ˇ
+
+4-im kiˇsib A-mur-Aˇsur dumu A-ˇsur-du10
+kiˇsib A-bu-ˇsa-lim dumu A-ˇsur-du10 i-na a-mu-tim
+15 ˇsa t ́am-k`a-ru-um  ́u-du- ́u-ma I-d ́ı-Ku-bu-um
+na- ́aˇs-p`e-er-t ́am a-s. ́e-er E-ni-ba- ́aˇs A-bu-ˇsa-lim
+E-ri-ri-a  ́u S ́al-ma-h ˇ
+ ̆
+i iˇs-pu-ra-ni
+A-ˇsur-iˇs-t ́ı-k ́al a-mu-t ́am ˇs ́ı-a-t ́ı a-ma-l ́a
+na- ́aˇs-p`e-er-tim <ˇsa> I-d ́ı-Ku-bi 4-im i-d ́ı-nu-ˇs ́ı-ma
+20 a-mu-t ́am ˇsa dam.qar  ́u-du- ́u-ma I-d ́ı-Ku-bu-um
+dam.qarru -ni 3
+
+1/3 ma-na ku.babbar ` A-bu-ˇsa-lim im-s. ́ı-ma
+ku.babbar ` il 5-q ́e ˇsu-ma I-d ́ı-Ku-<bu>-um ˇsa ki-ma dam.qarri-im
+a-na A-ˇsur-iˇs-t ́ı-kal a-na 3
+
+1/3 ma-na ku.babbar `
+
+i-t`u-ar-ˇsu-um A-bu-ˇsa-lim  ́u-ba- ́ab-ˇsu
+25 kiˇsib Dan-A-ˇsur dumu Ku-uˇs-k`a-nim kiˇsib E-ri-ˇs ́ı-im
+dumu A-[mur ]-
+
+dutu kiˇsib A-ˇsur-du10 dumu En-nam-ma-a-nim
+
+1 ma-na ku.babbar ` s.a-r [u-p ́a-am i-s.
+
+] ́e-er A-ˇsur- du10
+
+dumu En-nam-ma-a-nim I-na-ah
+ ̆
+-dingir i-ˇsu iˇs-t`u
+
+h
+ ̆
+a-mu-uˇs-tim ˇsa A-ˇsur-ma-lik dumu S ́u-k`a-li-a
+30 itu.1.kam ma-h
+ ̆
+u-ur-`ı-l ́ı li-mu-um I-na-a [104]
+
+dumu A-mu-ra-a a-na 20 h
+ ̆
+a-am-ˇsa-tim i-ˇsa-qal
+
+ˇsu-ma l ́a iˇs-q ́ul 1
+
+1/2 g ́ın.ta i-itu.1.k[am s.
+
+] ́ı-ib-t ́am [ ́u-s.a- ́a]b
+
+kiˇsib A-al-du10 dumu L ́a-q ́e-ep
+kiˇsib A-l ́a-h
+ ̆
+i-im dumu Su-Ku-bi ˇ
+
+4-im kiˇsib Ni-[mar-Iˇstar ]
+
+35 dumu En-um-d
+
+im 1/2 ma-na ku.babbar `
+s.a-ru-p ́a-am i-s. ́e-er Ni-mar-Iˇstar I-[na-ah
+ ̆
+-dingir]
+
+i-ˇsu iˇs-t`u h
+ ̆
+a-muˇs-tim ˇsa Z[u-ku-a]
+
+dumu A-[ˇsur ]-i-d ́ı-ma a-na 2 itu.kam i-ˇsa-[qal]
+ˇsu-ma a-n[a] u4-[m`ı]-ˇsu ma-al- ́u-tim
+40 l ́a iˇs-q ́u-ul ki-ma a-wa-at k`a-ri-im
+s. ́ı-ib-t ́am i-itu.1.kam  ́u-s.a- ́ab itu.1.kam
+ˇsa ke-na-tim li-mu-um ˇsa q ́a-t ́e En-um-A-ˇsur [115+]
+dumu Du-ni-a kiˇsib I-d ́ı-a-bi 4-im
+dumu En-um-A-ˇsur kiˇsib Ma-nu-ki-A-ˇsur
+45 dumu [. . . kiˇsib] En-um-A-ˇsur
+dumu [A-l ́a-h
+ ̆
+i-im x m]a-na 1
+1/2 g ́ın
+o.K. ku. ` [babbar s.a-ru]-p ́a-am i-s. ́e-er
+[En-um-A]-ˇsur dumu A-l ́a-h
+ ̆
+i-im
+Rs. E-ni-ba- ́aˇs t ́ı-ˇsu iˇs-t`u itu.1.kam
+50 k`a-an-wa-ar-ta li-mu-um"
+data\gold_pages_only\AKT_4b_2006_page_52.pdf	1	AKT 4b, 2006.pdf	52	"(Silindir mühür baskisi A)
+1 KISIB A sur-DU10DUMU Su Istar
+KISIB Asur ni-su DUMU Dan A-sur
+
+32 İRFAN ALBAYRAK
+KISIB I-df-a DUMU Ena A-sur
+KIŠIB Hu-di-lâ DUMU A ga-a
+5 14 GÎN KÙ.BABBAR /.sa-ru pâ am i- é-er
+(Silindir mühür baskisi B)
+I-di-a DUMU E na A-šur
+iı Hu-d3-la DUMU A ga-a
+Ak. (Silindir mühür baskisi B)
+DAM.GÀR i-su /is-tùha-mu-us-tim
+sa A-sur-ma-lik DUMU Sû kà-li-a
+Ay. (Silindir mühür baskisi C)
+10 ana 3 ha-am-sa-tim /i sa-qû-lu
+su-ma la is-qû-lu /ki-ma a-wa-at
+kà-ri-im 1 1/2 GIN.TA ana
+1ma-na-bn /ina ITU.KAM'm
+si -ib-tâm /ûsû-bu KÙ.BABBAR
+15 i-na qâ-qâ-ad sâl-mi-su nu
+ù keni-su nu /ra ki-is
+(Silindir mühür baskisi B)
+ITU.KAM /qâ-ra a-tum 4 imu-u]m
+Uk. I-na-Sû-en6 DUMU Su-[ ]"
+data\gold_pages_only\Albayrak_1998_3UHKB_Koloni_caginda_p1-14_page_4.pdf	1	Albayrak_1998_3UHKB_Koloni caginda_p1-14.pdf	4	"Tercüme
+1-5) Madawada İmlika'dan 1 2/3 mina 6 segel tasfıye edilmiş gümüş alacaklıdı r
+5.9) Su-Kûbum ve Gazia'nın haftasından itibaren, Pıırushattum'a girişinde 10'
+11) 1/2
+mina gümüşïi bana gönderecek 1244) 1 mina 16 segel güınüştı (ise) 7 aya kadar
+tartacak. 14
+
+-17) Eğer tartmazsa karumun kararina göre faiz ilave edecek
+18-20) Kanwarta ayı; İddi(n)-abum'un senesi, 2i.22i şahit Hubidam, şahit İnba-Assur,.
+Madawada'ya ait bir diğer belge de, onun yerli üç şahıstan alacağı buğday, arpa
+ve ekmek hakkındaki o/k 40 numarali açilmamiş zaritır Belge 6 adet mühürle
+başlamaktadır Bunlardan biri Asurlu, diğer beşi ise, yerli kimselere aittir
+Belgede ödeme vadesi belirtilirken, tahıl ve gümüş için ayrı ayrı zamanlar
+kaydedilmiştir Tahılın orak zamanrna, gümüşün ise, biçilen tahılın hasat edilme
+zamamaa kadar ödeneceği belirtilmektedir Belge hafta ve seneye göre
+tarihlendirilmiştir Belgede mevcut iki şahitten biri Eski Asurca isim taşımaktadır
+0, muhtemelen tableti yazan kâtiptir"
+data\gold_pages_only\Albayrak_2000_ArAn4_testament_page_2.pdf	1	Albayrak_2000_ArAn4_testament.pdf	2	"Vor der Bearbeitung unseres neuen Testaments wollen wir einige
+Ausdrücke als Beispiele geben, die über das Erbe in den Kültepe-Texten
+vorkommen.
+Im Text mit der Nummer I 705' handelt es sich um einen Streit
+über die Verteilung des väterlichen Erbes zwischen zwei Brüdern. Von
+diesem Text können wir die sächlische Erbverteilung im Wohnraum
+deutlich feststellen. Sie werden im Text als Subrum ""Gesinde"", utup turn
+""Möbel"", gabliturn ""Metall-Gefäß"", passurum ""Tisch"", mazlaguet
+""Löffel"", sugarriâ'urn ""Dolch"", samâluet ""ein Gefäßart"" und ras•ku
+""Fell"" angegeben. Im Text hebt sich einer von den Brüdern seine
+Ansprüche gegen den anderen folgendermaßen:
+'li-na si-ma-tim
+2)sa a-bi-ni / É
+')sa Kà-ni-is sa-ub-ru-um
+4)ù ù-tù-up-tum
+5)i-a-um
+
+'-')In dem Testament unseres
+Vaters gehören das Hause in Kani§
+4-5)und die Möbel zu mir"".
+
+Die folgenden Zeilen gehen folgendermaßen weiter:
+1 e) a-na
+
+16 (meinen) (meinen) übrigen(Anteil)
+""si-tim / a-là-ak-<ma> werde ich (hin)kommen. Und
+""$)bé-ti / i-na Kà-ni-is ich werde mein Haus in Kani§
+19'a-ma-ar-ma prüfen dann (wenn etwas fehlt)
+2°)a-sé-e-kà dich suchen""
+Eine andere Urkunde, die das Erbe betrifft, befindet sich mit der
+Nummer 30 in den unpublizeirten o/k Texten (Ausgrabungsjahr 1963).
+Da handelt es sich um den Tod der Akadia, Schwester von Uşur-§a-Istar
+und Iddi(n)-A§§ur5. Dieser Brief wurde wahrscheinlich in Assur
+geschrieben. Im Text informiert zuerst Iddi(n)-Assur seinen großen
+Bruder Usur-§a-Istar über ihre Schwester Akadia, die gestorben sei und,
+daß die Lamassätum das Testament der Akadia öffnen will. Außerdem
+schreibt er, daß Akadia ihm 1 M. (Silber) Schulden hinterlassen hat.
+Die betreffenden Zeilen des Texts gehen so weiter:
+'la-na qi-bi4ma 1-2)An Usur-§a-I§tar spricht Iddi(n)-
+2)urn-ma I-di-A-Sur-ma A-kà-di-a A§sur folgendermaßen: 2-4)""Akadia
+3)me-Uta'-at KÙ.BABBAR 1 ma-na ist tot. Sie hinterließ dir 1 M.
+4)h[u-b]u-là-am té-zi-<ba>-rku'-um Silber (als) Schulden"""
+data\gold_pages_only\Albayrak_2001_AMMY2000_ma'usu_page_5.pdf	1	Albayrak_2001_AMMY2000_ma'usu.PDF	5	"Bu metinde de, mä'û'nun, yukarida ele aldığımı z Kt7.Gİ sa ma-e-su
+yazımına paralel bir geçişine tanik olmaktayız. Yine, burada da TM
+sa ma-e-su ifadesiyle kumaşın bir kalitesi anlatılmak istenmiş
+olmalı dır. Kumaş için böyle bir sıfatın kullanı lması , onun işlendiği
+esnada veya tamamlandı ktan sonra su içinde bekletmeye veya
+yı kamaya tâbi tutulup daha sonra kullanima sunulduğunu
+düsündürmektedir.
+Kültepe metinlerinde, yukarida verdiğimiz örneklerin dışında,
+mä'û kelimesinin satû ""içmek"" fiiliyle irtibatlandırılarak, mecâzi bir
+anlamda kullanı ldığı örnekler de vardı r. Bu konuda ele almak
+istediğimiz ilk örnek, BIN IV, 29 metninin 43-44. satırlarında geçen şu
+ifadedir:
+
+um-ma a-na-ku-ma
+44)LUGAL' mma-e i-sé-ri-su-nu lâ i-sa-ti
+Ben şöyle (söylüyorum):
+""Kral's onlarin sirtindan su içmeyecek!"""
+data\gold_pages_only\Albayrak_2002_ArAn5_listesi_page_2.pdf	1	Albayrak_2002_ArAn5_listesi.pdf	2	"sa-hi-re- en6 1/2 GiN a-na 2 ki-ri-im ds-qûl
+1/4 GİN a-na si-ri-im d§-01-ma e-mu-ni
+ù e-ba-ra-tù-su a-st-i 4 1/2 GiN a-na
+2 na-ru-uq it 1 DUG bu-uq-lim ds-qul
+4 GİN a-na 2 na-ru-uq ba-pt-ri-im
+15 ds-giıl 7 GİN LA 15 SE a-na 6 na-ru-uq
+se-am ds-giıl 6 2/3 GIN a-na 4 na-ru-uq
+ar-sa-tim d§-gıil 2 1/6 GiN a-na hi-im-tim
+d§-giti 1 1/3 GiN a-na dı-is-pi-im ds-giıl
+2 1/4 GiN a-na pd-ni-ri sa al-pi-im
+20 it e-me-ri d§-gıil 15 GiN a-na al-pi-im
+d§-giti 2/3 GİN a-na UDU ds-gıil 2/3 GİN 15 SE
+a-na UDU-ma ds-giıl 1/6 GiN a-na UDU
+[x] GIN a-na UDU ds-qûl 1 GiN a-na e-ri-qt-im
+[x] LA 1/6 GİN a-na tv),-ri-im a-na sa ti-ib-nim
+25 [dss-qı 1 GU,' ar-l'im û e-me-ri-<im> ds-qûl
+[x] GIN a-na 2 mas-ke sa-pd-tt-im
+[a-q]ul 3 1/6 GiN a-na 2 e-ri-qé-[ en6 ]
+[sa e-.sf i ds-q~ıl 1 GİN Lk 7 1/5 SE
+[a-na ]-ra-ni ds-giıl 2 GiN [a-na]
+30 [e]-ri-qt-im sa kà-nu-wa
+[x] GIN a-na a-ld-ni ù ki-ra-ni
+[x+]5 GİN a-na 30 sa-hi-ra-tim
+[x+]4 GIN a-na i.GİS d§-gıii 1/4
+[G]İN a-na um-zi-im 1/3 GiN a-na su-um-ki
+35 d§-gıil 1/2 GiN a-na 1 DUG ha-d§-1d-tim
+ds-01 1 LA 1/6 GiN a-na-ru-uq pd-e
+ds-giıl 1/6 GiN a-kà-nu-wa sa ki-ra-tim
+1 GiN a-na zi-re ma-ld-hi û ha-ba-sa-tim
+1/4 GfN a-na hi-im-tim bi4-is-tim ds-giıl
+40 1/2 GIN LA7 1/2 SE a-na e-si ds-qul 22 1/2 SE
+a-a-kà-nu-wa ds-giıl sa-ku-kam a-[x]-su
+a-dt-in 1/4 GIN a-na ak-li-i[m x ]-tim
+15 SE a-qd-ni 2/3 GiN 15 SE a-na ku[-x-(x)-t]im
+d§-gıil 15 SE a-na ki-ki-a-ni ds-giıl
+45 5/6 ma-na a-na 5 ku-ta-ni ds-giıl
+4 1/2 GiN a-na na-ah-ld-pd-tt-sa ds-giıl
+4 GİN a-na si-it-ri-sa ds-qûl
+3 GiN a-na st-it-ri d§-01-ma a-ma-tim
+ar-ku-us4 1/2 GİN a-na 2 ki-re-en6
+50 ds-giıl 1/3 GİN a-na sa-hi-re-en6 ds-giıl
+e-mu-ni it e-ba-ru-<tù>-su a-st-i"
+data\gold_pages_only\Albayrak_2003_ArAn_6-1_Kanes_Karum_unun_bir_mektubu_page_3.pdf	1	Albayrak_2003_ArAn 6-1_Kanes Karum unun bir mektubu.pdf	3	"Mektup, tüccarlar ile yerel saraylar arası ndaki ilişkilerde kârumun üstlendiği rol hakkinda dikkate değer bilgiler vermektedir. 5. satı rdaki, Kanig kârumunun, habercilerine yönelik me-er-ıı -ni a-tù-nu ""sizler bizim oğulları mızsını z"" şeklindeki kitabı, onları n kârumun belirlediği görevliler veya Asur vatandaşı olmalari münasebetiyle, kârunı-dâiresinin tabii üyeleri olmalarindan kaynaklanan bir tanımlama olabilir.. Mektupta kârum, haberciler ve beraberlerindeki kervanııı Kanig sarayı na gelmeleri konusunda cesaretlendirici açı klamalar yapmaktadı r.. Örneğin, Kanig sarayinin sadece nishatum-vergisini alacağı ve metinde DUMU a-l[i-ni] ""vatandaşımız"" şeklinde tanimlanan kimse veya kimselerin istedikleri yere gidebilecekleri kaydedilmiştir (st„9-13).. Kanig sarayında tüccarları n herhangi bir mal kaybina uğramayacakları da, kârum tarafindan tüccarlara ayrı ca bildirilmektedir„ Diğer taraftan, kârumun, daha kervan yolda iken, kervanin Kanig sarayrna sokulacağı konusunda saray yetkililerine söz verdiği anlaşı lmaktadı r„ Kârum, muhtemelen verdiği bu sözün gereği olarak, kervanin mutlaka Kanig sarayıııa sokulması nı istemektedir„' Kârum habercilere verdiği talimatlarinda, ""toplantrnızda / meclisinizde” karşı lığındaki Ma puhri-kunu ifadesini sı klı kla tekrarlayarak, habercilerin çeşitli konuları görüşmek üzere toplantı lar düzenledikleri ve bir kurul oluşturdukları yönündeki mevcut düşünceleri doğrulamaktadı r„8"
+data\gold_pages_only\Albayrak_2003_ArAn6_karum_page_4.pdf	1	Albayrak_2003_ArAn6_karum.pdf	4	"Kt. 88/k 963
+Müze Env. No: 1-810-88; (8,6 x 5,8 x 2,1 cm. devetüyü renkli)
+Oy. 1 urn-ma kà-ru-uın
+Kà ni is ma a-na
+A-sùr-ma-lik A-sùr-GAL Na-ni-ba-tal
+sf-ip-ri-ni û ELLAT""""' af-bi4-ma
+5 me-er-û-ni / a-tù-nu
+a-na-kam / A-X-BAR-TUM
+sa É.GALIIm / SIG5 mi-ma
+li-ba-ak-nu lk i-pâ-ri-id
+i-na dUTUs' sa a-na
+10 Kà ni is / té ra ba iıi ~ni~
+É.GALI""""' / ni-is-ha-[tkm]
+Ha-cif-ma / DUMU a-l[i-ni']
+li-bi4-su / i-la-a[k]
+hu-lu-qk-û / mi-nia
+15 i-na É.GALI"""" lk i-ba-sf
+ù a-na ELLATm""
+sé ru bi4 inı / pi-i-ni
+Ak. a-na É.GALI""n
+ni-dt-in / i-[nu-mi]
+Ay. 20 [i-na A-]lim
+ta-sa-me-ral-[ni] ril na
+pu-ùh-ri-[ku]-nu
+a-na Za-al-pk s[é]-er-da-ninı
+ki-ma ra?-na?1 rZal-[a]l-pk
+25 té-ru-ba-ni / mu-[ ]
+e nıa ri ku ıııı i-tup-pi-[ ]
+2 ZA-AK-DU-TİM
+i-na pu-ùh-ri-ku-nu er-Ma?-ma
+ba-ks-tam a-lk-ani A-sar
+30 kà-ra-ani û ra-ma-na-tf-ku-nu
+S'a-uk-na-ma / i-na
+mi-ma e-ma qk-at-ku-nu
+sa-ba-tkm a-na sa te-ra-ba-ni-ni
+kà-ru-um
+35 i-le-e"
+data\gold_pages_only\AKT_6c_page_33.pdf	1	AKT 6c.pdf	33	"Bu kitap, Salim-Assur'un en kii<;tik oglu Ali-ahum'un i~leriyle ilgili oldugu avtk<;:a
+
+goriilen 200 kadar metni sunmaktadtr. Ali-ahum i1e onceki kitaplarda kar~tla~mt~ttk; I. ki-
+tapta onu karde~i Ennam-Assur'un yanmda, ozellikle de Salim-Assur'un ohimtinden sonra
+
+aralannda <;:tkan miras kavgasma ili~kin boltimde tamdtk. Salim-Assur'un oltimtiyle ilgili do-
+syada bu miras kavgasma ili~kin pek <;:ok beige yer ahr. Karde~ler arasmda iki ytl kadar
+
+devam eden bu anla~mazhk Ennam-Assur Tawniya'da katledilince birden sona ermi~ ve Ali-
+ahum ailenin Anadolu'daki i~lerinin ba~mda rakipsiz kalmt~tlr.
+
+Bu kitapta toplanan metinler Ali-ahum'un olduk<;:a uzun bir zamana yaytlan faali-
+yetlerini yansttmakta, babasmm saghgmdan ba~layarak btiytik karde~inin oltimtinden birka<;:
+
+ytl sonrasma uzanmaktadtr. Bu kitapta yer alan tarihlenmi~ metinlerin <;:ogu REL 107 ythna
+aittir.12 Ne yaztk ki, tarihlenmemi~ metinler i<;:inden hangilerinin babast i<;:in <;:ah~tlgt doneme,
+karde~iyle miras kavgasma girdigi ktsa doneme, veya, i~leri tek ba~ma yonettigi ytllara ait
+
+oldugunu belirlemek genellikle mtimktin degildir. Bu kitapta yer alan hi<;: bir mektupta, ba-
+bast ile ileti~ime girildigini gosteren a<;:tk bir deginme bulunmamaktadtr. Buna kar~thk, I. ki-
+tapta Salim-Assur ile en kiic;:iik oglu arasmda gonderilmi~ mektuplardan omekler bulunur;
+
+ancak bunlarda Ali-ahum her zaman ba~kalan e~liginde ve <;:ok kez de bi.iytik karde~iyle bir-
+liktedir.
+
+Damiq-pi-Assur13 , Puzur-Assur veya Zukuwa gibi ki~ilerle yaptlan yazt~malar yu-
+kanda sozi.i edilen donemlerden birine kesin olarak tarihlenemese de, bu mektuplann bir-
+birine oldukya yakm zamanlarda yaztlmt~ oldugu izlenimi dogmakta, ve bir<;:ok ticari i~leme
+
+farkh mektuplarda deginilmektedir. Bu il9 ki~inin adlan Ennam-Assur ar~ivinde de ge<;:mi~
+
+olmakla birlikte, son iki isim Ali-ahum'un btiytik karde~ine attfta bulunan metinlerde miln-
+feriden goriiliir. Buna dayanarak, onlann esas olarak Ali-ahum'a bagh olduklan, Ennam-
+Assur ve onun i~leriyle 90k az veya hi<;: ilgileri olmadtgt sonucuna vanlabilir. Bu durumda,
+
+onlarla yaplmt~ yazt~malann <;:ogunun, Ali-ahum'un i~leri tek ba~ma yonettigi son ytllara ta-
+rihlenmesi gerektigini di.i~tinebiliriz.
+
+Buyiik karde~inin oltimi.inden soma Ali-ahum'un ne kadar sure Kani~'te <;:ah~maya
+devam ettigini kesin olarak soylemek olanakstzdtr. REL 107 yth ozellikle iyi belgelenmi~tir;
+Ennam-Assur'un oliimiinden il<;: yll sonra, 528 nolu mektupta Kani~'de bazt faaliyetlerden soz edilir ve bunlar olastltkla REL 107 ba~ma tarihlenebilir, ancak, Ali-ahum'un bundan son- ra adeta ortadan kayboldugunu gotiiyoruz. KUltepe'de ele ge<;:en tarihlenmi~ metinlerin btiytik <;:ogunlugunun REL 80 ve REL 11014 arasmda kalan 30 ytlltk ktsa zaman dilimine ait oldugu gosterilmi~tir; boylece, ikinci tarihe yakm bir zamanda Ali-ahum ve ailesinin de izi kay- bolmaktadtr. Elbette ki, bu genel gidi~at i<;:inde bireysel durumlann degi~ik ac;;tklamalan olabilir. Ali-ahum'un durumunda, ar~ivin bulundugu bu evde aslmda devamlt oturmadtgt, ona ait metinlerin <;:ogunun ba~ka yerde aranmasi gerektigi dii~iini.ilebilir; bir ba~ka olasthk, olmii~ ya da Assur'a donmii~ oldugu i<;:in Kani~'deki varhgmm ger<;:ekten de sona ermi~ ol- mastdtr; son olarak da, Kani~ belgelerinin genel olarak saytca birdenbire <;:ok azaldtgt donemde, onun da ticari hayat1 bitmi~ olabilir. Ktz karde~i Lamasst'den gelen 533 nolu mek- tup, aile i~lerinin o donemde iyi gitmedigine ac;;tkc;;a i~aret etmektedir. Bu kitapta toplanan metinler, tipik olarak, oldukc;;a miitevazt ticari i~lemleri kapsamaktadtr; REL 107 ythnda, ne- redeyse tamamt Anadolululara a<;:tlmt~ c;;ok saytda kredinin kayda deger bir toplam tutan olmadtgt gotiilmektedir. Tarihli belgelerin REL 1 I 0 yth dolaylannda anstzm ne neredeyse tamamen ortadan kalkmast Assur ticari faaliyetlerindeki gene! bir dii~ii~e baglanabilir, ve bu da Ali-ahum'un i~ hayatmm sona ermi~ oldugu anlamma gelebilir."
+data\gold_pages_only\AKT_7a_page_10.pdf	1	AKT 7a.pdf	10	"Aššur-UƝ¶Ư¶QLQùHFHUHVL
+Elimizde Aššur-rē’ī’ye âit önemli sayıda vesika olmasına rağmen ailesi
+bilhassa özel hayatı hakkında yeterli bilgi bulunmamaktadır. Metinlerin büyük
+çoğunluğunun iktisadi muhtevalı olması sebebiyle ticari faaliyetleri ve mali
+durumu hakkında önemli değerlendirmeler yapabilsek de, ebeveyni hanımı ve
+çocukları ile olan ilişkileri bir sır perdesi olarak karşımızda durmaktadır
+Metinlerin bu hususlardaki sessizliği öylesine derindir ki annesi babası
+hanımı veya çocuklarıyla yazıştığına dair tek bir örnek bile yoktur Sadece
+kardeşleri olduklarını düşündüğümüz iki şahısla ilgili kayıtlar mevcuttur ki,
+onlar da ticari konularla ilgili olup özel hayatları hakkında bilgi vermezler.
+Aššur-rē’ī’nin soyağacı hakkında elimizde çok az bilgi mevcuttur Annesinin
+
+ismini bilemiyoruz. Kendisi Puzur-İštar’ın oğlu olup Ah-šalim ve Ennum-
+Aššur isminde en az iki kardeşe sahip olduğu metinlere yansımaktadır Asurlu
+
+bir bayanla evli olan Aššur-rē’ī’nin Mannum-balum-Aššur Pilah-İštar ve
+Šuzuzu isminde üç oğlu ve adını bilemediğimiz bir kızı olduğu
+anlaşılmaktadır 10 Bunların yanında L G Gökçek taraIından hazırlanan bir
+çalışmada Aššur-rē’ī’nin Aššur-bƗni isminde bir oğlu daha olduğu ifade
+edilmektedir.11 Bize göre bu ailenin bir üyesi olma hususu problemli görünen
+bu şahsın aynı zamanda avukat
+
+rāEL܈um) olduğu, Pilah-İštar’ın kardeşleri ile
+olan ihtilaIlarında Pilah-İštar’la birlikte hareket ettiği ve hukuki mevzularda
+Pilah-İštar’a yardımcı olduğu ifade edilmektedir.12 Ancak metinlerin hiçbirinde
+bu şahsın, arşivin sahibi Aššur-rē’ī’nin oğlu olduğuna dair açık iIadeler
+bulunmamaktadır Ayrıca bu şahsın kardeşler arasındaki anlaşmazlıklarda bir
+diğer kardeş olarak taraI olmadığını bunun yerine bir avukat olarak
+kaydedildiğini söylemek mümkündür Sadece bir metinde muhtemelen bir
+başka Aššur-rē’ī’nin oğlu olarak belirtilmektedir ki burada da rāEL܈um unvanı
+ile geçmemektedir"
+data\gold_pages_only\AKT_7a_page_35.pdf	1	AKT 7a.pdf	35	Kültepe’de 1988 yılı kazı sezonunda gerçekleştirilen çalışmalar neticesinde ortaya çıkarılan eserler içinde en önemli gurubu şüphesiz Eski Asur çivi yazısı ve lehçesi ile yazılmış metinler oluşturmaktadır 1 - 11 kazı envanter numaralar arasındaki bulla zarI ve tabletlerden oluşan bu yazılı belgeler içinde 1 - 9 kazı envanter numaralı metinlerin büyük kısmı bir aile arşivine kit olup ThBİTAK taraIından desteklenen 18K nolu proMe kapsamında bunların bilimsel çalışmaları yapılmıştır Bu çalışmalar neticesinde 815 adet yazılı belge incelenmiş ve belgelerin büyük çoğunluğunun Asurlu tüccar Aššur-rē’ī ile oğlu Pilah-İštar’a kit olduğu anlaşılmıştır Biz bu ciltte Aššur-rē’ī’ye kit ve bunlarla ilgili olan diğer metinleri ele almış bulunmaktayız Bu şahsın oğlu Pilah-İštar’ın metinlerini ise diğer bir ciltte yayınlamayı planlıyoruz. Nimet Özgüç 1988 yılı arşivinin ele geçtiği evin kārum Kaneš’in II katında S-T/12-1 plankarede yürütülen çalışmalar neticesinde 198 yılında kısmen 1988 kazı mevsiminde ise tamamen gün ışığına çıkarıldığını belirterek arşive kit yazılı belgelerin büyük çoğunluğunun ve beş bullanın bu evin tabanı üzerinde dağınık bir şekilde bulunduğunu geriye kalan zarf, tablet ve iki bullanın ise arşiv odasının güney-doğu köşesine yerleştirilmiş bir çömlekle iki çanağın içinde ortaya çıkarıldığını belirtmektedir (Resim 1-3).
+data\gold_pages_only\Albayrak_1998_3UHKB_Koloni_caginda_p1-14_page_5.pdf	1	Albayrak_1998_3UHKB_Koloni caginda_p1-14.pdf	5	"Transkripsiyon
+1 KİSİB İ rï si-inm KİSİB Ha pu-a-su
+KİSİB Pé-ru-a KİSİB Ta-mu-ri-a
+KİSİB Ta-h-a KİSİB İ a ta al-kà
+1 ma-na KÙ BABBAR 30 na-rıı-uq
+5 1/2 SE 1/2 GİG 60 NİNDA
+i_c ô_ov m/7_7111A_Y7_/7 Ta-ii-a
+ù İ a-ta-al-kà
+a- z-ti-su
+10 Ma-da-wa-da ti-su
+Ay is-.tiı ha-mııs-tim
+sà kà-sI-ïm sa qci-té
+İ kıı pi-a İTU.KAM ia sà-ra-dim
+h-mu-um sa qà-té
+15 En-na-Sû-en67,246-tam
+a-na sï-hi4-it ni-ga-hm
+i-du-nu KO BABBAR a-na
+ha-ar pi ï is-qil-lu su-ma
+ià 0-0-1u 1 ma-na-um
+20 1/2 ma-na i-sà hıı ur-su nu ti
+KÙ BABBAR i-qà-qà-ad
+Sk, i-na ka ar pi-ti im ka Ma-da-wa9-da
+i-ma-c/a-ad
+sai-mi-su-nu
+25 ra-ki-i v"
+data\gold_pages_only\Albayrak_2000_ArAn4_testament_page_6.pdf	1	Albayrak_2000_ArAn4_testament.pdf	6	"A-gu-a /si-im tù-su
+i si-ma / bé-turn sa a-limé'
+sa a-si-ti-a / i-na KÙ.BABBAR
+qà di / me-er-e-a-ma
+5 ta-zu-az i-na KÙ.BABBAR
+zi-ti-sa / a-ba-at ù um-ma-at
+bé-tù-um ù KÙ.BABBAR wa-ar-kà-sà
+ù mi-ma ti-su-ù
+sa Su-Be-lim bé-tù-uın
+10 sa Kà-ni-is /sa Su-Be-lim
+urn-mi-a-ni / me-er-ù-a
+e-pu-lu-ma i-na KÙ.BABBAR
+sa i-a-ti /i-si-ta-ni
+1/3 ma-na KÙ.GI 1 ma-na
+
+EIN NEUES ALTASSYRISCHES TESTAMENT AUS KÜLTEPE 23
+15 KÙ.BABBAR ù am-tcim Ab-sa-lim
+tù-<na> -sa-ra-ma / ta-lci-qé
+ù i-na sl-ta-tim
+me-er- fi-a
+u.K. sa bé-ta-tim
+20 là 115-qé-fi-ni 4 GÙ.TA
+Rs. URUDU ki-ma bé-ta-ti-ku-nu
+
+i-lci-qé-ù i-na
+si tl KÙ.BABBAR am-tim wa-ar-dim
+a-sl-tl Su-Be-lim ù me-er-i-a
+25 mu-gi mu-tci-ma
+i-zu-zu sa-wi-sù sa A-kUr-i-dl
+wa-su-ra-szı-um su-ma KÙ.BABBAR
+i-a-ti mi-ma fi-la is-tl-tàm
+4 GÙ. TA URUDU
+30 sa be-ta-ti-ku-nu
+me-er-fi-a / fi-là i-lci-qé-fi
+2 ma-na KÙ.BABBAR
+Puzur4-Istar ù-WA-ù
+2 ma-na KÙ.BABBAR U-szı-ur-sa-A-kUr
+35 fi-ta-ar
+e-li-a-tù-su-nu
+a pu-a-ti-su-nu-ma
+o.K. i-ta-pu-lu
+
+A-bi-i-li ku-ma 10 ma-na
+40 KÙ.BABBAR i-sa-qal
+1.S. qa-di a-hi-ku-ma / i-zu-az ku-ma 10 ma-na
+KÙ.BABBAR lci is-qùl / na-si-ih ù 10 ma-na.TA
+KÙ.BABBAR a-na a-hi-ku i-na pà-al IGI I dl-Sù-en6
+IGI A-kUr-na-da IGI A pl-i15-ke-<en6> IGI I-ku-pi-a
+45 IGI Sà-li-a"
+data\gold_pages_only\Albayrak_2000_ArAn4_vasiyetname_page_7.pdf	1	Albayrak_2000_ArAn4_vasiyetname.pdf	7	"3-5>Karım, gümüşü oğul-larımla birlikte paylaşacak. 5-6>Gümüşten onun
+hissesi (hem) baba (hem de) anne (olarak)tır. 7-9>Ev, gümüş ve sâhip
+olduğu her şey O (karım) öldükten sonra Su-Bélum'undur. 9-1°>Kaniş'deki
+
+KÜLTEPEDEN YENİ BİR VASİYETNÂME 9
+bıraktığı Absalim, Agüa'nın ikinci eşi olarak düşünülebilir. Belki de
+Absalim, Agüa'nın, adlarini belirtmeden me-er-û-a ""oğullarıın"" dediği
+kimselerin annesiydi.
+St.8) mi-ma ti-su-ù ""sâhip olduğu her şey"" ifadesiyle Agüa
+herhalde, eşinin çeyiz (Seriktum) ve miras yoluyla baba evinden getirdiği
+mal veya kendi ticari faaliyetlerden elde ettiği kazançlari kastetmiş
+olmalıdır.
+St.7-10) ""Ev, gümüş ve onun sâhip olduğu her şey, O (karım)
+öldükten sonra Su-Bélum'undur. Kanis'teki ev Su-Bélum'undur""
+ifadesinde Sa elemanının kullanimina dikkat çekmek istiyoruz. sa
+elemanın kendisinden önce sayılan nesnelerin, hemen kendi arkasindan
+gelen şahsa ait olduğunu göstermektedir. Aslında, bir takım nesneler
+sayıldıktan sonra zittum ""hisse"" veya gäıtum ""hisse, pay"" kelimelerinden
+birinin sa'dan önce yazilmasi beklenirdi. sa elemanının böyle bir
+kullanımını, bir mirasın paylaşılması hususunda düzenlenmiş olan EL
+287 (Jena 369) metninden tanıyoruz. Burada şöyle denilmektedir: 40)É`um
+sa a lim~° zi-tum sa Su mi a bi4 a ""Asur'daki ev Sumi-abia'nın hissesidiir""
+St.15) Absalim'in bayan adi olarak da geçtiğini CCT III, 14,3,32;
+ICK II 156,5 (Assur-lamassi'nin kiz kardeşi) gibi bir çok metinden
+biliyoruz. Burada Absalim'in Agüa'ya yakınlığı açık değildir. Ancak,
+metnin hemen başinda Agüa'nın, Asur'daki evini bıraktığı ve karisi
+(asitia ""karım"") olduğunu belirttiği bayan herhalde Asur'da oturuyordu.
+Bilindiği üzere; Asurlu tüccarlar Anadolu'da ikinci bir eş ile
+evlenebiliyorlar ve ilk eşlerini kasıtla daha çok aSSatum —genellikle
+Asur'da oturuyorlar—, Anadolu'daki eşlerinden bahisle amtum kelimesini
+kullanmaya özen gösteriyorlardı."" Dolayısıyla, Absalim'in, Agüa'nın
+Anadolu'daki ikinci eşi olduğu düşünülebilir.
+St.16) tù-<na>-sa-ra-ma : Fiili —na ile tamamlayarak,
+metnimize anlam bakimindan uyan nasäırum D ""bir bütünden bir parçayı
+çıkarmak, ayırmak"" kökünden (Prs. 3. Tk. şh.f) tercüme ediyoruz. Çünkü,
+wasdrum ""serbest bırakmak"", sarû ""zengin olmak"" ve saräımum ""söküp
+çıkarmak, kesmek"" fıllerinin anlamları cümlenin akışına uymamaktadır."
+data\gold_pages_only\Albayrak_2001_AMMY2000_ma'usu_page_6.pdf	1	Albayrak_2001_AMMY2000_ma'usu.PDF	6	"Bu metinde de, mä'û'nun, yukarida ele aldığımı z Kt7.Gİ sa ma-e-su
+yazımına paralel bir geçişine tanik olmaktayız. Yine, burada da TM
+sa ma-e-su ifadesiyle kumaşın bir kalitesi anlatılmak istenmiş
+olmalı dır. Kumaş için böyle bir sıfatın kullanı lması , onun işlendiği
+esnada veya tamamlandı ktan sonra su içinde bekletmeye veya
+yı kamaya tâbi tutulup daha sonra kullanima sunulduğunu
+düsündürmektedir.
+Kültepe metinlerinde, yukarida verdiğimiz örneklerin dışında,
+mä'û kelimesinin satû ""içmek"" fiiliyle irtibatlandırılarak, mecâzi bir
+anlamda kullanı ldığı örnekler de vardı r. Bu konuda ele almak
+istediğimiz ilk örnek, BIN IV, 29 metninin 43-44. satırlarında geçen şu
+ifadedir:
+0)ma-ma-an / ma-e )
+
+i-şé-ri-a 22)l6, i-
+sa-tt
+
+L0-22)""Kimse benim sIrtImdan su
+içmeyecek!""
+um-ma a-na-ku-ma
+44)LUGAL' mma-e i-sé-ri-su-nu lâ i-sa-ti
+Ben şöyle (söylüyorum):
+""Kral's onlarin sirtindan su içmeyecek!""
+
+Verilen tercümeden de anlaşılacağı üzere, burada su ile ilgili ilginç
+bir ifade geçmektedir. Lewy, bu satirlari ""Auf jemandes Rücken
+Wasser trinken = Birinin sirtindan su içmek"" şeklinde tercüme
+etmekte ve "" bir başka kimseden avantaj sağlamak"" mânâsında,
+mecâzi bir anlatimin söz konusu olduğunu belirtmektedir.'9Ayni
+ifade, Kayseri 90' env. nolu belgenin 20-22. satırlarında da şöyle
+geçmektedir:"
+data\gold_pages_only\Albayrak_2002_ArAn5_listesi_page_1.pdf	1	Albayrak_2002_ArAn5_listesi.pdf	1	"Kt. 88/k 71 (9 x 5,5 x 1,6 cm. siyah renkli )
+Öy. 1 i-nu-mi e-mu-ni nu-sé-ri-bu ki-ma
+is ri im r2/31' GfN 15 SE a-na mu-sd-ri-im
+cis-qd1 1/4 GfN a-na sa-hi-re-en6
+2/3 GiN 15 SE a-na 3 ki-ra-tim ds-01
+5 1/4 GfN a-na si-ri-im cıs'-qdl-ma
+e-mu-ni ù e-ba-ru-tù-su a-s(-i
+e-mu-ni ù e-ba-ru-tù-su a-s(-ma
+1 1/2 GiN KÙ.BABBAR »x« ga-me-er i-nu-mi is-tù
+4V[a-a]h-su-sa-na i-li-kà-ni 1/4 GfN a-no sa-hi-re- en6 1/2 GiN a-na 2 ki-ri-im ds-qûl
+1/4 GİN a-na si-ri-im d§-01-ma e-mu-ni
+ù e-ba-ra-tù-su a-st-i 4 1/2 GiN a-na
+2 na-ru-uq it 1 DUG bu-uq-lim ds-qul
+4 GİN a-na 2 na-ru-uq ba-pt-ri-im
+15 ds-giıl 7 GİN LA 15 SE a-na 6 na-ru-uq
+se-am ds-giıl 6 2/3 GIN a-na 4 na-ru-uq
+ar-sa-tim d§-gıil 2 1/6 GiN a-na hi-im-tim
+d§-giti 1 1/3 GiN a-na dı-is-pi-im ds-giıl
+2 1/4 GiN a-na pd-ni-ri sa al-pi-im
+20 it e-me-ri d§-gıil 15 GiN a-na al-pi-im
+d§-giti 2/3 GİN a-na UDU ds-gıil 2/3 GİN 15 SE
+a-na UDU-ma ds-giıl 1/6 GiN a-na UDU
+[x] GIN a-na UDU ds-qûl 1 GiN a-na e-ri-qt-im
+[x] LA 1/6 GİN a-na tv),-ri-im a-na sa ti-ib-nim
+25 [dss-qı 1 GU,' ar-l'im û e-me-ri-<im> ds-qûl
+[x] GIN a-na 2 mas-ke sa-pd-tt-im
+[a-q]ul 3 1/6 GiN a-na 2 e-ri-qé-[ en6 ]
+[sa e-.sf i ds-q~ıl 1 GİN Lk 7 1/5 SE
+[a-na ]-ra-ni ds-giıl 2 GiN [a-na]
+30 [e]-ri-qt-im sa kà-nu-wa
+[x] GIN a-na a-ld-ni ù ki-ra-ni
+[x+]5 GİN a-na 30 sa-hi-ra-tim
+[x+]4 GIN a-na i.GİS d§-gıii 1/4
+[G]İN a-na um-zi-im 1/3 GiN a-na su-um-ki
+35 d§-gıil 1/2 GiN a-na 1 DUG ha-d§-1d-tim
+ds-01 1 LA 1/6 GiN a-na-ru-uq pd-e
+ds-giıl 1/6 GiN a-kà-nu-wa sa ki-ra-tim
+1 GiN a-na zi-re ma-ld-hi û ha-ba-sa-tim
+1/4 GfN a-na hi-im-tim bi4-is-tim ds-giıl
+40 1/2 GIN LA7 1/2 SE a-na e-si ds-qul 22 1/2 SE
+a-a-kà-nu-wa ds-giıl sa-ku-kam a-[x]-su
+a-dt-in 1/4 GIN a-na ak-li-i[m x ]-tim
+15 SE a-qd-ni 2/3 GiN 15 SE a-na ku[-x-(x)-t]im
+d§-gıil 15 SE a-na ki-ki-a-ni ds-giıl
+45 5/6 ma-na a-na 5 ku-ta-ni ds-giıl
+4 1/2 GiN a-na na-ah-ld-pd-tt-sa ds-giıl
+4 GİN a-na si-it-ri-sa ds-qûl
+3 GiN a-na st-it-ri d§-01-ma a-ma-tim
+ar-ku-us4 1/2 GİN a-na 2 ki-re-en6
+50 ds-giıl 1/3 GİN a-na sa-hi-re-en6 ds-giıl
+e-mu-ni it e-ba-ru-<tù>-su a-st-i 2/3 GİN 15 SE a-na 3 ki-ra-tim 1/6 GİN
+a-na e-şi 1/4 GİN a-na sa-hi-re-en6
+Ük. 2/3 GİN 15 SE a-na §é-ne-en6 ds-quI-ma
+55 i-sa-p6-<ar'> be-el sa-'x1 e-mu-ni û
+e-ba-ru-tù-<su> a-st-i e-mu-ni ù
+
+Sk. e-ba-ru-tù-su a-st-ma 2 GİN KÙ.BABBAR ga-me-er -+
+
+1 1/2 GİN a-na 5[+x ]
+ds-giıl 1/3 GiN a-na e-ş 1/6 GiN a-na a-ld-ni -+
+15 SE a-sii-[ ]
+d§-q141 e-mu-ni ù e-ba-ru-tù-su i-sa-pd-ar a-st-ma -+
+[x GIN (x SE) a-na]
+
+60 7 ki-ra-tim 1 1/4 GİN a-na UDU 1/4 GIN a-e-,si --+
+
+15 SE a-sa-[... ds-gtiıl]
+a-ha-<at>-ni qd-qd-sà a-na Istar ta-aq-lu-up"
+data\gold_pages_only\Albayrak_2003_ArAn_6-1_Kanes_Karum_unun_bir_mektubu_page_2.pdf	1	Albayrak_2003_ArAn 6-1_Kanes Karum unun bir mektubu.pdf	2	"Asur Ticaret Kolonileri Devrinde Asur'un Anadolu'daki önemli kurumları olan kâruni-daireleri, tüccarlaria ve yerel yönetimlerle ilgili önemli belgelerin bir nüshası nı muhafaza etmiş olmalıdır. Metinlerde tuppu sa kârinı ""kârunıun tableti"", inci/ana bét kârim "" kârum evin(d)e"" gibi ifadeler sı kça geçmektedir.. Ancak kazalarda, idari bir kurum olarak, kâruni-dâiresinin fizîken varlığına işaret eden mimari bir kalı ntıya henüz rastlanmamıştı r. Mimari buluntularin eksikliği, gerçekten böyle bir kurumun- var olup olmadığı konusundaki tartışmaları devam ettirse de, belgelerde zikredilen bazi ifadeler Asur Ticaret Kolonileri Çağında, tüccarların ticarî ve idari konularda yardim aldı kları bir kâruni-dâiresinin varlığını açikça ortaya koymaktadir. Örneğin aşağıda bazi satırlarını verdiğimiz Kt. o/k 67 metninde bu konuda dikkat çekici bilgiler verilmektedir: 3).......... a-ma là 4ité-' eri -ti-kà a-na 5t kà•-ri-im né-ru-ub-nıa 6)lup-pu-e 7a kà-ri-im 81né-mu-ur-ma 9)su-um-kà mi-ma 10)1éz lâ pi-it ""Senin haberin gereğince kâruni-dâiresine girdik ve kârumun belgelerini kontrol ettik. Senin adin hiç (bir yerde) kaydedilmemiştir!"". Burada söylenenler, fïzîken bir kârum-dâiresinin olduğunu ve orada çeşitli belgelerin yazı lı p, korunduğunu çok açik bir şekilde ortaya koymaktadı r,.5 Aşağida işlediğimiz, Kültepe'de 1988 yili kazı larında bulunmuş olan, Kt. 88/k 963 envanter numarali mektup6, muhtemelen, ayni yı l ele geçen tabletler arası nda kendisine ait bir çok ticarî yazışma bulunan Assur-rabi adli tüccarı n a rşivindendir ."
+data\gold_pages_only\Albayrak_2003_ArAn6_karum_page_1.pdf	1	Albayrak_2003_ArAn6_karum.pdf	1	"Kani (Kültepe) şehri, M.Ö 2. bin başlarindan itibaren Eski Anadolu'nun en önemli siyasi ve ticarî merkezi olma özelliğini kazanmiştir. Hâlen kazı ları n devam ettiği bu yerleşim yerinde, büyük çoğunluğu çeşitli ticarî konular içeren, yirmi binden fazla Eski Asurca tablet ortaya çikarilmiştir. Bu belgeler, Anadolu'nun Eskiçağ tarihinin aydı nlatı lnıası nda son derece önemli kaynaklardı ri. Kültepe'de ele geçen tabletler arasinda kurum ve wabartumları n çeşitli konularda yazışmalar yaptı kları na dâir bir çok belge bulunmaktadı r. Bu metinler, genellikle Asur'dan merkez Kanis- kärumuna yazilmiş talimatları n diğer karu,n ve wabartumlara iletilmesi hakkı ndadı r2. Bu yazışmalarda merkez kurum çoğunlukla habercilerini (siprum)3 muhatap almaktadı r. Kärum-dâiresi herhalde, Anadolu'daki çeşitli şehirlerle sı kı ticarî bağlantilari olan itibarli tüccarlar arasindan haberciler veya bazi elçiler belirleyerek, ticarî ve idari konulardaki yeni gelişmeleri ve düzenlemeleri, ilgili kurum ve şahı slara duyurmaktaydı . Habercilerin, kurumdaki kazı larda ortaya çikarilan bazi işyeri sahipleriyle ayni ismi taşıyor olmaları, bu kimselerin ayni zamanda birer tüccar olarak ticarî hayatta yer aldıkları na işaret etmektedir. Bu noktada sorun, kurum-dâiresine âit
+belgelerin neden tüccarları n arşivlerinde ele geçtiğidir.4"
+data\gold_pages_only\Albayrak_2008_AOF_35-1_The_Topynym_Balihum_in_the_Kültepe_Texts_page_2.pdf	1	Albayrak_2008_AOF 35-1_The Topynym Balihum in the Kültepe Texts.pdf	2	Kt. c/k 922 3.7 × 4.4 × 1.4 cm. Light Brown Obv. 1 um-ma Ú-sà-num-ma a-na Ú-s. ú-ur-sˇí-Isˇtar ù Li-ip-ta-nim qí-bi-ma síg.hi.a qá-tí 5 lu sˇa Ba-li-hi lu sˇa Lu-hu-za-tí-a / a-na En-na-nim dumu A-bi-a dí-na-ma L. Edge ù ì.gisˇ qá-tí a-na sˇí-mì-im dí-na Rev. 10 2/3 ma-na 6 2/3 gín kù.babbar sˇa é kà-ri-im lá-ap-ta-ku-ni sˇu-ma 1 ma-na kù.babbar isˇ-ta-pu-ku mu-lá kù.babbar Li-ip-ta-num 15 li-dí-ma a-na-ku i-na
+data\gold_pages_only\Albayrak_2008_The_Toponim_Balihum..Altorientalische_Forschungen_page_4.pdf	1	Albayrak_2008_The Toponim Balihum..Altorientalische Forschungen.pdf	4	Kt. c/k 944 3.2 × 4.0 × 1.3 cm. Cream-colored Obv. 1 um-ma Ú-sà-num-ma a-na Li-ip-ta-nim qí-bi-ma ásˇ-pu-ra-kum um-ma a-na-ku-ma 5 lu síg hi.a lu ma-ásˇ-ki-kà lu sˇa Ba-li-hi lu sˇa Lu-hu-za-tí-a / a-na I-na-ar-me-e L. Edge dí-in síg hi.a Rev. 10 lu sˇa Ba-li-hi lu sˇa Lu-hu-za-tí-a a-na En-na-nim dumu A-bi-a dí-in a-na gémetim sˇa En-na-nim 15 qí-bi-ma síg.hi.a li-il5-qé-ú
+data\gold_pages_only\Albayrak_İrfan_-_1963_yili_kazilarinda_ele_geçen_yerlı_halkla_ılgılı_bır_kültepe_tabletı._UHKB_5_2005_21-32_page_12.pdf	1	Albayrak, İrfan - 1963 yili kazilarinda ele geçen yerlı halkla ılgılı bır kültepe tabletı. UHKB 5, 2005 21-32.pdf	12	"5 ma-na KÙ.BABBAR øa-ru-pá-am
+ni-is-ha-sú DIRI
+ša-du-a-sú ša-bu ku-nu-ki
+ša tám-<kà>-ri-im / A-šur-i-dí DUMU Sú-e-a a-na a-limki
+a-øé-er ru-ba-tim DUMU.SAL
+E-lá-li ù Ú-zi-pí-ìš-ki-im
+ú-[bi]-{il5} IGI [A-šur]-na-da ša na-pá-hi
+IGI Da-[g]a-ni-a-a
+ay. 10 iš-tù [ha-mu]-uš-tim
+ša A-šur-i[-mì-tí ú] A-mur-Ištar
+ITU.KAM qá-ra-a-[tim l]i-mu=um
+Sà-li-a DUMU [Ša-ba]-ku-ra-nim
+i-té-er-tí tám-k[à-r]i-im
+15 bé-el KÙ.BABBAR a-n[a-ku (X)]-me-e-ú-me-e
+lá ta-pá-tí-a a-na DAM.QARim
+ke-nim a-na AN.NAim
+a-na
+ITU.5.KAM ù ITU.6.KAM
+dí-na-ma i-ma-hi-ir
+ük. 20 i-za-zu AN.NA 1 GÍNšu
+le-li-a-am ù æup-pu-šu
+lu-up-ta-ma
+sk. ù té-er-<< tí >>-ta-ak-nu
+li-li-kam 1 1⁄2 GÍN KÙ.BABBAR
+25 a-ru-ba-tim na-ší 1 GÍN a-na
+ni-qí-šu a-dí-in"
+data\gold_pages_only\Albayrak_İrfan_-_1963_yili_kazilarinda_ele_geçen_yerlı_halkla_ılgılı_bır_kültepe_tabletı._UHKB_5_2005_21-32_page_3.pdf	1	Albayrak, İrfan - 1963 yili kazilarinda ele geçen yerlı halkla ılgılı bır kültepe tabletı. UHKB 5, 2005 21-32.pdf	3	Vs. 1 3 ma-na 15 GÎN KÙ.BABBAR ù 25 na-ru-uq sÀ 7 na-ru-uq ar-sa-tum si-mi-su Pé-ru-wa 5 a-na Su-pi-ib-ra a-bi-su ù um-mi-su i-di-in is-tù u4-mi-im a-ni-im a-na Pé-ru-wa a-bu-§u 10 ù um-mu-su u.K. ù a-hu-§u lâ i-tù-ru-§u-um Rs. su-ma i-tù-ru-su-um 10 ma-na KÙ.BABBAR a-na Pé-ru-wa i sa qu lu 15 su-ma Pè-ru-wa a-na a-bi4-su um-mi-su i-tù-wa-ar 10 ma-na KU.BABBAR i-sa-qal su-ma a-hu-um a-na 20 ahiimitùar° i-na i-di-ni-im i-du-ku-su o.K. IGI Ta-li-a IGI 25 IGI Pè-ru-wa IGI Lâ-ba-ar-sa IGI Wa-âs-hu pâ IGI Ku-nu-wa-an'
+data\gold_pages_only\Adams_1982_Property_Rights_page_3.pdf	1	Adams_1982_Property_Rights.PDF	3	"2. ADAMS: Property Rights
+,change and hence recognizes that no society can remain a smoothly function-
+ing, timeless equilibrium.
+To make ancient principles of property most salient in the study of class 
+stratification is, I suggest, to risk losing sight of the changing complexit-
+ies of historical reality by following normative definitions that may have a
+trajectory of their own. Diakonoff's upper stratum (and the stale institut-
+ions with which it must have come into being in an interactive process) in-
+deed found it expedient to codify and cite prescriptive principles. Much 
+less clear, however, is how widely and uniformly such principlen ever pre-
+vailed. Taken for granted in both private and official transactions was a
+wider context of social relationships that surely alwys exercised an impor-
+tant, often decisive influence on their outcome. Recorded rights and obli-
+gations were only parts of a much larger spectrum of relationships that was 
+mostly not recorded, selected according to criteria that were never made ex-
+plicit. As Miguel Civil has recently put it,
+...il y a des renseignements, souvent essentiels pour la solution de 
+nos problèmes, qui ne figurent pas dans les textes non parce qu'ils 
+n'étaient point perçus par les scribes mais tout au contraire parce 
+qu'ils étaient trop connus des scribes.... Une conclusion assez 
+pessimiste s'impose: plus un fait culturel se situr près du noyau
+central d'activités humaines, moins il y à de chances qu'il apparaisse 
+dans les textes. 2
+What is perhaps most importantly and pervasively missing is an acknowledge-
+ment of the relative power, extending far beyond any specific relationship 
+or transaction, of members of social elites to impose treir will on infer-
+ior social segments or even on one another. Lacking this, all too often
+discouragingly little can be said in other than stereotypical terms about 
+the attribution of motives to actions, and hence about the interplay and 
+selection between alternatives. And without this, little real social depth
+can be detected, leaving us with testimony more pertinent to the elaboration 
+of a series of stylized chronicles than to history as an interpretive and 
+explanatory undertaking.
+One approach to overcoming these difficulties proceeds primarily from the 
+analysis of variant practices and terminology directly attented to within 
+the textual corpus. Ultimately Assyriologists will no doubt overcome many
+present ambiguities in this fashion, of course to some extent depending on 
+the recovery of more and more broadly representative bodies of documentary 
+evidence. But much more problematical is a determination of the role of
+the largely silent mass of Diakonoff's lower social strata from purely docu-
+mentary sources. Archaeological data is potentially more helpful in this 
+respect, although the potential will not be realized until this is more wide-
+ly acknowledged among my archaeological colleagues as a central responsibil-
+ity. But also of some slight help can be a consideration of the conditions
+of life and forms of association of the working agricultural population of 
+other places as well as periods, in order to take advantage of types of docu-
+mentation for which there is as yet no cuneiform parallel.
+Let us first briefly consider the frequently associative character of 
+peasant village agricultural holdings, which are not neccesarily to be iden-
+tified with the more formal, state-recognized features of land tenure sys-
+tems. The classic form of communal systems of this type, at least in terms
+of its recognition and intensive study by historians, is the ""open field"" 
+village agriculture that, together with the manorial domains exercising con-"

@@ -1,0 +1,39 @@
+pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
+"Imdi-ilum, 1981",186,p186_c0_b0,"TTC 18
+um-ma Is-ma-A-sur-ma
+1
+a-na Im-di-lim
+qi-bi-ma i-na pá-ni
+wa-a-i-kà a-ta-ma
+TUG té-ri-sa-ni IGI
+5
+Su-Hu-bur(?)
+[um-ma] a-ta-ma
+[ku]-ta-nam di-na-ma
+[i-n]a e-ra-bi-a-ma
+[me]-eh-ra-tim
+[i]-na ra-mi-ni-a
+10
+<u->sé-ba-lá-ku-ma
+a-ga-mi-il5-kà
+R.
+me-eh-ra-tim
+i-na ra-mi-ni-kà
+ú-lá tù-u-te-bi-lam
+15
+su-ma a-hi a-ta
+gi-im-lá-ni
+a-wi-il5 gi-mi-lim
+a-na-ku a-ga-mi-ilg-kà
+ta-ad-mi-iq-tí
+20
+i-na pá-ni-im-ma
+a-li-ki-im
+Sé-bi-lam
+CG.
+bi-ta-am ás-am[
+25
+ki-ma sa ta-qi-i-su-ni[","61,255,643,2688",0,p186_c1_b1,"- 362 -
+1.30:Salatum,""eigenmächtig verfügen über"",AHw ll47a.
+Cf.,L.0ppenheim,Af0 12,1937-39,350sq.
+1.25:qiasum_,""schenken"",AHw 919b.",de,"239,49,1075,3053",1,0.5073180874958095,394.70020268553196,False,False,True

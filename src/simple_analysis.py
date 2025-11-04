@@ -130,6 +130,46 @@ class SimpleAnalyzer:
                     total_llm_akkadian_lines += smart_stats.get('lines_akkadian', 0)
                     total_llm_low_conf_lines += smart_stats.get('lines_low_conf', 0)
         
+        # Calculate Language Detection V3 metrics
+        language_detection_metrics = {}
+        total_lang_pages = 0
+        total_advanced_detections = 0
+        total_character_based_detections = 0
+        total_fallback_detections = 0
+        language_distribution = {}
+        total_fallback_percentage = 0.0
+        threshold_exceeded_count = 0
+        
+        for doc in data:
+            lang_metrics = doc.get('language_detection_v3', {})
+            if lang_metrics:
+                total_lang_pages += lang_metrics.get('total_pages', 0)
+                total_advanced_detections += lang_metrics.get('advanced_detections', 0)
+                total_character_based_detections += lang_metrics.get('character_based_detections', 0)
+                total_fallback_detections += lang_metrics.get('fallback_detections', 0)
+                total_fallback_percentage += lang_metrics.get('fallback_percentage', 0.0)
+                if lang_metrics.get('threshold_exceeded', False):
+                    threshold_exceeded_count += 1
+                
+                # Aggregate language distribution
+                doc_dist = lang_metrics.get('language_distribution', {})
+                for lang, count in doc_dist.items():
+                    language_distribution[lang] = language_distribution.get(lang, 0) + count
+        
+        if total_lang_pages > 0:
+            language_detection_metrics = {
+                'total_pages_analyzed': total_lang_pages,
+                'advanced_detections': total_advanced_detections,
+                'character_based_detections': total_character_based_detections,
+                'fallback_detections': total_fallback_detections,
+                'advanced_success_rate': total_advanced_detections / total_lang_pages,
+                'character_based_success_rate': total_character_based_detections / total_lang_pages,
+                'fallback_rate': total_fallback_detections / total_lang_pages,
+                'avg_fallback_percentage': total_fallback_percentage / total_documents if total_documents > 0 else 0,
+                'threshold_exceeded_documents': threshold_exceeded_count,
+                'language_distribution': language_distribution
+            }
+        
         # Calculate averages
         avg_confidence = statistics.mean(confidence_scores) if confidence_scores else 0
         avg_cpu_percent = 0.0
@@ -171,7 +211,9 @@ class SimpleAnalyzer:
             'total_llm_akkadian_lines': total_llm_akkadian_lines,
             'total_llm_low_conf_lines': total_llm_low_conf_lines,
             'llm_call_reduction_pct': (total_llm_lines_skipped / total_llm_lines_processed * 100) if total_llm_lines_processed > 0 else 0,
-            'smart_llm_efficiency': (total_llm_lines_changed / total_llm_lines_processed * 100) if total_llm_lines_processed > 0 else 0
+            'smart_llm_efficiency': (total_llm_lines_changed / total_llm_lines_processed * 100) if total_llm_lines_processed > 0 else 0,
+            # Language Detection V3 metrics
+            'language_detection_v3': language_detection_metrics
         }
     
     def compare_modes(self, mode_data: Dict[str, List[Dict]]) -> Dict[str, Any]:
@@ -486,6 +528,71 @@ class SimpleAnalyzer:
             else:
                 report_lines.append(f"⚠️ **Slow processing speed** ({time_per_word:.4f}s/word) - Consider optimization")
         
+        # Language Detection Metrics (V3)
+        report_lines.append("")
+        report_lines.append("## Language Detection Metrics")
+        report_lines.append("")
+        report_lines.append("### Understanding Language Detection")
+        report_lines.append("")
+        report_lines.append("**Advanced Detection:**")
+        report_lines.append("- Uses statistical models (langid/langdetect) trained on large text corpora")
+        report_lines.append("- Provides confidence scores and context-aware language identification")
+        report_lines.append("- More accurate than character-based detection")
+        report_lines.append("")
+        report_lines.append("**Character-Based Detection:**")
+        report_lines.append("- Fallback method using special characters (çğıöşü, äöüß, etc.)")
+        report_lines.append("- Used when advanced detection fails or confidence is low")
+        report_lines.append("- Less accurate but more reliable for edge cases")
+        report_lines.append("")
+        report_lines.append("**Fallback Detection:**")
+        report_lines.append("- Defaults to English when no clear language is detected")
+        report_lines.append("- Indicates potential language detection issues")
+        report_lines.append("- High fallback rates may affect LLM correction quality")
+        report_lines.append("")
+        
+        for mode in modes:
+            metrics = comparison_data[mode]
+            lang_metrics = metrics.get('language_detection_v3', {})
+            
+            if lang_metrics:
+                report_lines.append(f"### {mode.upper()} Mode - Language Detection")
+                report_lines.append(f"- **Pages Analyzed**: {lang_metrics.get('total_pages_analyzed', 0)}")
+                report_lines.append(f"- **Advanced Detections**: {lang_metrics.get('advanced_detections', 0)} ({lang_metrics.get('advanced_success_rate', 0):.1%})")
+                report_lines.append(f"- **Character-Based Detections**: {lang_metrics.get('character_based_detections', 0)} ({lang_metrics.get('character_based_success_rate', 0):.1%})")
+                report_lines.append(f"- **Fallback Detections**: {lang_metrics.get('fallback_detections', 0)} ({lang_metrics.get('fallback_rate', 0):.1%})")
+                report_lines.append(f"- **Average Fallback Percentage**: {lang_metrics.get('avg_fallback_percentage', 0):.1%}")
+                report_lines.append(f"- **Threshold Exceeded Documents**: {lang_metrics.get('threshold_exceeded_documents', 0)}")
+                
+                # Language distribution
+                lang_dist = lang_metrics.get('language_distribution', {})
+                if lang_dist:
+                    report_lines.append(f"- **Language Distribution**:")
+                    for lang, count in sorted(lang_dist.items()):
+                        percentage = (count / lang_metrics.get('total_pages_analyzed', 1)) * 100
+                        report_lines.append(f"  - {lang.upper()}: {count} pages ({percentage:.1f}%)")
+                
+                # Analysis and recommendations
+                fallback_rate = lang_metrics.get('fallback_rate', 0)
+                if fallback_rate > 0.5:
+                    report_lines.append(f"- **⚠️ High Fallback Rate**: {fallback_rate:.1%} of pages fell back to English")
+                    report_lines.append(f"  - This may indicate language detection issues affecting LLM correction quality")
+                    report_lines.append(f"  - Consider reviewing document types and language detection settings")
+                elif fallback_rate > 0.2:
+                    report_lines.append(f"- **⚠️ Moderate Fallback Rate**: {fallback_rate:.1%} of pages fell back to English")
+                    report_lines.append(f"  - Monitor for potential language detection issues")
+                else:
+                    report_lines.append(f"- **✅ Good Language Detection**: {fallback_rate:.1%} fallback rate is acceptable")
+                
+                advanced_rate = lang_metrics.get('advanced_success_rate', 0)
+                if advanced_rate > 0.7:
+                    report_lines.append(f"- **✅ Excellent Advanced Detection**: {advanced_rate:.1%} success rate")
+                elif advanced_rate > 0.5:
+                    report_lines.append(f"- **⚠️ Moderate Advanced Detection**: {advanced_rate:.1%} success rate")
+                else:
+                    report_lines.append(f"- **❌ Low Advanced Detection**: {advanced_rate:.1%} success rate - consider language detection optimization")
+                
+                report_lines.append("")
+        
         report_lines.append("")
         report_lines.append("## Notes")
         report_lines.append("- **Token Count**: Uses text_elements count (suitable for Akkadian/limited language detection)")
@@ -494,6 +601,7 @@ class SimpleAnalyzer:
         report_lines.append("- **Memory Usage**: Average RAM consumption during processing (not peak usage)")
         report_lines.append("- **Resource Monitoring**: Tracked throughout entire processing run, not just peak moments")
         report_lines.append("- **Cost of Compute**: Time per word/token shows processing efficiency")
+        report_lines.append("- **Language Detection**: V3 mode provides enhanced detection with confidence scoring and fallback analysis")
         
         report_content = "\n".join(report_lines)
         

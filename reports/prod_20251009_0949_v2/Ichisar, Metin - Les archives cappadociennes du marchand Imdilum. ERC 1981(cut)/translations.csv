@@ -1,0 +1,5 @@
+pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
+"Ichisar, Metin - Les archives cappadociennes du marchand Imdilum. ERC 1981(cut)",271,p271_c0_b0_f1,Imdilum expéditeur.,"262,161,597,289",0,p271_c0_b0_f0,GROUPE A,en,"262,161,597,289",0,0.9000000000000001,0.0,True,False,True
+"Ichisar, Metin - Les archives cappadociennes du marchand Imdilum. ERC 1981(cut)",271,p271_c1_b1_f0,II-ImdIlum co-expéditeur.,"336,253,758,289",1,p271_c2_b2_f1,ATHE 62,en,"424,22,952,1292",2,0.5341677295595553,327.71214502975016,False,False,True
+"Ichisar, Metin - Les archives cappadociennes du marchand Imdilum. ERC 1981(cut)",271,p271_c2_b2_f0,"- 262 
+a-Lettres expédiées de Kanes:","424,22,952,1292",2,p271_c2_b2_f2,BIN IV 27,tr,"424,22,952,1292",2,0.9000000000000001,0.0,True,False,True

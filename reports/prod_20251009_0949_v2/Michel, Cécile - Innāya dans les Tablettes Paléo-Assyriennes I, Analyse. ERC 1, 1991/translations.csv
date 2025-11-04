@@ -1,0 +1,2 @@
+pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
+"Michel, Cécile - Innāya dans les Tablettes Paléo-Assyriennes I, Analyse. ERC 1, 1991",249,p249_c2_b2_f1,Quelques activités d'Innya,"275,231,576,366",2,p249_c2_b2_f0,CHAPITRE III,tr,"275,231,576,366",2,0.9000000000000001,0.0,True,False,True

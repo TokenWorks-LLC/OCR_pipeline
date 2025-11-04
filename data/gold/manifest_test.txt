@@ -1,0 +1,11 @@
+pdf_path	page_no
+data\input_pdfs\27_arastirma_3-libre.pdf	1
+data\input_pdfs\27_arastirma_3-libre.pdf	1
+data\input_pdfs\28_arastirma_3-libre.pdf	1
+data\input_pdfs\28_arastirma_3-libre.pdf	1
+data\input_pdfs\Adams_1982_Property_Rights.PDF	1
+data\input_pdfs\Adams_1982_Property_Rights.PDF	1
+data\input_pdfs\AKT 1, 1990.pdf	1
+data\input_pdfs\AKT 1, 1990.pdf	1
+data\input_pdfs\AKT 2, 1995.pdf	1
+data\input_pdfs\AKT 2, 1995.pdf	1

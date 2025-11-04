@@ -1,0 +1,26 @@
+pdf,page,engine,time,boxes,cer,accuracy,ocr_len,gold_len
+27_arastirma_3-libre.pdf,9,"ensemble(paddle,tesseract,easyocr)",20.67876648902893,500,0.0980325644504749,90.1967435549525,2814,2948
+28_arastirma_3-libre.pdf,9,"ensemble(paddle,tesseract,easyocr)",18.341331005096436,416,0.367791077257889,63.2208922742111,2312,1838
+"AKT 1, 1990.pdf",21,"ensemble(paddle,tesseract,easyocr)",27.01913046836853,663,0.09404145077720208,90.5958549222798,3805,3860
+"AKT 2, 1995.pdf",36,"ensemble(paddle,tesseract,easyocr)",22.602110385894775,595,0.23911764705882352,76.08823529411765,3083,3400
+"AKT 4, 2006.pdf",21,"ensemble(paddle,tesseract,easyocr)",22.37190890312195,439,0.3148936170212766,68.51063829787233,1862,2115
+AKT 4.pdf,19,"ensemble(paddle,tesseract,easyocr)",22.629340887069702,318,0.3544834819087572,64.55165180912428,1621,1907
+"AKT 4b, 2006.pdf",52,"ensemble(paddle,tesseract,easyocr)",16.5682430267334,264,1.2416787264833575,0,1261,691
+Albayrak_1998_3UHKB_Koloni caginda_p1-14.pdf,4,"ensemble(paddle,tesseract,easyocr)",15.912299394607544,323,0.5619918699186992,43.80081300813008,1324,984
+Albayrak_2000_ArAn4_testament.pdf,2,"ensemble(paddle,tesseract,easyocr)",17.80629873275757,474,0.2634575569358178,73.65424430641822,2145,1932
+Albayrak_2001_AMMY2000_ma'usu.PDF,5,"ensemble(paddle,tesseract,easyocr)",17.867438077926636,228,0.9987562189054726,0.12437810945273853,1018,804
+Albayrak_2002_ArAn5_listesi.pdf,2,"ensemble(paddle,tesseract,easyocr)",18.08417773246765,391,0.21450151057401812,78.54984894259819,1600,1655
+Albayrak_2003_ArAn 6-1_Kanes Karum unun bir mektubu.pdf,3,"ensemble(paddle,tesseract,easyocr)",17.753758668899536,318,0.33542538354253837,66.45746164574616,1713,1434
+Albayrak_2003_ArAn6_karum.pdf,4,"ensemble(paddle,tesseract,easyocr)",16.2491397857666,238,0.2582781456953642,74.17218543046357,917,906
+AKT 7a.pdf,10,"ensemble(paddle,tesseract,easyocr)",15.79923939704895,0,1.0,0,0,1901
+AKT 7a.pdf,35,"ensemble(paddle,tesseract,easyocr)",19.39306402206421,279,0.19747587230883445,80.25241276911656,1386,1347
+Albayrak_1998_3UHKB_Koloni caginda_p1-14.pdf,5,"ensemble(paddle,tesseract,easyocr)",17.630272150039673,314,1.7190635451505016,0,1267,598
+Albayrak_2000_ArAn4_vasiyetname.pdf,7,"ensemble(paddle,tesseract,easyocr)",17.573519945144653,437,0.2125984251968504,78.74015748031495,2073,2286
+Albayrak_2003_ArAn 6-1_Kanes Karum unun bir mektubu.pdf,2,"ensemble(paddle,tesseract,easyocr)",18.396267652511597,504,0.8148148148148148,18.518518518518523,2427,1539
+Albayrak_2003_ArAn6_karum.pdf,1,"ensemble(paddle,tesseract,easyocr)",19.603633165359497,404,0.6737320211960636,32.626797880393646,2012,1321
+Albayrak_2008_AOF 35-1_The Topynym Balihum in the Kültepe Texts.pdf,2,"ensemble(paddle,tesseract,easyocr)",20.286980390548706,493,4.612903225806452,0,2206,403
+Albayrak_2008_The Toponim Balihum..Altorientalische Forschungen.pdf,4,"ensemble(paddle,tesseract,easyocr)",19.09202527999878,396,3.614130434782609,0,1657,368
+"Albayrak, İrfan - 1963 yili kazilarinda ele geçen yerlı halkla ılgılı bır kültepe tabletı. UHKB 5, 2005 21-32.pdf",3,"ensemble(paddle,tesseract,easyocr)",21.48621392250061,348,2.5135658914728682,0,1563,516
+Adams_1982_Property_Rights.PDF,3,"ensemble(paddle,tesseract,easyocr)",44.574764013290405,2079,1.103000811030008,0,7678,3699
+Alp_spasiya and sapasalli.pdf,2,"ensemble(paddle,tesseract,easyocr)",19.078214645385742,277,0.19388516032811334,80.61148396718866,1485,1341
+"Alster, B. & Oshima, T. - Sargonic Dinner at Kanes. The Old Assyrian Sargon Legend. Iraq 70, 2007 1-20.pdf",6,"ensemble(paddle,tesseract,easyocr)",29.89853286743164,1387,1.9915651358950328,0,6318,2134

@@ -1,0 +1,85 @@
+# Docker ignore file for OCR Pipeline
+# Prevents unnecessary files from being copied into Docker build context
+
+# Large data directories (CRITICAL: exclude to avoid multi-GB context)
+data/drive/
+data/cache/
+cache/
+manifests/
+reports/
+_downloads/
+evaluation_results/
+production/
+
+# Environment and config
+.env
+vars.env
+*.env.local
+
+# Python virtual environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+.merge_protect/
+
+# Docker files themselves
+Dockerfile
+Dockerfile.arm64
+docker-compose.yml
+.dockerignore
+
+# Dev infrastructure (not needed in container)
+dev-infra/
+
+# Documentation (keep only README.md)
+*.md
+!README.md
+
+# Test outputs
+test_*.jpg
+test_*.html
+test_*.csv
+temp_*.txt
+*.log
+
+# Logs and temporary files
+*.log
+*.tmp
+temp/
+tmp/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/

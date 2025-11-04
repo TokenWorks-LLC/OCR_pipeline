@@ -1,0 +1,24 @@
+============================================================
+MANIFEST PROCESSING SUMMARY
+============================================================
+Timestamp: 2025-10-09 13:11:19
+Manifest: manifests\passB_test_20251009.txt
+Detection config: profiles\akkadian_strict.json
+
+RESULTS:
+  Total pages: 1
+  Successful: 1
+  Failed: 0
+  Akkadian blocks: 2
+  Translation pairs: 1
+
+PERFORMANCE:
+  Total time: 0.2 minutes
+  Avg time per page: 13.41s
+  Throughput: 0.1 pages/min
+
+OUTPUTS:
+  Client CSV: None
+  Progress CSV: reports\passB_test_20251009_test\progress.csv
+  Output directory: reports\passB_test_20251009_test
+============================================================

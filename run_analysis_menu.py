@@ -82,6 +82,7 @@ def display_evaluation_summary(evaluations: Dict[str, List[Dict]]) -> None:
 def select_evaluation_modes(evaluations: Dict[str, List[Dict]]) -> List[str]:
     """Interactive selection of evaluation modes to compare."""
     available_modes = [mode for mode, docs in evaluations.items() if docs]
+    print(f"DEBUG: Available modes: {available_modes}")
     
     if not available_modes:
         print("❌ No evaluation results found!")
@@ -107,7 +108,9 @@ def select_evaluation_modes(evaluations: Dict[str, List[Dict]]) -> List[str]:
             
             if choice == str(len(available_modes) + 1):
                 # Compare all modes
-                return [f"./data/eval_output/eval_research_results_{mode}" for mode in available_modes]
+                result = [f"./data/eval_output/eval_research_results_{mode}" for mode in available_modes]
+                print(f"DEBUG: Returning ALL modes: {result}")
+                return result
             
             elif choice == str(len(available_modes) + 2):
                 # Custom selection
@@ -117,7 +120,9 @@ def select_evaluation_modes(evaluations: Dict[str, List[Dict]]) -> List[str]:
                 mode_idx = int(choice) - 1
                 if 0 <= mode_idx < len(available_modes):
                     selected_mode = available_modes[mode_idx]
-                    return [f"./data/eval_output/eval_research_results_{selected_mode}"]
+                    result = [f"./data/eval_output/eval_research_results_{selected_mode}"]
+                    print(f"DEBUG: Returning single mode: {result}")
+                    return result
                 else:
                     print("❌ Invalid selection. Please try again.")
         
@@ -160,7 +165,8 @@ def run_simple_analysis(eval_dirs: List[str], output_dir: str = "./data/analysis
     """Run the simple analysis."""
     try:
         from simple_analysis import SimpleAnalyzer
-        
+
+        print(f"DEBUG: eval_dirs passed to run_simple_analysis: {eval_dirs}")
         print(f"\n🚀 Starting simple analysis of {len(eval_dirs)} evaluation mode(s)...")
         print("=" * 60)
         

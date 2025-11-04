@@ -38,13 +38,14 @@ class SimpleAnalyzer:
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
         
-        # Setup logging
+        # Setup logging with UTF-8 encoding for Unicode filename support
         logging.basicConfig(
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - %(message)s',
+            encoding='utf-8',
             handlers=[
-                logging.StreamHandler(sys.stdout),
-                logging.FileHandler(self.output_dir / 'analysis.log')
+                logging.StreamHandler(sys.stdout, encoding='utf-8'),
+                logging.FileHandler(self.output_dir / 'analysis.log', encoding='utf-8')
             ]
         )
         self.logger = logging.getLogger(__name__)
@@ -567,8 +568,12 @@ class SimpleAnalyzer:
                 lang_dist = lang_metrics.get('language_distribution', {})
                 if lang_dist:
                     report_lines.append(f"- **Language Distribution**:")
+                    total_analyzed = lang_metrics.get('total_pages_analyzed', 0)
                     for lang, count in sorted(lang_dist.items()):
-                        percentage = (count / lang_metrics.get('total_pages_analyzed', 1)) * 100
+                        if total_analyzed > 0:
+                            percentage = (count / total_analyzed) * 100
+                        else:
+                            percentage = 0.0
                         report_lines.append(f"  - {lang.upper()}: {count} pages ({percentage:.1f}%)")
                 
                 # Analysis and recommendations

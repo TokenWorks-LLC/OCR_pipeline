@@ -1,9 +1,0 @@
-pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
-"Larsen 1979 - Power and Propaganda. Mesopotamia 7, 1979",327,p327_c1_b1_f3,"116 sq. où se trouve cité le passage de K. Müller, MVAG, 41/3, 1937, 12, 34: i-na e-sar-te gis PA-ka KUR-ka ra-pi[s]. 29. Voir à ce sujet mon commentaire plus détaillé de La voix de l'opposition en Méso-","42.25,48.841026306152344,387.5667724609375,388.6759719848633",1,p327_c1_b1_f0,"26. X, 3: BE iz-bu IG1-sû 1-ma ina SAG.DU-sïi GAR-at KUR ana KI.KAL NIGIN
-dU.GUR KU 2'i-/u LUGAL dan-nu ina KUR GÂL-ma KUR û-sa-ah-hir; YOS 10 56, 15: DIS iz-bu-um i-in-su i-na pu-ti-i-su dGÎR.UNU.GAL i-ik-ka-al
-LUGAL ki-is-sa-tim i-na ma-tim ib-ba-as si.
-27. XXI, 12: [BE iz-bu] KIMIN 2 SAG.DUmes_sû 2 KUN mes_sû GIRmes sû GIM sa
-UR.GIRX (KU) SIG SAH GAR KUR NINDA KU LUGAL i-dan-nin; 50': BE
-iz-bu KIMIN KISIB.LA UR.MAH GAR LUGAL KAL-ma tig e} KUR û-hal-laq.
-Sur sarru dannu voir en outre: III, 1, VII, 126'; XVII, 16'; XXI, 1, 43'; YOS X,
-56, 11, 53 et ceux de la n. 26). Dans XIV, 74' un EN KALAG ravage le pays.",tr,"42.25,48.841026306152344,387.5667724609375,388.6759719848633",1,0.9000000000000001,0.0,True,False,True

@@ -1,5 +1,0 @@
-pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
-Kraus_1951_NippurandIsin,154,p154_c1_b1_f1,"der des Vaters der Erben [(9)?], (11) und (1a).
-Erben lú.d i n g i r .r a verschiedene Person sein.
-seinem Siegel (Abdrücke auf dem linken Tafelrande) ein Sohn des :(5).
-er§etim, als auch ""Söhn[e des NN]"".","89,571,849,2337",1,p154_c1_b1_f0,"5. Die_Urkunde UM 6,1 Nr.99.",en,"89,571,849,2337",1,0.9000000000000001,0.0,True,False,True

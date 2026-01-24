@@ -1,9 +1,0 @@
-pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
-Larsen 1977a_Iraq39_partnerships,9,p9_c3_b3_f0,"135
-54 (14) 2.TA Su-uq-lá-tim (15) ku-nu-ki 5a A-limk1
-(16) 23 MA.NA.TA AN.NA (17) 29 TúG.TA ku-ta-ni
-(18) ù 2.TA ANE.HI.A (19) qá-tám ni-il5-qé (20) 2‡ TúG
-1 ANE (21) i-li-bi, Im-di-DINGIR (22§MA.NA LA 1
-GÍN (23) KUG.BABBAR Sa-al-Sa-tim (24) ni-lá-qé (25)
-1 MA.NA i-na me-5i-it (26) e-lá-tim! Sa-lim-A-Sùr
-Im-di-DINGIR (27) i Pu-Su-ki-in i-ld-qe-ú.","1567,136,2269,2555",3,p9_c2_b2_f0,PARTNERSHIPS IN THE OLD ASSYRIAN TRADE,en,"1143,141,2011,2562",2,0.46330178165590924,553.0653216393159,False,False,True

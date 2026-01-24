@@ -1,8 +1,0 @@
-pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
-Pruzsinszky_2003_SCCNH13_Personnennamen_Texte_aus_Emar,542,p542_c1_b1_f0,"Kab-Ía-ni HCCT-E 35, 9 KU SH m S:IIa-a•-‰ú-dKUR V d. Käufers
-‚KaŸ-ab-la RE 73, ‚1Ÿ PL SH m S:Id30-ta-li Liste
-Kabla ""Fessel"" WS
-KabÍanu ? ???","153.88400268554688,263.28594970703125,329.7460174560547,1045.0512084960938",1,p542_c2_b2_f0,"Ka-bu-li Kadmos 21, 2.[18] PU SH m S:IBa-aÓ-la-ú V. des Prozeßgegners
-fKad-ri E 65, 34 AÍtarte Tempel PL SH f S:ZU-ba-la Liste
-Kadrû ""Sprecher/ Geschenk"" hurr./ akk.
-Kabuli ? WS?",it,"277.8840026855469,253.2100067138672,485.7459716796875,1047.4819793701172",2,0.6038702645184426,202.19421414417437,False,False,True

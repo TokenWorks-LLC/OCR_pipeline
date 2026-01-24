@@ -1,26 +1,24 @@
-# 📄 OCR Pipeline - Production-Ready Document Processing System
+# OCR Pipeline - Production-Ready Document Processing System
 
-> **🚀 A production-ready document processing system with AI-powered OCR, multi-language support, and specialized academic text extraction capabilities.**
-> 
-> **⚡ NEW:** Optimized for Apple Silicon (M1/M2/M3) with 8-70 second Docker builds!
-> 
-> **🔥 LATEST:** Multi-engine OCR support - Choose from PaddleOCR, docTR, MMOCR, or Kraken engines!
+A production-ready document processing system with AI-powered OCR, multi-language support, and specialized academic text extraction capabilities. Optimized for Apple Silicon (M1/M2/M3) with fast Docker builds and supports multiple OCR engines.
 
-## 🎯 Perfect For
+## Use Cases
 
-- **Document digitization** projects with high-volume requirements
-- **Academic research** involving historical texts and translations  
-- **Multi-language** document processing workflows
-- **AI-enhanced** OCR accuracy with LLM text correction
-- **Batch processing** of PDFs, images, and mixed document types
-- **Multi-engine comparison** and accuracy optimization
-- **Akkadian/Cuneiform transliteration** detection and extraction
+This OCR pipeline is designed for:
+
+- Document digitization projects with high-volume requirements
+- Academic research involving historical texts and translations  
+- Multi-language document processing workflows
+- AI-enhanced OCR accuracy with LLM text correction
+- Batch processing of PDFs, images, and mixed document types
+- Multi-engine comparison and accuracy optimization
+- Akkadian/Cuneiform transliteration detection and extraction
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 🔍 **Multi-Engine OCR**
+### Multi-Engine OCR Support
 Choose the best OCR engine for your specific use case:
 
 | Engine | Best For | License | Key Features |
@@ -30,20 +28,20 @@ Choose the best OCR engine for your specific use case:
 | **MMOCR** | High accuracy | Apache-2.0 | OpenMMLab, state-of-the-art models |
 | **Kraken** | Historical documents | Apache-2.0 | BiDi support, specialized for manuscripts |
 
-### 🤖 **AI-Powered Text Correction**
+### AI-Powered Text Correction
 - LLM-based typo correction using Ollama
 - Language-specific correction thresholds
 - Akkadian span protection during correction
 - Confidence-based edit budgets
 
-### 🌍 **Multi-Language Support**
+### Multi-Language Support
 Supports 12+ languages including:
 - English, German, French, Italian, Spanish
 - Turkish, Arabic, Hebrew, Persian
 - Russian, Chinese, Japanese
 - Automatic language detection per page/block
 
-### 📜 **Akkadian/Cuneiform Transliteration Detection**
+### Akkadian/Cuneiform Transliteration Detection
 Specialized support for ancient Near Eastern texts:
 - Syllabic structure detection (e.g., `a-na-ku`, `šar-ru-um`)
 - Akkadian diacritics: `šṣṭḫāēīūâêîû`
@@ -52,7 +50,7 @@ Specialized support for ancient Near Eastern texts:
 - Page-level detection with confidence scores
 - Translation pairing with source texts
 
-### 🎯 **Advanced Features**
+### Advanced Features
 - **ROVER Ensemble Fusion**: Character-level alignment with confidence calibration
 - **Reading Order Detection**: Multi-column layout support with K-means clustering
 - **Deterministic Processing**: Byte-for-byte identical output across runs
@@ -62,15 +60,15 @@ Specialized support for ancient Near Eastern texts:
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
-### 🎬 30-Second Demo
+### 30-Second Demo
 ```bash
 # 1. Get the project
 git clone https://github.com/TokenWorks-LLC/OCR_pipeline
 cd OCR_pipeline
 
-# 2. For Apple Silicon Macs (M1/M2/M3) - Super Fast! ⚡
+# 2. For Apple Silicon Macs (M1/M2/M3) - Optimized build
 docker build -f Dockerfile.arm64 -t ocr-pipeline .
 
 # 3. For Intel/AMD systems
@@ -81,9 +79,9 @@ docker run --rm -v "$PWD":/workspace -w /workspace ocr-pipeline \
   python run_pipeline.py --input-dir data/samples
 ```
 
-### 👥 Choose Your Path
+### Choose Your Path
 
-#### 🎯 **End Users** (Just want to process documents)
+#### End Users (Just want to process documents)
 ```bash
 # One-time setup
 python setup.py                    # Installs everything + validates system
@@ -93,11 +91,11 @@ nano config.json                   # Edit: input folders, languages, AI features
 
 # Add files and go!
 cp your_files/* data/input/         # Put your PDFs/images here  
-python run_pipeline.py             # Magic happens ✨
-ls data/output/                     # Your results are here!
+python run_pipeline.py             # Process documents
+ls data/output/                     # Your results are here
 ```
 
-#### 💻 **Developers** (Want to understand/modify the code)
+#### Developers (Want to understand/modify the code)
 ```bash
 # Get familiar with the codebase
 python quick_start.py               # Interactive tutorials + examples
@@ -111,9 +109,9 @@ ls src/                             # Core modules
 cat config.json                     # Configuration options
 ```
 
-#### 🐳 **Docker Users** (Recommended for consistency)
+#### Docker Users (Recommended for consistency)
 ```bash
-# Apple Silicon (M1/M2/M3) - FAST BUILD ⚡ (8-70 seconds!)
+# Apple Silicon (M1/M2/M3) - Optimized build (8-70 seconds)
 docker build -f Dockerfile.arm64 -t ocr-pipeline .
 
 # Intel/AMD64 systems
@@ -132,7 +130,7 @@ docker compose build && docker compose run --rm ocr python run_pipeline.py
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Installation](#installation)
 - [Configuration](#configuration)
@@ -147,7 +145,7 @@ docker compose build && docker compose run --rm ocr python run_pipeline.py
 
 ---
 
-## 💻 Installation
+## Installation
 
 ### Prerequisites
 
@@ -199,7 +197,7 @@ docker run --rm ocr-pipeline python -c "import paddleocr; print('Success!')"
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 The pipeline is configured via `config.json`:
 
@@ -242,7 +240,7 @@ The pipeline is configured via `config.json`:
 
 ---
 
-## 📚 Usage Examples
+## Usage Examples
 
 ### Basic PDF Processing
 
@@ -295,39 +293,81 @@ docker run --rm -it \
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
-### 5-Stage Processing Pipeline
+### How the OCR Engine Works
 
-```
-Input Documents (PDF/Images)
-    ↓
-[Stage 1] PDF Rendering (400 DPI) - Cached
-    ↓
-[Stage 2] Orientation Detection & Deskewing - Cached
-    ↓
-[Stage 3] Text Detection (Bounding Boxes) - Cached
-    ↓
-[Stage 4] Text Recognition (OCR) - GPU Batched
-    ↓
-[Stage 5] Post-Processing & Output
-    • LLM Correction
-    • Akkadian Detection
-    • Reading Order
-    • CSV/HTML Output
-```
+This OCR pipeline processes documents through a sophisticated multi-stage workflow designed for accuracy, speed, and reproducibility. The system combines multiple OCR engines, AI-powered correction, and specialized text detection to extract text from PDFs and images.
+
+### Core Processing Workflow
+
+The pipeline operates in five distinct stages:
+
+**Stage 1: PDF Rendering**
+- Converts PDF pages to high-resolution images (300-400 DPI)
+- Uses PyMuPDF (fitz) for fast, accurate rendering
+- Results are cached to avoid redundant processing
+
+**Stage 2: Image Preprocessing**
+- Detects and corrects page orientation
+- Applies deskewing to straighten tilted documents
+- Enhances image quality for better OCR accuracy
+- Results are cached for efficiency
+
+**Stage 3: Text Detection**
+- Identifies text regions and generates bounding boxes
+- Uses detection models from chosen OCR engine (PaddleOCR, docTR, etc.)
+- Handles multi-column layouts and complex page structures
+- Detection results are cached
+
+**Stage 4: Text Recognition**
+- Performs OCR on detected text regions
+- Supports GPU acceleration for faster processing
+- Processes images in batches for efficiency
+- Each engine produces text with confidence scores
+
+**Stage 5: Post-Processing and Output**
+- **LLM Correction**: Uses local AI models (via Ollama) to fix OCR errors while preserving specialized terminology
+- **Akkadian Detection**: Identifies ancient Near Eastern transliterations using pattern matching
+- **Reading Order**: Arranges text in natural reading sequence (top-to-bottom, left-to-right, multi-column aware)
+- **Output Generation**: Produces CSV files with text, coordinates, confidence scores, and metadata
 
 ### Core Components
 
-- **Orchestrator** (`src/orchestrator.py`): Parallel processing with deterministic output
-- **Multi-Engine OCR** (`src/multi_engine_orchestrator.py`): ROVER fusion system
-- **Text Processing**: Reading order, language detection, Akkadian identification
-- **LLM Correction** (`src/llm_correction.py`): Ollama integration
-- **Caching** (`src/cache_store.py`): Multi-stage intelligent caching
+The pipeline is built from modular components that work together:
+
+**Orchestrator** (`production/comprehensive_pipeline.py`)
+- Coordinates the entire processing workflow
+- Manages parallel processing of multiple documents
+- Ensures deterministic output (same input always produces same output)
+- Handles resource allocation and monitoring
+
+**Multi-Engine OCR System**
+- Supports PaddleOCR, docTR, MMOCR, and Kraken engines
+- Can run multiple engines and combine results using ROVER (Recognizer Output Voting Error Reduction)
+- Character-level alignment and confidence calibration
+- Adaptive engine selection based on document type
+
+**Text Processing Pipeline**
+- **Reading Order Detection**: Analyzes spatial layout to determine correct text sequence
+- **Language Detection**: Identifies language per page or text block
+- **Akkadian Identification**: Specialized patterns for detecting transliterations
+
+**LLM Correction System** (`src/enhanced_llm_correction.py`)
+- Integrates with Ollama for local AI inference
+- Applies language-specific correction thresholds
+- Protects specialized terms (Akkadian spans) from modification
+- Uses confidence-based edit budgets to prevent over-correction
+
+**Intelligent Caching** (`src/cache_store.py`)
+- Multi-stage caching (rendering, detection, OCR, LLM)
+- Content-addressable storage using SHA-256 hashing
+- Provides 10x speedup on repeated processing
+- Invalidation controls for selective cache clearing
 
 ---
 
-## 🐳 Docker Deployment
+## Docker Deployment
 
 ### Standard Dockerfile
 
@@ -343,7 +383,7 @@ docker run --rm -v "$PWD":/workspace -w /workspace ocr-pipeline \
 ### Apple Silicon Dockerfile
 
 ```bash
-# Build (8-70 seconds! ⚡)
+# Build (8-70 seconds)
 docker build -f Dockerfile.arm64 -t ocr-pipeline .
 
 # Run
@@ -364,7 +404,7 @@ docker compose run --rm ocr bash
 
 ---
 
-## 📈 Performance
+## Performance
 
 ### Throughput
 
@@ -391,7 +431,7 @@ docker compose run --rm ocr bash
 
 ---
 
-## 🔧 API Reference
+## API Reference
 
 ### Command-Line Interface
 
@@ -430,7 +470,7 @@ results = orchestrator.process_pdf(
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our contributing guidelines:
 
@@ -458,7 +498,7 @@ black src/
 
 ---
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -490,7 +530,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
 
@@ -505,7 +545,7 @@ See [THIRD_PARTY_OCR_LICENSES.md](THIRD_PARTY_OCR_LICENSES.md) for details.
 
 ---
 
-## � Additional Documentation
+## Additional Documentation
 
 For more detailed information, see these guides:
 
@@ -518,7 +558,7 @@ For more detailed information, see these guides:
 
 ---
 
-## �🙏 Acknowledgments
+## Acknowledgments
 
 - PaddleOCR team for the excellent OCR engine
 - Ollama team for local LLM inference
@@ -528,7 +568,7 @@ For more detailed information, see these guides:
 
 ---
 
-## 📞 Support
+## Support
 
 - **Issues**: [GitHub Issues](https://github.com/TokenWorks-LLC/OCR_pipeline/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/TokenWorks-LLC/OCR_pipeline/discussions)
@@ -536,7 +576,7 @@ For more detailed information, see these guides:
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 ### Upcoming Features
 
@@ -549,4 +589,4 @@ For more detailed information, see these guides:
 
 ---
 
-**Made with ❤️ by TokenWorks LLC**
+**Developed by TokenWorks LLC**

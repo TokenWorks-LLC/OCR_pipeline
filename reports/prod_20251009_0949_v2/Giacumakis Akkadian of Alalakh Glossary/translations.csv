@@ -1,6 +1,0 @@
-pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
-Giacumakis Akkadian of Alalakh Glossary,7,p7_c3_b3_f5,"herahanniwa - (mng. uncert.; Hurr. word?): 80 u-ra-an-ni hé-ra-ha-an-ni-wa, 437: 4
-hetaruhuli s. - (profession or occupation: Hurr. word): awihé-e-ta-ru-hu-li, 148x: 5
-(perhaps related to hataru which refers to women's apparel in HSS, v. 1€
-Hiari -(month name):Hi-ia-i *6:35.warab Hi-ia-i, 46:8; 46:13; *63:20. warabHi-ic
-re-e, *54:33; *61:26; *243:25; *244:3. m Hi-ia-ri-i, *346:2. m Hi-ia-ar-ri","773,13,1489,2134",3,p7_c3_b3_f2,"301:3, 16 (translit. only, JCS, 13 (1959), p. 55). awllha-za-an-(mu), *21:19",en,"773,13,1489,2134",3,1.0,0.0,True,True,True

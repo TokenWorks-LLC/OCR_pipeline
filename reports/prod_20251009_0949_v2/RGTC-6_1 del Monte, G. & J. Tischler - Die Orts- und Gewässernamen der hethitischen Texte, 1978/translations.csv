@@ -1,4 +1,0 @@
-pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
-"RGTC-6_1 del Monte, G. & J. Tischler - Die Orts- und Gewässernamen der hethitischen Texte, 1978",45,p45_c3_b3_f4,"ha-1i-ma-na-a KBo IV 4 IV 44,50.
-Ortsbestimmung: Stadt von -→ Azi/Hajaa.
-Eigennamen: Mutti, Mann (Lú) von U., Bote der Leute von Azi (11.","1039,8,2380,2544",3,p45_c3_b3_f0,[Halara],en,"1039,8,2380,2544",3,0.9000000000000001,0.0,True,False,True

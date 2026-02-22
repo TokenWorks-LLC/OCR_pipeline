@@ -1,0 +1,359 @@
+{
+  "pdf_path": "data\\input_pdfs\\Albayrak_2008_AOF 35-1_The Topynym Balihum in the Kültepe Texts.pdf",
+  "pages_processed": 1,
+  "pages_requested": 1,
+  "total_processing_time": 18.66,
+  "avg_time_per_page": 18.66,
+  "output_csv": "evaluation_results\\Albayrak_2008_AOF 35-1_The Topynym Balihum in the Kültepe Texts_page_2\\comprehensive_results.csv",
+  "akkadian_translations_found": 0,
+  "akkadian_translations_pdf": "evaluation_results\\Albayrak_2008_AOF 35-1_The Topynym Balihum in the Kültepe Texts_page_2\\Albayrak_2008_AOF 35-1_The Topynym Balihum in the Kültepe Texts_akkadian_translations.pdf",
+  "pipeline_config": {
+    "llm_provider": "ollama",
+    "llm_model": "mistral:latest",
+    "llm_base_url": "http://localhost:11434",
+    "llm_timeout": 30,
+    "enable_new_llm_correction": true,
+    "llm_correction_model": "qwen2.5:7b-instruct",
+    "llm_correction_edit_budget": 0.12,
+    "llm_correction_cache_enabled": true,
+    "dpi": 300,
+    "paddle_use_gpu": true,
+    "ocr_languages": [
+      "en",
+      "tr",
+      "de",
+      "fr",
+      "it"
+    ],
+    "ocr_params": {
+      "en": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      },
+      "tr": {
+        "det_db_thresh": 0.2,
+        "det_db_box_thresh": 0.5,
+        "rec_score_thresh": 0.4
+      },
+      "de": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      },
+      "fr": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      },
+      "it": {
+        "det_db_thresh": 0.3,
+        "det_db_box_thresh": 0.6,
+        "rec_score_thresh": 0.5
+      }
+    },
+    "enable_reading_order": true,
+    "enable_llm_correction": true,
+    "max_concurrent_corrections": 3,
+    "performance_profile": "quality",
+    "enable_akkadian_extraction": true,
+    "generate_translations_pdf": true,
+    "akkadian_confidence_threshold": 0.8,
+    "output_csv_metadata": true,
+    "create_html_overlay": true,
+    "create_visualization": true,
+    "preserve_transliteration": {
+      "enable": false
+    },
+    "metrics": {
+      "enable_grapheme_metrics": false
+    },
+    "research": {
+      "enable_char_lm_decoding": false,
+      "enable_rover_ensemble": false,
+      "enable_lexicon_bias": false,
+      "enable_tta": false,
+      "enable_confusion_prior": false,
+      "enable_header_footer_lr": false
+    }
+  },
+  "total_text_elements": 52,
+  "total_word_count": 0,
+  "total_token_count": 52,
+  "avg_text_elements_per_page": 52.0,
+  "avg_word_count_per_page": 0.0,
+  "avg_token_count_per_page": 52.0,
+  "time_per_text_element": 0.3588,
+  "time_per_word": 0,
+  "time_per_token": 0.3588,
+  "avg_cpu_percent": 0.0,
+  "avg_memory_mb": 0.0,
+  "total_pages": 14,
+  "total_text_lines": 604,
+  "total_characters": 26032,
+  "avg_lines_per_page": 43.142857142857146,
+  "avg_chars_per_page": 1859.4285714285713,
+  "avg_confidence": 0.973,
+  "pages_with_warnings": 0,
+  "warning_rate": 0.0,
+  "language_distribution": {
+    "turkish": 8,
+    "akkadian": 3,
+    "akkadian_mixed": 2,
+    "english_mixed": 1
+  },
+  "page_statistics": [
+    {
+      "page_num": 2,
+      "processing_time": 18.64242196083069,
+      "ocr_time": 18.55652618408203,
+      "reading_order_time": 6.318092346191406e-05,
+      "research_enhancement_time": 1.6689300537109375e-06,
+      "diacritic_restoration_time": 2.384185791015625e-07,
+      "correction_time": 0.000156402587890625,
+      "text_elements": 52,
+      "language": "english_mixed",
+      "language_analysis": {
+        "primary_language": "english",
+        "language_counts": {
+          "german": 1,
+          "english": 29,
+          "akkadian": 12,
+          "unknown": 7,
+          "italian": 1,
+          "turkish": 2
+        },
+        "is_mixed": true,
+        "per_line_languages": [
+          [
+            0,
+            "german"
+          ],
+          [
+            1,
+            "english"
+          ],
+          [
+            2,
+            "english"
+          ],
+          [
+            3,
+            "english"
+          ],
+          [
+            4,
+            "english"
+          ],
+          [
+            5,
+            "english"
+          ],
+          [
+            6,
+            "english"
+          ],
+          [
+            7,
+            "english"
+          ],
+          [
+            8,
+            "english"
+          ],
+          [
+            9,
+            "english"
+          ],
+          [
+            10,
+            "english"
+          ],
+          [
+            11,
+            "english"
+          ],
+          [
+            12,
+            "english"
+          ],
+          [
+            13,
+            "english"
+          ],
+          [
+            14,
+            "english"
+          ],
+          [
+            15,
+            "english"
+          ],
+          [
+            16,
+            "english"
+          ],
+          [
+            17,
+            "english"
+          ],
+          [
+            18,
+            "english"
+          ],
+          [
+            19,
+            "english"
+          ],
+          [
+            20,
+            "english"
+          ],
+          [
+            21,
+            "akkadian"
+          ],
+          [
+            22,
+            "english"
+          ],
+          [
+            23,
+            "unknown"
+          ],
+          [
+            24,
+            "akkadian"
+          ],
+          [
+            25,
+            "akkadian"
+          ],
+          [
+            26,
+            "akkadian"
+          ],
+          [
+            27,
+            "english"
+          ],
+          [
+            28,
+            "unknown"
+          ],
+          [
+            29,
+            "akkadian"
+          ],
+          [
+            30,
+            "akkadian"
+          ],
+          [
+            31,
+            "english"
+          ],
+          [
+            32,
+            "akkadian"
+          ],
+          [
+            33,
+            "akkadian"
+          ],
+          [
+            34,
+            "english"
+          ],
+          [
+            35,
+            "english"
+          ],
+          [
+            36,
+            "italian"
+          ],
+          [
+            37,
+            "akkadian"
+          ],
+          [
+            38,
+            "akkadian"
+          ],
+          [
+            39,
+            "akkadian"
+          ],
+          [
+            40,
+            "akkadian"
+          ],
+          [
+            41,
+            "english"
+          ],
+          [
+            42,
+            "unknown"
+          ],
+          [
+            43,
+            "english"
+          ],
+          [
+            44,
+            "turkish"
+          ],
+          [
+            45,
+            "unknown"
+          ],
+          [
+            46,
+            "english"
+          ],
+          [
+            47,
+            "unknown"
+          ],
+          [
+            48,
+            "english"
+          ],
+          [
+            49,
+            "unknown"
+          ],
+          [
+            50,
+            "turkish"
+          ],
+          [
+            51,
+            "unknown"
+          ]
+        ]
+      },
+      "corrections_made": 0,
+      "research_corrections": 0,
+      "diacritic_corrections": 0,
+      "avg_confidence": 0.98,
+      "research_features_applied": {
+        "char_lm": false,
+        "lexicon_bias": false,
+        "confusion_prior": false,
+        "rover_ensemble": false,
+        "diacritic_restoration": false
+      },
+      "word_count": 0,
+      "token_count": 52,
+      "text_elements_count": 52,
+      "telemetry": {
+        "lines_per_second": 2.7893371424193925,
+        "characters_per_second": 116.07933800376087,
+        "ms_per_page": 18642.42196083069
+      }
+    }
+  ]
+}

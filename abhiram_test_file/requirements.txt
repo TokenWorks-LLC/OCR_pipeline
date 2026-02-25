@@ -1,0 +1,7 @@
+# Minimal deps for abhiram_test_file (notebook + loaders + LLM wrapper)
+pandas>=1.3.0
+requests>=2.25.0
+# Optional: PDF export from notebook
+reportlab>=3.6.0
+# Jupyter
+jupyter>=1.0.0

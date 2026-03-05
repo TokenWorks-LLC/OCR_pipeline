@@ -1,14 +1,22 @@
 """
 LLM helpers for generating modern-language wrapper text around transliteration.
 
-Supports: Ollama (local), OpenAI-compatible API (e.g. OpenClaw), or no-op for testing.
+Supports: Ollama (local), OpenAI-compatible API (e.g. OpenClaw, OpenAI), or no-op for testing.
+API key: set OPENAI_API_KEY in environment or in a .env file in this directory.
 """
 
-import json
 import os
+from pathlib import Path
 from typing import Optional
 
-# Optional: ollama
+# Load .env from abhiram_test_file directory so OPENAI_API_KEY (and OPENCLAW_API_KEY) are set
+try:
+    from dotenv import load_dotenv
+    _env_path = Path(__file__).resolve().parent / ".env"
+    load_dotenv(_env_path)
+except ImportError:
+    pass  # python-dotenv optional
+
 try:
     import requests
     REQUESTS_AVAILABLE = True

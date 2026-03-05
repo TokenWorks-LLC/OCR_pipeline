@@ -49,6 +49,25 @@ Place CSV files in `abhiram_test_file/data/` (or set paths in the notebook).
 - **LLM**: generate short commentary, captions, or paragraph text that “wraps around” the transliteration lines (e.g. citation, line refs, translation snippets).
 - **Agent/LLM options**: OpenClaw (https://openclaw.ai/), Ollama (local), or any OpenAI-compatible API.
 
+### API key (OpenAI / OpenAI-compatible)
+
+To use the OpenAI (or OpenAI-compatible) API from `llm_wrapper.py`:
+
+1. **From a `.env` file (recommended)**  
+   From the `abhiram_test_file` directory:
+   ```bash
+   cp .env.example .env
+   # Edit .env and set OPENAI_API_KEY=sk-your-actual-key
+   ```
+   The `.env` file is gitignored; never commit your key.
+
+2. **From the environment**  
+   ```bash
+   export OPENAI_API_KEY=sk-your-actual-key
+   ```
+
+Then call with `provider="openai"` (and optionally `api_base=...` for a custom endpoint). The wrapper reads `OPENAI_API_KEY` automatically.
+
 ## Output Format (Ideal for OCR Alignment)
 
 Numbered lines with document refs and mixed transliteration + modern text, e.g.:

@@ -48,6 +48,16 @@ GPU acceleration is not available. The pipeline will automatically use CPU mode 
 - **Simplified dependencies**: No need to install system libraries (OpenGL, Poppler, CUDA) on host
 - **Isolated environment**: No conflicts with other Python projects
 
+## Dev Container (VS Code)
+
+For day-to-day development on any machine architecture, use the repository `.devcontainer/` configuration:
+
+1. Install the VS Code **Dev Containers** extension
+2. Open this repo in VS Code
+3. Run **Dev Containers: Reopen in Container**
+
+This uses a dedicated CPU-first, architecture-aware container (`amd64` and `arm64`) and runs an automatic post-create import validation for core OCR dependencies.
+
 ## Quick GPU Test
 
 Verify your GPU setup works:

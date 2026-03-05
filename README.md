@@ -128,6 +128,15 @@ docker run --rm -v "$PWD":/workspace -w /workspace ocr-pipeline \
 docker compose build && docker compose run --rm ocr python run_pipeline.py
 ```
 
+#### Dev Container Users (Cross-platform development)
+```bash
+# 1) Install VS Code + Docker Desktop + Dev Containers extension
+# 2) Open this repository in VS Code
+# 3) Run: "Dev Containers: Reopen in Container"
+```
+
+The repository now includes a dedicated `.devcontainer/` that is architecture-aware (`amd64` and `arm64`) and validates the core OCR stack automatically after creation.
+
 ---
 
 ## Table of Contents
@@ -550,11 +559,10 @@ See [THIRD_PARTY_OCR_LICENSES.md](THIRD_PARTY_OCR_LICENSES.md) for details.
 For more detailed information, see these guides:
 
 - **[README_docker.md](README_docker.md)** - Comprehensive Docker deployment guide with advanced configurations
-- **[QUICK_START.md](QUICK_START.md)** - Step-by-step tutorials and getting started guide
-- **[PROD_RUN_GUIDE.md](PROD_RUN_GUIDE.md)** - Production deployment best practices
-- **[PERFORMANCE_GUIDE.md](PERFORMANCE_GUIDE.md)** - Performance optimization and tuning
-- **[tools/README.md](tools/README.md)** - Documentation for CLI tools and utilities
-- **[CLEANUP_SUMMARY.md](CLEANUP_SUMMARY.md)** - Recent repository cleanup and improvements
+- **[QUICKSTART.md](QUICKSTART.md)** - Step-by-step tutorials and getting started guide
+- **[docs/PAGE_TEXT_RUNBOOK.md](docs/PAGE_TEXT_RUNBOOK.md)** - Canonical page-text extraction operations guide
+- **[docs/pipeline_profiles.md](docs/pipeline_profiles.md)** - Pipeline profile behavior and tuning
+- **[docs/docker_mac_arm64.md](docs/docker_mac_arm64.md)** - ARM64-specific Docker guidance
 
 ---
 

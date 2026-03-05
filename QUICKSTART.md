@@ -124,5 +124,5 @@ python tools/run_page_text.py --help
 ---
 
 **Full docs:** README.md  
-**Technical details:** OCR _PIPELINE_RUNBOOK.md  
-**Implementation:** IMPLEMENTATION_COMPLETE.md
+**Technical details:** docs/PAGE_TEXT_RUNBOOK.md  
+**Implementation notes:** archive/docs/IMPLEMENTATION_SUMMARY.md

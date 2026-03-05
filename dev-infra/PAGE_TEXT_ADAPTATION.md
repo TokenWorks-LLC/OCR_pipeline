@@ -390,7 +390,7 @@ echo "✅ Placeholders replaced. Ready to deploy."
 - ✅ `tools/run_page_text.py` (protected)
 - ✅ `README.md` (protected)
 - ✅ `README_docker.md` (protected)
-- ✅ `OCR _PIPELINE_RUNBOOK.md` (protected)
+- ✅ `docs/PAGE_TEXT_RUNBOOK.md` (canonical runbook)
 - ✅ `profiles/akkadian_strict.json` (protected)
 - ✅ `tests/test_akkadian_protection.py` (protected)
 - ✅ `run_pipeline_simple.py` (protected)

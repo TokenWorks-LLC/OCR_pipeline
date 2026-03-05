@@ -8,7 +8,6 @@ python -m pip install --only-binary=:all: \
   "opencv-python-headless==4.10.0.84" \
   "pdf2image==1.17.0" \
   "numpy>=1.24.0" \
-  "requests>=2.31.0" \
   "Pillow>=10.0.0"
 
 ARCH="$(dpkg --print-architecture)"
@@ -38,3 +37,9 @@ python -m pip install --only-binary=:all: \
   "PyYAML>=6.0" \
   "typing-extensions>=4.12" \
   "paddlex>=3.2.0"
+
+python -m pip install --only-binary=:all: --upgrade --force-reinstall \
+  "requests>=2.32.3,<3" \
+  "urllib3>=2.2.0,<3" \
+  "charset_normalizer>=3.3.0,<4" \
+  "chardet>=5.2.0,<6"

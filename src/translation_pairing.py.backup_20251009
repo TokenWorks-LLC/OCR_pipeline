@@ -1,0 +1,628 @@
+#!/usr/bin/env python3
+"""
+Translation Pairing Module (Prompt 4)
+
+Pairs Akkadian blocks with their translations using layout-aware scoring.
+
+Scoring function:
+    score(A,B) = α*exp(-dist_px/300)
+               + β*same_or_adjacent_column
+               + γ*lang∈{de,tr,en,fr,it}
+               + δ*lexical_markers("Übersetzung|translation|çeviri|transl.")
+               + ε*reading_order_consistency (B below/right of A)
+               + ζ*font_size_ratio_in_range
+
+Assignment:
+    - Hungarian algorithm for optimal 1:1 pairing
+    - Multi-target support for interlinear (A/T/A/T)
+    - Cross-page continuation detection
+
+Output:
+    - translations.csv per PDF
+    - HTML overlays with bboxes and arrows
+"""
+
+import re
+import math
+import logging
+from dataclasses import dataclass, asdict
+from typing import List, Dict, Tuple, Optional, Set
+from pathlib import Path
+import csv
+
+try:
+    from scipy.optimize import linear_sum_assignment
+    SCIPY_AVAILABLE = True
+except ImportError:
+    SCIPY_AVAILABLE = False
+    logging.warning("scipy not available - will use greedy assignment fallback")
+
+from blockification import TextBlock
+
+
+logger = logging.getLogger(__name__)
+
+
+@dataclass
+class TranslationPair:
+    """A paired Akkadian block with its translation."""
+    pdf_id: str
+    page: int
+    
+    # Akkadian block
+    akk_block_id: str
+    akk_text: str
+    akk_bbox: Tuple[int, int, int, int]  # (x, y, w, h)
+    akk_column: int
+    
+    # Translation block
+    trans_block_id: str
+    trans_text: str
+    trans_lang: str
+    trans_bbox: Tuple[int, int, int, int]
+    trans_column: int
+    
+    # Pairing metadata
+    score: float
+    distance_px: float
+    same_column: bool
+    has_marker: bool
+    reading_order_ok: bool
+
+
+@dataclass
+class PairingConfig:
+    """Configuration for translation pairing."""
+    # Scoring weights (must sum to ~1.0)
+    weight_distance: float = 0.4       # α - bbox proximity
+    weight_column: float = 0.2         # β - same/adjacent column
+    weight_language: float = 0.15      # γ - target language
+    weight_markers: float = 0.1        # δ - lexical markers
+    weight_reading_order: float = 0.1  # ε - layout consistency
+    weight_font_size: float = 0.05     # ζ - font size ratio
+    
+    # Distance parameters
+    distance_threshold_px: int = 800   # Max pixel distance to consider
+    distance_decay: float = 300.0      # Exponential decay factor
+    
+    # Column parameters
+    same_column_bonus: float = 1.0
+    adjacent_column_bonus: float = 0.5
+    
+    # Language parameters
+    target_languages: Set[str] = None  # {de, tr, en, fr, it}
+    
+    # Lexical markers (case-insensitive)
+    markers: List[str] = None
+    
+    # Font size ratio bounds
+    font_size_min_ratio: float = 0.5
+    font_size_max_ratio: float = 1.5
+    
+    # Bbox expansion for candidate search (% of height)
+    bbox_expand_vertical: float = 2.0   # Expand 2x height up/down
+    bbox_expand_horizontal: float = 1.5  # Expand 1.5x width left/right
+    
+    # Cross-page continuation
+    check_next_page: bool = True
+    check_prev_page: bool = True
+    
+    # Assignment method
+    use_hungarian: bool = True  # False = greedy
+    allow_multi_target: bool = True  # For interlinear
+    interlinear_threshold: int = 50  # Max px between A/T/A/T lines
+    
+    def __post_init__(self):
+        """Set defaults for mutable fields."""
+        if self.target_languages is None:
+            self.target_languages = {'de', 'tr', 'en', 'fr', 'it'}
+        
+        if self.markers is None:
+            self.markers = [
+                'übersetzung', 'translation', 'çeviri', 'transl',
+                'transliteration', 'traduction', 'traduzione'
+            ]
+
+
+class TranslationPairer:
+    """
+    Pairs Akkadian blocks with translation blocks using layout + language scoring.
+    """
+    
+    def __init__(self, config: Optional[PairingConfig] = None):
+        """
+        Initialize pairer.
+        
+        Args:
+            config: Pairing configuration (uses defaults if None)
+        """
+        self.config = config or PairingConfig()
+        
+        if not SCIPY_AVAILABLE and self.config.use_hungarian:
+            logger.warning(
+                "scipy not available, falling back to greedy assignment. "
+                "Install scipy for optimal pairing: pip install scipy"
+            )
+            self.config.use_hungarian = False
+        
+        # Statistics
+        self.stats = {
+            'pages_processed': 0,
+            'akkadian_blocks': 0,
+            'translation_blocks': 0,
+            'pairs_created': 0,
+            'unpaired_akkadian': 0,
+            'cross_page_pairs': 0,
+            'interlinear_groups': 0
+        }
+        
+        logger.info(
+            f"TranslationPairer initialized "
+            f"(method={'hungarian' if self.config.use_hungarian else 'greedy'}, "
+            f"dist_threshold={self.config.distance_threshold_px}px)"
+        )
+    
+    def pair_blocks(
+        self,
+        blocks: List[TextBlock],
+        page: int,
+        pdf_id: str,
+        prev_page_blocks: Optional[List[TextBlock]] = None,
+        next_page_blocks: Optional[List[TextBlock]] = None
+    ) -> List[TranslationPair]:
+        """
+        Pair Akkadian blocks with translations on a page.
+        
+        Args:
+            blocks: All blocks on current page
+            page: Page number
+            pdf_id: PDF identifier
+            prev_page_blocks: Blocks from previous page (for continuation)
+            next_page_blocks: Blocks from next page (for continuation)
+            
+        Returns:
+            List of TranslationPair objects
+        """
+        self.stats['pages_processed'] += 1
+        
+        # Separate Akkadian and translation blocks
+        akk_blocks = [b for b in blocks if b.is_akk]
+        trans_blocks = [b for b in blocks if not b.is_akk and b.lang in self.config.target_languages]
+        
+        self.stats['akkadian_blocks'] += len(akk_blocks)
+        self.stats['translation_blocks'] += len(trans_blocks)
+        
+        if not akk_blocks:
+            logger.debug(f"Page {page}: No Akkadian blocks found")
+            return []
+        
+        if not trans_blocks:
+            logger.warning(f"Page {page}: No translation blocks found for {len(akk_blocks)} Akkadian blocks")
+            self.stats['unpaired_akkadian'] += len(akk_blocks)
+            return []
+        
+        # Check for interlinear pattern (A/T/A/T with small gaps)
+        is_interlinear = self._detect_interlinear(akk_blocks, trans_blocks)
+        
+        if is_interlinear and self.config.allow_multi_target:
+            logger.info(f"Page {page}: Detected interlinear layout")
+            self.stats['interlinear_groups'] += 1
+            pairs = self._pair_interlinear(akk_blocks, trans_blocks, page, pdf_id)
+        else:
+            # Standard 1:1 pairing
+            pairs = self._pair_standard(akk_blocks, trans_blocks, page, pdf_id)
+        
+        # Try cross-page continuation for unpaired blocks
+        if prev_page_blocks and self.config.check_prev_page:
+            pairs.extend(self._pair_cross_page(
+                akk_blocks, prev_page_blocks, page, pdf_id, direction='prev'
+            ))
+        
+        if next_page_blocks and self.config.check_next_page:
+            pairs.extend(self._pair_cross_page(
+                akk_blocks, next_page_blocks, page, pdf_id, direction='next'
+            ))
+        
+        self.stats['pairs_created'] += len(pairs)
+        
+        logger.info(
+            f"Page {page}: Created {len(pairs)} pairs from "
+            f"{len(akk_blocks)} Akkadian / {len(trans_blocks)} translation blocks"
+        )
+        
+        return pairs
+    
+    def _pair_standard(
+        self,
+        akk_blocks: List[TextBlock],
+        trans_blocks: List[TextBlock],
+        page: int,
+        pdf_id: str
+    ) -> List[TranslationPair]:
+        """Standard 1:1 pairing using Hungarian or greedy."""
+        
+        # Build cost matrix (negative scores for maximization)
+        n_akk = len(akk_blocks)
+        n_trans = len(trans_blocks)
+        
+        cost_matrix = []
+        for i, akk in enumerate(akk_blocks):
+            row = []
+            for j, trans in enumerate(trans_blocks):
+                score = self._compute_score(akk, trans)
+                row.append(-score if score > 0 else 9999)  # Negative for max, large penalty for 0
+            cost_matrix.append(row)
+        
+        # Solve assignment
+        if self.config.use_hungarian and SCIPY_AVAILABLE:
+            row_ind, col_ind = linear_sum_assignment(cost_matrix)
+            assignments = list(zip(row_ind, col_ind))
+        else:
+            # Greedy: assign each Akkadian to best translation
+            assignments = self._greedy_assignment(cost_matrix)
+        
+        # Build pairs from assignments
+        pairs = []
+        for i, j in assignments:
+            score = -cost_matrix[i][j] if cost_matrix[i][j] != 9999 else 0.0
+            
+            if score <= 0:
+                continue  # Skip invalid pairs
+            
+            akk = akk_blocks[i]
+            trans = trans_blocks[j]
+            
+            pair = self._create_pair(akk, trans, page, pdf_id, score)
+            pairs.append(pair)
+        
+        return pairs
+    
+    def _pair_interlinear(
+        self,
+        akk_blocks: List[TextBlock],
+        trans_blocks: List[TextBlock],
+        page: int,
+        pdf_id: str
+    ) -> List[TranslationPair]:
+        """
+        Pair interlinear layout (A/T/A/T with tight spacing).
+        Allows multiple translations per Akkadian block.
+        """
+        pairs = []
+        
+        # Sort by vertical position
+        akk_sorted = sorted(akk_blocks, key=lambda b: b.bbox[1])
+        trans_sorted = sorted(trans_blocks, key=lambda b: b.bbox[1])
+        
+        # Greedy matching: for each Akkadian, take nearby translations
+        for akk in akk_sorted:
+            akk_y = akk.bbox[1]
+            
+            # Find translations within interlinear threshold
+            candidates = [
+                t for t in trans_sorted
+                if abs(t.bbox[1] - akk_y) < self.config.interlinear_threshold
+            ]
+            
+            for trans in candidates:
+                score = self._compute_score(akk, trans)
+                if score > 0:
+                    pair = self._create_pair(akk, trans, page, pdf_id, score)
+                    pairs.append(pair)
+        
+        return pairs
+    
+    def _pair_cross_page(
+        self,
+        akk_blocks: List[TextBlock],
+        other_page_blocks: List[TextBlock],
+        page: int,
+        pdf_id: str,
+        direction: str
+    ) -> List[TranslationPair]:
+        """
+        Pair Akkadian blocks with translations from adjacent page.
+        Only considers header/footer regions.
+        """
+        # TODO: Implement cross-page logic
+        # For now, return empty
+        return []
+    
+    def _compute_score(self, akk: TextBlock, trans: TextBlock) -> float:
+        """
+        Compute pairing score between Akkadian and translation blocks.
+        
+        Returns:
+            Score in [0, 1], higher is better
+        """
+        score = 0.0
+        
+        # 1. Distance component (α * exp(-dist/300))
+        dist = self._bbox_distance(akk.bbox, trans.bbox)
+        if dist > self.config.distance_threshold_px:
+            return 0.0  # Too far, reject
+        
+        dist_score = math.exp(-dist / self.config.distance_decay)
+        score += self.config.weight_distance * dist_score
+        
+        # 2. Column component (β)
+        same_col = akk.column_index == trans.column_index
+        adjacent_col = abs(akk.column_index - trans.column_index) == 1
+        
+        if same_col:
+            score += self.config.weight_column * self.config.same_column_bonus
+        elif adjacent_col:
+            score += self.config.weight_column * self.config.adjacent_column_bonus
+        
+        # 3. Language component (γ)
+        if trans.lang in self.config.target_languages:
+            score += self.config.weight_language
+        
+        # 4. Lexical markers (δ)
+        has_marker = self._check_markers(trans.text)
+        if has_marker:
+            score += self.config.weight_markers
+        
+        # 5. Reading order (ε)
+        reading_order_ok = self._check_reading_order(akk, trans)
+        if reading_order_ok:
+            score += self.config.weight_reading_order
+        
+        # 6. Font size ratio (ζ)
+        # TODO: Need font size info from blocks
+        # For now, assume 1.0 ratio (neutral)
+        font_ratio_ok = True  # Placeholder
+        if font_ratio_ok:
+            score += self.config.weight_font_size
+        
+        return min(score, 1.0)  # Clamp to [0, 1]
+    
+    def _bbox_distance(
+        self,
+        bbox1: Tuple[int, int, int, int],
+        bbox2: Tuple[int, int, int, int]
+    ) -> float:
+        """
+        Compute distance between two bboxes (Euclidean distance between centers).
+        """
+        x1, y1, w1, h1 = bbox1
+        x2, y2, w2, h2 = bbox2
+        
+        center1_x = x1 + w1 / 2
+        center1_y = y1 + h1 / 2
+        center2_x = x2 + w2 / 2
+        center2_y = y2 + h2 / 2
+        
+        return math.sqrt((center1_x - center2_x)**2 + (center1_y - center2_y)**2)
+    
+    def _check_markers(self, text: str) -> bool:
+        """Check if text contains lexical markers."""
+        text_lower = text.lower()
+        return any(marker in text_lower for marker in self.config.markers)
+    
+    def _check_reading_order(self, akk: TextBlock, trans: TextBlock) -> bool:
+        """
+        Check if translation follows Akkadian in reading order.
+        Translation should be below or to the right of Akkadian.
+        """
+        akk_x, akk_y, akk_w, akk_h = akk.bbox
+        trans_x, trans_y, trans_w, trans_h = trans.bbox
+        
+        # Below: trans_y > akk_y + akk_h
+        is_below = trans_y >= akk_y
+        
+        # To the right: trans_x > akk_x + akk_w
+        is_right = trans_x >= akk_x
+        
+        return is_below or is_right
+    
+    def _detect_interlinear(
+        self,
+        akk_blocks: List[TextBlock],
+        trans_blocks: List[TextBlock]
+    ) -> bool:
+        """
+        Detect if layout is interlinear (A/T/A/T alternating pattern).
+        """
+        # Simple heuristic: check if multiple A and T blocks with small vertical gaps
+        if len(akk_blocks) < 2 or len(trans_blocks) < 2:
+            return False
+        
+        all_blocks = sorted(
+            akk_blocks + trans_blocks,
+            key=lambda b: b.bbox[1]  # Sort by y position
+        )
+        
+        # Check for A/T alternation
+        alternations = 0
+        for i in range(len(all_blocks) - 1):
+            curr_is_akk = all_blocks[i].is_akk
+            next_is_akk = all_blocks[i + 1].is_akk
+            
+            if curr_is_akk != next_is_akk:
+                # Check gap
+                curr_bottom = all_blocks[i].bbox[1] + all_blocks[i].bbox[3]
+                next_top = all_blocks[i + 1].bbox[1]
+                gap = next_top - curr_bottom
+                
+                if gap < self.config.interlinear_threshold:
+                    alternations += 1
+        
+        # If >50% of transitions are alternating, it's interlinear
+        return alternations > len(all_blocks) / 2
+    
+    def _greedy_assignment(self, cost_matrix: List[List[float]]) -> List[Tuple[int, int]]:
+        """
+        Greedy assignment fallback (when scipy unavailable).
+        Each Akkadian gets its best translation.
+        """
+        assignments = []
+        used_trans = set()
+        
+        for i, row in enumerate(cost_matrix):
+            # Find best unused translation
+            best_j = None
+            best_cost = float('inf')
+            
+            for j, cost in enumerate(row):
+                if j not in used_trans and cost < best_cost:
+                    best_cost = cost
+                    best_j = j
+            
+            if best_j is not None and best_cost < 9999:
+                assignments.append((i, best_j))
+                used_trans.add(best_j)
+        
+        return assignments
+    
+    def _create_pair(
+        self,
+        akk: TextBlock,
+        trans: TextBlock,
+        page: int,
+        pdf_id: str,
+        score: float
+    ) -> TranslationPair:
+        """Create a TranslationPair from matched blocks."""
+        dist = self._bbox_distance(akk.bbox, trans.bbox)
+        same_col = akk.column_index == trans.column_index
+        has_marker = self._check_markers(trans.text)
+        reading_ok = self._check_reading_order(akk, trans)
+        
+        return TranslationPair(
+            pdf_id=pdf_id,
+            page=page,
+            akk_block_id=akk.block_id,
+            akk_text=akk.text,
+            akk_bbox=akk.bbox,
+            akk_column=akk.column_index,
+            trans_block_id=trans.block_id,
+            trans_text=trans.text,
+            trans_lang=trans.lang,
+            trans_bbox=trans.bbox,
+            trans_column=trans.column_index,
+            score=score,
+            distance_px=dist,
+            same_column=same_col,
+            has_marker=has_marker,
+            reading_order_ok=reading_ok
+        )
+    
+    def get_statistics(self) -> Dict:
+        """Return pairing statistics."""
+        return self.stats.copy()
+    
+    def save_pairs_csv(
+        self,
+        pairs: List[TranslationPair],
+        output_path: Path
+    ):
+        """
+        Save translation pairs to CSV.
+        
+        Args:
+            pairs: List of translation pairs
+            output_path: Output CSV file path
+        """
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        
+        with open(output_path, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=[
+                'pdf_id', 'page',
+                'akk_block_id', 'akk_text', 'akk_bbox', 'akk_column',
+                'trans_block_id', 'trans_text', 'trans_lang', 'trans_bbox', 'trans_column',
+                'score', 'distance_px', 'same_column', 'has_marker', 'reading_order_ok'
+            ])
+            writer.writeheader()
+            
+            for pair in pairs:
+                row = asdict(pair)
+                # Format bboxes as strings
+                row['akk_bbox'] = f"{pair.akk_bbox[0]},{pair.akk_bbox[1]},{pair.akk_bbox[2]},{pair.akk_bbox[3]}"
+                row['trans_bbox'] = f"{pair.trans_bbox[0]},{pair.trans_bbox[1]},{pair.trans_bbox[2]},{pair.trans_bbox[3]}"
+                writer.writerow(row)
+        
+        logger.info(f"Saved {len(pairs)} pairs to {output_path}")
+
+
+# ============================================================================
+# Test/Demo
+# ============================================================================
+
+if __name__ == '__main__':
+    import sys
+    sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
+    from blockification import TextLine
+    
+    logging.basicConfig(level=logging.INFO)
+    
+    # Create mock blocks
+    akk_line = TextLine(
+        text="šarru ᵈUTU ērēbu",
+        bbox=(100, 100, 300, 20),
+        confidence=0.9,
+        line_id="akk_1"
+    )
+    
+    trans_line = TextLine(
+        text="König Šamaš tritt ein (Übersetzung)",
+        bbox=(100, 150, 350, 20),
+        confidence=0.85,
+        line_id="trans_1"
+    )
+    
+    akk_block = TextBlock(
+        block_id="block_1",
+        page=1,
+        bbox=(100, 100, 300, 20),
+        text="šarru ᵈUTU ērēbu",
+        mean_conf=0.9,
+        lines=[akk_line],
+        lang="tr",
+        is_akk=True,
+        akk_conf=0.95,
+        column_index=0,
+        reading_order=0
+    )
+    
+    trans_block = TextBlock(
+        block_id="block_2",
+        page=1,
+        bbox=(100, 150, 350, 20),
+        text="König Šamaš tritt ein (Übersetzung)",
+        mean_conf=0.85,
+        lines=[trans_line],
+        lang="de",
+        is_akk=False,
+        akk_conf=0.0,
+        column_index=0,
+        reading_order=1
+    )
+    
+    # Test pairer
+    pairer = TranslationPairer()
+    pairs = pairer.pair_blocks(
+        blocks=[akk_block, trans_block],
+        page=1,
+        pdf_id="test_doc"
+    )
+    
+    print("\n=== Translation Pairing Test ===")
+    print(f"Created {len(pairs)} pairs")
+    
+    for pair in pairs:
+        print(f"\nPair (score={pair.score:.3f}):")
+        print(f"  Akkadian: {pair.akk_text}")
+        print(f"  Translation ({pair.trans_lang}): {pair.trans_text}")
+        print(f"  Distance: {pair.distance_px:.1f}px")
+        print(f"  Same column: {pair.same_column}")
+        print(f"  Has marker: {pair.has_marker}")
+        print(f"  Reading order OK: {pair.reading_order_ok}")
+    
+    # Test CSV export
+    output_path = Path("test_pairs.csv")
+    pairer.save_pairs_csv(pairs, output_path)
+    print(f"\nSaved to {output_path}")
+    
+    # Show stats
+    print("\nStatistics:", pairer.get_statistics())

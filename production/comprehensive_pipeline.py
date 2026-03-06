@@ -482,10 +482,11 @@ class ComprehensivePipeline:
             
             paddle_result = self.paddle_ocr.predict(img)
             timing.ocr_time = time.time() - ocr_start
-            
-            # Extract text elements
-            text_elements = self._extract_text_from_paddle_result(paddle_result)
-            
+
+            # Extract text elements (OCRSpan objects) and convert to legacy dict format
+            ocr_spans_raw = self._extract_text_from_paddle_result(paddle_result)
+            text_elements = self._convert_spans_to_legacy_format(ocr_spans_raw)
+
             if not text_elements:
                 logger.warning(f"No text detected on page {page_num}")
                 timing.total_time = time.time() - start_time
@@ -887,10 +888,11 @@ class ComprehensivePipeline:
             ocr_start = time.time()
             paddle_result = self.paddle_ocr.predict(img)
             ocr_time = time.time() - ocr_start
-            
-            # Extract text elements
-            text_elements = self._extract_text_from_paddle_result(paddle_result)
-            
+
+            # Extract text elements (OCRSpan objects) and convert to legacy dict format
+            ocr_spans_raw = self._extract_text_from_paddle_result(paddle_result)
+            text_elements = self._convert_spans_to_legacy_format(ocr_spans_raw)
+
             if not text_elements:
                 logger.warning(f"No text detected in image")
                 return {

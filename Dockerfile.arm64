@@ -5,7 +5,8 @@ FROM python:3.11-slim-bookworm
 
 # Environment variables for optimal ARM64 builds and binary-only installations
 ENV DEBIAN_FRONTEND=noninteractive \
-    PYTHONPATH=/app \
+    PYTHONPATH=/app/src:/app/production:/app \
+    PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK=True \
     PIP_NO_CACHE_DIR=1 \
     PIP_PREFER_BINARY=1 \
     PIP_ONLY_BINARY=:all: \
@@ -74,7 +75,12 @@ RUN pip install --only-binary=:all: \
     "pytesseract>=0.3.10" \
     "PyYAML>=6.0" \
     "typing-extensions>=4.12" \
-    "paddlex>=3.2.0"
+    "paddlex>=3.2.0" \
+    "reportlab>=4.0" \
+    "psutil>=5.9.0"
+
+# Install paddlex OCR extras (text detection/recognition models)
+RUN pip install "paddlex[ocr-core]"
 
 # Set working directory
 WORKDIR /app

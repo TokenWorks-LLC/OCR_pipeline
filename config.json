@@ -3,6 +3,13 @@
   "_version": "2.0.0",
   "_updated": "2025-10-07",
   
+  "input": {
+    "input_directory": "data/input_pdfs",
+    "process_all_files": true,
+    "supported_formats": [".pdf", ".png", ".jpg", ".jpeg", ".tiff", ".bmp"],
+    "recursive_search": false
+  },
+
   "ocr": {
     "engine": "paddle",
     "dpi": 300,

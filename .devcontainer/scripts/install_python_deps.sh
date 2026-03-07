@@ -3,12 +3,18 @@ set -euo pipefail
 
 python -m pip install -U pip setuptools wheel
 
+# Core OCR/runtime packages used by the active pipeline and wrappers.
 python -m pip install --only-binary=:all: \
   "PyMuPDF==1.24.10" \
   "opencv-python-headless==4.10.0.84" \
   "pdf2image==1.17.0" \
-  "numpy>=1.24.0" \
-  "Pillow>=10.0.0"
+  "numpy>=1.24.0,<2.1" \
+  "Pillow>=10.0.0" \
+  "lxml==6.0.2" \
+  "PyYAML>=6.0" \
+  "requests>=2.32,<3" \
+  "chardet>=5.2.0,<6" \
+  "charset_normalizer>=3.3,<4"
 
 ARCH="$(dpkg --print-architecture)"
 if [ "$ARCH" = "arm64" ]; then
@@ -20,26 +26,31 @@ else
     "paddlepaddle>=3.0.0,<4.0.0"
 fi
 
-python -m pip install --only-binary=:all: --no-deps "paddleocr>=3.2.0"
+python -m pip install --only-binary=:all: "paddleocr>=3.2.0"
 
+# Torch family: pin to versions known to work with kraken and this project stack.
 python -m pip install --only-binary=:all: \
-  "shapely==2.1.2" \
-  "scikit-image==0.25.2" \
-  "imgaug==0.4.0" \
-  "pyclipper==1.3.0.post6" \
-  "lmdb==1.7.3" \
-  "rapidfuzz==3.14.1" \
-  "lxml==6.0.2" \
-  "premailer==3.10.0" \
-  "openpyxl==3.1.5" \
-  "tqdm==4.67.1" \
-  "pytesseract>=0.3.10" \
-  "PyYAML>=6.0" \
-  "typing-extensions>=4.12" \
-  "paddlex>=3.2.0"
+  "torch==2.9.0" \
+  "torchvision==0.24.0"
 
-python -m pip install --only-binary=:all: --upgrade --force-reinstall \
-  "requests>=2.32.3,<3" \
-  "urllib3>=2.2.0,<3" \
-  "charset_normalizer>=3.3.0,<4" \
-  "chardet>=5.2.0,<6"
+# MMOCR stack with versions that satisfy import-time compatibility checks.
+python -m pip install --only-binary=:all: \
+  "mmengine>=0.10,<1.0" \
+  "mmcv-lite>=2.0.0rc4,<2.1.0" \
+  "mmdet>=3.0.0rc5,<3.2.0" \
+  "mmocr>=1.0.0,<1.1.0"
+
+# langdetect does not ship universal wheels in all environments; allow source build here.
+PIP_ONLY_BINARY= python -m pip install --no-binary langdetect "langdetect==1.0.9"
+
+# Install docTR with explicit dependencies to avoid resolver deadlocks under binary-first policies.
+python -m pip install --only-binary=:all: \
+  "onnx>=1.12,<3" \
+  "defusedxml>=0.7.1" \
+  "anyascii>=0.3.2" \
+  "validators>=0.18.0"
+python -m pip install --no-deps "python-doctr==1.0.1"
+
+# Kraken is installed after torch to avoid repeated resolver churn.
+python -m pip install --only-binary=:all: kraken
+

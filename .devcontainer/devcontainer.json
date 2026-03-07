@@ -10,13 +10,14 @@
     "PYTHONUNBUFFERED": "1",
     "PIP_DISABLE_PIP_VERSION_CHECK": "1",
     "PIP_NO_CACHE_DIR": "1",
-    "PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK": "True"
+    "PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK": "True",
+    "OCR_STRICT_ALL_ENGINES": "auto"
   },
   "postCreateCommand": "bash .devcontainer/scripts/post-create.sh",
   "customizations": {
     "vscode": {
       "settings": {
-        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.defaultInterpreterPath": "/workspaces/OCR_pipeline/.venv/bin/python",
         "python.analysis.typeCheckingMode": "basic"
       },
       "extensions": [

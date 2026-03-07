@@ -11,12 +11,16 @@ This document describes how to run the lightweight baseline evaluation for the O
 
 ### Linux/macOS (with make)
 ```bash
-make eval-baseline
+# amd64
+make eval-baseline COMPOSE_SERVICE=ocr
+
+# arm64 (Apple Silicon)
+make eval-baseline COMPOSE_SERVICE=ocr-arm64
 ```
 
 ### Manual Docker Command (All platforms)
 ```bash
-docker compose run --rm ocr python tools/run_baseline_eval.py --gold-csv data/gold_data/gold_pages.csv --limit-pdfs 2 --profile fast --report-md --seed 17
+docker compose run --rm ${COMPOSE_SERVICE:-ocr} python tools/run_baseline_eval.py --gold-csv data/gold_data/gold_pages.csv --limit-pdfs 2 --profile fast --report-md --seed 17
 ```
 
 ## What It Does
@@ -79,6 +83,9 @@ The baseline evaluation uses basic PaddleOCR without any optimization:
 Add verbose logging:
 ```bash
 docker compose run --rm ocr python -u tools/run_baseline_eval.py --gold-csv data/gold_data/gold_pages.csv --limit-pdfs 1 --profile fast --report-md
+
+# arm64 (Apple Silicon)
+docker compose run --rm ocr-arm64 python -u tools/run_baseline_eval.py --gold-csv data/gold_data/gold_pages.csv --limit-pdfs 1 --profile fast --report-md
 ```
 
 ## Technical Details

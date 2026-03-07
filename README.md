@@ -62,6 +62,16 @@ Specialized support for ancient Near Eastern texts:
 
 ## Quick Start
 
+### Canonical Entrypoints (Current)
+
+Use these commands from the repository root:
+
+- `python run_pipeline.py ...` for pipeline execution (legacy-compatible wrapper)
+- `python test_pipeline.py --allow-missing-engines` for portable smoke checks
+- `python test_pipeline.py` for strict engine-availability checks
+
+Detailed run/test instructions are in `docs/RUN_AND_TEST.md`.
+
 ### 30-Second Demo
 ```bash
 # 1. Get the project
@@ -77,6 +87,10 @@ docker build -t ocr-pipeline .
 # 4. Test it! (processes sample files)
 docker run --rm -v "$PWD":/workspace -w /workspace ocr-pipeline \
   python run_pipeline.py --input-dir data/samples
+
+# 5. Validate runtime and dependencies
+docker run --rm -v "$PWD":/workspace -w /workspace ocr-pipeline \
+  python test_pipeline.py --allow-missing-engines
 ```
 
 ### Choose Your Path
@@ -84,7 +98,9 @@ docker run --rm -v "$PWD":/workspace -w /workspace ocr-pipeline \
 #### End Users (Just want to process documents)
 ```bash
 # One-time setup
-python setup.py                    # Installs everything + validates system
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+python -m pip install -U pip pytest
 
 # Configure your preferences  
 nano config.json                   # Edit: input folders, languages, AI features
@@ -92,6 +108,7 @@ nano config.json                   # Edit: input folders, languages, AI features
 # Add files and go!
 cp your_files/* data/input/         # Put your PDFs/images here  
 python run_pipeline.py             # Process documents
+python test_pipeline.py --allow-missing-engines
 ls data/output/                     # Your results are here
 ```
 
@@ -101,12 +118,12 @@ ls data/output/                     # Your results are here
 python quick_start.py               # Interactive tutorials + examples
 
 # Set up development environment  
-pip install -r requirements.txt     # Install Python dependencies
-python setup.py                     # Validate everything works
+python -m pip install -U pip pytest
+python test_pipeline.py --allow-missing-engines
 
 # Explore the architecture
-ls src/                             # Core modules
 cat config.json                     # Configuration options
+cat docs/RUN_AND_TEST.md            # Canonical run/test guide
 ```
 
 #### Docker Users (Recommended for consistency)
@@ -126,6 +143,9 @@ docker run --rm -v "$PWD":/workspace -w /workspace ocr-pipeline \
 
 # Advanced: Use docker-compose for easier workflow
 docker compose build && docker compose run --rm ocr python run_pipeline.py
+
+# Apple Silicon users with compose should use:
+docker compose run --rm ocr-arm64 python run_pipeline.py
 ```
 
 #### Dev Container Users (Cross-platform development)
@@ -135,7 +155,23 @@ docker compose build && docker compose run --rm ocr python run_pipeline.py
 # 3) Run: "Dev Containers: Reopen in Container"
 ```
 
-The repository now includes a dedicated `.devcontainer/` that is architecture-aware (`amd64` and `arm64`) and validates the core OCR stack automatically after creation.
+The repository now includes a dedicated `.devcontainer/` that is architecture-aware (`amd64` and `arm64`) and performs full bootstrap automatically after creation:
+
+- Creates `.venv` and sets VS Code interpreter to `.venv/bin/python`
+- Installs the OCR engine stack (`paddleocr`, `doctr`, `mmocr`, `kraken`) with pinned compatible versions
+- Warms model imports and runs smoke checks
+- Runs a one-file end-to-end pipeline smoke if a sample PDF exists under `data/`
+
+Strict all-engine enforcement defaults to:
+
+- `amd64`: strict (`OCR_STRICT_ALL_ENGINES=1` behavior)
+- `arm64`: portable (`OCR_STRICT_ALL_ENGINES=0` behavior)
+
+Override with:
+
+```bash
+export OCR_STRICT_ALL_ENGINES=1
+```
 
 ---
 

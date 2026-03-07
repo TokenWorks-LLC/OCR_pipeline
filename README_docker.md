@@ -56,7 +56,40 @@ For day-to-day development on any machine architecture, use the repository `.dev
 2. Open this repo in VS Code
 3. Run **Dev Containers: Reopen in Container**
 
-This uses a dedicated CPU-first, architecture-aware container (`amd64` and `arm64`) and runs an automatic post-create import validation for core OCR dependencies.
+This uses a dedicated CPU-first, architecture-aware container (`amd64` and `arm64`) and runs a full post-create bootstrap:
+
+- creates `.venv`
+- installs pinned OCR dependencies and engines
+- warms imports/models
+- runs smoke checks
+- runs one-file end-to-end pipeline smoke when sample PDFs are present
+
+Strict all-engine checks are auto-enabled on `amd64` and portable mode is auto-selected on `arm64`.
+You can override behavior with `OCR_STRICT_ALL_ENGINES` in the devcontainer environment.
+
+## Canonical Runtime Commands
+
+Use `run_pipeline.py` and `test_pipeline.py` as stable entrypoints.
+
+```bash
+# Portable runtime check
+python test_pipeline.py --allow-missing-engines
+
+# Strict engine availability check
+python test_pipeline.py
+```
+
+When using docker compose across architectures:
+
+```bash
+# amd64
+export COMPOSE_SERVICE=ocr
+
+# arm64 (Apple Silicon)
+export COMPOSE_SERVICE=ocr-arm64
+
+make test-smoke COMPOSE_SERVICE=$COMPOSE_SERVICE
+```
 
 ## Quick GPU Test
 
@@ -67,7 +100,7 @@ Verify your GPU setup works:
 make gpu-smoke
 
 # Or run directly:
-docker compose run --rm ocr python -c "
+docker compose run --rm ${COMPOSE_SERVICE:-ocr} python -c "
 import paddle
 print('🔍 Paddle version:', paddle.__version__)
 print('🔍 CUDA compiled:', paddle.is_compiled_with_cuda())
@@ -104,14 +137,14 @@ docker build -t tokenworks-ocr:latest .
 make gpu-smoke
 
 # Run OCR on a PDF with GPU acceleration
-docker compose run --rm ocr "data/input/your-file.pdf"
+docker compose run --rm ocr python run_pipeline.py --input-file "data/input/your-file.pdf"
 ```
 
 ### Intel/AMD64 Platforms without GPU
 
 ```bash
 # Same commands, but PaddleOCR will automatically fall back to CPU
-docker compose run --rm ocr "data/input/your-file.pdf"
+docker compose run --rm ocr python run_pipeline.py --input-file "data/input/your-file.pdf"
 ```
 
 ### Apple Silicon (M1/M2/M3 Macs)
@@ -122,7 +155,7 @@ docker compose run --rm ocr "data/input/your-file.pdf"
 docker build -f Dockerfile.arm64 -t tokenworks-ocr:latest .
 
 # Run OCR on a PDF
-docker compose run --rm ocr-arm64 "data/input/your-file.pdf"
+docker compose run --rm ocr-arm64 python run_pipeline.py --input-file "data/input/your-file.pdf"
 ```
 
 **⚠️ Warning**: Do NOT use the root `Dockerfile` or AMD64 platform flags on Apple Silicon systems.

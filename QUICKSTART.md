@@ -8,6 +8,9 @@ python tools/run_page_text.py \
   --output-root "reports/output" \
   --prefer-text-layer \
   --status-bar
+
+# Legacy-compatible alias (same pipeline):
+python run_pipeline.py --input-dir "path/to/pdfs" --output-dir "reports/output"
 ```
 
 ## Output
@@ -84,12 +87,17 @@ python tools/run_page_text.py \
 ## Testing
 
 ```bash
-# Run unit tests (verify Akkadian protection)
-python tests/test_akkadian_protection.py
+# Portable smoke checks (CLI + runtime wiring)
+python test_pipeline.py --allow-missing-engines
 
-# Should see:
-# Ran 20 tests in 0.008s
-# OK
+# Strict checks (fails if any OCR backend is missing)
+python test_pipeline.py
+
+# Python compatibility tests
+python -m pytest tests -q
+
+# Optional strict pytest engine enforcement:
+# REQUIRED_OCR_ENGINES=paddleocr,doctr,mmocr,kraken python -m pytest tests/test_engine_imports.py -q
 ```
 
 ## Output Files

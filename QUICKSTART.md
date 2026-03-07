@@ -17,14 +17,15 @@ python run_pipeline.py --input-dir "path/to/pdfs" --output-dir "reports/output"
 
 **File:** `reports/output/client_page_text.csv`
 
-| pdf_name | page | page_text | has_akkadian |
-|----------|------|-----------|--------------|
-| AKT_4_2006.pdf | 19 | "1. a-na LUGAL..." | true |
-| Smith_2010.pdf | 5 | "The evidence..." | false |
+| pdf_name       | page | page_text          | has_akkadian |
+| -------------- | ---- | ------------------ | ------------ |
+| AKT_4_2006.pdf | 19   | "1. a-na LUGAL..." | true         |
+| Smith_2010.pdf | 5    | "The evidence..."  | false        |
 
 ## Common Patterns
 
 ### From Google Drive (Streaming)
+
 ```bash
 python tools/run_page_text.py \
   --inputs "G:\Shared drives\Secondary Sources" \
@@ -34,6 +35,7 @@ python tools/run_page_text.py \
 ```
 
 ### With OCR Fallback (Scanned PDFs)
+
 ```bash
 python tools/run_page_text.py \
   --inputs "path/to/pdfs" \
@@ -44,6 +46,7 @@ python tools/run_page_text.py \
 ```
 
 ### From Manifest (Specific Pages)
+
 ```bash
 # Create manifest
 python tools/build_manifest.py \
@@ -61,15 +64,15 @@ python tools/run_page_text.py \
 
 ## Key Flags
 
-| Flag | Description |
-|------|-------------|
-| `--inputs DIR` | Scan directory for PDFs |
-| `--manifest FILE` | Use TSV manifest (pdf<TAB>page) |
-| `--output-root DIR` | Output directory |
-| `--prefer-text-layer` | Use PDF text layer (fast, recommended) |
-| `--ocr-fallback paddle` | Use OCR if text layer fails |
-| `--status-bar` | Show progress bar |
-| `--profile FILE` | Custom Akkadian detection config |
+| Flag                    | Description                            |
+| ----------------------- | -------------------------------------- |
+| `--inputs DIR`          | Scan directory for PDFs                |
+| `--manifest FILE`       | Use TSV manifest (pdf<TAB>page)        |
+| `--output-root DIR`     | Output directory                       |
+| `--prefer-text-layer`   | Use PDF text layer (fast, recommended) |
+| `--ocr-fallback paddle` | Use OCR if text layer fails            |
+| `--status-bar`          | Show progress bar                      |
+| `--profile FILE`        | Custom Akkadian detection config       |
 
 ## Testing
 
@@ -104,17 +107,20 @@ python tools/run_page_text.py --help
 ## Troubleshooting
 
 **No text extracted?**
+
 - Try `--ocr-fallback paddle` for scanned PDFs
 
 **Akkadian not detected?**
+
 - Verify diacritics present: š ṣ ṭ ḫ ā ē ī ū
 - Check `profiles/akkadian_strict.json` config
 
 **Out of memory?**
+
 - Use `--ocr-fallback none`
 - Process in batches via manifest
 
 ---
 
 **Full docs:** README.md  
-**Technical details:** docs/PAGE_TEXT_RUNBOOK.md  
+**Technical details:** docs/PAGE_TEXT_RUNBOOK.md

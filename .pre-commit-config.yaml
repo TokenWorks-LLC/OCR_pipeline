@@ -1,0 +1,20 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.13
+    hooks:
+      - id: ruff-check
+        args:
+          - run_pipeline.py
+          - test_pipeline.py
+          - tools
+          - tests
+
+  - repo: local
+    hooks:
+      - id: prettier-check
+        name: prettier-check
+        entry: prettier --check
+        language: node
+        additional_dependencies:
+          - prettier@3.3.3
+        files: ^(README.*\.md|QUICKSTART\.md|docs/.*\.md|doc/.*\.md|\.github/workflows/.*\.(yml|yaml)|[^/]+\.json|profiles/.*\.json)$

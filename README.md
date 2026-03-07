@@ -65,6 +65,23 @@ GitHub Actions workflow `test_suite` runs on every `push` and `pull_request` and
 
 Use branch protection required check name: `test_suite`.
 
+## Local Hooks
+
+GitHub Actions does not run on `git commit`; it runs on `push` and `pull_request`.
+
+For local commit-time enforcement, this repo includes `.pre-commit-config.yaml`.
+Install the hook once per clone:
+
+```bash
+python -m pip install pre-commit
+pre-commit install
+```
+
+That local `pre-commit` hook runs:
+
+- `ruff` checks on active Python paths
+- `prettier --check` on active Markdown/JSON/YAML files
+
 Detailed operations are in `docs/RUN_AND_TEST.md` and `docs/PAGE_TEXT_RUNBOOK.md`.
 
 ## Docker

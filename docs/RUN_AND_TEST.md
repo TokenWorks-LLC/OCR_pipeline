@@ -99,3 +99,14 @@ Checks included in the required `test_suite` status:
 - `ruff check run_pipeline.py test_pipeline.py tools tests`
 - `prettier --check` across active Markdown/JSON/YAML docs/workflow files
 - `python -m pytest tests -q`
+
+## 6) Local Commit Hook
+
+To run lint/format checks on every local commit, install the repo hook once:
+
+```bash
+python -m pip install pre-commit
+pre-commit install
+```
+
+After that, `git commit` will run the configured `ruff` and `prettier --check` hooks before creating the commit.

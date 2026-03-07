@@ -3,6 +3,7 @@
 Canonical operations guide for page-level extraction workflows.
 
 This document consolidates the previously duplicated guidance from:
+
 - `.merge_protect/README.md`
 - `.merge_protect/OCR _PIPELINE_RUNBOOK.md`
 

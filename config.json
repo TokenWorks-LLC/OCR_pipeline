@@ -2,7 +2,7 @@
   "_comment": "OCR Pipeline Production Configuration",
   "_version": "2.0.0",
   "_updated": "2025-10-07",
-  
+
   "ocr": {
     "engine": "paddle",
     "dpi": 300,
@@ -14,7 +14,7 @@
     "use_textline_orientation": true,
     "lang": "en"
   },
-  
+
   "akkadian": {
     "enabled": true,
     "min_confidence": 0.5,
@@ -25,14 +25,14 @@
       "detect_transliteration": true
     }
   },
-  
+
   "reading_order": {
     "enabled": true,
     "algorithm": "xy-cut",
     "column_threshold": 50,
     "line_threshold": 10
   },
-  
+
   "output": {
     "format": "csv",
     "include_confidence": true,
@@ -40,21 +40,21 @@
     "save_annotated_images": false,
     "generate_translations_pdf": true
   },
-  
+
   "paths": {
     "input_dir": "data/input_pdfs",
     "gold_data_dir": "data/gold_data",
     "output_dir": "data/output",
     "cache_dir": ".cache"
   },
-  
+
   "evaluation": {
     "enabled": false,
     "metrics": ["cer", "wer", "accuracy"],
     "generate_report": true,
     "output_dir": "evaluation_results"
   },
-  
+
   "performance": {
     "max_workers": 4,
     "batch_size": 10,

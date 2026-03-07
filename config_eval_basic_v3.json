@@ -1,9 +1,7 @@
 {
   "input": {
     "input_directory": "./data/input_pdfs",
-    "supported_formats": [
-      ".pdf"
-    ],
+    "supported_formats": [".pdf"],
     "process_all_files": true,
     "specific_file": "",
     "recursive_search": false
@@ -16,9 +14,7 @@
   "ocr": {
     "engine": "paddleocr",
     "dpi": 300,
-    "languages": [
-      "en"
-    ],
+    "languages": ["en"],
     "enable_text_correction": false,
     "enable_reading_order": true,
     "confidence_threshold": 0.5
@@ -27,9 +23,7 @@
     "enable_extraction": false,
     "confidence_threshold": 0.8,
     "generate_pdf_report": false,
-    "translation_languages": [
-      "english"
-    ]
+    "translation_languages": ["english"]
   },
   "processing": {
     "batch_size": 10,
@@ -57,6 +51,3 @@
     "track_metrics": true
   }
 }
-
-
-

@@ -6,6 +6,7 @@ repos:
         args:
           - run_pipeline.py
           - test_pipeline.py
+          - production
           - tools
           - tests
 

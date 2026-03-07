@@ -7,11 +7,14 @@ python tools/run_page_text.py \
   --inputs "path/to/pdfs" \
   --output-root "reports/output" \
   --prefer-text-layer \
+  --ocr-fallback ensemble \
   --status-bar
 
 # Legacy-compatible alias (same pipeline):
 python run_pipeline.py --input-dir "path/to/pdfs" --output-dir "reports/output"
 ```
+
+`run_pipeline.py` reads `config.json` by default, which now selects the ensemble fallback for difficult pages.
 
 ## Output
 
@@ -41,9 +44,11 @@ python tools/run_page_text.py \
   --inputs "path/to/pdfs" \
   --output-root "reports/output" \
   --prefer-text-layer \
-  --ocr-fallback paddle \
+  --ocr-fallback ensemble \
   --status-bar
 ```
+
+The ensemble fallback preprocesses each page into multiple denoised and thresholded variants, searches right-angle rotations, re-orders multi-column OCR lines, and fuses the best available OCR outputs with diacritic-aware consensus.
 
 ### From Manifest (Specific Pages)
 
@@ -64,15 +69,15 @@ python tools/run_page_text.py \
 
 ## Key Flags
 
-| Flag                    | Description                            |
-| ----------------------- | -------------------------------------- |
-| `--inputs DIR`          | Scan directory for PDFs                |
-| `--manifest FILE`       | Use TSV manifest (pdf<TAB>page)        |
-| `--output-root DIR`     | Output directory                       |
-| `--prefer-text-layer`   | Use PDF text layer (fast, recommended) |
-| `--ocr-fallback paddle` | Use OCR if text layer fails            |
-| `--status-bar`          | Show progress bar                      |
-| `--profile FILE`        | Custom Akkadian detection config       |
+| Flag                      | Description                                    |
+| ------------------------- | ---------------------------------------------- |
+| `--inputs DIR`            | Scan directory for PDFs                        |
+| `--manifest FILE`         | Use TSV manifest (pdf<TAB>page)                |
+| `--output-root DIR`       | Output directory                               |
+| `--prefer-text-layer`     | Use PDF text layer (fast, recommended)         |
+| `--ocr-fallback ensemble` | Use fortified OCR ensemble if text layer fails |
+| `--status-bar`            | Show progress bar                              |
+| `--profile FILE`          | Custom Akkadian detection config               |
 
 ## Testing
 
@@ -88,6 +93,9 @@ python test_pipeline.py
 
 # Targeted E2E regression tests
 python -m pytest tests/test_pipeline_e2e.py -q
+
+# Ensemble-specific regression tests
+python -m pytest tests/test_ensemble_support.py -q
 
 # Optional strict pytest engine enforcement:
 # REQUIRED_OCR_ENGINES=paddleocr,doctr,mmocr,kraken python -m pytest tests/test_engine_imports.py -q
@@ -108,7 +116,7 @@ python tools/run_page_text.py --help
 
 **No text extracted?**
 
-- Try `--ocr-fallback paddle` for scanned PDFs
+- Try `--ocr-fallback ensemble` for scanned PDFs
 
 **Akkadian not detected?**
 

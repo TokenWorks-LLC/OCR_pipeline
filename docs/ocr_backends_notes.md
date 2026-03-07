@@ -15,6 +15,8 @@ Backends referenced by runtime checks:
 - `mmocr`
 - `kraken`
 
+The active fallback path can now run a fortified ensemble across the available backends for harder pages.
+
 ## Validation Commands
 
 ```bash
@@ -30,9 +32,17 @@ python test_pipeline.py
 `tools/run_page_text.py` currently exposes OCR fallback as:
 
 - `--ocr-fallback paddle`
+- `--ocr-fallback ensemble`
 - `--ocr-fallback none`
 
 Use `--prefer-text-layer` to prioritize PDF text extraction and minimize OCR use where possible.
+
+Ensemble mode:
+
+- preprocesses the rendered page into multiple image variants
+- runs best-effort inference across configured OCR backends
+- fuses outputs with diacritic-aware consensus scoring
+- prefers rich-script preservation for Akkadian, German, Arabic, and similar text
 
 ## Notes on Historical Docs
 

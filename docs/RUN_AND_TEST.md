@@ -76,7 +76,17 @@ Key coverage in `tests/test_pipeline_e2e.py`:
 - `tools/run_page_text.py` inputs mode end-to-end
 - `tools/run_page_text.py` manifest mode parsing (header/comments)
 - `run_pipeline.py` compatibility mapping for `--input-file`
+- `run_pipeline.py` dry-run command mapping for supported flags
+- `run_pipeline.py` default dry-run mapping to ensemble fallback from config
 - failure path for missing input file
+- `run_pipeline.py --validate-only` failure path for missing input directories
+- `tools/build_manifest.py` range expansion and strict missing-PDF behavior
+
+Additional ensemble coverage in `tests/test_ensemble_support.py`:
+
+- diacritic-aware consensus fusion
+- consensus preference over noisy outliers
+- ensemble fallback plumbing inside `PDFTextExtractor`
 
 Enforce engine imports in pytest (optional):
 
@@ -96,9 +106,10 @@ CI runs on every `push` and `pull_request` via `.github/workflows/test_suite.yml
 
 Checks included in the required `test_suite` status:
 
-- `ruff check run_pipeline.py test_pipeline.py tools tests`
+- `ruff check run_pipeline.py test_pipeline.py production tools tests`
 - `prettier --check` across active Markdown/JSON/YAML docs/workflow files
 - `python -m pytest tests -q`
+- `python test_pipeline.py --allow-missing-engines`
 
 ## 6) Local Commit Hook
 

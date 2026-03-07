@@ -4,7 +4,7 @@
   "_updated": "2025-10-07",
 
   "ocr": {
-    "engine": "paddle",
+    "engine": "ensemble",
     "dpi": 300,
     "enable_gpu": true,
     "use_angle_cls": true,

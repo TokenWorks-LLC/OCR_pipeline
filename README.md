@@ -1,6 +1,6 @@
 # OCR Pipeline
 
-Production OCR pipeline with page-level text extraction and Akkadian detection.
+Production OCR pipeline with page-level text extraction, preprocessing, fortified OCR ensemble fallback, and Akkadian detection.
 
 This repository currently exposes two stable CLIs:
 
@@ -8,6 +8,7 @@ This repository currently exposes two stable CLIs:
 - `tools/run_page_text.py`: page-text pipeline entrypoint
 
 `run_pipeline.py` maps to the page-text runner and keeps legacy flag compatibility where possible.
+With the default configuration, difficult pages fall back to a preprocessing-heavy OCR ensemble that preserves diacritics and rich scripts wherever possible.
 
 ## Quick Start
 
@@ -37,13 +38,20 @@ python tools/run_page_text.py \
   --inputs data/input \
   --output-root reports/output \
   --prefer-text-layer \
-  --ocr-fallback paddle
+  --ocr-fallback ensemble
 ```
 
 Output CSV:
 
 - `reports/output/client_page_text.csv`
 - Columns: `pdf_name,page,page_text,has_akkadian`
+
+Pipeline behavior:
+
+- PDF text layer first when available
+- preprocessing-heavy OCR fallback for harder pages
+- diacritic-aware ensemble fusion across available OCR backends
+- Akkadian detection on the fused page text
 
 ## Canonical Commands
 
@@ -62,6 +70,7 @@ GitHub Actions workflow `test_suite` runs on every `push` and `pull_request` and
 - `ruff` lint checks on active Python paths
 - `prettier --check` for Markdown/JSON/YAML files in active docs and workflow paths
 - `python -m pytest tests -q`
+- `python test_pipeline.py --allow-missing-engines`
 
 Use branch protection required check name: `test_suite`.
 
@@ -92,6 +101,7 @@ Use `README_docker.md` for container commands. Docker commands are documented th
 
 - `run_pipeline.py`: compatibility wrapper
 - `tools/run_page_text.py`: page-text extractor
+- `production/ensemble_ocr.py`: preprocessing + OCR ensemble + text fusion
 - `test_pipeline.py`: smoke checks
 - `tests/test_pipeline_e2e.py`: end-to-end regression tests for CLI workflows
 - `profiles/`: detection profiles
@@ -103,6 +113,7 @@ Use `README_docker.md` for container commands. Docker commands are documented th
 - There is no root `requirements.txt` or `setup.py` workflow in this repo.
 - Legacy top-level scripts `quick_start.py` and `gold_evaluation.py` were removed as redundant/stale.
 - Legacy archive/evaluation/cache artifacts were removed as part of repository cleanup.
+- Active PR coverage validates the supported page-text pipeline, command mapping, manifest building, and ensemble fusion logic.
 
 ## License
 

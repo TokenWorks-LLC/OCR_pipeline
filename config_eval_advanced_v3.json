@@ -12,7 +12,7 @@
     "timestamp_outputs": false
   },
   "ocr": {
-    "engine": "paddleocr",
+    "engine": "ensemble",
     "dpi": 600,
     "languages": ["en", "tr", "de", "fr"],
     "enable_text_correction": true,

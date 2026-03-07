@@ -35,7 +35,7 @@ jobs:
         run: npm install --global prettier
 
       - name: Lint (ruff)
-        run: ruff check run_pipeline.py test_pipeline.py tools tests
+        run: ruff check run_pipeline.py test_pipeline.py production tools tests
 
       - name: Format check (prettier)
         run: |
@@ -50,3 +50,6 @@ jobs:
 
       - name: Run pytest suite
         run: python -m pytest tests -q
+
+      - name: Run smoke harness
+        run: python test_pipeline.py --allow-missing-engines

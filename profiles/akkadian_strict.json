@@ -21,6 +21,24 @@
     "color_mode": "RGB"
   },
 
+  "preprocessing": {
+    "rotation_search_degrees": [0, 90, 180, 270],
+    "enable_adaptive_threshold": true,
+    "enable_denoise": true,
+    "enable_morphology": true,
+    "contrast_factor": 1.8,
+    "sharpen_radius": 1.5,
+    "sharpen_percent": 180,
+    "deskew": false
+  },
+
+  "layout": {
+    "detect_multi_column": true,
+    "min_lines_for_columns": 4,
+    "column_gap_ratio": 0.14,
+    "column_overlap_ratio": 0.55
+  },
+
   "engines": {
     "enabled": ["paddle", "doctr", "mmocr", "kraken"],
     "min_confidence": 0.55,

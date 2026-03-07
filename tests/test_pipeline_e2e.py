@@ -170,3 +170,121 @@ def test_run_pipeline_missing_input_file_returns_error(tmp_path: Path):
 
     assert proc.returncode != 0
     assert "Input file not found" in (proc.stdout + proc.stderr)
+
+
+def test_run_pipeline_dry_run_maps_engine_and_output_dir(tmp_path: Path):
+    output_dir = tmp_path / "dry_run_output"
+
+    proc = _run(
+        "run_pipeline.py",
+        "--input-dir",
+        "data/input",
+        "--output-dir",
+        str(output_dir),
+        "--engine",
+        "paddleocr",
+        "--dry-run",
+        "-c",
+        "config.json",
+    )
+
+    assert proc.returncode == 0, proc.stdout + proc.stderr
+    text = proc.stdout + proc.stderr
+    assert "Mapped command:" in text
+    assert "--inputs data/input" in text
+    assert f"--output-root {output_dir}" in text
+    assert "--ocr-fallback paddle" in text
+
+
+def test_run_pipeline_dry_run_uses_configured_ensemble_by_default(tmp_path: Path):
+    output_dir = tmp_path / "ensemble_output"
+
+    proc = _run(
+        "run_pipeline.py",
+        "--input-dir",
+        "data/input",
+        "--output-dir",
+        str(output_dir),
+        "--dry-run",
+        "-c",
+        "config.json",
+    )
+
+    assert proc.returncode == 0, proc.stdout + proc.stderr
+    text = proc.stdout + proc.stderr
+    assert "Mapped command:" in text
+    assert f"--output-root {output_dir}" in text
+    assert "--ocr-fallback ensemble" in text
+
+
+def test_run_pipeline_validate_only_missing_input_dir_returns_error(tmp_path: Path):
+    missing_dir = tmp_path / "missing_input_dir"
+
+    proc = _run(
+        "run_pipeline.py",
+        "--validate-only",
+        "--input-dir",
+        str(missing_dir),
+        "-c",
+        "config.json",
+    )
+
+    assert proc.returncode != 0
+    assert "Input directory not found" in (proc.stdout + proc.stderr)
+
+
+def test_build_manifest_expands_ranges_and_writes_rows(tmp_path: Path):
+    pdf_root = tmp_path / "pdfs"
+    pdf_root.mkdir(parents=True)
+
+    sample_pdf = pdf_root / "sample.pdf"
+    _write_pdf(sample_pdf, ["page 1", "page 2", "page 3"])
+
+    csv_path = tmp_path / "gold.csv"
+    csv_path.write_text("PDF LINK,PAGE\nsample.pdf,1-3\n", encoding="utf-8")
+
+    manifest_path = tmp_path / "manifest.tsv"
+    proc = _run(
+        "tools/build_manifest.py",
+        "--csv",
+        str(csv_path),
+        "--pdf-root",
+        str(pdf_root),
+        "--out",
+        str(manifest_path),
+        "--expand-ranges",
+    )
+
+    assert proc.returncode == 0, proc.stdout + proc.stderr
+    assert manifest_path.exists()
+    lines = manifest_path.read_text(encoding="utf-8").splitlines()
+    assert lines == [
+        f"{sample_pdf.resolve()}\t1",
+        f"{sample_pdf.resolve()}\t2",
+        f"{sample_pdf.resolve()}\t3",
+    ]
+
+
+def test_build_manifest_strict_missing_pdf_returns_error(tmp_path: Path):
+    pdf_root = tmp_path / "pdfs"
+    pdf_root.mkdir(parents=True)
+
+    csv_path = tmp_path / "gold.csv"
+    csv_path.write_text("PDF LINK,PAGE\nmissing.pdf,4\n", encoding="utf-8")
+
+    manifest_path = tmp_path / "manifest.tsv"
+    proc = _run(
+        "tools/build_manifest.py",
+        "--csv",
+        str(csv_path),
+        "--pdf-root",
+        str(pdf_root),
+        "--out",
+        str(manifest_path),
+        "--strict",
+    )
+
+    assert proc.returncode != 0
+    text = proc.stdout + proc.stderr
+    assert "Missing PDFs referenced in CSV" in text
+    assert "missing.pdf" in text

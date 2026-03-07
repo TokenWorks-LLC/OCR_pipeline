@@ -2,8 +2,9 @@
 """
 Page-level text extraction with Akkadian detection.
 
-Extracts page-level text from PDFs (with optional OCR fallback),
-detects Akkadian content per page, and outputs a 4-column CSV:
+Extracts page-level text from PDFs (with optional OCR fallback), applies
+preprocessing and multi-engine consensus for difficult pages when ensemble OCR
+is enabled, detects Akkadian content per page, and outputs a 4-column CSV:
 
     pdf_name,page,page_text,has_akkadian
 
@@ -12,7 +13,7 @@ Usage:
         --manifest data\\gold\\manifest.txt \\
         --output-root reports\\page_text_20251009 \\
         --prefer-text-layer \\
-        --ocr-fallback paddle \\
+        --ocr-fallback ensemble \
         --status-bar \\
         --progress-csv reports\\page_text_20251009\\progress.csv
         
@@ -35,8 +36,11 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Set
 
-# Add src to path
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
+
+from production.ensemble_ocr import FortifiedOCREnsemble
 
 # Core dependencies
 try:
@@ -258,7 +262,12 @@ class AkkadianDetector:
 class PDFTextExtractor:
     """Extract text from PDFs with optional OCR fallback."""
     
-    def __init__(self, prefer_text_layer: bool = True, ocr_fallback: Optional[str] = None):
+    def __init__(
+        self,
+        prefer_text_layer: bool = True,
+        ocr_fallback: Optional[str] = None,
+        profile_path: Optional[str] = None,
+    ):
         """
         Initialize PDF text extractor.
         
@@ -269,9 +278,13 @@ class PDFTextExtractor:
         self.prefer_text_layer = prefer_text_layer
         self.ocr_fallback = ocr_fallback
         self.ocr_engine = None
+        self.ensemble = None
+        self.profile_path = profile_path
         
         if ocr_fallback == 'paddle':
             self._init_paddle_ocr()
+        elif ocr_fallback == 'ensemble':
+            self._init_ensemble()
     
     def _init_paddle_ocr(self):
         """Initialize PaddleOCR engine."""
@@ -281,6 +294,15 @@ class PDFTextExtractor:
             logger.info("Initialized PaddleOCR for fallback")
         except Exception as e:
             logger.warning(f"Failed to initialize PaddleOCR: {e}")
+            self.ocr_fallback = None
+
+    def _init_ensemble(self):
+        """Initialize the fortified OCR ensemble lazily."""
+        try:
+            self.ensemble = FortifiedOCREnsemble(self.profile_path)
+            logger.info("Initialized fortified OCR ensemble fallback")
+        except Exception as e:
+            logger.warning(f"Failed to initialize OCR ensemble: {e}")
             self.ocr_fallback = None
     
     def extract_page_text(self, pdf_path: str, page_num: int) -> Tuple[str, bool, Dict]:
@@ -338,7 +360,14 @@ class PDFTextExtractor:
             return "", False
     
     def _extract_via_ocr(self, pdf_path: str, page_num: int) -> Tuple[str, bool]:
-        """Extract text via OCR (PaddleOCR)."""
+        """Extract text via OCR fallback or ensemble."""
+        if self.ocr_fallback == 'ensemble' and self.ensemble is not None:
+            text, meta = self.ensemble.extract_page_text(pdf_path, page_num)
+            if text:
+                logger.debug("Ensemble OCR used engines: %s", meta.get("engines_used", []))
+                return text, True
+            return "", False
+
         if not self.ocr_engine:
             return "", False
         
@@ -409,7 +438,8 @@ class PageTextPipeline:
         # Initialize components
         self.extractor = PDFTextExtractor(
             prefer_text_layer=args.prefer_text_layer,
-            ocr_fallback=args.ocr_fallback if args.ocr_fallback != 'none' else None
+            ocr_fallback=args.ocr_fallback if args.ocr_fallback != 'none' else None,
+            profile_path=args.profile or 'profiles/akkadian_strict.json',
         )
         
         profile_path = args.profile or 'profiles/akkadian_strict.json'
@@ -619,7 +649,7 @@ def main():
     # Text extraction
     parser.add_argument('--prefer-text-layer', action='store_true', default=False,
                        help='Prefer PDF text layer extraction')
-    parser.add_argument('--ocr-fallback', type=str, choices=['paddle', 'none'], default='none',
+    parser.add_argument('--ocr-fallback', type=str, choices=['paddle', 'ensemble', 'none'], default='none',
                        help='OCR engine for fallback when text layer fails')
     
     # Akkadian detection
@@ -642,6 +672,13 @@ def main():
             import paddleocr
         except ImportError:
             logger.error("PaddleOCR is required for OCR fallback. Install: pip install paddleocr")
+            sys.exit(1)
+
+    if args.ocr_fallback == 'ensemble':
+        try:
+            import PIL  # noqa: F401
+        except ImportError:
+            logger.error("Pillow is required for ensemble fallback. Install: pip install Pillow")
             sys.exit(1)
     
     # Run pipeline

@@ -26,25 +26,24 @@ python tools/run_page_text.py \
 
 ## Recommended Modes
 
-### Fast throughput (no LLM)
+### Fast throughput
 
 ```bash
 python tools/run_page_text.py \
-  --manifest manifests/secondary_sources_full_SORTED.txt \
+  --manifest path/to/manifest.tsv \
   --output-root reports/page_text_fast \
   --prefer-text-layer \
-  --llm-off \
   --status-bar
 ```
 
-### Quality mode (LLM correction on)
+### Quality mode
 
 ```bash
 python tools/run_page_text.py \
-  --manifest manifests/secondary_sources_full_SORTED.txt \
+  --manifest path/to/manifest.tsv \
   --output-root reports/page_text_quality \
   --prefer-text-layer \
-  --llm-on \
+  --ocr-fallback paddle \
   --status-bar
 ```
 
@@ -54,11 +53,11 @@ python tools/run_page_text.py \
 - Prefer manifests for large runs (faster startup, deterministic scope)
 - Enable `--ocr-fallback paddle` only when scanned pages need OCR
 
-## Akkadian Safety Rules
+## Akkadian Detection Notes
 
-- Preserve transliteration spans and diacritics (`š ṣ ṭ ḫ ā ē ī ū`)
-- Guard Akkadian tokens during correction
-- Reject over-aggressive rewrites using edit-ratio thresholds
+- Detection uses profile rules (default: `profiles/akkadian_strict.json`)
+- Preserve transliteration spans and diacritics (`š ṣ ṭ ḫ ā ē ī ū`) in source documents
+- Validate detection quality with targeted spot checks on `has_akkadian=true` rows
 
 ## Output Artifacts
 
@@ -77,5 +76,4 @@ python tools/run_page_text.py \
 
 - No text extracted: add `--ocr-fallback paddle`
 - Akkadian misses: tune thresholds in profile
-- LLM violations: lower temperature or disable LLM for batch pass
-- Memory pressure: prefer `--llm-off` and split manifests
+- Memory pressure: prefer `--ocr-fallback none` and split manifests

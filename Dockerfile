@@ -60,12 +60,13 @@ RUN python -m pip install --only-binary=:all: \
     "requests>=2.31.0" \
     "Pillow>=10.0.0"
 
-# Clean install of PaddlePaddle GPU for CUDA 12.1
+# Install PaddlePaddle 3.x (prefer GPU build, fall back to CPU build for wider host compatibility)
 RUN python -m pip uninstall -y paddlepaddle paddlepaddle-gpu || true \
-    && python -m pip install --no-cache-dir paddlepaddle-gpu==2.6.1
+    && (python -m pip install --no-cache-dir "paddlepaddle-gpu>=3.0.0,<4.0.0" \
+        || python -m pip install --no-cache-dir "paddlepaddle>=3.0.0,<4.0.0")
 
-# Install PaddleOCR latest version (compatible with newer PyMuPDF)
-RUN python -m pip install paddleocr>=2.8.0
+# Install PaddleOCR without deps, then install a pinned compatible dependency set
+RUN python -m pip install --only-binary=:all: --no-deps "paddleocr>=3.2.0"
 
 # Install PyTorch for docTR and other engines (CUDA 12.1 compatible)
 RUN python -m pip install --extra-index-url https://download.pytorch.org/whl/cu121 \
@@ -92,19 +93,20 @@ RUN python -m pip install "lxml>=4.0" "click>=8.0" "kraken[cuda]" || echo "âš ï¸
 
 # Manually install required runtime deps PaddleOCR expects (binary wheels only)
 RUN python -m pip install --only-binary=:all: \
-    "shapely==2.0.6" \
-    "scikit-image==0.24.0" \
+    "shapely==2.1.2" \
+    "scikit-image==0.25.2" \
     "imgaug==0.4.0" \
-    "pyclipper==1.3.0.post5" \
-    "lmdb==1.4.1" \
-    "rapidfuzz==3.9.7" \
-    "lxml==5.3.0" \
+    "pyclipper==1.3.0.post6" \
+    "lmdb==1.7.3" \
+    "rapidfuzz==3.14.1" \
+    "lxml==6.0.2" \
     "premailer==3.10.0" \
     "openpyxl==3.1.5" \
-    "tqdm==4.66.5" \
+    "tqdm==4.67.1" \
     "pytesseract>=0.3.10" \
     "PyYAML>=6.0" \
-    "typing-extensions>=4.12"
+    "typing-extensions>=4.12" \
+    "paddlex>=3.2.0"
 
 # Set working directory
 WORKDIR /app

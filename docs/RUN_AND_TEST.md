@@ -5,7 +5,7 @@ This repository currently uses the page-text pipeline implementation in `.merge_
 For compatibility and easier onboarding, use these stable entrypoints from repo root:
 
 - `run_pipeline.py`: legacy-compatible runner (maps to `tools/run_page_text.py`)
-- `test_pipeline.py`: smoke checks for CLI runnability and OCR engine availability
+- `test_pipeline.py`: optional smoke-check convenience script for CLI runnability and OCR engine availability
 - `tools/run_page_text.py`: stable wrapper to the protected implementation
 
 ## 1) Local (venv) Quick Start
@@ -49,25 +49,34 @@ export COMPOSE_SERVICE=ocr
 export COMPOSE_SERVICE=ocr-arm64
 
 # smoke checks in container
-make test-smoke COMPOSE_SERVICE=$COMPOSE_SERVICE
+docker compose run --rm $COMPOSE_SERVICE python test_pipeline.py --allow-missing-engines
 
 # strict engine checks in container
-make test-engines COMPOSE_SERVICE=$COMPOSE_SERVICE
+docker compose run --rm $COMPOSE_SERVICE python test_pipeline.py
 ```
 
 Run OCR on a single PDF:
 
 ```bash
-make ocr COMPOSE_SERVICE=$COMPOSE_SERVICE FILE="data/input/sample.pdf"
+docker compose run --rm $COMPOSE_SERVICE python run_pipeline.py --input-file data/input/sample.pdf
 ```
 
 ## 3) Pytest Suite
 
-Run compatibility tests:
+Run compatibility and end-to-end regression tests:
 
 ```bash
 python -m pytest tests -q
 ```
+
+`test_pipeline.py` is not required for the pytest suite; keep it for quick environment smoke checks.
+
+Key coverage in `tests/test_pipeline_e2e.py`:
+
+- `tools/run_page_text.py` inputs mode end-to-end
+- `tools/run_page_text.py` manifest mode parsing (header/comments)
+- `run_pipeline.py` compatibility mapping for `--input-file`
+- failure path for missing input file
 
 Enforce engine imports in pytest (optional):
 

@@ -15,24 +15,6 @@
     "lang": "en"
   },
   
-  "llm_correction": {
-    "enabled": true,
-    "provider": "ollama",
-    "base_url": "http://localhost:11434",
-    "model": "qwen2.5:7b-instruct",
-    "timeout_s": 120,
-    "edit_budget": 0.12,
-    "cache_enabled": true,
-    "language_thresholds": {
-      "en": 0.86,
-      "de": 0.85,
-      "fr": 0.84,
-      "it": 0.84,
-      "tr": 0.83,
-      "unknown": 0.80
-    }
-  },
-  
   "akkadian": {
     "enabled": true,
     "min_confidence": 0.5,

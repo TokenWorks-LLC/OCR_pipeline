@@ -36,22 +36,6 @@
     "confidence_calibration": true
   },
   
-  "llm": {
-    "enabled": true,
-    "provider": "ollama",
-    "model": "qwen2.5:7b-instruct",
-    "base_url": "http://localhost:11434",
-    "timeout_s": 120,
-    "batch_size": 8,
-    "temperature": 0.2,
-    "top_p": 0.2,
-    "max_tokens": 700,
-    "max_retries": 2,
-    "retry_temperature": 0.0,
-    "json_mode": true,
-    "system_prompt_version": "pairing_v2"
-  },
-  
   "guardrails": {
     "edit_budget_akkadian": 0.03,
     "edit_budget_non_akkadian": 0.15,

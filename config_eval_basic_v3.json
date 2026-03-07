@@ -23,14 +23,6 @@
     "enable_reading_order": true,
     "confidence_threshold": 0.5
   },
-  "llm": {
-    "enable_correction": false,
-    "provider": "none",
-    "model": "",
-    "base_url": "",
-    "timeout": 30,
-    "max_concurrent_corrections": 1
-  },
   "akkadian": {
     "enable_extraction": false,
     "confidence_threshold": 0.8,

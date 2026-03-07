@@ -51,7 +51,8 @@ Thumbs.db
 # Git
 .git/
 .gitignore
-.merge_protect/
+# Keep protected implementation in image build context.
+# tools/run_page_text.py loads runtime code from .merge_protect/tools/run_page_text.py
 
 # Docker files themselves
 Dockerfile

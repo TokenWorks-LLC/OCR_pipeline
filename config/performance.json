@@ -3,7 +3,6 @@
     "pages": 6,
     "gpu_workers": 1,
     "recognition_batch": 16,
-    "llm_workers": 2,
     "max_workers_auto": true,
     "max_workers_limit": 8
   },

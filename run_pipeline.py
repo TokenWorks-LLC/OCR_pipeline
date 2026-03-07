@@ -118,29 +118,6 @@ def _build_run_page_text_args(args: argparse.Namespace, cfg: dict[str, Any]) -> 
             "--prefer-text-layer",
         ]
 
-    llm_cfg = cfg.get("llm", {}) if isinstance(cfg, dict) else {}
-    llm_correction_cfg = cfg.get("llm_correction", {}) if isinstance(cfg, dict) else {}
-    llm_enabled = bool(llm_cfg.get("enable_correction") or llm_correction_cfg.get("enabled"))
-
-    if args.llm_on or llm_enabled:
-        run_args.append("--llm-on")
-    if args.llm_off:
-        run_args.append("--llm-off")
-
-    provider = llm_cfg.get("provider") or llm_correction_cfg.get("provider")
-    model = llm_cfg.get("model") or llm_correction_cfg.get("model")
-    base_url = llm_cfg.get("base_url") or llm_correction_cfg.get("base_url")
-    timeout = llm_cfg.get("timeout") or llm_correction_cfg.get("timeout_s")
-
-    if provider:
-        run_args.extend(["--llm-provider", str(provider)])
-    if model:
-        run_args.extend(["--llm-model", str(model)])
-    if base_url:
-        run_args.extend(["--llm-base-url", str(base_url)])
-    if timeout:
-        run_args.extend(["--llm-timeout", str(timeout)])
-
     if args.engine and str(args.engine).lower().startswith("paddle"):
         run_args.extend(["--ocr-fallback", "paddle"])
 
@@ -193,8 +170,6 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--profile", help="Akkadian detection profile JSON")
     parser.add_argument("--progress-csv", help="Optional progress CSV output path")
     parser.add_argument("--status-bar", action="store_true", help="Display progress bar")
-    parser.add_argument("--llm-on", action="store_true", help="Force LLM correction on")
-    parser.add_argument("--llm-off", action="store_true", help="Force LLM correction off")
     parser.add_argument("--validate-only", action="store_true", help="Validate environment and config")
     parser.add_argument("--dry-run", action="store_true", help="Print mapped command without executing")
     parser.add_argument(

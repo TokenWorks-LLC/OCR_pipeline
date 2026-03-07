@@ -43,18 +43,6 @@ python tools/run_page_text.py \
   --status-bar
 ```
 
-### With LLM Typo Correction
-```bash
-# First: ollama serve && ollama pull qwen2.5:7b-instruct
-
-python tools/run_page_text.py \
-  --inputs "path/to/pdfs" \
-  --output-root "reports/output" \
-  --prefer-text-layer \
-  --llm-on \
-  --status-bar
-```
-
 ### From Manifest (Specific Pages)
 ```bash
 # Create manifest
@@ -80,21 +68,23 @@ python tools/run_page_text.py \
 | `--output-root DIR` | Output directory |
 | `--prefer-text-layer` | Use PDF text layer (fast, recommended) |
 | `--ocr-fallback paddle` | Use OCR if text layer fails |
-| `--llm-on` | Enable typo correction (preserves Akkadian) |
 | `--status-bar` | Show progress bar |
 | `--profile FILE` | Custom Akkadian detection config |
 
 ## Testing
 
 ```bash
-# Portable smoke checks (CLI + runtime wiring)
+# Main regression suite
+python -m pytest tests -q
+
+# Portable smoke checks (optional convenience)
 python test_pipeline.py --allow-missing-engines
 
-# Strict checks (fails if any OCR backend is missing)
+# Strict smoke checks (optional; fails if any OCR backend is missing)
 python test_pipeline.py
 
-# Python compatibility tests
-python -m pytest tests -q
+# Targeted E2E regression tests
+python -m pytest tests/test_pipeline_e2e.py -q
 
 # Optional strict pytest engine enforcement:
 # REQUIRED_OCR_ENGINES=paddleocr,doctr,mmocr,kraken python -m pytest tests/test_engine_imports.py -q
@@ -120,12 +110,7 @@ python tools/run_page_text.py --help
 - Verify diacritics present: š ṣ ṭ ḫ ā ē ī ū
 - Check `profiles/akkadian_strict.json` config
 
-**LLM corrections rejected?**
-- Akkadian spans being altered (protection working!)
-- Lower temperature: `--llm-temperature 0.1`
-
 **Out of memory?**
-- Use `--llm-off`
 - Use `--ocr-fallback none`
 - Process in batches via manifest
 

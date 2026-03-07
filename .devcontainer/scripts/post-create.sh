@@ -13,6 +13,16 @@ if [ ! -d .venv ]; then
 	python -m venv .venv
 fi
 
+# Ensure new interactive bash terminals in this workspace auto-activate the project venv.
+if ! grep -q "OCR_PIPELINE_AUTO_VENV" "$HOME/.bashrc"; then
+	cat >> "$HOME/.bashrc" <<'EOF'
+# OCR_PIPELINE_AUTO_VENV
+if [ -z "${VIRTUAL_ENV:-}" ] && [ -f /workspaces/OCR_pipeline/.venv/bin/activate ] && [[ "$PWD" == /workspaces/OCR_pipeline* ]]; then
+	. /workspaces/OCR_pipeline/.venv/bin/activate
+fi
+EOF
+fi
+
 source .venv/bin/activate
 python -m pip install -U pip setuptools wheel
 
@@ -58,7 +68,7 @@ SAMPLE_PDF="$(find data -maxdepth 3 -type f -iname '*.pdf' | head -n 1 || true)"
 if [ -n "$SAMPLE_PDF" ]; then
 	echo "[devcontainer] Running end-to-end smoke on: $SAMPLE_PDF"
 	rm -rf reports/devcontainer_e2e
-	python run_pipeline.py --input-file "$SAMPLE_PDF" --output-dir reports/devcontainer_e2e --llm-off
+	python run_pipeline.py --input-file "$SAMPLE_PDF" --output-dir reports/devcontainer_e2e
 	echo "[devcontainer] E2E output: reports/devcontainer_e2e/client_page_text.csv"
 else
 	echo "[devcontainer] No sample PDF found under data/. Skipping E2E run."

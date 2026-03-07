@@ -18,6 +18,7 @@
     "vscode": {
       "settings": {
         "python.defaultInterpreterPath": "/workspaces/OCR_pipeline/.venv/bin/python",
+        "python.terminal.activateEnvironment": true,
         "python.analysis.typeCheckingMode": "basic"
       },
       "extensions": [

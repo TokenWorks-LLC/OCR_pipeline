@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """
-Page-level text extraction with Akkadian detection and LLM typo correction.
+Page-level text extraction with Akkadian detection.
 
 Extracts page-level text from PDFs (with optional OCR fallback),
-detects Akkadian content per page, applies LLM typo correction while
-preserving Akkadian spans, and outputs a 4-column CSV:
+detects Akkadian content per page, and outputs a 4-column CSV:
 
     pdf_name,page,page_text,has_akkadian
 
@@ -14,7 +13,6 @@ Usage:
         --output-root reports\\page_text_20251009 \\
         --prefer-text-layer \\
         --ocr-fallback paddle \\
-        --llm-on \\
         --status-bar \\
         --progress-csv reports\\page_text_20251009\\progress.csv
         
@@ -23,8 +21,7 @@ Usage:
     python tools/run_page_text.py \\
         --inputs "G:\\Shared drives\\Secondary Sources" \\
         --output-root reports\\page_text_20251009 \\
-        --prefer-text-layer \\
-        --llm-on
+        --prefer-text-layer
 """
 import argparse
 import csv
@@ -258,272 +255,6 @@ class AkkadianDetector:
         return has_akkadian, metadata
 
 
-class AkkadianSpanProtector:
-    """Protect Akkadian spans during LLM correction."""
-    
-    # Akkadian diacritics and markers
-    AKKADIAN_CHARS = set('šṣṭḫāēīūâêîûᵈᵐᶠ')
-    MARKERS = ['DUMU', 'LUGAL', 'KÙ.BABBAR', 'KUBABBAR', 'URU', 'É', 'GIŠ', 'KUR', 'LÚ', 'LU₂']
-    
-    def __init__(self):
-        """Initialize span protector."""
-        # Build pattern for Akkadian markers
-        marker_pattern = '|'.join(re.escape(m) for m in self.MARKERS)
-        
-        # Pattern components:
-        # 1. Syllabic with diacritics (a-na-ku, šar-ru-um, etc.)
-        # 2. Markers (LUGAL, DUMU, etc.)
-        # 3. Words with determinatives
-        # 4. Words containing Akkadian diacritics
-        self.akk_pattern = re.compile(
-            r'\b[a-zšṣṭḫāēīū]+(?:[-—][a-zšṣṭḫāēīū]+)+\b|'  # Syllabic (hyphenated)
-            rf'\b(?:{marker_pattern})\b|'  # Markers
-            r'[ᵈᵐᶠ][A-Za-zšṣṭḫāēīū-]+|'  # Determinative prefixes
-            r'\b[a-zšṣṭḫāēīū]*[šṣṭḫāēīū][a-zšṣṭḫāēīū]*\b',  # Words with diacritics
-            re.IGNORECASE
-        )
-    
-    def find_akkadian_spans(self, text: str) -> List[Tuple[int, int, str]]:
-        """
-        Find all Akkadian spans in text.
-        
-        Returns:
-            List of (start, end, span_text) tuples
-        """
-        spans = []
-        for match in self.akk_pattern.finditer(text):
-            span_text = match.group()
-            # Verify span has Akkadian characteristics
-            # Must have either diacritics, markers, or determinatives
-            has_diacritic = any(c in span_text for c in self.AKKADIAN_CHARS)
-            has_marker = any(m.lower() in span_text.lower() for m in self.MARKERS)
-            has_hyphen_structure = '-' in span_text or '—' in span_text
-            
-            if has_diacritic or has_marker or (has_hyphen_structure and len(span_text) > 4):
-                spans.append((match.start(), match.end(), span_text))
-        return spans
-    
-    def protect_spans(self, text: str) -> Tuple[str, List[str]]:
-        """
-        Wrap Akkadian spans with <AKK>...</AKK> tags.
-        
-        Returns:
-            Tuple of (protected_text, list_of_original_spans)
-        """
-        spans = self.find_akkadian_spans(text)
-        if not spans:
-            return text, []
-        
-        # Sort spans by position (descending) to avoid offset issues
-        spans.sort(key=lambda x: x[0], reverse=True)
-        
-        protected_text = text
-        original_spans = []
-        
-        for start, end, span_text in spans:
-            original_spans.append(span_text)
-            protected_text = (
-                protected_text[:start] + 
-                f"<AKK>{span_text}</AKK>" + 
-                protected_text[end:]
-            )
-        
-        # Reverse to match original order
-        original_spans.reverse()
-        
-        return protected_text, original_spans
-    
-    def validate_protection(self, original_spans: List[str], corrected_text: str) -> Tuple[bool, str]:
-        """
-        Validate that all protected spans are unchanged.
-        
-        Returns:
-            Tuple of (is_valid, error_message)
-        """
-        # Extract all <AKK>...</AKK> spans from corrected text
-        akk_tag_pattern = re.compile(r'<AKK>(.*?)</AKK>', re.DOTALL)
-        found_spans = akk_tag_pattern.findall(corrected_text)
-        
-        if len(found_spans) != len(original_spans):
-            return False, f"Span count mismatch: expected {len(original_spans)}, found {len(found_spans)}"
-        
-        for i, (orig, found) in enumerate(zip(original_spans, found_spans)):
-            if orig != found:
-                return False, f"Span {i} altered: '{orig}' → '{found}'"
-        
-        return True, ""
-    
-    def unprotect_spans(self, protected_text: str) -> str:
-        """Remove <AKK>...</AKK> tags from text."""
-        return re.sub(r'<AKK>(.*?)</AKK>', r'\1', protected_text, flags=re.DOTALL)
-
-
-class SimpleLLMCorrector:
-    """Simple LLM corrector for typo fixes with Akkadian protection."""
-    
-    def __init__(self, 
-                 provider: str = "ollama",
-                 model: str = "qwen2.5:7b-instruct",
-                 base_url: str = "http://localhost:11434",
-                 temperature: float = 0.2,
-                 top_p: float = 0.2,
-                 timeout: int = 120):
-        """Initialize LLM corrector."""
-        self.provider = provider
-        self.model = model
-        self.base_url = base_url
-        self.temperature = temperature
-        self.top_p = top_p
-        self.timeout = timeout
-        self.enabled = os.getenv('LLM_ENABLED', 'true').lower() == 'true'
-        self.client = None
-        
-        if self.enabled:
-            self._init_client()
-        
-        self.protector = AkkadianSpanProtector()
-    
-    def _init_client(self):
-        """Initialize LLM client."""
-        try:
-            if self.provider == "ollama":
-                import ollama
-                self.client = ollama.Client(host=self.base_url)
-                logger.info(f"Initialized Ollama client for {self.model}")
-            else:
-                logger.warning(f"Unknown provider: {self.provider}, disabling LLM")
-                self.enabled = False
-        except Exception as e:
-            logger.error(f"Failed to initialize LLM client: {e}")
-            self.enabled = False
-    
-    def correct_text(self, text: str) -> Tuple[str, Dict]:
-        """
-        Correct text with Akkadian span protection.
-        
-        Returns:
-            Tuple of (corrected_text, metadata)
-        """
-        if not self.enabled or not text or len(text.strip()) < 10:
-            return text, {"applied": False, "reason": "disabled or too short"}
-        
-        # Protect Akkadian spans
-        protected_text, original_spans = self.protector.protect_spans(text)
-        
-        # If no spans to protect, check if text is worth correcting
-        if not original_spans:
-            # Check if text looks clean (few obvious typos)
-            if len(text) < 20:
-                return text, {"applied": False, "reason": "too short"}
-        
-        # Build prompt
-        prompt = self._build_prompt(protected_text)
-        
-        # Call LLM
-        try:
-            start_time = time.time()
-            
-            response = self.client.chat(
-                model=self.model,
-                messages=[
-                    {
-                        "role": "system",
-                        "content": "You are a text correction assistant. Fix only obvious OCR typos (spacing, obvious misspellings). Do NOT alter text inside <AKK> tags. Return only the corrected plain text with <AKK> tags preserved."
-                    },
-                    {
-                        "role": "user",
-                        "content": prompt
-                    }
-                ],
-                options={
-                    "temperature": self.temperature,
-                    "top_p": self.top_p,
-                    "num_predict": 2048
-                }
-            )
-            
-            latency_ms = int((time.time() - start_time) * 1000)
-            
-            corrected_protected = response['message']['content'].strip()
-            
-            # Validate protection
-            is_valid, error_msg = self.protector.validate_protection(original_spans, corrected_protected)
-            
-            if not is_valid:
-                logger.warning(f"Protection validation failed: {error_msg}")
-                return text, {
-                    "applied": False,
-                    "reason": "protection_violated",
-                    "error": error_msg,
-                    "latency_ms": latency_ms
-                }
-            
-            # Unprotect spans
-            corrected_text = self.protector.unprotect_spans(corrected_protected)
-            
-            # Calculate edit ratio
-            edit_ratio = self._edit_distance(text, corrected_text) / len(text) if len(text) > 0 else 0.0
-            
-            # Apply edit budget (15% for non-Akkadian)
-            if edit_ratio > 0.15:
-                logger.warning(f"Edit ratio {edit_ratio:.2%} exceeds budget, rejecting")
-                return text, {
-                    "applied": False,
-                    "reason": "edit_budget_exceeded",
-                    "edit_ratio": edit_ratio,
-                    "latency_ms": latency_ms
-                }
-            
-            return corrected_text, {
-                "applied": True,
-                "edit_ratio": edit_ratio,
-                "protected_spans": len(original_spans),
-                "latency_ms": latency_ms
-            }
-            
-        except Exception as e:
-            logger.error(f"LLM correction failed: {e}")
-            return text, {"applied": False, "reason": "error", "error": str(e)}
-    
-    def _build_prompt(self, protected_text: str) -> str:
-        """Build correction prompt."""
-        return f"""Normalize spacing and fix obvious OCR typos in the following text. 
-
-CRITICAL RULES:
-1. Do NOT change any text inside <AKK>...</AKK> tags
-2. Keep all <AKK> tags exactly as they appear
-3. Only fix obvious typos (wrong spacing, common OCR errors)
-4. Do NOT add, remove, or rewrite content
-5. Preserve all newlines and paragraph structure
-6. Return ONLY the corrected text with <AKK> tags intact
-
-Text:
-{protected_text}
-
-Corrected text:"""
-    
-    @staticmethod
-    def _edit_distance(s1: str, s2: str) -> int:
-        """Calculate Levenshtein edit distance."""
-        if len(s1) < len(s2):
-            return SimpleLLMCorrector._edit_distance(s2, s1)
-        
-        if len(s2) == 0:
-            return len(s1)
-        
-        previous_row = range(len(s2) + 1)
-        for i, c1 in enumerate(s1):
-            current_row = [i + 1]
-            for j, c2 in enumerate(s2):
-                insertions = previous_row[j + 1] + 1
-                deletions = current_row[j] + 1
-                substitutions = previous_row[j] + (c1 != c2)
-                current_row.append(min(insertions, deletions, substitutions))
-            previous_row = current_row
-        
-        return previous_row[-1]
-
-
 class PDFTextExtractor:
     """Extract text from PDFs with optional OCR fallback."""
     
@@ -684,17 +415,6 @@ class PageTextPipeline:
         profile_path = args.profile or 'profiles/akkadian_strict.json'
         self.detector = AkkadianDetector(profile_path)
         
-        self.corrector = None
-        if args.llm_on:
-            self.corrector = SimpleLLMCorrector(
-                provider=args.llm_provider,
-                model=args.llm_model,
-                base_url=args.llm_base_url,
-                temperature=args.llm_temperature,
-                top_p=args.llm_top_p,
-                timeout=args.llm_timeout
-            )
-        
         # Output CSV paths
         self.output_csv = self.output_root / "client_page_text.csv"
         self.progress_csv = args.progress_csv or (self.output_root / "progress.csv")
@@ -703,7 +423,6 @@ class PageTextPipeline:
         self.stats = {
             "pages_processed": 0,
             "pages_with_akkadian": 0,
-            "pages_with_llm": 0,
             "text_layer_used": 0,
             "ocr_used": 0,
             "errors": 0
@@ -794,7 +513,7 @@ class PageTextPipeline:
             writer = csv.writer(f)
             writer.writerow([
                 'pdf_name', 'page', 'ms', 'used_text_layer', 
-                'has_akkadian', 'llm_applied', 'timestamp'
+                'has_akkadian', 'timestamp'
             ])
     
     def _process_page(self, pdf_path: str, page_num: int):
@@ -815,15 +534,6 @@ class PageTextPipeline:
             # Detect Akkadian
             has_akkadian, detect_meta = self.detector.detect_page(text)
             
-            # Apply LLM correction if enabled
-            llm_applied = False
-            if self.corrector and not has_akkadian:  # Only correct non-Akkadian pages
-                corrected_text, llm_meta = self.corrector.correct_text(text)
-                if llm_meta.get("applied", False):
-                    text = corrected_text
-                    llm_applied = True
-                    self.stats["pages_with_llm"] += 1
-            
             # Write to output CSV
             self._append_output(pdf_name, page_1based, text, has_akkadian)
             
@@ -838,7 +548,7 @@ class PageTextPipeline:
             
             # Write progress
             elapsed_ms = int((time.time() - start_time) * 1000)
-            self._append_progress(pdf_name, page_1based, elapsed_ms, used_text_layer, has_akkadian, llm_applied)
+            self._append_progress(pdf_name, page_1based, elapsed_ms, used_text_layer, has_akkadian)
             
         except Exception as e:
             logger.error(f"Error processing {pdf_name} page {page_1based}: {e}")
@@ -856,8 +566,8 @@ class PageTextPipeline:
             ])
             f.flush()
     
-    def _append_progress(self, pdf_name: str, page: int, ms: int, 
-                        used_text_layer: bool, has_akkadian: bool, llm_applied: bool):
+    def _append_progress(self, pdf_name: str, page: int, ms: int,
+                        used_text_layer: bool, has_akkadian: bool):
         """Append row to progress CSV."""
         with open(self.progress_csv, 'a', encoding='utf-8', newline='') as f:
             writer = csv.writer(f)
@@ -867,7 +577,6 @@ class PageTextPipeline:
                 ms,
                 used_text_layer,
                 has_akkadian,
-                llm_applied,
                 datetime.now().isoformat()
             ])
             f.flush()
@@ -878,7 +587,6 @@ class PageTextPipeline:
         logger.info("Pipeline completed")
         logger.info(f"Pages processed: {self.stats['pages_processed']}")
         logger.info(f"Pages with Akkadian: {self.stats['pages_with_akkadian']}")
-        logger.info(f"Pages with LLM correction: {self.stats['pages_with_llm']}")
         logger.info(f"Text layer used: {self.stats['text_layer_used']}")
         logger.info(f"OCR used: {self.stats['ocr_used']}")
         logger.info(f"Errors: {self.stats['errors']}")
@@ -890,7 +598,7 @@ class PageTextPipeline:
 def main():
     """Main entry point."""
     parser = argparse.ArgumentParser(
-        description="Page-level text extraction with Akkadian detection and LLM correction",
+        description="Page-level text extraction with Akkadian detection",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__
     )
@@ -918,24 +626,6 @@ def main():
     parser.add_argument('--profile', type=str,
                        help='Path to detection profile JSON (default: profiles/akkadian_strict.json)')
     
-    # LLM correction
-    parser.add_argument('--llm-on', action='store_true', default=False,
-                       help='Enable LLM typo correction')
-    parser.add_argument('--llm-off', dest='llm_on', action='store_false',
-                       help='Disable LLM typo correction')
-    parser.add_argument('--llm-provider', type=str, default='ollama',
-                       help='LLM provider (default: ollama)')
-    parser.add_argument('--llm-model', type=str, default='qwen2.5:7b-instruct',
-                       help='LLM model name')
-    parser.add_argument('--llm-base-url', type=str, default='http://localhost:11434',
-                       help='LLM API base URL')
-    parser.add_argument('--llm-temperature', type=float, default=0.2,
-                       help='LLM temperature')
-    parser.add_argument('--llm-top-p', type=float, default=0.2,
-                       help='LLM top-p')
-    parser.add_argument('--llm-timeout', type=int, default=120,
-                       help='LLM timeout in seconds')
-    
     # UI
     parser.add_argument('--status-bar', action='store_true', default=False,
                        help='Show progress bar')
@@ -952,13 +642,6 @@ def main():
             import paddleocr
         except ImportError:
             logger.error("PaddleOCR is required for OCR fallback. Install: pip install paddleocr")
-            sys.exit(1)
-    
-    if args.llm_on:
-        try:
-            import ollama
-        except ImportError:
-            logger.error("Ollama client is required for LLM correction. Install: pip install ollama")
             sys.exit(1)
     
     # Run pipeline

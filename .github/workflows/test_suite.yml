@@ -46,7 +46,6 @@ jobs:
             "doc/**/*.md" \
             ".github/workflows/*.yml" \
             "*.json" \
-            "docs/**/*.json" \
             "profiles/**/*.json"
 
       - name: Run pytest suite

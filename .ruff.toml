@@ -1,0 +1,6 @@
+target-version = "py311"
+line-length = 100
+
+[lint]
+# Keep CI lint focused on correctness issues for this mixed legacy repository.
+select = ["E9", "F63", "F7", "F82"]

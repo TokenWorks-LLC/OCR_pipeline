@@ -1,6 +1,0 @@
-combo_id,cer,wer,time_per_page,target_met,render_dpi,det_db_box_thresh,det_db_unclip_ratio,router_threshold_tr,beam_size,wbf_union
-0,0.0980,0.0850,2.15,TRUE,400,0.35,2.0,0.88,5,TRUE
-1,0.1120,0.0920,1.98,FALSE,400,0.35,2.0,0.86,5,TRUE
-2,0.1340,0.1150,1.87,FALSE,300,0.35,2.0,0.88,5,FALSE
-3,0.1420,0.1280,1.72,FALSE,300,0.35,2.0,0.86,5,FALSE
-4,0.1580,0.1390,1.95,FALSE,400,0.25,2.5,0.88,10,TRUE

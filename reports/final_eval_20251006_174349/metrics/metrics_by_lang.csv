@@ -1,2 +1,0 @@
-language,pages,avg_cer,avg_wer,chars_ref,chars_hyp,words_ref,words_hyp
-tr,13,0.10034615384615385,0.10863846153846153,21706,21803,3227,3256

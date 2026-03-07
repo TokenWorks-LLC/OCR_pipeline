@@ -1,3 +1,0 @@
-run_id,pdf,page,lang_guess,cer,wer,chars_ref,chars_hyp,words_ref,words_hyp
-baseline_easyocr_fast_20251006_165406,Albayrak_1998_3UHKB_Koloni caginda_p1-14.pdf,4,tr,0.5557809330628803,0.95,984,1351,140,192
-baseline_easyocr_fast_20251006_165406,Albayrak_1998_3UHKB_Koloni caginda_p1-14.pdf,5,tr,1.0,1.0,598,1432,103,199

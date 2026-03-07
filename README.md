@@ -55,6 +55,16 @@ Use these as the source of truth from repo root:
 - `python test_pipeline.py --allow-missing-engines` (optional smoke convenience)
 - `python test_pipeline.py` (optional strict smoke)
 
+## CI
+
+GitHub Actions workflow `test_suite` runs on every `push` and `pull_request` and enforces:
+
+- `ruff` lint checks on active Python paths
+- `prettier --check` for Markdown/JSON/YAML files in active docs and workflow paths
+- `python -m pytest tests -q`
+
+Use branch protection required check name: `test_suite`.
+
 Detailed operations are in `docs/RUN_AND_TEST.md` and `docs/PAGE_TEXT_RUNBOOK.md`.
 
 ## Docker
@@ -74,8 +84,8 @@ Use `README_docker.md` for container commands. Docker commands are documented th
 ## Notes
 
 - There is no root `requirements.txt` or `setup.py` workflow in this repo.
-- Historical material under `archive/` is intentionally not the canonical runtime path.
 - Legacy top-level scripts `quick_start.py` and `gold_evaluation.py` were removed as redundant/stale.
+- Legacy archive/evaluation/cache artifacts were removed as part of repository cleanup.
 
 ## License
 

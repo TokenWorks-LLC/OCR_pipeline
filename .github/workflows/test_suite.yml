@@ -1,0 +1,53 @@
+name: test_suite
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test_suite:
+    name: test_suite
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Python test/lint dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest ruff pymupdf
+
+      - name: Install Prettier
+        run: npm install --global prettier
+
+      - name: Lint (ruff)
+        run: ruff check run_pipeline.py test_pipeline.py tools tests
+
+      - name: Format check (prettier)
+        run: |
+          prettier --check \
+            "README*.md" \
+            "QUICKSTART.md" \
+            "docs/**/*.md" \
+            "doc/**/*.md" \
+            ".github/workflows/*.yml" \
+            "*.json" \
+            "docs/**/*.json" \
+            "profiles/**/*.json"
+
+      - name: Run pytest suite
+        run: python -m pytest tests -q

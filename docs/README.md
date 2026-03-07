@@ -16,7 +16,6 @@ Canonical docs for the current OCR pipeline runtime.
 ## Reference Notes
 
 - `ocr_backends_notes.md`: backend availability and validation notes
-- `baseline_evaluation.md`: baseline evaluation notes
 
 ## Consolidation Notes
 

@@ -89,3 +89,13 @@ REQUIRED_OCR_ENGINES=paddleocr,doctr,mmocr,kraken python -m pytest tests/test_en
 - `test_pipeline.py --allow-missing-engines` is intended for portability checks.
 - `test_pipeline.py` is intended for environment readiness checks.
 - If strict checks fail locally, prefer Docker/devcontainer for consistent dependencies across machines.
+
+## 5) GitHub Actions (`test_suite`)
+
+CI runs on every `push` and `pull_request` via `.github/workflows/test_suite.yml`.
+
+Checks included in the required `test_suite` status:
+
+- `ruff check run_pipeline.py test_pipeline.py tools tests`
+- `prettier --check` across active Markdown/JSON/YAML docs/workflow files
+- `python -m pytest tests -q`

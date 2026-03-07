@@ -1,3 +1,0 @@
-run_id,pdf,page,lang_guess,cer,wer,chars_ref,chars_hyp,words_ref,words_hyp
-baseline_doctr_fast_20251006_164956,Albayrak_1998_3UHKB_Koloni caginda_p1-14.pdf,4,tr,0.5354969574036511,0.8857142857142857,984,1281,140,169
-baseline_doctr_fast_20251006_164956,Albayrak_1998_3UHKB_Koloni caginda_p1-14.pdf,5,tr,1.0,1.0,598,1386,103,183

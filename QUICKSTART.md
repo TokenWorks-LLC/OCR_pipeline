@@ -118,4 +118,3 @@ python tools/run_page_text.py --help
 
 **Full docs:** README.md  
 **Technical details:** docs/PAGE_TEXT_RUNBOOK.md  
-**Implementation notes:** archive/docs/IMPLEMENTATION_SUMMARY.md

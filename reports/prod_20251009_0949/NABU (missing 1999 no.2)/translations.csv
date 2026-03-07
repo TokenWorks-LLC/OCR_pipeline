@@ -1,5 +1,0 @@
-pdf_id,page,akk_block_id,akk_text,akk_bbox,akk_column,trans_block_id,trans_text,trans_lang,trans_bbox,trans_column,score,distance_px,same_column,has_marker,reading_order_ok
-NABU (missing 1999 no.2),1477,p1477_c2_b2,"kurA§sur Idb[a-ba6-ába-iddina Sarkur Kar-du-ni-ás it-ti a-ba-me§ (?)]
-- 80 ","407,402,1021,2645",2,p1477_c3_b3,"I. L. FINKEL, J. E. READE (6-12-00)
-Department of the Ancient Near East, The British Museum
-LoNDoN WC1B 3DG (Grande Bretagne)",en,"575,1136,1283,1251",3,0.5465249732924174,301.2806001056158,False,False,True

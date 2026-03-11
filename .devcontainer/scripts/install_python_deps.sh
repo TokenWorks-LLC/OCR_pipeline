@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-python -m pip install -U pip setuptools wheel
+python -m pip install -U pip "setuptools<81" wheel
 
 # Core OCR/runtime packages used by the active pipeline and wrappers.
 python -m pip install --only-binary=:all: \
   "PyMuPDF==1.24.10" \
   "opencv-python-headless==4.10.0.84" \
   "pdf2image==1.17.0" \
-  "numpy>=1.24.0,<2.1" \
+  "numpy==1.23.5" \
   "Pillow>=10.0.0" \
   "lxml==6.0.2" \
   "PyYAML>=6.0" \
@@ -28,29 +28,43 @@ fi
 
 python -m pip install --only-binary=:all: "paddleocr>=3.2.0"
 
-# Torch family: pin to versions known to work with kraken and this project stack.
-python -m pip install --only-binary=:all: \
-  "torch==2.9.0" \
-  "torchvision==0.24.0"
+# CPU-only torch stack for the devcontainer. This keeps Kraken and MMOCR on a
+# compatible shared version line and avoids GPU-specific wheel churn.
+python -m pip uninstall -y torch torchvision torchaudio triton || true
+python -m pip install --index-url https://download.pytorch.org/whl/cpu \
+  "torch==2.0.1" \
+  "torchvision==0.15.2"
 
-# MMOCR stack with versions that satisfy import-time compatibility checks.
+# MMOCR stack: install full mmcv ops support, not mmcv-lite.
+python -m pip uninstall -y mmcv mmcv-lite mmdet mmocr || true
+python -m pip install --only-binary=:all: openmim
 python -m pip install --only-binary=:all: \
-  "mmengine>=0.10,<1.0" \
-  "mmcv-lite>=2.0.0rc4,<2.1.0" \
-  "mmdet>=3.0.0rc5,<3.2.0" \
-  "mmocr>=1.0.0,<1.1.0"
+  "mmengine==0.10.7" \
+  "mmdet==3.1.0"
+python -m pip install --only-binary=:all: \
+  "mmcv==2.0.0" \
+  -f https://download.openmmlab.com/mmcv/dist/cpu/torch2.0/index.html
+python -m pip install --only-binary=:all: "mmocr==1.0.1"
 
 # langdetect does not ship universal wheels in all environments; allow source build here.
 PIP_ONLY_BINARY= python -m pip install --no-binary langdetect "langdetect==1.0.9"
 
 # Install docTR with explicit dependencies to avoid resolver deadlocks under binary-first policies.
 python -m pip install --only-binary=:all: \
+  "h5py>=3.10,<4" \
   "onnx>=1.12,<3" \
   "defusedxml>=0.7.1" \
   "anyascii>=0.3.2" \
+  "huggingface-hub>=0.20,<2" \
+  "pypdfium2>=4,<5" \
+  "scipy==1.10.1" \
+  "shapely==1.8.5.post1" \
+  "tqdm>=4.66,<5" \
   "validators>=0.18.0"
 python -m pip install --no-deps "python-doctr==1.0.1"
 
 # Kraken is installed after torch to avoid repeated resolver churn.
-python -m pip install --only-binary=:all: kraken
+python -m pip install --only-binary=:all: "kraken==4.3.13"
+
+python -m pip check
 

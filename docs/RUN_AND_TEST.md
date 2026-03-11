@@ -111,6 +111,21 @@ Checks included in the required `test_suite` status:
 - `python -m pytest tests -q`
 - `python test_pipeline.py --allow-missing-engines`
 
+## 5a) Dev Container Notes
+
+The dev container creates and activates `.venv` automatically via `.devcontainer/scripts/post-create.sh`.
+
+The all-engines devcontainer is pinned to Python 3.10 on purpose. Python 3.11 pushes Kraken onto newer dependency lines that conflict with the older MMOCR/MMDetection stack required by the active ensemble runtime.
+
+Strict devcontainer behavior on `amd64` now validates real backend readiness, not just top-level imports:
+
+- MMOCR must provide `mmcv._ext` native ops, not just `mmcv-lite`
+- docTR dependencies such as `h5py` are installed explicitly
+- a default Kraken recognition model is downloaded automatically into `.venv/share/kraken/en_best.mlmodel`
+- `KRAKEN_MODEL_PATH` can still be overridden, but in strict mode it must point to an existing recognition model file
+
+If you intentionally want a portable setup without all optional engines configured, set `OCR_STRICT_ALL_ENGINES=0` before container creation.
+
 ## 6) Local Commit Hook
 
 To run lint/format checks on every local commit, install the repo hook once:

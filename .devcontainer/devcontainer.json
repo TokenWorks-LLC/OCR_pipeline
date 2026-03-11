@@ -11,7 +11,9 @@
     "PIP_DISABLE_PIP_VERSION_CHECK": "1",
     "PIP_NO_CACHE_DIR": "1",
     "PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK": "True",
-    "OCR_STRICT_ALL_ENGINES": "auto"
+    "OCR_STRICT_ALL_ENGINES": "auto",
+    "KRAKEN_MODEL_ID": "10.5281/zenodo.2577813",
+    "KRAKEN_MODEL_PATH": "/workspaces/OCR_pipeline/.venv/share/kraken/en_best.mlmodel"
   },
   "postCreateCommand": "bash .devcontainer/scripts/post-create.sh",
   "customizations": {

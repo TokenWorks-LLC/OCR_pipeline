@@ -29,7 +29,7 @@ jobs:
       - name: Install Python test/lint dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install pytest ruff pymupdf
+          python -m pip install pytest ruff pymupdf Pillow
 
       - name: Install Prettier
         run: npm install --global prettier

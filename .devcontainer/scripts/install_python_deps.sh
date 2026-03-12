@@ -5,10 +5,11 @@ python -m pip install -U pip "setuptools<81" wheel
 
 # Core OCR/runtime packages used by the active pipeline and wrappers.
 python -m pip install --only-binary=:all: \
-  "PyMuPDF==1.24.10" \
+  "PyMuPDF==1.26.7" \
   "opencv-python-headless==4.10.0.84" \
   "pdf2image==1.17.0" \
   "numpy==1.23.5" \
+  "protobuf==3.20.3" \
   "Pillow>=10.0.0" \
   "lxml==6.0.2" \
   "PyYAML>=6.0" \
@@ -26,7 +27,8 @@ else
     "paddlepaddle>=3.0.0,<4.0.0"
 fi
 
-python -m pip install --only-binary=:all: "paddleocr>=3.2.0"
+# Use the pre-PaddleX line to keep numpy compatible with Kraken.
+python -m pip install --only-binary=:all: --no-deps "paddleocr==2.7.3"
 
 # CPU-only torch stack for the devcontainer. This keeps Kraken and MMOCR on a
 # compatible shared version line and avoids GPU-specific wheel churn.
@@ -52,7 +54,7 @@ PIP_ONLY_BINARY= python -m pip install --no-binary langdetect "langdetect==1.0.9
 # Install docTR with explicit dependencies to avoid resolver deadlocks under binary-first policies.
 python -m pip install --only-binary=:all: \
   "h5py>=3.10,<4" \
-  "onnx>=1.12,<3" \
+  "onnx==1.16.2" \
   "defusedxml>=0.7.1" \
   "anyascii>=0.3.2" \
   "huggingface-hub>=0.20,<2" \
@@ -64,6 +66,7 @@ python -m pip install --only-binary=:all: \
 python -m pip install --no-deps "python-doctr==1.0.1"
 
 # Kraken is installed after torch to avoid repeated resolver churn.
+python -m pip install --only-binary=:all: "htrmopo==0.5"
 python -m pip install --only-binary=:all: "kraken==4.3.13"
 
 python -m pip check

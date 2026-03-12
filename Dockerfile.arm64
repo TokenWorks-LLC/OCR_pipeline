@@ -44,10 +44,11 @@ RUN pip install -U pip setuptools wheel
 # Install Python dependencies with ARM64-optimized pins
 # Using --only-binary=:all: to ensure no source compilation
 RUN pip install --only-binary=:all: \
-    "PyMuPDF==1.24.10" \
+    "PyMuPDF==1.26.7" \
     "opencv-python-headless==4.10.0.84" \
     "pdf2image==1.17.0" \
-    "numpy>=1.24.0" \
+    "numpy==1.23.5" \
+    "protobuf==3.20.3" \
     "requests>=2.31.0" \
     "Pillow>=10.0.0"
 
@@ -56,11 +57,12 @@ RUN pip install --only-binary=:all: \
     "paddlepaddle>=3.0.0,<4.0.0" \
     -f https://www.paddlepaddle.org.cn/whl/linux/aarch64/
 
-# Install PaddleOCR without deps (newer version compatible with PaddlePaddle 3.x)
-RUN pip install --only-binary=:all: --no-deps "paddleocr>=3.2.0"
+# Install PaddleOCR from the pre-PaddleX line to preserve Kraken compatibility.
+RUN pip install --only-binary=:all: --no-deps "paddleocr==2.7.3"
 
 # Manually install required runtime deps PaddleOCR expects (binary wheels only)
 RUN pip install --only-binary=:all: \
+    "onnx==1.16.2" \
     "shapely==2.1.2" \
     "scikit-image==0.25.2" \
     "imgaug==0.4.0" \
@@ -73,8 +75,10 @@ RUN pip install --only-binary=:all: \
     "tqdm==4.67.1" \
     "pytesseract>=0.3.10" \
     "PyYAML>=6.0" \
-    "typing-extensions>=4.12" \
-    "paddlex>=3.2.0"
+    "typing-extensions>=4.12"
+
+# htrmopo is used for Kraken model downloads in post-create workflows.
+RUN pip install --only-binary=:all: "htrmopo==0.5"
 
 # Set working directory
 WORKDIR /app
@@ -87,7 +91,7 @@ RUN chown -R ocruser:ocruser /app
 RUN if [ -f requirements.txt ]; then pip install --only-binary=:all: -r requirements.txt; fi
 
 # Validation step: ensure all critical imports work
-RUN python -c "import fitz, cv2, paddleocr, PIL, pdf2image; print('✅ PyMuPDF, OpenCV, PaddleOCR, Pillow, pdf2image OK')"
+RUN python -c "import fitz, cv2, paddleocr, PIL, pdf2image, htrmopo; print('✅ PyMuPDF, OpenCV, PaddleOCR, Pillow, pdf2image, htrmopo OK')"
 
 # Switch to non-root user
 USER ocruser

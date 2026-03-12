@@ -53,10 +53,11 @@ RUN python -m pip install -U pip setuptools wheel
 
 # Install core dependencies with compatible versions
 RUN python -m pip install --only-binary=:all: \
-    "PyMuPDF>=1.21.0" \
+    "PyMuPDF>=1.26.7" \
     "opencv-python-headless==4.10.0.84" \
     "pdf2image==1.17.0" \
-    "numpy>=1.24.0" \
+    "numpy==1.23.5" \
+    "protobuf==3.20.3" \
     "requests>=2.31.0" \
     "Pillow>=10.0.0"
 
@@ -65,8 +66,8 @@ RUN python -m pip uninstall -y paddlepaddle paddlepaddle-gpu || true \
     && (python -m pip install --no-cache-dir "paddlepaddle-gpu>=3.0.0,<4.0.0" \
         || python -m pip install --no-cache-dir "paddlepaddle>=3.0.0,<4.0.0")
 
-# Install PaddleOCR without deps, then install a pinned compatible dependency set
-RUN python -m pip install --only-binary=:all: --no-deps "paddleocr>=3.2.0"
+# Install PaddleOCR from the pre-PaddleX line to preserve Kraken compatibility.
+RUN python -m pip install --only-binary=:all: --no-deps "paddleocr==2.7.3"
 
 # Install PyTorch for docTR and other engines (CUDA 12.1 compatible)
 RUN python -m pip install --extra-index-url https://download.pytorch.org/whl/cu121 \
@@ -91,8 +92,12 @@ RUN python -m pip install mmocr || echo "⚠️ MMOCR installation failed, skipp
 # Install Kraken with dependencies
 RUN python -m pip install "lxml>=4.0" "click>=8.0" "kraken[cuda]" || echo "⚠️ Kraken installation failed, skipping"
 
+# htrmopo is used for Kraken model downloads in post-create workflows.
+RUN python -m pip install --only-binary=:all: "htrmopo==0.5"
+
 # Manually install required runtime deps PaddleOCR expects (binary wheels only)
 RUN python -m pip install --only-binary=:all: \
+    "onnx==1.16.2" \
     "shapely==2.1.2" \
     "scikit-image==0.25.2" \
     "imgaug==0.4.0" \
@@ -105,8 +110,7 @@ RUN python -m pip install --only-binary=:all: \
     "tqdm==4.67.1" \
     "pytesseract>=0.3.10" \
     "PyYAML>=6.0" \
-    "typing-extensions>=4.12" \
-    "paddlex>=3.2.0"
+    "typing-extensions>=4.12"
 
 # Set working directory
 WORKDIR /app
@@ -118,7 +122,7 @@ COPY . /app
 RUN if [ -f requirements.txt ]; then python -m pip install --only-binary=:all: -r requirements.txt; fi
 
 # Validation step: ensure all critical imports work and check GPU support
-RUN python -c "import fitz, cv2, paddleocr, PIL, pdf2image; print('✅ PyMuPDF, OpenCV, PaddleOCR, Pillow, pdf2image OK')" \
+RUN python -c "import fitz, cv2, paddleocr, PIL, pdf2image, htrmopo; print('✅ PyMuPDF, OpenCV, PaddleOCR, Pillow, pdf2image, htrmopo OK')" \
     && python -c "import paddle; print('PaddlePaddle version:', paddle.__version__); print('CUDA compiled:', paddle.is_compiled_with_cuda()); print('GPU count:', paddle.device.cuda.device_count() if paddle.is_compiled_with_cuda() else 0)"
 
 # Default command: run pipeline with help

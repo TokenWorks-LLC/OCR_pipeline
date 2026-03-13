@@ -48,11 +48,25 @@ python tools/run_page_text.py \
   --status-bar
 ```
 
+### OCR benchmark mode for layered PDFs
+
+```bash
+python tools/run_page_text.py \
+  --manifest path/to/manifest.tsv \
+  --output-root reports/page_text_force_ocr \
+  --prefer-text-layer \
+  --ocr-fallback ensemble \
+  --force-ocr \
+  --status-bar
+```
+
 ## Inputs
 
 - Use either `--manifest` **or** `--inputs`
 - Prefer manifests for large runs (faster startup, deterministic scope)
 - Enable `--ocr-fallback ensemble` when scanned or degraded pages need OCR
+- Add `--force-ocr` when you need OCR output even for pages with text layers
+- `--force-ocr` requires `--ocr-fallback paddle` or `--ocr-fallback ensemble`
 
 ## Preprocessing And Ensemble
 
@@ -91,6 +105,7 @@ python tools/run_page_text.py \
 ## Troubleshooting
 
 - No text extracted: add `--ocr-fallback ensemble`
+- Layered PDFs are skipping OCR: add `--force-ocr` with an OCR fallback
 - Sideways or upside-down scans: keep ensemble enabled so rotation search can correct the page
 - Two-column reading order looks wrong: prefer ensemble mode so bbox-aware reflow is applied
 - Akkadian misses: tune thresholds in profile

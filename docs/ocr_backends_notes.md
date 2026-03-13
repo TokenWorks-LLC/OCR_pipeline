@@ -37,6 +37,8 @@ python test_pipeline.py
 
 Use `--prefer-text-layer` to prioritize PDF text extraction and minimize OCR use where possible.
 
+Use `--force-ocr` with an OCR fallback when benchmarking OCR engines on PDFs that already have a text layer.
+
 Ensemble mode:
 
 - preprocesses the rendered page into multiple image variants

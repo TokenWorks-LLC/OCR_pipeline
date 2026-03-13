@@ -50,6 +50,20 @@ python tools/run_page_text.py \
 
 The ensemble fallback preprocesses each page into multiple denoised and thresholded variants, searches right-angle rotations, re-orders multi-column OCR lines, and fuses the best available OCR outputs with diacritic-aware consensus.
 
+### Force OCR On Layered PDFs (Engine Evaluation)
+
+```bash
+python tools/run_page_text.py \
+  --inputs "path/to/pdfs" \
+  --output-root "reports/force_ocr_eval" \
+  --prefer-text-layer \
+  --ocr-fallback ensemble \
+  --force-ocr \
+  --status-bar
+```
+
+Use this mode when PDFs already contain selectable text but you still want OCR output to measure OCR-engine performance.
+
 ### From Manifest (Specific Pages)
 
 ```bash
@@ -76,6 +90,7 @@ python tools/run_page_text.py \
 | `--output-root DIR`       | Output directory                               |
 | `--prefer-text-layer`     | Use PDF text layer (fast, recommended)         |
 | `--ocr-fallback ensemble` | Use fortified OCR ensemble if text layer fails |
+| `--force-ocr`             | Run OCR even when text layer is present        |
 | `--status-bar`            | Show progress bar                              |
 | `--profile FILE`          | Custom Akkadian detection config               |
 

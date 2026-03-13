@@ -61,6 +61,27 @@ Run OCR on a single PDF:
 docker compose run --rm $COMPOSE_SERVICE python run_pipeline.py --input-file data/input/sample.pdf
 ```
 
+Force OCR even when a PDF has a text layer (useful for layered-text benchmarking):
+
+```bash
+python run_pipeline.py \
+	--input-dir data/input_pdfs \
+	--output-dir reports/force_ocr_eval \
+	--engine ensemble \
+	--force-ocr
+```
+
+Equivalent direct command:
+
+```bash
+python tools/run_page_text.py \
+	--inputs data/input_pdfs \
+	--output-root reports/force_ocr_eval \
+	--prefer-text-layer \
+	--ocr-fallback ensemble \
+	--force-ocr
+```
+
 ## 3) Pytest Suite
 
 Run compatibility and end-to-end regression tests:
@@ -78,8 +99,10 @@ Key coverage in `tests/test_pipeline_e2e.py`:
 - `run_pipeline.py` compatibility mapping for `--input-file`
 - `run_pipeline.py` dry-run command mapping for supported flags
 - `run_pipeline.py` default dry-run mapping to ensemble fallback from config
+- `run_pipeline.py` mapping of `--force-ocr`
 - failure path for missing input file
 - `run_pipeline.py --validate-only` failure path for missing input directories
+- validation error when `--force-ocr` is used without an OCR fallback
 - `tools/build_manifest.py` range expansion and strict missing-PDF behavior
 
 Additional ensemble coverage in `tests/test_ensemble_support.py`:
@@ -98,6 +121,7 @@ REQUIRED_OCR_ENGINES=paddleocr,doctr,mmocr,kraken python -m pytest tests/test_en
 
 - `test_pipeline.py --allow-missing-engines` is intended for portability checks.
 - `test_pipeline.py` is intended for environment readiness checks.
+- `--force-ocr` requires an OCR fallback (`paddle` or `ensemble`).
 - If strict checks fail locally, prefer Docker/devcontainer for consistent dependencies across machines.
 
 ## 5) GitHub Actions (`test_suite`)

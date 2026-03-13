@@ -53,6 +53,14 @@ def _resolve_engine(config: dict[str, Any], explicit_engine: str | None) -> str:
     return "ensemble"
 
 
+def _resolve_force_ocr(config: dict[str, Any], explicit_force_ocr: bool) -> bool:
+    if explicit_force_ocr:
+        return True
+
+    configured = config.get("ocr", {}).get("force_ocr_on_text_layer") if isinstance(config, dict) else None
+    return bool(configured)
+
+
 def _validate_only(config_path: Path | None, input_dir: str | None, input_file: str | None) -> int:
     errors: list[str] = []
 
@@ -106,6 +114,7 @@ def _build_run_page_text_args(args: argparse.Namespace, cfg: dict[str, Any]) -> 
     temp_paths: list[Path] = []
     output_root = args.output_dir or _resolve_default_output_root(cfg)
     selected_engine = _resolve_engine(cfg, args.engine)
+    force_ocr = _resolve_force_ocr(cfg, args.force_ocr)
 
     if args.input_file:
         input_path = Path(args.input_file).resolve()
@@ -135,6 +144,9 @@ def _build_run_page_text_args(args: argparse.Namespace, cfg: dict[str, Any]) -> 
         run_args.extend(["--ocr-fallback", "paddle"])
     elif selected_engine_lower.startswith("ensemble") or selected_engine_lower.startswith("multi"):
         run_args.extend(["--ocr-fallback", "ensemble"])
+
+    if force_ocr:
+        run_args.append("--force-ocr")
 
     if args.status_bar:
         run_args.append("--status-bar")
@@ -182,6 +194,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--input-file", help="Single PDF file path")
     parser.add_argument("--output-dir", help="Output root directory")
     parser.add_argument("--engine", help="OCR engine name (compatibility flag)")
+    parser.add_argument("--force-ocr", action="store_true", help="Force OCR even when text layer is present")
     parser.add_argument("--profile", help="Akkadian detection profile JSON")
     parser.add_argument("--progress-csv", help="Optional progress CSV output path")
     parser.add_argument("--status-bar", action="store_true", help="Display progress bar")

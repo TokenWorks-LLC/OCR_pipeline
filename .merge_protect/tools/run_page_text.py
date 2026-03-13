@@ -266,6 +266,7 @@ class PDFTextExtractor:
         self,
         prefer_text_layer: bool = True,
         ocr_fallback: Optional[str] = None,
+        force_ocr: bool = False,
         profile_path: Optional[str] = None,
     ):
         """
@@ -277,6 +278,7 @@ class PDFTextExtractor:
         """
         self.prefer_text_layer = prefer_text_layer
         self.ocr_fallback = ocr_fallback
+        self.force_ocr = force_ocr
         self.ocr_engine = None
         self.ensemble = None
         self.profile_path = profile_path
@@ -317,6 +319,13 @@ class PDFTextExtractor:
             Tuple of (text, used_text_layer, metadata)
         """
         metadata = {"method": "unknown", "char_count": 0}
+
+        if self.force_ocr and self.ocr_fallback:
+            text, success = self._extract_via_ocr(pdf_path, page_num)
+            if success:
+                metadata["method"] = f"ocr_{self.ocr_fallback}"
+                metadata["char_count"] = len(text)
+                return text, False, metadata
         
         # Try text layer first
         if self.prefer_text_layer:
@@ -439,6 +448,7 @@ class PageTextPipeline:
         self.extractor = PDFTextExtractor(
             prefer_text_layer=args.prefer_text_layer,
             ocr_fallback=args.ocr_fallback if args.ocr_fallback != 'none' else None,
+            force_ocr=args.force_ocr,
             profile_path=args.profile or 'profiles/akkadian_strict.json',
         )
         
@@ -660,6 +670,8 @@ def main():
                        help='Prefer PDF text layer extraction')
     parser.add_argument('--ocr-fallback', type=str, choices=['paddle', 'ensemble', 'none'], default='none',
                        help='OCR engine for fallback when text layer fails')
+    parser.add_argument('--force-ocr', action='store_true', default=False,
+                       help='Run OCR even when a text layer is present')
     
     # Akkadian detection
     parser.add_argument('--profile', type=str,
@@ -675,6 +687,10 @@ def main():
         logger.error(
             "No extraction method enabled. Use --prefer-text-layer and/or set --ocr-fallback to paddle or ensemble."
         )
+        sys.exit(2)
+
+    if args.force_ocr and args.ocr_fallback == 'none':
+        logger.error("--force-ocr requires --ocr-fallback paddle or ensemble")
         sys.exit(2)
     
     # Validate dependencies

@@ -128,3 +128,53 @@ def test_pdf_text_extractor_uses_ensemble_when_text_layer_fails(monkeypatch):
     assert text == "šar-ru-um"
     assert used_text_layer is False
     assert meta["method"] == "ocr_ensemble"
+
+
+def test_pdf_text_extractor_force_ocr_overrides_text_layer(monkeypatch):
+    module = _load_protected_runner_module()
+    extractor = module.PDFTextExtractor(
+        prefer_text_layer=True,
+        ocr_fallback="ensemble",
+        force_ocr=True,
+        profile_path=str(ROOT / "profiles" / "akkadian_strict.json"),
+    )
+
+    class StubEnsemble:
+        def extract_page_text(self, pdf_path: str, page_num: int):
+            assert pdf_path == "dummy.pdf"
+            assert page_num == 0
+            return "ocr text", {"engines_used": ["paddle", "doctr"]}
+
+    extractor.ensemble = StubEnsemble()
+    monkeypatch.setattr(extractor, "_extract_text_layer", lambda pdf_path, page_num: ("layer text fallback", True))
+
+    text, used_text_layer, meta = extractor.extract_page_text("dummy.pdf", 0)
+
+    assert text == "ocr text"
+    assert used_text_layer is False
+    assert meta["method"] == "ocr_ensemble"
+
+
+def test_pdf_text_extractor_force_ocr_falls_back_to_text_layer_when_ocr_fails(monkeypatch):
+    module = _load_protected_runner_module()
+    extractor = module.PDFTextExtractor(
+        prefer_text_layer=True,
+        ocr_fallback="ensemble",
+        force_ocr=True,
+        profile_path=str(ROOT / "profiles" / "akkadian_strict.json"),
+    )
+
+    class StubEnsemble:
+        def extract_page_text(self, pdf_path: str, page_num: int):
+            assert pdf_path == "dummy.pdf"
+            assert page_num == 0
+            return "", {"engines_used": []}
+
+    extractor.ensemble = StubEnsemble()
+    monkeypatch.setattr(extractor, "_extract_text_layer", lambda pdf_path, page_num: ("layer text fallback", True))
+
+    text, used_text_layer, meta = extractor.extract_page_text("dummy.pdf", 0)
+
+    assert text == "layer text fallback"
+    assert used_text_layer is True
+    assert meta["method"] == "text_layer"

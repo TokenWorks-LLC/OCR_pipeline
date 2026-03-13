@@ -217,6 +217,51 @@ def test_run_pipeline_dry_run_uses_configured_ensemble_by_default(tmp_path: Path
     assert "--ocr-fallback ensemble" in text
 
 
+def test_run_pipeline_dry_run_includes_force_ocr_when_requested(tmp_path: Path):
+    output_dir = tmp_path / "force_ocr_output"
+
+    proc = _run(
+        "run_pipeline.py",
+        "--input-dir",
+        "data/input",
+        "--output-dir",
+        str(output_dir),
+        "--engine",
+        "paddleocr",
+        "--force-ocr",
+        "--dry-run",
+        "-c",
+        "config.json",
+    )
+
+    assert proc.returncode == 0, proc.stdout + proc.stderr
+    text = proc.stdout + proc.stderr
+    assert "--ocr-fallback paddle" in text
+    assert "--force-ocr" in text
+
+
+def test_run_page_text_force_ocr_requires_fallback(tmp_path: Path):
+    input_dir = tmp_path / "inputs"
+    output_dir = tmp_path / "outputs"
+    input_dir.mkdir(parents=True)
+
+    sample_pdf = input_dir / "force_ocr_requires_fallback.pdf"
+    _write_pdf(sample_pdf, ["force OCR validation page"])
+
+    proc = _run(
+        "tools/run_page_text.py",
+        "--inputs",
+        str(input_dir),
+        "--output-root",
+        str(output_dir),
+        "--force-ocr",
+        "--prefer-text-layer",
+    )
+
+    assert proc.returncode != 0
+    assert "--force-ocr requires --ocr-fallback" in (proc.stdout + proc.stderr)
+
+
 def test_run_pipeline_validate_only_missing_input_dir_returns_error(tmp_path: Path):
     missing_dir = tmp_path / "missing_input_dir"
 

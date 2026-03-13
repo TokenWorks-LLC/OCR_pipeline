@@ -514,7 +514,7 @@ class PageTextPipeline:
         elif self.args.inputs:
             # Recursively find PDFs
             input_path = Path(self.args.inputs)
-            pdf_files = list(input_path.rglob("*.pdf"))
+            pdf_files = [p for p in input_path.rglob("*") if p.is_file() and p.suffix.lower() == ".pdf"]
             
             for pdf_path in pdf_files:
                 # Get page count
@@ -557,8 +557,17 @@ class PageTextPipeline:
             text, used_text_layer, extract_meta = self.extractor.extract_page_text(pdf_path, page_num)
             
             if not text:
-                logger.warning(f"No text extracted from {pdf_name} page {page_1based}")
+                logger.warning(
+                    "No text extracted from %s page %s (method=%s)",
+                    pdf_name,
+                    page_1based,
+                    extract_meta.get("method", "unknown"),
+                )
                 self.stats["errors"] += 1
+                elapsed_ms = int((time.time() - start_time) * 1000)
+                # Preserve one-row-per-page behavior even when extraction fails.
+                self._append_output(pdf_name, page_1based, "", False)
+                self._append_progress(pdf_name, page_1based, elapsed_ms, used_text_layer, False)
                 return
             
             # Detect Akkadian
@@ -661,6 +670,12 @@ def main():
                        help='Show progress bar')
     
     args = parser.parse_args()
+
+    if not args.prefer_text_layer and args.ocr_fallback == 'none':
+        logger.error(
+            "No extraction method enabled. Use --prefer-text-layer and/or set --ocr-fallback to paddle or ensemble."
+        )
+        sys.exit(2)
     
     # Validate dependencies
     if not PYMUPDF_AVAILABLE:

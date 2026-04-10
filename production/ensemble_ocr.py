@@ -638,6 +638,74 @@ class KrakenBackend(OCRBackendBase):
         confidence = sum(confidences) / len(confidences) if confidences else 0.0
         return OCRCandidate(self.name, text, confidence=confidence, variant=variant, lines=lines)
 
+class CuReDBackend(OCRBackendBase):
+    """Kraken-based backend using the CuReD cuneiform recognition model."""
+ 
+    name = "cured"
+    preferred_variants = ("adaptive", "morphology", "binary", "contrast", "sharpen")
+ 
+    _SEARCH_PATHS = (
+        "models/CuReD.mlmodel",
+        "models/cured.mlmodel",
+        "models/latest.mlmodel",
+    )
+ 
+    def _ensure_loaded(self) -> None:
+        if self._engine is not None:
+            return
+ 
+        model_path = self.config.get("cured_model_path") or os.getenv("CURED_MODEL_PATH")
+        if not model_path:
+            for candidate in self._SEARCH_PATHS:
+                if Path(candidate).exists():
+                    model_path = candidate
+                    break
+        if not model_path:
+            raise RuntimeError(
+                "CuReD model not found. Set cured_model_path in config, "
+                "CURED_MODEL_PATH env var, or place the .mlmodel in models/CuReD.mlmodel"
+            )
+        if not Path(model_path).exists():
+            raise FileNotFoundError(f"CuReD model not found: {model_path}")
+ 
+        from kraken.lib import models
+ 
+        self._engine = models.load_any(model_path)
+ 
+    def _infer_variant(self, variants: PageImageVariants, variant: str) -> OCRCandidate | None:
+        import warnings
+ 
+        from kraken import binarization, pageseg, rpred
+ 
+        image = variants.get_pil(variant).convert("L")
+        binary = binarization.nlbin(image)
+        segments = pageseg.segment(binary)
+        with warnings.catch_warnings():
+            warnings.filterwarnings("ignore", message="Using legacy polygon extractor")
+            predictions = list(rpred.rpred(self._engine, binary, segments))
+ 
+        lines: list[OCRLine] = []
+        confidences: list[float] = []
+        for record in predictions:
+            text = str(getattr(record, "prediction", "")).strip()
+            if not text:
+                continue
+ 
+            confidence = 0.0
+            conf = getattr(record, "confidence", None)
+            if isinstance(conf, (int, float)):
+                confidence = float(conf)
+                confidences.append(confidence)
+ 
+            bbox = getattr(record, "bbox", None)
+            lines.append(OCRLine(text=text, bbox=bbox, confidence=confidence, source=self.name))
+ 
+        text = _normalize_whitespace("\n".join(line.text for line in lines))
+        if not text:
+            return None
+ 
+        confidence = sum(confidences) / len(confidences) if confidences else 0.0
+        return OCRCandidate(self.name, text, confidence=confidence, variant=variant, lines=lines)
 
 class TextEnsembleFuser:
     """Consensus-based text fusion that tries hard not to lose diacritics."""
@@ -739,6 +807,7 @@ class FortifiedOCREnsemble:
         "doctr": DocTRBackend,
         "mmocr": MMOCRBackend,
         "kraken": KrakenBackend,
+        "cured": CuReDBackend
     }
 
     def __init__(self, profile_path: str | None = None):

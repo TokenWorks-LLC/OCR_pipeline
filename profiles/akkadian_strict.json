@@ -22,7 +22,7 @@
   },
 
   "preprocessing": {
-    "rotation_search_degrees": [0, 90, 180, 270],
+    "rotation_search_degrees": [0],
     "enable_adaptive_threshold": true,
     "enable_denoise": true,
     "enable_morphology": true,
@@ -40,7 +40,7 @@
   },
 
   "engines": {
-    "enabled": ["paddle", "doctr", "mmocr", "kraken"],
+    "enabled": ["paddle", "doctr", "mmocr", "kraken", "cured"],
     "min_confidence": 0.55,
     "per_engine_timeout_s": 30,
     "max_lines_per_page": 1000
@@ -52,7 +52,8 @@
       "paddle": 1.0,
       "doctr": 1.0,
       "mmocr": 1.0,
-      "kraken": 1.0
+      "kraken": 1.0,
+      "cured": 1.8
     },
     "min_agreement": 2,
     "confidence_calibration": true

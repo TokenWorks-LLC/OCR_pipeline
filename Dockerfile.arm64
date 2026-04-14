@@ -80,6 +80,10 @@ RUN pip install --only-binary=:all: \
 # htrmopo is used for Kraken model downloads in post-create workflows.
 RUN pip install --only-binary=:all: "htrmopo==0.5"
 
+# CRITICAL: Re-pin numpy<2.0 AFTER all pip installs.
+# PaddlePaddle 3.x and scikit-image pull numpy 2.x which breaks imgaug (np.sctypes removed).
+RUN pip install --only-binary=:all: "numpy<2.0"
+
 # Set working directory
 WORKDIR /app
 

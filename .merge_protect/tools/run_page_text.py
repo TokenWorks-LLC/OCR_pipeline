@@ -289,11 +289,16 @@ class PDFTextExtractor:
             self._init_ensemble()
     
     def _init_paddle_ocr(self):
-        """Initialize PaddleOCR engine."""
+        """Initialize PaddleOCR engine (supports both v2.x and v3.x)."""
         try:
             from paddleocr import PaddleOCR
+            try:
+                import paddleocr
+                self._paddle_v3 = int(paddleocr.__version__.split(".")[0]) >= 3
+            except Exception:
+                self._paddle_v3 = False
             self.ocr_engine = PaddleOCR(lang='en')
-            logger.info("Initialized PaddleOCR for fallback")
+            logger.info("Initialized PaddleOCR v%s for fallback", "3.x" if self._paddle_v3 else "2.x")
         except Exception as e:
             logger.warning(f"Failed to initialize PaddleOCR: {e}")
             self.ocr_fallback = None
@@ -395,16 +400,26 @@ class PDFTextExtractor:
             import numpy as np
             img = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width, pix.n)
             
-            # Run OCR
-            result = self.ocr_engine.ocr(img, cls=True)
-            
-            # Extract text
-            lines = []
-            if result and result[0]:
-                for line in result[0]:
-                    if line and len(line) >= 2:
-                        text = line[1][0]
-                        lines.append(text)
+            # Run OCR (version-aware)
+            if getattr(self, '_paddle_v3', False) and hasattr(self.ocr_engine, 'predict'):
+                results = self.ocr_engine.predict(img)
+                lines = []
+                for res in results:
+                    rec_texts = getattr(res, 'rec_texts', None)
+                    if rec_texts is None and isinstance(res, dict):
+                        rec_texts = res.get('rec_texts', [])
+                    for txt in (rec_texts or []):
+                        t = str(txt).strip()
+                        if t:
+                            lines.append(t)
+            else:
+                result = self.ocr_engine.ocr(img, cls=True)
+                lines = []
+                if result and result[0]:
+                    for line in result[0]:
+                        if line and len(line) >= 2:
+                            text = line[1][0]
+                            lines.append(text)
             
             text = '\n'.join(lines)
             text = self._normalize_whitespace(text)

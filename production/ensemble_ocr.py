@@ -431,6 +431,7 @@ class OCRBackendBase:
 
 class PaddleBackend(OCRBackendBase):
     name = "paddle"
+    _is_v3: bool = False
 
     def _ensure_loaded(self) -> None:
         if self._engine is not None:
@@ -438,10 +439,27 @@ class PaddleBackend(OCRBackendBase):
         from paddleocr import PaddleOCR
 
         language_hint = self.config.get("paddle_lang") or self.config.get("lang") or "en"
-        self._engine = PaddleOCR(lang=language_hint, use_textline_orientation=True)
+
+        try:
+            import paddleocr
+            self._is_v3 = int(paddleocr.__version__.split(".")[0]) >= 3
+        except Exception:
+            self._is_v3 = False
+
+        if self._is_v3:
+            self._engine = PaddleOCR(lang=language_hint)
+        else:
+            self._engine = PaddleOCR(lang=language_hint, use_textline_orientation=True)
 
     def _infer_variant(self, variants: PageImageVariants, variant: str) -> OCRCandidate | None:
         image = variants.get_numpy(variant)
+
+        if self._is_v3 and hasattr(self._engine, "predict"):
+            return self._infer_v3(image, variant)
+        return self._infer_v2(image, variant)
+
+    def _infer_v2(self, image, variant: str) -> OCRCandidate | None:
+        """PaddleOCR v2.x: .ocr() returns [[[polygon, (text, conf)], ...]]."""
         result = self._engine.ocr(image, cls=True)
 
         lines: list[OCRLine] = []
@@ -468,6 +486,56 @@ class PaddleBackend(OCRBackendBase):
                             source=self.name,
                         )
                     )
+
+        text = _normalize_whitespace("\n".join(line.text for line in lines))
+        if not text:
+            return None
+
+        confidence = sum(confidences) / len(confidences) if confidences else 0.0
+        return OCRCandidate(self.name, text, confidence=confidence, variant=variant, lines=lines)
+
+    def _infer_v3(self, image, variant: str) -> OCRCandidate | None:
+        """PaddleOCR v3.x: .predict() returns result objects with rec_texts/rec_scores/dt_polys."""
+        results = self._engine.predict(image)
+
+        lines: list[OCRLine] = []
+        confidences: list[float] = []
+        for result in results:
+            rec_texts = getattr(result, "rec_texts", None)
+            if rec_texts is None and isinstance(result, dict):
+                rec_texts = result.get("rec_texts", [])
+            rec_texts = rec_texts or []
+
+            rec_scores = getattr(result, "rec_scores", None)
+            if rec_scores is None and isinstance(result, dict):
+                rec_scores = result.get("rec_scores", [])
+            rec_scores = rec_scores or []
+
+            dt_polys = getattr(result, "dt_polys", None)
+            if dt_polys is None and isinstance(result, dict):
+                dt_polys = result.get("dt_polys", [])
+            dt_polys = dt_polys or []
+
+            for i, txt in enumerate(rec_texts):
+                text = str(txt).strip()
+                if not text:
+                    continue
+
+                confidence = 0.0
+                if i < len(rec_scores):
+                    try:
+                        confidence = float(rec_scores[i])
+                        confidences.append(confidence)
+                    except Exception:
+                        pass
+
+                bbox = None
+                if i < len(dt_polys):
+                    bbox = _bbox_from_polygon(dt_polys[i])
+
+                lines.append(
+                    OCRLine(text=text, bbox=bbox, confidence=confidence, source=self.name)
+                )
 
         text = _normalize_whitespace("\n".join(line.text for line in lines))
         if not text:

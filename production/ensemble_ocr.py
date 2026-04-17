@@ -95,6 +95,91 @@ def _comparison_key(text: str) -> str:
     return re.sub(r"\s+", " ", simplified).strip()
 
 
+_AKKADIAN_DIACRITICS = frozenset("šṣṭḫāēīūŠṢṬḪĀĒĪŪ")
+_AKKADIAN_MARKERS = frozenset(["LUGAL", "DUMU", "DINGIR", "KÙ.BABBAR"])
+
+# CuReD emits "{X" as shorthand for a single-character superscript (per its
+# README: "{dAMAR.UTU" → "{d}AMAR.UTU"). The other engines and the akkadian
+# profile's preserve_chars use real Unicode superscripts. Without this
+# normalization CuReD's correct tokens never match anyone else's in the
+# fuser, so the ROVER voting silently drops every superscript token it read.
+_CURED_SUPERSCRIPT_MAP = {
+    "d": "ᵈ",  # DINGIR / deity determinative
+    "m": "ᵐ",  # male personal name
+    "f": "ᶠ",  # female personal name
+}
+_CURED_OPEN_BRACE_RE = re.compile(r"\{(.)")
+_CURED_CLOSED_SUPER_RE = re.compile(r"\{(.)\}")
+
+
+def _postprocess_cured_text(text: str) -> str:
+    """Apply CuReD's documented superscript closure and map to Unicode.
+
+    Step 1: close every "{X" as "{X}" (straight from CuReD README).
+    Step 2: for X in {d, m, f}, replace "{X}" with the Unicode superscript
+    (ᵈ/ᵐ/ᶠ) the rest of the pipeline uses. Other "{X}" forms are left alone
+    so they're still legible if they appear.
+    """
+    closed = _CURED_OPEN_BRACE_RE.sub(r"{\1}", text)
+    return _CURED_CLOSED_SUPER_RE.sub(
+        lambda m: _CURED_SUPERSCRIPT_MAP.get(m.group(1), m.group(0)), closed
+    )
+# Short-token hyphenated words: 1-3 char tokens joined by 2+ hyphens.
+# Akkadian transliteration is dominated by these (a-na-ku, qi-bi-ma, be-li-ia).
+# English hyphenated words almost always have ≥1 token >3 chars
+# (step-by-step, mother-in-law, out-of-date), so this pattern misses them.
+_SHORT_HYPHEN_RE = re.compile(r'\b[a-z]{1,3}(?:-[a-z]{1,3}){2,}\b', re.IGNORECASE)
+# Numbered verse lines common in transliteration editions: "1. a-na ..."
+_LINE_NUMBER_RE = re.compile(r'(?:^|\n)\s*\d{1,3}[.\)]\s+\S', re.MULTILINE)
+
+
+def _is_akkadian_transliteration(text: str) -> bool:
+    """Return True if text looks like Akkadian transliteration.
+
+    Uses signals that survive diacritic-loss so the check works on output from
+    general-purpose OCR engines (Paddle/docTR/MMOCR) which can't produce š/ṭ/ḫ.
+    """
+    if any(ch in _AKKADIAN_DIACRITICS for ch in text):
+        return True
+    upper = text.upper()
+    if any(marker in upper for marker in _AKKADIAN_MARKERS):
+        return True
+    short_hyphen_count = len(_SHORT_HYPHEN_RE.findall(text))
+    if short_hyphen_count >= 2:
+        return True
+    # One short-hyphen token is weak alone (e.g. "tic-tac-toe"); require a
+    # numbered-line marker as corroboration.
+    return short_hyphen_count >= 1 and bool(_LINE_NUMBER_RE.search(text))
+
+
+def _word_looks_transliteration(word: str) -> bool:
+    """Per-word version of the transliteration check.
+
+    Line-level signals (numbered lines) don't apply to isolated words, so this
+    relies on intrinsic per-word cues: diacritics, Sumerogram markers, or the
+    short-hyphen shape (matching the whole word).
+    """
+    if not word:
+        return False
+    if any(ch in _AKKADIAN_DIACRITICS for ch in word):
+        return True
+    if word.upper() in _AKKADIAN_MARKERS:
+        return True
+    return bool(_SHORT_HYPHEN_RE.fullmatch(word))
+
+
+def _normalize_for_enrichment(word: str) -> str:
+    """Collapse word to letters only (no diacritics, no hyphens, casefolded).
+
+    Used to detect when CuReD's output is the same word as another engine's
+    output except for diacritics (and optional hyphenation), e.g. "be-lí-ia"
+    vs "be-li-ia" or "belia". Hyphens are dropped because Paddle/docTR often
+    run hyphenated transliteration tokens together.
+    """
+    stripped = _strip_diacritics(word).casefold()
+    return re.sub(r"[-—\s]", "", stripped)
+
+
 def _contains_arabic(text: str) -> bool:
     for ch in text:
         codepoint = ord(ch)
@@ -690,20 +775,21 @@ class CuReDBackend(OCRBackendBase):
             text = str(getattr(record, "prediction", "")).strip()
             if not text:
                 continue
- 
+            text = _postprocess_cured_text(text)
+
             confidence = 0.0
             conf = getattr(record, "confidence", None)
             if isinstance(conf, (int, float)):
                 confidence = float(conf)
                 confidences.append(confidence)
- 
+
             bbox = getattr(record, "bbox", None)
             lines.append(OCRLine(text=text, bbox=bbox, confidence=confidence, source=self.name))
- 
+
         text = _normalize_whitespace("\n".join(line.text for line in lines))
         if not text:
             return None
- 
+
         confidence = sum(confidences) / len(confidences) if confidences else 0.0
         return OCRCandidate(self.name, text, confidence=confidence, variant=variant, lines=lines)
 
@@ -720,8 +806,14 @@ class TextEnsembleFuser:
         if len(viable) == 1:
             return viable[0]
 
-        best_whole = max(viable, key=lambda candidate: self._whole_score(candidate, viable))
-        line_counts = {len(self._lines(candidate.text)) for candidate in viable}
+        # CuReD's line count reflects its hallucinated segmentation and can't
+        # be trusted as page structure. When engines disagree on line counts
+        # we pick the best non-CuReD candidate as the whole-text fallback;
+        # otherwise CuReD wins _whole_score via weight + hallucinated diacritic
+        # richness and its entire garbage output is returned verbatim.
+        structural_pool = [c for c in viable if c.engine != "cured"] or viable
+        best_whole = max(structural_pool, key=lambda candidate: self._whole_score(candidate, viable))
+        line_counts = {len(self._lines(candidate.text)) for candidate in structural_pool}
         if len(line_counts) != 1:
             return OCRCandidate(
                 engine="ensemble",
@@ -737,18 +829,40 @@ class TextEnsembleFuser:
             )
 
         line_total = line_counts.pop()
+        # Only include candidates whose own line count matches line_total;
+        # otherwise `candidate_lines[line_index]` pairs unrelated lines across
+        # engines (e.g. CuReD's hallucinated line 39 vs Paddle's line 39).
+        line_fusion_pool = [c for c in viable if len(self._lines(c.text)) == line_total]
+        per_engine_counts = ", ".join(
+            f"{c.engine}={len(self._lines(c.text))}" for c in viable
+        )
+        pool_engines = ", ".join(c.engine for c in line_fusion_pool) or "<empty>"
+        excluded = [c.engine for c in viable if c not in line_fusion_pool]
+        logger.info(
+            "fusion line counts (target=%d): %s | pool=%s | excluded=%s",
+            line_total, per_engine_counts, pool_engines, excluded or "none",
+        )
         fused_lines: list[str] = []
+        winner_counts: dict[str, int] = {}
         for line_index in range(line_total):
             line_options = []
-            for candidate in viable:
+            for candidate in line_fusion_pool:
                 candidate_lines = self._lines(candidate.text)
                 line_options.append((candidate, candidate_lines[line_index]))
 
-            best_line = max(
-                line_options,
-                key=lambda option: self._line_score(option[0], option[1], [line for _, line in line_options]),
-            )
-            fused_lines.append(best_line[1])
+            line_text, line_winners = self._fuse_line_words(line_options)
+            fused_lines.append(line_text)
+            line_tally: dict[str, int] = {}
+            for engine in line_winners:
+                winner_counts[engine] = winner_counts.get(engine, 0) + 1
+                line_tally[engine] = line_tally.get(engine, 0) + 1
+            if line_tally:
+                tally_str = ", ".join(f"{eng}={count}" for eng, count in sorted(line_tally.items(), key=lambda kv: -kv[1]))
+                logger.info("fusion line %d winners: %s | %s", line_index, tally_str, line_text)
+
+        if winner_counts:
+            summary = ", ".join(f"{eng}={count}" for eng, count in sorted(winner_counts.items(), key=lambda kv: -kv[1]))
+            logger.info("fusion page winners (word-level): %s", summary)
 
         fused_text = _normalize_whitespace("\n".join(fused_lines))
         confidence = sum(candidate.confidence for candidate in viable) / len(viable)
@@ -761,6 +875,7 @@ class TextEnsembleFuser:
                 "method": "line_consensus",
                 "sources": [candidate.engine for candidate in viable],
                 "rotation_angle": best_whole.meta.get("rotation_angle", 0),
+                "word_winners": winner_counts,
             },
         )
 
@@ -773,30 +888,171 @@ class TextEnsembleFuser:
         weight = self.weights.get(candidate.engine, 1.0)
         similarities = []
         candidate_key = _comparison_key(candidate.text)
+        non_cured_transliteration = False
         for other in population:
             if other.engine == candidate.engine:
                 continue
             similarities.append(SequenceMatcher(None, candidate_key, _comparison_key(other.text)).ratio())
+            if other.engine != "cured" and _is_akkadian_transliteration(other.text):
+                non_cured_transliteration = True
 
         agreement = sum(similarities) / len(similarities) if similarities else 0.0
         richness = _diacritic_richness(candidate.text)
         completeness = min(len(candidate.text.strip()) / 300.0, 1.0)
         confidence = max(candidate.confidence, 0.0)
         line_bonus = min(candidate.meta.get("line_count", 0) / 12.0, 1.0) * 0.12
-        return (weight * 0.35) + agreement + (richness * 0.4) + (completeness * 0.1) + (confidence * 0.15) + line_bonus
+        transliteration_bonus = 0.20 if (candidate.engine == "cured" and non_cured_transliteration) else 0.0
+        return (weight * 0.35) + agreement + (richness * 0.4) + (completeness * 0.1) + (confidence * 0.15) + line_bonus + transliteration_bonus
 
-    def _line_score(self, candidate: OCRCandidate, line: str, population_lines: list[str]) -> float:
-        weight = self.weights.get(candidate.engine, 1.0)
-        line_key = _comparison_key(line)
-        comparisons = [
-            SequenceMatcher(None, line_key, _comparison_key(other_line)).ratio()
-            for other_line in population_lines
-            if other_line != line
-        ]
-        agreement = sum(comparisons) / len(comparisons) if comparisons else 0.0
-        richness = _diacritic_richness(line)
-        arabic_bonus = 0.15 if _contains_arabic(line) else 0.0
-        return (weight * 0.35) + agreement + (richness * 0.45) + arabic_bonus + (candidate.confidence * 0.1)
+    @staticmethod
+    def _tokenize(line: str) -> list[str]:
+        return line.split()
+
+    @staticmethod
+    def _align_words(skeleton: list[str], other: list[str]) -> list[str | None]:
+        """Align `other` onto `skeleton` positions via word-level diff.
+
+        Returns a list the same length as `skeleton`; each slot holds the word
+        from `other` that aligns to that skeleton position, or None if no
+        word aligns (e.g. the other candidate dropped that word).
+        """
+        aligned: list[str | None] = [None] * len(skeleton)
+        matcher = SequenceMatcher(a=[w.casefold() for w in skeleton],
+                                  b=[w.casefold() for w in other], autojunk=False)
+        for op, i1, i2, j1, j2 in matcher.get_opcodes():
+            if op == "equal" or op == "replace":
+                span = min(i2 - i1, j2 - j1)
+                for k in range(span):
+                    aligned[i1 + k] = other[j1 + k]
+        return aligned
+
+    def _fuse_line_words(self, line_options: list[tuple[OCRCandidate, str]]) -> tuple[str, list[str]]:
+        """Word-level fusion across candidate lines (ROVER-style).
+
+        Returns `(fused_line, winning_engine_per_word)`. Picks a skeleton
+        candidate (highest-weight non-CuReD non-empty line), aligns every other
+        candidate's words onto it, and for each word position chooses the best
+        word using `_word_score`.
+        """
+        tokenized = [(cand, self._tokenize(line)) for cand, line in line_options]
+        viable = [(c, w) for c, w in tokenized if w]
+        if not viable:
+            return "", []
+        if len(viable) == 1:
+            cand, words = viable[0]
+            return " ".join(words), [cand.engine] * len(words)
+
+        # Skeleton must be a general-purpose engine, not CuReD. CuReD's word
+        # count reflects its hallucinated glyph segmentation on non-cuneiform
+        # input, not the actual text structure. If we use CuReD as the skeleton,
+        # every "extra" word it invented becomes a fused-output position where
+        # only CuReD has a candidate, so CuReD wins by default.
+        general_candidates = [cw for cw in viable if cw[0].engine != "cured"]
+        pool = general_candidates or viable
+        skeleton_cand, skeleton_words = max(
+            pool, key=lambda cw: (self.weights.get(cw[0].engine, 1.0), len(cw[1]))
+        )
+
+        aligned_per_engine: list[tuple[OCRCandidate, list[str | None]]] = []
+        for cand, words in viable:
+            if cand.engine == skeleton_cand.engine:
+                aligned_per_engine.append((cand, list(skeleton_words)))
+            else:
+                aligned_per_engine.append((cand, self._align_words(skeleton_words, words)))
+
+        fused_words: list[str] = []
+        word_winners: list[str] = []
+        for idx in range(len(skeleton_words)):
+            word_options: list[tuple[OCRCandidate, str]] = []
+            for cand, aligned in aligned_per_engine:
+                word = aligned[idx]
+                if word:
+                    word_options.append((cand, word))
+            if not word_options:
+                fused_words.append(skeleton_words[idx])
+                word_winners.append(skeleton_cand.engine)
+                continue
+            # Tiebreak in favour of the skeleton engine so that when all
+            # engines produced the same word, the skeleton (not whoever happens
+            # to appear first in word_options) gets credited in the tally.
+            best = max(
+                word_options,
+                key=lambda opt: (
+                    self._word_score(opt[0], opt[1], word_options, line_options),
+                    opt[0].engine == skeleton_cand.engine,
+                ),
+            )
+            fused_words.append(best[1])
+            word_winners.append(best[0].engine)
+
+        return " ".join(fused_words), word_winners
+
+    def _word_score(
+        self,
+        candidate: OCRCandidate,
+        word: str,
+        word_options: list[tuple[OCRCandidate, str]],
+        line_options: list[tuple[OCRCandidate, str]],
+    ) -> float:
+        # Word-level agreement: case-insensitive match with other engines at this position.
+        word_key = word.casefold()
+        other_count = 0
+        agree_count = 0
+        for other_cand, other_word in word_options:
+            if other_cand.engine == candidate.engine:
+                continue
+            other_count += 1
+            if other_word.casefold() == word_key:
+                agree_count += 1
+        agreement = (agree_count / other_count) if other_count else 0.0
+
+        # Transliteration evidence must come from another engine's aligned word
+        # at THIS position (not line-level), otherwise CuReD wins every word on
+        # any page that contains a transliteration somewhere.
+        word_has_translit_evidence = any(
+            other_cand.engine != "cured" and _word_looks_transliteration(other_word)
+            for other_cand, other_word in word_options
+            if other_cand.engine != candidate.engine
+        )
+
+        # Decisive case: CuReD's word looks Akkadian AND a non-CuReD engine
+        # saw this *line* as transliteration-shaped. The line-level gate is
+        # what separates "CuReD enriching a real Akkadian token" from "CuReD
+        # hallucinating Akkadian-shaped garbage on plain prose" - CuReD is a
+        # cuneiform model, so its output always looks transliterated even on
+        # non-Akkadian input. _is_akkadian_transliteration triggers on cues
+        # general engines can reproduce (multiple short-hyphen tokens,
+        # LUGAL/DUMU markers, numbered-verse prefixes), so requiring one of
+        # them to see the line gives us grounded evidence that the line is
+        # really transliteration before we let CuReD override per word.
+        if candidate.engine == "cured" and _word_looks_transliteration(word):
+            line_is_transliteration = any(
+                other_cand.engine != "cured" and _is_akkadian_transliteration(other_line)
+                for other_cand, other_line in line_options
+            )
+            if line_is_transliteration:
+                return 10.0 + _diacritic_richness(word)
+
+        # Gate CuReD's weight boost AND its diacritic richness on per-word evidence.
+        # Without this, CuReD's profile weight (1.8) and hallucinated diacritics
+        # stack to overpower multi-engine agreement even on plain English words.
+        profile_weight = self.weights.get(candidate.engine, 1.0)
+        if candidate.engine == "cured" and not word_has_translit_evidence:
+            effective_weight = 1.0
+            richness = 0.0
+        else:
+            effective_weight = profile_weight
+            richness = _diacritic_richness(word)
+
+        arabic_bonus = 0.15 if _contains_arabic(word) else 0.0
+        transliteration_bonus = 0.25 if (candidate.engine == "cured" and word_has_translit_evidence) else 0.0
+
+        # Per-candidate confidence is an average over the whole line/page, so at
+        # the word level it's just a constant engine bias - whichever engine
+        # happens to have the highest overall confidence would win every tie.
+        # Drop it; ties are resolved by the skeleton-preference tiebreaker in
+        # `_fuse_line_words`, which makes log tallies meaningful.
+        return (effective_weight * 0.35) + agreement + (richness * 0.45) + arabic_bonus + transliteration_bonus
 
 
 class FortifiedOCREnsemble:
@@ -873,10 +1129,18 @@ class FortifiedOCREnsemble:
 
         best = max(orientation_results, key=lambda item: item["score"])
         fused = best["fused"]
+        fused_meta = fused.meta if isinstance(fused.meta, dict) else {}
+        word_winners = fused_meta.get("word_winners", {})
+        if word_winners:
+            summary = ", ".join(
+                f"{eng}={count}" for eng, count in sorted(word_winners.items(), key=lambda kv: -kv[1])
+            )
+            logger.info("page %d word-winner counts: %s", page_num, summary)
         meta = {
             "method": "ensemble",
             "engines_used": [candidate.engine for candidate in best["candidates"]],
-            "winner": fused.meta.get("winner", "ensemble") if isinstance(fused.meta, dict) else "ensemble",
+            "winner": fused_meta.get("winner", "ensemble"),
+            "word_winners": word_winners,
             "errors": all_errors,
             "rotation_angle": best["angle"],
             "orientation_scores": {str(item["angle"]): round(float(item["score"]), 4) for item in orientation_results},

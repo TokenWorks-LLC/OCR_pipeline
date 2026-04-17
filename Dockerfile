@@ -112,6 +112,10 @@ RUN python -m pip install --only-binary=:all: \
     "PyYAML>=6.0" \
     "typing-extensions>=4.12"
 
+# CRITICAL: Re-pin numpy<2.0 AFTER all pip installs.
+# PaddlePaddle 3.x and scikit-image pull numpy 2.x which breaks imgaug (np.sctypes removed).
+RUN python -m pip install --only-binary=:all: "numpy<2.0"
+
 # Set working directory
 WORKDIR /app
 

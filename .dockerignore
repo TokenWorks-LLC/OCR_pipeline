@@ -9,7 +9,7 @@ manifests/
 reports/
 _downloads/
 evaluation_results/
-production/
+production/__pycache__/
 
 # Environment and config
 .env
@@ -19,6 +19,7 @@ vars.env
 # Python virtual environments and caches
 .venv/
 venv/
+newvenv/
 __pycache__/
 *.pyc
 *.pyo

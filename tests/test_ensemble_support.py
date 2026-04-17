@@ -5,7 +5,7 @@ from pathlib import Path
 
 import fitz
 
-from production.ensemble_ocr import FortifiedOCREnsemble, OCRCandidate, OCRLine, PageLayoutAnalyzer, TextEnsembleFuser
+from production.ensemble_ocr import CuReDBackend, FortifiedOCREnsemble, OCRCandidate, OCRLine, PageLayoutAnalyzer, TextEnsembleFuser
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -178,3 +178,114 @@ def test_pdf_text_extractor_force_ocr_falls_back_to_text_layer_when_ocr_fails(mo
     assert text == "layer text fallback"
     assert used_text_layer is True
     assert meta["method"] == "text_layer"
+
+
+def test_cured_backend_registered_in_ensemble():
+    """CuReD must be a recognized backend so the ensemble can route to it."""
+    assert "cured" in FortifiedOCREnsemble.BACKEND_TYPES
+    assert FortifiedOCREnsemble.BACKEND_TYPES["cured"] is CuReDBackend
+
+
+def test_cured_fusion_weight_higher_than_default():
+    """akkadian_strict.json gives CuReD a 1.8x weight — verify profile loads it."""
+    import json
+
+    profile_path = ROOT / "profiles" / "akkadian_strict.json"
+    with open(profile_path) as fh:
+        profile = json.load(fh)
+
+    weights = profile["fusion"]["weights"]
+    assert "cured" in weights
+    assert weights["cured"] > weights["paddle"]
+
+
+def test_cured_backend_infer_produces_candidate(monkeypatch):
+    """CuReD inference with mocked Kraken returns a valid OCRCandidate."""
+
+    class FakeRecord:
+        def __init__(self, prediction, confidence, bbox):
+            self.prediction = prediction
+            self.confidence = confidence
+            self.bbox = bbox
+
+    fake_predictions = [
+        FakeRecord("KÙ.BABBAR 5 GÍN", 0.91, (10, 10, 200, 30)),
+        FakeRecord("KISIB ša-lim-a-šur", 0.87, (10, 35, 200, 55)),
+    ]
+
+    # Stub out kraken imports so the test works without kraken installed
+    import types
+    kraken_mod = types.ModuleType("kraken")
+    binarization_mod = types.ModuleType("kraken.binarization")
+    pageseg_mod = types.ModuleType("kraken.pageseg")
+    rpred_mod = types.ModuleType("kraken.rpred")
+    kraken_lib_mod = types.ModuleType("kraken.lib")
+    kraken_models_mod = types.ModuleType("kraken.lib.models")
+
+    binarization_mod.nlbin = lambda img: img
+    pageseg_mod.segment = lambda img: {}
+    rpred_mod.rpred = lambda engine, binary, segments: fake_predictions
+    kraken_models_mod.load_any = lambda path: "fake_engine"
+
+    kraken_mod.binarization = binarization_mod
+    kraken_mod.pageseg = pageseg_mod
+    kraken_mod.rpred = rpred_mod
+    kraken_mod.lib = kraken_lib_mod
+    kraken_lib_mod.models = kraken_models_mod
+
+    monkeypatch.setitem(__import__("sys").modules, "kraken", kraken_mod)
+    monkeypatch.setitem(__import__("sys").modules, "kraken.binarization", binarization_mod)
+    monkeypatch.setitem(__import__("sys").modules, "kraken.pageseg", pageseg_mod)
+    monkeypatch.setitem(__import__("sys").modules, "kraken.rpred", rpred_mod)
+    monkeypatch.setitem(__import__("sys").modules, "kraken.lib", kraken_lib_mod)
+    monkeypatch.setitem(__import__("sys").modules, "kraken.lib.models", kraken_models_mod)
+
+    backend = CuReDBackend(config={"cured_model_path": "/dev/null"})
+    # Bypass model loading since we mocked kraken
+    backend._engine = "fake_engine"
+
+    from production.ensemble_ocr import PageImageVariants
+    from PIL import Image
+
+    img = Image.new("L", (400, 100), color=200)
+    variants = PageImageVariants(img)
+
+    candidate = backend._infer_variant(variants, "original")
+
+    assert candidate is not None
+    assert candidate.engine == "cured"
+    assert "KÙ.BABBAR" in candidate.text
+    assert "ša-lim-a-šur" in candidate.text
+    assert len(candidate.lines) == 2
+    assert candidate.confidence > 0.0
+
+
+def test_cured_backend_returns_none_on_empty_predictions(monkeypatch):
+    """CuReD returns None when Kraken produces no predictions."""
+
+    import types
+    kraken_mod = types.ModuleType("kraken")
+    binarization_mod = types.ModuleType("kraken.binarization")
+    pageseg_mod = types.ModuleType("kraken.pageseg")
+    rpred_mod = types.ModuleType("kraken.rpred")
+
+    binarization_mod.nlbin = lambda img: img
+    pageseg_mod.segment = lambda img: {}
+    rpred_mod.rpred = lambda engine, binary, segments: []
+
+    monkeypatch.setitem(__import__("sys").modules, "kraken", kraken_mod)
+    monkeypatch.setitem(__import__("sys").modules, "kraken.binarization", binarization_mod)
+    monkeypatch.setitem(__import__("sys").modules, "kraken.pageseg", pageseg_mod)
+    monkeypatch.setitem(__import__("sys").modules, "kraken.rpred", rpred_mod)
+
+    backend = CuReDBackend(config={})
+    backend._engine = "fake_engine"
+
+    from production.ensemble_ocr import PageImageVariants
+    from PIL import Image
+
+    img = Image.new("L", (400, 100), color=200)
+    variants = PageImageVariants(img)
+
+    candidate = backend._infer_variant(variants, "original")
+    assert candidate is None

@@ -83,8 +83,27 @@ Numbered lines with document refs and mixed transliteration + modern text, e.g.:
 ## Contents
 
 - `loaders.py` – Load transliteration from Oracc, Archibab, OARE, CDLI, and generic CSV.
+- `gold_unclean_sorter.py` – Local "LLM-style" sorter that classifies raw rows into `gold` or `unclean` using `testing_data/` as references.
 - `wrap_transliteration.ipynb` – Jupyter notebook: load a dataset, wrap modern language around transliteration via LLM, emit text (and optionally image/PDF).
 - `data/` – Optional: put your transliteration CSVs here (or configure paths in the notebook).
+
+## Gold vs Unclean sorter
+
+Use the reference corpus in `testing_data/` to classify new raw data rows:
+
+```bash
+python abhiram_test_file/gold_unclean_sorter.py \
+  --input "abhiram_test_file/data" \
+  --reference-dir "abhiram_test_file/testing_data" \
+  --output-dir "abhiram_test_file/data/sorted_output" \
+  --threshold 0.42
+```
+
+Accepted input formats are `.csv`, `.txt`, and `.tsv` (single file or directory).  
+Outputs:
+- `gold.csv`
+- `unclean.csv`
+- `summary.json`
 
 ## Requirements
 

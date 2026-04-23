@@ -1,0 +1,739 @@
+﻿XI.  IR’AM-AŠŠUR (189-205)                                                  
+
+
+
+
+
+
+XI.  IR’AM-AŠŠUR (189-205)
+
+
+        Ir’am-Aššur was the son of Id(d)i-bāni[1] and married to Šalimma, a daughter of Elamma, as shown by Kt 93/k 513:17, “Šalimma, daughter of Elamma” (courtesy C. Michel). A long letter, *206, sent by her sister Ummī-Išhara from Assur to Šalimma in Kanesh, in which she tries to mediate between her and her husband Ir’am-Aššur, who lived in Assur and whom she refused to join, is edited in Ch. XII, devoted to Šalimma .
+        Ir’am-Aššur’s name is usually spelled Ir-ma-Aššur, with contraction, but occasionally Ir-am-Aššur (*226:1 // B:18) and he even occurs as Na-ra-am-Aššur, son of Id(d)i-bāni (in *233:3). He owned the seal CS 1148, which carries an inscription mentioning its previous owner, a man from Ebla (see the drawing in Teissier 1994, 233 no. 527), used three times on texts from the archive. This chapter presents the texts of or concerning him that ended up in Elamma’s archive, no doubt in consequence of his marriage. But he is also known from his own archive, found in the first house excavated in 1994, texts numbered Kt 94/k 117-184, provisional transcriptions of which were kindly made available to me by Cécile Michel.[2]        
+        Ir’am-Aššur was a trader active in Anatolia and who traveled between Kanesh and Assur, where he also stayed for some time. He occurs dozens of times in texts from different archives,[3] with dates ranging from eponymy year REL 92 (*195) to year 111 (Kt 94/k 143). He apparently had some form of cooperation with Elamma’s sons, in particular after Elamma’s death. They considered him their senior (calling him “father and boss”) and in their trading operations also handled merchandise belonging to him. That he was somewhat older is confirmed by the appearance of his son, named after his grandfather, as witness for him in the undated *192:15-16. From his own archive we have a record relating to the division between him and his brother Aššur-rabi of the inheritance of their father, witnessed by four men (Kt 94/k 157, courtesy of C. Michel). It states “Ir’am-Aššur and Aššur-rabi, sons of Id(d)i-bāni, have sworn an oath by the City and they have been entitled[4], so that they will not raise claims against each other for anything, whatsoever, belonging to their paternal estate. (11) What their father’s sister and their own sister will leave behind (warkutum) will belong to the two of them” (ša kilišunuma). Here I focus on what texts from Elamma’s archive tell us; his business has to be reconstructed when his archive is published.
+
+
+A.  Ir’am-Aššur and Ennam-Aššur (189-194)
+
+
+The next six texts document business relations between Ennam-Aššur, the eldest son of Elamma (henceforth E.) and his clearly older brother-in-law Ir’am-Aššur (henceforth I.), whom he calls “my father, my boss”. The first three are letters by E. to I., the next two are contracts by which amounts of silver of E. are entrusted (paqādum) for transport to Assur by I. The last text is a letter sent to I.  by his  representatives dealing with textiles handled by E. 
+
+
+189. Kt 91/k 290  (1-147-91)
+
+
+        a-na  Ir-ma-A-šur  qí-bí-m[a  um-ma]        Say to Ir’am-Aššur, thus
+        En-um-A-šur-ma  i-nu-[mì  i-na]        Ennam-Aššur: “When in Hurama
+        Hu-ra-ma  na-áš-pè-er-tá[m]        you wrote for me a document
+        a-dí  TÚG.HI.A  tù-lá-pì-ta-[ni]        concerning the textiles, apart from
+5        e-lá  2¼ GÍN KÙ.B. ša  [Ø]         the 2¼  shekels of silver that you had 
+        ta-dí-na-ni  um-ma  a-na-ku-[ma]        given me, I told you: ‘Give me 
+        gám-ra-am  ša  ha-ra-nim  a-qá-[tí-a]        cash the travel expenses’, 
+        dí-na-am  um-ma  a-ta-ma  a-°dí¿        but you answered me:
+        TÚG.HI.A  ta-ša-lá-ha-ni  ù a-na-ku        ‘Only when you salvage the textiles I
+10        a-lá-ak-ma  iš-tù  Ha-hi-im        will go and send you from Hahhum ½, 1 
+        ½ <ma>-na 1 ma-na ù 2 ma-na a-gám-ri-kà        or 2 minas (of silver) for your expenses’.
+        ú-šé-ba-lá-kum  ù  a-dí  ma-lá ù ší-/ni-šu        Then I wrote a few times to you in 
+        a-na  Ha-hi-im  áš-pu-ra-ku-ma  a-ta        Hahhum, but you did not send me
+        mì-ma  lá  tù-uš-té-bi-lam  i-nu-mì        anything. Did you not know that when
+15        ta-tal-ku : lá  tí-dí-e  ki-ma  ha-ra-na-tum        you had left the roads were in turmoil
+        sà-hu-a-ni  ù  É.GAL-lu  da-nu-ni        and the palaces were headstrong?
+        a-dí  a-wa-tum  iz-ku-a-ni  ITU.8. KAM        Until the matter was cleared I had 
+        i-na  li-bi  ma-tim  as-hu-ur        to stay 8 months in the interior.
+        TÚG.HI-tù  i-na  a-lá-ni  a-šar  ib-ší-ú-ni        I went to where the textiles were, in the 
+20        a-lik-ma TÚG.HI.A ú-šé-ṣí-a-ma a-na-ah-ma        villages, and I got the textiles out and with 
+        TÚG.HI.A a-ṣé-er  ša-zu-za-tí-kà  a-na        great effort I brought the textiles into 
+        Wa-ah-šu-ša-na  °ú¿-šé-ri-ib-ma        Wahšušana to your representatives.
+        3  TÚG.HI.A a-gám-ri-im  i-gi5-im-ru        Three textiles were spent for expenses.
+l.e.        TÚG.HI.A   sà-sà-am  lá-áp-tù-ma        The textiles are affected by moth and in 
+25        ša-am-ru-ṣú   nu-uk-ta-na-lá-ma        bad condition. We repeatedly offered them
+rev.        ší-mu-um  lá  i-ba-ší  Pì-lá-ah-Ištar        for sale, but there were no buyers. Did 
+        a-ma-kam  lá  e-ta-wu-ku-um   ki-ma        Pilah-Ištar not tell you there that the moth
+        sà-sú-um  uš-ta-am-ri-ṣú-šu-nu        has ruined them and that one 
+        ù  ší-ma-am  ba-at-qám   ú-kà-i-lu-ni        offers a bad price for them?
+30        10  TÚG.HI.A  a-na  2½ ma-na  KÙ.B.        Ten textiles have now been sold for 2½ 
+                    [ ta-/ad-nu                        [ minas of silver.
+        KÙ.B. ša  ki-ma  ku-a-tí ik-nu-ku-nim-ma        Your representatives sealed the silver
+        a-na-kam  i-ba-ší  ki-ma  i-na  Hu-ra-ma        and it is here. While you instructed me in
+        tù-na-hi-dí-ni  um-ma  a-ta-ma  šu-ma        Hurama as follows: ‘If your sister goes
+        a-ha-at-kà  a-na  A-limki ta-lá-kam KÙ.B.        to the City, give the silver, the price the
+35        ší-im  TÚG.HI.A dí-ší-ma  °lu¿ ta-li-kam        textiles yielded, to her and let her come 
+        a-na-kam  ki-ma  ku-ṣú  da-nu-ni-ma        here’. But since a severe cold reigns here 
+                [ lá  na-ṭù-ma                                 [ it is not feasible for her
+        lá  ta-lá-kà-ni  a-dí  ki-am  KÙ.B. lá          to go and therefore I did not yield the
+                       [ ú-šar-ší-im                                                   [ silver to her.
+        a-ta  a-ma-kam  ma-lá-kà  3 ma-na  LÁ         It is up to you there what to do. I sent 
+                     [ 3 GÍN                                   [ you 2 minas 57 shekels 
+        KÙ.B.  iš-tí  Šu-Sú-en6  iš-tù  Ha-tim        of silver with Šu-Suen from Hattum 
+40        ú-<šé>-bi-lá-ku-ma  um-ma  a-na-ku-ma          thinking: ‘He is my father, he will go
+                    [ a-bi  šu-ut
+        i-lá-ak-ma  iš-tù A-limki  AN.NA ú-šé-lá-°ma¿        and bring tin up for me from the City so 
+        KÙ.B. 1 GÍN e-li-a-ma ù KÙ.B. a-DAM.        that I obtain at least some silver and also
+                    [  [GÀR-ri-a]                [can pay silver to my creditor and send
+        a-š[a-qa]l-ma a-na ša ṭup-pì-a ú-šé-b[a-al]        (what I owe) on the basis of my tablet’.
+        a-ta  um-ma a-ta-ma  KÙ.B. a-ha-[at-kà]        But you, you said: ‘Your sister needed 
+45        ta-°ah¿-ša-ah-ma  a-na  ša  ṭup-p[ì-kà         silver and I have given it to her on the
+                [ a-tí-dí-ší-im]                                         [ basis of your tablet’.
+        ur-ki-tám i-°ba¿-áb ha-ra-ni-kà  [um-ma         Later, when you were about to set out on
+                    [  a-ta-ma]                          [ a journey, you said: ‘Give me
+        KÙ.B.1 GÍN i-šu qá-tí-kà dí-na-[ma AN.NA]        every single shekel of silver you have
+        10  ma-na  lá-áš-a-ma-ku-ma  KÙ.B.          then I will buy for you tin, 10 minas, so
+                   [ li-li-a-ku-ma li-ba-am]                  [ that you can obtain silver and gather
+        ri-ší  a-ta  ki-ma  li-bi4-i[m  ta-da-nim]        courage’. But instead of encouraging me,
+50        1  ma-na  14  GÍN KÙ.B.  ni-[is-ha-sú DIRI        (for) the 1 mina 14 shekels of silver - its
+                                          [ excise added, its transport fee paid -
+u.e        ša-du-a-sú  ša-bu a-ha-m[a ½ ma-na [KÙ.B.]         and in addition ½ mina of silver, temple
+        ik-ri-bu  ša  A-šur  ni-is-h[a-sú  DIRI        funds of Aššur -  its excise added, its 
+                [  <ša-du-a-sú>              [ transport fee paid – that I gave you 
+        °ša¿-bu  IGI  A-zu-ta-a  ù  Ì-d[í-ba-ni]        in the presence of Azutaya and Idī-bāni 
+le.e.        a-na  ší-a-ma-tim  a-dí-na-kum a-ta a-dí         to make purchases with, until this very 
+               [ u4-mì-im  a-nim  °AN.NA¿ / ší-im        [day you have not sent me the tin bought 
+               [ KÙ.B.-pì-a lá  tù-uš-té-bi4-la-am                                                 [ with  my silver!
+col. I         um-ma  a-na-ku-ma  a-bi  a-ta        I had said: ‘You are my father, my boss,
+56                 be-lí  a-ta  AN.NA. 10 ma-na        purchase for me for tin,  
+                 ša-ma-ma  šé-bi4-lam        10  minas, and send it me’.
+col. II         a-bi4  a-ta  be-lí  a-ta  ší-im  KÙ.B.        Please, my father, my boss, send what 
+         ša  a-dí-na-ku-ni  AN.NA-šu  šé-bi4-lam        was bought with the silver I gave you, its 
+60         e-en6  A-šur <ša-mì-ra-ni>        tin. Enable me to face Aššur!”
+
+
+Notes
+3-4. The našpertum could be a document proving that I. was the owner (tamkārum) of the textiles, which E. might need en route, or a written acknowledgment that E. was entitled to get paid for his expenses.
+5. Earlier I had restored ša-[ni-tám la] taddinanni, a reading taken over in Geography footnote 438, but it is impossible, since it does not explain the subjunctive of the verbal form. 
+31. This sale is also mentioned in *194:4-20, and in *190:32, where the yield is said to be 3½ minas. The ventive ending of kanākum may indicate that it means “to send here under seal”.
+42. Note the combination verb + ma followed by ù and a following verb.
+43, 45. My translation tries to render what ana ša ṭuppi + possessive suffix implies.
+47-49. See for išû qātim the note to *180:16; libbam rašā’um is restored after *190:19-20; see for this rare combination, not registered in CAD L s.v. libbu, the occurrence in UET 6, 414:29 (CAD R, 198, 3, a).
+56. The left edge (8.2 cm long) starts with one very long line (55), indented at the end, after which the scribe continues in two columns. 
+62. Final verb supplied on the basis of *190:45-46.
+
+
+190.  Kt 91/k 366 (1-218-91)
+
+
+        a-na  Ir-ma-A-šur  ù  dUTU-ba-ni        To Ir’am-Aššur and Šamaš-bāni, 
+        a-na  Ir-ma-A-šur  qí-bi-ma        and in particular to Ir’am-Aššur,
+        um-ma  En-nam-A-šur-ma        say as follows, thus Ennam-Aššur:
+        3  ma-na  LÁ 3 GÍN KÙ.B. i-pá-ni-tim        “Previously I sent you 2 minas
+5        iš-tù  Ha-tim  iš-tí  Šu-Sú-en6        57 shekels of silver from Hattum
+        ú-šé-bi-lá-ku-ma  um-ma  a-na-ku-ma        with Šu-Suen and I thought: 
+        a-bi  šu-ut  i-lá-ak-ma  iš-tù        ‘He is my father, he will go and send
+        a-limki AN.NA 10 ma-na ú-šé-ba-lá-ma        me from the City at least 10 minas of tin
+        li-ba-am  i-da-nam  ù  KÙ.B.        and thereby encourage me and when some
+10        1  GÍN  e-li-a-ma  KÙ.B. a-na        silver becomes available for me I will
+        DAM.GÀR-ri-a  a-na  ša  ṭup-pì-a        be able to send silver to my creditor 
+        ú-šé-ba-al  a-ta  um-ma  a-ta-ma        on the basis of my tablet’. But you said:
+        KÙ.B. a-ha-at-kà  ta-ah-ša-ah-ma        ‘Your sister needed the silver, so I gave it
+        a-na  ša  ṭup-pì-kà  a-tí-dí-ší-im        to her on the basis of your tablet’.
+15        ur-ki-tamx(TIM) i-ba-áb  ha-ra-<ni>-kà        Later, when you were about to set out on 
+        um-ma  a-ta-ma  KÙ.B. 1  GÍN        a journey, you said: ‘Give me every single 
+        i-šu  qá-tí-kà  dí-na-ma  AN.NA        shekel of silver you have available then I
+        10  ma-na  lá-áš-a-ma  lu-šé-bi4-lá-ku-ma        will buy for you and send you tin, 10 
+l.e.        KÙ.B. li-li-a-ku-ma  li-ba-/am        minas, so that you can obtain silver and
+20        ri-š[í]  um-ma  a-ta-ma        gather courage!’ You also said: ‘You must 
+        ù  [a-n]a  TÚG.HI-tí-a  a-na-ah-ma        also exert yourself for my textiles and 
+rev.        a-šar  ša-la1-hi-im  šu-lu-ùh-šu-/nu        salvage them wherever possible.
+        TÚG.HI-tù  lá  i-ha-li-qú °i¿-nu-mì        The textiles must not get lost!’. When 
+        ta-tal-ku  lá  tí-dí-e  ki-ma        you left, did you not know that the roads 
+25        ha-ra-na-tum  ù  É.GAL-lu        and the palaces were causing difficulties? 
+        da-nu-ni a-dí TÚG.HI.A áš-lu-hu ITU.7./        Until I had salvaged the textiles I stayed
+        i-na li-bi  ma-tim as-hu-ur        [ KAM        seven months in the interior. Three textiles 
+        3  TÚG.HI.A  a-gám-ri-im ša ha-ra-nim        were spent for the expenses of the trip
+        i-gi5-im-ru-ma TÚG.HI.A ku-nu-ki ša        but I managed to ship the textiles under
+                        [ Ku-lu-ma-a          
+30        a-ṣé-er ša-zu-za-tí-kà ú-<šé>-li-ma        Kulumaya’s seals to your representatives.
+        TÚG.HI.A  sà-sà-am  ša-am-ru-ṣú-ma        The textiles are badly affected by moth
+        a-na  3½  ma-na  KÙ.B. ta-ad-nu        and have been sold for (only) 3½ minas
+        KÙ.B. i-ku-<nu>-uk  ša-zu-uz-tí-kà          silver; the silver, under the seals of your
+                        kà-ni-/ik-ma                                   [ representative, is available.
+        i-ba-ší  a-bi4  a-ta  be-lí  a-ta        Please, my father, my boss, to whom
+35        e-lá-kà  a-ma-nim  a-da-gal  KÙ.B.        else but you can I look (for help)? I collec-
+        1 GÍN i-šu qá-tí-a ú-pá-he-er-ma          ted every single shekel I had available and 
+                                 [ 1  ma-na / 14  GÍN                            [ 1 mina 14 shekels of silver,
+        ni-is-ha-sú  DIRI  ša-du-a-sú  ša-bu        its excise added, its transport fee paid,
+        a-ha-ma ½ ma-na KÙ.B. ik-ri-bu ša A-šur         and separately ½ mina of silver, temple
+39        ku-nu-ki-a IGI  A-zu-ta-a IGI Ì-dí-ba-ni        funds of Aššur, I gave you in the presence 
+u.e.        i-na  Hu-ra-ma  a-na  ší-a-ma-tim        of Azutāya and of Idī-bāni in Hurama
+        IGI A-zu-ta-a IGI Ì-dí-ba-ni a-dí-na-kum        for making purchases << in the presence of 
+        um-ma a-na-ku-ma a-bi4 a-ta be-lí a-ta        Azutāya and of Idī-bāni >>  and I said:
+        AN.NA 10  ma-na        ‘Please my father, my boss, buy for me
+l.e. I        ša-ma-ma  šé-bi4-lam-ma        tin, 10 minas, and send it to me and 
+45        e-en  A-šur  ù  e-né-kà        so allow me to face Aššur and        
+        ša-mì-ra-ni  mì-nam        and you!’ What misdeed
+        ší-lá-tám        have I committed 
+l.e. II        ar-ší-a-ku-ma  ù  a-dí-i        against you that until this
+        u4-mì-im  a-nim  AN.NA        very day you fail to send me
+50        lá  tù-šé-ba-lam ší-im KÙ.B.-/pì-a        the tin?  Send me the tin
+        AN.NA  šé-bi-lam        bought with my silver!”
+
+
+Notes
+15. Either add <i-na> or read ur-ki-tam with *189:46.
+21. See for the verb anāhum, Veenhof, Lex., s.v.
+32. Letter *189:30 (checked) mentions 2½ minas, but for 10 textiles, while here no number is mentioned and more (all?) textiles may have been sold.
+35. I take e-lá-ka = ellākka  <  ellānka, from the preposition a/ellān(um), although the form with pronominal suffix is normally a/ellānukka. One might emend our form to e-lá-<nu>-kà, but the occurrence in a letter of Šat-Aššur, BIN 4, 22:11 and 30, of ú-lá-ku-a-tí and a-lá-ku-a-tí (see Grammar § 14.10), in a similar phrase (u/allākkuati mamman šaniam la išû), shows that the form in our text is perhaps possible, although it is true that BIN 4, 22 (a letter by a woman) exhibits  various scribal irregularities. 
+45f. Facing (the god) Aššur and Ir’am-Ašsur means visiting the city of Assur, which apparently depends on E. earning money by the sale of tin. Is this a matter of honor, when he has recovered and can pay his debts, or is there also a link with the fact that part of his capital consists of ikribū of Assur (*189:52, *190:38, *191:25), which he has to pay back?
+
+
+191. Kt 91/k 407 (1-260-9)
+
+
+        a-na  Ir-ma-A-šur  qí-bi-ma        Say to Ir’am-Aššur,
+        um-ma  En-um-A-šur-ma        thus Ennqm-Aššur: “I sent you
+        3  ma-na  LÁ 3 GÍN KÙ.B. i-pá-ni-tim        earlier 2 minas 57 shekels of silver
+        iš-tù  Ha-tim  iš-tí  Šu-Sú-en6        from Hattum with Šu-Suen
+5        a-na  Kà-ni-ìš  ú-šé-bi4-lá-ku-ma        to Kanesh and you brought
+        KÙ.B  a-na  A-limki  tù-bi-il5-ma        that silver to the City, and I thought:
+        [um-ma] a-na-ku  a-bi  šu-ut  i-lá-ak-ma        ‘He is my father, he will go and [bring
+        [iš-t]ù  A-limki  AN.NA  10  ma-na        up] from the City tin, 10 minas, so that 
+        [ú-šé-lá]-ma KÙ.B 1 GÍN e-li KÙ.B         I can seal it and send at least some silver
+                [  a-ša  ṭup-pì-a                                                     [ on top of    
+10        [a-kà-n]a-ak-ma  ú-šé-ba-al          that (owed) according to my tablet’. 
+        [a-ta AN.N]A  lá  ta-áš-ta-ma-am        But you have not bought and sent me
+        [um-ma a-ta]-ma  KÙ.B  a-ha-at-kà        tin, (saying): ‘You sister needed
+        [ta-ah-ša-ah]-ma °a-na  a¿-ha-tí-kà        the silver so I gave it to you sisters
+        [a-ša ṭup-pí-kà  a-t]í-dí-šu-um-ma        [on the basis of you tablet] and ...
+15        [x  x  x  x  x  x  x]-li-ku
+        [x  x  x  x  x  x  x] x *ha-ra-nim
+        [x  x  x  x  x  x  x] *ma x
+l.e        [        ]
+rev        [        ]
+20        [        ]
+        [                                   ] * x
+        [1 ma-na 14 G]ÍN KÙ.B ni-is-ha-[sú]        [1 mina 14] shekels of silver, its excise
+        [DIRI  ša-d]u-a-sú  ša-bu  a-ha-ma        added, its transport fee paid, and separately
+        [½  ma-na  KÙ.B]  ni-is-ha-sú  DIRI          [½  mina of silver], its excise added, its
+                [  ša-du-a-sú                                              [ transport fee paid,
+25        [ša-bu  ik]-ri-bi4  ša  A-šur  ku-nu-ki-a,         temple funds of Aššur, I gave you under
+        [IGI  A]-zu-ta-a  IGI  Ì-dí-ba-ni        my seals in Hurama, with Azutaya
+        i-na  Hu-ra-ma  a-dí-na-ku-um        and Idī-bāni as witnesses. I said:
+        um-ma a-na-ku-ma a-bi4 a-ta be-lí a-ta        ‘Please by father, my boss, buy for
+        AN.NA  ša-ma-ma  šé-bi4-lálam        me tin and send it to me’, but 
+30        a-ta  mì-ma-ša-ma  lá  tù-uš-té-bi4-lam        you have not sent me anything!
+        TÚG.HI-tù  ša  i-na  Lu-hu-sà-dí-a        As for the textiles you entrusted to me in
+        tap-qí-da-ni  ha-ra-na-tum  sà-ah-a-ma        Luhusaddiya – there was trouble on the roads
+        a-dí-i  a-wa-tum  iz-ku-a-ni TÚG.HI-tù        and until the affair was cleared the textiles 
+34        a-lá-ni-ma  ib-ší-ú  ITU.6.KAM        stayed in the villages. Six months ago 
+u.e.        i-na  Hu-ra-ma  gám-ra-am  e-ri-/iš-kà        I asked from you in Hurama (to pay) my
+        um-ma  a-ta-ma  a-lá-ak-ma        expenses. You said: ‘I will go and 
+        [i]š-tù  Ha-hi-im  AN.NA  1  ma-na        [send you] from Hahhum a few
+l.e.        ù  2  ma-na  [ú-šé-ba-lá-kum]        minas of tin. But you have not 
+        mì-ma  lá  tù-uš-té-[bi-lam]        sent me anything!         
+40        °x¿ Lu-hu-<<ga>>-sá-dí-°a¿ [x  x  x]         ...... Luhusaddiya ......”
+
+
+Notes
+14. *190:14 shows that the dative suffix -šumma must be a mistake for –šimma.
+15-21. Restoring the missing text is difficult, because what remains is not paralleled by *189 and *190, where, moreover, the various events reported occur in different order.
+28. *190:43 specifies that 10 minas of tin are meant.
+34. Instead of ina alāni in *189:19 our text has a-lá-ni-ma, possibly an adverbial accusative. Note that *189: 17 mentions 8 months.
+
+
+192. Kt 91/k 505 (1-358-91)
+
+
+Ennam-Aššur entrusts silver 74 shekels of silver, qualified as “ikribū of the trader” (also mentioned in *189:50, *190:36 and *191:22) to Ir’am-Aššur for transport to Assur, whereby the latter’s son acts as witness.
+
+
+        1 ma-na 14  GÍN KÙ./B.         1 mina 14 shekels of silver
+        ni-is-ha-sú  DIRI         the excise on it extra,
+        ša-du-a-sú  ša-bu        the transport fee for it  paid; 
+        a-ha-ma ½  ma-na  KÙ.B.        separately ½ mina of silver, 
+5         ni-is-ha-sú  DIRI        the excise on it extra,
+        ša-du-a-sú ša-bu         the transport fee for it paid,
+        ik-ri-bu ku-nu-ki         temple funds, under the seals
+l.e.         ša  DAM.GÀR En-um-A-/šur         of tamkārum, Ennam-Aššur
+rev.         a-na  Ir-ma-A-šur         entrusted to
+10        ip-qí-id-ma  a-na         Ir’am-Aššur and 
+        a-limki a-na  ší-a-ma-/tim        he brought it to the City 
+        ú-bi-il5        for making purchases. 
+         IGI A-zu-ta-a  DUMU         In the presence of Azutāya, son
+        E-me-me        of Ememê,
+15         IGI Ì-dí-ba-ni         of Idī-bāni,
+        DUMU Ir-ma-A-šur.        son of Ir’am-Aššur.
+
+
+Notes
+7-8. “Seal of the tamkārum” could be used to keep the name of the owner secret, be short for “the boss (of the firm)”, or could mean “the creditor” (known to those involved), to identify the shipment of silver as a payment to him, which according to *189:42-42 // *190:10-12 was the intention of E. Since according to *190:39 the seals were those of E. himself, the first explanation is the most likely one.
+10. The short “to give for making purchases” of *189:55 and *190:40-41, is here split up in “to entrust” (for transport) and “to bring for making purchases”. 
+13-14. The same man is attested during eponymy years REL 100 and 113. Azutāya was named after his grandfather, father of Ememe’i, attested in *59:21f. (eponymy year 90).
+15. Ir’am-Aššur’s son, named after his grandfather.
+
+
+193. Kt 91/k 503 (1-356-9)
+
+
+Near 3 minas of silver under the seal of Ennam-Aššur and meant for paying a debt of his, is entrusted to Lamassatum and Ir’am-Aššur and will be brought to Assur by the latter, but under the responsibility and at the cost of Ennam-Aššur. This silver is also mentioned in *189:38f., *190:4 and *191:3, which state that it was sent to Ir’am-Aššur (in Kanesh, *191:5) from Hattum.        
+
+
+        2 5/6 ma-na 7 G[ÍN]        2 minas 57 shekels of silver                 
+        °KÙ.B.¿ ku-nu-ki ša En-um-/A-šur         under the seals of Ennam-Aššur,
+        DUMU E-lá-ma         son of Elamma,
+        Šu-Sú-in  DUMU Ì-lí-a         Šu-Suen, son of Iliya,
+5         a-na Lá-ma-sí-tim         entrusted to Lamassutum
+        ù Ir-ma-A-šur ip-qí-id-/ma        and Ir’am-Aššur and 
+        KÙ.B. Ir-ma-A-šur         Ir’am-Aššur will bring
+        a-na a-limki A-šur        the silver to the 
+9        ú-ba-al-šu  a-na        city of Assur . He         
+l.e.         hu-bu-ul        will pay it for 
+rev.         En-um-A-šur        the debt of Ennam-Aššur
+        a-na  DAM.GÀR i-ša-qal         to the creditor.
+        KÙ.B. a-šu-mì En-um-A-šur         The silver will travel overland
+        GÁN-lam e-tí-iq         in the name of Ennam-Aššur.
+15         IGI Pì-lá-ah-Ištar  DUMU E-/lá-ma         Witnessed by Pilah-Ištar, son of Elamma,
+        IGI A-šur-ba-ni  DUMU         and by Aššur-bāni, son of
+        Du-mu-uq-Ištar        Dumuq-Ištar.
+
+
+Notes
+4. Textiles of this man, sealed by Ennam-Aššur, are mentioned in *166:4f.
+
+
+194. Kt 92/k 174 (1-134-92)
+
+
+Dān-Aššur and Ennam-Suen, his representatives (see *189:30), inform Ir’am-Aššur about the sale “here” (in Wahšušana, see *189:22) of a lot of textiles brought them by Ennam-Aššur, and latter eventually managed to sell them in Šaladuwar and is now on his way to him with its yield.
+
+
+        um-ma Dan-A-šur ù        Thus Dān-Aššur and
+        En-na-Sú-in-ma        Ennam-Suen, say to 
+        a-na  Ir-ma-A-šur  qí-bi4-ma        Ir’am-Aššur:
+        10  TÚG.HI.A ku-nu-ki  ša        “10 textiles with the seals of
+5        Ku-lu-ma-a  En-um-A-šur        Kulumāya  Ennam-Aššur
+        ub-lam  ŠÀ.BA 2 TÚG        brought us. Two of these are 
+        a-bar-ni-ú 1 TÚG        Abarnian ones, one is a 
+        na-ma-šu-hu-um        namaššuhu-textile.
+        ki-ma a-na-kam        Since there is no possibility
+10 e.        ší-mu-um lá-šu-ú        to sell them here
+        ù  TÚG.HI-tù        and these textiles
+rev.        sá-sà-am lá-áp-tù        are affected by moth,
+        En-um-A-šur a-na        Ennam-Aššur 
+        Ša-lá-du-a-ar        brought them into 
+15        ú-šé-ri-ib-šu-nu-ma        Šaladuwar and
+        15 GÍN.TA ší-im-šu-nu        he gave us 15 shekels apiece,
+        i-dí-ni-a-tí-ma 2½ ma-/na        the price made for them, and 
+        KÙ.B. ku-nu-ki-ni        Ennam-Aššur is now on his way 
+        En-um-A-šur        to you with 2½ minas of 
+20        na-áš-a-ku-um  a-ma-kam        silver under our seals. Over there
+u.e.        a-na TÚG.HI.A A-al-DÙG        let Āl-ṭāb get a judicial clearance
+        i-dí-nim  iš-tí-kà        with you concerning
+le.e.        li-iz-ku        these textiles.
+
+
+Notes
+5. Kulumāya’s seals are also mentioned in *190:29
+6-7. The presence of a few expensive items among the textiles explains that the price eventually made for them, on average 15 shekels a piece, is considered to be low. 
+12. The delay of the sale and long storage in bags or chests, without airing them, apparently was responsible for the damaged caused by moths, see below, “Interpretation”, c), and Michel 1998, 328f., supplemented Michel-Veenhof 2010, 213 with note 14.
+20-23. These lines suggest that the (reason for the) low yield of these textiles has to be acknowledged by what probably is their owner in a formal judicial procedure, perhaps one where an oath was sworn and accounts settled; see for such cases EL 261, 269-270; ICK 2, 113 and 139; AKT 3, 57; Prag I  716. How Āl-ṭāb was involved in this transaction is unclear, and we also do not know what is implied by the fact that the lot was shipped “under the seal of Kulumāya” (lines 4-5).
+
+
+Interpretation
+These six documents document the rather difficult relations between Elamma’s son Ennam-Aššur (E.) and his senior brother-in-law Ir’am-Aššur (I.), who was married to E.’s sister Šalimma (cf. Ch. XII). E. is engaged in the trade in tin and textiles and also handles merchandise belonging to I. (190*:21, “my textiles”, which he entrusts to him, *191:31-32) and he seems to be in financial problems, because he has to pay one or more creditors in Assur. The background could be the death of his father (who is not mentioned; his mother Lamassutum features in *193:5) and the ensuing liquidation of his business, which must have entailed the payment of his debts by his sons. In this his sister in Assur, Ummī-Išhara, must have played a role and this could be the reason why she “needed” (hašāhum) silver of E. sent to Assur (*189:44-45, *190:13, *191:12-13). E. also encountered problems in Anatolia, because he had been stuck in Hattum for eight months, presumably due to political troubles. He utters various complaints against I., because the latter did not pay him his travel expenses and did not live up to his promises of providing him with tin from Assur. The documents illustrate the problems a junior trader might run into and his dependence on the cooperation with a senior partner. The differences between the texts show that the same events could be portrayed in different perspective, partly also in different order, which may reflect the mood of the rather desperate E. who, not without some rhetorical skill, mixes complaints with appeals for help and a plea for sticking to promises. The letters are also interesting in showing the commercial realities and problems that are at the basis of seemingly simple transport contracts and consignments. The following sketch of the events divides them into various episodes. 
+a) Mentioned first in *190:4-14//*191:3-14 and later in *189:38-45: Some time ago (“pre-viously” in *190 and *191) E. had sent 2 minas 57 shekels of silver with (išti) Šu-Suen, son of Iliya, from Hattum to I. in Kanesh (*191:5), asking him to take it along to Assur. This is also recorded in the undated contract *193, whereby Šu-Suen hands this silver over to E.’s mother and I. in order to have the latter bring it to Assur in order “to pay it for the debt E. owes to tamkārum”, his creditor or boss. In the letters (*189:40-41 // *190:7-8) however, E. states that I. was to use it to buy tin for him, “some 10 minas” (*190:8), to be sent to him in Anatolia (*189:41, ušellâm, *190:8, ušebbalam). There it could be sold by E. with profit and the silver earned in this way (*189:42//*190:10, kaspum elliam) would be used to pay his creditor/boss (tamkārum), “on the basis of my tablet”; *189:42-3 writes “I will pay silver to my tamkārum and (to do so?) send it” (to Assur); *190:10-12 is shorter, “I will send the silver to my tamkārum”. Was this the original intention or a later adaptation of the goal (by inserting an intermediary step), stipulated in contract *193?  In Assur, however  (*189:44-45 // *190:13), as I. had told him, E.’s sister, no doubt the priestess Ummī-Išhara, required the silver and I. had given it to her, ana ša ṭuppika (*189:45//*190:14//*191:14). This suggests that there was a contractual basis for it, possibly a recorded liability or promise of E., perhaps the basis for the stipulation in text *193 that I. would use the silver to pay E.’s debts. I assume that Ummī-Išhara’s “need” for the silver was due to the fact that, after their father’s death, she was engaged in liquidating his firm, which implied paying the commercial debts that were the liability of the male heirs, her brothers. She accordingly must have obliged I. to give her the silver E. had earned and not use it for a new commercial enterprise. The same feature can be observed after Pūšu-kēn’s death, when his daughter in Assur, Ahaha, is desperately trying to pay the family’s debts, while her brothers in Anatolia only think of trading.
+b) Having disappointed E. by the outcome of a) I., “later” (urkītam *189:46//190:15), when he was about to leave (for Assur?), came up with a new plan to help E. and “give him courage” (*189:46-49//190:15-20). E. has to give him all the silver he has available and I. will buy for him 10 minas of tin, which will allow E. to earn money. E. manages to collect the modest sum of 1 mina 44 shekels of silver (*189:50-52//190:36-39//191:22-25), sufficient to buy tin in Assur (normally at a rate of ca. 15 shekels of tin for 1 shekel of silver), which he “gave to I. for making purchases” (*189:54) in Hurama, as witnessed by A. and I. (*190:39-40//191:26-27), “under my seals” (*190:39//191:25). This transaction is recorded in *192, witnessed by the same two men, but here (lines 7-8) the silver is said to be “under the seals of tamkārum”, which means of its anonymous owner, perhaps to prevent other creditors of E. to seize it. Since the transaction is for the benefit of E. he has to pay for the costs of the transport, both the “excise” and the “transport fee”, as *189:50-51//*190:37 and *192:2-6 duly mention. *189:54 then continues with E.’s complaint that in exchange for this silver I. has thus far not sent him any tin and in lines 56-57 asks to do so now; cf. *190:43-44, where E. also asks what he has done wrong (šillatam rašā’um) to earn this treatment. 
+c) In *190: 21-34 this sad story is preceded by a report about problems with the sale of a lot of textiles (*190:21, “my textiles”), which I. had entrusted (paqādum) to E. in Luhusaddiya (*191:31-32). A situation with unsafe roads (stative of sahā’um, D-stem) and unyielding local palaces (dannum, *189:16) had obliged E. to wait many months “in the interior” until the trade could be resumed, 8 months in *189:17, 7 months in *190:26 and 6 months in *191:34! The delay had also caused damage of the textiles by moths, apparently because they had not been regularly aired. When they had been finally “salvaged” (šalāhum) their sale proved difficult and their yield was poor, on average only 15 shekels of silver apiece, in all 2½ minas (the 3½ minas of *190:32 may be a mistake). This silver had been received (?) and sealed by I.’s representatives, but had not yet been shipped off (*189:29-32//*190:32:34, ša kīma kuāti, plural // šazzuzātikasic, cf. šazzuzātika in l. 30). Letter *190:32-37 reveals that this was because I.’s plan to let E.’s sister, in this case to all appearances I.’s wife Šalimma (who stayed in Kanesh), take it along on her intended journey to Assur, had failed, because she could not travel due to severe cold in Central Anatolia.
+        This story is confirmed by letter *194, written by Dān-Aššur and Ennam-Suen, who must be I.’s “representatives” mentioned in *189:31. They offer a few more details on the composition of the lot of textiles, sealed by Kulumāya (also mentioned in *190:29), which had been delivered to them by E. While *189:22 simply states that E. had brought the textiles to I.’s representatives in Wahšušana, *194:9-15 write that, because they could not be sold “here” and because they had been affected by moths, they were subsequently brought by E. to Šaladuwar, further to the west, and were sold there. Then – so we must assume - E. returned to Wahšušana, presented the silver earned to I.’s representatives, which they had him bring to I. (in Kanesh?) under their seals. This story of the textiles features also in *189:14-32, before episodes a) and b), as continuation of E.’s complaint that he still had not received compensation for his travel expenses (see below d). This is understandable, since for I. the salvage of the textiles was a condition for paying them.  
+d) The issue of the travel expenses (gamrum ša harrānim) to which E. is entitled forms the beginning of *189. It was raised in Hurama, where both men met and had a discussion (lines 2-11) and the expenses were those of transporting the textiles, incurred either to get them in Hurama or (more likely) to ship them on, possibly to “Hattum”. It is not certain that this is the lot of textiles entrusted to E. in Luhusaddiya according to *191:31-32, because this town is situated north of Hurama, were the discussion about the expenses took place (*189:3). That I. had to pay expenses and wrote for E. a “document concerning the textiles” (see the note on *189:3) indicates that the textiles belonged to I. and that E. handled them for him (alongside his own business, such as the trade in tin). I. had given him only a little silver, refused to pay E.’s expenses cash (*190:7-8, ana qātim tadānum) and would pay them only after (adi, l. 9) E. had salvaged the textiles (šalāhum, *189:9, cf. šēṣu’um, ‘to get out”, l. 20), by sending him silver from Hahhum, which he failed to do. E. then reminds him of the serious problems encountered, apparently unknown to I., and tells how thanks to the pains he took (anāhum) the textiles are safe, although at the cost of expenses equal to the price of three textiles. Text *190 gives a somewhat different picture by linking episode b) with the salvaging of the textiles and by making the latter an order of I. and thus a condition for his help (*190:21-22): “You said: Exert yourself for my textiles and salvage what you can, so that they do not get lost!”  
+        The geographical data of the texts have been studied in Geography 137f., 159f., with the partly duplicating footnotes 437-8 and 546-7, where Barjamovic quotes and discusses texts *189 and *191, that I had made available to him. He describes Luhuzaddiya as “located on a separate route that branched out from the main Euphrates route in Hurama” and passed Kuššara, Šamuha and Kuburnat to arrive at Durhumit, thus connecting the south with Hattum, which he defines as the eastern part of Central Anatolia, “linked to the clusters east of Kanesh” (p. 164). He then offers the following reconstruction, into which I insert between brackets some data, referring to the texts of our file: “More than 6 months beforehand, while Ennam-Aššur was in Luhuzattiya, Irma-Aššur sent him a letter (from Hurama? *189:3 – K.R.V.), some silver and an order on what to do with a consignment of textiles arriving in Hurama from Assur. Thereupon (*189:14f. //*190:23f.) Irma-Aššur continued his journey to Hahhum, where he stayed for a while (*189:10-13) before finally leaving for Assur (implied by *189:41ff.).  In the meantime Ennam-Aššur went to Hattum (also referred to as libbi mātim) (*189:18 – K.R.V.), but unrest broke out and the consignment had to be stored in villages there (*189:19). Once the situation had settled down, Ennam-Aššur sent the goods from Hattum to Wahšušana (*189:21-22, cf. *190:30). Furthermore, he sent Šu-Suen from Hattum to Irma-Aššur in Kaneš with a sum of money (*189:39, *190:5-6).” 
+        A slight modification of this picture is that at the start I. himself was apparently present in Hurama, where he instructed E. about how to ship the silver earned by the textiles to Assur (*189:32f.) and where E. (on the same occasion?) gave him the 1 mina 44 shekels of silver (*190:40, *191:27, cf. *192). This asks for a different meaning for the “missive” (našpertum) I. gave to E. there (see note on *189:3). The main question, also raised by the different order in which our sources relate the events, is whether all refer to one single journey, from Hurama to Luhusaddiya, to Hattum, to Wahššušana, to Šaladuwar and perhaps eventually back to Kanesh. I find it difficult to assume that E.’s activity in Hattum, mentioned at the beginning of *190 (line 4, “previously’) was in consequence of the meeting with I. in Hurama and the acceptance of a consignment of textiles in Luhusaddiya. *191:31ff. indicate that the textiles suffered under the long delay “in the interior” of Hattum and the position of *189:15ff. also suggests that the meeting in Hurama (*190:3) preceded these events. If so, the shipment by E. of almost 3 minas of silver of his to I. in Kanesh (*190:4ff., *189:38ff.) must have preceded these events and points to an earlier stay of E. in Hattum, which he may have interrupted in order to come to Luhusaddiya / Hurama to receive a new consignment. Why this consignment was picked up in Luhusaddiya (*191:31), after a meeting in the more southern Hurama, is unclear. Geography 135 mentions that “one could travel directly from Timilkiya to Luhusaddiya and so avoid taxation in Šalahšuwa and Hurama, but this required a royal guide or smuggling”, but these are not mentioned in our text.
+
+
+B. Various documents (173-175)
+
+
+195. Kt 91/k 455 (1-308-91)
+
+
+A letter of Ir’am-Aššur, perhaps sent from Assur,  to three persons in Kanesh about a payment they have to make for him, about how they should act in connection with a shipment of silver, and that they have to retrieve for him the tablets recording debts he has paid in the mean time. The letter (or a copy of it) turned up in the archive, because Elamma’s son and widow are among the addressees. 
+
+
+        um-ma Ir-ma-A-šù[r-ma a-na]        Thus Ir’am-Aššur, say to
+        I-ku-pí-A-šùr Lá-m[a-sà-tim]        Ikuppi-Aššur, Lam[assutum]?
+        ù En-um-A-šùr qi-bi-ma        and Ennam-Aššur:
+        1 ma-na KÙ.B. ku-nu-ku-a : ša        “1 mina of silver under my seals,
+5        Sú-en6-na-da : a-ma-kam : a-na        belonging to Suen-nādā, you must give
+        Šu-Lá-ba-an ù Ku-ra-ra dí-na-šu        there to Šu-Labān and Kurara
+        ù ší-bé šu-uk-na ki-ma KÙ.B.         and you must set witnesses
+        ša Sú-en6-na-da °il5¿-qé-ú-ni        that they received Suen-nādā’s silver.
+        3 ma-na KÙ.B. ša DAM.GÀR ku-nu-ku-a        With 3 minas of silver of the trader,
+10        a-na ṣé-er A-šur-GAL dEN.LÍL-ba-ni        under my seals, I sent Ellil-bāni, son of 
+        DUMU Ha-na-nim ú-šé-bi-lam        Hanānum, to Aššur-rabi.
+        a-ša-me-ma : a-dí-ni : a-ma-kam        I hear that he is still staying there
+        wa-ša-áb : šu-ma a-na pá-ni        and if he has indeed not left 
+l.e.        A-šur-GAL : lá i-lí-ik        to meet Aššur-rabi, then
+rev.        KÙ.B.  pu-uṭ-ra-ma AN.NA        unpack the silver and buy for me
+16        lu 9 GÍN.TA lu ma-lá        tin at 9 shekels per (shekel of silver)
+        ta-le-e-a-ni ša-ma-ma        or as favorably as you can.
+        dEN.LÍL-ba-ni ù  dUTU-e-nam        Send Elill-bāni and Šamaš-ennam
+        KI a-lí-ki-im pá-nim-ma        here with the first caravan.
+20        ṭur4-da-nim : a-šu-mì  ṭup-pé-a        As for my tablets, according to which
+        ša a-na I-na-a DUMU E-lá-lí        I became indebted to Innāya, son of Elālī,
+        En-na-Sú-en6 DUMU Šu-Ištar        to Ennam-Suen, son of Šu-Ištar, and
+        ù A-šur-ma-lík DUMU Qá-a-tim        to Aššur-mālik, son of Qa’ātum, 
+        KÙ.B.  a-hi-ib-lu KÙ.B.  ú-šé-bi-lá-/        I have sent them the silver, they
+25         ša-bu-ú : ṭup-pé-a iš-tí          [šu-nu-tí        are satisfied. Are my tablets with
+        Lá-ma-sà-tim i-ba-ší-ú        Lamassutum or does someone
+        lu [ma]-ma-an i-na ša-zu-uz-[tí-a]        from my representatives have them 
+u.e.        °ú¿-kà-al-šu-nu : a-dí [ma-lá]        in his possession? I have written 
+29        ú ší-ni-šu áš-pu-r[a-ku-nu-tí]        you several times. Why has
+le.e.        [m]ì-šu-um : ma-tí-ma : té-er-ta-ku-/nu        no report of yours ever 
+        lá i-lí-kam-ma úz-ni        reached me and do you not                
+        lá ta-pá-tí-a        keep me informed?
+
+
+Notes 
+2. Ikuppi-Aššur must be the same man as in *240:16, where he figures alongside Ir’am-Aššur. I have restored Lamassutum’s name, because she should be informed about Ir’am-Aššur’s request about debt-notes that could be in her house (lines 25-26, presumably after the death of Elamma).
+6. Šu-Labān could be the man who had invested in Elamma’s joint-stock capital, *2:3.
+9. It is not clear whether tamkārum here means “the creditor” (whose name is not revealed) or “the (main) trader”, who could be Elamma.
+10, 14. Aššur-rabi – if it is the same man – was in Ir’am-Aššur’s as harnesser, who had received from him a “working capital” (*200). This fits the fact that the silver is sent ana pānišu, which usually means that it has to reach him en route.
+16. The price of tin points to purchase in Anatolia; in Assur it was much cheaper.
+27. My original hesitation about the singular šazzuztum is not necessary, see Grammar § 21.9, on “deviations of number agreement”, where AKT 6, 229:12, nēnu šazzuztum ša PN is quoted.
+
+
+A verdict of the Kanesh colony
+
+
+196. Kt 91/k 480 (1-333-91)
+
+
+Verdict of the plenary assembly of the Kanesh colony, in an unopened black envelope, with impressions of seven different cylinder seals, obliging Ir’am-Aššur to pay the working capital of Zikum to Aššur-idī.
+
+
+        KIŠIB kà-ri-im Kà-ni-iš          Seal of the Kanesh colony
+                seal A  
+        ṣa-he-er GAL kà-ru-um        in plenary session. The Kanesh          
+        Kà-ni-iš          colony in 
+                seal B 
+l.e.                seal C 
+rev.                seal D  
+        ṣa-he-er GAL        plenary session 
+5         dí-nam         passed the following
+        [i¿-di-in-ma        verdict:
+        [x  m]a-na  KÙ.B.         ‘[x] mina of silver,
+        [be-ú-lá]-at  Zi-ki-im        [the working] capital of Zikum
+        [a-n]a A-šùr-i-dí         to Aššur-idī
+10        I[r]-ma-A-šùr         Ir’am-Aššur
+u.e.                seal E  
+        i-ša-qal         shall pay’.
+le.e.                seal F 
+ri.e.                seal G
+
+
+Seals
+A=CS 1212;  B=CS 1213;  C=CS 1214;  D=CS 1215;  E=CS 1216;  G=CS 1218;  F=C1217.
+Unfortunately, none of the seals of these men representing the colony, all without inscription, could be identified by Mrs. Omura with impressions known from other envelopes.
+Notes
+7. The restored figure [1/2] takes into account to room available and the fact that this was very often the size of the be’ūlātum.
+Comment
+This verdict is sealed by seven persons representing the colony. See for similar envelopes sealed by (representatives of) the colony OACC 1976, 299f., and Hecker 2003,190-196, to which one may now add for the Kanesh colony AKT 6-a, 61 (8 seals), 80 (5 seals), and Kt 94/k 301 (6 seals), and for the Šimala colony Kt c/k 647 (courtesy of Dercksen), with 5 different seals. Why the number of sealers/representatives varies between five and eight is not clear.
+
+
+Debt-notes
+197. Kt 91/k 504 (1-357-91)
+
+
+A debt-note dated to eponymy year REL 92, recording that Imlik-Aššur owes Ir’am-Aššur a small amount of gold, payable within 15 weeks.
+
+
+        °2¿ GÍN KÙ.KI         2 shekels of kupuršinnu-
+        ku-pu-ur-ší-ni-in         gold of fine quality
+        SIG5 i-ṣé-er         Imlik-Aššur
+        Im-lik-A-šur  Ir-ma-A-/šur         owes to Ir’am-Aššur.
+5         i-šu iš-tù ha-mu!(IR)-uš-tim         From the week of 
+        ša E-dí-na-a : a-na         Edināya he 
+        15 ha-am-ša-tim         will pay within 15        
+        i-ša-qal  šu-ma        weeks. If he does
+9        lá  ìš-qul  ki-ma        not pay he will add (interest) 
+l.e.        a-wa-at  kà-ri-im         in accordance with the regulation
+        ú-ṣa-áb ITI.KAM        of the colony.  
+rev.        qá-ra-a-tim         Month VIII,
+        li-mu-um E-lá-lí         year eponymy of Elālī,
+         DUMU I-ku-nim         son of Ikūnum.
+15        IGI Pí-lá-ah-A-šur         In the presence of Pilah-Aššur,
+        DUMU Da-nu-um-ì-lí         son of Dannum-ilī,
+        IGI A-šur-ma-lik        of Aššur-mālik, 
+        DUMU A-zu-za        son of Azuza. 
+
+
+Notes
+2. In 2 šiqlēn kupuršinnēn the item counted is in apposition to the numeral, but the constructions attested for kupuršinnum are not uniform: BIN 6, 137:2, 1½ GÍN GUŠKIN SIG5 ku-pu-ur-ší-ni-im .... addin, and Kt c/k 1102:4, 5½ GÍN ku-pu-ur-ší-ni, might be interpreted (as Kouwenberg observes) as genitives after a measure, but BIN 6, 90:14, 10 GÍN KÙ.KI ku-pu-ur-ší-NIM (nàm?), and TC 3, 43:8, ½ ma-na GUŠKIN ku-pu-ur-ší-NIM (a nominative in a list?) suggest that the case ending could be conditioned by the syntax of the sentence. But this is not the case in TC 1, 47:17, GUŠKIN ... ku-pu-ur-ší-nu-um mamman ..la ušebbalam. The exchange rate against silver, 1: 6⅔ in TC 3, 43:9, shows that kupuršinnum is a cheaper kind of gold. 
+17-18. The same man occurs during the same eponymy year as debtor in Kt c/k 839:101f.
+
+
+198. Kt 91/k 525 (1-378-91)
+
+
+A small, damaged and crumbling debt-note dated to eponymy year REL 96 or 100, recording the remainder of a debt owed by Ir’am-Aššur, but the name of the creditor is not mentioned. The tablet that starts with the list of the sealers is a copy of the text on the envelope of the debt-note. It may have been written for Ir’am-Aššur’s administration after the debt had been paid and the original debt-note returned.
+
+
+        KIŠIB Ì-lí-áš-ra-ni        Seal of Ilī-ašranni,
+        DUMU A-šur-DÙG KIŠIB        son of Aššur-ṭāb, seal of
+        Šu-Sú-in DUMU Da-dí-im        Šu-Suen, son of Dadum,
+        KIŠIB E-nu-Bé-lúm ša ší-tí        seal of Ennam-Bēlum, of the remainder 
+5        ša °hu-bu-ul¿  Ir-ma-A-šur        of the debt of Ir’am-Aššur.
+        i-na ITI 1.KAM Bé-el-tí-É-/GAL        In the month I, 
+        li-mu-um ša qá-té        eponymy of the successor
+        [A-šu]r-na-da a-na        of Aššur-nādā, to
+        [ x x nim?¿ i-ša-qal        [................] he will pay.
+10        [šu-ma lá iš-qul]        [If he does not pay]
+l.e.        [1 1/2 GÍN.TA]        [1½ shekels per]
+rev.        [1 ma-na]-um  ki-ma        mina, in accordance with
+        [a-wa]-at kà-ri-im        the regulation of the colony
+        ṣí-ib-tám        he will add 
+15        i-na ITI.KAM-im        as interest
+        ú-ṣa-áb        per month.
+
+
+Notes
+1. The first witness could be the same man as mentioned in *311:12 (witness) and *143:8 (recipient of beer). 
+4.  ša functions as relative pronoun in a nominal sentence, not as a conjunction (“that”), since išaqqal in l. 9 is in the indicative.
+9. –nim? is probably the end of a personal name. 
+
+
+199. Kt 91/k 523 (1-376-91)
+
+
+A contract recording a silver debt dated to eponymy year REL 94, which Ir’am-Aššur, Irišum and Ilī-wedāku owe to Uṣur-ša-Aššur, payable within four weeks, with a stipulation which weighing stone is to be used to determine the amount.
+
+
+        ⅔ ma-na KÙ.B. ṣa-ru-pá-am         ⅔ mina of refined silver -
+        i-na ma-na-im        it was cut off using the (1) mina 
+        ša A-mur-dUTU ba-lúm  du-na-e        weight of Amur-Šamaš, 
+        i-ta-ki-is i-ṣé-er        without surcharge - 
+5        Ir-ma-A-šùr  I-ri-ší-im        Ir’am-Aššur, Irišum 
+        ù  Ili5-me-ta-ku        and Ilī-wedāku owe to
+        Ú-ṣur-ša-A-šùr  i-šu        Uṣur-ša-Aššur.
+        iš-tù ha-muš-tim        From the week of
+        ša A-šùr-i-dí        Aššur-idī  and
+l.e.        ù Šu-Ištar  ITI.KAM        Šu-Ištar, month
+11        kan-wa-ar-ta        IX, eponymy year 
+rev.        li-mu-um  dIŠKUR-ba-ni        of Adad-bāni,
+        a-na  4 ha-am-ša-tim        they will pay within 4 weeks.
+        i-ša-qú-lu  šu-ma  lá iš-qú-lu        If they do not pay they will
+15        1½  GÍN.TA  i-ITI.KAM-im         add (an interest of) 1½ shekel
+        ú-ṣú-bu KÙ.B. i-qá-qá-ad        per mina per month. They are
+        šál-mì-šu-nu ra-ki-is        jointly liable for the silver.
+        IGI  DÙG-A-šur        In the presence of Ṭāb-Aššur,
+        IGI Šu-Ištar        of Šu-Ištar.
+
+
+Notes
+2-4. See for this way of describing how the correct weight was established by using the weight of a particular person by the “cutting off” (nakāsum), while excluding the addition an kind of “surtax” (dunnā’ū), AOATT 64-68. But the interpretation and explanation of the forms of the verb nakāsum remain difficult; see Veenhof Lex., s.v. nakās/šum. 
+3. The use of Amur-Šamaš’s weight suggests that he was somehow associated with the creditor, but it is impossible to identify him without the name of his father. In Elamma’s archive we find two men of that name, sons of Harimtum and Mīšar-rabi, and both figure as witness in *190:9-11. Amur-Šamaš may have been identical to the father of the debtor Irišum, mentioned in the memorandum Kt 91/k 141:44.
+5. Ir’am-Aššur’s co-debtors, hard to identify without patronyms, occur only in this text.
+8. The sign MUŠ has a peculiar shape.
+Comment
+A relatively small debt of 40 shekels of silver, jointly owed by three persons, is uncommon and its nature is note revealed. The presence of this debt-note in the archive of Elamma may indicate that Ir’am-Aššur had paid the debt and retained the debt-note, perhaps in order to charge his co-debtors for their share in it.
+
+
+200. Kt 91/k 325 (1-182-91)
+
+
+The text of an undated be’ūlātu-contract, perhaps kept by the creditor/employer after the silver had been paid back and its envelope had been removed.
+
+
+        ⅔ ma-na  KÙ.B.         ⅔ mina of refined
+        ṣa-ru-pá-am        silver, the
+        bé-ú-la-tim        working capital
+        ša  Ir-ma-A-šùr        of Ir’am-Aššur,
+5        A-šùr-GAL        Aššur-rabi
+        ú-kà-al        has in his possession.
+        iš-tí  KÙ.B.        With the silver 
+        A-šùr-GAL        Aššur-rabi
+rev        uk-ta-al        is held (in service). 
+10        IGI  A-šùr-GAL        Witnessed by Aššur-rabi,
+        IGI  En-um-A-šùr        by Ennam-Aššur
+        (remainder not inscribed)
+
+
+Notes
+10. While one may expect the debtor to have sealed the envelope of this contract, the witness Aššur-rabi must be a different person. The debtor, who had received a “working capital” to serve Ir’am-Aššur as transporter, could perhaps be the man of that name in *195:13-14, where silver is sent “to meet him” (en route, ana pāni A.).
+
+
+A quittance
+201. Kt 91/k 516 (1-369-91)
+
+
+An unopened envelope containing a quittance for the payment by Aššur-ṭāb of a very small silver debt owed by Ir’am-Aššur to Puzur-Ištar. It is dated to eponymy year REL 108, rather than 116. Aššur-ṭāb may have been the son of Elamma or his namesake, son of his brother Ali-ahum.  
+
+
+        KIŠIB Šu-mì-a-bi4-a DUMU A-ba-ra-a        Seal of Šumi-abia, son of Abaraya,
+                seal A 
+        KIŠIB En-na-nim DUMU Šu-Hu-bur        seal of Ennānum, son of Šu-Hubur,
+        KIŠIB Puzur4-Ištar DUMU A-šùr-ták-lá-ku        seal of Puzur-Ištar, son of Aššur-taklāku.        
+        3 °⅔? G¿[ÍN  K]Ù.B. ṣa-ru-pá-am        3 ⅔? shekels of refined silver
+                seal B
+5        a-na Puzur4-Ištar  a-šu-mì        Aššur-ṭāb paid to 
+l.e.                seal B (upside down)
+        Ir-ma-A-šùr  A-šùr-DÙG        Puzur-Ištar in the name of 
+        iš-qú-ul   a-na  mì-ma        Ir’am-Aššur. 
+rev.        šu-um-šu  Puzur4-Ištar        Puzur-Ištar will not come back for 
+                seal C (upside down)
+        a-na  Ir-ma-A-šur  lá i-tù-ar        anything, whatsoever, on Ir’am-Aššur.
+10        iš-tù ha-muš-tim ša Kur-ub-Ištar        From the week of Kurub-Ištar,
+        ITI.KAM  ša  sá-ra-tim        month III of the
+                seal C (upside down)
+        li-mu-um  ša qá-té        eponymy of the successor of
+u.e.                seal A
+        En-na-Sú-in        Ennam-Suen
+le.e.                seal A
+r.e.                seal ?
+
+
+Seals
+seal A = CS 77, inscription:  A-šur-ta-°ak¿-[lá-ku] / DUMU Puzur4-[Ištar], also impressed as         seal B on the bulla Kt n/k 1717. Its user was the creditor Puzur-Ištar, who must have         inherited his father’s seal without adapting the inscription, perhaps because he was         named after his grandfather.
+seal B = CS 1226
+seal C = CS 1227
+Notes
+1-2. The two witnesses who sealed this record are not attested in other texts of the archive.
+4. The faint traces after the numeral make G[ÍN] more likely than m[a-na].
+12-13. The eponym, without patronym, most probably was the successor of REL 107 and not of REL 115, since the latest eponymy in a record mentioning Ir’am-Aššur is REL 109.
+Comment
+Such a quittance was issued when the original debt-note could not (yet) be returned. The clause normally present in such quittances, “when the (original) debt-note turns up it is invalid” is lacking and this quittance was also not exchanged for the original debt-note, after which both tablets could be cancelled. 
+
+
+202. Kt 91/k 492 (1-345-91)
+
+
+A note on four amounts of silver, in all 4½ minas plus some interest, the assets of an anonymous writer that he “left” for collection to Ir’am-Aššur. That the latter is entitled to take ca. two-thirds of it for himself suggests that the writer ceded claims to his creditor, who could collect them and thereby indemnify himself, but had to return the surplus to his debtor. The odd amount of line 10 may be a the remainder of a debt or the purchase price of merchandise, not the amount of a normal loan.
+
+
+        2  ma-na  KÙ.B.         2 minas of silver
+        a-Ba-zi-a         for Baziya;
+        1 ma-na KÙ.B.         1 mina of silver
+        ù ṣí-ba-sú         with the interest on it
+5         ša  Dan-A-šur         of Dān-Aššur;
+        1 ma-na KÙ.B. É kà-ri-/im        1 mina of silver of the colonial office; 
+        ½  ma-na KÙ.B.         ½ mina of silver
+        Wa-wa-li         Wawali (and)
+9        A-šur-i-mì-tí        Aššur-imittī -
+l.e.        ŠÀ.BA 2½  ma-na ½ GÍN         Of this Ir’am-Aššur will take
+rev.         KÙ.B. Ir-ma-A-šur         2 minas 30½ shekels
+        i-lá-qé  mì-ma         of silver.  All this
+        a-nim a-na Ir-ma-A-šur        I left to Ir’am-Aššur,
+        e-zi-ib IGI Šu-Ištar         in the presence of Šu-Ištar,
+15         DUMU Da-da-nim         son of Dadānum,
+        IGI Sà-ba-sí-a        and of Sabasiya.
+
+
+Notes
+2-9. The variation between “silver ana PN / ša PN / PN” is confusing. That the size of the amount of l. 10 that Ir’am-Aššur will take “thereof” (ŠÀ.BA) is bigger than the sum of the amounts listed in lines 3-7, implies that it is part of the sum of the four amounts mentioned in lines 2-7 that were “left to him” and that this included the amount “for Baziya” of lines 1-2. 
+14f. This witness also occurs in ATHE 1:1, from month X of eponymy year REL 81.
+
+
+Two judicial records
+203. Kt 91/k 494 (1-347-91)
+
+
+The certified record of a testimony given before the Kanesh colony by one of the two witnesses or arbitrators “seized” when Puzur-Aššur and Ir’am-Aššur confronted each other in Assur and reached  an agreement.
+
+
+        Puzur4-A-šùr  ù  Ir-ma-Ašur        Puzur-Aššur and Ir’am-Aššur 
+        i-na a-limki  iṣ-bu-tù-ni-a-tí-ma         seized us in the City and
+        um-ma  Ir-ma-A-šùr-ma  a-na        Ir’am-Aššur said to 
+        Puzur4-A-šùr-ma  ṭup-pé-a        Puzur-Aššur: “You gained access to
+5         i-na  Wa-ah-šu-ša-na :  ta-áp-té-[m]a         my tablets in Wahšušana and
+        ṭup-pá-am  ša 4:5 ⅔ ma-na 5  GÍN KÙ.B.        you took a tablet of 45 shekels of silver 
+        ša Pí-lá-ha-a-nim  DUMU Da-nu-um-ì-[lí]        of Pilahānum, son of Dannum-ilī,
+        tal-qé  ṭup-pá-am : ša 15 GÍN KÙ.[B.]         (and) you took a tablet of 15 shekels
+         ša  Kà-as-kà-nu-i-il5 : tal-q[é]         of silver of Kaskanu’il”.
+10        um-ma  Puzur4-A-šur-ma :  ke-na        Puzur-Aššur answered: “Indeed,
+        al-qé  ša-zu-uz-ti  : a-ta         I took (them). You, as my representative,
+        ù Puzur4 dUTU  DUMU  Šu-°Nu-nu¿         and Puzur-Šamaš, son of Šu-Nunu,
+         [ší?]*-sí-a : [l]á-lik-ma         must settle accounts, then I will go
+l.e        [me-e]°h-ri-a ù¿* ta-[ah-s]í-sà-ti-a        [to inspect] my copies and memos  
+15         [lá-mur-ma  x  x ]-nim-ma        ...................................... 
+rev.        [x  x  x  x  x  x] x*         .......................................
+        [x x x x-]lá DUMU Šu-Nu-nu        ...........la,  the son of Šu-Nunu
+         [na-áš-a¿-kum : a-ṣé-er         [is bringing?] to you. To your
+        [x ma-n]a *1⅓  GÍN KÙ.B.-pì-kà 1 ma-na        [x mina] 1⅓ shekel of silver
+20        °ú-r]a-da-ma : ú-šé-ba-lá-ku-ma         [I will ad]d 1 mina and send it to you and 
+        ù i-na e-lá-i-kà : lu ni-iz-ku         when you come here, we must clear
+        a-na a-wa-tim : a-ni-a-tim        accounts. For these words 
+        kà-ru-um Kà-ni-iški         the Kanesh colony made me available
+         i-dí-ni-ma  IGI GÍR ša A-šùr        and before the dagger of Aššur
+25        ší-bu-tí  : a-dí-in IGI Bu-°za-zu¿         I gave my testimony. In the presence of
+         DUMU Pu-šu-ki-in        Buzāzu, son of Pūšu-kēn;
+        Li-ip-tí-Ištar DUMU Iš-ma-A-[š]ur        Lipit-Ištar, son of Išme-Aššur
+        tap-pá-i        was my companion.
+
+
+Notes
+7. I consider Pilahānum (notwithstanding UAR 6a, top, "Fürchte Anum!"), a variant of Pilah-Aššur, since a man of that name, also the son of Dannum-ilī, occurs in BIN 4, 160:29, during month VI of eponymy year REL 108, and in *197:15-16, as witness in a debt-note recording a claim of Ir’am-Aššur, during month VIII of eponymy year REL 92. As absent witness he is also mentioned in the undated record Kt a/k 403:23-24 // Kt a/k 513:19. 
+9. Kaskanu’il may be a phonetic variant of Kashanu’il / Kishanu’il.
+24-25. The man who validates this deposition and must have sealed the envelope containing it, is one of the two (“us”) men seized by the conflicting parties as witnesses or arbitrators according to l. 2. When the case in due time came before the colony only Buzāzu was available to testify, but the record also mentions his fellow witness; see Veenhof 1991, 453ff.
+Comment
+I assume that Puzur-Aššur had taken some debt-notes of Ir’am-Aššur to satisfy himself for a claim on him or to force the latter to settle accounts, hence the verb in line 13, which links up with the promise made in l. 20.
+
+
+204. Kt 91/k 512 (1-365-91)
+
+
+The record of a confrontation during eponymy year REL 109, validated by two witnesses, between Ir’am-Aššur and three men about a claim on him by Šuli, son of Buzutaya, who had given him (via another trader) silver for making purchases (presumably in Assur). One of them is the son of the just-mentioned Šuli, who acknowledges to have been paid (lines 14-15), which the three men confirm. They add that “on the basis of what your record states the tamkārum will sue you for his silver”.
+
+
+        Ir-ma-A-šur a-na  DÙG-°ṣí-li-/A-šur         Ir’am-Aššur seized us against         
+        DUMU Ì-lí-a-lúm         Ṭāb-ṣilli-Aššur, son of Ilī-ālum,
+        °Lá¿-qé-pí-im DUMU Puzur4-A-na        La-qēpum, son of Puzur-Anna,                
+         °ù¿ I-šu-hi-im DUMU Šu-lí         and Išuhum, son of Šuli, 
+5         ša ki-ma Šu-lí  iṣ-ba-at-ni-a-/tí-ma         representing Šuli, and
+        um-ma Ir-ma-°A-šur¿-ma         Ir’am-Aššur said: “2 ½ minas
+        2 ½ ma-na  KÙ.B. °ša¿ Šu-lí         of silver belonging to Šuli, son of
+        DUMU Bu-zu-t[a-a  <ša> E]n-na-Sú-°in¿         Buzutaya, which Ennam-Suen, son of        
+        DUMU Ì-lí-a  a-na  ší-a-ma-°tim¿        Iliya, gave me for making  purchases 
+10         i-dí-na-ni-ma   qá-tí   ú-kà-i-lu-/ma        and which I kept in my possession and  
+        a-wa-tí-a  °Ah¿-ša-lim DUMU Bu-zu-ta-a        for which Ah-šalim, son of Buzutāya,         
+        Bé-lá-num  °DUMU¿ Šu-A-šur  ù         Bēlānum, son of Šu-Aššur, and
+        A-šur-°tak¿-lá-ku  DUMU  A-lá-¿hi¿-im         Aššur-taklāku, son of Ali-ahum
+l.e.         ig-mu-ru-ni KÙ.B. šu-a-tí         settled my case, with that silver yousing.
+15         ki-ma Šu-lí  ša-bu-a-tí         have been satisfied as representative of Šuli.
+rev.         Šu-lí  DUMU Bu-zu-ta-a         Šuli, son of Buzutāya, shall not raise
+        lá  i-tù-ra-am  um-ma DÙG-ṣí-li-/A-šur/-        a claim (for it) against me’. Ṭāb-ṣilli-Aššur,
+        Lá-qé-ep  DUMU Puzur2-A-na     [ ma        La-qēp, son of Puzur-Anna, and 
+        ù  I-šu-hu-um DUMU  Šu-lí         Išuhum, son of Šuli, answered
+20         a-na Ir-ma-A-šur-ma  KÙ.B.         Ir’am-Aššur: “With the silver of Šuli, 
+        ša  Šu-lí  ša  a-wa-at-kà        whose affair with you has been settled, 
+        gám-ra-a-ni  Šu-lí  ša-bu-a-ni         we have satisfied Šuli.
+        a-na ša  ṭup-pí-kà         On the basis of what your record states 
+        a-na KÙ.B.  DAM.GÀR-ru-um         the tamkārum will sue you 
+25         i-šé-e-kà  i-na  ha-muš-/tim         for the silver”. During the week of
+        ša A-šur-iš-ti-kál  DUMU Sú-kà-<li>-a         Aššuriš-tikal, son of Sukalliya, 
+u.e.         ITU.KAM  tí-i-na-tim         month X of the eponymy of        
+                  li-mu-um                    Maṣi-ilī .                
+le.e.         Ma-ṣí-ì-[lí  I]GI Ku-da-dim         In the presence of Kudādum,
+30        DUMU A-šùr-[DÙG]  IGI  DINGIR?-         son of Aššur-[ṭāb], of Ilī-nādā,
+        DUMU °A-šur¿-na-da           [ na-da        son of Aššur-nādā.
+
+
+Notes
+5. That Šuli is represented by his son and that in l. 11 his brother Ah-šalim played a role in settling the issue of his silver suggests that Šuli himself was dead.
+8. The line is damaged, but we need a ša to explain the subjunctive iddinanni in l. 10.        
+12. See for this man, active in various capacities, as week-eponym, attorney and mediator, OALP 346, note 1105. 
+15. The stative šabbu’āti is passive and must be addressed to Šuli’s son, but the plural šabbu’āni  of line 22 (of which the three men of lines 17-19 are the subject; the final –ma of l. 17 comes too early) must be active, preceded by its personal object, Šuli. The payment probably was effectuated via the three men mentioned in lines 17-19.
+21-22. One expects awatka gamratni or awātuka gamrāni.
+26. The correction of the name of the father is based on CCT 4, 21b:6, 5, 43:11, etc. Our Aššuriš-tikal is attested as week eponym in eponymy year  REL 106 (TPAK I, 87:5’ and Kt 91/k 204:8). 
+30. The restoration of the first name is suggested by the room available and by TC 3, 29:27, Kudādum, father of Aššur-ṭāb. See for the second person ICK 2, 128 rev.:33’, TC 3, 213:31, and VS 26, 121:6. 
+Comment
+It is not easy to understand this record. Ir’am-Aššur apparently had received silver of Šuli, via Ennam-Suen (l. 8), for a commercial purpose, which obviously should be paid back in some way to its owner. He may have been approached by the three men mentioned in lines 1-4, among whom a son of Šuli, or he has summoned them and in front of witnesses told them that his case already had been settled by three other men, including a brother of Šuli, so that Šuli’s son (and heir) is satisfied (l. 15) and Šuli himself cannot claim anything from him. The payment apparently had been indirect, perhaps in the framework of a larger settlement of accounts, which may have taken place if indeed Šuli was not longer alive (as suggested in the comment on line 5). The three men summoned acknowledge this by the rather puzzling statement “we have satisfied Šuli with the silver”. Our understanding is also hampered by their following remark, that they leave it to the/a tamkārum to sue Ir’am-Aššur for the silver he still owes on the basis of tablet. This may also point to a more general settlement of accounts that could result in new debt-notes, at times also ones that left the creditor anonymous (calling him tamkārum), e.g. because it was not yet clear who was entitled to the money (e.g. when a firm was liquidated). But there may be other explanations, since tamkārum could also mean the manager of a joint-stock capital or the boss of a firm.   
+
+
+A memo
+205. Kt 91/k 335 (1-192-91
+
+
+A small, oblong tablet, only the obverse of which is inscribed, mentioning a financial claim on Ir’am-Aššur. Its presence in Elamma’s archive suggests that he (or a son of his) was the unnamed creditor. 
+
+
+        18 ¼ GÍN        18 ¼ shekels of
+        KÙ.B. i-li-bi4        silver due from
+        Ir-ma-A-šùr        Ir’am-Aššur.
+
+
+
+
+________________
+[1]
+ This name is usually spelled NI-DÍ-ba-ni, but a rare spelling with initial I-, in *226:2, Ir-am-A-šur / DUMU I-dí-ba-ni, shows that NI- is to be read Ì-, but I do not know what the name means. Ir’am-Aššur's son was named after this grandfather, see *192:15-16.
+[2] It contains a dozen debt-notes in which he is creditor, letters to him, records of private summonses and litigation in which he is one of the parties, a contract of the marriage of his daughter Suhkana, a slave-sale, and an agreement with his brother Aššur-rabi on the division of assets of their “paternal house”. His above-mentioned seal CS 1148 is impressed on Kt 94/k 179, which he seals as a debtor who owes 10 minas of silver to Iliya (from eponymy year REL 113).
+[3] E.g. in AKT 1, 40B:1; 2, 39:2; 4, 26:47-60; 6-b, 441:27, 502:1-4; BIN 6, 31:2; 63:16’; 73:2; 96:17; CTMMA 78c:1; CCT 3, 27a:1; 5, 26d:14; EL 93:1; 235:9.27.30 (correct in both texts Abum-Aššur into Ir-ma-Aššur); KTBl. 5:16; Prag I, 535:23; 653:6; 750:2; RA 58 no. 22:18. 24; TC 3, 67-69; 127:4; 155:13; 209:22; 210:11; VS 26, 2:2; 3:5; Kt c/k 528:2; 671:9; etc.
+[4] L. 6, šalluṭū, the stative of the D-stem, which must mean that they have acquired, have full disposal of what is their share.

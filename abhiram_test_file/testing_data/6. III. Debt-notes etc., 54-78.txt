@@ -1,0 +1,1191 @@
+﻿III. DEBT-NOTES, MEMOS AND RELATED RECORDS (54-78)
+
+
+
+
+III. DEBT-NOTES, MEMORANDUMS AND RELATED RECORDS 
+(54-78)
+
+
+A. Debt-notes (54-64)
+
+
+        Debt-notes with their envelopes intact probably were never paid back by the debtor. Those whose broken envelope was not found in the archive may have been tablets that were “split” (laṭāum, see the note on AKT 6, 671:16), which means that upon payment the sealed envelope was broken and removed to deprive it of its legal value, while the creditor or debtor might preserve the tablet inside for his administration. 
+        The debt-notes are presented here in chronological order, first those dated by year eponym, next two only dated by week eponym, and finally three undated be’ūlātu-contracts. The memorandum *68 has been included here because its first part presents the full text of a debt-note. Several of the contracts are excerpted in memorandums from Elamma’s archive, see the listing in the comments on *70.
+
+
+54. Kt 91/k 393 (1-247-91)
+
+
+Unopened black case, coarse writing, which contains a contract for a debt of 40 shekels of silver owed by Aššur-bāni, dated to the year REL 67. The interest is 33⅓ % (no period mentioned), and the text is unique in stating for how much (capital + interest) the creditor will sue him if he defaults.
+
+
+                seal A (upside down)
+        KIŠIB  Lu-zi-na        Seal of Luzina,        
+                seal A (upside down)
+        KIŠIB  A-šur-DÙG  ša  hu-bu-ul        seal of Aššur-ṭāb, of the debt of
+                seal B (upside down)        
+        A-šur-ba-ni  / DUMU Sú-°ku-ku¿*        Aššur-bāni, son of Sukkuku.
+l.e.                seal A
+rev.        ⅔ ma-na  KÙ.B.        He will pay  ⅔ mina 
+                seal B
+5        a-na  e-tí-šu / i-ša-qal        of silver at the agreed time.
+        šu-ma  lá  ìš-qú-ul        If he does not pay
+        1 ma-na-um ⅓ ma-na        per mina ⅓ mina  
+        i-lá-ak-šu-um        will amount for him
+        a-na  1  ma-na  KÙ.B.        (and) Hinnāya will sue him
+10        Hi-na-a  i-šé-e-šu        for 1 mina of silver
+        ITU.KAM  áb-ša-ra-ni        Month V,
+        li-mu-um        eponymy of
+u.e.        Ip-hu-ru-um        Iphurum.
+le.e                seal A
+
+
+Seals
+seal A = CS 1163
+seal B = CS 1164, fragmentary three-line inscripton, with  drill-holes in the first two lines of the         inscription; still preserved: [........]-x-x / [........]-[r]a?-a / [.......]-GA
+seal C = CS 1165, fragmentary two-line inscription: x x [.......] / DUMU? x [.........]. 
+        Lack of filiation of the two witnesses makes it difficult to identify them. 
+Notes
+4. Another debt, 50 shekels of silver,  of the same man is listed in *70:18f., where Elamma is the creditor. 
+5. See for this formula Landsberger 1964 and for some additional occurrences Donbaz 1988, 54-56, notably in Kt n/k 1857:9-13, in connection with a payment in two installments: “They will pay within 13 weeks; they will pay 2 minas 17 shekels ana ettišu and  2 minas 17 1/6 shekels ana ettišuma”. With three installments and a debt of 30 shekels of gold in Kt 88/k 263:34-38 (Donbaz 2007, 145f.): “From month V of eponymy (REL) 76 the debtor will pay 10 shekels in month XI, 10 shekels ana šaniuttim e-tí-šu, and 10 shekels ana šalšuttim e-tí-šu”, where ettum seems to be plural, referring to successive terms of six months. Note also Kt 86/k 163:5, a silver debt to be paid ana ettišunu ina niggallim, “at the term agreed by them(?), at the time of the harvest”. But in AKT 3, 103:7, ūmū ettum šakin, “an agreed term has been set”, and CCT 5, 44b:9-10, ettum šaknam, the word is in the singular.
+7-8. This formulation of the interest clause is typical for early debt-notes and especially by small debts of less than 1 mina of silver. 
+9-10. Še’ā’um is construed with a personal accusative and the item one claims can be a second accusative (examples in CAD Š/II, 358, 3, a, e.g. šaddu’itī kāram aše’’e), or be introduced by ana (pace CAD KÙ.B. lá-qú-im BIN 4, 79:18’ is a stative D, not an infinitive, as shown by l. 14’, aṣṣēr kaspum annium lá-qú-ú). This is an unusual formulation for a debt-note and raises the question whether Hinnāya was indeed the (original) creditor. The mention in *70:18-19 of a comparable debt, of 50 shekels of silver, owed by the same debtor to Elamma suggests the possibility of a transfer of the claim and if so, it is further evidence of the business contacts between Elamma and Hinnāya. 
+13. Eponymy REL 67 is the earliest one recorded in the archive; another debt dated to this year is recorded in *74:15-19 // *75:9-11.
+
+
+55. Kt 91/k 304 (1-161-91)
+
+
+The tablet, whose reverse is not inscribed, records a silver debt of Idnāya, from eponymy year REL 82; its envelope is not preserved in the archive.
+
+
+        4  ma-na 4  LÁ 1/6 GÍN        4 minas 3 5/6 shekels
+        KÙ.B.  ṣa-ru-pá-am        of refined silver 
+        i-ṣé-er  Id-na-a        Idnāya owes
+        E-lá-ma  i-šu  iš-tù        to Elamma. From
+5        ha-mu-uš-tim  ša        the week of 
+        Šu-ki-tim  ù  Ú-ra-a        Šukutum and Urāya
+        1¼ GÍN  i-na  ITU.1.KAM        he will add as interest
+        a-na  ma-na-im        1¼ shekel per mina
+        ú-ṣa-áb        per month.
+10        IGI  I-lá-áb-ra-at-ba-ni        In the presence of Ilabrat-bāni,
+l.e.        IGI  Ib-ni-lí        of Ibni-ilī
+
+
+Notes
+6. The name of the first man is Šuk(k)utum, with vowel harmony, from Šuk(k)atum, a spelling occasionally attested, e.g. as name of the second year eponym in KEL G (Kt p/k 9, Memorial Garelli 125, note 4) and in CCT 1, 4:39, Šu-Ištar s. Šu-kà-tim //  Šu-ki-tim in AKT 3, 64:41.
+7. The interest is a little less than normal, perhaps a favor to the debtor.
+Comment
+This debt-note is excerpted in the memoranda *74:6-10 and *75:5-6. The former adds its date, month IV of eponymy year REL 82, not mentioned on this tablet, but presumably on its now missing envelope. If not, one would have to assume that the writer could find out when these week eponyms were in office, probably on the basis of a list. The double week eponym is well attested elsewhere (see Kryszat 2004, 194), but only once with a date, month VIII of eponymy REL 79. Idnāya occurs as debtor of Elamma also in *70:29 (for 1⅓ mina of silver) and *119 records a settlement of accounts between him and Elamma. The background of such debts may have been some form of cooperation in a caravan, as attested in *5:3-7.
+
+
+56. Kt 91/k 435 (1-288-91)
+
+
+Tablet (without its envelope) recording a silver debt owed by Šumi-abiya to Elamma, dated to eponymy year REL 85. This debt might concern the “working capital” supplied to Šumi-abiya as “harnesser”, according to *37:31-32 (half of the 1 mina given to him and Uzua, no date), but only if he had subsequently defaulted and was obliged to accept this new contract, which now stipulated interest and a at a high rate of 40% per year.
+
+
+        ½  ma-na  KÙ.B  ṣa-ru-pá-am        ½ mina of refined silver
+        i-ṣé-er        Šumi-abiya 
+        Šu-mì-a-bi4-a        owes to
+        E-lá-ma i-šu        Elamma.
+5        iš-tù  ha-muš-tim        From the week
+        ša  DINGIR-na-da        of Ilī-nādā
+        1  GÍN.TA  ṣí-ib-tám        he will add 1 shekel of silver
+        i-ITU.1.KAM  ú-ṣa-áb        as interest per month.
+l.e.        ITU.1.KAM  bé-el-tí-É.GAL-lim        Month I,
+rev.        li-mu-um        eponymy of
+11        Puzur4-dMUŠ        Puzur-Nirah.
+        IGI dIŠKUR-pì-lá-ah        In the presence of Adad-pilah,
+        IGI  En-um-A-šur        of Ennam-Aššur,
+        DUMU  Puzur4-A-šur        son of Puzur-Aššur.
+
+
+Notes
+7. The interest clause does not mention “per mina” and must refer to the amount of the debt.
+9.The scribe already knew the name of the new year eponym REL 85 in month I, while the one of *68:5-7 during month III still referred to him as the successor of REL 84.
+
+
+57. Kt 91/k 398 (1-251-91)
+
+
+Unopened envelope with a contract dated to eponymy year REL 88 about a silver debt owed by Ilšu-rabi to Elamma, identified as a penalty for a theft imposed on him by the Kanesh colony.
+
+
+ 1        KIŠIB  E-la-lí  DUMU  I-ku-nim        Seal of Elalī, son of Ikūnum,
+        KIŠIB Ša-lim-a-hi-im DUMU Dan-A-/šur        seal of Šalim-ahum, son of Dān-Aššur,
+                seal A         
+        KIŠIB En-na-Sú-in  DUMU  Sú-kà-lí-a        seal of Ennam-Suen, son of Sukkaliya,
+        KIŠIB I-dí-A-šur  DUMU  A-šur-ma-lik        seal of Iddin-Aššur, son of Aššur-mālik,
+5        ša  1  ma-na  1½  GÍN  i-ṣé-er        that Ilšu-rabi, son of Bulāli,
+        DINGIR-šu-GAL DUMU  Bu-la-lí        owes 1 mina 1½ shekel of silver
+                seal B
+        E-lá-ma  i-šu  iš-tù        to Elamma. From 
+l.e.                seal B 
+rev.        ITU.KAM *á[b?-ša-ra-ni / li-mì-im]        month V?, eponymy of
+                Šu-*H[u?-bur]               Šu-H[ubur?] 
+                seal C (upside down)
+10        a-na  ITU. 3. KAM  i-ša-qal        he will pay within 3 months. If he does
+        šu-ma  lá  iš-qúl  ki-ma  a-wa-/at        not pay he will add (interest) in 
+        kà-ri-im  ú-ṣa-áb  KÙ.B.        conformity with the rule of the colony.
+        iš-ri-iq-ma  kà-ru-um        He had stolen silver and the
+        Kà-ni-iš  a-na  šu-šál-šum        colony had convicted him to (pay)
+15        i-dí-šu                the triple.
+                seal D (upside down)
+u.e.                seal D (upside down)
+le.e                seal C
+r.e.                seal A
+
+
+Seals
+seal A = CS 804, also impressed as Kt n/k 1946D
+seal B = CS 1174
+seal C = CS 1175
+seal D = CS 1176
+
+
+Notes
+5. This debt is presumably listed in the memo *70:27-28, where the amount of the debt is rounded off to 1 mina.
+9-10. Signs damaged and missing due to a hole in the envelope and the readings ÁB and HU are uncertain; the alternative for HU is DA, which yields Šu-d[a-a], eponym REL 82 (Šu-Suen, REL 104, is too late). 
+13-15. This identifies the debt as a fine imposed by the colony because of a theft committed against Elamma, which must have amounted to 20½ shekels. See for case of the “triple payment penalty” OALP 260. Note that “to steal” in OA can also refer to the unauthorized acquisition of assets belonging to somebody else, see the note on *109:8.
+
+
+58. Kt 91/k 479 (1-332-91)
+
+
+Unopened envelope (whose left side is damaged) with a debt-note for an amount of silver due by Abatanānum to Elamma, dated to eponymy year REL 89.
+
+
+         [KIŠIB DINGIR-tap]-pá-a DUMU Id-na-a  [Seal of Ilī-tap]pā, son of Idnāya,
+                seal A (upside down) 
+        KIŠIB A-ba-ta-na-nim         seal of Abatanānim, son of
+        DUMU A-šur-UTUši KIŠIB I-di-Sú-in        Aššur-šamšī, seal of Iddin-Suen, 
+                        DUMU A-šùr-DÙG                son of Aššur-ṭāb.  
+                seal B  
+5        [x x GÍ]N KÙ.B. sa-ru-pá-am         [x she]kels of refined silver
+l.e.                seal B
+rev.                seal B  
+        [i-ṣ]é-er A-ba-ta-na-nim         Abatanānum owes to
+        [E-l]á-ma  i-šu  ITU.KAM        Elamma. Month V,
+        [áb-š]a-ra-nu  li-mu-um         eponymy of
+        [DINGIR-šu]-GAL DUMU Ba-zi-a         Ilšu-rabi, son of Baziya
+10        [a-na x h]a-am-ša-tim         [Within x] weeks he shall
+        [i-š]a-qal šu-ma lá iš-qú-/ul         pay; if he does not pay
+        [ki-m]a a-wa-at         he will add interest in conformity
+        [kà]-ri-im ú-ṣa-áb        with the rule of the colony
+                seal A (upside down)
+le.e, re.e.        seal C
+
+
+Seals
+seal A = CS 1210, must be the seal of Abatanānum, son of Aššur-šamšī.
+seal B = CS 1211, inscription: I-di-°Sú-en¿ / DUMU dA-šu[r-DÙG], seal of the second witness.
+seal C = CS 1184 = *312B, dated to eponymy year REL 89, the seal of Ilī-tappā, son of Idnāya;         with a “pseudo-inscription”.
+Notes
+1. The restoration of the name is based on *312:3, see the comment on seal C.
+
+
+2-3. The name occurs more often (CCT 3, 34b:2 and 4, 8a:3, in both as transporter of merchandise; ICK 1, 177:11; VS 26, 67:8.15; Kt j/k 233:19) and with the same father in Kt. 74/t 12 rev.:5 (witness, record dated by a double week-eponym).
+
+
+59. Kt 91/k 463 (1-316-91)
+
+
+Contract (without its envelope) about a silver debt owed by Amur-Ištar to Elamma, from eponymy year REL 90.
+
+
+        1 ma-na 7 1/2 GÍN KÙ.B.        1 mina 7 ½ shekels of refined
+        ṣa-ru-pá-am i-ṣé-/er         silver Amur-Ištar,
+        A-mur-Ištar DUMU Da-da        son of Dada, owes 
+        E-la-ma i-šu        to Elamma. 
+5         iš-tù ha-muš-tim        From the week of
+        ša A-la-hi-im        Ali-ahum and
+        ú dMAR.TU-ba-ni        Amurrum-bāni 
+        a-na 11 ha-am-ša-tim        he will pay in 
+9        i-ša-qal        11 weeks;
+l.e.         šu-ma lá iš-qú-ul         if he does not pay
+rev.        1½ GÍN.TA ṣí-ib-/tám         he will add 1½ shekel
+         a-na ma-na-im         as interest
+        i-na ITU.1.KAM         per mina
+        ú-ṣa-áb  ITU.KAM         per month.
+15         ša  sà-ra-tim         Month II,
+        li-mu-um         eponymy of  the successor
+        ša  qá-té  DINGIR-šu-GAL         of Ilšu-rabi,
+         DUMU Ba-zi-a         son of Baziya.
+19        IGI Im-dí-lim         In the presence of Imdī-ilum,
+u.e.         DUMU Šu-Lá-ba-an         son of Šu-Labān,
+        IGI E-me-me-i        of Ememe’i, 
+le.e.        DUMU A-zu-ta-a        son of Azutaya.
+
+
+Notes
+21. This name is also spelled E-me-me, I-me-me and E-e-me-me. Most occurrences are of Ememe, father of Azutaya (also in *192:14 aand VS 26, 102:20), and the/a son of Azutaya appears also in BIN 4, 28:14 (as witness). He or a namesake is attested as week-eponym, together with Aššur-nādā, during eponymy year REL 86, and together with Aššur-taklāku during eponymy years REL 90 and 96. 
+
+
+60. Kt 91/k 489A/B (1-342-91)
+
+
+Fragmentary case (A) with a complete tablet (B) with a contract about a silver debt owed by Ištar-ilšu to Elamma’s son Aššur-ṭāb, dated to eponymy year REL 90, when Elamma was still active. This debt-note is excerpted in *69:49-51. The tablet grants the creditor the right to collect the debt wherever he sees the debtor. 
+
+
+A. Case                B. Tablet 
+        KIŠIB Da-dí-a DUMU B[a-za-za]?  
+                seal A  
+        KIŠIB  I-di-A-bi4-im DUMU I-dí-Sú-in 
+        KIŠIB Ištar-il5-šu DUMU A-zu-za-a 
+        KIŠIB A-šur-dUTUši 
+5         DUMU Ì-lí-tù-ra-am  
+                seal B 
+        ⅔ ma-na 5 GÍN [KÙ.B. ]                 ⅔ ma-na 5 GÍN KÙ.B.
+l.e.                seal B  
+rev.         ṣa-ru-pá-am i-ṣ[é-er]                ṣa-ru-pá-am  i-ṣé-er  
+                seal C (upside down)  
+        Ištar-il5-šu  DUMU  [A-zu-za-a]                 Ištar-il5-šu  A-šùr-DÙG
+        °A-šur¿-DÙG  DUMU  E-[lá-ma  i-šu]         i-šu  iš-tù  ha-muš-tim
+10         [i]š-tù ha-mu-u[š-tim] 
+        [ša] Hu-ra-ṣa-ni[m  ù]                 5        ša Hu-ra-ṣa-nim
+                seal B  
+u.e.        [A-šur-ma-lik  li-mu-um]                  ù  A-šur-ma-lik
+                seal A  
+        A-lá-hu-um  DUMU [I-na-ah-DINGIR]         1½ GÍN.TA a-na
+le.e.        1½  GÍN.TA a-na  1 ma-na-/im                 1 ma-na-im  i-ITU.KAM
+                seal C (upside down)           l.e.        ṣí-ib-tám
+15         [ṣí-ib-tám ú-ṣ]a-áb           10        ú-ṣa-áb  KÙ.B.
+ri.e.                 seal D          rev.        a-šar  a-mu-ru-šu
+                                        a-lá-qé  ITU.KAM
+                                        ṣí-ip-im  li-mu-/um
+                                                A-la-hu-um
+                                    15        IGI Da-dí-a
+                                        IGI I-dí-A-bi4-im
+                                        IGI A-šùr-dUTUši
+Translation
+(The patronyms of the witnesses, the name of the debtor as sealer, missing on the tablet, and the addition in B-10-12 are in italics)
+Case: “Seal of Dadiya, son of B[azaza]; seal of Iddin-abum, son of Iddin-Suen; seal of Ištar-ilšu, son of Azuzaya; seal of Aššur-šamšī, son of Ilī-tūram. 6 2/3 mina 5 shekels of refined silver Ištar-ilšu, son of [Azuzaya], owes to Aššur-ṭāb, son of E[lamma]. 10 From the week of Hurāṣānum and Aššur-mālik, eponymy of Alī-ahum, son of [Inah-ilī], he will add 1 ½ shekel per mina as interest”.  B: 10-12: “I will take the silver wherever I see him”. 
+
+
+Seals
+seal A = CS 1220
+seal B = CS 1221, with a one-line inscription: KIŠIB I-lí-iš-tá-k[i-il5], but this name is neither         that of the debtor nor that of one the witnesses.
+seal C =  CS 1222
+seal D = CS 1223, fragmentary two-line inscription: [Ì-l]í-tù-r[a-am] / [DUMU A-šù]r-mu-ta-        p[íl?], the name of the father of the third witness. 
+Notes
+A:1. The restoration of the name in A:1 is based on Kt j/k 233:3 (from eponymy year 74).
+B:4-6. The double week eponymy also occurs during month IV of eponymy year REL 92 (TC 1, 91) and month V of REL 95 (CCT 5, 21b) and it features with Aššur-mālik as the first name during this same month and year in Kt 89/k 303.
+B:11-12. See for this clause and its variations the comments on AKT 5, 44:13’ff. The clause is always in the first person, as spoken by the creditor when the contract was made, and it is typical for non-standard clauses added to the formulary at the wish of the creditor.  It allows the collection of the debt both in Assur and in Anatolia. 
+
+
+61. Kt 91/k 390 (1-244-91).
+
+
+Unopened envelope with a debt-note for modest quantities of copper and silver due to Elamma by Puzur-Suen.
+
+
+        KIŠIB  Puzur4-dE[N.ZU]        Seal of Puzur-Suen,
+                seal A
+        KIŠIB  Šu-Bé-lim KIŠI[B x  x  x]        seal of Šu-Bēlum, seal of [...........].
+        1 GÚ LÁ 10  ma-na URU[DU  i]-ṣé-er        50 minas of copper
+        Puzur4-dEN.°ZU  E¿-lá-ma        Puzur-Suen owes to Elamma.
+5        i-šu  i-na  ad-ri-im  i-ša-qal        At the time of the threshing he will 
+        URUDU  Ta-pá-ša-ta-°i¿-am*        weigh out pure copper of Tappašatta.
+                seal A
+        za-ak-wa-am šu-ma i-na ú-me-šu        If he does not pay when his term is up,
+        lá  iš-qú-ul ki-ma a-wa-at        he will add interest 
+l.e.        kà-ri-im  Du-ur-hu-mì-it        in conformity with the rule
+                seal B
+10        ṣí-ib-ta-am  ú-ṣa-áb        of the Durhumit colony.
+rev.                         on left side of rev. a vertical impression of seal C        
+        10  GÍN  KÙ.B. a-ha-ma        Separately he will pay 10 shekels
+        i-na  ku-bu-ur  ú-ṭí-tí-/im        of silver in Kanesh,
+        i-na  Kà-ni-iš        when the barley is ripe.
+        i-ša-qal  šu-ma  lá  iš-qú-ul        If he does not pay
+15        i-Du-ur-hu-mì-it        I will collect it in Durhumit
+        i-ṣé-ri-šu  a-lá-qé        for his account.
+                seal A
+u.e.                seal A
+le.e                seal A
+
+
+Seals
+seal A = CS 1156, carries a “pseudo-inscription”.
+seal B = CS 1157, same seal impressed as ICK 1, 20E = Teissier no. 262.
+seal C = CS 1158, part of an inscription, not deciphered.
+The seals must belong to the debtor Puzur-Suen (no filiation) and the two witnesses, Šu-Bēlum and a man whose name is missing in line 2. He could be the owner of CS 1157, since the two other sealers do not feature among those of ICK 1, 20. 
+Notes
+5, 12. The due dates, based on the agricultural season (see OBO 160/5, 240f.), are unusual among Assyrians. 
+6-7. Tappašatta is most probably identical to Hittite Tappasand/ta, possibly in the area north(-west) of Hattuš (see Copper 14, 44). This rare nisbe of copper also occurs in Kt n/k 1952:4 (Bayram, ArAn 3 [1997], 548f.). See for the equally rare zaku’um, “clean, pure”, used of copper Copper 36 (also in Kt n/k 1742:5, URUDU za-ku-am).
+8-10. “The rule of the Durhumit colony” on default interest payable on copper debts is attested only here, but is understandable since the city was the main copper market (Copper 154f.), which must have entailed price-forming (cf. “copper according to the exchange rate [mahīrum] of Durhumit”, in Kt 91/k 181:16 and Kt n/k 661:7) and fixing the interest. We also meet interest “according to the rate of colony of Timilkiya” (Kt 87/k 256:6-8, courtesy of K. Hecker, for a silver debt of only 2 ½ shekels!). These rates must have been the usual ones of 30% per year, since this rate in Kt n/k 1952:12-15 is said to be “in conformity with the rule of the colony”. 
+11. The reason for the additional payment of 10 shekels of silver is not clear, but its value, roughly about 1/4 of that of the copper, suggests a form of interest.
+15-16. This presumably means that the creditor can indemnify himself by taking other assets of the debtor. 
+
+
+62. Kt 91/k 333 (1-190-91)
+
+
+Tablet recording an undated small silver debt owed to Elamma by Ikūn-Mīšar, who will pay back when he return from a trip to Assur, presumably from the profit he will make by selling the merchandise bought there. 
+
+
+        8  GÍN KÙ.B. ṣa-ru-/<pá>-am        8 shekels of refined silver
+        i-ṣé-er        Ikūn-Mīšar
+        I-ku-mì-šar        owes to
+        E-lá-ma i-šu        Elamma.
+5        iš-tù a-limki        He will
+        i-tù-a-ri-šu        pay when he returns
+rev.        i-ša-qal        from the City.
+        IGI  Šu-Ištar        In the presence of Šu-Ištar.
+
+
+Comment
+This debt is also excerpted in the memo *74:13f.//*75:8f. and quoted in full in the memorandum * 69:24-28, where the text was copied from the envelope of the tablet (which is not preserved), because it starts by mentioning the seal impressions of the witness, Šu-Ištar, son of Ennum-Aššur, and of the debtor, Ikūn-Mīšar, the son of Ilī-dān. The mention of Elamma as creditor in our text proves that the memoranda *70, *74 and *75, which do not name him as such, record debt claims of him.
+
+
+63. Kt 91/k 400 (1-254-91)
+
+
+Undated tablet recording a small silver debt owed by Ilī-dān to Elamma. The tablet is a copy made from the envelope of the debt-note, since it starts by mentioning the sealings. 
+
+
+         KIŠIB  DINGIR-SIPAD        Seal of Ilī-rē’ī,
+                seal A
+        KIŠIB Ì-lí-dan        seal of Ilī-dān,
+        DUMU  A-mur-Ištar        son of Amur-Ištar.
+        10⅓  GÍN  KÙ.B.        10⅓ shekels of
+                seal A
+5        ṣa-ru-pá-am        refined silver
+l.e.                seal A
+rev.        i-ṣé-er        Ilī-dān 
+        Ì-lí-dan        owes to
+        E-la-ma  i-šu        Elamma.
+        KÙ.B. i-na  a-lim/ki        He will pay the silver
+        i-ša-qal        in the City.
+                seal B
+u.e                seal B
+le.e                seal B
+r.e.                seal A
+
+
+Seals
+seal A = CS 1178
+seal B = CS 1179
+Comment
+The man who owes this small debt occurs only here and is also obscure outside the archive.
+
+
+64. Kt 91/k 477A/B (1-330-91)
+
+
+This envelope (A) and the tablet it contained (B) record a silver debt owed by Galdaya, his “harnesser”, to Elamma, dated to eponymy year REL 76. The debt results from a settlement of accounts before witnesses, in which travel expenses and expenses for food incurred and apparently paid by Galdaya are deducted from a larger debt he owed to Elamma. See for records on such settlements, carried out before witnesses, OALP 180-2. An appendix mentions the existence of a be’ūlātu-contract with Galdaya, which is not affected by this arrangement. Both of Elamma’s claims on Galdaya are also listed in *70:5-9 (from year eponymy REL 76) and in *74:21-24. See for Galdaya’s “service contract” Appendix text 8 and the comment on *70:5-9.
+
+
+A. Case                        B. Tablet
+                seal A
+        KIŠIB La-qé-pì-im  DUMU I-li-a 
+        KIŠIB A-mur-dUTU  DUMU Mì-šu-ra-bi 
+        KIŠIB E-zé  DUMU Ša-ru-ki-in         
+        KIŠIB Gal-da-a ša E-lá-ma                         E-lá-ma ú Ga-al-dá-/a 
+5        ù Gal-da-a  ni-kà-sí                 ni-kà-sí  i-sí-ú-ma
+        i-sí-ú-ma lu gám-ru-um                  lu  ú-ku-ul-tù-šu
+                seal A  
+        ša ha-ra-nim  lu  ú-ku-ul-tù-šu                lu  ga-am-ru-um  ša ha-ra-/nim         
+l.e.                seal B  
+rev.         ba-ti-iq 1 ma-na KÙ.B.         5                mì-ma  šu-um-šu  ba-ti-iq 
+                seal C                          1 ma-na KÙ.B. ṣa-ru-pá-am
+        ṣa-ru-pá-am  i-ṣé-er                         i-ṣé-er  Ga-al-dá-a        
+10        Gal-da-a  DUMU Na-ku  E-lá-ma                        E-lá-ma i-šu iš-tù         
+        <i-šu> iš-tù ha-mu-uš-tim                         ha-mu-uš-tim ša  Am-ri-a                
+        ša Am-ri-a ù I-ku-nim         10                ù I-ku-nim 1½  GÍN.TA
+        1½  GÍN.TA a-ma-na-im  ú-ṣa-áb                 i-na ITU.KAM-im  a-na 
+14        ITU.KAM ṣí-ip-im  li-mu-um                        1 ma-na-im  ú-ṣa-áb 
+                seal D (upside down)                         ITU.KAM ṣí-ip-im 
+ l.e.        A-bi4-a  DUMU Šu-Da-ga-an                         li-mu-um  A-bi-a 
+                seal D (upside down)         15                DUMU Šu-Da-ga-an
+le.e.        a-ha-ma  ṭup-pu-um  ha-ar-mu-um                         a-na a-wa-tim
+        ša be-ú-lá-ti-šu  i-ba-ší                         a-ni-a-tim
+        a-na  a-wa-tim  a-ni-a-tim                         ni-iš  a-limki  it-mu-ma        
+19         ni-iš a-limki nu-ta-mì-šu-nu                         IGI Ša-lim-dIŠKUR        
+                 seal C          20                IGI Lá-qé-pí-im
+r.e.                seal D                        IGI A-mur-dUTU
+                                        IGI E-zé-e
+                                        ṭup-pu-um
+                                        ša bé-ú-lá-ti-šu
+                        25                a-ha-ma  i-ba-ší         
+
+
+Translation of A.
+“Seal of Lāqēpum, son of Iliya; seal of Amur-Šamaš, son of Mīšu(r)-rabi; seal of Ezē, son of Šarru-kīn; seal of Galdāya, (witnessing) that Elamma 5 and Galdāya settled accounts with the result that after both travel expenses and his food allowance have been deducted 8 Elamma (still) has a claim of 1 mina of refined silver on Galdāya, the son of Naku. 11 From the week of Amriya and Ikūnum he will add  1½  shekel per mina per month. Month VII, year-eponymy of Abiya, son of Šu-Dagan. 16 Separately, there still exists a valid record of his working capital. 18 We made them swear an oath by the City for these words.“
+
+
+Variants of B.
+Several, mainly minor differences concern the spelling of names: B:22 E-zé-e // A:3 E-zé; the name of the debtor is spelled Ga-al-TA-a in B and Gal-DA-a in A, and A:10 gives the name of his father; B:3-4 is in reversed order compared with A:6-7 and adds mimma šumšu in A:5; B:11 mentions that the interest is “per month”, which is omitted in A;  B:19, “they swore an oath”; B:19-22, the first witness is not mentioned by A and B adds the names of the fathers of the witnesses;  B:23-25 omit the qualification harmum and place ahamma before the verb. 
+Seals
+seal A =  CS 1207.
+seal B =  CS 533 = *99 A = Kt n/k 1800 C, the seal of Amur-Šamaš, son of Mīšar-rabi.
+seal C = CS 1208, fragmentary inscription: A-da-[x] / DUB.[SAR] / ÌR d[x x]. The seal owner         probably was the well-known scribe Adada, son of Adad-rabi, attested a dozen times and         the seal might have been owned (used?) by Ezê, son of Šarru-kīn.
+seal D = CS 998 = *119B and *115C; inscription: Lá-qé!-pu-um / DUMU Šu-Hu-bu-ur, but on         our envelope used by a namesake, Lā-qēpum, son of Iliya.
+Notes
+A:2. The name spelled Mīšur-rabi is more commonly spelled Mīšar-rabi (-GAL or -ra-bi), “Equity is great”, cf. *7:23, *99B:1 and *292:4. 
+A:3. Ezē, son of (king) Sargon, must have been active in Anatolia during the eponymy of year 21 of Sargon’s reign (note in Kt b/k 682:16, E-ze-e, son of Be-e-a). See for other sons of Šarrukīn attested in the texts KEL 43 and add Šallim-Aššur, son of LUGAL-GI.NA in Kt 87/k 552:40-41 (courtesy of K. Hecker).
+A:19//B:18. Note the interesting variation between nutammišunu and itmû.
+Comment
+See for the be’ūlātu-contract between Elamma and Galdaya text 8 in the Appendix and the comment on *70:5-9. 
+
+
+B. Three be’ūlātu-contracts (65-67)
+
+
+65. Kt 91/k 397 (1-251-91)
+
+
+Unopened envelope with an undated contract about a be’ūlātu-loan, which (following Larsen) I translate by «working capital», belonging to Elamma and made available to Puzur-Ištar, who will serve him as harnesser (kaṣṣārum).  
+
+
+                seal A
+        KIŠIB  Zi-qí-qi  DUMU  Ì-lí-dan        Seal of Ziqiqi, son of Ilī-dān,
+                KIŠIB  Šál-ma-A-šur  DUMU  Ú-zu-a        seal of Šallim-Aššur, son of Uzua,
+                KIŠIB  Puzur4-Ištar  DUMU  Id-na-/a        seal of Puzur-Ištar, son of Idnaya.
+                1/3  ma-na  5  GÍN  KÙ.B.        25 shekels of refined silver, 
+5                ṣa-ru-pá-am  bé-ú-lá-tim        a working capital belonging to
+                        seal B
+l.e.                        seal B (upside down)
+rev.                        seal A
+                ša  E-lá-ma  Puzur4-Ištar        Elamma, Puzur-Ištar,
+                DUMU  Id-na-a  il5-qé  iš-tí  KÙ./B.        son of Idnāya,  has received; with the
+                                      [ uk-ta-/al                     [ silver he is held.
+                KÙ  ú-ta-ar-ma  ú  i-ta-lá-/ak        When he returns the silver he can leave.
+                šu-ma a-e-ma ú-dá-pì-ir        If goes somewhere else
+10                e-ga-ar-ma  ig-re        I will rent somebody and the wages
+                sà-ri-dim  ú-ma-lá        of the donkey-driver he shall 
+                        seal C                                        compensate.
+                2  GÍN KÙ.B. lu-bu-šu        Two shekels of silver, his clothing
+                il5-qé                allowance, he has received.
+u.e.                        seal A
+le.e.                seal C
+r.e.                seal B
+
+
+Seals
+seal A = CS 1172
+seal B = CS 1173
+seal C = CS 1041, according to Mrs Omura identical to Kt i/k 50A.
+Notes
+10. Eggar, which should be a 1st pers. sing. (normally aggar), is used in a penalty clause that quotes what Elamma had stipulated. The scribes were not consistent in formulating this, since we have eggar (also in ICK 1, 126:8 and EL 161:11, object agram), aggar (Kt n/k 7:13, n/k 30:10, object sāridam) and a D-stem, uggar (TC 3, 246A:6, object agrē, plural; but in OIP 27, 50:3, with a singular object sāridam). Instead of igrē sāridim we also meet igrē agrē, “the wages of those hired” (TC 3, 246A:6).
+
+
+66. Kt 91/k 473 (1-326-91)
+
+
+Unopened envelope, whose lower right corner is damaged, with an undated contract about a working capital provided to Kitaya by Elamma.
+
+
+                seal A 
+                KIŠIB DINGIR-na-da DUMU Ba-zi-a         Seal of Ilī-nādā, son of Baziya,
+                KIŠIB En-nam-A-šùr DUMU Kà-ri-a?         seal of Ennam-Aššur, son of Kariya(?),        
+                KIŠIB Ki-ta-a  ša ½ ma-na         seal of Kitaya, that [Kitaya]        
+                KÙ.B. ṣa-ru-pá-am        will manage ½ mina 
+5                 ša E-lá-m[a Ki-ta-a]        of silver belonging to 
+                        seal B (upside down)
+l.e.                        seal B (upside down) 
+rev.                i-bé-el  iš-ti KÙ.B.         Elamma. He is held by
+                        seal B 
+                uk-ta-al  šu-ma  a-e-ša-ma        the silver. If he goes away 
+                ú-da-pí-ir  1 GÍN.TA        to somewhere else, he will 
+9                 i-na ITU.1.KAM  i-ma-nu-šu         charge him 1 shekel per month.
+                        seal C 
+u.e.                         seal A 
+le.e.                         seal C 
+ri.e.                         seal A
+
+
+Seals
+seal A = CS 534, also impressed on Kt n/k 1801 and as Kt n/k 1886B, is the seal of Ilī-nādā,         son         of Baziya.
+seal B = CS 1200, traces of inscription, according to Mrs Omura also impressed as ICK I, 24C,         = Teissier no. 247. Here the inscription is better preserved and might perhaps be read Ha!-        na-na-tu[m] / DUMU.MÍ Puzur4-ša-/da, but no person of that name occurs in either text.         ICK 1, 24 may mention two or perhaps three women (if Muza is one), the creditor A-na-na         (who would not normally seal the contract) and the debtor Šatahšušar. Who used this seal on         our case is not clear, the most likely candidate is Kitaya.
+seal C = CS .......
+Notes
+5. Kitāya also appears as holder of this be’ūlātu-loan in *74:3-4 and *75:3, both memorandums with excerpts of contracts from Elamma’s early years (eponymic datings range from year REL 67 to 82).
+6. Instead of calling the loan be’ūlātum this contract expresses what it is verbally, ibe’’el, “he will manage it”. 
+9. If the absence of “per mina” is no mistake, there would be a very heavy default interest of 80% per year. The use of the verb manā’um, with a dative suffix (here written –šu) referring to the debtor, is rare in interest clauses (see CAD M/I, 224, 5, a, and also Prag I 525:9’).
+
+
+67. Kt 91/k 340 (1-197-91)
+
+
+An oblong, black tablet recording Aššur-imittī’s acknowledgment that he has in his possession a “working capital” that obliges him to work as harnesser in a caravan The size of the capital and lines 16-18 suggest that he had received a new “working capital”, presumably in addition to one he already had, which must one of 33 1/2/ shekels be registered as his debt in *70:3-4. The contract for this unpaid debt apparently was replaced by the present document, because the earlier one, kept in Assur, could not be cancelled in Anatolia. The name of the person who engaged him is not mentioned, but it probably was Elamma. 
+        
+        1  ma-na  3 1/2  GÍN        1 mina and 3 1/2 shekels of
+        KÙ.B.  ṣa-ru-pá-am        refined silver,
+        be-ú-lá-at        is the working capital of
+        A-šùr-i-mì-ti        Aššur-imittī;
+5        iš-tí  KÙ  uk-ta-/al        he is held by the silver.
+        šu-ma  a-na        If he does not arrive
+        A-limki  lá  ik-šu-dam-/ma        in the City and
+l.e.        iš-tí-a  lá  is-ri-/dam        does not pack together with me,
+rev.        iš-tù  ha-mu-uš-tí-im        then from the week of
+10        ša  Ì-lí-ìš-tí-kál        Iliš-tikal and Šu-Anum
+        ù  Šu-A-nim  1½   GÍN./TA        he will add
+        1  ma-na-im  (ú-ṣa-áb erased)        an interest of 1½  shekel
+        i-ITU.KAM  ú-ṣa-áb        per mina per month. 
+        IGI  Lá-qé-pì-im        In the presence of Lā-qēpum,
+15        IGI  A-šur-ma-lik        of Aššur-mālik.
+        ṭup-pu-um  ša  A-limki        The tablet in the City
+u.e.        ša  be-ú-lá-tí-šu        concerning his working capital
+le.e        sà-ar                is invalid.
+
+
+1. The amount of the working capital is big, it normally is ca. half a mina of silver.
+9-11. This be’ūlātu-contract is, exceptionally, dated, presumably because it replaced an earlier one (lines 16-18) and one had to know when this had happened. The double week eponymy is attested several times, but always without mention of a year eponym (see Kryszat 2004, 182). It must be placed before eponymy year REL 98, after which only single week eponyms are used, which allows the possibility that it was Elamma  who contracted Aššur-imittī. 
+14. The sign IM is written as KAM+MAŠ.
+Comment
+The replacement of the older contract for 33½ shekels, mentioned in *70:3-4 (perhaps 30 shekels plus some default interest?) by a new one, which added 30 shekels to his capital, while the old contract apparently was not returned or cancelled, gave rise to a conflict. It is reflected in the much later judicial record *173, where the arbitrators stipulate that an oath of Aššur-imittī’s son Amur-Ištar, that he has never been shown the old contract, has to solve the problem, whereupon the children of Elamma must renounce any future claims against him. That this solution was only reached during the year REL 113 means that the affair had dragged on for quite some time after Elamma’s death.
+
+
+C. Memorandums listing debt-claims (68-78)
+
+
+68. Kt 91/k 351 (1-308-91)
+
+
+The first part of this memorandum presents the full text of a contract from eponymy year REL 85, recording a silver debt of 2 minas due by Ennānum, son of Azua, payable to Elamma in three annual installments. To it is added an agreement, concluded four months later, on the obligation of Aššur-lamassī to provide Elamma with confirmation (ka’’unum) that he is not liable for 11 textiles belonging to Elamma and to pay for them 25 shekels apiece if he fails to do so. This is a copy of the core of *68a, with the omission of its lines 13-19.
+
+
+        ša  2  ma-na  KÙ.B. ṣa-ru-/pá-am        That Ennānum, 
+        i-ṣé-er  En-na-nim        son of Azua, owes
+        DUMU  A-zu-a        2 minas of refined silver
+        E-la-ma  i-šu        to Elamma.
+5        ITU.1.KAM  ša  ke-na-tim        Month III,
+        li-mu-um  ša  qá-té        eponymy of the successor of
+        A-šùr-SIG5  DUMU A-bar-sí-sí-im        Aššur-damiq, son of Abarsisum,
+        ha-muš-tum  ša  A-šur-mì-tísic        week eponymy of Aššur-imittī,
+        DUMU  A-ta-a : ⅔  ma-na.TA        son of Atāya. He will pay
+10        i-na  ša-tim  i-ša-qal        ⅔ mina per year;
+        šu-ma  lá  iš-qúl        if he does not pay
+        1½   GÍN.TA  ṣí-ib-tám        he will add an interest of
+        a-na  1  ma-na-im  i-ITU.1.KAM        1½ shekel per mina per month.
+l.e        ú-ṣa-áb  IGI  E-na-a-nim        In the presence of Enānum,
+15        IGI  La-qé-pì-im        of Lā-qēpum
+rev.        a-na  11  TÚG  ku-ta-ni        For 11 kutānu-textiles
+        A-mur-Ištar  ù  A-la-hi-im        Aššur-lamassī will confirm to Elamma
+        a-na  E-la-ma  A-šùr-la-ma-/sí        (the liability of) Amur-Ištar and Ali-ahum
+        a-na  ITU.5.KAM        within 5 months. 
+20        ú-kà-an  šu-m[a l]á        If he does no confirm
+        uk-ta-in-šu-nu        their liability
+        1/3  ma-na  5  GÍN.TA  KÙ.B.        Aššur-lamassī will pay 
+        ṣa-ru-pá-am  a-na  E-lá-/ma        to Elamma 25 shekels
+        A-šùr-la-ma-sí        of silver apiece.
+25        i-ša-qal  ITU.1.KAM        Month 
+        ṣí-ip-um        VII, 
+        li-mu-um        eponymy of 
+u.e.        Puzur4-dMUŠ        Puzur-Nirah.
+        IGI  A-bu ša-lim        In the presence of Abu-šalim
+l.e.        DUMU  I-dí-Ìr-ra        son of Iddin-Erra,
+31        IGI  I-dí-A-šùr        of Iddin-Aššur,
+        DUMU  Bu-°ur?¿*-sí-sí-im        son of Bursa/isum.
+
+
+Notes
+2-3. Ennānum, son of Azua, occurs also in *110:2, where Elamma collects silver paid for a textile belonging to him. 
+18. Aššur-lamassī probably was a agent working (also) for Elamma and *35:32 mentions his be’ūlātum (if he is the same man; no patronym is given) and  according to *3:11 and *9:21 he transports silver and merchandise. *68a suggests that he was present when the textiles mentioned here entered the place for taxation.
+29-30. The man also occurs as witness in VS 26, 93:15, during eponymy year REL 90, and in Kt. 93 k/485:6 (courtesy of C. Michel).
+31-32. The meaning of the name B/Pursa/isum is unclear to me (perhaps related to pursāsum, “wigg”?); it figures in *68a:20 as B/Pususu and must be identical to B/Pussaya, father of Iddin-Aššur in AKT 1, 41:15 (RE 104) and Kt. 87/k 278:4.7 (REL 110).
+Comment
+The connection between the two contracts is not clear; they may simply have been joined because they date to the same year. The two men, whose liability to deliver or pay for the 11 kutānū-textiles belonging to Elamma Aššur-lamassī has to prove, most probably where brothers of Elamma, known as investors in his joint-stock capital (see text 2*:7-11). Aššur-lamassī, when asked for the textiles or their yield may have declared that he had delivered them to the two brothers or that the latter had not given them to him. He is now obliged to prove this or pay Elamma 25 shekels of silver apiece, the price a good kutānum could yield in Anatolia. That he gets five months to prove his claim indicates that the two men lived in Assur, so that it took time to bring the evidence.
+See for the procedure of “confirmation” (ka’’unum) and the various constructions attested, the introductory remarks to Ch. V, A. 
+
+
+68a. Kt 91/k 342 (1-198-91)
+
+
+This is probably the original agreement, the core of which was copied in *68:16-32. Lines 13-19 indicated that the textiles had arrived with Lā-qēp’s caravan and had entered the palace in Kanesh for levying the tax. If the palace has bought additional textiles, more than the customary tithe, Aššur-lamaasī liability to pay for them will be reduced.
+        
+        a-na 11 TÚG ku-ta-ni        Concerning 11 kutānu-textiles,
+        ša  E-lá-ma        belonging to Elamma,
+        A-lá-ha-am ù A-mur-Ištar        Aššur-lamassī shall 
+        A-šur-lá-[ma]-sí        confirm the liability of
+5        a-na E-lá-{x}-ma        Ali-ahum and Amur-Ištar
+        ITI.5.KAM  ú-kà-na-šu-nu        for Elamma within 5 months.
+        šu-ma  lá ú-kà-i-na-šu-nu        If he does not confirm them
+        1/3 ma-na 5 GÍN.TA        he shall pay 25 shekels
+        KÙ.BABBAR ṣa-ru-pá-am        of refined silver
+l.e.        i-ša-qál        apiece.
+11        ITI.1.KAM ṣí-ip-um        Month VII,
+rev.        li-mu-um Puzur4-dMUŠ        eponymy of Puzur-Nirah.
+        šu-ma  i-na  ša 10 TÚG-tum 1 TÚG        If one has taken in the palace extra pieces 
+                         : wa-at-ru-ú-tim                                        extra pieces 
+        i-na É.GAL-lim        on top of the tithe on textiles,
+15        il5-qé-ú!(ŠU)  ki-iš-dá-tí-šu        what accrues from it
+        a-na E-lá-ma  i-na TÚG.HI-/tí-šu        to Elamma will be deducted 
+        i-ṣa-hi-ir-šu-um        for him from his textiles
+        ša  ILLAT  La-qé-ep        of the caravan of Lā-qēp,        
+        DUMU  Qá-a-a-tim        son of  Qa’atum.
+20        IGI I-dí-A-šur  DUMU  B/Pu-sú-/sú        In the presence of Iddin-Aššur, son of
+        IGI  A-bu-ša-lim        B/Pususu, of Abu-šalim,
+u.e.        DUMU I-dí-Èr-ra        son of Iddin-Erra.
+
+
+Notes
+I am grateful to Hakan Erol to have provided me with a transliteration of this tablet, which I had overlooked.
+13-17. The words “per 10 textiles 1” (ešartum ištên ṣubātum) denote the tithe, išrātum (also called ša šīmim, “those of the purchase”), which the palace was allowed by buy at favorable conditions from incoming caravans. We know that it bought often less, but occasionally more pieces. My interpretation is that if the palace had bought more than 1 of the 11 textiles, Aššur-lamassī liability to pay for them to Elamma, here designated by “his kišdātum (“what accrues to him”, which can be positive and negative), will be accordingly reduced. The emendation in line 15 is an attempt to make sense of ilqešu, which as it stands can only have Aššur-lamassī as subject, while the suffix -šu is strange; it might refer to one additional textile taken, but this conflicts with the plural watrūtim.  A plural ilqe’ū could refer to the palace authorities.
+18-19. This statement is syntactically not connected with what precedes, but indicates that the textiles in question had arrived with the caravan mentioned. The caravan of Lā-qēp, son of Qa’atum, is also mentioned in *5:9, where Elamma and his brother are said to have a deposit in it (perhaps in the palace) of 4 ⅔ minas of silver.
+21-22. The same man figures as witness in VS 26, 93:15, during eponymy year REL 90 
+
+
+69. Kt 92/k 114 (1-76-92)
+
+
+Memorandum written in a fine, smalll script, about seven debts of silver and copper owed to Elamma, dated between eponymies REL 75 and 89, and two owed to his son Aššur-ṭāb (cf. *60A:9), dated to eponymies REL 90 and 95. 
+
+
+        KIŠIB dIŠKUR-pí-la-ah  DUMU  A-ni-nim                 debt
+        KIŠIB  A-šur-<lá->*ma-sí  DUMU  La-qé-*ep!(KI) KIŠIB                1
+        Na-zi  DUMU  Puzur4-ba-ni-ni  3 ma-na        
+        KÙ.B.  ṣa-ru-pá-am  i-ṣé-er  A-šur-lá-ma-sí
+5        DUMU  La-qé-ep  E-lá-ma  i-šu  iš-tù
+        ha-muš-tim ša  E-lá-ma ú Zu-ba
+        a-na 24  ha-am-ša-tim  i-ša-qal šu-ma
+        i-na  u4-me-šu  ma-al-ú-tim  lá  iš-qú-ul
+        1½ GÍN.TA [a-na 1 m]a-na-im  i-na  ITU.KAM-im
+10        ṣí-ib-tám  ú-ṣa-áb  ITU.KAM  Be-el-tí-É.GAL-lim
+        li-mu-um  ša qá-té  Šu-Hu-bu-ur 
+        8  ma-na  KÙ.B.  i-ṣé-er  °Š¿u-li  DUMU Puzur4-A-be-eh                2
+        E-lá-ma  i-šu 1½ GÍN.TA  ṣí-ib-tám
+        i-na  ITU.KAM-im  a-na 1 ma-na-im  ú-ṣa-áb
+15        li-mu-um ša qá-té Ba-zi-a  DUMU  Šé-ep-a-/lim
+        KIŠIB DINGIR-ba-ni  DUMU Ib-n[i]-lí]  KIŠIB A-šur-ma!-lik                 3        DUMU Puzur4-A-šur  KIŠIB I-dí-A-šur  DUMU Puzur4-A-be-eh
+        4 GÚ 32 ma-na  URUDU  ha-bu-ra-<ta>-am
+        i-ṣé-er  I-dí-A-šur  DUMU  Puzur4-A-be-eh
+20        E-lá-ma  i-šu iš!(ŠU)-tù  ha-muš-tim ša
+        A-šur-re-ṣí  a-na 14  ha-am-ša-tim
+l.e.        i-ša-qal  šu-<ma>  lá iš-qúl  ki-ma  a-wa-/at
+        kà-ri-im  ṣí-ib-tám  ú-ṣa-áb
+rev.        KIŠIB  Šu-Ištar  DUMU En-um-A-šur  KIŠIB  I-ku-mì-/šar                4
+25        DUMU Ì-lí-dan  ša 8  GÍN KÙ.B. ṣa-ru-pá-am
+        i -ṣé-er  I-ku-mì-šar  DUMU Ì-lí-dan
+        E-lá-ma  i-šu  iš-tù  a-limki  i-tù-a-ri-šu
+        i-ša-qal  KIŠIB I-dí-dí  KIŠIB Du-du-ri-im                        5        KIŠIB A-šur-na-da  KIŠIB A-šur-du-ri                
+30        2 ma-na 10  GÍN KÙ.B.  ṣa-ru-pá-am  i-ṣé-er
+        A-šur-du-ri  E-lá-ma <i-šu> iš-tù  ha-muš-tim
+        ša A-na-ah-ì-lí  a-na 8  ha-am-ša-/tim
+        i-ša-qal  šu-ma la  iš-qúl  ki-ma  a-wa-at
+        kà-ri-im  ṣí-ib-tám  a-ma-na-im 
+35         °ú-ṣa-áb¿  [e-lá]-an* DUB  a-°ni¿-im  ša  e-li-/a-ni
+        sà-ar  KIŠIB Zu-ba  DUMU A-šur-SIPAD KIŠIB Šu-Ištar  DUMU / Zu-a-/a                 6
+        KIŠIB Ba-al-ṭù-šar  DUMU Sú-ku-hi-im
+        ½ ma-na  KÙ.B.  ṣa-ru-pá-am  i-ṣé-er  Ba-al-ṭù-šar
+        E-lá-ma  i-šu  iš-tù  ha-muš-tim ša  Sú-kà-lim!(NIM)
+40        ù Ku-ra  a-na  ITU.6. KAM i-ša-qal  šu-ma
+        lá  iš-qúl 1½ GÍN.TA  a-na 1 ma-na-im  i-na
+        ITU.KAM-im  ṣí-ib-tám  ú-ṣa-ab
+        KIŠIB I-dí-Sú-in  DUMU I-tur4-DINGIR  KIŠIB Na-áb-Sú-in                7 
+        DUMU A-bi4-ì-lí  KIŠIB Id?-na-a  DUMU Ku-/ta-a
+u.e.        12  GÍN KÙ.B.  ṣa-ru-pá-am  i-ṣé-er
+46        I-dí-Sú-in  DUMU I-tur4-DINGIR  A-šur-DÙG i-šu
+        iš-tù  ha-muš-tim  ša Pu-šu-ki-in
+l.e.         ù En-um-Be-lúm ITU ma-hu-ur-DINGIR  li-mì-im A-šur-/-i-dí
+        KIŠIB A-šur-dUTUši  DUMU Ili5-tù-ra-am  ša  ⅔ ma-na 5  GÍN                8 
+50        ṣa-ru-pá-am  i-ṣé-er  Ištar-il5-šu  DUMU A-zu!-za-a  A-šur-DÙG i-šu <iš-tù>
+        li-mì-im  A-lá-hi-im 1½ GÍN.TA  ṣí-ib-tám  /  ú-ṣa-áb
+
+
+(1) “Seal of Adad-pilah, son of Aninum, seal of Aššur-lamassī, son of Lā-qēp, seal of Nazi, son of Puzur-banini. 3 minas of refined silver Aššur-lamassī, 5 son of Lā-qēp, owes to Elamma. He will pay within 24 months from the week of Elamma and Zuba. If he does not pay when his term is up, he will add as interest 1½ shekel per mina per month. Month I, eponymy of the successor of Šu-Hubur (= 89).
+(2) 12 8 minas of refined silver Šuli, son of Puzur-Abeh, owes to Elamma. He will add as interest 1½ shekel per mina per month. Eponymy of the successor of Baziya, son of Šēp-alim (= 75).
+(3) 16 Seal of Ilī-bāni, son of Ibni-ilī; seal of Aššur-mālik, son of Puzur-Aššur; seal of Iddin-Aššur, son of Puzur-Abeh!. 4 talents 32 minas of copper from Haburata Iddin-Aššur, son of Puzur-Abeh, owes to Elamma. He will pay within 14 weeks from the week of Aššur-rēṣī. If he does not pay he will add interest in conformity with the rule of the colony.
+(4) 24 Seal of Šu-Ištar, son of Ennum-Aššur, seal of Ikūn-mīšar, son of Ilī-dān, that Ikūn-mīšar, son of Ilī-dān, owes 8 shekels of refined silver to Elamma. He will pay when he returns from the City.
+(5) 28 Seal of Ididi, seal of Dudurum, seal of Aššur-nādā, seal of Aššur-dūrī. 2 minas 10 shekels of refined silver Aššur-dūrī owes to Elamma. He will pay within 8 weeks from the week of Ānah-ilī. If he does not pay he will add interest per mina in conformity with the rule of the colony. (Another tablet) apart from this tablet that turns up is invalid.
+(6) 36 Seal of Zuba, son of Aššur-rē’í, seal of Šu-Ištar, son of Sū’aya, seal of Balṭu-šar, son of Sukuhum. ½ mina of refined silver Balṭu-šar owes to Elamma. He will pay within 6 months from the week of Sukkallum and Kura. If he does not pay he will add an interest of 1½ shekel per mina per month.
+(7) 43 Seal of Iddin-Suen, son of Itūr-ilī, seal of Nāb-Suen, son of Abī-ilī, seal of Idnāya, son of Kutaya(?). 12 shekels of refined silver Iddin-Suen, son of Itūr-ilī, owes to Aššur-ṭāb. From the week of Pūšu-kēn and Ennum-Bēlum, month IV, eponymy of Aššur-idī (= 95).
+(8) 49 Seal of Aššur-šamšī, son of Ilī-tūram, that Ištar-ilšu, son of Azuzaya, owes 45 shekels of refined silver to Aššur-ṭāb. <From> the eponymy of Ali-ahum (= 90) he will add 1½ shekels per (mina, per month) as interest.”
+
+
+Notes
+1-11. See for the original debt-note (without envelope), text 9 of the Appendix.
+12-15. The same debt appears in *70:19-24, dated to the same year, where the amount is 8½ minas and Šuli is the son of I-li-li!
+18. Since hab(b)urum would be unique, I assume a scribal mistake for ha-bu-ra-<ta>-am, a rare by-form of the nisbe normally written ha-bu-ra-ta-i-am  (see *307:8 and Copper 217).
+21. The week-eponymy of Aššur-rēṣī is thusfar unique.
+32. The single week eponymy of Ānah-ilī (l. 32; not yet recorded in Kryszat 2004) is elsewhere attested for eponymies REL 74 (Kt n/k 244:8//505:23) and 77 (Kt 94/k 536:5).
+39. The double week eponymy of Sukkallum and Kurā (lines 39-40) occurs a few times, but never with mention of a year eponym. In the memorandum Kt c/k 129:15f. (courtesy of Dercksen) it is preceded and followed by debts dated to months X and XI of eponymy REL 84. 
+44. The reading of the first syllable of Id-na-a and of the end of Ku-ta-a are not fully certain, but there is a Kutaya, son of Idnaya (ICK 1, 188:30, etc.).
+49-51. The original contract of this debt, still in its envelope, where Aššur-ṭāb is identified as son of E[lamma], is preserved as *60, where the date is specified as month VII. Its preservation suggests that the debt was not paid and this may explain its appearance among outstanding claims in our memorandum.
+Comment
+That all eight contracts are excerpted in the same memorandum means that they were debts owed to the same “firm”, which comprised Elamma and his son Aššur-ṭāb. That the two debts owed to the latter are later in date than the six debts owed to Elamma could imply that Aššur-ṭāb had taken over from his father, but not because of his death, because in REL 92 Elamma is still attested as week-eponym (VS 26, 94B = EL 172:7-12). Contracts 7 and 8 show that Elamma’s son carried out transactions in his own name, presumably for his own account. His two debtors, as far as I know, do not occur elsewhere with their patronyms. How long after the latest eponymy year mentioned (REL 95) this memorandum was drawn up, is unknown, but it registers (not in chronological order!) several debts that were between 10 and 20 years old.
+
+
+70. Kt 91/k 359 (1-216-91)
+
+
+A large memorandum on a tablet of 8.0 x 5.5 cm, listing 21 debt-claims (which I have given sequential numbers) on different persons for in all nearly 15 minas of silver and more than 21 talents of copper. They range from small amounts (25 shekels of silver, as working capital in l. 5; 15 minas of copper in l. 30) to large ones (8½ minas of silver in l. 19, and 11 talents of copper in l. 35), and apparently reflect quite different business contacts. The two dated claims are from eponymies REL 75 and 76 (lines 24 and 9). There is some overlap with the memorandums *74, *71, and *69, and the last, where the creditor is identified as Elamma, shows that all those of our text are of him too. Some of the debtors listed here also occur as such in other documents, for different amounts, which shows that they had more frequent relations with Elamma.
+
+
+        °1 5/6 ma-na 3½ GÍN  KÙ.B.¿        1 mina 56½  shekels of silver         debt
+        A-šùr-na-da  DUMU  Er-nu-id        (with) Aššur-nādā, son of Irnu’’id;          1
+        ½ ma-na 3½  GÍN  KÙ.B.  bé-ú-lá-at        33½ shekels of silver, working capital          2
+        A-šùr-i-mì-tí  DUMU  Ha-la1-bi-im        of Aššur-imittī, son of Hali-abum;
+5        1/3 ma-na 5  GÍN KÙ.B. bé-ú-lá-at        25 shekels of silver, working capital          3
+        Gal-da-a 1 ma-na  KÙ.B. KI  Gal-da-a        of Galdaya; 1 mina of silver with Galdaya,          4
+        iš-tù ITU.1.KAM  ṣí-ip-im        from month VII he will add (as
+        1½ GÍN.TA : i-na ITU.1.KAM  ú-ṣa-áb        interest) 1½ shekel per month,
+        li-mu-um A-bi-a  DUMU  Šu-Da-gán        eponymy of Abiya son of Šu-Dagan;
+10        5/6 ma-na ⅔ GÍN KÙ.B. KI  I-dí-A-šùr        50⅔ shekels of silver due from          5
+        ša Na-ah-ri-a 1½ GÍN.TA        Iddin-Aššur of Nahriya; he will add 
+        a-na 1 ma-na-im  ú-ṣa-áb        1½ shekel per mina (as interest);        
+        5/6 mana 5  GÍN KÙ.B. KI  Bur-Sú-in        55 shekels of silver with Būr-Suen;          6
+        48 ma-na  URUDU KI  Ha-ab-tù-ni-ìš        48 minas of copper with Habtuniš;          7
+15        1 ma-na 15  GÍN KÙ.B.  Ša-lim-A-šur        1 mina 15 shekels (with) Šallim-Aššur,          8
+        DUMU Up-ha-qí-im 2  GÚ 13 ma-na        son of Uphaqum; 2 talents 13 minas          9
+        URUDU KI  DINGIR-ba-ni  DUMU         with Ilī-bāni, son of Ibni-ilī;
+                 [  I[b]-ni-lí
+l.e.        5/6 ma-na KÙ.B. KI  A-šùr-ba-ni        5/6 minas of silver with Aššur-bāni,        10
+        DUMU Su-ku-ku  8 ½ ma-na  KÙ.B.        son of Sukkuku; 8½ minas of silver        11
+rev.        KI  Šu-li  DUMU I-li-li        with Šuli, son of Ellil-ilī,
+21        iš-tù ITU.1.KAM  na-ar-ma-ak-/A-šur        from month III/IV he will
+         ½ GÍN.TA : a-na 1 ma-na-/im        add 1½ shekel per mina,
+        ú-sạ-áb : li-mu-um        eponymy of Šu-Ištar .
+        Šu-Ištar  kà-áb-kà-ba-nu-um        kabkabānum;
+25        1⅓ ma-na  KÙ.B. KI  A-šùr-du-/ri        1⅓ mina of silver with Aššur-dūrī;        12
+        5 GÚ URUDU  KI  I-dí-MAR.TU        5 talents of copper with Iddin-Amurrum,        13
+        DUMU Šu-hi-nim 1 ma-na  KÙ.B.        son of Šuhanum; 1 mina of silver with
+        KI  DINGIR-šu-GAL  DUMU Bu-lá-li        Ilšu-rabi, son of Bulāli;        
+        1⅓ ma-na  KÙ.B.  KI  Id-na-a        1⅓ mina of silver with Idnāya;        14
+30        15 ma-na  URUDU KI  A-šùr-GAL        15 minas of copper with Aššur-rabi;        15
+        1 GÚ URUDU  KI  Šu-Iš-ha-ra        1 talent of copper with Šu-Išhara;        16
+        ½ ma-na KÙ.B. KI  Ha-na-nim        ½ mina of silver with Hannānum;        17
+        30 ma-na URUDU KI  Puzur4-/A-be-eh        30 minas of copper with Puzur-Abeh;        18
+        11 GÚ URUDU DUMU Da-zu-a-d/IM*        11 talents of copper the son of Dazu’a-        19
+35        17⅓  ma-na  KI  A-šur-/ni-šu        17⅓ minas with Aššur-nišû,     [ Adad?;        20
+        IGI A-lá-hi-im  DUMU Zu-ku-a        in the presence of Ali-ahum son of Zuku’a;
+        40 ma-na  URUDU / DUMU Kà-áb-ri-/a        40 minas of copper, the son of Kabriya.        21
+
+
+Notes
+3-4. See *67:1-4, where the working capital is 63½ shekels, after addition of ½ mina of silver; this gave rise to this a new contract, which implied cancellation of the old; see also the comment on *173.
+5-9. See for both debts owed by Galdaya *64. His service contract, whereby he received 25 shekels of silver and which indentifies him as “Galdaya of Elamma”, has turned up in the archive of Elamma’s brother Ali-ahum, as Kt 93/k 166 (courtesy of C. Michel, see Appendix text 8). Its witnesses, Lā-qēpum, Amur-Šamaš and E-ze-e (a son of king Šarrum-kīn), are the same persons who witnessed *64, which suggests that the undated be’ūlātu-contract was from the same time (REL 76).*286:19-20 mentions an Elalī, son of Aššur-ennam ša bēt Galdaya.
+29. See the comment on *55.
+34. The strange PN Da-zu-a-dIM is not attested in other sources; the man could be Anatolian.
+Comment
+This memorandum lists many debts of silver and copper, but the underlying transactions are usually not mentioned. Two debts are working capitals (be’ūlātum) given to persons who must have served Elamma, Aššur-imittī (l. 3f.) and Galdaya (l. 5f.). Most listings only mention the amount and the debtor, a few also a date and/or interest (7ff., 10ff., 19ff.), and only in one case a witness is recorded (l. 36). The dates REL 75 (l. 24) and 76 (l. 9), show that this an early text, which is confirmed by the existence of duplicates mentioning a number of debts:
+2        33½ sh si        Aššur-imittī        see *67:1-4, where the be’ūlātum is 30 shekels more.
+3          25 sh  si        be’ūlāt  Galdaya        //*74:21-24, ½ mina silver
+4          1 mi  si        Galdaya +date        //*74:22f., *75:23f., and *64 (from month VII, year 76).
+10         5/6 mi si        Aššur-bāni        //*54, the original contract in an unopened case, dated to
+                                     eponymy year REL 67, gives the debt as ⅔ mi. si. 
+11         8½ mi si        Šuli s. Ellil-īlī        //*74:4f. , 8 mi. si.; Šuli s. Puzur-Abeh, also in *75:4 and
+                                   *69:12f. (from month I, eponymy year 74).
+12        1⅓ m si         Aššur-dūrī        //*74:15f., 2 mi.10 sh. si., year REL 67, also in *75:5f. 
+                                    and *69:28f. (term: 8 weeks)
+13         5 tal cop        Iddin-Amurrum        //*74:1f., 4 tal. 42 mi., but *75:1ff. has 6 tal. 42 mi.; *73
+                        s. Šuhanum            mentions how this amount became 4 tal. 42 mi.
+14         1⅓ mi si        Idnāya        //*74:6f., 3 mi. 3 5/6 sh. si., eponymy REL 82, same in                                             *75:2f. 
+
+
+71. Kt 91/k 460 (1-313-91)
+
+
+Memorandum with excerpts from eight debt-notes (numbered in the margin of the translation) for in all nearly 2 talents of copper and 2 minas 43 shekels of silver, two of which are dated, both to the eponymy year REL 88. The excerpts become shorter in the course of the text, the first also mentioning the debtor’s father, the date and interest, the last only the name of the debtor and the amount of the debt. The creditor is not mentioned, but probably is Elamma.
+
+
+        40 ma-na  URUDU KI  I-ku-pí-A-šur        40 minas of copper due by Ikūn-pī-Aššur,                debt
+        DUMU Šu-Ištar  1 ma-na-amsic         son of Šu-Ištar, per 1 mina         1
+        12 GÍN i-na  ITI.KAM  ṣí-ib-/tám         he will add as interest 
+        ú-ṣa-áb  ITI.1.KAM         12 shekels per month;
+5         Na-ar-ma-ak-A-šur        month XII,
+        lí-mu-um Šu-Hu-bur        eponymy of Šu-Hubur.
+        37½ ma-na URUDU  KI  DINGIR-ba-ni         37½ minas of copper due from Ilī-bāni,         2
+        DUMU  Ib-ni-lí 1 ma-na 15  GÍN KÙ.B.        son of Ibni-ilī. 1 mina 15 shekels of silver         3
+        iš-tí Šál-ma-A-šur  DUMU Up-[ha]-qí-im        due from Šallim-Aššur, son of Uphaqum, 
+10         lu  i-na  a-límki   lu °i-na¿ GÁN-lím         he shall pay wherever we meet,        
+        a-le   ni-na-m[u-ru]         either in Anatolia or in the City.
+        i-ša-qal  ½  ma-[na KÙ.B.]         ½ mina of silver due from         4
+le.        KI  A-šur-SIPAD  1 m[a-na-um]         Aššur-rē’ī, he will add 
+        10  GÍN.TA  ṣí-i[b-tám]         an interest of 10 shekels        
+rev.         ú-ṣa-áb : re-eš15 [ITI.KAM]         per month; beginning of month
+16         Hu-bu-ur  li-m[u-um]        VI, eponymy of
+        Šu-Hu-bur 18  GÍN  KÙ[.B.]         Šu-Hubur. 18 shekels of silver         5
+        iš-tí  I-zi-iz-Mì-šar         due from Izziz-Mīšar,
+        ITI.KAM  Ma-hu-ur-ì-lí         month IV, he will
+20         a-na 6  ITI.KAM  i-ša-qal        pay within 6 months;
+        li-mu-um  Šu-Hu-bur        year eponymy of Šu-Hubur.
+        9 ma-na 10  GÍN URUDU iš-/tí        9 minas 10 shekels of copper         6 
+        En-nam-ì-lí         due from Ennam-ilī,
+        DUMU  Du-uk-ší-im         son of Dukšum.
+25         9 ma-na  URUDU  iš-tí         9 minas of copper due from         7
+        Ib-ni-dIŠKUR  ma-za-zi-im        Ibni-Adad, the attendant.
+u.e.        20 ma-na  URUDU  iš-tí         20 minas of copper due         8
+        Šu-Be-lím         from Šu-Bēlum, son of        
+le.e.         DUMU Da-a-a  ⅔ ma-na  KÙ.B.        Dāya. ⅔ mina of silver,        9
+30        be-ú-lá-at  A-šur-SIPAD         the working capital of Aššur-rē’ī,
+        DUMU I-dí-Ištar        son of Iddin-Ištar.
+
+
+Notes
+2. ma-na-am is a mistake for mana’um. The rate of interest is exceptionally high, 20% per month; it resembles that in lines 13-14, 10 shekels per mina, but here “per month” is missing.
+7-8. Cf. the debt of 2 talents 13 minas of copper owed by the same man according to *70:16-17, preceded by the same debt of Šallim-Aššur as recorded in lines 8-9 of our text. 
+9. The same man in *70:16 (debtor for  1¼ mina of silver) and *137:13.
+11. See for this payment clause the comments on AKT 5, no. 44:13’ff.
+13. The debtor might be same man who had received a be’ūlātu-loan according to lines 29-31.
+24. This is the first occurrence of the name D/Tukšum.
+26. The qualification mazzāzum is thus far unique in OA and it is unknown which function this man, present in Anatolia and indebted for a small amount of copper, held. Another mazzāzum seems to be a statue, as a votive gift (several times in the combination copper/silver designated as ikribū ša mazzāzim), cf. Dercksen, ArAn 3 (1997), 84-5 (pace CAD M/I, 238 s.v. manzāzu, 6;  see now also in Kt 94/k 1204:8-10, courtesy Larsen, kaspum ša ikribē ša mazzāzim ša I.).
+
+
+72. Kt 91/k 360 (1-217-91)
+
+
+Memorandum on in all 17 different claims and transactions (sequential numbers are added in the margin of the translation), the latter (lines 26-30 and 40-41) recorded as “I gave” and “I left behind in the house”. The debt claims, with the exception of a single reference to a week-eponymy in lines 12-13, are not dated; the debtors are Assyrians, apart from one “native Anatolian” (l. 8). Most are debts in silver and some include (the price of) a few textiles (lines 8, 16, 19); lines 21f. mention silver and an expensive robe given to purchase textiles (in Anatolia or Assur?), l. 28 some silver given as a tadmiqtu-loan.  
+
+
+        1½ ma-na KÙ.B. ṣa-ru-pá-am        1½ mina of refined silver                          debt 
+        iš-tí A-šùr-na-da DUMU Er-nu-id        due from Aššur-nādā, son of Er-nu’’id.        1
+        iš-tù a-limki i-tù-a-ri-šu        When he returns from the City
+        i-ša-qal šu-ma lá iš-qúl        he will pay; if he does not pay
+5        1½ GÍN.TA i-ITU.KAM        he will add 1½ shekel per month
+        a-na ma-na-im ú-ṣa-áb        per mina (as interest).
+        ⅔ ma-na LÁ 1 GÍN KÙ.B.        39 shekels of silver and a         2
+        ù me-n[u]-ni-<a>-nam  KI  nu-a-im        menuniānu-textile due from the native;
+        a-na ITU.1.KAM i-ša-qal        he will pay within one month.
+10        2½ ma-na   KÙ.B ṣa-ru-pu-um i-ṣé-/er        2½ minas of refined silver          3
+        A-šùr-ta-ak-lá-ku E-lá-ma        Aššur-taklāku owes to Elamma;
+        i-šu iš-tù ha-muš-tim        from the week of Ennamānum
+        ša En-na-ma-nim 1½ GÍN.TA        he will add 1½ shekel
+        i-ITU.1.KAM a-na ma-na-im úṣa-áb        per month per mina;
+15        ṭup-pu-šu a-na-kam i-ba-ší        his tablet is here.
+        ší-im 2 TÚG.HI.A ⅓ ma-na        The price of 2 textiles, ⅓ mina         4
+l.e.        KÙ.B. ṣa-ru-pu-um iš-tí        of refined silver, is with
+        A-mur-A-šur DUMU Ili5-ba-ni        Amur-Aššur, son of Ilī-bāni.
+rev.        4 ma-ku-hu KI  I-dí-Ašùr        4 makūhu-textiles with Iddin-Aššur.         5
+20        4½ GÍN KÙ.B. KI (eras) *En-na-/nim        4½ shekels of silver with Ennānum,         6
+        áš-li-kim 15 GÍN KÙ.B.        the fuller. 15 shekels of silver         7
+        ù ku-sí-tám ma-al-°ku-a¿-i-tám        and a robe in the style of Malkua
+        a-na Ṣí-lá-dIŠKUR        I gave to Ṣilli-Adad
+        a-na TÚG.HI.A  ša-a-mì-im a-dí-in        to buy textiles;
+25        ŠÀ.BA 1 TÚG  ú-šé-bi4-lam        thereof he sent me 1 textile.
+        4¼ GÍN KÙ.B. ša a-wi-/il5-tim        4¼ shekels of silver of the lady          8
+        a-na Da-a-a  a-dí-in        I gave to Dāya.
+        ⅓ ma-na 4  GÍN KÙB. ṣa-ru-/pá-am        24 shekels of refined silver          9
+        a-na En-um-A-šur DUMU [Ú]-zu-a        I gave to Ennum-Aššur, son of Uzua,
+30        a-na  ta-ad-°mì-iq-tim¿ a-dí-in        as free loan. 
+        ½ ma-na KÙ.B. iš-tù        ½ mina of silver Aššur-nādā         10
+        Bu-ru-uš-ha-tim i-na        will pay when the returns
+        tù-a-ri-šu  A-šùr-na-da        from Burušhattum.
+        i-ša-qal  5⅓ GÍN KÙ.B.        5⅓ shekels silver are         11
+35        [iš]-tí A-mur-dUTU        with Amur-Šamaš.
+u.e.        ⅓ ma-na KÙ.B. na-ki-*x [x]        ⅓ mina of silver  ..........         12
+        ša Ì-lí-a  [D]UMU  A-šùr-[x x]        of  Iliya, son of  Aššur-.......,
+        [Id]?-na-a  ú-bi4-i[l5]        [Id]nāya brought away.
+le.e        10 GÍN KÙ.B. KI  Šu-Ištar 1 GÍN KI         10 shekels of silver with Šu-Ištar. 1 shekel         13
+                    [ Qá-qá-/dí-/nim                                         [ with Qaqqadanum.         14
+40        4 GÍN KI Šu-Be-lim 2 GÍN iš-tí        4 shekels with Šu-Bēlum. 2 shekels with          15/16
+        [I]d?*-na-a  4 GÚ SÍG.HI.A ù me-ga-nam        Idnāya. 4 talents of wool and a megānum         17
+        i-na qé-ra-áb  É-tim e-zi-ib        I left inside the house.
+
+
+Notes
+12-13. A rare reference to this week eponym alone, who usually figures as one of a pair, but only once dated, to eponymy year REL 86, month III  (Kt c/k 41:32).
+22. See for this type of textile Michel-Veenhof 2010, 220 s.v. Malku(w)aīum, a nisbe only used of kusītum, with Alkuaīum probably as a variant or mistake. It was an expensive piece exported from Assur to Anatolia.
+41. The meaning of megānum is unknown.
+
+
+73. Kt 91/k 461 (1-314-91)
+
+
+This debt-note is inserted here because of its close relation with the memos *74 and *75. It records a copper debt still due by Iddin-Amurrum to Elamma, after deduction of part of the initial debt that is now due by Aššur-rē’ī. It is dated by a week eponym whom we cannot date exactly, but who must be placed somewhere between years REL 82 and 91.
+
+
+        i-6 GÚ 22 ma-na  URUDU        Of the 6 talents 22 minas of copper
+          ša I-dí-dMAR.TU DUMU  Šu-hi!-/nim        that Iddin-Amurrum, son of Šuhanum,
+         a-na  E-la-ma  ha-bu-lu                 owes to Elamma, 
+         1* GÚ 40 ma-na URUDU KI  A-šur-        1 talent 40 minas of copper are due from
+5         DUMU I-dí-da  i-ku-ul         [ SIPAD        Aššur-rē’ī, son of Idida, who used it.
+         ší-tí  URUDU-šu 4  GÚ 42 ma-na         The remainder of his copper, 4 talents 22
+         i-na  li-bi  I-dí-dMAR.TU        minas, Iddin-Amurrum still owes to me. 
+        i-ri-ha-am  iš-tù  ha-mu-uš-/tim         From the week of 
+         ša Na-áb-Su-in  DUMU         Nabi-Suen, son of 
+10        I-tur4-DINGIR  a-na 1 GÚ-tim        Itūr-ilī, he will add an interest of 
+        1 ma-na<-um>  ½  ma-na.TA        1½! mina per talent 
+l.e.        <i>-ITI.KAM ú-ṣa-áb  IGI  Da-/da-ni         per month. Witnessed by Dadani,
+rev.        IGI  Li-ba-a  IGI  Lá-qé-ep         by Libbaya, by Lā-qēp.
+        (remainder not inscribed)
+
+
+Notes
+1. Cf. *75:1. This is the amount of the original debt; *74:1f. mentions the amount after deduction of that of  l. 4. The latter, if rounded off, might be the same as the 5 minas of *70:26f.
+2. The name of Iddin-Amurrum’s father, Šuhanum (also in *70:26), is not attested elsewhere. 
+4. This man occurs in *120:2 and VS 26, 109:27 as witness. 
+6. The remaining debt of Iddin-Amurrum, the result of this accounting, should be the amount mentioned in *75:1, where, however, the tablet has 6 GÚ 42 ma-na.
+8-10. This week-eponymy is not attested elsewhere; the “son of Itūr-ilī” could be Puzur-Aššur, since identifying somebody as “son of ...” usually occurs with very common names.
+10. Since “per 1 talent” and “per 1 mina” are contradictory and “½ mina per mina per month” would be an incredibly high rate, “per 1 mina”, so common in silver debts, must be a mistake; the scribe must have meant ½ mina = 10% per year, although this is a very low rate.
+
+
+74. Kt 91/k 428 (1-181-91)
+75. Kt 91/k 462 (1-315-91)
+
+
+74 (A) is a memorandum about ten debt-claims amounting to nearly 17 minas of silver and more than 6 talents of copper. Two of them are dated, to the year REL 67, the earliest date attested in the archive, and to REL 82. Many entries are known from other memoranda. 
+75 (B), only inscribed on its obverse (7.8 x 5.9 cm), is a duplicate of A, with a few variants, mentioned in the notes to this record. 
+
+
+        4  GÚ 42  ma-na  URUDU iš-tí        4 talents 42 minas of copper        
+        I-dí-dMAR.TU        with Iddin-Amurrum;
+        ½  ma-na  KÙ.B.  be-ú-lá-at        ½ mina of silver, working capital
+        Ki-ta-a  8 ma-na  KÙ.B.        of  Kitaya;  8 minas of silver
+5        KI Šu-li  DUMU Puzur4-A-be-eh        with Šuli, son of Puzur-Abeh;
+        4 ma-na  4  LÁ 1/6 GÍN KÙ.B.        4 minas 3 5/6 shekels of silver
+        KI Id-na-a  ITU.KAM        with Idnaya, month IV,
+        ma-hu-ur-ì-lí  li-mu-um        eponymy of 
+        Šu-da-a  ¼ GÍN.TA        Šudaya,  he will add  1¼ shekel
+10         ṣí-ib-tám ú-ṣa-áb        per (mina per month) as interest;        
+        1 GÚ  20 ma-na URUDU        1 talent 20 minas of copper
+        ù ⅓  ma-na 5 GÍN <KÙ.B.>        and 25 shekels <of silver?>
+l.e.        KI  I-ba-a 8 GÍN KÙ.B.        with Ibaya; 8 shekels of silver 
+        KI  I-ku-mì-šar        with Ikūn-Mīšar;
+rev.        2 ma-na 10 GÍN KÙ.B.        2 minas 10 shekels of silver
+16        KI  A-šùr-du-ri        with Aššur-dūrī,
+        li-mu-um Ip-hu-ru-um        eponymy of Iphurum.
+        1½ GÍN.TA ṣí-ib-tám        he will add 1½ shekel per
+        ú-ṣa-áb  ½ ma-na KÙ.B.        (mina per month); ½ mina of 
+20        KI Ba-al-ṭù-im        silver with Balṭu’um;
+        ⅓  ma-na 5 GÍN        25 shekels (of silver)
+        be-ú-lá-at Gal-da-a        working capital of Galdaya;
+        1 ma-na KÙ.B.         1 mina of silver
+        KI Gal-da-a        with Galdaya.
+
+
+Notes 
+A 1. B:1 has 6 GÚ 42 ma-na, but *73:6 confirms the figure of A; see the note on *73:1.
+A 3-4. B omits KÙ.B.; the original, undated be’ūlātu-contract is preserved as *66; cf. also *111 on Kitaya’s work as transporter.
+A 4-10. See the comment on *55 on the relation between Elamma and Idnāya.
+A 7-10. B:6 ends with what is A:7a, after which it inserts a ruling, omits lines 7b-10 of our text and continues with A:11.
+A 12.  B: 8, as expected, adds KÙ.B.
+A 13-14. The same debt is recorded in *62 and *69:24f.
+A 15-19. The same debt is recorded in *69:28f. (term of 8 weeks).
+A 20. Ba-al-ṭù-im (genitive), a strange spelling (in A and B) of Balṭum, probably short for Balṭu-šar, who is registered with the same debt, owed to Elamma, in the memo *69:38f. But note Ba-al-ṭù-um in *263:8, where a genitive is required. 
+21-24. B:14 adds KÙ.B. in l. 21. See for these debts of Galdaya the note on *70:5-9.
+
+
+
+
+
+
+
+
+76. Kt 91/k 497 (1-350-91)
+
+
+This big memorandum (7.5 x 5.8), whose reverse is heavily damaged, lists many debt-claims, most in copper. It was excerpted from “tablets that are in the house of ........” (lines 41-42, name unreadable, but not Elamma). The first part lists claims in copper, in all more than 20 talents, later also some claims in silver follow, but the gap in and damage of the reverse deprives us of further data. The creditor remains anonymous, but this record is presented here because lines 17-21 list a debt of Uršiši for which Elamma and his brother Amur-Ištar had been registered as guarantors and this agrees with the date of two other occurrences of Uršiši (see below, note on lines 16-22). Being mentioned as guarantor means that Elamma, at least in this case, was not the creditor, unless the guarantors had paid for the debtor, which would have turned them into creditors of Uršiši, whereby his original debt-note would have been ceded to them. It is uncertain whether Elamma was the creditor of the other claims and in any case this memo must have been drawn up somewhat later. From memo *77 we learn that some of the tablets excerpted in *76 (lines 10-13) were “left to our Šu-Bēlum”, to all appearances Elamma’s son. That, according to that memo, no less than seven boxes with tablets were left to him was a drastic measure, possibly related to Elamma’s death. It is unfortunate that the name of the owner of the house(?), where the tablets excerpted in *76 were kept, is unreadable, but it is tempting to assume a connection with the transfer of the boxes of tablets mentioned in *77. This removal or transfer also explains why none of the original debt-notes excerpted here has been found in Elamma’s archive. 
+                                debt
+        2½  GÚ URUDU SIG5 iš-tí  Ga-nu-nu        2½ talents refined cooper due by Ganunu;          1
+        3 GÚ URUDU SIG5 iš-tí  Ga-nu-nu-ma        3 talents of refined copper also by Ganunu;          2
+        1 GÚ URUDU SIG5  iš-tí  A-šur-DÙG        1 talent of refined copper due by Aššur-ṭāb,  3
+        DUMU A-mur-Na-hu-uš         son of Amur-Nahuš; 1 talent 30 minas
+5         1 GÚ 30 °ma-na URUDU¿ SIG5  iš-tí        of refined copper due by the same Aššur-          4 
+                [ A-šùr -°DÙG¿                [ -ṭāb,
+        DUMU A-mur-N[a-hu-uš-ma  x G]Ú        son of Amur-Nahuš; [... talents] of refined          5
+                [ UR[UDU SIG5]                [  copper 
+         iš-tí  A-°šur x x¿* 3 GÚ 20 ma-n[a]         due by Aššur-.....;  3 talents 20 minas of          6
+        URUDU SIG5  iš-tí  A-du-dum        refined copper due by Adūdum;
+        1 GÚ URUDU SIG5 iš-tí Puzur4-        1 talent refined copper due by Puzur-          7
+                 [  dMAR.TU                [ Amurrum;
+10         2  GÚ 40 ma-na URUDU la-mu-nam         2 talents 40 minas of bad copper          8
+        iš-tí  En-na-Sú-in  DUMU I-ku-a         due by Ennam-Suen, son of Ikūa;
+        15 ma-na  URUDU SIG5 iš-tí  En-na-        15 minas of refined copper due by Ennam-          9
+                [ S[ú]-/i[n]                 [ -Suen,
+        DUMU  I-ku-a  28 ma-na  URUDU         son of Ikua; 28 minas of refined copper        10
+        SIG5 iš-tí I-ku-pì-a DUMU En-um-A-[šur]        due by Ikūn-piya, son of Ennam-A[ššur]; 
+15         3 GÚ URUDU SIG5 iš-tí  Puzur4-We-e[r]         3 talents of refined copper due by Puzur-         11
+        1½ ma-na  KÙ.B. ṣa-ru-pá-am         Wer;  1½ mina of refined silver due by         12
+        iš-tí  Ur-ší-ší 1½  ma-na KÙ.B.        Uršiši;  1½ mina of refined silver        13
+l.e.        ṣa-ru-pá-am  iš-tí  Ur-ší-ší-ma  [š]a        due by the same Uršiši, as whose        
+        qá-t[a-t]í-šu  E-lá-ma         guarantors Elamma and Amur-Ištar 
+rev.         [ù] A-mur-Ištar a-na Ì-l[í-x x]         were registered on behalf of Ilī-[......];
+21        [li-t]ap-tù-ni ½ ma-na KÙ.[B.]         ½ mina of silver, his working        14
+        [be-ú]-lá-ti-šu  iš-tí Ur-ší-[ší]-/ma         capital, due by the same Uršiši;
+         [x GÚ] URUDU SIG5 iš-tí  En-um-[x x]         [x] talents of refined copper due by         15
+         ù  [x  x  x  x]-ì-lí         Ennum-[......] and [..........]-ilī;
+25         20+[x ma-na URUDU] SIG5        20+x minas of refined copper        16
+                  (lacuna of  ca. 9 lines until the bottom of the reverse)
+35         [x x x x x] 15 ma-na °KÙ.B.¿         [................ ] 15 minas of silver        17
+        [ x x x iš-t]í  DINGIR-[x x ] DUMU [......]         [........ ] due by Ilī-[.....], son of [ .........];
+        [ x x x ]°x¿-ma [ x x x ]  KÙ.B         [.........] below (a price of)         18
+u.e.         °lá? * i-ba-t]a-aq?         [x] silver he shall not go?;
+39         10  TÚG.HI-tí  10⅓ ma-na URU[DU]        10 textiles (and) 10⅓ minas of copper         19
+                  [SIG5 *iš¿-tí E-ru-/zi                  [  due by Eruzi;
+l.e.         10 mana  URUDU SIG5 ù 6  GÍN KÙ.B        10 minas of refined copper and 6 shekels        20
+                      [ iš-tí                [  of silver
+        A-ta-ah-šu  mì-ma  a-ni-[ú]-tum  ṭup-pu        due by  Atahšu. All these certified records
+42         ha-ru-mu-tum  *É? BI- °x- nim¿ i-ba-ší-ú        records are in ..........num’s house?.
+
+
+Notes
+4. Same name in ICK 1, 187:17.
+10-13. These two claims on Ennam-Suen, son of Ikua, are also recorded in *77:5-10, where the relevant debt-notes are said to have been left (for safekeeping or collection) to “our Šu-Bēlum”. Kt a/k 977 (dated to eponymy REL 91) records a copper debt owed by this Ennam-Suen to Ilabrat-bāni, which has been running for six years. Ennam-Suen is known from AKT 6a, 184:15f., 190:4’f., and 251:13.32, always as witness in records dealing with the aftermath of Šallim-Aššur’s death, hence from eponymy year 105 or later. In ATHE 22:1 he is assisting the family of the dead Ikūn-piya in the matter of a debt owed to the sons of Pūšu-kēn, apparently after the latter’s death.  
+16-22. It is unlikely that lines 16-17a are, by mistake, repeated as 17b-18, because the –ma after Uršiši implies he had been mentioned before. His debts are the only ones in silver and according to lines 21-22 he also held a “working-capital”, so that he must have served as harnesser of the creditor. Unfortunately, these are the only occurrences of him in texts of the archive, but considering the rareness of the name he is probably identical with Uršiši, son of Uphaqum, attested in BIN 4, 206B (EL 210): 2. Dated occurrences of him are  in TC 3, 91:4 (where he has a debt of 4 minas 26 shekels of silver), in eponymy year 84, and he served as week-eponym in eponymy year 83 (Kt n/k 124:4). He also appears as debtor in ICK 2, 127:15 (7 minas of silver) and Kt c/k 699:3 (5 minas of silver, due to Buzutaya).
+19-21. In l. 21 I have restored the stative of lapātum Gt, as attested elsewhere to expressed the somebody had himself registered as guarantor (see Veenhof 2001, 105 with notes 30-32). The second guarantor, Amur-Ištar, probably is Elamma’s brother, identified as son of Iddin-Suen in Kt 93/k 529:12 and 607:13 (courtesy of C. Michel).
+41. A be’ūlātu-loan of 16 shekels of silver, owed by an Atahšu, is recorded in the undated contract *313, which does not mention his creditor/employer. One might identify this loan with the 10 minas of copper and 6 shekels of silver of our memo (equating 10 minas of copper with 10 shekels of silver, at 1:60), but since there is no other example of a composite be’ūlātu-loan  the 6 shekels in our text could be a mistake for 16 shekels.
+
+
+77. Kt 91/k k 514 (1-367-91)
+
+
+A memo, whose writer is not mentioned, stating that quite a number of tablets, seven boxes full, were left to “our Šu-Bēlum”, presumably the son of Elamma, and also (separately?) three other tablets, two of which are excerpted in the prevous memo (*76:10-13).
+
+
+        7 ta-m[a-lá-k]e        Seven boxes
+        ša ṭup-pé  a-°na¿        with tablets
+        Šu-Be-lim  ni-a-im        I left behind to
+        e-zi-ib        our Šu-Bēlum.
+5        1  DUB ša 2 GÚ 40 ma-na        One tablet for 2 talents and 
+        URUDU ṣa-lá-mì-im        40 minas of black copper,
+l.e.        ša-ni-um        a second
+        ṭup-pu-um  ša 15 ma-/na        tablet for 15 minas of
+rev.        URUDU SIG5  ša hu-bu-ul        refined copper, being the debt
+10        En-na-Sú-in        of Ennam-Suen,
+        1 ṭup-pu-um  ša        one tablet for 
+        23 ma-na  URUDU SIG5        23 minas of refined copper
+        ša  hubu-ul        being the debt of
+        A-šur-ANDUL ù Dí-tí-a        Aššur-ṣulūlī and Ditiya.
+15        mì-ma  a-nim a-na        All this I left behind
+        Šu-Be-lim  °e-zi-ib¿        to Šu-Bēlum.
+u.e.        IGI I-šu-°hi-im¿        In the presence of Išuhum,
+le.e        DUMU *x-mì?-im  IG[I]        son of ......mum, and of
+        A-sà-nim DUMU        Asānum, son of 
+20              Šu-Be-lim            Šu-Bēlum.
+
+
+Notes
+3. “Our Šu-Bēlum”, must refer to Elamma’s son of that name and the anonymous speaker probably was his father, a brother or a close business associate.
+4,16. The "leaving behind" (ezābum) could be as safe deposit, because the owner went away, or in order to collect these debt-claims for the creditor. 
+5-10. The excerpt in *76:10-11 qualifies the copper as lammunum, “bad”, and identifies the debtor is as son of Ikua. 
+18. The name of Išuhum’s father is not attested elsewhere.
+
+
+
+
+78. Kt 91/k 472 (1-325-91)
+
+
+This black, unopened case, with 8 impressions of 3 different seals, contains a witnessed record  to the effect that silver due to Ikūn-pī-Ištar by Elamma as payment for tin, has been received by Imdī-ilum. It must have served Elamma as a quittance, as shown by the standard phrase that the recipient of the payment has to clear Elamma from possible claims of the original creditor.
+
+
+                seal A 
+        KIŠIB La-qé-pì-im  DUMU A-šur-ma-/lik         Seal of Lā-qēpum, son of Aššur-mālik.
+        KIŠIB Dan-a-a  DUMU A-ta-a             seal of Danāya, son  of Atāya,
+        KIŠIB Im-dí-DINGIR DUMU Šu-Lá-ba-an        seal of Imdī-ilum, son of Šu-Labān,
+                seal B        
+        ša 10 ma-na  AN.NA        that for the 10 minas of tin
+l.e.                seal A 
+5         [ša]  I-k[u]-pì-Ištar         that Ikūn-pī-Ištar
+rev.                 seal A 
+        a-na E-lá-ma  i-di-nu         had given to Elamma
+        1 ⅔ ma-na KÙ.B. Im-dí-DINGIR        Imdī-ilum received 1⅔ mina of 
+        il5-qé : šu-ma  um-me-a-nu        silver. If the investors of 
+                seal B (upside down) 
+        I-ku-pì-Ištar  ú-la  me-er-ú-/šu         Ikūn-pī-Ištar or his sons
+10         a-na E-lá-ma  i-tù-/ru         raise a claim against Elamma
+u.e.         Im-dí-DINGIR  ú-ba-áb-šu         Imdī-ilum will clear him.
+                seal A 
+le.e                 seal C 
+r.e.                 seal C
+
+
+Seals
+seal A = CS 1197 = KKS 84 = Teissier no. 281, seal of Imdī-ilum, son of Šu-Labān. 
+seal B = CS 1198
+seal C = CS 1199
+Notes
+1. A man of that name occurs in Prag I 446:5-7 during eponymy year REL 132. Other occurrences in CCT 6, 45c (recipient of the letter), Prag I 478:5, ICK 1, 121:3-4 (during a double eponymy attested for eponymy year REL 86, cf. Kt c/k 41:32), KUG 9:10-11, ICK 2, 76:8’-9’+ICK 1, 46+its fragmentary case ICK 2, 77 + KKS 45. The temporal distance between occurrences in REL 86 and 132 suggests that we may have to do with a man and his grandson, the more so since also an Aššur-mālik, son of Lā-qēpum, is attested (both together in Prag I 446:5 and 15). The occurrence of Elamma and Imdī-ilum in our text implies that the earlier Lā-qēpum is meant. 
+Comment 
+This is not simply a quittance for the payment of a debt, but a record establishing before witnesses that a commercial debt of Elamma to Puzur-Ištar had been received or collected by Imdī-ilum. Lines 8-10 suggest that the creditor had died and that Elamma, possibly because he had not received his debt-note back, made Imdī-ilum acknowledge the receipt of the debt and assume the traditional responsibility of clearing the debtor, if the investors and sons of Puzur-Ištar, when liquidating his business, would dun him for payment. We do not why and how Imdī-ilum had collected the payment due by Elamma.
+________________
+D. Alphabetical List of Elamma’s debtors
+
+
+Debts in si(lver) or co(pper), in t(alents), m(inas), or s(hekels) and qualified as be(‘ūlātum) or text(iles). Dates are in eponymy years (REL) and months (I-XII) or h(amuštum), due dates in m(onth), w(eek), (ana) ettišu, return (from) ..., arrival, adrum (threshing floor), or harvest.
+
+
+text          debtor        debt                       date        term    interets        varia and  //
+58        Abatanānum        [x] si        88-V        [x]        30%                unopened case
+76:8        Adudum        3 t 20 m co        --        -        -
+59        Amur-Ištar        67½ s si        90        11w        30%        tablet
+72:34f.        Amur-Šamaš        5⅓ s si        -        -        -        -        
+70:18        Aššur-bāni        50 s si        -        -        -        -
+54        Aššur-bāni        40 s si         67-V           ettišu         33⅓%        unopened case
+70:25f.        Aššur-dūrī        1 1/3 m si        -        -        -        -
+74:15f.        Aššur-dūrī        2 m 10 s si        67        8 w*        30%                        69:28f., 75:9f.
+70:3f.        Aššur-imittī        33½ s si  be        -        -        -        -                
+69:1f.        Aššur-lamassī        3 m si        89-I        24 w.        30%                in memo = App 9
+70: 1f.        Aššur-nādā        1 m 56⅓ s si        -        -        -        -
+72:1f.        Aššur-nādā        1½ m si                      -        -      return Assur        30%
+72:31f.        Aššur-nādā        ½ m si                      -        -      return Burušh  -
+70:35f.        Aššur-nišû        17½ m (co)        -        -        -        -
+71:13        Aššur-rē’ī        ½ m si        88-VI        -        -
+71:30         ,,   s. Iddin-Ištar        40 s si  be        -        -        -        -                
+76:3-4        Aššur-ṭāb         1 + 1½  t co        -        -        -
+72:16f.        Aššur-taklāku        2½ m si        (1 h)        -        30%
+76:6-7        Aššur-[......]        [x] t co        -        -        -        -
+76:40-41        Atahšu        10 m co + 5 s si        -        -        -        -
+69:36f.        Balṭu-šar        ½ m si                     83?        6 m        30%        74:19f. = Balṭu’um
+70:13        Būr-Suen        35 s si        -        -        -        -
+72:26f.        Da’aya        4½ s si + text        -        -        -        -
+70:34        s Da-zu-a-Adad        11 t. co        -        -        -        -
+71:23        Ennam-ilī        9 m 10 s co        -        -        -        -
+        s. Dukšum
+72:28f.        Ennam-Aššur        24 s si        -        -        -        -                        tadmiqtum
+76:10-11        Ennam-Suen s. Ikua        2 t 40 m co        -        -        -        -
+76:23-24        Ennam-[.......] +        [x] t co        -        -        -        -
+          [......]-ilī
+72:20        Ennānum        4 ½ s si        -        -        -                -
+68        Ennānum        2 m si        85-III        -        30%        3 installments
+76:39        Eruzi        10⅓m  co        -        -        -        -                + 10 textiles
+70:5f.        Galdāya        25 s si  be        -        -        -        -        74:21f.; 75:14f.
+70:6f.        Galdāya        1 m si         -        -        -        -
+64        Galdāya s Naku        1 m si        76-VII        -        30%        70:6f.; 74:23;75:16
+76:1-2        Ganunu        2½ + 3t  co        -                -        -
+70:14        Habtuniš        48 m co        -        -        -        -
+70:32        Hanānum        ½ m si        -        -        -        -
+74:11f.        Ibāya        80 m co 25 s si        -        -        -        -        75:7f. 
+71:26        Ibni-Adad        9 m co        -        -        -        -
+text          debtor        debt                       date        term    interets        varia and  //
+70:27        Iddin-Amurrum        5 t co        -        -        -        -        
+73        Iddin-Amurrum        4 t 42 m co        -        -        -        30%?                6.22 t  - 1.40 t.
+69:16f.        Iddin-Aššur        4 t 32 m co        14 w        -        30%        
+        s. Puzur-Abeh
+72:19f.        Iddin-Aššur        4 text        -        -        -        -
+70:10f.        Iddin-Aššur*        56⅔ s si        -        -        -        30%                        *ša Nahriya
+69:42f.        Iddin-Suen        12 s si        95-IV        -                -                cred. Aššur-ṭab
+55        Idnāya        4 m 3 5/6 s si        82-V        -        25%                        74:6f., 75:5f., 
+72:40        Idnāya        2 s si        -        -        -        -
+62        Ikūn-mīšar        8 s si        -        -        return Assur                                69:24f.;74:13f.; 75:8f.
+76:13-14        Ikūn-piya        28 m co        -        -        -        -
+        s. Ennam-Aššur
+71:1        Ikūn-pī-Aššur        40 m co        88-II/III        -        -
+70:1f..6        Ilī-bāni        2 t 13 m  co        -        -        -        -
+71:7f.          ,,     s. Ibni-ilī        37½ m co        -        -        -        -
+63        Ilī-dān        10⅓ s si        -        -        -        -                        unopened case 
+72:36f.        Iliya(?)        20 s si        -        -        -        -        unclear
+70:27f.        Ilšu-rabi        1 m si        -        -        -        -
+57        Ilšu-rabi        61 ½ s si        [x]        3 m        -        30%                fine for theft
+69:49f.        Ištar-ilšu        45 s si        90-VII        -        30%                    cf. 60, cr .Aššur-ṭāb
+71:18        Izziz-Mīšar        18 s si        88-IV        -        -
+70:37        s.  Kabriya        40 m co        -        -        -        -
+66        Kitāya        30 s si  be.        -        -        -        -                cf.  74/5:3-4, *111:2
+72:7f.        nu’ā’um        39 s si + textile        -        -        1 m        -
+70:33        Puzur-Abeh        30 m co        -        -        -        -
+137:1-4        Puzur-Ellil        2½ m si                        -        -        collected in co 
+65        Puzur-Ištar        25 s si  be.        -        -        -        -                utârma u ittallak
+61:1ff.        Puzur-Suen        50 m co.        -              threshing        30%         unopened case
+61:11f.        Puzur-Suen        10 s si        -              harvest         -
+76:15        Puzur-Wer        3 t co         -        -        -        -
+72:38        Qaqqadānum        1 s si        -        -        -        -
+72:21f.        Ṣilli-Adad        15 s si etc.        -        -        -        -        to buy textiles
+70:15        Šallim-Aššur        75 s si        -        -        -        -
+71:9         ,,   s. Uphāqum        75 s si        -        -        -        -
+72:39        Šu-Bēlum        4 s si         -        -        -        -
+71:28          ,,   s. Dāya        20 m co        -        -        -        -
+70:31        Šu-Išhara        1 t co        -        -        -        -
+307        Šu-Išhara +         9 t  co        -        -        -        -
+        Puzur-Abeh           SIG5
+76:9        Puzur-Amurrum        1 t co        -        -        -        -
+72:38        Šu-Ištar        10 s si        -        -        -        -
+106        Šu-Ištar        2 t tin         -        -            arrival        -        sale of tin
+107        Šu-Ištar        12½ m si                             arrival        ?        sale of tin
+69:12f.     Šuli s.Puzur-Abeh        8 m si        75-I        -        30%                74:4f., 75:4
+70:19f.        Šuli        8½ m si        75-II/III        -         -
+56        Šumi-abiya        30 s si        85-I        -        40%                tablet
+76:16-17        Uršiši        1½ + ½ m si        -        -        -        -                Elamma guarantor
+76:21-22        Uršiši        ½ m si   be        -        -        -        -

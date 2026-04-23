@@ -1,0 +1,1245 @@
+﻿TABLE OF CONTENTS
+
+
+Preface                   XI
+Abbreviations and bibliography                    XV
+Concordance of the texts           XXI
+Introduction        
+        1. The archive          XXV
+        2. Elamma and his family         XXIX
+        3. The business of Elamma                                                                          XXXIV
+                3.1. Investors and representatives                                                            XXXV
+                3.2. “Transporters”                                                                                   XXXVI
+                3.3. Business associates                                                                        XXXVII
+                3.4. Elamma, a licensed trader and participant in «caravans»             XL
+                3.5. Commercial activities in Anatolia          XLII
+        4. The format of the edition                                                                             XLVI 
+I. Six basic texts, 1-6                   1
+II.        Caravan documents                         
+                A.  Transport contracts, 7-15                 13
+                B.  Notifying messages, 16-33                 25
+                C.  Caravan accounts, 34-48                  48
+                D.  Joint-caravans (ellutum) and “declared value” (awītum), 49-53                  72
+                E.  Tables of shipments and transporters                
+                        1. Large amounts of silver and gold sent to Assur to make purchases          78
+                        2. Small amounts of silver and gold sent persons in Assur                 80
+                        3. Merchandise bought in and/or shipped from Assur to Elamma                  81
+                        4. Data on «harnessers» and other transporters                  82
+III.         Debt-notes, memorandums and related records                         
+                A.  Debt-notes, 54-64                  85
+                B.  Three be’ūlātu-contracts, 65-67                  96
+                C.  Memorandums listing debt claims, 68-78                  99
+                D.  Alphabetical lists of Elamma’s debtors                  117
+IV.         Other letters                         
+                A.  Letters of Elamma, 79-82                 119
+                B.  Letters to Elamma, alone or with others, 83-97                 125
+V.                 Legal records of various nature                          
+                A.  “Confirmation”, 98-101                 143
+                B.  A conflict between Elamma and Pilah-Aššur, 102-105                 150
+                C. Agreement, contracts, summonses, acknowledgments, transfers, 
+                        collection of claims, settlements, a verdict, and a testament, 106-120         156
+VI.         Memorandums, lists and notes
+                A.  Accounting and financial settlements, 121-123                173
+                B.  Caravan goods, 124-141                 176
+                C.  Lists of bread, beer and silver, 142-144                 189
+VIII                                                       TABLE OF CONTENTS         
+ 
+
+
+
+
+VII.        Traveling and travel expenses, 145-153                 195
+VIII.         Lamassutum
+                A.  Records on slaves, 154-157                 211
+                B.  Debt-notes, 158-162                 218
+                C.  Other texts, 163-164                 223
+IX.         Children of Elamma
+                A.  Letters, 165-169                 227
+                B.  The Death of Elamma’s son Aššur-ṭāb, 170-172                 233
+                C.  Various records, 173-175                 236
+                D.  Uṣur-pī-Aššur and his inheritance, 176-178                 243
+X.                 Ištar-lamassī and her death, 179-188                  249
+XI.         Ir’am-Aššur
+                A.  Ir’am-Aššur and Ennam-Aššur, 189-194                 267
+                B.  Various documents, 195-205                 279
+XII.         Šalimma, 206-210b                 291
+XIII.        Ennam-Suen
+                A.  Letters, 211-219                 303
+                B.  A Conflict between Ennam-Suen and Aššur-šamšī, 220-224                 316
+                C.  Legal documents, 225-234                 324
+XIV.         Šu-Ištar
+                A.  Letters, 235-240                 337
+                B.  Legal documents, 241-245                 344
+XV.         Šu-Bēlum, 246-251                 349
+XVI.         Letters from and to various persons
+                A.  Letters in alphabetical order by the name their first addressee, 252-273  357
+                B.  Letters without address, “second pages”, and fragments, 274-278            380
+XVII.         Judicial records of various nature, 279-288                   385
+XVIII.         Various contracts
+                A.  Commercial contracts, 289-294                   399
+                B.  Other contracts, 295-297                   406
+XIX.         Debt-notes and memos on debts 
+                A. Debts owed to tamkārum, 298-301                     411
+                B.  Debts owed to a named creditor, 302-305                   415
+                C.  Debts owed to an unknown creditor, 306-309                   419
+                E.  A memo and a quittance, 310-311                   423
+                D.  Two be’ūlātu-contracts, 312-313                   424
+                F.  Debts among Anatolians, 314-315                    427
+XX.         Lists of textiles, 316-322                    431
+XXI.         Notes, memos and lists 
+                A.  Payment and transfer of money or claims, 323-334                    437
+                B.  Transfer and transport of goods, 335-337                  445
+                C.  Debts and claims, 338-342                   447
+                D.  Lists of expenses, 343-347                   450
+                E.  Various memos and records, 348-358                   454
+XXII.         Pieces of sealed envelopes and bullae, 359-372                   463
+                Appendix:  Elamma in texts from other archives (nos. 1-34)                   469
+________________
+
+
+                                                            TABLE OF CONTENTS                                                          IX
+
+
+
+
+
+
+XXIII.         Cuneiform copies of damaged or problematic signs and words                 487
+XXIV        Seals and sealers
+                A.  List of seals with their numbers (CS or St), owners and inscriptions         491
+                B.  Alphabetical list of sealers mentioned on preserved envelopes                 494
+XXV        Indices
+                A. Names of persons, epoynms, gods and places
+                        1. Persons                499
+                        2. Week eponyms (hamuštum)                521
+                        3. Year eponyms (līmum)                522
+                        4. Gods                523
+                        5. Places                523
+                B. Words attested (selectively) and discussed                526
+                C. Texts quoted or commented upon                537
+XXVI.  Photos of selected tablets and envelopes 
+________________
+
+
+
+
+
+
+
+
+
+
+
+
+PREFACE
+
+
+        In 1992 Professor Tahsin Özgüc asked me to take care of the edition of the cuneiform tablets excavated by him in kārum Kanesh during the year 1991 and the beginning of 1992, when the excavation of the second house investigated in 1991 was completed. I gratefully accepted his invitation and when studying the more than 600 tablets during the following years it turned out that they belonged to three different archives. The first consisted of Kt 91/k 100-284, which according to the excavator was found in 1990 «north of the Elamma house in LII-LIII/126-127 plan square». I hope, my age and health permitting, to publish this archive in the future. The third archive comprised Kt 92/k 188-263, found in 1992 in the house in grid quare LV-LVI/126-127, and it was published by me in 2010 as Kültepe Tabletleri V (TTKY VI/33c), «The Archive of Kuliya, son of Ali-abum». The second and largest archive, comprising Kt 91/k 285-568 and Kt 92/k 94-187, is the archive of Elamma, son of Iddin-Suen, and his family; it is published in this volume. Workon this large archive took many many years, with many visits to the Museum in Ankara and was frequently interrupted due to various administrative and academic duties, including the publication of some other books.[1] Moreover, I gave priority to the publication of the above-mentioned «Archive of Kuliya», which also yielded the first «Kültepe Eponym List» (KEL A), which I edited separately in 2003.
+        It is a plesant duty to thank all those who have made this publication possible. In the first place the excavator and his staff, who retrieved these cuneiform documents from a heavily damaged house. Fikri Kulakoǧlu, the current director of the Kültepe excavations, apart from showing me the ruins of Elamma's house in the lower town of Kanesh, provided me with some additional information on the circumstances of the discovery. I am grateful to the directors of the Anadolu Medeniyetleri Müzesi for giving me the opportunity to work in their museum and to the ladies of the Tablet Seksyonu, who made the tablets available to me during my many visits over the years, in particular to Sherife Yilmaz, who also helped me with information on some tablets and carried out some collartions. I am grateful to Cahit Günbatti, Irfan Albayrak and Hakan Erol, of the University of Ankara, who answered questions and helped me with various collations. Ayse Karaduman provided me with information on some seal impressions shared by texts of Elamma and of the Kt n/k archive. 
+        The help of the members of «Old Assyrian Text Project», a initiative of Mogens Larsen, was invaluable and exemplary. They gave me access to unpublished archives and both in our meetings and in correspondence we discussed many issues and problems. I owe a special debt of gratitute to Mogens Larsen for making preprints of his edition of the archive of Šalim-Aššur (AKT 6) available and for a critical reading of parts of my manuscript. Bert Kouwenberg contributed valuable remarks on the transliteration and translation of a number of texts and provided me with a copy of the manuscript of his forthcoming Old Assyrian Grammar, to which I refer in my edition simply as Grammar. I used with profit the various Old Assyrian websites created by Thomas Hertel and discussions with him on the interpretation of judicial records have stimulated me, as did Gojko Barjamovic's observations on matters of geography relating to 
+XII                                                                PREFACE 
+
+
+
+
+
+
+the texts edited in Ch. VII; he also helped me with several collations. I thank Cécile Michel for providing me with texts from the archive excavated in 1993,which she is publishing and that belonged to a brother of Elamma, and Jan Gerrit Dercksen for collations and for making the texts of the Kt c/k archive available; both also gave me access to their name indexes. I owe a special gratitude to Mrs Masako Omura, who is publishing the seal impressions on the envelopes of Elamma's archive. Combining her drawings of and her data on other occurrences of the seals with my transliterations, lists of sealers and prosopographical data allowed us to identify a large number of the seal owners (see the list in Ch. XXIV, A). 
+        The help of and cooperation with all those named have substantially improved the quality of my book. Of course, not all problems of reading and interpretation could be solved and I take responsibility for remaining errors and imperfections of the manuscript that was handed in camera-ready. But I do hope that the result will convince others that cooperation and sharing of data between all those working on «Kültepe tablets» is very profitable for all parties. May the new initiative of the «Kültepe International Meeting» (started in Sept. 2013) stimulate personal contacts and provide a forum for exchange of data, views and scholarly discussion. 
+        The publication of new cuneiform texts always requires philological notes and comments on their reading, translation and interpretation, because a simple translation is often not sufficient for their understanding, certainly not for those not initiated in the world of Old Assyrian trade, but he edition of a large archive allows only a limited space for them. The notes added to the texts give, when necessary, short information on the reading and meaning of the words, comment on points of grammar, refer to parallel texts, provide some prosopographic and chronological data, and may refer to the literature. The comments on the texts in the present editions deal in a concise way with the meaning and implication of the texts, but in some cases, where I considered a text especially interesting or important, more elaborate comments were necessary. Realizing the limitations of an archival edition, I have over the years edited a number of important texts from the archive that required a more detailed commentary in articles, often in a Festschrift for a colleague. I list them here by their number in this volume (full titles can be found in the Bibliography) for easy reference.
+
+
+1        Veenhof  2012a          no. 2
+120        ,,                no. 1
+146        Veenhof  2006                   no. 1
+147        ,,                no. 2
+148        Veenhof 2008b          no. 3
+149        ,,                no. 1
+150        ,,                no. 5
+151        ,,                no. 2
+156        Veenhof  2003b          no. 3
+164        Veenhof 2012a         no. 4
+        175     Veenhof  2012a          no. 3
+
+
+180        Veenhof  2008a          B
+184        ,,        F
+185        ,,        G
+188        ,,        J
+206        Veenhof  2007b
+210        Veenhof  2003b          no.1
+271        Veenhof  2008c         no.1
+297        Veenhof  1998      141f.
+314        Veenhof  2015
+315        Veenhof  2015
+
+
+        I have allowed colleagues to use transcriptions of Elamma's texts, to quote or (in rarer cases) publish them, if they were important for their research, in particular Barjamovic, Dercksen, Hertel and Michel, while Kryszat used their chronological data in Kryszat 2004. Such quotations from and publications of them are mentioned with the texts in this volume and references to discussions, in particular in Hertel's OALP, are given in the notes and comments.
+                                                                    PREFACE                                                                 XIII
+
+
+
+
+
+
+References to quotations of the texts are also found in C. Michel's Bibliography under their excavation numbers.
+         New texts also acquaint us with new, rare or difficult words and with additional, more specific or clearer attestions of them, not yet or not well treated in our dictionaries, which were completed before most of the texts excavated since 1948 became available. To account for my translations they had to be discussed in notes of lexical content, some of which became long and occupied too much room in this volume. Some could be presented in the above-mentioned publications of a number of important texts, to which the notes in this volume then refer. In other cases I decided to take them out of this volume and to present them in a forthcoming, alphabetically arranged article, «Contributions to Old Assyrian Lexicography», to be published in the journal Orientalia (Roma), to which I refer in the notes to some texts in this volume by means of «Veenhof, Lex., s.v. ».[2]
+        The photos acompanying this volume of course can only show a selection of the tablets. Principles of selection were in general the importance of a text or text type, the presence of seal impressions and the state of preservation, to show the basis for the reading of a damaged tablet. The selection also includes some exceptionally well or badly written texts, some large or very small tablets, and it tries to document to some extent the varieties in the style of writing (by professional scribes or amateurs), and the peculiarities of «hands» of the better attested letter writers. The photos also provide material for a good Old Assyrian signlist, which is still missing. 
+ 
+        Heemstede                                                                                                           July  2014
+________________
+
+
+
+
+
+
+
+
+
+
+ABBREVIATIONS AND BIBLIOGRAPHY
+
+
+Abbreviations for editions of cuneiform texts, series and journals in general are those used in the Reallexikon der Assyriologie und Vorderasiatischen Archäologie, Bd. 13, p. III – LXV, but Festschriften etc. are not abbreviated by FS + name, but by Studies + name, as in C. Michel, Old Assyrian Bibliography (OAAS 1, PIHANS 97, Leiden 2003), with its supplements in Archiv für Orientforschung: 1 in vol. 51 (2005/6) 436-49; 2 in vol. 52 (2011) 416-437, to which the reader is referred.
+
+
+Abbreviations
+
+
+AC                P. Garelli, Les Assyriens en Cappadoce, Paris 1963.
+AKT 1-6        (Ankara) Kültepe Tabletleri = Ankaraner Kültepe Texte, I-VI 
+        1         E. Bilgiç, H. Sever, C. Günbattı, S. Bayram, TTKY VI - 33, Ankara 1990. 
+        2         E. Bilgiç – C. Günbattı, TTKY VI – 33a, Ankara 1995.  
+        3         E. Bilgiç – C. Günbattı, FAOS Beiheft 3, Stuttgart 1995.
+        4         I. Albayrak, TTKY VI - 33b (Kt. o/k), Ankara 2006.
+        5          K.R. Veenhof, The Archive of Kuliya, son of Ali-abum, TTKY VI-33c, An-                kara 2010.
+        6a,b         M. T. Larsen, The Archive of the Šalim-Aššur Family, vol. 1 = 6a, TTKY                 VI-33d-a, Ankara 2010;  vol. 2 = 6b, TTKY VI-33d-b, Ankara 2014.
+AMMY        Anadolu Medeniyetleri Müzesi Yıllıǧı, Ankara 1986ff.
+Anatolia's Prologue        F. Kulakoǧlu – S. Kangal (eds.), Anatolia’s Prologue. Kultepe Kanesh Ka-                rum. Catalogue of the Exhibition  ‛Assyrians at Istanbul’. 2010, Kayseri.
+AOATT        K.R. Veenhof, Aspects of Old Assyrian Trade and its Terminology, SD 10,                 Leiden 1972.
+APU        A.M. Ulshöfer, Die altassyrischen Privaturkunden, FAOS Beiheft 4, Stutt-                 gart 1995. Quoted by text number.
+ArAn        Archivum Anatolicum, Ankara Üniversitesi Basımevi, 1995ff.
+ATHE        B. Kienast, Die altassyrischen Texte des orientalischen Seminars der Uni-                iversität Heidelberg und der Sammlung Erlenmeyer, Berlin 1960.
+CMK        Texts translated in C. Michel 2001, quoted by number.
+Copper        J.G. Dercksen, The Old Assyrian Copper Trade in Anatolia, PIHANS 75,                 Leiden 1996.        
+CTMMA        Cuneiform Texts in the Metropolitan Museum of Art, 1,  New York 1988,                 nos. 71-98, ‘Old Assyrian Texts’, by M. Trolle Larsen.
+DTCFD        Dil ve Tarih-Coǧrafya Fakültesi Dergisi (Ankara).
+EL                G. Eisser - J. Lewy,  Altassyrische Rechtsurkunden vom Kültepe, I-II,                         MVAeG  30 and 35/3, Leipzig 1930 and 1935. Quoted by text number.
+Eponym List         K.R. Veenhof, The Old Assyrian List of Eponyms from Kārum Kanesh and                 its Chronological Implications, TTKY VI/64, Ankara 2003.
+Geography        G. Barjamovic, A Historical Geography of Anatolia in the Old Assyrian                 Colony Period,  Carsten Niebuhr Institute Publication 38,  Copenhagen                 2011.         
+GKT         K. Hecker, Grammatik der Kültepe-Texte, AnOr 44, Roma 1968.
+Grammar        N.J.C. Kouwenberg, A Grammar of  Old Assyrian, manuscript, 2013.
+ICH        International Congress for Hittitology.
+                I. Uluslarası 1. Hititoloji Kongresi Bildirileri, Çorum, 1990, Çorum.
+XVI                                      ABRREVIATIONS AND BIBLIOGRAPHY 
+
+
+
+
+                III. Uluslararı 3.Hititoloji Kongresi Bildirileri, Çorum 1996, Ankara  1998.
+                IV. G. Wilhelm (ed.), Akten des IV. Internationalen Kongresses für Hethi-                 tologie, Würzburg 1999, StBoT 45, Wiesbaden 2001.
+Innāya        C. Michel, Innāya dans les tablettes paléo-assyriennes, 1-2, Paris 1991.
+KEL        K.R. Veenhof, The Old Assyrian List of Year Eponyms from Karum Kanish                 and its Chronological Implications, TTKY VI-64, Ankara 2003.
+KKS        L. Matouš - M. Matoušová-Rajmová, Kappadokische Keilschrifttafeln mit                Siegeln aus den Sammlungen der Karlsuniversität in Prag, Prag 1984.
+Memorial Garelli        C. Michel (ed.), Old Assyrian Studies in Memory of Paul Garelli, OAAS                 4, PIHANS 112, Leiden 2008.
+OALP        Th.K. Hertel, Old Assyrian Legal Practices. Law and Dispute in the An-                cient Near East, OAAS 6, Leiden 2013.
+OAA 1        Old Assyrian Archives, vol.1: M.T. Larsen, The Aššur-nādā Archive, NINO                PIHANS 96, Leiden 2002.
+OAAS        Old Assyrian Archives. Studies. Leiden 2003f.
+OACC        M.T. Larsen, The Old Assyrian City-State and its Colonies, Mesopotamia,                4, Copenhagen 1976.
+OACP        M.T. Larsen, Old Assyrian Caravan Procedures, PIHANS 22, Istanbul                         1967.
+OAI        J.G. Dercksen, Old Assyrian Institutions, MOS Studies 4, PIHANS 98,                         Leiden 2004.
+OBO 160/5        K.R. Veenhof,  ‘The Old Assyrian Period’, in: M. Wäffler (ed.),  Annähe-                rungen 5, Orbis Biblicus et Orientalis 160/5, Freiburg-Göttingen 2008, I,                1-264.
+POAT        W.C. Gwaltney, The Pennsylvania Old Assyrian texts, HUCA Supplement                3, Cincinnati 1983.
+Prag I + no        Texts edited by K. Hecker – G. Kryszat – L. Matouš,  Kappadokische Keil-                schrifttafeln aus den Sammlungen der Karlsuniversität Prag, Praha 1998.
+RGTC 4        K. Nashef, Die Orts- und Gewässernamen der altassyrischen Zeit, Réper-                toire Géographique des Textes Cunéiformes 4, TAVO B Nr. 7/4, Wiesba-                den 1991.
+Sadberk        V. Donbaz, Sadberk Hanım Müzesi'nde Bulunan Çiviyazılı Belgeler, Istan-                bul 1999.
+Studies Alp        H. Otten et al. (eds.), Hittite and Other Anatolian and Near Eastern Studies                in Honour of Sedat Alp, Ankara 1992.
+Studies Darga        T. Tarhan – A. Tibet – E. Konyar (eds.), Muhibbe Darga Armaǧanı, Istan-                bul 2008.
+Studies Donbaz        Ş. Dönmez (ed.), DUB.SAR É.DUB.BA.A. Studies Presented in Honour of                 Veysel Donbaz, Istanbul 2010.
+Studies Garelli        D. Charpin - F. Joannès (eds.), Marchands, diplomates et empereurs. Étu-                des sur la civilisation mésopotamienne offertes à Paul Garelli, Paris 1991.  
+Studies Güterbock         K. Bittel e.a. (eds.), Anatolian Studies Presented to Hans Gustav Güter-                 bock         on the Occasion of his 65th Birthday, PIHANS 35, Istanbul 1974.
+Studies Hecker        Altorientalische Forschungen 35/1,  Berlin 2008, ed. G. Kryszat.
+Studies Houwink         T.P.J. van den Hout  -  J. de Roos (eds.),  Studio Historiae Ardens. Ancient 
+   ten Cate        Near Eastern Studies Presented to Philo H.J. Houwink ten Cate on the Oc- 
+                casion of his 65th Birthday, PIHANS 74, Istanbul 2005.
+Studies Kienast        G.J. Selz (ed.), Festschrift für Burkhart Kienast zu seinem 70. Gebursttage,                 AOAT 274, Münster 2003.
+
+
+                                                  ABRREVIATIONS AND BIBLIOGRAPHY                                 XVII
+
+
+
+
+Studies Lands-        H.G. Güterbock -Th. Jacobsen (eds.), Studies in Honor of Benno Landsber-
+     berger        ger on his Seventy-Fifth Birthday, April 21, 1965, AS 16, Chicago 1965. 
+Studies Larsen        J.G. Dercksen (ed.), Assyria and Beyond. Studies Presented to Mogens                         Trolle Larsen, PIHANS 100, Leiden 2004.
+Studies Matouš        B. Hrouška - G. Komoróczy (eds.), Festschrift Lubor Matouš, I-II, Buda-                pest         1978.
+Studies Meijer        B.S. During –  A. Wossink  – P.M.M.G. Akkermans (eds.), Correlates of                 Complexity. Essays in Archaeology and Assyriology Dedicated to Diederik                J.W. Meijer in Honour of his 65th Birthday, PIHANS 116 , Leiden 2011.
+Studies Oelsner        J. Marzahn - H. Neumann (eds.), Assyriologica et Semitica. Festschrift für                  Joachim Oelsner, AOAT 252, Münster 2000.        
+Studies N. Özgüç        M.J. Mellink e.a. (eds.), Aspects of Art and Iconography. Anatolia and its                 Neighbours. Studies in Honor of Nimet Özgüç, Ankara 1993.
+Studies T. Özgüç        K. Emre e.a. (eds.), Anatolia and the Ancient Near East. Studies in Honor                 of Tahsin Özgüç, Ankara 1989.
+Studies Veenhof        W.H. van Soldt e.a. (eds.), Veenhof Anniversary Volume. Studies Presented                to Klaas R. Veenhof on the Occasion of his Sixty-fifth Birthday, PIHANS                89, Leiden 2001.
+TPAK 1         C. Michel – P. Garelli, Tablettes paléo-assyriennes de Kültepe, 1 (Kt 90/k),                Paris 1997.
+UAR        H. Hirsch, Untersuchungen zur altassyrischen Religion, 2. Aufkage, AfO                 Beiheft 13/14, Osnabrück 1972.
+Ups and Downs        G. Barjamovic – Th. Hertel – M.T. Larsen, Ups and Downs at Kanesh.                         Chronology, History and Society in the Old Assyrian Period, OAAS 5, PI-                HANS 120, Leiden 2012.
+
+
+Bibliography
+
+
+K. Balkan 
+        1955        K. Balkan, Observations on the Chronological Problems of Kārum Kaniš,                TTKY VII - 28, Ankara 1955.
+        1957        K. Balkan,  Letter of king Anum-hirbi of Mama to king Warshama of Ka-                nish, TTKY VII - 31a, Ankara 1957.
+M. Brosius (ed.)         
+        2003          Ancient Archives and Archival Traditions. Concepts of Record-Keeping         in                the Ancient World, Oxford Studies in Ancient Documnts, Oxford.
+J.G. Dercksen 
+        1999        «On the Financing of Old Assyrian Merechants», in: Dercksen 1999 (ed.),                 85-99. 
+        1999 (ed.)        Trade and Finance in Ancient Mesopotamia, MOS Studies 1, PIHANS         84,                Istanbul.
+        2004        «Some Elements of Old Anatolian Society in Kaniš», in: Studies Larsen                 137-177. 
+        2005        «Metals According to Documents from Kültepe-Kanesh Dating to the Old                Assyrian Colony Period», in: Ünsal Yalçin (ed.), Anatolian Metal, III, Der                Anschnitt, Beiheft 18 (Bochum 2005) 17-34.
+        2007a        «On Anatolian Loanwords in Akkadian Texts from Kültepe», ZA 97, 26-                46.
+        2008a         «Subsistence, Surplus and the Market for Grain and Meat in         Ancient Ka-                nesh'» in: Studies Hecker, 86-102.
+XVIII                         ABRREVIATIONS AND BIBLIOGRAPHY
+
+
+
+
+J.G. Dercksen
+                2008b        «Observations on Land use and Agriculture in Kaneš», in: Mem-                orial Garelli,        139-157.
+        2008c (ed.)         Anatolia and the Jazira during the Old Assyrian Period, NINO, PIHANS                111, Leiden.
+        2011        «The Exchange of Sacrificial Gifts among Old Assyrian Merchants» in:                 Studies Meijer, 59-68.
+M. Forlanini
+        2010        «New Evidence and Recent Suggestions on the Anatolian Geography in                the Old Assyrian Period», in:  Studies Donbaz, 135-142.
+        2012        Review of Barjamovic 2011, in: BiOr 69, 290-300.
+K. Hecker
+        1999        «In nova ...», Archív Orientálni  67, 557-564.
+        2003        kunuk kārim ṣaher rabi, in: Studies Kienast, 183-196.
+        2007        Altassyrische Briefe, in: G. Wilhelm (ed.), Texte aus der Umwelt des Alten                 Testaments, Neue Folge 3, 77-100.
+B. Kienast 
+    1984        Das altassyrische Kaufvertragsrecht, FAOS Beihefte 1, Stuttgart 1984.        
+N.J.C. Kouwenberg
+        2006         «Reflexes of the Proto-Semitic Gutturals in Old  Assyrian», in: G. Deut-                scher – N.J.C. Kouwenberg (eds.). The Akkadian Language in its Semitic                 Context. Studies in the Akkadian of the Third and Second Millennium BC,                 PIHANS 106, Leiden, 150-176.
+        2008        «On the Old Assyrian Verb atawwum, 'to speak' » in: Memorial Garelli,                 159-173.
+        2010        The Akkadian Verb and its Semitic Background. Languages of the Ancient                Near East 2. Winona Lake.
+        2012        «Spatial Deixis in Akkadian»  ZA 102, 17-75.
+G. Kryszat
+        2004        Zur Chronologie der Kaufmannsarchive aus der Schicht 2 des Kārum Kan-                eš. Studien und Materialien, OAAS 2, PIHANS 99, Leiden.
+Kt a (etc.)/k + no.        Sigla of tablets from Kültepe (Kt) kārum Kanesh (/k), 1948 (=a) until 1972                 (=z).         
+Kt 73(etc.)/k + no.        Kültepe tablets found in kārum Kanesh since 1973.
+M.T. Larsen
+        1977        «Partnerships in the Old Assyrian Trade», Iraq 39,119-145.
+        1982        «Your Money or Your Life! A Portrait of an Assyrian Businessman, in: J.                N. Postgate (ed.), Societies and Languages of the Ancient Near East. Stud-                dies in Honour of I.M. Diakonoff,  Warminster, 214-245.
+        1999        «Naruqqu-Verträge», RlA 9, 181-4.
+        2007        «Individual and Family in Old Assyrian Society», JCS 59, 93-106.
+        2008        «Archives and Filing Systems at Kültepe», in: Studies Hecker, 77-88.
+A.W. Lassen 
+        2010        «Trade in Wool in Old Assyrian Anatolia», JEOL 42, 159-79.
+L. Matouš 
+        1965        Anatolische Feste nach «Kappadokischen Tafeln», in: H.Güterbock – Th.                Jacobsen (eds.), Studies in Honor of Benno Landsberger on his Seventy-                 Birthday, April 21, 1965, AS 16, 175-182.
+
+
+
+
+                                                        ABRREVIATIONS AND BIBLIOGRAPHY                        XIX
+
+
+
+
+C.Michel
+        1997a        «A table avec les marchands paléo-assyriens», in: H. Waetzoldt (ed.),  As-
+                syrien im Wandel der Zeiten, CRRAI 39, 95-113.
+        1979b        «Les enfants des marchands paléo-assyriens», in: Enfance et éducation        au                Proche-Orient ancient, in: Ktèma 22, 91-108.
+        1997c        «Hommes et enfants prêtent serment à l'époque paléo-assyrienne» in: Jurer                et maudire, Mediterranées 10/11, 105-123.
+        1998        «Les Mites d'Assyrie. Moths in the Assyrian Texts of the Second Millen-                nium B.C.», JAOS 118, 325-331.
+        2001        La correspondance des marchands de Kaniš au début du IIe millénaire av.                J.-C., LAPO 18, Paris. 
+        2008        «The Alāhum and Aššur-taklāku archives found in 1993 at Kültepe Kaniš»,                in: Studies Hecker, 53-67.
+C. Michel – P. Garelli         
+        1995        “New Old Assyrian Marriage Contracts” , AMMY 1995, 295-302.
+C. Michel –K.R. Veenhof        
+        2010        «The Textiles Traded by the Assyrians in Anatolia (19th -18th centuries                BC)», in: C. Michel – M.L.Nosch (eds.), Textile Terminologies in the An-                cient Near East and Mediterranean from the Third to the First Millennia                 BC,         Ancient Textile Series vol. 8,  Oxford, 210-271.
+N. Özgüç 
+        2006        Kültepe-Kaniš / Neša. Seal Impressions on the Clay Envelopes from the Ar-                chives of the Native Peruwa and Assyrian Trader Uṣur-ša-Ištar, son of Aš-                šur-imittī, TTKY V / 50, Ankara 2006.
+N. Özgüç- O. Tunca         
+        2001        Kültepe-Kaniš. Sealed and Inscribed Clay Bullae, TTKY V / 48, Ankara.
+B. Teissier 
+        1994         Sealing and Seals on Texts from Kültepe kārum Level 2, PIHANS 70, Is-                tanbul.
+K.R. Veenhof
+        1978        «An Ancient Anatolian Money-lender» in Studies Matouš, II, 279-311. 
+        1987        «“Dying Tablets” and “Hungry Silver”. Elements of Figurative Language                 in Akkadian Commercial Terminology» in: M. Mindlin et al. (eds), Figur-                ative Language in the Ancient Near East, London, 41-75.
+        1988         «Prices and Trade. The Old Assyrian Evidence», AoF 15, 243-263.
+        1991a        «Assyrian Commercial Activities in Old Babylonian Sippar.  Some New
+                Evidence», in: Studies Garelli, 287-304.        
+        1991b        «Private Summons and Arbitration among the Old Assyrian Traders», Bul-                letin of the Middle Eastern Culture Center in Japan 5, 437-459.        
+        1994        «Miete. C. Altassyrisch», Reallexikon der Assyriologie 8, 181-4.
+        1995        « ‘In Accordance with the Words of the Stele’. Evidence for Old Assyrian                Legislation», Chicago-Kent Law Review 70, 1717-44.
+        1996        «Old Assyrian iṣurtum, Akkadian eṣērum and Hittite GIŠ.HUR», in: Studies                Houwink ten Cate, 311-32.
+        1997        «Modern Features in Old Assyrian Trade», JESHO 40, 333-66.
+        1998        «Old Assyrian and Ancient Anatolian Evidence for the Care of the Elder-                ly», in: M. Stol – S.P. Vleming (eds.), The Care of the Elderly in the An-                cient Near East, Leiden-Boston, 119-61.
+        2001        «The Old Assyrian Period», in: R. Westbrook – R. Jasnow (eds.), Security                 for Debt in Ancient Near Eastern Law, Leiden-Boston, 93-159.
+XX                                 ABRREVIATIONS AND BIBLIOGRAPHY
+
+
+
+
+K.R. Veenhof
+        2003a        «Archives of Old Assyrian Traders from kārum Kanesh», in: Brosius 2003,                 78-123.
+        2003b        «Three Unusual Old Assyrian Contracts» in: Studies Kienast, 693-705.
+        2003c        «Old Assyrian Period», in: R. Westbrook (ed.), A History of Ancient Near                 Eastern Law, Handbook of Oriental Studies, section I, vol 72/I, Leiden, 431-                483.
+        2003d        «Trade and Politics in Ancient Aššur. Balancing of Public, Colonial and En-                trepreneurial Interests», in: C. Zaccagnini (ed.), Trade and Politics in the An-                cient World, Saggi di Storia Antica 21, Roma, 69-118.
+        2004        «Assyrian Commercial Activities in Old Babylonian Sippar. Some New Evi-                dence», in: Studies Garelli, 287-304.
+        2006        «Traveling in Ancient Anatolia: Two New Sources from Karum Kanesh»,                 in: B. Avunç (ed.), Hayat Erkanal’a Armaǧan; Kültürlerin Yansıması, Is-                tanbul, 778-783.
+        2007a        «The Old Assyrian List of Eponyms. Corrections, Additions and Chronolo-                gy», NABU 2007/49.
+        2007b        «Sisterly Advice on an Endangered Marriage in an Old Assyrian Letter» in:                M. Roth - W. Farber - M. Stolper - P. von Bechtolsheim (eds.), Studies Pres-                ented to Robert D. Biggs, June 4, 2004. From the Workshop of the Chicago                Assyrian Dictionary  2,  Chicago, 285-304.
+        2008a        «The Death and Burial of Ištar-lamassī in kārum Kanesh», in: R.J. van der                 Spek (ed.), Studies in Ancient Near Eastern World View and Society Pres-                 ented to Marten Stol on the Occasion of his 65th Birthday. Bethesda,97-119.        2008b        «Across the Euphrates», in: Dercksen (ed) 2008, 3-29.
+        2008c        «Some Displaced Tablets from Kārum Kanesh (Kültepe) (Kt 86/k 48, Kt         86/                k 204 and Kt 91/k 539)»: in: Studies Hecker, 10-27.                
+        2008d        «Communication in the Old Assyrian Trading Society», in: Memorial Gar-                elli, 199-246.
+        2011        «Houses in the Ancient City of Assur», in: Studies Meijer, 211-232.
+        2012a        «Lasts Wills and Inheritance of Old Assyrian Traders, with Four  Records                 from the Archive of Elamma», in: K. Abraham –J. Fleischman (eds.), Look-                ing at the Ancient Near East and the Bible through the Same Eyes. A Tribute                to Aaron Skaist, Bethesda, 169-202.
+        2012b        «Old Assyrian and Old Babylonian Law. Some Comparative Observations»,                ZAR 18, 141-174.
+        2014a        «Silver in Old Assyran Trade.  Its Shapes, Qualities and Purification». In                 Z. Csabai (ed.), Studies in Economic and Social History of the Ancient Near                 East. Ancient Near Eastern and Mediterranean Studies, 2. Pécs-Budapest,                  393-422.
+        2014b        «Families of Old Assyrian Traders», in: Compte Rendu de la Rencontre As-                syriologique Internationale, Paris 2009, Eisenbrauns, Winona Lake, 341-                371.
+        2014c        «Nuhšatum, the Wife of an Old Assyrian Traders (with Two New Letters)»                 to appear in a Festschrift for Cahit Günbattı (in the press).        
+        2015        «Seven Debt-notes of Anatolian from kārum Kanesh», in: Festschrift for J.                 N. Postgate, Winona Lake, Eisenbrauns.
+        Lex        «Some Contributions to Old Assyrion Lexicon», forthcoming Orientalia NS                 (Roma).
+________________
+
+
+
+
+CONCORDANCES
+
+
+Concordance of excavation numbers and numbers in this edition 
+(A/B = tablet with open case; UE = unopened case; FE = fragment of case; exp =exposed) 
+
+
+Kt 91/k        KT 8
+285 UE        49
+286 UE        157
+287 UE        104
+288 UE        168
+289        81
+290        189
+291        47
+292        172
+293        352
+294        7
+295        85
+296        93
+297        266
+298        102
+299        124
+300        51
+301        50
+302        8
+303        22
+304        55
+305        171
+306        298
+307        27
+308        254
+309        13
+310        264
+311        100
+312        131
+313        88
+314        121
+315        28
+316        9
+317        79
+318        132
+319        111
+320        323
+321        112
+322        133
+323        52
+324        128
+325        200
+326        129
+327        95
+328        126
+329        122
+330        86
+Kt 91/k        KT 8
+331        275
+332        4
+333        62
+334        109
+335        205
+336        335
+337        33
+338        134
+339        141
+340        67
+341        135
+342        68a
+343        48
+344        80
+345        152
+346        108
+347        1
+348        186
+349        30
+350        16
+351        68
+352        17
+353        10
+354        23
+355        3
+356        26
+357        19
+358        34
+359        70
+360        72
+361        5
+362        174
+363        255
+364        153
+365        170
+366        190
+367        169
+368        166
+369        188
+370        280
+371        323a
+372        269
+373        130a
+374        154
+375        253
+376        160
+Kt 91/k        KT 8
+377        176
+378        bulla        366
+379        bulla        367
+380        bulla        368
+381        357
+382        355
+383        354
+384        89
+385        206
+386 FE        207
+387 FE        359
+388 UE        159
+389 UE        297
+390 UE        61
+391 UE        155
+392 UE        15
+393 UE        54
+394 UE        187
+395 UE        173
+396 UE        120
+397 UE        65
+398 UE        57
+399 UE        289
+400 UE        63
+401 UE        106
+402 UE        287
+403 UE        312
+404 UE        265
+405        bulla        369
+406 UE        114
+407        191
+408        336
+409        14
+410        156
+411        103
+412        262
+413        183
+414        177
+415        270
+416        167
+417        125
+418        35
+419        36
+420        175
+421        164
+422        256
+Kt 91/k        KT 8
+423        180
+424        145
+425        181
+426        345
+427        91
+428        74
+429        302
+430        92
+431        311
+432        101
+433        178
+434        82
+435        56
+436        45
+437        146
+438        182
+439        339
+440        117
+441        184
+442        343
+443        53
+444        11
+445        31
+446        185
+447        123
+448        32
+449        130
+450        341
+451        127
+452        136
+453        179
+454        110
+455        195
+456        98
+457        324
+458        340
+459        97
+460        71
+461        73
+462        75
+463        59
+464        137
+465        138
+466        344
+467        272
+468FE        163
+
+
+
+
+                                                CONCORDANCES                                                                 XXII
+        
+
+
+Kt 91/k        KT 8
+469 UE        119
+470 UE        296
+471 UE        115
+472 UE        78
+473 UE        66
+474 UE        307
+475 UE        107
+476 UE        113
+477 A/B        64
+478 UE        313
+479 UE        58
+480 UE        196
+481        12
+482        2
+483        43
+484        37
+485        105
+486        44
+487        41
+488 A/B        99
+489 A/B        60
+490        258
+491        334
+492        202
+493        228
+494        203
+495        300
+496        309
+497        76 
+498        292
+499        208
+500        276
+501        252
+502               375
+503        193
+504        197
+505        192
+506        303
+507        277
+508        165
+509        285
+510        286
+511        243
+512        204
+513        295
+514        77
+515 A/B        161
+516 UE        201
+517 UE        306
+Kt 91/k        KT 8
+518 UE        209
+519 FE        360
+520        116
+521        278
+522        210
+523        199
+524        333
+525        198
+526        337
+527        90
+528        118
+529        257
+530        18
+531        96
+532        38
+533        6
+534        240
+535        299
+536        236
+537        ?
+558        310
+539        271
+540        238
+541        239
+542        241
+543        263
+544        242
+545        273
+546        244
+547        267
+548        338
+549        237
+550        268
+551        235
+552        259
+553        bulla        370
+554        UE        304
+555        KEL  B
+556        246
+557        248
+558        247
+559        251
+560 UE        249
+561 UE        250
+564 FE        361
+565 FE        362
+566 FE        363
+567 FE        364
+568        365
+Kt 92/k      KT  8
+3        147
+4        358
+5        274
+94        214
+95        223
+96        225
+97        279
+98        316
+99        143
+100        325
+101        218
+102        211
+103        149
+104        319
+105        282
+106        144
+107        150
+108        151
+109        284
+110        320
+111        148
+112        212
+113        317
+114        69
+115        288
+116        213
+117        281
+118        356
+119        346
+120        217
+121        318
+122        245
+123        321
+124        328
+125        234
+126        322
+127        329
+128        330
+129        342
+130        305
+131        327
+132        308
+133        331
+134        326
+135        332
+136        291
+137        347
+138        348
+139        215
+Kt 92/k        KT 8
+140  bulla  371
+141        bulla        372
+142                39
+143                40
+144                42
+145                20
+146                142
+147                46
+148                21
+149                162
+150                139
+151                87
+152                83
+153                29
+154                140
+155                349
+156                24
+157                350
+158                351
+159                353
+160 A/B                25
+161                84
+162 UE                158
+163 UE                233
+164 UE                232
+165 UE                231
+166 UE                222
+167 UE                261
+168 UE                315
+169 UE                230
+170                exp
+171 A/B                226
+172 UE                290
+173 A/B                227
+174                194
+175                220
+176                221
+177                314
+178                260
+179                301
+180                229
+181                216
+182                219
+183                294
+184 A/B                283
+185 A/B                293
+186                94
+187                224
+
+
+
+
+XXIII                                                    CONCORDANCES
+
+
+
+
+
+
+Concordance of KT 8 numbers with Kt /k excavations numbers
+(3-187 = Kt 92/k; 285-566 = Kt 91/k; Roman numbers refer to the chapters of AKT 8)
+
+
+KT 8         Kt/k
+1      I        347
+2        482
+3        355
+4        332
+5        361
+6        533
+7      II        294
+8        302
+9        316
+10        353
+11        444
+12        481
+13        309
+14        409
+15        392
+16        350
+17        352
+18        530
+19        357
+20        145
+21        148
+22        303
+23        354
+24        156
+25        160
+26        356
+27        307
+28        315
+29        153
+30        349
+31        445
+32        448
+33        337
+34        358
+35        418
+36        419
+37        484
+38        532
+39        142
+40        143
+41        487
+42        144
+43        483
+44        486
+45        436
+KT 8        Kt/k
+46        147
+47        291
+48        343
+49        285
+50        301
+51        300
+52        323
+53        443
+54     III        293
+55        304
+56        435
+57        398
+58        479
+59        463
+60        489
+61        390
+62        333
+63        400
+64        477
+65        397
+66        473
+67        340
+68        351
+69        114
+70        359
+71        460
+72        360
+73        461
+74        428
+75        462
+76        497
+77        514
+78        472
+79    IV        317
+80        344
+81        289
+82        434
+83        152
+84        161
+85        295
+86        330
+87        152
+88        313
+89        384
+90        527
+KT 8        Kt/k
+91        427
+92        430
+93        296
+94        186
+95        327
+96        531
+97        459
+98      V        456
+99        488
+100        311
+101        432
+102        298
+103        411
+104        287
+105        485
+106        401
+107        475
+108        346
+109        334
+110            454
+111        319
+112        321
+113        476
+114        406
+115        471
+116        520
+117        440
+118        528
+119        469
+120        396
+121   VI        314
+122        329
+123        447
+124        299
+125        417
+126        328
+127        451
+128        324
+129        326
+130        449
+130a        373
+131        312
+132        318
+133        322
+134        338
+KT 8         Kt/k
+135        341
+136        452
+137        464
+138        465
+139        150
+140        154
+141        339
+142        146
+143        99
+144        106
+145  VII        424
+146        437
+147        3
+148        111
+149        103
+150        107
+151        108
+152        345
+153        364
+154   VIII        374
+155        391
+156        410
+157        286
+158        162
+159        388
+160        376
+161        515
+162        149
+163        468
+164        421
+165     IX        508
+166        368
+167        416
+168        288
+169        367
+170        365
+171        305
+172        292
+173        395
+174        362
+175        420
+176        377
+177            414
+178        433
+179    X        453
+
+
+XXIV                                                         CONCORDANCE
+
+
+
+
+
+
+KT 8        Kt/k
+180        423
+181        425
+182        438
+183        413
+184        441
+185        446
+186        348
+187        394
+188   XI        369
+189        290
+190        366
+191        407
+192        505
+193        503
+194        174
+195        455
+196        480
+197        504
+198        525
+199        523
+200        325
+201        516
+202        492
+203        494
+204         512
+205        335
+206   XII        385
+207        386
+208        499
+209        518
+210        522
+211   XIII        102
+212        112
+213        116
+214        94
+215        139
+216        181
+217        120
+218        101
+219        182
+220        175
+221        176
+222        166
+223        95
+224        187
+225        96
+226        171
+227        173
+228        493
+
+
+
+
+
+
+KT 8        Kt/k
+229        180
+230        169
+231        165
+232        164
+233        163
+234        125
+235    XIV        551
+236        536
+237        549
+238        540
+239        541
+240        534
+241        542
+242        544
+243        511
+244        546
+245        122
+246   XV        556
+247        558
+248        557
+249        560
+250        561
+251        559
+252   XVI        501
+253        375
+254        308
+255        363
+256        422
+257        529
+258        490
+259        552
+260        178
+261        167
+262        412
+263        543
+264        310
+265        404
+266        297
+267        547
+268        550
+269        372
+270        415
+271        539
+272        467
+273        545
+274        5
+275         331
+276        500
+277        507
+
+
+
+
+
+
+KT 8        Kt/k
+278        521
+279  XVII        97
+280        370
+281        117
+282        105
+283        184
+284        109
+285        509
+286        510
+287        402
+288        115
+289  XVIII        399        
+290        172
+291        136
+292        498
+293        185
+294        183
+295        513
+296        470
+297        389
+298   XIX        306
+299        535
+300        495
+301        179
+302        429
+303        506
+304        554
+305        130
+306        517
+307        474
+308        132
+309        496
+310        538
+311        431
+312        403
+313        478
+314        177
+315        168
+316   XX        98        
+317        113
+318        121
+319        104
+320        110
+321        123
+322        126
+323  XXI        320
+323a        371
+324        457
+325        100
+
+
+
+
+
+
+KT 8        Kt/k 
+326        134
+327        131
+328        124
+329        127
+330        128
+331        133
+332        135
+333        524
+334        491
+335        336
+336        408
+337        526
+338        548
+339        439
+340        458
+341        450
+342        129
+343        442
+344        466
+345        426
+346        119
+347        137
+348        138
+349        155
+350        157
+351        158
+352        293
+353        154
+354        383
+355        382
+356        118
+357        381
+358        4
+359  XXII        387
+360        519
+361        564
+362        565
+363        566
+364        567
+365        568
+366        378
+367        379
+368        380
+369        405
+370        553
+371        140
+372        141
+
+
+
+
+        
+
+
+________________
+[1] A Geschichte des Alten Orients bis zur Zeit Alexanders des Grossen (2001), Altbabylonische Briefe in Umschrift und Übersetzung vol. 14 (Letters in the Louvre), and one in 2008 on The Old Assyrian Period in OBO 160/5 (see the bibliography).
+[2] In the style of Ch. V, “Lexical Notes”, p. 205-220 of my Altbabylonische Briefe, Heft 14 (Leiden, 2005). An alphabetical list unburdens the text edition and allows easy consultation by those interested in the lexicon, who no longer have to hunt for data in edited texts and footnotes.

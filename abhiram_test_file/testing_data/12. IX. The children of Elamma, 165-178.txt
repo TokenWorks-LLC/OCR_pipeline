@@ -1,0 +1,596 @@
+﻿IX.  THE CHILDREN OF ELAMMA (165-178)
+
+
+
+
+
+
+IX.  THE CHILDREN OF ELAMMA (165-178)
+
+
+As pointed out in the Introduction Elamma had a large number of children, in alphabetical order (we do not know their chronological order): Abu-šalim, Aššur-ṭāb (probably his eldest son), Ennam-Aššur, fIštar-lamassī, Pilah-Ištar, fŠalimma, Šu-Bēlum, fUmmī-Išhara and Uṣur-pī-Aššur. Not all of them are well attested and several figure in records that have found their place in other chapters, such as the one on Ištar-lamassī (X) and Šalimma (XII), and children also figure in the texts in the chapter on Lamassutum (VIII) and Ir’am-Aššur (XI). This chapter brings documents that have not found their place in these chapters. 
+
+
+A. Letters
+
+
+165. Kt 91/k 508 (1-361-91)
+
+
+A letter by Ummī-Išhara, who lived in Assur as ugbabtu-priestess (see *164:35), occurs frequently in the archive, often as recipient of small amounts of money sent to her from Kanesh.[1] By means of this letter to her brother Pilah-Ištar she tries to solve a conflict between them, arisen when the latter left Assur to travel to Kanesh. Damage and the wording of the letter cause some problems of understanding. The cursive writing, occasional mistakes and peculiarities (lines 4, 13, 15) are perhaps indications that Ummī-Išhara herself wrote this very personal letter.
+
+
+        a-na Pí-lá-ah-Ištar  qí-bi4-m[a]        Say to Pilah-Ištar,         
+        um-ma  Um-mì-Iš-ha-ra-ma        thus Ummī-Išhara: 
+        a-šu-mì  li-ba-kà         “As for the fact that  
+        lam!(NAM)-nu-ma  tù-ṣú-ú-ni         you left in anger (and) 
+5         ša KÙ.B. 10  GÍN i-na         that I did not even have 10 shekels 
+        qá-tí-a  lá  i-°šu¿-ú-ma lá tí-°x x*?¿        of silver available  so that you? .....
+        ú i-a!-ú-um li-bi4-i        and that my feeling too ran high and 
+         °e?¿-mu-ú-ma iš-tí-kà         I did not exchange a word 
+        lá  a-ta-wu-ú  a-hi  a-ta         with you - please, my brother,
+10        li-ba-kà  lá  tù-lá-ma-an        don’t stay angry,
+l.e.        a-lá-nu-kà °a-ha¿-am         you are the only
+rev.         ša-ni-[a-a]m  ú-lá         brother I have!
+        i-šu  i-n[a] pá-ni-tí-ma  ha-°ra-/ni-im         With the next caravan
+        2 TÚG.HI.A  SIG5-tim         I will send you two 
+15         a-na  lí(NI)-ta-áb-ší-kà         fine garments for
+        ú-šé-ba-lá-kum          your personal wear.
+        KÙ.B. 1 ma-na (eras.)        As for the 1 mina of silver,
+        ša ší-im  er-dí-im        the price of the slave, whom
+        ša a-dí-n[u  a]-lá-qé-ma         I sold, if I collect it
+20         AN.NA a-š[a-am-ma]         I [will buy] tin
+         ù-šé-ba-[lá-kum x x?]         and send it to you.
+        mì-ma li-[ba-kà lá x  x?]         Do by no means worry, 
+u.e.        [x] *°DINGIR-šu?¿ ú-na-zu-mu [x]-a-°x¿        ......  they complain ......... 
+le.e.        i  da* x šu x [x x x]         ............................                
+25         °ú¿  ni-a-am l[i-ba-am] / ha-dí        and make us too happy!”
+
+
+Notes
+5-9. Kouwenberg pointed out that the complement of “being angry” can be introduced by ša, “that, because” (cf. CCT 6, 46a:5-7); the end of l. 6 remains unclear and la tidê is impossible, also because it would have required kīma. 
+8. The damaged first sign seems to be E, yielding emmum, “hot”, here used of the angry heart.
+23-24. Too damaged to understand; the beginning of 24 looks like DUMU Da-gán-šu x, but that does not make sense.
+
+
+166. Kt 91/k 368 (1-223-91)
+
+
+A letter of Bēlānum and Lamassutum to Šamaš-bāni and Pilah-Ištar about a shipment of textiles, entrusted to Aššur-šamšī, who seems to refuse to release them, but must be forced by a letter of  the latter’s brother Ennam-Aššur, who had sealed the packets, to hand them over to Pilah-Ištar.
+ 
+        um-ma  Bé-lá-num ù  Lá-ma-sà-/tum-ma        Thus Bēlānum and Lamassutum,
+        a-na  dUTU-ba-ni ù        say to Šamaš-bāni  
+        Pì-lá-ah-Ištar  qí-bi-ma        and Pilah-Ištar:        
+        26  TÚG.HI.A  ša  Šu-Sú-in        “26 textiles belonging to Šu-Suen,
+5        DUMU  Ì-lí-a  i-na  5  na-ru-qá-/tim        son of Iliya, are packed in 5 bags
+        dar-ku  ku-nu-ku  ša  En-um-A-šur        under the seals of Ennam-Aššur, son
+        DUMU E-lá-ma a-ha-ma 1 TÚG ku-sí-tum        of Elamma. Separately 1 kusītu-garment
+        ša  Ú-ṣur-ša-A-šur  ur!(IS)-kà-num        of Uṣur-ša-Aššur that has been
+        kà-an-kà-<at>-ma : e-lá-nu-ma        sealed later? is also available.
+10        i-ba-ší  ŠU.NIGIN2 27  TÚG.HI.A <a-na>        In all 27 textiles, <to>  
+        A-šur-dUTU-ši  DUMU Na-na-kà-ší-/im        Aššur-šamšī, son of Nanakaš(š)um,
+        En-um-A-šur  DUMU  E-lá-ma        Ennam-Aššur, son of Elamma
+l.e.        ip-qí-sú-um  IGI  Ša-lim-A-šur        entrusted (them). Before Šalim-Aššur,
+rev.        DUMU  A-zi-da  IGI  A-šur-ma-lik        son of Azida, Aššur-mālik, son of
+15        DUMU En-um-A-šur IGI! Sú-in-/na-da        Ennam-Aššur, (and) Suen-nādā, son of 
+        DUMU  A-kà-zi?  ip-qí-sú-um        Akazi, he entrusted (them) to him.
+        a-wi-lúm  sà-ki-il5 2ší-ta        The man is stupid.  Pilah-Ištar
+        na-áš-pè-ra-tim  ša  En-um-/A-šur        has with him 2 missives 
+        Pì-lá-ah-Ištar  na-ší        of Ennam-Aššur.
+20        šu-ma a-na TÚG.HI.A w[a]-šu-/r[i]-im        If Aššur-šamšī  protests 
+        A-šur-dUTU-ši : mì-ma        against releasing the textiles, 
+        i-qá-bi4 : na-áš-pè-er-tí        let him hear the missive
+        En-um-A-šur  ša-áš-me-a-/šu-ma        of Ennam-Aššur and let him
+        TÚG.HI.A ku-nu-ki  na-ru-/qá-tim!(NIM)          entrust the textiles under seals
+u.e.        li-ip-qí-da-ku-nu-tí-ma        in the bags to youplur and
+26        a-na  Pí-lá-ah-Ištar        count them! out to        
+l.e.        a-hi-šu  mu-nu-a-šu-<nu>ma        his brother Pilah-Ištar, who must act
+        a-ma-lá  té-er-tí-ni  li-/pu-uš        in accordance with our instruction.
+        ih-da        Take care!”
+
+
+Notes 
+The scribe made several mistakes, most of which can easily be corrected. I take GIŠ in l. 8 as UR! (a reading Is/zg/ānum, attested as PN, is possible, but would require adding <DUMU>). Other mistakes are the omission of –at in l. 9,  of a preposition (a-na) at the end of line 10, the repetition of ipqissum in lines 13 and 16, DUMU instead of IGI in l. 15, NIM instead of TIM in l. 24, and -šu for –šu-nu in l. 27. 
+1. A Bēlānum, here in Kanesh with Lamassutum, is known from ten texts in the archive, only twice with a patronym, son of Šu-Aššur (*204:12, *280:22). It is difficult, also because we cannot be sure that all references are to the same person, to form an idea of his status and activities. In *154:16 he is witness for Lamassutum as creditor; in *280:18-21 he takes tin on behalf of Elamma’s son Pilah-Ištar and in *348 somebody states that Belānum had sent him to Assur with silver for making purchases. He could be the writer (l. 1, Be-l[á-num]), together with Hinnāya, of the letter *89 addressed to Elamma.
+2. A Šamaš-bāni occurs in some texts of the archive. *190 is a letter by Ennam-Aššur to Ir’am-Aššur (Elamma’s son-in-law) and him, and *240 is a letter that a Šamaš-bāni, together with two others, wrote to Šu-Ištar. In *236 Šu-Ištar asks him to collect a debt owed by Idnāya and to instruct Šamaš-bāni not make things easy for the debtor. When the memo *327 mentions that its anonymous writer and Šamaš-bāni both gave 2 minas of silver to ”the lady”, his association with Lamassutum suggests identification with the man of our letter. He could also be the man of whom Elamma’s letter to Lā-qēp, *20:27-29, writes: “Šamaš-bāni, son of Akitim, brought you 5 minas (of silver) under my seal”, but our letter must have been written after Elamma’s death. 
+4-5.  Cf. *193:1, where the same man entrusts silver of Ennam-Aššur to Lamassutum and Ir’am-Aššur for shipment to Assur. Note that each bag contains 5 textiles, see the note on *238:15-18.
+9.The expression elānum(ma) ibašši, “there is in addition”, is used in OA, usually with added –ma, see CAD E 85, 3, a. 
+11. The name Nan(na)g/kaš(š)um) is unique. 
+15. The scribe wrote DUMU instead of IGI, which introduces the second witness.
+17. Saklum occurs OA not only as personal name (CAD S 81, b), but also as adjetive, in AKT 3, 105:17, kīma abuni sà-ak-lu. The man called “stupid” in our text is Aššur-šamšī, but I cannot identify him and the name of his father does not occur anywhere else, as far as I know.
+Comment
+This letter was sent from Kanesh, where Lamassutum lived, to the place where the main addressee, Šamaš-bāni, stayed. It must have been delivered by Pilah-Ištar (see l. 19), who also brought the missives of his brother Ennam-Aššur along from Kanesh, as his mother there announced, perhaps including the transport contract drawn up for this lot, which then would have mentioned the witnesses (here already named in lines 13-16) present when Ennam-Aššur entrusted this lot to Aššur-šamšī. Why the “stupid” Aššur-šamšī refused to release the textiles is unknown, but the letter makes it clear that the textiles, shipped under the seals of Ennam-Aššur (l. 6), had to be handed over to the addressees in order to be “counted out” to Pilah-Ištar, who probably would have to sell them. He was ordered “to act in accordance with our instruction” (l. 28), an instruction not contained or repeated in this letter, but presumably given him when he left Kanesh.
+
+
+167. Kt 91/k 416 (1-269-91)
+
+
+A letter, its reverse rather worn, from Bēlānum to Ennam-Aššur, Iddin-Aššur and Pilah-Ištar about the sale of a donkey load of tin and some textiles, which Pilah-Ištar is brining from Hahhum.
+
+
+        um-ma Be-lá-nu-um-ma        Thus Bēlānum,
+        a-na En-um-A-šur        say to Ennam-Aššur,
+        I-dí-A-šùr ù Pì-lá-°ah-/Ištar¿        Iddin-Aššur and Pilah-Ištar:
+        qí-bi-ma 2  GÚ AN.NA        “As for the 2 talents of tin, 4 textiles
+5        4  TÚG.SIG5  3  TÚG ša qá-tim        of fine quality, 3 of current quality,
+        ù  ANŠE ṣa-lá-ma-am        and a black donkey,
+        ša Pí-lá-ah-Ištar  iš-tù        which Pilah-Ištar
+        Ha-hi-im  ù-šé-ra-da-/ni        will bring down from Hahhum -
+        šu-ma  8  GÍN.TA        if a rate of 8:1 is possible,
+10        a-na  KÙ.B. AN.NA        sell the tin for silver and
+l.e.        dí-na  ù  té-er-°tak¿-nu        let your report
+        li-li-kam        come to me.
+rev.        [š]u-ma  8 GÍN.TA        If a rate of 8 : 1
+        a-na  KÙ.B. °lá-šu¿        against silver is impossible
+15         °a-na  KÙ.B.¿ *lá t[a-d]a-/na        do not sell it for silver.
+        AN.NA  a-na   e-ba-a[r]        One must not ship
+        Ša-la-ah-šu-wa        the tin on via
+        lá  ú-šé-tù-qú-°nim¿        Šalahšuwa.
+        ki-ma  ša-lá-am  AN.NA-ki        For the safety of the tin
+20        e-ba-ar  Tí-mì-il5-ki-a-ma        one must ship the tin on
+        AN.NA a-na  Dur5-hu-mì-it        via Timilkiya 
+        lu-šé-tí-qú  šu-ma        to Durhumit.
+        [š]a Ku-bu-ur-na-at        If people from Kuburnat
+        a-ma-kam w[a-á]š-bu        are staying there
+u.e.        AN.NA li-x (x)*-ma        let the tin be unpacked?  and
+26        ri-ik-°sé¿  a-na  *x-a-[x (x)]        small packets for/as ......        
+        i-°na li-bi4¿        you must place inside
+le.e        ša-áp-tim ù maš-ke        the wool and the hides        
+        ší!(ŠA)-ta-kà-na-ma  lu-šé-tí-qú        and so ship them on.
+30        [        ]* a-na  KÙ.B. a-na        [Sell it?] for silver to [ .......].”
+        .............................
+        .............................
+            BE  x  x  x*
+
+
+Notes
+25-26. Barjamovic, who collated the tablet, in Geography 171 proposes AN.NA li-°ší-ib¿-ma and translates: ”leave the tin to them and have it placed all over the packs for [...] (tucked) inside the wool and the hides”. But the traces - ŠÍ-IB looks more like RA – do not support this reading and wašābum only occurs with animate subjects. One expects something like “let it be unpacked”, “split up” or the like, because tin was shipped in large packets, called šuqlum, while a riksum was much smaller. The absence of a preposition before riksē makes it the object of šitakkanā, but  l. 26b is unclear. 
+Comment
+The letter is interesting in showing how traders might try to maximize their profit. A donkey loaded with tin and some textiles, having crossed the Euphrates, has entered Hahhum, from where it will travel into Anatolia (the use of “to bring down”, šērudum, is remarkable for such a journey)[2] to sell the goods. The writer suggests to sell the tin locally if they can get 1 shekel of silver for 8 shekels of tin, which is a modest yield, less than the ideal of 6:1, but acceptable in the south, for it saves the trouble of the journey northwards, which implies that the writer means a sale in or around Hahhum. If they cannot get that price the merchandise has to be “shipped on” (šētuqum) and there seem to be two possibilities, which in the interpretation of Geography 191, are: via Šalahšuwa presumably on to Kanesh  (from where the letter may have been written), or via Timilkiya on to Durhumit, presumably via Kuburnat. In the latter case a more profitable solution is to let “people from Kuburnat” – probably located ca. 100 km. south(east) of Durhumit – if they are around, take the tin along, hidden in their loads of wool and hides (which they had acquired in the south). For that purpose small packets (riksū) of tin have to be made, which means that the donkey was unloaded and the large packets (šuqlum) were broken up into smaller ones. This interpretation is suggested by the letter BIN 4, 48 (see AOATT 312 no. 9), where riksu’s of 10 or 15 minas have to be made and hidden in loincloths to be smuggled into a town, exactly the same procedure as suggested in CCT 6, 22a:8-10. This interpretation suits the idea, also entertained by Barjamovic, that one will travel north via the “narrow track”, which starts north of Hurama, a way of evading taxes with amounts to smuggling.
+
+
+168. Kt 91/k 288 (1-145-91)
+
+
+The unopened envelope with a letter of Akūa, sent to Išme-Aššur, Attāya and Elamma’s son Ennam-Aššur.
+
+
+1        [a-na]  Iš-ma-A-šùr  DUMU  Hi-n[a-a]        To Išme-Aššur, son of Hinnāya,
+                seal A
+        [A]-ta-a-a  DUMU  Bu-ṣí-a        to Atāya, son of Būṣiya,
+        ù  En-nam-A-šùr  DUMU  E-lá-ma        and Ennam-Aššur, son of Elamma,
+        DUB  A-ku5-ú-a  DUMU  A-šùr-i-dí        tablet of Akūa, son of Aššur-idī.
+                seal A 
+
+
+Seal
+Seal = CS 1146 = CCT 6 no. 37, impressed as third seal on CCT 5, 16A, which according to l. 1         was sealed by A-ku5-ú-a DUMU Ba-zi-a, a filiation that also occurs in Kt m/k 145:13 (see         Appendix, text no. 7). The inscription on the seal, however, reads (1) A-šùr-x [x] (2)         DUMU A-šùr-i-d[i] and line 4 of our text also gives Aššur-idī as the name of his father.         Did Akūa use a seal formerly owned by a relative and/or does variation between Baziya         and Aššur-idī as name of Akūa’s father indicate that Baziya was a nickname?
+Notes
+1. This man occurs also on Prag I 609:8-9.
+2. This man appears as A-ta-a in Kt 91/k 205:13-14, witness to an undated slave sale.
+
+
+169. Kt 91/k 367 (1-222-91)
+
+
+Letter by Šu-Išhara to three men, two of whom most probably are sons of Elamma, while the third, Uṣur-ša-Aššur, is the main addressee. The writer had entrusted a shipment of wool belonging to “the merchant” to the latter, to convert it immediately into silver in order to prevent its seizure. He had been urged to send its yield in silver within a few days with (as must be implied) Abu-šalim, probably Elamma’s son, who occurs elsewhere as transporter (see*41:9, and see the note on *18:19-26). But seven months later the addressee still has not done so and he is now urged to do it immediately, by sending the silver with Abu-šalim and his brother.
+
+
+        um-ma  Šu-Iš-ha-ra-ma        Thus Šu-Išhara, say to
+        a-na  Pì-lá-ah-Ištar  Ú-ṣur-ša-/A-šur        Pilah-Ištar, Uṣur-ša-Aššur
+        ù  A-bu-ša-lim  qí-bi4-ma        and Abu-šalim, and in
+        a-na  Ú-ṣur-ša-A-šur  qí-bi4-ma        particular to Uṣur-ša-Aššur:
+5        4  GÚ  SÍG.HI.A  2  ANŠE  ṣa-lá-me        “4 talents of wool, 2 black donkeys
+        ù  ú-nu-sú-nu  ša  DAM.GÀR        and their harness, belonging to the
+        ša  i-na  IGI  ší-be-e        merchant,  which I entrusted to you
+        áp-qí-da-ku-ni        in the presence of witnesses,
+9        um-ma  a-na-ku-ma        whereby I said:
+l.e.        lu-qú-tum  ša  DAM.GÀR        ‘The merchandise belongs to the
+rev.        lá  i-ṣa-ba-at        merchant, it shall not be seized!
+        dUTU  e-ru-bu-ni        Convert it the very day 
+        lu-qú-tám  a-na  KÙ.B.        it arrives into silver        
+        ta-er-ma  A-bu-ša-lim        and let Abu-šalim not
+15        5  u4-me-e  lá  tù-sà-as-ha-/ar        stay around for even 5 days!’
+        a-dí?-ma  5  u4-me-e        While you should not let him
+        lá  tù-sà-as-hu-ru-šu-/ni        stay around for 5 days
+        7  ITU.KAM  tù-uš-té-/ší-ib-šu?        you made him stay 7 months!
+        šu-ma  a-hi : a-ta        Please, my brother,
+20        dUTU  ṭup-pá-am  ta-ša-me-ú        the very day you hear this tablet,
+u.e.        lu-qú-tám : a-na  Pì-lá-°ah¿-Ištar        you must entrust the merchandise
+        ù  A-bu-ša-lim        to Pilah-Ištar and
+        pì-qí-id-ma        Abu-šalim so that
+l.e.        lu-ub-lu-nim  ù        they bring it here. Moreover, why are
+25        mì-šu  ša  tù-ma-ší-hi-<ni>        you treating me with contempt?
+                šu-ma  a-bi-/ma        If [you] are my father ......”        
+
+
+Notes
+2.  Pilah-Ištar and Abu-šalim are mentioned because of lines 21-24.
+9-11. We can only guess why merchandise might be “seized” (either by a creditor or the Assyrian authorities.) It might have to do with the death of Elamma’s son Aššur-ṭāb (which is the background of the following three texts), who in that case would be meant by “the tamkārum, “the real owner” (l. 10). His death would have caused problems in completing transactions and realizing transfers. This might also explain why his brothers were involved to ship the money and perhaps the role of Uṣur-ša-Aššur, who had to testify in texts *171-172.  But since this is not certain, I have not included this letter under B. 
+
+
+B. The death of  Elamma’s son Aššur-ṭāb
+
+
+The following three texts deal with the death of Elamma’s son Aššur-ṭab (also clear from *174:27-28, where his son Aššur-imittī figures alongside Elamma’s widow and his other sons in a legal confrontation). The texts document how his nephew Aššur-ṭāb dealt with the assets he had left behind and how the dead man’s representatives, two brothers and his brother-in-law, monitor what happened. According to *171//172 the latter had summoned him and asked before witnesses what he had done and would do and in consequence of an appeal by them the Burušhattum colony had made these witnesses testify. This indicates that the affair had been brought before the colony, but nothing is known of its outcome. 
+170. Kt 91/k 365 (1-222-91)
+
+
+A letter in which Aššur-ṭāb, son of Ali-ahum, reacts to the death of his nephew and namesake and urges family members of the latter to clear all merchandise (of the deceased) and to sell any copper still in store and to send him its yield in silver. 
+
+
+        a-na  Lu-[l]u-ú        Say to Lullu,                
+        En-um-A-šur  ù  A-bu-/ša-lim        Ennam-Aššur and 
+        qí-bi-ma        Abu-šalim
+        um-ma  A-šur-DÙG-ma        thus Aššur-ṭāb:
+5        a-ša-me-ma A-šur-DÙG  lá  li-bi4        “I hear that Aššur-ṭāb has
+        i-lí-ma  me-et  a-ba-ú-a        unfortunately died. Please
+        be-lu-ú-a  a-tù-nu        my fathers and lords,
+        i-na  dUTUši        the very day you
+9        ṭup-pì  ta-ša-me-a-ni        hear my letter you
+l.e.        lu-qú-tám        must clear both the
+rev.        lu  pá-ni-tám        earlier and the later
+        lu  ur-ki-tám        merchandise and
+        za-ki-a-ma  ku-un-kà-/ma        put it under seal and
+        iš-tí  pá-nim-ma        send Abu-šalim here with
+15        A-bu-ša-lim  ṭur4-da-nim        the first opportunity.
+        šu-ma URUDU  mì-ma        If any copper is still
+        a-hu-ur  ba-tí-iq        unsold, sell it at any
+        ù  wa-tù-ur        price and ship
+        dí-na-ma ab-kà-nim        it(s yield) here.
+u.e.        mì-ma  KÙ.B. 1 GÍN        Not a single shekel of
+21        a-ma-k[am]        silver must be retained
+l.e.        lá  i-kà-lá        there!”
+
+
+
+
+171. Kt 91/k 305 (1-162-91)
+172. Kt 91/k 292 (1-149-91)
+
+
+Two tablets containing a deposition by two men who had to testify before the Burušhattum colony on what was declared during a encounter between three persons representing (the recently died) Aššur-ṭāb, son of Elamma, and the latter’s nephew, Aššur-ṭāb, son of Ali-ahum. I present the completely preserved *171 and mention the differences with *172 (the bottom of whose obverse is very damaged) for its first part and present its lines 16-23 in full.
+
+
+171
+        Lu-lu  En-nam-A-šur  ù        Lullu, Ennam-Aššur and
+        A-bu-um-ša-lim  ša  ki-ma        Abu-šalim, representing 
+        A-šùr-DÙG  DUMU  E-lá-ma        Aššur-ṭāb, the son of Elamma,
+        a-na  A-šur-DÙG  DUMU  A-lá-hi-im        seized us against
+5        iṣ-bu-tù-ni-a-tí-ma        Aššur-ṭāb, son of Ali-ahum and
+        um-ma  šu-nu-ma  ší-im        they said: “As for the price of 
+        21  GÚ  9  ma-na  URUDU  ma-sí-/im        21 talents 9 minas of purified copper
+        ša  A-šur-DÙG  DUMU  E-lá-ma        belonging to Aššur-ṭāb, son of Elamma,
+        ša  i-na  É-tí-kà        which had been deposited
+10        i-ni-id-ú  a-na  ší-mì-/im        in your house, did you sell it?”
+        ta-dí-šu  um-ma  A-šur-DÙG-ma        Aššur-ṭāb answered:
+        a-dí-šu-ma  17  5/6        “ I sold it and its price,
+        ma-na  2  GÍN        17 minas and 53
+l.e.        KÙ.B.  ší-im-šu        shekels of silver,
+rev.        na-áš-a-ku  eq-lam        I have with me, it will go
+16        a-šu-mì  A-šur-DÙG DUMU  E-lá-/ma        overland in the name of 
+        KÙ.B.  e-tí-iq        Aššur-ṭāb, son of Elamma”.
+        a-na  a-wa-tim  a-ni-a-/tim        For these words the
+        kà-ru-um  Bu-ru-uš-ha-tum        Burušhattum colony
+20        i-dí-ni-a-tí-ma        made us available and we gave
+        ší-bu-tí-ni  IGI  GÍR  ša  A-/šur        our testimony before Aššur’s dagger.
+        ni-dí-in  IGI  I-ku-pì-a        Witnessed by Ikuppiya and
+        IGI  Ú-ṣú-ur-ša-A-šur        by Uṣur-ša-Aššur.
+
+
+172
+The differences in lines 1-15 (// 1-17 in *171) are in the distribution of the words over the lines and that l. 8 writes i-ni-du, with contraction (// i-ni-id-ú in l. 10). Lines 16-23 read:
+
+
+        IGI  Ú-ṣú-ur-ša-A-šur        In the presence of  Uṣur-ša-Aššur
+        IGI  I-ku-pí-a : a-na        (and) of Ikūppiya. For
+        ší-bu-tim  a-ni-a-tim        this testimony
+        kà-ru-um  Bu-ur-uš-ha-/tum        the Burušhattum colony
+20        i-dí-in-ni-a-tí-ma        made us available and
+        ší-bu-tí-ni        we gave our testimony
+        IGI  GÍR  ša A-šur        before Aššur’s dagger.
+        ni-dí-in
+
+
+The scribe of this copy changed the order of the witnesses and wrote them before the “testimonia formula” of lines 17-20, wrote by mistake šībūtim instead of awātim (required by anniātim) and spelled the verbal form in l. 20 with a double n, helpful (but very unusual) to prove the verb is indeed tadānum and not diānum. These deviations suggest that *172 may have been a draft for *171, but since both are without sealed envelope both may have been drafts.
+Notes
+1. Lullu was the Anatolian second husband of Ištar-lamassī, a daughter of Elamma (see Ch. X) and Ennam-Aššur and Abu-šalim were brothers of the deceased Aššur-ṭāb.
+7-14. The price of copper was ca. 72 shekels of copper for 1 shekel of silver.
+Comment on *170-172
+Much remains unclear, notably what authorized Aššur-ṭāb to undertake his actions, while the dead man’s representatives (including two of his brothers) were still around. Perhaps there was a formal partnership between the two namesakes. The records *171//172 show that the case was handled by the Burušhattum colony, where the testimony was given there (in the presence of Aššur-ṭāb?), but this does not necessarily mean that the confrontation between the parties had taken place there. That might have been in Kanesh, where Lullu lived and where Aššur-ṭāb’s letter *170 was probably sent, to end up in the family archive in Elamma’s house. Aššur-ṭāb in *171:15-17 states that “he carried” the dead man’s silver and that it would “go overland”, probably meaning that he would bring it, possibly to Kanesh, perhaps even to Assur, if the liquidation of Aššur-ṭāb’s business was to take place there. It is possible that *355:9’-13’, “195 minas of copper for Lullu”, at the end of a list of items of which it is said “all this Aššur-šamšī paid (or: promised, ēpul) for the debt of Aššur-ṭāb”, also refers to arrangements after the death of Aššur-ṭāb. Anyhow, as more often, lack of knowledge of the background and of the solution of the affair, deprives us of a real understanding.  
+
+
+C. Various Records
+
+
+173. Kt 91/k 395 (1-249-91)
+
+
+An  unopened case containing the text of a verdict, dated to the year REL 114,  rendered by two arbitrators to solve a conflict between Amur-Ištar and Ennam-Aššur. It deals with the possible existence of an unpaid debt in the form of a “working capital” (be’ūlātum), owed by Aššur-imittī, son of Hali-abum, the father of the former, to Elamma, the father of the latter. The history of the contractual relationship between Elamma and Aššur-imittī was complicated by the fact that an original contract for 33½ shekels of silver, recorded in the memorandum *70:3-4, was superseded by a new contract, which raised the amount to 63½ shekels, preserved as *67, which at the end states that the tablet with the old contract, which had not been cancelled or returned, was invalid. See the comments on *67.  
+
+
+                seal A
+1        KIŠIB A-lu-lá-a DUMU A-li-a        Seal of Alalāya, son of Aliya,
+        KIŠIB A-šur-pì-lá-ah DUMU Šu-A-nim        seal of Aššur-pilah, son of Šu-Anum.
+        A-mur-Ištar  ú  En-um-A-šur        Amur-Ištar and Ennam-Aššur
+        iṣ-bu-tù-ni-a-tí-ma        seized us and we passed
+5        dí-šu-nu  ni-dí-ma  i-ta-ma        for them the following verdict:
+        A-mur-Ištar  i-na  šu-ga-ri-/e        Amur-Ištar will swear by the
+        ša  A-šur  ṭup-pá-am        šugarria’u-emblem of Aššur that 
+        En-um-A-šur  ša  be-ú-lá-at        Ennam-Aššur did not show him
+        a-bi4-šu  IGI  Be-lá-nim        the contract of the working capital
+l.e.                seal B                                        of his father
+10        ú  Ma-ṣí-ì-lí  DUMU  Bu-zu-/zi-im        in the presence of Bēlānum and Maṣi-ilī,
+rev.        lá  ú-kà-li-mu-[m]a        son of Buzuzum, and then,
+                seal B
+        i-ta-ma-m[a ú E]n-um-A-šur        when he swears, Ennam-Aššur
+        ṭup-pá-am ša  k[u-nu-ki]-šu En-um-        will give Amur-Ištar 
+        a-na  A-mur-Ištar  i-[d]á-an   [ A-šur        a tablet with his seal stating that
+15        ša  ki-ma  a-na  be-ú-lá-at        the daughter of Elamma and
+        A-šur-i-mì-tí  me-er-at  E-lá-ma        the sons of Elamma
+                seal B
+        ú  me-er-ú  E-lá-ma  a-na        will not raise claims
+        A-mur-Ištar  lá  i-tù-ru-ni        against Amur-Ištar.
+u.e.                seal A
+        ITU.1.KAM  be-el-té-é-kál-lim        Month I,
+20        li-mu-um  ša  qá-té        eponymy of the successor of
+        En-na-ma-nim        Ennamānum.
+le.e                seal A
+        a-wi-lu  a-ni-ú-tum        The above mentioned men
+               da-a-a-nu        were judges.
+r.e.                seal B
+
+
+Seals
+seal A = CS 1169
+seal B = CS 1170
+Notes
+6. The oath is sworn by the two or double šugarriā’u-emblems of the god Aššur, which occurs alongside his dagger (GÍR/patrum). It features here and elsewhere in the dual, but the singular is also attested in the oath ritual (see *243:11), but also occurs also as a household utensil, e.g. in *179:26 (part of a woman’s inheritance, alongside a mirror). Its meaning is unknown; see for its spellings Grammar § 3.72 and now also OALP footnote 670.  
+7-11.The content of the oath, introduced by –ma after “he swore”, is a statement in the subjunctive, la ukallimu, without introducing conjunction. The key word “he will swear” is resumed in line 12, now as an indicative with conditional force, to state what are its consequences, expressed by a verbal form in the present future (iddan). A similar redaction of the content of a verdict about the swearing of an oath, with a resumed itamma, is found in POAT 1A:5-19 and Kt c/k 51 (AMMY 1990, 51):3-10. Note also Prag I 681:28-28, where this is expressed by itammama ištu ittamû, “he will swear and after he has sworn ...”. 
+9. According to *67 Elamma had supplied a working capital to Aššur-imittī, who was Amur-Ištar’s father, as shown by l. 16.
+10. This man is also attested in *180:18f.
+12. We may restore i-ta-ma-m[a ù], since there are cases of a verbal form + ma + ù to emphasize the sequence of events, “and then”, but the second -ma could also be an erasure.
+16. Note that Ennam-Aššur’s sister, the ugbabtu-priestess Ummī-Išhara, is mentioned before his brothers.
+Comment
+The issue of the conflict resolved in this record was a be’ūlātu-loan given by Elamma to Aššur-imittī, recorded in text *67, dated by a double week eponymy and thus earlier than REL 97. By it Aššur-imittī owed a “working capital” of no less than 63 ½ shekels of silver, probably an old working-capital of 30 shekels (recorded in the memorandum *70:3-4) to which a new one for the same amount and some interest were added. The fact stated in the final lines of *67, that “the tablet in the City concerning his working capital (i.e. the original one excerpted in *70:3-4) is invalid”, probably is at the root of the problem. The two parties in *173 are the heirs of Elamma, represented by his son Ennām-Aššur, and Amur-Ištar, who was probably the son of Aššur-imittī, from whom Elamma’s heirs claim back the “working capital” given to his father. The heirs of Elamma apparently had tried earlier, after their father’s death, to claim payment, perhaps on the basis of the mention of the debt in memorandum. But when Amur-Ištar, in the presence of two witnesses, he asked them to be shown the valid be’ūlātu-contract as proof, Ennam-Aššur had been unable to do so. But he seems not to have given up his claim and this must have le,d, some years later (our verdict is dated to eponymy year REL 114) to the joint initiative of both men to engage arbitrators to solve their conflict. They decide that if Amur-Ištar confirms under oath the fact that his opponent was unable to show him the contract, the heirs of Elamma must drop their claim. 
+
+
+174. Kt 91/k 362 (1-219-91)
+
+
+A record about 8 minas of silver given as trust (qīptum) by Elalī, son of Pilah-Ištar, to Ennam-Aššur, son of Šu-Bēlum, but booked in the relevant contract as due to tamkārum. Part of it was collected in Elamma’s name by Ēnah-ilī, who gave it (presumably after Elamma’s death) to his wife, in month IV of eponymy year REL 106. Elamma’s widow and sons will protect Ēnah-ilī against possible claims by Ennam-Aššur and the investors and sons of (the now dead?) Elalī. 
+
+
+        i-na  8  ma-na  KÙ.B.        Of the 8 minas of refined silver
+        ṣa-ru-pá-am  ša  E-lá-lí        that Elalī, son of 
+        DUMU  Ištar-pì-lá-ah  i-na        Ištar-pilah, in Hahhum
+        Ha-hi-im  En-um-Aššur        had given as trust to Ennam-Aššur,
+5        i-qí-pu-ma i-na  ṭup-pì-šu        and (for which) in his tablet
+        DAM.GÀR lá-áp-tù        was written “(belongs to) the tamkārum”,
+        A-šur-lá-ma-sí  A-šùr-SIG5        (and) on which tablet Aššur-lamassī,
+        ù  A-šur-be-el-a-wa-tim        Aššur-damiq and Aššur-bēl-awātim
+        i-na ṭup-pì-šu na-lu-ni        are present (as witnesses) -
+10        i-na  KÙ.B. a-nim        2 minas 15 shekels 
+        2  ma-na  15  GÍN  KÙ.B.        of that silver Ēnah-ilī 
+        ki-ma  E-lá-ma        has collected in the  
+        I-na-ah-DINGIR il5-qé-(erased ú)-ma        name of Elamma and
+l.e.        KÙ.B. a-na  Lá-ma-sà-tim        given to Lamassutum.
+rev.        i-dí-in  ITU.KAM        Month IV,
+16        ma-hu-ur-DINGIR        eponymy of
+        li-mu-um  A-šur-i-/mì-tí        Aššur-imittī.
+        šu-ma  a-na  2  ma-na  15  GÍN        If for these 2 minas 15 shekels
+        KÙ.B. ù  ṣí-ba-tí-šu        of silver and the interest on it
+20        En-um-A-šur  DUMU  Šu-Be-lim        Ennam-Aššur, son of Šu-Bēlum,
+        um-mì-a-nu  Ištar-pì-lá-ah        the investors of Ištar-pilah
+        ù  me-er-ú  Ištar-pì-lá-ah        or the sons of Ištar-pilah,
+        ma-ma-an  a-na  E-na-ah-DINGIR        raise a claim against
+        i-tù-a-ar  Lá-ma-sà-tum        Ēnah-ilī, Lamassutum, Elamma’s
+25        DAM  E-lá-ma  En-um-Aššur        wife, Ennam-Aššur (and) 
+        Pì-lá-ah-Ištar  me-er-ú        Pilah-Ištar, Elamma’s sons,
+        E-lá-ma  A-šur-i-mì-tí        (and) Aššur-imittī, 
+        DUMU  A-šur-DÙG  ú-bu-bu-šu        son of Aššur-ṭāb, will clear him.
+
+
+Notes
+4. Ennam-Aššur, the trustee, according to l. 20 is the son of Šu-Bēlum, and in Prag I 609 (quoted in the comment below) he is designated by his nickname sakkukum, «Ennam-Aššur, the deaf». The same nickname in LB 1209:11 is given to one Aššur-rē'ī.
+9.  See for nālū, “lying on”, used of witnesses whose seal has been impressed on the envelope of a tablet, the comment on AKT 5, 38:4.
+13. The transcription of the name is normalized as Ēnah-ilī, as indeed written in l. 23.
+19. The plural ṣibātum may indicate that the debt was an old one, to which compound interest may have been added.
+27f. A grandson of Elamma, who must have taken the place of his dead father Aššur-ṭāb.
+Comment
+This contract can be linked with Prag I 609, which explains what had happened with Elalī’s trust: “As for the tablet about 8 minas of silver plus the interest on it, which amount Elalī, son of Ištar-pilah, had given as trust (iqīpu) to Ennam-Ašsur, the deaf (sakkukum), in Hahhum (5) and for which he had drawn up in Hahhum his certified record, which Išme-Aššur, son of Hinnāya has in possession – (10) I, Ēnah-ilī, Aššur-taklāku and Puzur-Ištar, son of Imdī-ilum, each took 2 minas of silver and supplied (15) a sealed quittance, which Iliya, son of Puzur-Aššur, has in his possession”. This shows that the affair was even more complicated. The original debt-note was in the possession of a son of Hinnāya - why is not clear, perhaps simply as safe deposit, because he lived in Hahhum? - and four different traders, among them our Ēnah-ilī, subsequently had each acquired 2 minas or one fourth of the original trust, a fact recorded in a tablet (singular!) they had sealed (lines 14-15, apparently one tablet for all four jointly), but their relation to the original trustee remains unclear. Who the speaker (“I”) of Prag I 609 was is not clear, because we do not know from which archive this memo originates. It would be nice if this was Elamma, because it explain why Ēnah-ili, a trusted agent of him, had collected the silver «in his name», after Elamma's death, to give it to his widow, but this would imply that the division of the trust into four, recorded in Prag I 609, had not yet been realized when Elamma died. An alternative is that Ēnah-ilī in Prag I 609, in Hahhum, already acted as agent of Elamma, so that his action described in our record amounts to acquiring Elamma's share, apparently in the meantime augmented by 15 shekels as interest. Many things remain unclear, because it is not stated what the purpose of the original trust given to Ennam-Aššur was, although it seems likely that the silver was the value or price of merchandise arriving from Assur in Hahhum, which had to be shipped on and sold. We also do not know why this trust was subsequently divided into four; could Puzur-Aššur could not handle it or was he in financial problems? The division reminds me somewhat of the transaction described in text 2 of the Appendix, where 4 talents of tin of Hinnāya are divided in his house into three, apparently to traders who intend to sell it with profit. It is anyhow very likely that Elalī in the meantime had died, because lines 21-22 consider the possibility that investors (was the money of the trust perhaps part of his joint-stock capital?) and the (other) sons of Ištar-pilah might raise claims. The purpose of our record is to ensure that the heirs of Elamma, who had received his share, protect Ēnah-ilī against their claims and against those of the original trustee, Puzur-Aššur. The existence of both our record and Prag I 609 show how complicated financial transactions carried out in subsequent stages cold be and how we may be puzzled or misled if we happen to have only one record from what must have been a larger file.
+
+
+175. Kt 91/k 420 (1-278-91)
+
+
+The text contains an agreement between four children and heirs of Elamma, reached during month X of REL 115, whereby two of them relinquish their claim on a sum of silver in exchange for a plot of land in Assur. It was published, with a long commentary, in Veenhof 2012a, 188-196, to which the reader is referred. In the notes and comment here I mention the main conclusions and the essence of my interpretation. 
+        
+1        iš-tí  Um-mì-Iš-ha-ra        Šu-Bēlum and Ennam-Aššur
+        ù  En-um-A-šùr  Pí-lá-ah-Ištar        reached the following agreement        
+        ù  Šu-Be-lúm  i-mì-ig-ru-ma        with Ummī-Išhara and Šu-Bēlum:
+        KÙ.B  6  2/3  ma-na  ša  É        6 2/3 minas of silver of the house of
+5        Hi-na-a  4  ma-na  KÙ.B        Hinnāya, 4 minas of silver of
+        ša  Kur-ub-Ištar DUMU A-lá-hi-im        Kurub-Ištar, son of Ali-ahum
+        ù  i-na  ku-ur-sí-nim        and from the ‘pot’ of
+        ša  Ištar-pì-lá-ah  ⅓ ma-na KÙ.B.        Ištar-pilah 1⅓ mina of silver have been
+        na-dí-šu-nu-tí  KÙ.B. a-nàm        deposited for them. As for this silver,
+10        Pì-lá-ah-Ištar ù Šu-Be-lúm  a-na        Pilah-Ištar and Šu-Bēlum have dropped
+        Um-mì-Iš-ha-ra  ù  En-um-A-šur        the (right on) their share  in favor of Ummī-
+        qá-sú-nu : ik-bu-sú-ma  ša-lá-áš        Išhara and Ennam-Aššur and gave them a
+        šu-ba-tim : qá-qí-ri  ša  5-tum        house-plot of 3 šubat, which the committee of 
+        i-dí-nu-šu-nu-tí-ni : iš-tí  um-mì-a-an        five had given them. When Ummī-Išhara and
+15        E-lá-ma : a-bi-šu-nu Um-mì-Iš-ha-ra        Ennam-Aššur effectuate a clearance with
+        ù  En-um-A-šùr  ú-bu-bu        the investors of their father Elamma 
+        qá-qí-ri-šu-nu :  i-lá-qé-ú        they will acquire their plot.
+l.e.        ITU.KAM  té-i-na-ti[m  l]i-mu-um        Month X, eponymy of 
+        En-na-Sú-en6  DUMU  Šu-A-šùr        Ennam-Suen, son of Šu-Ištar.
+rev.         a-na  3  ša-na-tim        They will effectuate the clearance of their 
+21        qá-qí-ri-šu-nu  ú-bu-bu-šu-nu-tí        plot for them within three years.
+        šu-ma : lá  ú-bi-bu-ú        If they fail to do so,
+        3  ma-na  KÙ.B.  i-na        they will acquire 3 minas 
+        ša  Kur-ub-Ištar  i-lá-qé-ú-/ma        of the silver of Kurub-Ištar and so satisfy  
+25        ší-im  : qá-qí-ri-šu-nu        themselves with the price of
+        uš-ta-bu-ú-ma  a-na  qá-qí-ri-/šu-nu        their plot and they will not vindicate 
+        ù-lá  i-tù-ru : i-na        their plot. On 3 minas of the 
+        3  ma-na  KÙ.B.  ša  Kur-ub-Ištar        silver of Kurub-Ištar 
+        qá-tí  Pì-lá-ah-Ištar  ù        a claim of Pilah-Ištar and
+30        Šu-Be-lim : ša-ak-na-at        Šu-Bēlum now rests. If the
+        šu-ma : té-bi-ib-tum  i-tab-ší        clearance has been effectuated they will
+        qá-dí : a-hi-šu-nu-ma : e-bi-bu        be cleared together with their brothers.
+        ki-ma  Um-mì-Iš-ha-ra  Ir-ma-/A-šur        Irma-Aššur represented Ummī-Išhara.
+        i-zi-iz : šu-ma  a-na        If any of the (other) sons of Elamma        
+35        3  ma-na  KÙ.B.  ša  Kur-ub-Ištar        vindicates the 3 minas 
+        ša  qá-tí  Pì-lá-ah-Ištar  ù        of silver of Kurub-Ištar,
+        Šu-Be-lim : ša-ak-na-at-ni        on which a claim of 
+        ma-ma-an  i-na  me-er-e        of Pilah-Ištar and 
+u.e.        E-lá-ma : i-tù-ar        Šu-Bēlum rests,        
+40        En-um-A-šùr  ù  Um-mì-Iš-ha-/ra        Ennam-Aššur and Ummī-Išhara
+        ù-bu-bu-šu-nu  IGI I-dí-dIŠKUR        will clear them. In the presence of 
+le.e.        DUMU Šu-Ištar  IGI En-um-A-šùr        Iddin-Adad, son of Šu-Ištar,  of Ennam-
+                                 [ DUMU Ṣí-li-Ištar                                [ Aššur, son of Ṣilli-Ištar,
+        IGI En-na-nim  DUMU  A-bu-sà         of Ennānum, son of Abussa, of Šu-Anum,
+                                    [ IGI  Šu-A-nim                                               [ son of Lā-qēp.
+        DUMU Lá-qé-ep  a-na  ma-lá         In accordance with the testamentary dis- 
+                                     [ ší-ma-tí-šu-nu                      [ positions applying to them.
+
+
+Notes
+1-3. See for the children of Elamma the Introduction, § 2, and  Kt f/k 11, quoted above in note 65, a letter to Šu-Bēlum and Ummī-Išhara in Assur, about possessions of “our father”, which he had left in the care of Ummī-Išhara.
+4-8. The persons mentioned here occur more often in texts from Elamma’s archive, as business partners, transporters and debtors. See for Kurub-Ištar Introduction p. XXXVIIf.; Ištar-pilah was a transporter working for Hinnaya (*19:7-8 and 40-41). 
+7. In Veenhof 2012a,190-193, I argued (see the quote in the comment on *2:29-30) that kursīnum is not, as CAD G, 142f. suggested, the OA form of  kušgusānum, “leather bag”, but can be identified, as I.J. Gelb first proposed, with Ugaritic krsn, a small jar. Its use in our text is comparable with that in ICK 2, 158:18; “testament Thierry”, RA 60 [1966], 132-4:18f.; Athenaeum 47 (1960):4-7// KTH 9:4ff., 16f. and *2:29, where kursīnum (singular and plural) occurs in enumerations of a person’s assets, named after the jar or pot, in which they had been placed. The plural shows that a house could have several of them, used for particular goods or associated with particular persons, whose names are occasionally mentioned (cf. lines 7-8 in our text). As such it came to refer to “small funds”, counting as assets, just like  naruqqum, originally “(leather) bag” (alongside which it occurs in ICK 2, 157:18), became the technical term for the joint-stock capital, brought together by investors (too big for a small “purse”, kīsum), also as a legal and administrative entity.[3]. 
+9. The verb is nadā’um, “to deposit”, since the stative of tadānum is tadin.
+13. The group of five” (hamištum), according to OALP 52, note 243, “typically appear in matters as family law” (references also to BIN 4, 106 and Kt s/k 10); see also OALP 276-7 and 302 with note 963. 
+33-34. Ummī-Išhara was represented by her brother-in-law Ir’am-Aššur, because the agreement was concluded in Kanesh; see for such representations, OBO 160/5, 109f., also on the use or mention of seals in such cases.
+Comment        
+This record deals with the division of some of Elamma’s assets between three of his sons and his daughter, Ummī-Išhara, who lived as ugbabtu-priestess in Assur, during the year REL 115, long after he had died and also after the death of their mother. The other two sons – Aššur-ṭāb had died in the meantime - Abu-šalim and Uṣur-pī-Aššur were probably not involved, because this is an exchange of parts of their shares between four heirs only. But they are meant by “the (other) sons of Elamma” who might raise a claim (lines 38-39). Ummī-Išhara and Ennam-Aššur (who lived in Kanesh, but may have liked to have a pied-à-terre in Assur) wish to acquire a house-plot in Assur, measuring ca. 100 m2, presumably still undivided and owned by the four of them, and in exchange for it they waive the right to their share in debt-claims probably inherited from their father, totaling 12 minas of silver (lines 4-9). Their two brothers, Pilah-Ištar and Šu-Bēlum, are ready to “drop the (right to) their part” and give them the plot, but only after that property has been cleared, because they wish to be protected against future claims of the investors. The clearance (tēbibtum) according to l. 21 must be effectuated “for them”, for these two brothers, within three years. If they fail to do so, Ummī-Išhara and her brother will get 3 minas of silver instead and give up any claim on the plot.        
+        Lines 13-14 mention that the house plot in question “had been given to them (presumably the four children) by a committee of five” (hamištum). It probably was involved because the implementation of Elamma’s last will created problems, since the house-plot was encumbered or its ownership disputed. Elamma’s investors could have established their claim at the time of Elamma’s death, in order to secure the return of their investments, a concern also clear from the letter CCT 5, 3a (see Appendix, text 1), where two groups of people state that they are acting in the name of Elamma’s investors. Why and how such a ”clearance” (tēbibtum; first occurrence in OA) could prove impossible (line 22) remains unclear. That the last line (an appendix, added after the names of the witnesses) states that the transaction was “in accordance with what had been assigned to them in the testament” (of their father), suggests that what is at stake here is a reshuffle or exchange based on what had been assigned to each of the heirs in the testament, a feature also known from contemporary Babylonia. This could also have been the reason for the involvement of the “committee of five”, for we have more evidence for its role in arriving at a fair division of an inheritance. In EL 244 two sons of Pūšu-kēn will go to Assur in order to take cognizance of the decision taken for them by a committee of five there, “behind the temple of the god Aššur”, because “the decisions for/about us” are in the city” (lines 9-11). The two brothers must have disagreed on the division of their father’s inheritance and what the committee does is called šīmtam / šīmātim šiāmum, which is the terminology of making a testament, not that of a normal legal decision or verdict. The decisions (šīmātum) taken by the committee are comparable to what a man does who makes a testament and they may have been needed because there was no testament of Pūšu-kēn.[4] Something similar may have caused the intervention of the hamištum in our text.
+        U. and E. are promised 3 minas of silver (to be taken from the 4 minas of Kurub-Ištar, mentioned in lines 5f.), if they fail to acquire the house plot, to “satisfy themselves with the price of the plot” (lines 22-26). This would be the value of half of the plot, on the assumption that Ummī-Išhara and her brother, as heirs, already were the owner of half it. Until the matter is settled P. and Š. retain their claim on these 3 minas, which means that its ownership by U. and I. for the time being was conditional. A problem is why lines 4-8 list claims to a total of 12 minas of silver (half of which would have been the share of Ummī-Išhara and Ennam-Aššur), while the compensation for the house-plot to be acquired by the two other brothers is only 3 minas,  to be taken only from the 4 minas owed by Kurub-Ištar,
+        This record also acquaints us with the rather surprising fact that many years after their father’s death four heirs still jointly own undivided assets, not only a house plot in Assur, but also various debt-claims, which have not yet been collected, presumably because they were not simple debts, but investments. It is possible that the death of their mother, several years after their father, is part of the explanation. But in a family of traders the division of an inheritance, consisting of various assets, investments, debt-claims and houses, could be complicated and take time. This is also clear from the following document that deals with a small amount of silver.
+
+
+C. Uṣur-pī-Aššur and his inheritance (176-178)
+
+
+The following three texts, a verdict by the Kanesh colony, a memo in the first person singular, and a witnessed agreement about an amount of silver, are related in dealing with two issues in which children of Elamma and in particular his son Uṣur-pī-Aššur were involved, to all appearances as heirs of what was left behind (warkutum) by his mother Lamassutum.
+
+
+176. Kt 91/k 377 (1-234-91)
+
+
+        [15 GÍN KÙ.B.]        [15 shekels of silver]
+        En-[nam]-A-šùr        Ennam-Aššur
+        a-na  Ú-ṣú-ur-<pì>-A-šur        gave to 
+        i-dí-in  šu-ma        Uṣur-<pī>-Aššur.
+5        i-na  A-limki        If in the City
+        ṭup-pá-am ša  ku-nu-ki-šu        a tablet with the
+        ša  Ú-ṣú-ur-pì-A-šur        seal of Uṣur-pī-Aššur
+        <i-na  A-limki>        <in the City>
+        Um-mì-Iš-ha-ra        their sister Ummī-Išhara
+10        a-ha-sú-nu  gu5-ba-áb-tum        <has/shows>,  to the effect
+l.e.        ša  a-na  wa-ar-kà-<at>        that he will not claim
+        Lá-ma-sà-tim        what her mother        
+        um-mì-ša        Lamassutum had inherited
+        ú  wa-ar-ki-tí-ša        and what had been
+15        lá  i-tù-ru        left behind by her,
+        15  GÍN  KÙ.B.        then Uṣur-pī-Aššur
+        Ú-ṣú-ur-pì-A-šùr        will give back
+        ú-ta-ar        the 15 shekels of silver.
+20        IGI  I-na-ah-DINGIR        In the presence of Ēnah-ilī,
+u.e.        IGI  Ša-lim-Ištar        of Šallim-Ištar
+        IGI  A-šùr-[x x ]        of Aššur-[........]
+l.e        IGI  Ma-sà-a-a  IGI  A-šùr-ma-lik        of Mas(s)āya, of Aššur-mālik
+
+
+Notes
+1. The figure 15 is restored from l. 16 and this must be the same amount mentioned in *178:1. 
+8. Repeated by mistake from l. 5 
+10. The text lacks a verb describing what Ummī-Išhara does with tablet of Uṣur-pī-Aššur; see below for a possible interpretation
+11-14. Since the adverb warka (CCT 4, 30b:22) is impossible after ana, we have the choice between a preposition, as in a(na) warke and warkat (see Grammar § 14.68) and the noun warkutum, “what is left behind”. The former occurs with tuārum, but in a quite different meaning, “to be prolonged”; tuārum meaning “to raise a (future) claim” is invariably construed with simple ana, here preceding the noun warkutum, “what is left behind” (see e.g.  TC 2, 40:36, warkat awīlātim). This interpretation makes the emendation of l. 11 necessary. The repetition of warkutum makes sense if we assume that the first time it means what was left to Lamassutum (by her father or husband) and the second time what was bequeathed by her, scil. to her children. “Her” in the second occurrence cannot refer to Ummī-Išhara, who is still alive (lines 9-10) and taking it as referring to her future inheritance is extremely unlikely.
+
+
+177. Kt 91/k 414 (1-267-91)
+
+
+A verdict of the plenary assembly of the Kanesh colony, stating that Uṣur-pī-Aššur must share the ownership and use of their father’s house (in Kanesh) with his brother Ennam-Aššur, and that his marriage with an unnamed maid or slave-girl (presumably part of his inheritance) is valid, but that he is forbidden to sell her. As long as no message from Assur has arrived, presumably detailing the division of the inheritance of their father, the house and its inventory shall not be sold.
+
+
+ 1        kà-ru-um K[à-ni-iš]        The plenary Kanesh colony
+        TUR GAL dí-na[m i-dí-ma]        passed the following verdict:
+        a-na ma-lá  qá-[bi-ú-ni]        “In conformity with what [they have 
+        Ú-ṣur-pì-A-šur iš-[tí  a-hi-šu]        promised], Uṣur-pī-Aššur will enter and
+5        En-um-A-šùr a-na be-e[t]        leave their paternal house together        
+        a-bi4-šu-nu e-ra-ab1 ú ú-ṣ[í-(ma?)]        with Ennam-Aššur (and) he will eat 
+        qá-dé-šu-ma e-kál ù i-ša-ti        and drink together with him.        
+        GEME ki-ma ah-zu-ni        He stays married to the maid just as
+        a-hi-iz : GEME a-ší-mì-im        he has married (her), he shall not        
+10        lá i-da-an        sell the maid.
+        té-er-tum a-na a-limki        A  report will go
+        a-ṣé-er a-ha-ti-šu        to the City, 
+l.e.        ú a-he-šu        to his sisters and 
+rev.        i-lá-ak-ma        his brothers and
+15        a-dí : té-er-tum        until a notice 
+        i-tù-ra-ni        has come back
+        be-tum8  ú ú-tù-up-tum        the house and its inventory
+        i-ba-ri-šu-nu        is their common property.
+        ma-ma-an  a-ší-mì-im        Nobody shall 
+20        lá i-da-a[n]        sell (anything).”
+
+
+Notes
+3. My restoration is an attempt; the stative qabiū can be passive,”they have been told to”, but also active..
+8-10. This part of the verdict is referred to in *178, which mentions the prohibition of the kārum to sell the “slave-girl of the girl” (amtum ša ṣuhārtim), where the ṣuhārtum probably is a daughter of Elamma
+12-13. a-ha-tí-šu is a plural, which implies that the sisters (Ummī-Išhara and possibly Šalimma, who had returned there, see Ch. XII) and brothers of Uṣur-pī-Aššur were in Assur, either living there (in *175 Ummī-Išhara and Ennam-Aššur wish to obtain a plot of land in the city) or staying there temporarily, in connection with the division of his inheritance of their father and mother, which would have taken place there in the presence of all children. 
+
+
+178. Kt 91/k 433 (1-286-91)
+
+
+A memorandum in the first person singular, mentioning the silver Uṣur-pī-Aššur had received  from his brother and under what conditions he might (have to) give it back.
+
+
+        15  GÍN KÙ.B.  i[š-tù]        15 shekels of silver from the
+        ha-muš-tim  ša  *x [x x ]/ [x]        week-eponymy of .........,
+        ITU.KAM  áb-ša-ra-n[i]        in month V,
+        É  DAM.GÀR  1  GÍN.T[A]        I borrowed with a money-lender
+5        a-ṣí-ib-tim  al-qé-ma        at an interest of 1 shekel per [month?]
+        a-dí-šu-um  1/2  GÍN KÙ.B.        and I gave it to him. ½ shekel silver
+        a-ha-ma  ú-ku-ul-tí        I gave separately as food for
+        ÌR  a-šar  ú-kà-i-lu-šu-/ni        the slave, where he detained 
+9        a-dí-in  ur-ki-tám        him. Later the slave fled
+l.e.        ÌR  i-qá-tí  Ú-ṣú-ur-pì-/A-šur        from Uşur-pī-Aššur’s grip and
+rev.        e-bu-ut-ma  3  GÍN        I paid 3 shekels of silver
+        KÙ.B  a-na  É  nu-a-im        to the house of the Anatolian (and)
+        áš-qúl  ÌR  ú-šé-ṣí-am        I obtained the release of the slave.
+        GEME-tám  ša  ṣú-ha-ar-/tim        The female slave belonging to the girl,
+15        ša  i-dí-in  kà-ri-im / ta-da-nam        whose sale the colony       
+        lá  qá-bi-ú-ni        had forbidden,
+        Ú-ṣú-ur-pì-A-šur        Uṣur-ša-Aššur
+        ú-da-bi-sí-ma        has ........... her whereupon
+        it-bi-ma  i-<ta>-lá-ak        he got up en went away.
+
+
+Notes
+15. tadānam is written underneath kārim, between the lines.
+18. I am not sure which verb this is; the assimilation of the accusative suffix –ši to its final consonant does not support udabbib, “he pestered”, udappir, “he drove away” (apart from the fact that in OA it is only used intransitively), or uṭappil, “he insulted”.[5] The meanings of  the rare verbs ṭ/tuppusu (only lexically) and tuppušu (once in OB) are unknown.
+19. The emendation is necessary, a present tense is excluded by the consecutio temporum and makes little sense.
+Comments on *176-178
+The main person in our texts, Uṣur-pī-Aššur,[6] is a son of Elamma, but he appears only here and we know nothing about him. He also does not figure in *178, where four children of Elamma reach an agreement about dividing certain assets of what they had inherited. Also mentioned are Elamma’s daughter, Ummī-Išhara, in Assur, and his son Ennam-Aššur, living in Kanesh, who was the one in direct contact with his brother. It seems that Ennam-Aššur and Uṣur-pī-Aššur at this time were the only children of Elamma present in Kanesh, while the others were in Assur (cf. *177:11-13).
+        Our texts concern three issues, the payment of silver to Uṣur-pī-Aššur by his brother, the fact that Uṣur-pī-Aššur had as wife a slave-girl, presumably from the household of his mother, and that Ennam-Aššur had made some payments for his brother in connection with a slave of the latter, who had fled and which Ennam-Aššur managed “to get out of” (šēṣu’um) the house of an Anatolian.
+         The issue of the slave remains unclear. The verbs “to hold” (ka’’ulum) may imply that Uṣur-pī-Aššur detained the slave as pledge or security, either supplied a by defaulting debtor or perhaps a defaulting debtor himself, sold into debt-bondage. This could explain why he fled, but how and why he ended up in an Anatolian’s house is unclear, also because the verb šēṣu’um is used in different situations and may denote both that a pledge was taken along from a defaulting debtor by his creditor and that somebody obtained the release of such a pledge from the house of the creditor.[7] Had the Anatolian apprehended him and did he receive a reward or had he himself a claim on the man and did Ennam-Aššur pay him to get him free? 
+        The colonial verdict *177, possibly the result of an appeal by Uṣur-pī-Aššur, shows that there had been legal problems, for it states his right (on which it was based remains unknown, because lines 3 is broken) to live in and from the house(hold) of their father on the same footing as his elder brother, and to keep a slave-girl he had taken as wife, but forbids to alienate any property until Elamma’s other children, in Assur, have reported on the actual (legal) situation.
+        Texts *176 and *178 begin with the issue that Ennam-Aššur in Kanish had given silver to his brother and I assume that the 15 shekels given according to *176 are identical to the 15 shekels borrowed from a money-lender at interest according to*178. He may have done so to prevent it from  being formally recorded in a dated debt-note. Text *176 suggests that Uṣur-ša-Aššur had claimed the silver as part of the inheritance of their mother, but the gift of was conditional and *176 (drawn up in Kanesh by or for Ennam-Aššur, who could not ascertain there the details of the division) states that Uṣur-pī-Aššur will give it back if his sister in Assur can produce (?; the verb is missing) a valid record by which Uṣur-pī-Aššur had renounced any further claims on the inheritance. What he had already received is unknown. *164 registers the assets left behind by their mother Lamassutum, which will be shipped to Assur, and at the end quotes words from her last will: “My daughter ... and my sons will act in accordance with the testamentary dispositions applying to them”, but we do not know the latter. But the slave-girl Uṣur-pī-Aššur had taken as wife seems to have been one of the five owned and left behind by his mother in Kanesh, one of which she had already assigned in her last will to her grand-daughter Ilina (lines 23-25). I assume that Uṣur-pī-Aššur, perhaps with the silent consent of his mother, some time earlier had married (*177:8-9 uses the verb ahāzum) one slave-girl as concubine or wife and that the Kanesh colony decided that this “acquisition” was an accepted fact (kīma ahzuni ahiz). He could not be forced to give her up, so that she would become an asset of the inheritance still to be divided, but the verdict (also referred to in *178:14-16) stated that he could not convert her into money by selling her (*177:9-10). 
+        There is more evidence of the role of slave-girls as part of an inheritance. The agreement recorded in EL 287:18-32 states that, after the eldest(?) son has received his share in silver, the others will “divide the rest, barley, slave-girls, slaves and bronze objects (read sí-pá-ri!) in accordance with the testament of their father”. One son will take “here (in Kanesh) or in the City (Assur) a slave-girl as hierodule”(? ana ištariuttišu); three others “will each take one slave-girl from those with whom they had already intercourse (ša lamdū) and she will be deducted from their share”. The last will Kt o/k 196c (I. Albayrak, ArAn 4 [2000], 22f.), after assigning one slave-girl to the testator’s daughter (l. 15), in lines 23-27 first prescribes that the testator’s wife and sons “shall divide the silver, slaves and slave-girls that remain on equal terms” (“half half”, mutta muttat), but adds that “Aššur-idī’s concubine is relinquished to him” (šawissu ša A. waššurassum). This must mean that he can keep her and perhaps that this girl is not included in the assets to be divided, which would make this provision similar to the one in our text. *178:14 describes the slave-girl married by Uṣur-pī-Aššur as “belonging to the girl”, which probably means that she actually was part of the share assigned to Ummī-Išhara. If this is correct then the fact that Uṣur-pī-Aššur could keep her was a favor and the no-claim promise given to his sister (*176:6-15) could have been the result of accepting this favor. 
+        Text *178:17-19 describes how this affair ended, apparently stating that Uṣur-pī-Aššur somehow got rid of the girl (the verb is unfortunately unclear) and left, perhaps frustrated by the decision which prevented him for selling her. I hardly have to add that this reconstruction is hypothetical, because we are not informed about how this case ended and know little about the elusive Uṣur-pī-Aššur.
+
+
+________________
+[1] See for her Introduction § 2. She also figures in Kt f/k 11 (courtesy L. Umur), a letter to her and her brother Šu-Bēlum by Amur-Ištar. It deals with (statuettes of) gods, containers with tablets and other possessions «of our father» (called «my goods» by the writer in l. 15), which he had left in her(!?) care and which she now is asked to entrust tot her brother Šu-Bēlum to be kept in his house and, if he is absent, to Ummī-ṭābat or Šu-Bēlum's wife Abi-dūrī: i-le ša abini  5 3 ṣiliānū ṣahhurūtum / ša ṭuppēa harrumūtim / 7 supannū 7 kasātum / 1 itqūru ša siparrim / mimma annîm ēzibakkum! 10 ana Ummī-Išhara / qibima mimma annîm / ana Šu-Bēlim  mahar šina / piqdīšumma / ina bētišu 15 unūtī libbiši / šumma Šu-Bēlum laššû / ana Ummī-ṭābat piqdī / šumma Ummī-ṭābat / mahāram la tamu’a 20 ana aššat Šu-Bēlim / ana Abī-dūrī piqdī ša iqqerbim / ibaššiu liknukū...... One would assume that the writer is Elamma's brother of that name and that the letter deals with assets of the latter present in Assur after his death, but the words «our father» instead of «your father» raise some doubt. 
+
+
+[2] See for the use of this verb and its opposite elā’um, “to go up”, Geography 99f.; note that there were mountains (šadu’ū) in the territory of Hahhum (Treaty with Hahhum, col. III!:15).
+[3] See for naruqqum, Larsen 1999.
+[4] Another case where a hamištum-committee was active in such a situation is mentioned in the heavily damaged KTK 110, the reverse of which can be restored to read: “... in [the house] of the[ir] father, in the Ci[ty], before the committee of five, they took [....]”. See now also OALP 302-3
+[5] Not registered in CAD Ṭ s.v. for OA, but attested in AKT 5, 18:7, ṭappulāku, cf. perhaps the N-stem in e ta-ṭí-pì-il5-ma in AKT 3, 88:54.
+[6] The name is extremely rare; an abbrevited form is Ú-ṣur-pí-a, in TPAK 1, 203:3ff. and in OIP 27, 51:4 we find the curious form Ú-ṣur-pí-ša-A-šur. Its meaning is the same as that of the much better attested Uṣur-ša-Aššur.
+[7] See my remarks in Veenhof 2001, 130, 6). A good example of the first meaning is *161:22, “If they do not pay when their term is due I will take fT. (the wife of the debtor) along” (ušeṣṣa).

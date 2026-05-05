@@ -1,0 +1,858 @@
+,text,orientation,language,mean_confidence,used_original_text,time,scale
+0,"46
+Pascal Attinger
+A propos de AK «faire»1 (I)
+par Pascal Attinger – Berne
+Ces pages sont consacrées à une étude de ak «faire». Après une discussion du para-
+digme (2) et des graphies (non-)standard et gloses de lecture de ak (3), le lecteur trouvera
+quelques ajouts et corrections au PSD A/III 70–76, ak 1–7 (4) et une liste des «compo-
+sés» de ak et des expressions idiomatiques formées avec ak (5). Des remarques de détail
+touchant les autres lexèmes inclus dans le PSD A/III (pp. 1–69 et 131–217) closent l’ar-
+ticle (6).
+1. Introduction
+Il est bien connu qu’à côté de du11-g/e/di-d «dire», ak «faire» est
+le verbe le plus productif de la langue sumérienne, et il n’est en consé-
+quence pas étonnant qu’un quart du PSD A/III (1998) lui soit consacré
+(pp. 70–131). Il va sans dire que ces pages rendront d’inestimables servi-
+ces tant pour le travail quotidien que comme base d’une recherche sys-
+tématique sur ak, elles sont toutefois entachées de deux défauts qui en
+rendent l’utilisation malaisée:
+– La liste des «idiomatic phrases» (pp. 76–109 s.v. ak 8) est très
+incomplète, et ceci pour une double raison: D’une part, quelque 80 ex-
+1 «Review article» de The Sumerian Dictionary of the University of Pennsylvania
+Museum. Vol. 1: A Part III. Ed. by Åke W. Sjöberg with the collaboration of Hermann
+Behrens, Antoine Cavigneaux, Barry L. Eichler, Margaret W. Green, Philip Jones, Erle
+Leichty, Darlene Loding, Steve Tinney, Niek Veldhuis, Wu Yuhong. Philadelphia: Ba-
+bylonian Section of the University Museum, 1998. ISBN: 0-924171-58-8. xlv + 217.
+Je me dois de remercier en premier lieu W. Sallaberger, qui a lu une version antérieure
+de cet article et dont les avis autorisés m’ont été un inestimable appui lors de la rédac-
+tion souvent douloureuse de cet article. J’ai eu accès aux textes sur disquettes de B. Ja-
+gersma (époque présargonique) et de R. de Maaijer (époques d’Ur III et d’Isin). Que
+leurs auteurs trouvent ici l’expression de ma reconnaissance. Ma gratitude va égale-
+ment à ceux qui mirent à ma disposition une copie de leur partition d’une ou de plu-
+sieurs compositions littéraires pB: B. Alster (Instr. Sˇur.), M. Civil (U-ezinan), P. Del-
+nero (EJN, Kisˇ Hy. et SˇA) et C. Wilcke (Lugalb. I et II).
+Noter a ja x = a, asarx = LAK 212/tu.gab.lisˇ, b iri x = bir, d il x = dul3, d il y =
+sag, d u b s i g x = il2, egˆ arx = sig4, g eg x = gig, gˆ esˇgem x = agrig, gˆ esˇnimbarx =
+gˆ isˇi m m a r, gˆ esˇn u x = na2, gˆ ezzal x = gˆ izzal , äab2 = gigir, izim x = ezen,
+kisˇebx = k isˇib , kugˆ x = kun, mussa x = munus.usˇ, n igˆ daba x = pad.dinanna,
+nugˆ x = nun et u ga x = naga.
+Zeitschr. f. Assyriologie Bd. 95, S. 46–64
+© Walter de Gruyter 2005
+ISSN 0084-5299
+",,eng,,True,1648325057.97699,
+1,"A propos de ak «faire» (I)
+47
+pressions ont été omises; il s’agit le plus souvent d’hapax d’interprétation
+difficile, mais pas toujours (manquent par ex.
+(gˆesˇ)al ak en contexte2,
+(gˆ e sˇ)gul ak, äab2 ak, äab2/äa bx-sˇe 3 ak, i 3(-gˆ esˇ/nun/sˇaä a/udu ,
+etc.) ak, ki ND ak, sa(-)ra ak, si-im-da ak, sˇu ak, sˇu-bala ak,
+sˇu-gibil/gibil 4ak et tu 9-saga11 ak; pour tous ces termes, v. infra
+s.v.). D’autre part, les expressions attestées seulement dans les textes
+lexicaux ne sont qu’exceptionnellement enregistrées dans la liste princi-
+pale (type «8.205 ti-ti – ak: see Lexical 207.» [p. 106]), et par là-même
+pratiquement introuvables sans recherche ardue ( j’en ai dénombré envi-
+ron 160). En bref, 240 (80 + 160)3 entrées font défaut, un nombre plus
+élevé que les 231 citées.
+– Les traductions (et parfois même les translitérations) ne sont pas
+rarement inexactes; pour ne mentionner qu’un cas (il est vrai extrême),
+le très fréquent a-sˇa 3-ge kigˆ 2 ak «travailler un champ» est enregistré
+à la p. 91 s.v. «8.123.4 in agricultural context: a -sˇa 3 gi kin ak», sans
+traduction (et pour cause!), et en ne renvoyant qu’à six textes.
+Dans les pages qui suivent, le lecteur trouvera une discussion du pa-
+radigme de ak (2), une liste des graphies (non-)standard et des gloses de
+lecture de ak (3), quelques ajouts à a k 1–7 (A/III pp. 70–76) (4), une
+liste des «composés» de ak et des expressions idiomatiques formées avec
+ak (5), enfin des remarques de détail concernant le reste du volume (6).
+2. Le paradigme de AK
+2.1 Bibliographie: W. W. Hallo, JANES 5 (1973) 168 avec litt. ant.; A. Cavigneaux,
+Zeichenlisten (1976) 45–47; D. O. Edzard, ZA 66 (1976) 55 sq.; M. Yoshikawa, JCS 29
+(1977) 87 sq.; M. A. Powell, Mél. Diakonoff (1982) 314–319; Cavigneaux, ASJ 9 (1987)
+49–51; Cavigneaux/F. N. H. al-Rawi, ZA 83 (1993) 190; Cavigneaux/al-Rawi, ZA 85
+(1995) 32 sq.; J. Krecher, AOAT 240 (1995) 162; Cavigneaux, NABU 1998/75; M. Schret-
+ter, BiOr. 58 (2001) 154.
+2.2 Il est bien connu qu’à part ak «faire», seuls deux lexèmes ont
+(partiellement) une finale en -/k/: lu 5-k/g «vivre dans, se trouver» (ani-
+mal, base sg.) et ka-k/g «bouche» (pour le possible kisˇek 2 dans AWL
+118 iii 4, v. infra 6 ad ad2 A). Rappelons brièvement les faits.
+2 Discuté il est vrai aux pp. 139 sq. s.v. al A 13, mais il n’y a pas de renvoi à la p. 77 en-
+tre addir–ak et a n d ul 3–ak.
+3 Non comptées sont les expressions en n a m / n a m 2-… + ak (a k 9, pp. 109–115) et les
+cas, assez rares, de N ak «traiter N» (comp. a k 6) qui ont été intégrés dans la liste des
+«composés» de ak et des expressions idiomatiques formées avec ak donnée ci-des-
+sous 5.
+",,eng,,True,1648325057.9920619,
+2,"48
+Pascal Attinger
+1) lu 5-k/g (P. Steinkeller, SEL 1 [1984] 1–10 et 14 sq.; P. Micha-
+lowski, ibid. 19–22). L’alternance -k/g est un phénomène de nature dia-
+chronique: Avant Ur III on a lu 5-k (mu-da-lu 5-ka-am 6 [DP 338 i 4]
+et e-lu 5-ka-am 3 [MAD 4, 33:6; cf. Steinkeller p. 6]), à Ur III lu 5-k
+dans le NP ä a-ba-lu 5-ke 4 4 (gr. standard), lu ( 5 )-g dans les graphies
+non-standard de Nippur äa-ba-lu (5)-ge/ge18 (Steinkeller p. 6; aussi
+NATN 573 rev. 1´) et dans lu 5-ga (Steinkeller p. 6 citant L 1036), à l’ép.
+pB enfin lu-g (Steinkeller pp. 8 sq. et Michalowski; tous les ex. sûrs de-
+vant /a/). En bref, /luk/ e évolué en /lug/ durant l’ép. d’Ur III, pour une
+raison que je ne puis toutefois préciser. La rareté des lexèmes en -k a cer-
+tainement facilité ce changement.
+2) ka-k/g (B. Landsberger, MSL 9 [1967] 145 et n. 2; G. Farber-
+Flügge, StPohl 10 [1973] 84 sq.; J. Krecher, ZA 63 [1973] 190 n. 111;
+St. Lieberman, SLOB [1977] 336 n° 372; Krecher, ZA 60 [1979]
+3). L’alternance -k/g est conditionnée tant diachroniquement que phoné-
+tiquement. Devant /a/, on a ka-k à l’ép. présarg. et à partir de l’ép. pB,
+mais ka-g à Ur III (dans ka-ga-na [v.s.] ge-n «confirmer dans sa
+déclaration»), devant /e/ ka-g (cf. le NP ka-ge à Ur III [ELS 371 s.v.
+«d u11-ge»], passim à l’ép. pB). *ka-ke 4 n’est pas attesté. La raison de
+ce phénomène m’échappe totalement.
+En bref, tant lu 5-k/g que ka-k/g se distinguent sensiblement de
+ak, lequel ne peut être comparé qu’au morphème du génitif {ak} (v. en
+dernier lieu ELS 258 sq. et D. O. Edzard, Sumerian Grammar, HdO 71
+[Leiden/Boston 2003] 36–38). {ak} et {ak} ont en commun les points
+suivants:
+– Aphérèse du /a/ initial après voyelle, régulière dans le cas du génitif,
+probabl. fréquente avec {ak} (cf. 2.2.1), quoique la chose soit le plus sou-
+vent masquée par l’écriture.
+– Apocope du /k/ en finale absolue (cf. 3.1.1).
+Beaucoup plus complexe est en revanche le détail des graphies de
+{ak}/{ak} suivi de /( a )k/ (génitif), / <a/ (locatif, nominalisation), / <am/
+(copule) et /e/ (ergatif/locatif-terminatif, sujet 3e sg. marû).
+– Devant /a ( k ) / (génitif): {a k  +  a k} est écrit (- a )-ka , {b + ak +
+ak} -ba-ka (3.1.2.2).
+– Devant /<a/ (locatif, nominalisation): {ak + <a } est écrit (-a )-ka ,
+{(…) ak + <a} ak = aka (ancien), (-)ak-a (un exemple isolé à l’ép. pré-
+sarg., pas rare à Ur III, quasi standard à partir de l’ép. pB) et, beaucoup
+4 Pour la lecture - ke 4, cf. n. 25.
+",,eng,,True,1648325058.008064,
+3,"A propos de ak «faire» (I)
+49
+plus rarement, (-)ak-ka/ga v.s. (à partir d’Ur III) (cf. 2.2.2, 3.1.2.1,
+3.3.2.1 et 3.3.2.2).
+– Devant /<am/ (copule): {ak + am} est écrit (-a )-kam , {(…) ak +
+am} (-)ak-am 3 (à partir de Gudéa; pour ak-am 6 = probabl. aka-am 6
+à l’ép. présarg., v. 2.2.2).
+– Devant /e/ (ergatif/locatif-terminatif, sujet 3e sg. marû): {ak + e}
+est écrit (-a )-ke 4, {(…) ak + e} (-)ak-ke 4 à époque ancienne, (-)ak-e à
+partir de l’ép. pB (3.4.2; un ex. isolé à Ur III [cf. n. 36]).
+L’interprétation de ces divergences n’est pas évidente. Soit {ak} et
+{ak} ne sont pas totalement homophones, soit (plus vraisemblablement)
+les graphies (-)ak-a/am 3/e sont de type morphophonologique.
+De ce bref survol il ressort que ak est phonologiquement singulier, ce
+qui rend la reconstruction de son paradigme très épineuse (cf. l’impor-
+tant article de Powell dans Mél. Diakonoff 314–319). Même après avoir
+collecté un nombre assez considérable de graphies non-standard de ak,
+force m’est de constater que je ne suis pas non plus capable de présenter
+un schéma réellement satisfaisant. Quelques points me semblent toute-
+fois mériter d’être soulignés:
+2.2.1 Autant que je puisse en juger, ak est un verbe quasi régulier. Il
+ne connaît ni variations hétéronymiques (type du11-g/e/di-d ), ni mo-
+difications phonétiques imprévisibles de la base (type e 3-Ø/e 3-d )5, mais
+seulement deux allomorphes /a( k ) / et /k/, dont l’apparition était, selon
+toute vraisemblance, conditionnée par l’environnement phonétique et/ou
+l’accent. /k/ est obligatoire dans le participe marû (ke 3-d = /k/ + {e d})
+et probabl. dans les 3es pl. marû (-ke 3-ne ), attesté sinon sporadique-
+ment, aussi bien dans les formes äamtu, conjuguées ou non, que dans
+les autres formes marû conjuguées. Le détail m’échappe, mais il est clair
+que /k/ est particulièrement fréquent après voyelle et/ou devant certains
+suffixes (ou certaines séquences suffixales), qui ont dû entraîner un
+déplacement de l’accent, par ex. {e d}, peut-être le {a} de l’impératif 6 (cf.
+5 Pour de rares indices pouvant éventuellement plaider en ce sens, cf. infra 3.1.1 Ur III
+écon./jur. s.v. -b a - a et - n a- a ; une analyse {b/n + ak} est à mon sens plus probable
+que {b/n + ak + <a}, mais il est vrai que je ne puis justifier la graphie pleine C a-a au
+lieu de -C a .
+En ce qui concerne la distinction faite, avant l’ép. pB, entre -ak-esˇ 2 (3e pl. ä.) et
+-ak-ke 4 (3e sg. m.), il convient de noter que ce phénomène n’est pas limité à ak, et
+n’implique donc pas que la Bä. et la Bm. étaient phonétiquement distinctes.
+6 En faveur d’une accentuation finale de l’impératif, cf. les formes intransitives B-b i/ n i
+telle ge 4-b i «Retourne!», etc. (ELS 265 et 299).
+",,eng,,True,1648325058.022571,
+4,"50
+Pascal Attinger
+ka(-ab ) = ak(-ab ) dans EnlSud 97 L [Ni.] et FI 6 C [Ni.])7, {en + a}
+(cf. a-ra 2 ib2-ak-na-bi «sa voie que je dois faire» = «comment je
+dois procéder» dans TMH 6, 4:8 et 12 et 15:17 [Ur III], a-na ib2- ak-
+na-bi «ce que je dois faire» dans Römer, AOAT 240, 420:8,
+a-gin7(-)nam(-)ak-na-bi «comment je dois procéder» dans YOS 11,
+40:10 et nigˆ 2 ab-ak.ak-na-zu «ce que tu fais» dans SP 1.37), etc.
+2.2.2 Quasi régulier, mais pas régulier (au moins au niveau graphi-
+que)! Une forme fait en effet réellement difficulté, à savoir le participe
+äamtu ak (pas ak-a !) attesté à époque ancienne. La première occurrence
+de ak-a que je connaisse date de Sˇ 43 (Touzalin, Aleppo 233:3 [Um.])8,
+et avant l’ép. pB, je ne pourrais guère en citer plus de vingt exemples, une
+quantité négligeable face à l’énorme masse des ak «remplaçant» ak-a
+(v. J. Krecher, ASJ 15 [1993] 89 sq.). Cf. e.g. la séquence fréquente
+ge ga 6- gˆ a 2 ge a ak u 3 ( ge )gilim sur-ra v.s., «qui ont transporté des
+roseaux, humidifié(?)/trempé(?) les roseaux et (tordu =) fait des ‹po-
+teaux(?)›» (MVN 14, 510:3–5; UTAMI 3, 1912:3–5 et 2201:3–5; UTAMI
+4, 2781:3–5 [ajoute ge dar-da après ge a ak] et UTAMI 5, 3096:3–5).
+A partir de l’ép. pB, la graphie ak-a devient standard, sans supplanter
+toutefois complètement ak (avant tout dans l’acception «qui est/a été
+fait» [passif])9.
+7 Trois autres exemples (Suse, prov. inc.) plaident en revanche pour la préservation du
+/a/ initial (v. en général infra 3.2); dans ce cas, la finale du mot précédent jouait cer-
+tainement un rôle, du moins à en juger par les sandhis du type [ gˆ esˇ- t] u 9gˆ esˇtu(-)ga-
+a-ni =
+gˆ esˇ- t u 9gˆ esˇtu ak- n i (U-ezinan 162 G1) ou e n -n u -un(-)n ag-ab = en-nu-
+u gˆ 3 ak- ab (FI 6 A3).
+8 Mais cf. ak- k [a] déjà dans Sˇ 21 (MVN 21, 270 rev. 3 [Um.]).
+9 Cf. infra 3.3 pour pronom pers.- gin 7 ak «qui est fait comme moi(/…)» et 3.3.1 pour
+u m u m ak, partiellement «qui a été instruit». Ajouter par ex. a-n a ak = a-na mim-ma
+sˇa2 in-ne2-ep-sˇu «tout ce qui a été fait» (Lugale 112), aga/ ag a 3 zi  ak-me-en «je suis
+celui qui a été couronné de la couronne légitime» (SˇE 9), (n igˆ 2(-)ak «chose faite»
+[passim à côté de n igˆ 2ak- a]; originellement probabl. type s a 2-du11!), n igˆ 2-ge17 ak
+n a m - lu 2- lu 7 (lu)-ka/ke 4 «le mal infligé à l’humanité» (GiM Ni. v 17; la version de
+Tell Hadad a ak- a [M 182]), n igˆ 2-ge17-g a ak-b i «ce mal infligé» (Sîniddinam-Utu
+38), e sˇe 2 sˇu  ak «corde faite main» (GiEn. 276), g e sˇu ak «bâche(?) de roseau faite
+main» (GiEn. 278 // ge sˇu ak- a dans la version de Tell Haddad) et sˇu  ak «bien
+traité» (Isˇme-Dagan AB 120). Dans l’acception «qui a fait» (participe passé actif), les
+exemples sûrs sont rares, d’autant plus qu’une variation d’ordre sémantique («qui
+fait» // «qui a fait») est parfois envisageable (e.g. Nansˇe Hy. 141 et 149). Un cas
+clair est DuDr. 194 Z (Ni.): u n u k i- sˇe 3 n i gˆ 2- munus.usˇ.dam ak-me-{en} // n igˆ 2-
+mussa xs a 2 ak-a-me-en (o et probabl. x) // n igˆ 2-mussa xs a 2 ka-me-en (J’ [prov.
+inc.]), «C’est moi qui ai fait les cadeaux nuptiaux à Uruk».
+",,eng,,True,1648325058.040552,
+5,"A propos de ak «faire» (I)
+51
+L’interprétation des faits la plus simple est de voir dans ak un «frozen
+case of Fara or earlier orthograph where the orthographical representa-
+tion of -/a/ was omitted» (Krecher, ASJ 15, 89), quoique je ne voie pas
+pourquoi la non-explicitation de {<a} soit limitée au seul verbe ak. Cela
+rendrait toutefois compte également de ak-am 6 (AWL 2 i 2 et v 1 sq.
+etc.) et du NP / dumu gˆ a 2-a-na-ak-ke 4 (SR 60 i 2 sq.). Un contre-
+exemple possible est toutefois Ent. 41 v 1–6: en-mete-na / lu 2 eg 2
+maä / dnin-gˆ i r2-su 2-ka / ak-ka / digˆ ir-ra-ni / dsul-utul 6-am 6,
+pour autant que l’on analyse ak-ka en {ak + <a} (ainsi par ex. Steible
+p. 257) ou en {ak + ak} («D’E., l’homme qui a fait l’immense canal de
+N. (…)»). Si l’on rapproche en revanche notre passage de Gudéa St. A iii
+7–iv 2 (gu 3-de 2-a / lu 2 e 2 du 3-a-ka / nam-til 3-la-ni mu-sud ;
+cf. aussi St. C iii 18–iv 1, St. I v 3–6 et St. P v 3–6), les problèmes dispa-
+raissent: ak-ka = aka-ka = {ak + ak + ak} (traduire littéralt «D’E.,
+l’homme de l’immense canal de N. fait (…)»).
+La lecture aka de ak pourrait être également attestée dans les formes
+conjuguées, à savoir dans les temporelles du type {( u 4) V10 + <a  +
+<a(loc.)}; à l’ép. présarg., la graphie usuelle n’est pas -ak-a-a (attestée
+seulement dans b e 2-ak-a-a [DP 251 ii 5]), mais -ak-a (e/mu-ak-a ; cf.
+AWEL 175 vi 5 et 259 vi 1, AWL 117 vi 3, DP 238 iii 2, Sollberger, Ge-
+nava 26, 57, MAH 16248 iii 5, RTC 50 v 4 et TSA 37 v 6). A Ur III, ( u 4)
+(…)-ak-a n’est pas rare non plus; cf. par ex. Amorites 15:4–6, MVN 11,
+144:17´ et 183:9–11, MVN 18 = AulOr.-S 11, 108 iv 4, MVN 20, 31
+[= d’Agostino, ZA 88, 2] 9 sq., OIP 115, 322:18, SACT 1, 131:8, UCP
+9/2/I 4:4 et peut-être UET 3, 864:15. Particulièrement frappant est
+u 4 (…) ba-a-ak dans TIM 6, 10:5 sq., précédé de {u 4} (…) ba-dab5-
+ba-a à la 1. 2! Dans ce cas toutefois, les faits sont un peu moins clairs,
+d’une part parce que la temporelle {i 3-na-ak} -ka (Kienast/Volk, FAOS
+19, 102 Gir 26:13 [ép. d’Akkad]) plaide pour /ak(<)a/, de l’autre parce
+qu’une alternance comparable est attestée entre e-me-a (DP 169 v 5) et
+e-me-a-a (AWL 160 iv 4, dans un contexte identique).
+2.2.3 ak = sˇa 5. Depuis l’édition par W. van Soldt de HMM 86–O6,
+un prisme de Tell Hammam et-Turkman qui «contains a bilingual version
+of Proto-Ea and has the format of Proto-Aa» (Mél. Houwink ten Cate
+[1995] 279–286 et 289–291), il ne fait plus de doute que sˇa 5(ak) est un
+verbe significant «faire» (cf. Side A ii 16: sˇa ak = e-pe2-sˇum). Ouverte est
+en revanche la question de savoir si c’est une forme appartenant au pa-
+10 Forme verbale conjuguée.
+",,eng,,True,1648325058.0549319,
+6,"52
+Pascal Attinger
+radigme de ak11 ou un synonyme partiel de ak (comp. l’allemand «tun»
+et «machen»). Avant de discuter la chose, il n’est peut-être pas inutile de
+rappeler les exemples connus.
+1. UN B 52 sq.: (…) k i- b a la
+sˇa-sˇa (D [Ni.]12) // ki-ib-la-asˇ !(-)sˇa ?-sˇ[a ?]
+(B [prov. inc.]13) // ki- b a la - a ak.ak (A) «(la masse) qui (fait sans cesse le pays =) se dé-
+chaîne dans le pays en révolte».
+2. UN B 67: u 4- r i- m a  p e - e  m u -ni-ib-{sˇa} ?- a sˇ (B)14 // urim 2 k i-ma [p]a-e 3
+m u - n i - i b -ak (A) // [ u r i] m 5 k i-ma pa-e 3 [ä]u-mu-ni-ib2- ak (D) «A Ur, il (le
+trône) a été rendu resplendissant».
+3. SˇA 78: { u 4} [asˇ]-am 3 n i b r u k i u r i m 5 k i-ma esˇ 3-esˇ 3- b i äu - m u - u n -asˇ.asˇ?
+(YBC 16156; courtoisie P. Delnero) // ä u - m u ( - u n )-ak (× 4) //, «En un seul jour, je cé-
+lébrai la fête esˇesˇ à Nippur et à Ur». On peut se demander s’il n’y a pas là un jeu graphi-
+que/de mots sur u 4 asˇ- a m 3 et esˇ 3-esˇ 3. En faveur d’une réelle variante plaide peut-être
+VV (Ni.) ä u - m u !-sar- a , qui pourrait s’expliquer par sar = sˇa 8 (Sa 203 S) ou sar =
+nisˇa x (ib. 205).
+4. Cavigneaux/al-Rawi, ZA 85, 21 MA 7 //: lu 2-lu 7 n i gˆ 2-ak im-me-eb-sˇa -
+sˇa-ne 2 (MA [Tell Haddad]) // im - m i-ib-sˇa-[…] (MB [Tell Haddad]) / /  im -m i-in-
+ak.ak-[n ]e (C [prov. inc.]) // im - m i-in-ke 4-ke 4-n e (U [Ur]) «Ils font des manipula-
+tions (magiques) contre l’homme»; comp. YOS 11, 70 iii 23 (coll. Cavigneaux/al-Rawi,
+op. cit. 32) l u 2- lu 7 nigˆ 2 ak-ga im-mi-in-sˇa 4- sˇa 4-me-esˇ 15.
+Pour les textes lexicaux, cf. Proto-Ea 526 sˇa(-a ) ak. – van Soldt,
+Mél. Houwink ten Cate 280 Side A ii 16 sˇa ak e-pe2-sˇum. – Ea VIII 21
+sˇa 2-a ak [äa-sa]-{su}. – Aa VIII/1:49 sq. sˇa 2-a ak äa-sa-su, äu-su-su. –
+MSL 14, 484:8 (Assur MA Excerpt) { sˇa}-a ak x-[…]. – Rec. Ea 172 min
+(sˇa 2-a ) a[k? äasasu]. – Ant. E iii 19 aksˇa 2-sˇa 2.ak äu-up-pu-u2 sˇa2 gi. –
+Proto-Izi II 225 I nam-mu ?-e-a asˇ // nam-{mu} ?-a ak (A); «asˇ»
+pourrait être un ak non terminé (comp. Cavigneaux, NABU 1998/75).
+Quelques remarques s’imposent:
+– Un seul et même texte peut avoir sˇa-sˇa et ak (ex. 1–2, texte D).
+– Au niveau phonétique, /sˇasˇ( a )/ v.s. est attesté tant à l’initiale
+(ex. 1)16 qu’après /b/ (ex. 2 et 4) et peut-être /n/ (ex. 3).
+11 Une hypothèse avancée (avec prudence) par A. Cavigneaux, qui envisage une palata-
+lisation de /k/; cf. surtout ASJ 9 (1987) 49–51 et NABU 1998/75.
+12 Texte datant peut-être d’Ur III; à la l. 67 (ex. 2), D a ak!
+13 Cavigneaux (ASJ 9, 49) préfère lire ta ?- sˇ[a ?]; le asˇ ! plaide toutefois en faveur d’un
+/sˇ/ initial.
+14 Noter m u - n i- ib -{sˇa} ?-asˇ aux ll. 65 (// m u -n i-ib2- du(sˇa 4)) et 68. Dans ce cas, on
+a probabl. affaire au verbe sˇa 4(-asˇ) «amener(?)», attesté par ex, dans
+sˇu d u 3
+sˇa 4( - a sˇ) (cf. P. Attinger, AfO 46/47 [1999/2000] 264 et NABU 2001/41 et n. 9). Ici
+aussi, Cavigneaux (ASJ 9, 49 sq.) juge m u - ni-ib-t a ?- a sˇ épigr. préférable.
+15 Dans Nungal 16 I, ak.ak(sˇa 5-sˇa 5)-d am est certainement secondaire; les autres
+dupl. ont sˇa - sˇa-  (× 5).
+16 Mais noter le sandhi probable dans le texte B (cf. n. 13)!
+",,eng,,True,1648325058.0743492,
+7,"A propos de ak «faire» (I)
+53
+– Morphologiquement parlant, /sˇasˇ/ est une forme äamtu (ex. 2),
+/sˇasˇa / une forme marû (ex. 4 et peut-être 1). Cela semble plaider pour
+un verbe de la classe II (type gˆ ar/gˆ a 2- gˆ a 2). – asˇ.asˇ? (ex. 3) pourrait
+être un contre-ex. (mais noter -sar dans VV!).
+– Dans l’ex. 4, -sˇa-sˇa est // à -ke 4-ke 4. pe-e mu-ni-ib-
+{sˇa} ?-asˇ (ex. 2) doit être, de son côté, rapproché de pa-e 3 ba-ni-a
+(Gud. Cyl. A 26:19 [3e sg. ä.]), ce qui assure pour les f. ä. conj. de pa-e 3
+ak les lectures /sˇa sˇ/ et /a( k )/.
+– Dans les textes lex., sˇa 5 est rendu le plus souvent par äasasu G/D
+«couper, briser (roseaux)». Cette traduction est toutefois également celle
+de (a-ka ak) = { äu-su2-sum} dans MSL 14, 120 n° 7 ii 25!
+Ces faits ne me semblent guère plaider pour une palatalisation de /k/
+ou pour des formes en distribution complémentaire, et je juge provisoire-
+ment plus plausible l’hypothèse de deux verbes partiellement synonymes.
+3. Graphies (non-)standard et gloses de lecture de AK
+Le lecteur trouvera ci-dessous une discussion succincte des graphies
+standard et la liste des graphies non-standard de ak, classées selon les ty-
+pes de conjugaison et les époques.
+3.1 Dans les formes äamtu conjuguées non-impératives
+3.1.1 En finale absolue
+Ecrit régulièrement ak = a 5. Noter les gr. non-standard suivantes:
+Ebla
+-a = {ak}: ba 4-a-da (BFE 64 n° 9 ii 5); mu-na-a (ib. 3); nu-a-da (ib. 8). Comp. la
+valeur syllabique a 5 de ak à Abu Salabiä (M. Krebernik, OBO 160/3 [1998] 286 et n.
+541).
+-n a = {n + ak}: mun-na (BFE 74 n° 10 iv 5 et peut-être 6) et m un x(bulug3)-n a - n a
+= {mu + na + n + ak} (ib. 64 n° 9 i 7; m u - n a - a en ii 3!).
+Epoque d’Akkad
+-na-AK = {n + ak}: b a- n i- n a (OSP 2, 75:17).
+Gudea, Ur III litt.
+-a = {ak}: b a -n i -a (Cyl. A 26:19).
+-b a = {b + ak}: b a- n i- b a (Finkel, CM 10, 79 = TMH 6, 6:14–18); ba-ra-ba (ib. 8
+[incertain]); ib2-b a (Steinkeller, Mél. Wilcke 273 v 22´17).
+17 Vu les trois attestations de ib2- b a = {i + b + ak} dans les doc. écon. d’Ur III (cf. 3.1.1
+Ur III écon./jur. s.v. - b a = {b + ak}), les réticences de Steinkeller (p. 80) me semblent
+injustifiées.
+",,eng,,True,1648325058.086454,
+8,"54
+Pascal Attinger
+-n a = /n/ + {ak}: b a- n i- n a (Finkel, CM 10, 79 = TMH 6, 6:7 et 11–13; Sigrist, ASJ
+12, 159 i 3 [cf. pp. 154 sq.]); [ äe 2]- m i-n a (Ur-Namma 19:18 ex. 6 // äe 2-mi-ak);
+äe 2-n a (Ur-Namma 28:26 et 32 ex. 1); i 3-n a (Steinkeller, Mél. Wilcke 269 sqq. i 4 et
+passim).
+Ur III écon./jur.
+-a = {AK}: NP im - m a-sˇi- a (CT 10, 31 v 5 [Lag., Sˇ 43], HSS 4, 7 i 20 [Lag., Sˇ 48] et
+MVN 17, 55 i 22 [Lag., AS 4]; comp. i m -m a-sˇi-ak dans SNATBM 264 rev. 12 [Lag.,
+AS 2] et NG 194:35´ [Lag., AS 7]); b a-a (BCT 2, 3:12´ [Um., Sˇ 25]).
+-b a = {b + ak}18: i 3- n a- b a (PBS 13, 34 [= Wilcke, AOAT 267, 638] 4 [Ni., s.d.]);
+ib2-b a (YNER 8 pl. V n° 3 [= YOS 18, 122] iv 4 [Um., AS 4], NATN 873:9 [Ni., IS 6],
+Owen/Wasilewska, JCS 52, 17 n° 92:20 [Um., s.d.]).
+-ba = {b a + ak}: NP e 2-e-a-na-ba (Foxvog, ASJ 18, 49–51/77 sq. n° 10 i 3 [Um.,
+Sˇ 46]19; comp. e 2- e - a - n a - b a -ak dans UET 3, 1118:3 [IS 7] et 1150:4 [IS 7]); NT m u -
+ri-na-ba (par ex. CTMMA 1, 25:24 [Dr., AS 7] et StOr. 9/1, 32 n° 27:11 [Dr., IS 2]), la
+gr. de Drehem, correspondant à m u - r i-a-na-ba-ak à Ur. L’étymologie du nom n’est
+toutefois pas assurée (cf. A. R. George, MC 5 [1993] 128 avec litt. ant.; D. O. Edzard, RlA
+8 [1993–1997] 433; W. W. Hallo, BiOr. 56 [1999] 355).
+-ba-a = {b + ak}: Attesté probabl. dans TMH NF 1/2, 291:9 (Ni., SˇS 2 iii 1) et
+NATN 130:20 (Ni., SˇS 2 iv 22), deux textes très proches rédigés sous la responsabilité
+de l u ga l- ku; structure: sˇu-nigˆ in 2 n gˆ urusˇ u 4 1-sˇe 3 g u r u m 2 ak a-sˇa 3
+de n -
+l i l 2- e - p a 3- d a ( - a )  ( u 2 ib2- zi 2 u 3)  al i 3/ib2-b a-a «Total n hommes pour un jour;
+inspection du champ E.; ils ont (arraché des (mauvaises) herbes et) travaillé à la houe
+(?)». L’alternative serait d’analyser i 3/ i b2-b a-a en {i + b + ak + ’a}20, ce qui me semble
+toutefois moins bien s’intégrer dans le contexte et supposerait par ailleurs l’amuïssement
+de /k/ devant /< /, une évolution phonétique douteuse au vu tant des formes plus ancien-
+nes e - d a -ak-ka-am 6 (Ukg. 16 viii 3) et {i 3-na-ak}-k a (Kienast/Volk, FAOS 19, 102
+Gir 26:13) que des gr. non-standard ou gloses pB -ak-ga , -ka-a et -na-ak-k a (v. infra
+3.1.2.1 pB litt.). Noter par ailleurs que le /k/ est préservé devant le gén. /a( k )/ (NP
+e 2-e-na-ba-ka dans NG 113:5, 19 et 49; v. aussi le NT m u -ri-a-na-ba-ak-ka-sˇe 3
+[gén.21 + term.] dans UET 3, 378:11 [IS 5]). Comp. infra -n a-a pour un problème ana-
+logue. Ceci dit, il est vrai que je ne puis justifier la graphie pleine -C a-a au lieu de -C a .
+-n a = /n/ + {ak}: b i 2- in - n a (TCS 1, 148 [= LEM 76 = Koslova, AOAT 274,
+244/249] 14 et 20 [s.d.]); ä e 2- n a (TCS 1, 252:4 [s.d.] et TCS 1, 279 [= Owen, Or. 40,
+397] 9 [s.d.]); in - n a (CT 10, 44, 18962 rev. 25 [Lag., Sˇ 43] et SNATBM 373:8 [Um.,
+AS 5]); cf. infra 5.530 zi-isˇ-da (…)-sˇe 3 (ak).
+-na-a = {n + ak}: Attesté peut-être dans BE 3/1, 84 (Um., Sˇ 48): (iii 46) u 2 sig7-a /
+13 {1/2} sa r {kigˆ 2 ka} / kugˆ -zi-da / 30 sar kigˆ 2 { ka}  / mu kigˆ 2 i 7 ka /  a-ra-
+aä-tu m - m a -{ ka}- sˇe 3 / äe 2- til 3 b a-n a-a (peu clair); ici aussi, on peut hésiter entre
+{b a + n + ak} et {ba + n + ak + <a}, avec amuïssement du /k/ devant / </. V. en général
+supra à propos de - b a - a .
+18 Cf. Wilcke, AOAT 267 (1999) 627 et n. 118.
+19 Pour le génitif e 2-e-na-ba-ka (NG 113:5, 19 et 49 [Lag., s.d.]), cf. infra 3.1.2.2 Ur III.
+20 Ainsi Wilcke, AOAT 267, 127 n. 18: «(Männer-Arbeitstage, an denen) Hackarbeit
+verrichtet wurde». Sallaberger me fait remarquer (communication privée): «Wäre
+*ib2+B+a in Ur III-Urkunden wahrscheinlich? Mir scheint, dass man alternativ for-
+muliert: entweder ib2-B v.s. oder B-a».
+21 Ou double génitif (alternative proposée par Sallaberger).
+",,eng,,True,1648325058.106844,
+9,"A propos de ak «faire» (I)
+55
+pB litt.
+(-a): Dans FI D3 (prov. inc.) i 5, 28 (= l. 24) et 30 sq., -ak pourrait recouvrir -a
+(nominalisation) ou -am 3 (cf. surtout l. 24 t i l 3- a 5 // tu -lu -a ), dans TplHy. 317 Ur2,
+c’est une gr. du loc. -a.
+-a-[x] = {ak}: [b ] i-{e - a}- [x ]  (InEb. 171 LLL [Tell Haddad]; courtoisie A. Cavi-
+gneaux/M. Jaques) // b i 2- A K  (1re sg.).
+-b a = {b + ak}: ba-ba (SˇB 64 B et C [Ni.] // b a - a b -ak [× 5 ?] //); u b - b a (SP 2.90
+TT et PPP [Ni.] // u b -ak [× 3]).
+-ba = {b a + ak}: sˇa-ba (SˇC D 39 [Ni.]; sˇa - b a -ak à la l. 42).
+- i-a-ak, -ja-ak = {ak} (précédé de -sˇi-) : [ä]e 2- em-{ sˇi-i }-a-a[k] (Instr. Sˇur.
+80/85 I7 [Ni.]); *äe 2-em-sˇi- j a -ak (GiÄ A 22 NiK22 et Instr. Sˇur. 270/263´/260 U2
+[Ni.]).
+- i 3/ja 3 = {ak}: V. -ni = {ak}.
+-ja = {ak} (précédé de {e/j}, erg. 2e sg. ä.: k igˆ 2- sˇu ( - ){mu-ja}  (Edubbâ 2:84 W [Kisˇ]
+// k igˆ 2- sˇa 4 u 3-mu (- e ) - ak //); u 2-bi-ja (FI 33 A4 [Tell Haddad] // u 3- b i 2- ak);
+u 2- me-re(-e )-ja (Cavigneaux/al-Rawi, ZA 83, 181 MA 58 et 60 [Tell Haddad]).
+-n a = {n + ak}: b i- n a (Cavigneaux/al-Rawi, ZA 85, 21 MA 8 sq. et MB 8/9 et 10/11
+[Tell Haddad] // b i 2-in -ak); b i 2- n a (TMH NF 3, 26 rev. 9´); ä u -m u -n a (Cavigneaux,
+ASJ 9, 59 rev. 14–19 [Kisˇ]; cf. p. 55); i 3- n a (SKL, texte Su1 [Suse] passim; cf. Th. Ja-
+cobsen, AS 11 [1939] 34 et n. 71). Noter aussi la glose n a à b a - ni-in-ak (Kramer, AnSt.
+30, 7 sq. = CT 58, 42:79) et à m u - u n -ak (Thureau-Dangin, RA 19, 184 sq. rev. 24).
+-ni = {ak} (précédé ou suivi de /i/): ä e 2- e m - m a - n i- i n- ni(ni/i3) (LU 156 W1 [Ur] //
+äe 2-em<<im>>-ma-{ni-in}-ak [W, Ur] // äe 2- e m - ma-ak [x 2] //); n a-m a-ra-
+ab- i 3/ja 3-g in 7 (InEb. 32 B [Ur]) // n a- m a - r a - a b -ak-g in 7 //; comp. infra ja 3 = {ak
++ < a} (3.3.2.1 ppB lex.).
+-n u = {n + ak}: p a 3- e sˇi- m i- n u (VS 2, 4 rev. ii 24 [«Nanna N»]) // sˇi-im-mi-
+i n-ak (Nanna O 30; cf. P. Attinger, NABU 2001/41).
+-p a = {b + ak}: ap - p a (InEb. 112–115 LLL [Tell Haddad; courtoisie A. Cavi-
+gneaux/M. Jaques]) // ab -ak.
+pB lex.
+a = {ak}: Proto-Ea 524; van Soldt, Mél. Houwink ten Cate 280, Side A ii 14
+(= e-pe2-sˇum); MSL 14, 120 n° 7 ii 21 (= sˇa-ka-nu-um).
+( a-k a ): V. infra 3.3.2.1 pB lex. à propos de {ak + a}.
+n a = {n + ak}: Proto-Ea 525; van Soldt, Mél. Houwink ten Cate 280, Side A ii 15
+(= e-pe2-sˇum).
+ppB litt.
+[…-j]a-ka // in- ak: Alster, OLP 21, 16, 4:9 E(mar).
+(n a ): Cf. -ak = -n a 3 dans d igˆ ir- a - n a 3 (Incantation à Utu 135 C + E [cassite]) //
+[digˆ ir]-ra-n a .
+ppB lex.
+a = {ak}: Ea VIII 23 (= {e-pe}-sˇum).
+( a-) ak = {ak}: SbB 291 (= e-pe-[sˇu] // ak-ku!-u2 [nom du signe]).
+a-[x] = {ak}: Ea VIII 25 (= MIN ({e-pe}-sˇum)); probabl. a-[ak], pas a-[ka]; comp.
+SbB 291).
+22 Prov. inc. (pas de Nippur!); cf. M. Civil, Mél. Wilcke 77 n. 3.
+",,eng,,True,1648325058.1233559,
+10,"56
+Pascal Attinger
+agˆ 2 = {ak} (ES): Nabnitu VII 125 (= 5 (e-pe-sˇu) EME.SAL) et 126 (= 6 sˇa up-pu-sˇi)23.
+ak = {ak}: Aa VIII/1:54 (= MIN (e-pe-sˇu)).
+na-a = {n + ak}: Ea VIII 22 (= [na-bu]-u2 ), Aa VIII/1:51 sq. (= na-bu-u, e-pe-sˇu) et
+Rec. Ea B 14 (= na-[bu-u2]).
+3.1.2 Suivies d’un suffixe
+3.1.2.1 Suivies de { <a}, {<a m }, { <a + <a(loc.)}, {<a + <am}
+Epoque présarg.
+Attestés sont b e 2-ak-a-a (DP 251 ii 5), e-da-ak-ka-am 6 (Ukg. 16 viii 3) et e/m u -
+ak-a = {i/mu + n + ak + <a + <a}(?); cf. supra 2.2.2 pour les difficultés soulevées par ces
+formes.
+Epoque sarg.
+La seule forme notable est la temporelle {i 3-na-ak}-k a dans Kienast/Volk, FAOS 19,
+102 Gir 26:13; cf. supra 2.2.2.
+Ur III écon./jur.
+Pour les temporelles ( u 4) (…)-ak-a  = {(…) ak + <a + <a}(?), cf. supra 2.2.2. Noter la
+gr. non-standard suivante:
+-na-ak- a = {n + ak + <a + <a}(?): b a-n a-ak- a  (UET 3, 864:15´); i n - n a -ak-a
+(Amorites 15:6 [Dr., Sˇ 48] et MVN 11, 144:17 [Dr., s.d.]).
+pB litt.
+Usuel est -ak- a(…)/am 3 24. Je ne connais que trois gr. non-standard, qui plaident res-
+pectivement pour /ag/, /k/ et /ak/!
+-ak-ga = {ak + <a}: Glose {x}(-)ak-g a à in-ak-a dans Ammisaduqa 1:17 (Ni.).
+-ka-a = {ak + <a}: b i 2- in -{ ka-a} -b [a] (LSU 72 PP [prov. inc.]) // b i 2-in-ak-
+a-bi .
+-n a -ak-ka = {n + ak + <a}: m u - r a -na-ak-k a (Cavigneaux/al-Rawi, ZA 92, 32 iv 13
+[Tell Haddad]).
+3.1.2.2 Suivies du génitif
+Ur III
+-ba-ka = {ba + ak + ak}: NP e 2-e-na-ba-ka (NG 113:5, 19 et 49 [Lag., s.d.]);
+comp. le NT m u - r i- a - n a - b a -ak-ka-sˇe 3 (gén. (+ gén.) + term.) dans UET 3, 378:11
+(IS 5). Cf. supra 3.1.1 Ur III écon./jur. s.v. -b a = {b a + AK}.
+3.1.2.3 Suivies de - esˇ/e sˇ 2( - a )
+Ecrit normalement -ak-esˇ/esˇ 2( - ( sˇ)a ) (e.g. bi 2-in-ak-esˇ 2 dans NG 113:24). Les gr.
+non-standard sont rares et plaident pour /ag / (pB, ppB), /a k/25 (pB, ppB) et /k/ (Ur III, pB).
+23 Cf. M. Schretter, Emesal-Studien 145 et A. R. George, OLA 40 (1992) 388; j’ai mes
+doutes quant à la correction de cette équation, mais remarquer que dans LU 156,
+Ni. 4296 (ISET 3, 131) a apparemment «m e ä e 2-em-[ma]-na-agˆ 2» au lieu de
+ä e 2- e m - m a -ak //.
+24 Noter toutefois m a - n i-ak-ke 4- e sˇ 2 (SˇY 8) = {m u + a + n i + ak + <a + a k +
+esˇ(adv.)}; ak recouvre ici /a k a/ (comp. m a - n i - de2- a - k e 4- e sˇ 2 à la l. précédente).
+25 J’ai adopté dans ces lignes la lecture ke 4 (pas g e 2) de kid, laquelle n’est toutefois pas
+assurée; cf. provisoirement ELS 259, mais remarquer que la gr. non-standard -ke1 est
+",,eng,,True,1648325058.1374972,
+11,"A propos de ak «faire» (I)
+57
+Ur III
+-ke 4- e sˇ- sˇa-a = {ak + esˇ + <a + <a( lo c .)}: in-ke 4-esˇ-sˇa -a (PDT 1, 528:19 [Dr.,
+SˇS 6]).
+pB litt.
+-ak-ge-esˇ = {ak + esˇ}: i 3-ak-ge-esˇ (Ningˆesˇzida aux Enfers 48 sq. E).
+-ke 4- e sˇ = {ak + esˇ}: {m u} -na-ke 4-esˇ (Lugalb. I 108 G [Ni.] // m u -n a-ak-esˇ //);
+mu-un-ke 4- e sˇ (Enl. sudr. 142 KKK // im - m a ( - a n ) - ak- e sˇ (A1 et P]); sˇi-ma-an-
+ke 4-esˇ (Isˇme-Dagan WA 96 [Ur]). Epigr. peu clair est li- bi 2-ke 4- {x} dans Dial. 2:195 A
+(Ni.) // [li-b ]i 2-in -ak-esˇ.
+- n a-ak- e sˇ = {n + ak + esˇ}: m u - [ u ] n - n a -ak-esˇ (U-ezinan 53 B [Ur]) // m u -u n -
+ak-esˇ.
+(-)n a-ke 4-en-esˇ = /n/ + {i + n + ak + esˇ}: u r- gin 7(-)na-ke 4-en-esˇ (GiÄ A 187
+KiA [Kisˇ]) // u r-g in 7 i 3-ak-en-ze 2- en ; la forme semble corrompue.
+ppB litt.
+-ak-ge-esˇ = {ak + esˇ}: m u - n i - i n -ak-ge-esˇ (CT 17, 31:18).
+3.2 Dans les formes äamtu conjuguées impératives
+Dans les formes suivies de {a}, les gr. non-standard pB plaident pour /k/ (Nippur) et /ak/
+(Suse, prov. inc.), dans les formes suivies de {n i} pour /a/ (Ur); cf. aussi supra 2.2.1 et n. 6 et 7.
+pB litt.
+a-ni = {ak + n i}26: [ gˆ esˇ- t] u 9gˆ esˇtu(-)ga-a-ni (U-ezinan 162 G1 [Ur]) // gˆ esˇ- t u 9gˆ esˇt u
+a-[…] (O2 [Isin]) // […] a-[x] (L [Ni.]) // gˆ esˇ- t u 9gˆ esˇtu ak-n i (G [Ni.]). Que trois dupl.
+aient une gr. non-standard est surprenant, mais le passage ne me semble pas souffrir d’au-
+tre interprétation.
+ak // ak-a : FI 37 E et F (Ni.)(?)27, LU 383–384a J’ (Ni.) et V’ (Ur) // ak-a  (A [prov.
+inc.]) et B [Ni.]); notable est aussi EnlSud 97 sq. L, qui a k a à la l. 97, mais ak à la l. sui-
+vante (// ak-a  dans S1 [Suse])28. Ici, ak recouvre certainement /a k a/ (cf. 2.2.2).
+ak-ga-ab = {ak + a + b}: [b ]ar !- ta m ak-ga-ab = be 2-er (Foxvog, Mél. Sjöberg
+168 i 17 [prov. inc.]).
+ak-ka-a = {ak + a}: RCU 15:13 (Suse, texte syll.) = dim2-usˇ.
+ak-ka-a-a = {ak + a}(?): RCU 10:17 (Suse) = e-pe-sˇa 3 (impér. 2e pl.!).
+ka = {ak + a}: EnlSud 97 L (Ni.) // ak-a (S1 [Suse]); v. supra à propos de ak // ak-a .
+k[a]-ab = {ak + a + b}: FI 6 C (Ni.) // ak- ab //.
+(-)n ag-ab = /n/ + {ak + a + b}: a n - n u -un(-)n ag-ab (FI 6 A3; nag clair sur la
+photo) // e n -n u -ugˆ 3 ak- ab //.
+moins rare que je ne le croyais, et même déjà attestée à Ur III (MVN 16, 657:2 [Um.,
+IS 2]).
+26 Pour la lecture B-n i (pas B- i 3), cf. ELS 299; ajouter en -e // e3-n i (Samsuiluna A
+38) et sˇu b -n e (FI 43 sq. A4 [Tell Hadad]) // sˇu b - n i .
+27 Dans a -sˇa 3 k i gˆ 2- zu ak (// a-sˇa 3 kigˆ 2-za [A3, prov. inc.] //) n a-an-na-ab-
+b e 2(-en ); le passage est toutefois d’interprétation délicate, raison pour laquelle je
+n’inclus pas -z a parmi les gr. non-standard de l’impératif (= {zu + ak + a}!?).
+28 Dans Äammurapi A segment C 14´ sq., ak est probabl. aussi un impératif, mais le
+contexte est cassé.
+",,eng,,True,1648325058.154185,
+12,"58
+Pascal Attinger
+3.3 Dans les formes äamtu non conjuguées
+Les formes non conjuguées de ak posent des problèmes particulièrement épineux,
+parce que le graphème ak peut recouvrir: 1) {ak + Ø} = /a( k )(?)/; 2) {ak + <a} réalisé
+probabl. /ak<a/ v.s.; 3) {ak + e d }  =  k e 3-d . Il s’ensuit que nos interprétations dépendent
+essentiellement du contexte, et que le risque de s’enfermer dans un cercle vicieux n’est
+pas moindre. Pour ne prendre qu’un exemple: Dans le topos fréquent pronom pers.-g in 7
+ak (A/III 76, a k 7), ak est la forme de loin la mieux attestée (Dial. 3:182 [au moins × 1,
+Ur], Edubbâ 2:84 [× 4, Ni., Ur, Kisˇ, prov. inc.], 131 [× 1, Ur], 158 [× 2, Ni.], GiÄ A 51 ± //
+53 [× 6: × 5 Ni., × 1 Ur], Ninsˇatapada-Rim-Sîn 33 [× 2, prov. inc.]; je ne connais qu’un
+seul ex. de ak- a (SP 1.149 C [Ni.]) et de ak-e (Edubbâ 2:158 UU [prov. inc.]). Il serait en
+conséquence tentant de traduire non pas «qui est fait comme moi (/…)», mais «qui agit
+comme moi (/…)» (ainsi par ex. K. Volk, Saeculum 47 [1996] 201). A en juger toutefois
+d’après les gr. non-standard, ak est probabl. une orthographe archaïque de ak-a , conser-
+vée dans une expression qui devait être fréquente déjà avant l’ép. pB29. Noter surtout
+a-ka (GiÄ A 53 SiD [Sippar]), - gin 7(-)na-ka (Edubbâ 2:158 E [Ni.] et GiÄ A 51 SiD
+[Sippar]) et gin 7(-)na-ke 4 (Edubbâ 2:84 L [prov. inc.] et Ur230). Des problèmes com-
+parables sont soulevés par u m u m ak (v. 3.3.1).
+3.3.1 {ak + Ø}, {ak + ak + Ø}
+{ak + Ø} et {ak + <a} ne commençant à être distingués graphiquement qu’à partir du
+milieu du règne de Sˇulgi (cf. 2.2.2), je limite ma discussion à l’ép. pB (textes litt.).
+ak recouvre le plus souvent {B(ä.) + Ø} (type dub-s ar ) ou {B(m.) + e d } ( ke 3-d ),
+ces deux formes étant souvent difficiles à distinguer dans la pratique. Beaucoup plus ra-
+rement, il correspond à {ak + <a} (cf. 2.2.2 avec n. 9 et 3.3). Je ne connais qu’une éven-
+tuelle gr. non-standard:
+(-)m a- k a = /m/ + {ak + Ø} ou /m/ + {ak + <a}: umum(-)ma-ka (Enlilbani A 178
+E [Isin]) // [ u m u ] m ak (A). Que {ak + Ø} soit réalisé / a k a / serait très surprenant. Ici
+aussi, je penche pour ak = {ak + <a}31.
+3.3.2 {ak + < a}, {ak + ak + < a}
+V. en général supra 2.2.2. Noter les graphies non-standard suivantes:
+3.3.2.1 {ak + < a}
+Ur III
+ak-ga = {ak + <a}: TMH NF 1/2, 286:7 (Ni., s.d.; cf. M. Civil, JCS 32 [1980] 229) et
+UET 3, 350:3 (SˇS 7; coll. W. Sallaberger); pas rare à Isˇan Mizyad (cf. les exemples cités
+par M. Hilgert, HSAO 9 [2004] 75); AAICAB I/3 pl. 192, A 37 l. tr. iv 1 (Um. Sˇ 35).
+29 Pour un phénomène comparable, cf. la construction archaïque de sˇu  ti («approcher
+qqc. de la main») dans le topos a igi-na (v.s.) sˇu  ti (P. Attinger, ZA 85 [1995] 137).
+30 Suivi de k igˆ 2- sˇa 4; vu u 3- m u - e -ak/[ak] dans L et Ur2, une réinterprétation par
+l’agentif ({ak + e}) semble peu vraisemblable. Envisageable serait en revanche une gr.
+non-standard de k e 3- d .
+31 En contexte, u m u m ak (A/III 107 sq.) est souvent ambigu, pouvant signifier tant
+«qui instruit» que «qui a été instruit», «qui se comporte en homme cultivé».
+",,eng,,True,1648325058.171658,
+13,"A propos de ak «faire» (I)
+59
+Ak-ka = {ak + < a}: MVN 21, 270:3 (Um., Sˇ 21), UTAMI 3, 1624:2 (Um., AS 8),
+MVN 21, 81:3 (Um., SˇS 3) et peut-être UET 3, 717:2 (s.d.).
+ga = {ak + < a}: Zettler, BBVO 11, 294, 6 NT 618 rev. 13 (Ni., SˇS 7); cf. M. Such-
+Gutiérrez, MVS 9/I (2003) 155 et n. 631. Peu claire est la structure de p ara10(-)ga (dans
+i 3- gˆ esˇ R) au lieu du plus fréquent p ara10 ak à Ur III (cf. H. Waetzoldt, BSA 2 [1985] 84
+sq.). C’est soit un génitif de p a ra10- g «toile grossière» (ainsi probabl. à l’ép. pB [vu la ré-
+gularité de -g a], peut-être suite à une réinterprétation fautive), soit une graphie non-stan-
+dard de p a ra10 ak. Comp. aussi n a m - gu 2-ka/ga à l’ép. pB (v. infra 5.304 n am -gu 2
+ak).
+ka-asˇ = {ak + < a + sˇe}(?): Zettler, BBVO 11, 295, 6 NT 634:1 (Ni., SˇS 4); comp.
+ak- a sˇ dans NG 121:9.
+pB litt.
+a-ka = {ak + <a}: GiÄ A 53 SiD (Sippar) // ak // (v. supra 3.3); Cavigneaux/al-Rawi,
+ZA 85, 21 MA 9 (// ak(- a )) et 171 MA 26 (Tell Haddad).
+ak-ga = {ak + <a}: YOS 11, 70 iii 23 sq. (coll. Cavigneaux/al-Rawi, ZA 85, 32); cf. in-
+versément ak-g = (?) agˆ 2 (5.23 a 2 «ak» ( ag ) (E)).
+ak-ka-a = {ak + < a}: n igˆ 2 ak- ka - a - gin 7 (Cavigneaux/al-Rawi, ZA 85, 185 MA 11
+[Tell Haddad]) // n i gˆ 2 ak- a - gin 7.
+(-)gˆ a 2-k a = /gˆ/ + {ak + < a }: n i gˆ 2( - ) gˆ a 2- k a (Cavigneaux/al-Rawi, ZA 92, 26 i 20 et
+32 iv 13 [Tell Haddad]); n i gˆ 2( - ) gˆ a 2- k a- n e (id., ZA 85, 25 MA 39 [Tell Haddaf] // n igˆ 2
+a[k]-a-n i ).
+ka = {ak + <a}: DuDr. 194 J’ (prov. inc.) dans n igˆ 2-mussa xs a 2 ka-me-en // ak-
+a-me-en (probabl. × 2) // ak- m e -{en} (z); Emesˇ-enten 192 dans (enim äa-ab-lum )
+ka32 // enim äa-ab -lu m ak33; Cohen, Ersˇemma 123 n° 163:24 C (prov. inc.) // ak-a ;
+Lugalb. II 144 DD (Ni.) // ak (contexte obscur). Comp. inversément -ak = /k a/ dans
+gˆ a 2- {gˆ esˇ} ! ?- sˇu 2-a-ak (Lipit-Esˇtar A 28 B [prov. inc.]) // gˆ a 2-gˆ esˇ- sˇu 2-a-ka //.
+ka-an-ni = {ak + <a + a n i}: Dans n igˆ 2- äu !-lu di-ma
+{ka-an-ni} =
+nigˆ 2-ä u l u  d i m 2- m a ak-a-ni (Cavigneaux/al-Rawi, ZA 92, 30 iii 1134 [Tell Haddad]).
+(-)n a-ak = /n/ + {ak + < a }: - gin 7( - ) n a -ak = - gin 7 ak (Edubbâ 2:131 Ur4); cf. su-
+pra 3.3.
+(-)n a - k a = /n/ + {ak + < a}: -gin 7(-)na-ka = gin 7 ak (Edubbâ 2:158 E [Ni.] et GiÄ
+A 51 SiD [Sippar]); cf. supra 3.3.
+(-)n a-ke 4 = /n/ + {ak + < a}(?): Cf. 3.3 et n. 30.
+pB lex.
+a-ka = {ak + <a}: Proto-Ea 528 et MSL 14, 120 n° 7 ii 22–25 = pataqum, kanasˇum, za-
+qapum et äussusum
+ppB litt.
+(-)k a = (/gˆ/) + {ak (+ < a )}: sˇi-{ iq} -qa-a-ri(-)ka (Cooper, ZA 62, 72:16 ST).
+J’ignore si (-)k a recouvre {ak + <a}, /gˆ/ + {ak}, ou même /gˆ/ + {ak + <a} (/garikka/); vu
+l’absence de gémination, cette dernière possibilité est la moins vraisemblable.
+32 Variante citée par le PSD A/III 88, 8.105; on peut hésiter entre d u11 et k a (à mon sens
+le plus probable).
+33 Précédé de sa-a et suivi de du11- ga , ce qui plaide pour ak = {ak + < a}.
+34 {ka-an -n i} a peut-être été raturé.
+",,eng,,True,1648325058.190464,
+14,"60
+Pascal Attinger
+ppB lex.
+ja 3 = {ak + < a}: gˆesˇzu 2 pesˇ ni gˆ esˇnimbarx (Ää. III 372 S1 [néobab.]) // gˆ esˇzu 2
+pesˇ 5 ak- a gˆ esˇnimbarx.
+3.3.2.2 {ak + ak + < a}
+pB litt.
+ak-ka-ka = {ak + ak + <a} : ak-ka-ka-bi = ak.ak-a-bi (Cavigneaux/al-Rawi, ZA
+92, 30 iii 14 [Tell Haddad]).
+3.4 Dans les formes marû conjuguées
+A la 3e sg., graphie standard et non-standard plaident pour a 5-k  ou ak , l’apérèse du
+/a/ initial étant assez exceptionnelle. A la 3e pl. en revanche, /k/ (-ke 3-n e ) semble as-
+suré; la même chose vaut peut-être pour les 1res et 2es sg. (et pl.?) après voyelle et partiel-
+lement après consonne (cf. a - r a 2 ib2-ak-n a-b i «sa voie que je dois faire» = «comment
+je dois procéder» [TMH 6, 4:8 et 12 et 15:17; Ur III] et infra 3.4.1 pB litt. s.v. -m u -ke 4 =
+{m u + ak + e n}, a-na ib2- ak- n a- b i «ce que je dois faire» [Römer, AOAT 240, 420:8],
+a-gin 7( - ) n a m -a k- n a- b i «comment je dois procéder» [YOS 11, 40:10], n igˆ 2 a b -
+ak.ak-na-zu «ce que tu fais» [SP 1.37]), mais des formes avec /a/ initial sont loin d’être
+rares (avant tout à l’ép. ppB, toujours après consonne).
+3.4.1 1re et 2e sg. et pl. marû
+A Ur III suivi de {<a} écrit -ak- n a- (v. supra 3.4), ensuite -ak-en(-de 3-en/ -
+ze 2-en ), et, suivi de {<a}, ak(.ak)- n a - (v. supra 3.4) ou -ak-en -n a(-) (par ex. UHF
+192, 717 et 822). Noter les gr. non-standard suivantes:
+pB litt.
+-ba-ke 4 = {b + ak + e n} (1re sg.): mu-na-ab-ba-k[e 4]  (U-ezinan O1 [Ni.]) //
+m u - n - a b -ak- e //.
+-kigˆ 2- ne // -ak.ne (1re sg.): {i 3- kigˆ 2- ne} (GiTa. 132 Ma [Tell Haddad]) // i 3- ak.ne
+(Mb); peu clair.
+-mu-ke 4 = {m u + ak + e n} (2e sg.): nam-mu-ke 4 (Instr. Sˇur. 61/66 K1 [Kisˇ]) //
+n a m - m u -ak-{en} (Ur 3) // n am - mu.e.ak- e n (P [prov. inc.]) // [… m ] u - g u 7-me-en
+(Ur1) //. mu.e étant certainement prononcé /me/, cette gr. plaide également pour /nam-
+meken/ v.s.; [… m ]u - gu 7-me-en est singulier (et fautif!), mais -g u 7- doit remonter à
+/ke/.
+-mu.e.ak-en = {m u + ak + en}: Cf. s.v. -m u -ke 4.
+-m u - gu 7-me-en : Cf. s.v. -mu-ke 4.
+ppB litt.
+-b a -ak- a = {b + ak + e n } (2e sg.): ib2-ba-ak- a  (Misˇ Pî 6/8:25 A et D) // ib2-ba-
+ak-a-en (C) // [i]b2-ba-ke 4 (B).
+-b a -ak-a-en = {b + ak + en }: Cf. s.v. -b a-ak-a .
+-ba-ke 4 = {b + ak + e n}: Cf. s.v. - b a -ak-a .
+-n a - a k 35-ke1 = {n + ak + en} (2e sg.): mu-un-na-ak-ke (Alster, OLP 21, 4:19
+E(mar) version syll.) //m u - u n - n a- n a (ib. version «standard»!).
+35 Translitération - a k - parce que c’est un texte syll. (- a 5-  peu vraisemblable).
+",,eng,,True,1648325058.204554,
+15,"A propos de ak «faire» (I)
+61
+-na-ka = {n + ak + e n}: Cf. s.v. -na-ak-ke1
+- na-k e 4 = /n/ + {ak + e n} (2e sg.): mu-an-na-ke 4 (Examenstext A 51 O [Uruk] //
+na- an -ak-a //.
+3.4.2 3e sg. marû
+V. en général Klein, SˇP p. 29 et n. 162. Avant l’ép. pB écrit normalement -ak-ke 4, en-
+suite -ak-e (usuel)36 ou -ak- k e 4 (surtout dans les hymnes de Sˇulgi dont l’orthographie
+n’a pas été modernisée, très rarement sinon). Noter les gr. non-standard suivantes:
+Ur III
+-a-ke 4 = {ak + e}: i 3-a-ke 4 (TMH NF 1/2, 294:7 [Ni., SˇS 5]).
+- b a-ak- k e 4 = {b + ak + e}: i 3- b a -ak-ke 4 (UNT 32 i 2 [partiellement cassé], iii 6,
+rev. i 9 et [rev. ii 1] [Lag., s.d.]).
+-ke 4 = {ak + e}: äe 2-ma-ke 4 (TCS 1, 198:9).
+pB litt.
+-ak- k e1 = {ak + e}: b a -ak- k e (Cavigneaux/al-Rawi, ZA 92, 28 ii 14 [Tell Haddad]).
+-ke 4 = {ak + e}: e- ke 4 (CA 221 Y2 [Ni., mais très fautif] // äe 2- ak-e); n a-ke 4 (FI
+79 A4 [Tell Haddad]) // na - a n -ak- e  //; cf. infra 5.464 sˇu(-)äu m ak.
+- n a-ak-e = {n i + ak + e}: n a - a n - n a -ak-e (FI 79 A3 [prov. inc.] // n a-an-ak-e  //;
+cf. infra 5.464 sˇu (-)äu m ak); RCU 22:34 B et C (Ni.) // n a-an-ak-e (var. citée par le
+PSD A/III 110, 9.10); […]- n a - ak-e (Isˇme-Dagan A 400 I [Ur] // ä u - m u - u n -ak-e ).
+-na-e = {n i + ak + e}: na-na-e (FI 79 C3 [prov. inc.]) // n a-an-ak-e // (cf. infra
+5.464 sˇu (-)äu m ak); l’amuïssement du /k/ intervocalique mérite d’être relevé, car la
+chose est très rare.
+-na-ka = {n i + ak + e}: m u - n a - k a (a-ab-ba ä . 108 B [= CLAM 380:18]) // m u -
+u n -ak-e (A = CLAM 377:a+37).
+-na-ke1 = {n + i + ak + e}: n u - m u - u n - n a- k e (Cavigneaux/al-Rawi, Iraq 55,
+102:32 [Tell Haddad]).
+-pa-ke 4 = {b + ak + e}: äa - r a - a p - p a -{ke 4}  (FI 40 A4 [Tell Haddad]) // äa-ra-
+ab-ak-e  //.
+pB lex.
+a-ki = {ak + e} (?): a- k i {ak} e-pe2-sˇum, {na}-bu-u (van Soldt, Mél. Houwink ten Cate
+281 Side A ii 19 sq. [Tell Hammam et-Turkman]); comme k i ak {e}-pe2-sˇum est enregistré
+à la l. 17, a -k i recouvre plus probabl. {ak + e} que {ak + e d} ( ke 3-d ).
+3.4.3 3e pl. marû
+La gr. standard est -ak- n e (passim), -ak-e-ne n’étant attesté que sporadiquement à
+l’ép. pB (cf. par ex. DuGˆ esˇt. 17 [Ur], In. sˇag. 185 Q [Ni.], Musˇen-ku6 143 G [prov. inc.] et
+Nmsˇ. 116 NiC). Cela plaide pour une lecture - ke 3- n e , laquelle est confirmée par les gr.
+non-standard -ke1- n e , - k e 4-ne et -ke 4-e-ne (cf. déjà D. O. Edzard, ZA 66 [1976] 56
+et n. 220).
+3.4.3.1 Formes non redoublées
+pB litt.
+-ke1-ne = {ak + en e}: n u - m u - u n - k e- n e (VS 2, rev. ii 3´ et 5´).
+36 L’ex. le plus ancien que je connaisse est äe 2- m u - n a -ak-e (TCS 1, 199:6 [s.d.]).
+",,eng,,True,1648325058.21981,
+16,"62
+Pascal Attinger
+- k e 4-ne = {ak + ene}: m a-ra-ke 4-ne (Nmsˇ. 116 NiQ) // ma-ra-ab-ke 4- n e
+(NiTT et LaC3) // m a - r a -ak- n e (x 3) //.
+ppB litt.
+- k e 4-e-ne = {ak + en e}: äa-ma-ab-ke 4-e-ne (Angim 161 cC [mA]) // ä a-ma-
+ak-n e (version pB).
+3.4.3.2 Formes redoublées
+pB litt.
+- k e 4-ke 4-ne = {ak + ak + ene}: im-mi-in-ke 4-ke 4-n e (Cavigneaux/al-Rawi,
+ZA 85, 21 U 4´ [Ur]) // im - m i- in -ak.ak-[n ]e (C 6) //; cf. supra 2.2.3 ex. 4.
+3.5 Forme marû non conjuguée
+Que {ak + e d} était prononcé ke 3-d , avec aphérèse du /a/ initial, a été bien mis en
+évidence par M. A. Powell (Mél. Diakonoff 314–319, surtout 317 sq.), et les quelques gr.
+non-standard nouvelles ne font que confirmer son hypothèse.
+pB litt./textes math.
+g e18(?): { hub2-sar}(-)gin7 (InEb. 3 JJJ [Tell Haddad]; courtoisie A. Cavigneaux/
+M. Jaques) // äu b2- sa r ( - ) re - gin7 (B [Ur]) // äu b2-dar ak (× 5). Soit on a affaire à
+une gr. non-standard de ke 3-d (lire ge18 // (-r )e-ge18, /e/ remontant au /a/ initial ex-
+ceptionellement préservé), soit à une contamination par SˇA 48 äu b2 s ar-s ar-re-g in 7
+(remarquer que les deux dupl. ont äu b2-sar [comme dans SˇA!], pas äu b2-dar ).
+gid 2: gid 2-da-zu-ne (textes math.); cf. Powell, op. cit. 317 et 319 n. 26.
+ke : Dans ke-ta = ke 3- d a (UET 6, 123:45 [catalogue littéraire] = incipit de LSU) et
+peut-être k i-gˆ u10- ta (SumLet. B 16:15 A et B [Ur] // ak- gˆ u10-ta (F et I [Ni.]); sur les
+problèmes suscités par ce passage, v. infra 5.257 l i b - b a r ak.
+ke-ek-ke = ke 3-ke 3: RCU 10:15 (Suse).
+ke 4: ke 4- ta (FI 72 A4 [Tell Haddad]) // ke 3-de 3.
+ke 4 ! ?- k e 4 ! ?-e-de 3 = ke 3- k e 3- d e 3(?): SˇA 37 CC (Suse; lecture proposée par
+M.-C. Ludwig, Santag 2 [1990] 146) // ke 3- k e 3-de 3; épigr. très incertain.
+kin(?): Dans les textes math., ke 3-da-zu-ne n’alterne pas seulement avec gid 2-da-
+z u -n e (v. supra), mais aussi avec kin- da-zu-ne , kin-ta-zu(-un )-ne et kin-zu 2- n e
+(cf. J. Friberg, RA 94 [2000] 165, 168, 169, 170 et 171). On peut hésiter entre k igˆ 2 «cher-
+cher» et une gr. non-standard de ke 3-d (lire kin-da-zu-ne < /kiddazune/?).
+k i t 2(tag4): k it 2-ta-zu-un-ne (Baqir, Sumer 6, 42/pl. 1 sq. [après p. 54] 6 [Tell
+Harmal, texte math.]); cf. A. Cavigneaux/F. N. H. al-Rawi, ZA 83 (1993) 190 n. 23.
+(-)na-ke 4 = /n/ + /ak e/(?): Pour - g in 7(-)na-ke 4 dans Edubbâ 2:84 L (prov. inc.)
+et Ur2, cf. supra 3.3 et n. 30.
+(-)re-ge18 = /r/ + /a k e/(?): Cf. s.v. g e18.
+Noter inversément que ak est une gr. non-standard pour: k ad 4/ kid 5 dans g alam
+ke 3-de 3 (EJN 74 H) // ga la m  ka d 4-dam/e //. – «kara2» dans n u - kara2.ak-de 3
+(RCU 1:27 G [Ni.]) // n u - kara2.kara2-de 3 = peut-être /nukerkede/ v.s. //.
+pB lex.
+ke ( - e ) : Proto-Ea 527 et van Soldt, Mél. Houwink ten Cate 280, Side A ii 17 (=
+{e}-pe2-sˇum).
+",,eng,,True,1648325058.2358139,
+17,"A propos de ak «faire» (I)
+63
+ppB litt.
+(k i 3): ak est une gr. non-standard de k i dans k i 3 a = k i agˆ 2 (Incantation à Utu 235
+B [néobab.?]).
+ppB lex.
+ke 4: Erimä. II 173 A.
+k i -i : Ea VIII 24 et Aa VIII/1:53, dans les deux cas traduit par epesˇu.
+4. Ajouts et corrections au PSD A/III 70–76, ak 1–7
+Le lecteur trouvera ci-dessous quelques ajouts et corrections au PSD
+A/III 70–76, ak 1–7. Dans ces lignes, je renonce en général à ajouter des
+références, à moins que je ne les juge intéressantes pour une quelconque
+raison.
+1.3 a-n a(-am 3) ak Cf. A/III 115 sq. bil. 1 et 120 lex. 5. Egalement dans les NP présarg.
+e 2- e-a-n a-ak (Struve 43), e g 2- ge - a - n a -ak (ib.), en-ne 2-a-na-ak (AWEL 19 ii 5),
+eri-gˆ u10-a-n a-ak (Struve 201), gˆ a 2- a - n a -ak (SR 60 i 3) s e s -e-a-na-ak (Struve
+169), dans le NP d’Ur III e 2-e(-a )-na-ba(-ak) et peut-être dans le NT m u-ri-a-na-
+ba-ak/mu-ri-na-ba (v. supra 3.1.1 Ur III écon./jur. s.v. -b a = {b + ak} et 3.1.2.2 Ur
+III s.v. -b a-k a ).
+1.4 a-n a-g in 7 ak Cf. A/III 115 sq. bil. 1.
+3.1 «faire, façonner, construire» On pourrait multiplier les exemples ad libitum. J’ai relevé
+encore au hasard de mes lectures: a 2 kala-ga «côtés solides (d’un panier)» (FI 21), ad
+«poutre, radeau» (passim; pour quelques références, cf. A/III 6, 1.2), ad-t ab ur-ra
+«collier/laisse de chien» (MVN 1, 225:3), u r u d aalan «statue de cuivre» (Isˇme-Dagan A
+300), d a  p u 2 «bord de puits» (InSˇuk. [9]4 // [264] ± // 142), d a tur.tur «…» (SP 3.87)
+e 2 u d u «bergerie» (UTAMI 4, 2397:8), g al z a b a r un grand récipient en bronze (MVN 14,
+443:2; ou «traiter»?), g eg i l i m  s u r- r a  littéralt «poteaux(?) de roseaux tordus» (Roches-
+ter 174:9), g u «fil» (SNATBM 260 iii 24), g u - kilib «balle» (TIM 6, 1 vi 4´), g eg u r-d a
+un panier de roseau (Nabnitu VII 133 = A/III 123 lex. 53), u r u d agur x(sˇe.kin) «faucille»
+(MVN 18 = AulOr.-S 11, 424:2), gˆ esˇ-a-nagˆ  (…), littéralt «Wassertränkholz», d’où
+«(hölzerne) Grabkammer» (Sallaberger) (TIM 6, 10:5 sq.; cf. C. Wilcke, Mél. Vajda 254),
+gˆ esˇ- n u 2 (…) «lit (…)» (UET 3, 772:3–5)37, ib2(.)sa «…» (Peat, JCS 28, 215 n° 27:4 et
+Kutscher, Tel-Aviv 7, 173 n° 2:3), dl a m m a
+dsˇu - dsu en «(la statue d’)un génie de Sˇ.»
+(Owen, ASJ 19, 161/217 n° 50:2), m a 2 «bateau» (Jean, SˇA pl. 75:11´), m a 2(-)da-g a
+«…» (CST 585:3), m a 2- la 2(- a ) «radeau» (AnOr. 1, 62:7 et UTAMI 3, 1911:2),
+g e -
+muru 12 une natte de roseau (SP 14.46; cf. B. Alster, NABU 1999/88), n i gˆ 2-tab «Erhit-
+zer (= Ofen‹platte›?)» (GiEn. 7; trad. de Sallaberger, Töpfer 105), p is agˆ  im  s ar «cor-
+beille pour tablettes écrites» (MVN 18 = AulOr.-S 11, 188:3 et YOS 4, 168:3), sa 2- d u 8
+«…» (passim), su k u 5-kesˇe 2 = tiqnu, une parure (pour le cou/la tête) (Kramer, AnSt. 30,
+7 sq. = CT 58, 42 l. 79), sˇa 3- t u k u 5 «matelas(?)»38 (CST 606:2), u r u d asˇen un chaudron
+en cuivre (MVN 18, 407 rev. 1), sˇu - n ir «emblème» (Inana D 201)39, z a 3- d u 8 «jambages
+37 A distinguer de m u - nu 2 (…) ak (ES) «préparer un lit (…)» (Inana G 50).
+38 Ou «Geflecht» d’après W. Röllig/H. Waetzoldt, RlA 8 (1993–1997) 327.
+39 A dinstinguer de sˇu - n i r ak dans lu 2 sˇu - n i r ak.ak = muäammis sˇur[ini ], «qui dé-
+pouille (de leurs métaux/pierres précieux) les emblèmes» (A/III 129 lex. 201).
+",,eng,,True,1648325058.2546828,
+18,"64
+Pascal Attinger
+(de porte)», «montants de porte» (GiM N v 8 et peut-être Lugale 646)40 et z i 3 «farine»
+(SP 26 D 10).
+3.2 «traiter, préparer» Pour le très fréquent i 3( - gˆ esˇ/nun/sˇaä a/udu/ etc.) ak, littéralt
+«faire l’huile (…) sur qqc. (le plus souvent au loc.-term.41)» = «frotter, imbiber, oindre
+qqc. d’huile (/…)», voir infra 5.186; comp. aussi a ak (B 1) «traiter qqc. à l’eau» (5.2)42.
+Ajouter par ex.
+gˆ esˇa l d u 3(- a )- b i (//) «toutes sortes de pioches» (FI 4043), k asˇ-de 2
+«banquet» (SP 13.14), sˇe  i 3 sik i «orge, graisse et laine» (Rim-Sîn A 19), différents pro-
+duits aromatiques (Lugalb. I 107 sq.), etc.
+On pourrait enfin ranger ici (faute de mieux!) les expressions du type animal femelle
+animal mâle-e ak ou animal mâle animale femelle-e ak, où ak peut être rendu librement
+par «mettre à disposition (pour la reproduction)»; cf. ab2 m aä 2 (…) am-e ke 3-de 3
+(PDT 1, 498:1–4), u d 5 * su 4 masˇ 2 ! ?-e ke 3-de 3 (CST 136:1 sq.; cf. MVN 12 p. 100) et
+gud-ab2 a b2-e ke 3-de 3 (SACT 1, 8:1 sq.).
+3.3 x - ta ak «faire qqc. de/avec qqc.» Une autre acception est «retirer/enlever qqc. de
+qqc.» (cf. par ex. UET 3, 1382:1´ sq. sˇu-nigˆ in 2 n  g u r  /{sˇa 3} nigˆ 2-gur11-ra-t a ba-
+ra-ak «total n gur, ils ont été prélevés des biens disponibles»). Comp. MVN 16, 1638:4
+sq.: 8 m u r g u 2- b a («carapaces de tortue») / gˆ esˇg u-za sˇa 3 e 2-masˇ-ka ba-ra-ak.
+D’interprétation difficile, mais probabl. à ranger ici, est Houe araire 114: gˆ esˇdal-ta (//)
+ku r- r a  u m - ta -ak- en /e (//), littéralt «Après qu’on t’a44 fait loin des poutres en une
+‹montagne›» = «Après qu’on t’a dégagé des poutres et mis en tas» (conj.).
+3.4 x - sˇe 3 «faire N1 en N2», «transformer N1 en N2», «faire N2 avec N1». V. aussi 5.176
+äab2/ äabx-sˇe 3 ak, 5.504 uä- sˇe 3 ak et 5.530 zi-isˇ-da (…)-sˇe 3 ak. Ajouter les
+expressions suivantes, d’interprétation souvent difficile: ab2-ki(-sˇe 3) ak «faire (des
+sillons) en abki» (A/II 170 sq. et R. de Maaijer/B. Jagersma, AfO 44/45 [1997/1998] 287
+sq.), gˆ esˇga r a d in bad- sˇe 3 n u -ak (TSA 28 v 4), gˆ esˇnu x/ gˆ esˇ- n u 2 bois- sˇe 3 (nu-)ak
+(DP 490 i 1 sq. et ii 1), (poutres, planches, montants de portes et roseaux)
+nigˆ 2-ub5- b a - sˇe 345 b a -ak (UET 3, 781:1–6) et peut-être b i - sˇe ki-ba-la-sˇe ak-ka
+= (?) p esˇ 2-e ki-bala-sˇe 3 ak- a littéralt «(endroit) que les souris ont fait en un endroit
+mis sens dessus dessous» (Cavigneaux/al-Rawi, ZA 92, 32 iv 8).
+3.6 V. 5.121 gi16-sa(- asˇ/esˇ 2) ak.
+4. ak ne signifie pas «placer», mais peut tout au plus être rendu librement ainsi. Pour 4.1,
+v. infra 5.261 kusˇlu.ub2:lu.ub2.sˇir ak (etc.), pour 4.2 5.32 ag a/ ag a 3 zi ak46 et pour 4.3
+5.275 t u 9m u - u n - bu ak.
+5.2 V. 5.521 usˇu 3 gigˆ 4 ak.
+6. Noter aussi lu 2 za - gin 3-na ke 3-de 3 (erg.) «l’homme qui travaille le lapis» (InDesc.
+45 // 54 // 62 texte c).
+6.1 et 6.3 V. 5.186 i 3(-gˆ esˇ/nun/sˇaäa/ u d u , etc.) ak.
+40 Probabl. pas dans le sens de «construire», mais de «former»; cf. A. R. George, The Ba-
+bylonian Gilgamesh Epic (2003) 126 sq.
+41 Dans «Lafont Tello 359:1–2», lire tu 9-g e .
+42 Les traductions du type «oil for preparing a water skin» ou «oil was prepared for the
+door […]» ne sont pas précises.
+43 La traduction de Civil (p. 31) «The hoe should work everything» implique que l’ergatif
+ferait défaut dans tous les dupl. (× 7).
+44 L’araire, ou plus précisément les troncs de bois avec lesquels il sera construit.
+45 D’après Civil (Houe araire p. 110), désignerait une sorte de palissade.
+46 Obscur est LU 219 W et E’, mais remarquer que les deux dupl. ont s agˆ (-)sˇe3 (pas
+tu 9!) la-ba-an-ak- e .
+à suivre
+",,eng,,True,1648325058.276317,

@@ -1,0 +1,906 @@
+source_file,row_id,text,label,score,gold_similarity,non_gold_similarity,contrast_similarity,translit_density,line_marker_density,noise_density,short_penalty
+1.  Preliminary pages.txt,67,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+1.  Preliminary pages.txt,124,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+1.  Preliminary pages.txt,206,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+1.  Preliminary pages.txt,207,KBY,unclean,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.7
+10. VII.docx.txt,395,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+"11. VIII. Lamassatum, 154-164.txt",472,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+"12. IX. The children of Elamma, 165-178.txt",141,.............................,unclean,0.3908,0.55,0.0,0.55,1.0,0.0,0.1552,0.4
+"12. IX. The children of Elamma, 165-178.txt",142,.............................,unclean,0.3908,0.55,0.0,0.55,1.0,0.0,0.1552,0.4
+"12. IX. The children of Elamma, 165-178.txt",587,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+"13. X. Ištar-lamassi, 179-188.txt",472,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+"14. XI. Ir_am-Aššur, 189-205.txt",200,rev [ ],unclean,0.3958,0.89,0.0,0.89,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",202,[ ] * x,unclean,0.3358,0.89,0.0,0.89,0.0,0.0,0.1429,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",734,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+"15. XII. Šalimma, 206-210.txt",285,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+16. XIII.docx.txt,1047,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+"2.  Preface, contents, bibliogr.,concord.docx.txt",97,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+"2.  Preface, contents, bibliogr.,concord.docx.txt",121,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+"2.  Preface, contents, bibliogr.,concord.docx.txt",190,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+"2.  Preface, contents, bibliogr.,concord.docx.txt",405,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+"2.  Preface, contents, bibliogr.,concord.docx.txt",543,408 336,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",562,426 345,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",575,439 339,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",594,458 340,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",635,490 258,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",641,496 309,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",651,506 303,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",652,507 277,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",654,509 285,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",655,510 286,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",670,524 333,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",684,558 310,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",703,557 248,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",704,558 247,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",794,170 exp,unclean,0.413,0.775,0.0,0.775,0.5,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1095,247 558,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1096,248 557,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1106,258 490,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1125,277 507,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1140,285 509,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1141,286 510,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1151,296 470,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1158,303 506,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1161,306 517,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1162,307 474,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1164,309 496,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1196,333 524,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1199,336 408,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1202,339 439,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1203,340 458,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1208,345 426,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1225,362 565,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1226,363 566,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1227,364 567,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1243,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+3. Introduction.txt,119,_______|________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0625,0.4
+3. Introduction.txt,120,| |,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.6667,0.7
+3. Introduction.txt,122,_____________________________ |_________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.025,0.0
+3. Introduction.txt,123,| | |,unclean,0.0,0.1833,0.0,0.1833,0.0,0.0,0.6,0.7
+3. Introduction.txt,125,| ∞ fLamassatum |,unclean,0.2427,0.44,0.0,0.44,0.0,0.0,0.1765,0.0
+3. Introduction.txt,126,| _____________________________________|_______________________________ |,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0411,0.0
+3. Introduction.txt,127,| | | | | | | | | |,unclean,0.0,0.2588,0.0,0.2588,0.0,0.0,0.5263,0.0
+3. Introduction.txt,129,| | ∞ |,unclean,0.0,0.11,0.0,0.11,0.0,0.0,0.5714,0.7
+3. Introduction.txt,131,↓ ____________|_____ ↓,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.1364,0.0
+3. Introduction.txt,133,|___________________________________ | _____ |________,unclean,0.0,0.0106,0.0,0.0106,0.0,0.0,0.0556,0.0
+3. Introduction.txt,134,| | | | | | | |,unclean,0.0,0.2538,0.0,0.2538,0.0,0.0,0.5333,0.0
+3. Introduction.txt,136,|______________________ ∞ ∞,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.1111,0.0
+3. Introduction.txt,261,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+"4. I. Six Basic Documents, 1-6.txt",272,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+"5. II. Caravan Documents, 7-53.txt",2070,————————,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.4
+"5. II. Caravan Documents, 7-53.txt",2078,————————,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.4
+"5. II. Caravan Documents, 7-53.txt",2232,1 s —— —— Buṣû,unclean,0.4273,0.575,0.0,0.575,0.6667,0.0,0.2857,0.0
+"5. II. Caravan Documents, 7-53.txt",2233,½ s —— —— ME-labrat,unclean,0.3531,0.6132,0.0,0.6132,0.0,0.0,0.2105,0.0
+"5. II. Caravan Documents, 7-53.txt",2322,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+"6. III. Debt-notes etc., 54-78.txt",1094,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+"7. IV. Other letters, 79-97.txt",865,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+"8. V. Legal records of various nature, 98-120.txt",232,————————————————————————————————,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.4
+"8. V. Legal records of various nature, 98-120.txt",948,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+"9. VI. Memos, lists, notes, 121-144.txt",725,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,5,* ü → ū,unclean,0.2382,0.56,0.0,0.56,1.0,0.0,0.2857,0.7
+Innaya_Vol 2_Translations.txt,6,* ä → ā,unclean,0.2382,0.56,0.0,0.56,1.0,0.0,0.2857,0.7
+Innaya_Vol 2_Translations.txt,7,* ï → ī,unclean,0.2382,0.56,0.0,0.56,1.0,0.0,0.2857,0.7
+Innaya_Vol 2_Translations.txt,8,* ë → ē,unclean,0.2382,0.56,0.0,0.56,1.0,0.0,0.2857,0.7
+Innaya_Vol 2_Translations.txt,9,* Replace … <unk>,unclean,0.3676,0.665,0.0,0.665,0.0,0.0,0.2647,0.0
+Innaya_Vol 2_Translations.txt,21,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,26,________________,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,70,===================================,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.4
+Innaya_Vol 2_Translations.txt,101,²³« Paie,unclean,0.1455,0.275,0.0,0.275,0.0,0.0,0.125,0.0
+Innaya_Vol 2_Translations.txt,129,²³“Pay,unclean,0.306,0.8625,0.0,0.8625,0.0,0.0,0.1667,0.7
+Innaya_Vol 2_Translations.txt,134,===================================,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.4
+Innaya_Vol 2_Translations.txt,236,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,302,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,349,³⁹ Lamassï,unclean,0.297,0.4125,0.0,0.4125,0.0,0.0,0.0,0.0
+Innaya_Vol 2_Translations.txt,369,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,432,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,452,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,526,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,556,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,572,⁶ʹIf,unclean,0.277,0.725,0.0,0.725,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,582,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,596,"⁶Bur-Assur,",unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,605,¹²m’étaient parvenues,unclean,0.4423,0.6421,0.0,0.6421,0.0,0.0,0.0476,0.0
+Innaya_Vol 2_Translations.txt,613,de,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,614,"¹⁷Saladuwar,",unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,615,"¹⁸ensuite,",unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,638,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,647,"⁶Bur-Assur,",unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,665,"¹⁷Saladuwar,",unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,689,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,712,⁶ʹor,unclean,0.277,0.725,0.0,0.725,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,714,⁶ʹjamais,unclean,0.448,0.8167,0.0,0.8167,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,715,⁷ʹparvenues,unclean,0.212,0.4889,0.0,0.4889,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,722,¹²ʹB[Avv …],unclean,0.3558,0.4083,0.0,0.4083,0.5,0.0,0.0909,0.0
+Innaya_Vol 2_Translations.txt,725,¹⁴ʹà Saladuwar,unclean,0.33,0.4583,0.0,0.4583,0.0,0.0,0.0,0.0
+Innaya_Vol 2_Translations.txt,726,¹⁶ʹétain…,unclean,0.3636,0.7643,0.0,0.7643,0.0,0.0,0.1111,0.4
+Innaya_Vol 2_Translations.txt,729,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,747,⁶ʹbut,unclean,0.211,0.6333,0.0,0.6333,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,749,⁶ʹnever,unclean,0.3958,0.89,0.0,0.89,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,757,¹²ʹB[Avv …],unclean,0.3558,0.4083,0.0,0.4083,0.5,0.0,0.0909,0.0
+Innaya_Vol 2_Translations.txt,761,¹⁶ʹtin…,unclean,0.2566,0.78,0.0,0.78,0.0,0.0,0.1429,0.7
+Innaya_Vol 2_Translations.txt,764,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,797,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,823,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,872,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,881,⁴angrily,unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,916,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,935,⁹••••,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.8,0.7
+Innaya_Vol 2_Translations.txt,951,²⁵qu’on,unclean,0.0118,0.44,0.0,0.44,0.0,0.0,0.1429,0.7
+Innaya_Vol 2_Translations.txt,965,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,979,⁹••••,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.8,0.7
+Innaya_Vol 2_Translations.txt,1009,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1043,²¹réglez,unclean,0.352,0.6833,0.0,0.6833,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,1053,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1077,¹⁶escapes!,unclean,0.2065,0.4813,0.0,0.4813,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,1092,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1111,⁸Su-Enlil,unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,1129,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1143,⁸Su-Enlil,unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,1161,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1183,karum —,unclean,0.415,1.0,0.0,1.0,0.0,0.0,0.1429,0.7
+Innaya_Vol 2_Translations.txt,1186,¹¹à [Salad]uwar,unclean,0.3655,0.5077,0.0,0.5077,0.0,0.0,0.0,0.0
+Innaya_Vol 2_Translations.txt,1194,⁵′à l’ouverture,unclean,0.2791,0.4654,0.0,0.4654,0.0,0.0,0.1333,0.0
+Innaya_Vol 2_Translations.txt,1200,⁹′décision,unclean,0.439,0.8625,0.0,0.8625,0.0,0.0,0.1,0.4
+Innaya_Vol 2_Translations.txt,1204,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1221,karum —,unclean,0.415,1.0,0.0,1.0,0.0,0.0,0.1429,0.7
+Innaya_Vol 2_Translations.txt,1242,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1271,¹⁷[l’expé]dieront,unclean,0.2877,0.6283,0.0,0.6283,0.0,0.0,0.0588,0.4
+Innaya_Vol 2_Translations.txt,1285,²⁴à Saladuwar,unclean,0.396,0.55,0.0,0.55,0.0,0.0,0.0,0.0
+Innaya_Vol 2_Translations.txt,1291,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1313,"¹²afterward,",unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,1337,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1356,⁵jours,unclean,0.376,0.8625,0.0,0.8625,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,1367,¹⁴d’or,unclean,0.405,1.0,0.0,1.0,0.0,0.0,0.1667,0.7
+Innaya_Vol 2_Translations.txt,1368,¹⁶j’apporterai,unclean,0.226,0.55,0.0,0.55,0.0,0.0,0.0714,0.4
+Innaya_Vol 2_Translations.txt,1370,¹⁵qu’ici,unclean,0.2035,0.55,0.0,0.55,0.0,0.0,0.125,0.4
+Innaya_Vol 2_Translations.txt,1375,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1409,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1443,¹⁹”Confiez,unclean,0.439,0.8625,0.0,0.8625,0.0,0.0,0.1,0.4
+Innaya_Vol 2_Translations.txt,1456,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1483,¹⁹”Entrust,unclean,0.3895,0.7937,0.0,0.7937,0.0,0.0,0.1,0.4
+Innaya_Vol 2_Translations.txt,1496,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1517,¹¹veillent,unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,1521,"¹³Kanis,",unclean,0.19,0.4583,0.0,0.4583,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,1523,¹⁵formels,unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,1527,"¹⁹d’Ennam-Aššur,",unclean,0.4298,0.55,0.0,0.55,1.0,0.0,0.0625,0.4
+Innaya_Vol 2_Translations.txt,1533,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1554,"¹³Kanis,",unclean,0.19,0.4583,0.0,0.4583,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,1566,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1579,Kasuwa,unclean,0.151,0.55,0.0,0.55,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,1622,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1630,Kasuwa,unclean,0.151,0.55,0.0,0.55,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,1673,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1690,³Kasu(w)a.,unclean,0.3902,0.6438,0.0,0.6438,0.3333,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,1701,"³′Ils iront [à Kubu]rnat,",unclean,0.4085,0.5908,0.0,0.5908,0.0,0.0,0.04,0.0
+Innaya_Vol 2_Translations.txt,1705,⁸′fermé...,unclean,0.257,0.5,0.0,0.5,0.5,0.0,0.15,0.4
+Innaya_Vol 2_Translations.txt,1710,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1722,³Kasu(w)a.,unclean,0.3902,0.6438,0.0,0.6438,0.3333,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,1744,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1756,⁶profère,unclean,0.286,0.5917,0.0,0.5917,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,1775,¹⁶Kanis,unclean,0.151,0.55,0.0,0.55,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,1778,et,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,1782,et,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,1800,³⁰lorsqu’il,unclean,0.1298,0.4278,0.0,0.4278,0.0,0.0,0.0909,0.4
+Innaya_Vol 2_Translations.txt,1801,³²mentionnera,unclean,0.22,0.5,0.0,0.5,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,1811,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1826,¹⁰wrote,unclean,0.3958,0.89,0.0,0.89,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,1840,¹⁶Kanis,unclean,0.151,0.55,0.0,0.55,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,1858,²⁹Write,unclean,0.3958,0.89,0.0,0.89,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,1874,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,1897,"⁷d’Alabum,",unclean,0.214,0.55,0.0,0.55,0.0,0.0,0.1,0.4
+Innaya_Vol 2_Translations.txt,1940,"³⁴voyageur,",unclean,0.168,0.4278,0.0,0.4278,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,1946,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2013,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2033,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2048,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2070,et,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,2086,¹⁷revendiquez,unclean,0.22,0.5,0.0,0.5,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,2094,et,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,2113,³⁴[envoie-la],unclean,0.184,0.45,0.0,0.45,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,2120,"³⁶Moi,",unclean,0.376,0.8625,0.0,0.8625,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,2128,et,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,2139,⁴⁵confie,unclean,0.19,0.4583,0.0,0.4583,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,2151,⁵³jour…,unclean,0.1774,0.67,0.0,0.67,0.0,0.0,0.1429,0.7
+Innaya_Vol 2_Translations.txt,2154,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2232,"⁴⁰“Do not wor[ry],",unclean,0.3862,0.5687,0.0,0.5687,0.0,0.0,0.0556,0.0
+Innaya_Vol 2_Translations.txt,2253,⁵³day…,unclean,0.207,0.725,0.0,0.725,0.0,0.0,0.1667,0.7
+Innaya_Vol 2_Translations.txt,2256,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2272,⁴contrebande !”,unclean,0.368,0.55,0.0,0.55,0.0,0.0,0.0667,0.0
+Innaya_Vol 2_Translations.txt,2275,⁷ceci :,unclean,0.3958,0.89,0.0,0.89,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,2288,¹⁷oublié,unclean,0.19,0.4583,0.0,0.4583,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,2298,⁹′Il a,unclean,0.207,0.725,0.0,0.725,0.0,0.0,0.1667,0.7
+Innaya_Vol 2_Translations.txt,2310,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2321,⁴contraband!”,unclean,0.2237,0.55,0.0,0.55,0.0,0.0,0.0769,0.4
+Innaya_Vol 2_Translations.txt,2331,¹¹honest.,unclean,0.3994,0.4714,0.0,0.4714,1.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,2359,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2408,⁸′Nous [écrivons],unclean,0.4277,0.6283,0.0,0.6283,0.0,0.0,0.0588,0.0
+Innaya_Vol 2_Translations.txt,2517,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2541,"⁹Iddin-Sîn,",unclean,0.418,0.775,0.0,0.775,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,2544,et,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,2562,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2577,⁷until,unclean,0.376,0.8625,0.0,0.8625,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,2581,"⁹Iddin-Sîn,",unclean,0.418,0.775,0.0,0.775,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,2602,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2623,et,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,2630,et,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,2636,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2650,⁶,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,2665,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2683,⁸d’Ilsu-rabi,unclean,0.221,0.55,0.0,0.55,0.0,0.0,0.0833,0.4
+Innaya_Vol 2_Translations.txt,2704,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2740,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2764,¹²d’accepter,unclean,0.221,0.55,0.0,0.55,0.0,0.0,0.0833,0.4
+Innaya_Vol 2_Translations.txt,2769,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2795,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2808,⁴Baziya,unclean,0.3958,0.89,0.0,0.89,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,2809,⁵réside,unclean,0.3958,0.89,0.0,0.89,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,2816,⁹scelle-le,unclean,0.2065,0.4813,0.0,0.4813,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,2836,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2846,⁴Baziya,unclean,0.3958,0.89,0.0,0.89,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,2874,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2885,Les messag[ers],unclean,0.4431,0.6154,0.0,0.6154,0.0,0.0,0.0,0.0
+Innaya_Vol 2_Translations.txt,2895,"“… est changée”,",unclean,0.4201,0.6929,0.0,0.6929,0.0,0.0,0.1875,0.0
+Innaya_Vol 2_Translations.txt,2916,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2924,The messeng[ers],unclean,0.4474,0.6214,0.0,0.6214,0.0,0.0,0.0,0.0
+Innaya_Vol 2_Translations.txt,2928,“Come!”,unclean,0.355,1.0,0.0,1.0,0.0,0.0,0.2857,0.7
+Innaya_Vol 2_Translations.txt,2955,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,2977,et,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,2980,¹³confie,unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,2986,et,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,2990,¹⁶réaliser,unclean,0.3685,0.7063,0.0,0.7063,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,2995,"¹⁹Sarra-Sîn,",unclean,0.418,0.775,0.0,0.775,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,3009,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,3044,"¹⁹Sarra-Sîn,",unclean,0.418,0.775,0.0,0.775,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,3058,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,3093,³′prends,unclean,0.3955,0.8167,0.0,0.8167,0.0,0.0,0.125,0.4
+Innaya_Vol 2_Translations.txt,3097,et,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,3101,⁹′J’attends,unclean,0.0916,0.4278,0.0,0.4278,0.0,0.0,0.1818,0.4
+Innaya_Vol 2_Translations.txt,3104,"⁸′Saladuwar,",unclean,0.1418,0.44,0.0,0.44,0.0,0.0,0.0833,0.4
+Innaya_Vol 2_Translations.txt,3110,"¹²′Auparavant,",unclean,0.193,0.5042,0.0,0.5042,0.0,0.0,0.0714,0.4
+Innaya_Vol 2_Translations.txt,3117,"¹⁷′quand il l’aura,",unclean,0.3899,0.6029,0.0,0.6029,0.0,0.0,0.1053,0.0
+Innaya_Vol 2_Translations.txt,3122,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,3144,[So],unclean,0.277,0.725,0.0,0.725,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,3152,³′take,unclean,0.207,0.725,0.0,0.725,0.0,0.0,0.1667,0.7
+Innaya_Vol 2_Translations.txt,3160,⁹′I’m waiting,unclean,0.3494,0.575,0.0,0.575,0.0,0.0,0.1538,0.0
+Innaya_Vol 2_Translations.txt,3166,So,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,3181,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,3201,et,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,3208,¹⁷5,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,3233,³²s’,unclean,0.172,0.725,0.0,0.725,0.0,0.0,0.25,0.7
+Innaya_Vol 2_Translations.txt,3237,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,3290,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,3304,⁵à,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,3306,⁷d’Asanum,unclean,0.2093,0.55,0.0,0.55,0.0,0.0,0.1111,0.4
+Innaya_Vol 2_Translations.txt,3313,"⁹Ea-bani,",unclean,0.1994,0.4714,0.0,0.4714,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,3318,¹³qu’Assur-dan,unclean,0.226,0.55,0.0,0.55,0.0,0.0,0.0714,0.4
+Innaya_Vol 2_Translations.txt,3321,¹⁵Assur-dan,unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,3333,²⁵demeurait,unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,3336,"²⁴d’Irnuid,",unclean,0.2178,0.55,0.0,0.55,0.0,0.0,0.0909,0.4
+Innaya_Vol 2_Translations.txt,3337,"²⁵Ahumila,",unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,3354,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,3374,"⁹Ea-bani,",unclean,0.1994,0.4714,0.0,0.4714,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,3398,"²⁵Ahumila,",unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,3415,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,3434,et,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,3443,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,3468,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,3488,⁹cet or,unclean,0.3958,0.89,0.0,0.89,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,3508,²⁶j’étais,unclean,0.2582,0.6179,0.0,0.6179,0.0,0.0,0.1111,0.4
+Innaya_Vol 2_Translations.txt,3522,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,3573,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,3598,"¹¹d’or,",unclean,0.3358,0.89,0.0,0.89,0.0,0.0,0.1429,0.7
+Innaya_Vol 2_Translations.txt,3614,²⁴”Parce qu’,unclean,0.3692,0.61,0.0,0.61,0.0,0.0,0.1667,0.0
+Innaya_Vol 2_Translations.txt,3641,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,3679,²⁴”Because,unclean,0.3895,0.7937,0.0,0.7937,0.0,0.0,0.1,0.4
+Innaya_Vol 2_Translations.txt,3706,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,3739,²⁰considère,unclean,0.33,0.6528,0.0,0.6528,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,3744,²³ceci:,unclean,0.3166,0.78,0.0,0.78,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,3746,"²⁵Kurkuranum,",unclean,0.22,0.5,0.0,0.5,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,3766,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,3804,"²⁵Kurkuranum,",unclean,0.22,0.5,0.0,0.5,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,3824,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,3835,"³[d’Assur]-malik,",unclean,0.3933,0.775,0.0,0.775,0.0,0.0,0.0588,0.4
+Innaya_Vol 2_Translations.txt,3839,⁵à,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,3858,¹⁸Qu’aucun,unclean,0.214,0.55,0.0,0.55,0.0,0.0,0.1,0.4
+Innaya_Vol 2_Translations.txt,3861,et,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,3875,²⁸là où,unclean,0.3958,0.89,0.0,0.89,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,3898,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,3909,⁷wrote,unclean,0.376,0.8625,0.0,0.8625,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,3943,²⁷”Until,unclean,0.3295,0.725,0.0,0.725,0.0,0.0,0.125,0.4
+Innaya_Vol 2_Translations.txt,3958,³⁶arrives…,unclean,0.439,0.8625,0.0,0.8625,0.0,0.0,0.1,0.4
+Innaya_Vol 2_Translations.txt,3968,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4004,²⁴emprunté,unclean,0.2065,0.4813,0.0,0.4813,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,4022,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4042,"¹⁴I’ll come,",unclean,0.4438,0.665,0.0,0.665,0.0,0.0,0.0833,0.0
+Innaya_Vol 2_Translations.txt,4066,³²spending …,unclean,0.3214,0.495,0.0,0.495,0.0,0.0,0.0833,0.0
+Innaya_Vol 2_Translations.txt,4073,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4089,"⁶qu’Ennum-Aššur,",unclean,0.4298,0.55,0.0,0.55,1.0,0.0,0.0625,0.4
+Innaya_Vol 2_Translations.txt,4115,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4144,²²“Wait,unclean,0.2566,0.78,0.0,0.78,0.0,0.0,0.1429,0.7
+Innaya_Vol 2_Translations.txt,4154,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4199,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4241,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4297,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4350,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4395,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4437,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4486,²⁵va le,unclean,0.3958,0.89,0.0,0.89,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,4507,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4542,"¹⁹Afterward,",unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,4574,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4588,⁶d’Ikuppīya.,unclean,0.3814,0.495,0.0,0.495,1.0,0.0,0.0833,0.4
+Innaya_Vol 2_Translations.txt,4595,¹²Kanis :,unclean,0.2829,0.3929,0.0,0.3929,0.0,0.0,0.0,0.0
+Innaya_Vol 2_Translations.txt,4600,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4620,¹²Kanis:,unclean,0.124,0.3667,0.0,0.3667,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,4625,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4646,Si,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,4648,et,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,4664,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4682,If,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,4700,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4716,⁵d’étain.”,unclean,0.434,0.775,0.0,0.775,0.5,0.0,0.2,0.4
+Innaya_Vol 2_Translations.txt,4739,²⁴pourrais-je rembourser,unclean,0.396,0.55,0.0,0.55,0.0,0.0,0.0,0.0
+Innaya_Vol 2_Translations.txt,4742,"²⁴à Saladuwar,",unclean,0.396,0.55,0.0,0.55,0.0,0.0,0.0,0.0
+Innaya_Vol 2_Translations.txt,4754,³⁴Kanis,unclean,0.0,0.33,0.0,0.33,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,4761,³⁸l’âne,unclean,0.415,1.0,0.0,1.0,0.0,0.0,0.1429,0.7
+Innaya_Vol 2_Translations.txt,4768,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4803,²³how,unclean,0.343,0.8167,0.0,0.8167,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,4819,"³⁴Kanis,",unclean,0.124,0.3667,0.0,0.3667,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,4833,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4848,⁷”Partez !”,unclean,0.1876,0.3667,0.0,0.3667,0.0,0.0,0.1818,0.0
+Innaya_Vol 2_Translations.txt,4850,¹³occupe,unclean,0.19,0.4583,0.0,0.4583,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,4863,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4875,⁷”Leave!”,unclean,0.4301,0.9214,0.0,0.9214,0.0,0.0,0.2222,0.4
+Innaya_Vol 2_Translations.txt,4890,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4920,"²¹Ensuite,",unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,4940,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,4987,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5024,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5058,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5069,³Apatananum,unclean,0.212,0.4889,0.0,0.4889,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,5105,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5113,³Apatananum,unclean,0.212,0.4889,0.0,0.4889,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,5149,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5199,à,unclean,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,5207,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5225,⁹beside,unclean,0.151,0.55,0.0,0.55,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,5246,²⁴“I’ll send,unclean,0.3296,0.555,0.0,0.555,0.0,0.0,0.1667,0.0
+Innaya_Vol 2_Translations.txt,5254,to,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,5255,²⁷Būr-Assur.”,unclean,0.3877,0.5,0.0,0.5,1.0,0.0,0.0769,0.4
+Innaya_Vol 2_Translations.txt,5262,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5274,⁵Hurašanum,unclean,0.4065,0.4813,0.0,0.4813,1.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,5288,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5297,⁵Hurašanum,unclean,0.4065,0.4813,0.0,0.4813,1.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,5311,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5338,¹⁵retiens-le !”,unclean,0.368,0.55,0.0,0.55,0.0,0.0,0.0667,0.0
+Innaya_Vol 2_Translations.txt,5344,"¹⁹délicate,",unclean,0.374,0.7139,0.0,0.7139,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,5363,³²d’Elali …,unclean,0.3196,0.55,0.0,0.55,0.0,0.0,0.1818,0.0
+Innaya_Vol 2_Translations.txt,5368,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5422,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5437,"⁷”Auparavant,",unclean,0.1517,0.45,0.0,0.45,0.0,0.0,0.0769,0.4
+Innaya_Vol 2_Translations.txt,5453,²²”Tu chercheras,unclean,0.4469,0.6571,0.0,0.6571,0.0,0.0,0.0625,0.0
+Innaya_Vol 2_Translations.txt,5457,²³”Pourquoi,unclean,0.4098,0.8167,0.0,0.8167,0.0,0.0,0.0909,0.4
+Innaya_Vol 2_Translations.txt,5458,²⁵chercherai-je,unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,5465,“Quand,unclean,0.081,0.55,0.0,0.55,0.0,0.0,0.1667,0.7
+Innaya_Vol 2_Translations.txt,5471,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5503,²³”Why,unclean,0.207,0.725,0.0,0.725,0.0,0.0,0.1667,0.7
+Innaya_Vol 2_Translations.txt,5511,“When,unclean,0.391,1.0,0.0,1.0,0.0,0.0,0.2,0.7
+Innaya_Vol 2_Translations.txt,5517,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5552,"²⁵”Vous trois, Assur-nimrï,",unclean,0.4092,0.59,0.0,0.59,0.0,0.0,0.037,0.0
+Innaya_Vol 2_Translations.txt,5559,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5598,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5656,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5675,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5691,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5729,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5764,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5781,⁸toujours,unclean,0.1994,0.4714,0.0,0.4714,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,5813,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5860,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5917,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,5970,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6020,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6038,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6053,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6066,⁷… très,unclean,0.3358,0.89,0.0,0.89,0.0,0.0,0.1429,0.7
+Innaya_Vol 2_Translations.txt,6074,¹⁸aucune,unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,6079,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6089,⁷… very,unclean,0.2566,0.78,0.0,0.78,0.0,0.0,0.1429,0.7
+Innaya_Vol 2_Translations.txt,6102,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6114,⁴Enlil-bâni,unclean,0.286,0.5917,0.0,0.5917,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,6122,¹⁰Aussitôt,unclean,0.319,0.6375,0.0,0.6375,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,6126,¹²« S’,unclean,0.238,0.5875,0.0,0.5875,1.0,0.0,0.3333,0.7
+Innaya_Vol 2_Translations.txt,6133,¹⁵violents.,unclean,0.412,0.4889,0.0,0.4889,1.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,6137,« Si,unclean,0.172,0.725,0.0,0.725,0.0,0.0,0.25,0.7
+Innaya_Vol 2_Translations.txt,6140,"⁶′sinon,",unclean,0.3955,0.8167,0.0,0.8167,0.0,0.0,0.125,0.4
+Innaya_Vol 2_Translations.txt,6149,¹⁵′va,unclean,0.127,0.6333,0.0,0.6333,0.0,0.0,0.2,0.7
+Innaya_Vol 2_Translations.txt,6160,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6181,¹²”If,unclean,0.127,0.6333,0.0,0.6333,0.0,0.0,0.2,0.7
+Innaya_Vol 2_Translations.txt,6192,‘If,unclean,0.0,0.45,0.0,0.45,0.0,0.0,0.3333,0.7
+Innaya_Vol 2_Translations.txt,6204,¹⁵′go,unclean,0.127,0.6333,0.0,0.6333,0.0,0.0,0.2,0.7
+Innaya_Vol 2_Translations.txt,6215,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6248,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6278,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6290,⁴Sü-Bëlum,unclean,0.4305,0.6071,0.0,0.6071,0.6667,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,6303,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6325,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6337,"⁴Auparavant,",unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,6352,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6376,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6386,"⁴dis ²[à Niw]ahsusar,",unclean,0.4415,0.6132,0.0,0.6132,0.0,0.0,0.0,0.0
+Innaya_Vol 2_Translations.txt,6400,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6421,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6442,¹¹qu’Ibni-Adad,unclean,0.226,0.55,0.0,0.55,0.0,0.0,0.0714,0.4
+Innaya_Vol 2_Translations.txt,6451,¹⁹“Envoie,unclean,0.4202,0.8429,0.0,0.8429,0.0,0.0,0.1111,0.4
+Innaya_Vol 2_Translations.txt,6455,"²⁰Ici,",unclean,0.376,0.8625,0.0,0.8625,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,6505,¹⁹“Send,unclean,0.2566,0.78,0.0,0.78,0.0,0.0,0.1429,0.7
+Innaya_Vol 2_Translations.txt,6535,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6561,et,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,6571,²³vendez-(les),unclean,0.418,0.775,0.0,0.775,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,6668,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6693,et,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,6698,¹²sévère.,unclean,0.4204,0.6857,0.0,0.6857,0.3333,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,6709,…,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6711,…,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6717,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6755,…,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6757,…,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6763,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6772,²<dis>,unclean,0.137,0.725,0.0,0.725,0.0,0.0,0.3333,0.7
+Innaya_Vol 2_Translations.txt,6782,⁶auparavant,unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,6783,⁷ceci :,unclean,0.3958,0.89,0.0,0.89,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,6796,et,unclean,0.079,0.45,0.0,0.45,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,6832,"³²Šamaš-tappā’i,",unclean,0.4015,0.5107,0.0,0.5107,1.0,0.0,0.0625,0.4
+Innaya_Vol 2_Translations.txt,6855,²<say>,unclean,0.236,0.8625,0.0,0.8625,0.0,0.0,0.3333,0.7
+Innaya_Vol 2_Translations.txt,6914,"³²Šamaš-tappā’i,",unclean,0.4015,0.5107,0.0,0.5107,1.0,0.0,0.0625,0.4
+Innaya_Vol 2_Translations.txt,6921,³⁵If,unclean,0.277,0.725,0.0,0.725,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,6933,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,6948,"⁸déposent,",unclean,0.418,0.775,0.0,0.775,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,6958,¹¹déposez-(le),unclean,0.439,0.8042,0.0,0.8042,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,6979,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7022,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7045,¹⁴inscrivez,unclean,0.256,0.55,0.0,0.55,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,7050,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7062,⁶is lo[cated] (?) …”,unclean,0.396,0.6083,0.0,0.6083,0.0,0.0,0.1,0.0
+Innaya_Vol 2_Translations.txt,7075,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7107,¹³′Šūmum-libši,unclean,0.327,0.4125,0.0,0.4125,1.0,0.0,0.0714,0.4
+Innaya_Vol 2_Translations.txt,7109,¹²′l’argent,unclean,0.4156,0.8778,0.0,0.8778,0.0,0.0,0.1818,0.4
+Innaya_Vol 2_Translations.txt,7113,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7142,¹³′Šūmum-libši,unclean,0.327,0.4125,0.0,0.4125,1.0,0.0,0.0714,0.4
+Innaya_Vol 2_Translations.txt,7148,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7157,²D[i]s,unclean,0.4427,0.8625,0.0,0.8625,0.3333,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,7165,²′et …,unclean,0.137,0.725,0.0,0.725,0.0,0.0,0.3333,0.7
+Innaya_Vol 2_Translations.txt,7172,⁹′Eponymie de …,unclean,0.4411,0.6904,0.0,0.6904,0.0,0.0,0.1333,0.0
+Innaya_Vol 2_Translations.txt,7178,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7192,²′and …,unclean,0.355,1.0,0.0,1.0,0.0,0.0,0.2857,0.7
+Innaya_Vol 2_Translations.txt,7205,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7260,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7297,²⁵give,unclean,0.277,0.725,0.0,0.725,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,7312,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7329,⁴ʳQui,unclean,0.211,0.6333,0.0,0.6333,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,7330,⁵ʳai-je,unclean,0.3166,0.78,0.0,0.78,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,7336,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7350,⁴ʳWho,unclean,0.211,0.6333,0.0,0.6333,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,7351,⁵ʳdo I,unclean,0.377,0.725,0.0,0.725,0.5,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,7357,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7375,⁸S’il,unclean,0.391,1.0,0.0,1.0,0.0,0.0,0.2,0.7
+Innaya_Vol 2_Translations.txt,7387,¹′chez,unclean,0.207,0.725,0.0,0.725,0.0,0.0,0.1667,0.7
+Innaya_Vol 2_Translations.txt,7388,²′moi.,unclean,0.407,0.725,0.0,0.725,1.0,0.0,0.1667,0.7
+Innaya_Vol 2_Translations.txt,7389,⁴″Dis,unclean,0.127,0.6333,0.0,0.6333,0.0,0.0,0.2,0.7
+Innaya_Vol 2_Translations.txt,7396,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7414,¹⁰check,unclean,0.3958,0.89,0.0,0.89,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,7423,¹′to,unclean,0.0,0.45,0.0,0.45,0.0,0.0,0.25,0.7
+Innaya_Vol 2_Translations.txt,7424,²′me.,unclean,0.327,0.6333,0.0,0.6333,1.0,0.0,0.2,0.7
+Innaya_Vol 2_Translations.txt,7425,⁴″Say,unclean,0.127,0.6333,0.0,0.6333,0.0,0.0,0.2,0.7
+Innaya_Vol 2_Translations.txt,7432,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7441,²D]is,unclean,0.179,0.45,0.0,0.45,0.5,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,7444,⁴[é]toffes,unclean,0.4315,0.7937,0.0,0.7937,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,7449,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7455,²Sa]y,unclean,0.343,0.8167,0.0,0.8167,0.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,7463,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7485,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7504,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7534,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7561,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7593,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7620,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7641,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7659,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7719,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7740,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7758,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7773,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7785,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7810,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7832,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7846,⁶′tu rendras ? …,unclean,0.4206,0.6571,0.0,0.6571,0.0,0.0,0.125,0.0
+Innaya_Vol 2_Translations.txt,7852,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7869,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7909,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7946,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,7976,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8003,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8036,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8066,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8083,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8097,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8131,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8162,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8186,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8207,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8227,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8245,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8265,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8275,⁹… the counter-va[lue] …,unclean,0.433,0.65,0.0,0.65,0.0,0.0,0.0833,0.0
+Innaya_Vol 2_Translations.txt,8282,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8306,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8327,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8344,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8358,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8377,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8395,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8418,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8439,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8468,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8496,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8514,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8529,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8555,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8578,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8606,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8631,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8663,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8692,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8711,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8727,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8748,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8766,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8775,²à …,unclean,0.046,0.55,0.0,0.55,0.0,0.0,0.25,0.7
+Innaya_Vol 2_Translations.txt,8789,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8795,²to …,unclean,0.391,1.0,0.0,1.0,0.0,0.0,0.2,0.7
+Innaya_Vol 2_Translations.txt,8809,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8852,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8892,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8922,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8948,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8969,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,8988,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9007,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9014,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9028,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9053,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9061,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9075,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9087,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9102,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9112,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9124,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9136,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9169,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9197,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9212,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9222,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9234,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9244,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9312,⁵⁴dépense,unclean,0.3049,0.6179,0.0,0.6179,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,9331,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9415,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9459,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9477,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9488,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9525,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9543,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9554,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9574,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9591,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9611,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9628,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9640,"m’appartenant,",unclean,0.226,0.55,0.0,0.55,0.0,0.0,0.0714,0.4
+Innaya_Vol 2_Translations.txt,9660,"²¹d’Adad-ellat,",unclean,0.1975,0.5077,0.0,0.5077,0.0,0.0,0.0667,0.4
+Innaya_Vol 2_Translations.txt,9675,"³¹Ea-bāni,",unclean,0.357,0.4125,0.0,0.4125,1.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,9688,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9732,"³¹Ea-bāni,",unclean,0.357,0.4125,0.0,0.4125,1.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,9745,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9778,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9808,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9828,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9845,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9860,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9872,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9890,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9905,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9925,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9942,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9957,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9969,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,9986,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10000,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10020,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10037,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10054,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10068,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10083,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10095,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10107,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10116,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10128,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10137,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10147,³Aššur-taklāku...,unclean,0.4436,0.55,0.0,0.55,1.0,0.0,0.0294,0.4
+Innaya_Vol 2_Translations.txt,10151,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10159,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10173,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10184,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10202,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10217,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10229,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10238,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10255,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10269,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10296,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10322,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10346,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10368,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10403,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10436,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10455,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10471,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10521,⁵⁰Quand verrai-je ta bonté ?,unclean,0.4465,0.6202,0.0,0.6202,0.0,0.0,0.0,0.0
+Innaya_Vol 2_Translations.txt,10530,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10587,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10622,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10654,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10682,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10707,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10731,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10752,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10776,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10797,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10807,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10814,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10826,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10835,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10845,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10852,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10862,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10869,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10879,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10886,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10899,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10909,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10919,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10926,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10937,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10945,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10955,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10962,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10974,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10981,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10991,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,10998,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11011,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11021,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11037,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11048,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11063,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11075,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11088,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11097,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11109,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11118,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11134,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11143,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11158,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11170,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11185,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11197,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11212,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11230,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11242,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11251,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11269,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11284,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11299,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11311,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11326,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11338,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11355,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11367,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11380,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11390,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11411,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11429,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11443,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11452,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11469,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11484,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11499,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11509,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11521,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11530,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11542,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11551,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11563,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11572,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11584,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11593,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11613,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11628,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11642,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11651,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11672,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11690,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11699,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11711,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11718,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11728,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11735,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11745,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11752,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11779,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11803,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11823,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11840,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11852,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11862,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11875,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11885,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11899,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11910,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11927,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11941,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11956,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11968,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11981,¹⁵’Selon ¹⁶’la tablette de la Ville … ¹⁷’ensemble … ¹⁸’nous … ¹⁹’votre/vos …,unclean,0.428,0.6635,0.0,0.6635,0.0,0.0,0.1184,0.0
+Innaya_Vol 2_Translations.txt,11984,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,11994,¹⁵’According to ¹⁶’the tablet of the City … ¹⁷’together … ¹⁸’we … ¹⁹’your …,unclean,0.4317,0.6695,0.0,0.6695,0.0,0.0,0.12,0.0
+Innaya_Vol 2_Translations.txt,11997,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12017,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12035,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12044,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12058,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12065,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12075,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12082,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12098,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12111,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12121,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12128,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12138,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12145,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12167,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12188,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12200,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12209,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12221,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12230,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12243,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12253,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12259,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12265,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12271,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12277,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12296,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12310,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12316,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12320,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12333,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12343,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12349,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12355,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12361,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12367,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12373,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12379,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12385,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12391,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12397,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12403,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12419,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12432,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12445,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12455,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12468,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12478,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12492,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12503,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12517,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12528,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12540,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12549,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12561,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12570,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12584,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12595,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12610,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12622,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12638,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12651,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12668,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12680,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12698,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12713,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12730,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12745,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12788,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12827,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12850,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12870,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12882,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12891,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12905,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12916,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12931,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,12943,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13011,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13024,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13034,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13049,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13061,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13076,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13088,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13103,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13115,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13127,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13136,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13148,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13157,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13170,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13180,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13186,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13198,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13207,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13220,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13230,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13242,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13251,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13263,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13272,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13291,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13307,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13321,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13332,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13345,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13355,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13367,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13376,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13391,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13403,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13415,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13424,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13436,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13445,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13460,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13472,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13484,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13493,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13505,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13514,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13526,⸻,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13535,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+Innaya_Vol 2_Translations.txt,13553,=====,unclean,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.7
+RlA_Bibliograph_2026.csv,367,B,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,548,C,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,687,D,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,777,E,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,879,F,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,1141,G,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,1260,H,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,1383,I,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,1461,J,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,1527,K,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,1590,"Kp | Kayalıpınar, Tontafelfunde.",unclean,0.4349,0.5667,0.0,0.5667,0.2,0.0,0.0312,0.0
+RlA_Bibliograph_2026.csv,1628,L,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,1699,M,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,1849,N,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,1948,O,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,2025,P,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,2119,Q,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,2129,R,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,2213,S,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,2486,T,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,2636,U,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,2696,V,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,2724,W,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,2751,X,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,2755,Y,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7
+RlA_Bibliograph_2026.csv,2764,Z,unclean,0.279,0.45,0.0,0.45,1.0,0.0,0.0,0.7

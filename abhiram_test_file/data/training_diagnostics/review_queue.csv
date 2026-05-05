@@ -1,0 +1,251 @@
+source_file,row_id,text,label,score,gold_similarity,non_gold_similarity,contrast_similarity,translit_density,line_marker_density,noise_density,short_penalty
+Innaya_Vol 2_Translations.txt,2493,¹⁸′[Thereupon],gold,0.451,0.8625,0.0,0.8625,0.0,0.0,0.0714,0.4
+Innaya_Vol 2_Translations.txt,714,⁶ʹjamais,unclean,0.448,0.8167,0.0,0.8167,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,1795,²⁹Rédige,gold,0.452,0.6833,0.0,0.6833,0.5,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,2924,The messeng[ers],unclean,0.4474,0.6214,0.0,0.6214,0.0,0.0,0.0,0.0
+Innaya_Vol 2_Translations.txt,5453,²²”Tu chercheras,unclean,0.4469,0.6571,0.0,0.6571,0.0,0.0,0.0625,0.0
+Innaya_Vol 2_Translations.txt,10521,⁵⁰Quand verrai-je ta bonté ?,unclean,0.4465,0.6202,0.0,0.6202,0.0,0.0,0.0,0.0
+Innaya_Vol 2_Translations.txt,717,⁸ʹE[cris],gold,0.4537,0.6857,0.0,0.6857,0.5,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,4808,²⁶I’ll handle,gold,0.4537,0.675,0.0,0.675,0.0,0.0,0.0769,0.0
+Innaya_Vol 2_Translations.txt,5353,²⁷n’aille pas,gold,0.4537,0.675,0.0,0.675,0.0,0.0,0.0769,0.0
+Innaya_Vol 2_Translations.txt,2301,¹⁵′Ikuppiya,gold,0.4538,0.8778,0.0,0.8778,0.0,0.0,0.0909,0.4
+Innaya_Vol 2_Translations.txt,2350,¹⁵′Ikuppiya,gold,0.4538,0.8778,0.0,0.8778,0.0,0.0,0.0909,0.4
+Innaya_Vol 2_Translations.txt,2546,¹²”Ils retiennent,gold,0.4541,0.665,0.0,0.665,0.0,0.0,0.0588,0.0
+Innaya_Vol 2_Translations.txt,6791,¹²‘Nous enverrons,gold,0.4541,0.665,0.0,0.665,0.0,0.0,0.0588,0.0
+1.  Preliminary pages.txt,4,YABLETLERI,gold,0.456,0.55,0.0,0.55,1.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,6744,¹²dātum.,gold,0.456,0.55,0.0,0.55,1.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,6827,²⁹Maṣi-bēli,gold,0.456,0.55,0.0,0.55,1.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,6909,²⁹Maṣi-bēli,gold,0.456,0.55,0.0,0.55,1.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,7368,²Amārum.,gold,0.456,0.55,0.0,0.55,1.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,7404,²Amārum.,gold,0.456,0.55,0.0,0.55,1.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,4042,"¹⁴I’ll come,",unclean,0.4438,0.665,0.0,0.665,0.0,0.0,0.0833,0.0
+Innaya_Vol 2_Translations.txt,10147,³Aššur-taklāku...,unclean,0.4436,0.55,0.0,0.55,1.0,0.0,0.0294,0.4
+Innaya_Vol 2_Translations.txt,2885,Les messag[ers],unclean,0.4431,0.6154,0.0,0.6154,0.0,0.0,0.0,0.0
+Innaya_Vol 2_Translations.txt,7862,⁵′[yo]ur tablet …,gold,0.457,0.7033,0.0,0.7033,0.0,0.0,0.1176,0.0
+Innaya_Vol 2_Translations.txt,7157,²D[i]s,unclean,0.4427,0.8625,0.0,0.8625,0.3333,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,605,¹²m’étaient parvenues,unclean,0.4423,0.6421,0.0,0.6421,0.0,0.0,0.0476,0.0
+Innaya_Vol 2_Translations.txt,6386,"⁴dis ²[à Niw]ahsusar,",unclean,0.4415,0.6132,0.0,0.6132,0.0,0.0,0.0,0.0
+Innaya_Vol 2_Translations.txt,7172,⁹′Eponymie de …,unclean,0.4411,0.6904,0.0,0.6904,0.0,0.0,0.1333,0.0
+Innaya_Vol 2_Translations.txt,1083,"²⁰Ïnah-ilï’s silver,",gold,0.459,0.6667,0.0,0.6667,0.0,0.0,0.05,0.0
+Innaya_Vol 2_Translations.txt,4877,¹³is occupying,gold,0.459,0.6375,0.0,0.6375,0.0,0.0,0.0,0.0
+Innaya_Vol 2_Translations.txt,3108,¹¹′fais-lui porter,gold,0.4604,0.6719,0.0,0.6719,0.0,0.0,0.0556,0.0
+Innaya_Vol 2_Translations.txt,3171,"¹³′with hostility,",gold,0.4604,0.6719,0.0,0.6719,0.0,0.0,0.0556,0.0
+Innaya_Vol 2_Translations.txt,1200,⁹′décision,unclean,0.439,0.8625,0.0,0.8625,0.0,0.0,0.1,0.4
+Innaya_Vol 2_Translations.txt,1443,¹⁹”Confiez,unclean,0.439,0.8625,0.0,0.8625,0.0,0.0,0.1,0.4
+Innaya_Vol 2_Translations.txt,3958,³⁶arrives…,unclean,0.439,0.8625,0.0,0.8625,0.0,0.0,0.1,0.4
+Innaya_Vol 2_Translations.txt,6958,¹¹déposez-(le),unclean,0.439,0.8042,0.0,0.8042,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,1191,³′sont dégagés…,gold,0.4612,0.7183,0.0,0.7183,0.0,0.0,0.1333,0.0
+Innaya_Vol 2_Translations.txt,616,²⁰j’irai,gold,0.4615,0.9083,0.0,0.9083,0.0,0.0,0.125,0.4
+Innaya_Vol 2_Translations.txt,1761,⁷”Innaya,gold,0.4615,0.9083,0.0,0.9083,0.0,0.0,0.125,0.4
+Innaya_Vol 2_Translations.txt,1825,⁷“Innaya,gold,0.4615,0.9083,0.0,0.9083,0.0,0.0,0.125,0.4
+Innaya_Vol 2_Translations.txt,6141,⁹′je dénoncerai,gold,0.4622,0.6808,0.0,0.6808,0.0,0.0,0.0667,0.0
+RlA_Bibliograph_2026.csv,1590,"Kp | Kayalıpınar, Tontafelfunde.",unclean,0.4349,0.5667,0.0,0.5667,0.2,0.0,0.0312,0.0
+Innaya_Vol 2_Translations.txt,4716,⁵d’étain.”,unclean,0.434,0.775,0.0,0.775,0.5,0.0,0.2,0.4
+"2.  Preface, contents, bibliogr.,concord.docx.txt",543,408 336,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",562,426 345,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",575,439 339,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",594,458 340,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",635,490 258,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",641,496 309,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",651,506 303,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",652,507 277,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",654,509 285,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",655,510 286,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",670,524 333,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",684,558 310,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",703,557 248,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",704,558 247,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1095,247 558,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1096,248 557,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1106,258 490,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1125,277 507,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1140,285 509,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1141,286 510,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1151,296 470,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1158,303 506,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1161,306 517,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1162,307 474,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1164,309 496,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1196,333 524,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1199,336 408,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1202,339 439,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1203,340 458,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1208,345 426,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1225,362 565,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1226,363 566,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+"2.  Preface, contents, bibliogr.,concord.docx.txt",1227,364 567,unclean,0.4338,0.665,0.0,0.665,1.0,0.0,0.0,0.7
+Innaya_Vol 2_Translations.txt,6970,²⁰de l’eau,gold,0.4665,0.7063,0.0,0.7063,0.0,0.0,0.1,0.0
+Innaya_Vol 2_Translations.txt,4719,⁶⁵témoins,gold,0.4669,0.8429,0.0,0.8429,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,6075,"¹⁷étoffe,",gold,0.4669,0.8429,0.0,0.8429,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,9396,⁵⁴expense,gold,0.4669,0.8429,0.0,0.8429,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,8275,⁹… the counter-va[lue] …,unclean,0.433,0.65,0.0,0.65,0.0,0.0,0.0833,0.0
+Innaya_Vol 2_Translations.txt,5544,¹⁶”Pour […],gold,0.4676,0.7556,0.0,0.7556,0.0,0.0,0.1818,0.0
+Innaya_Vol 2_Translations.txt,11994,¹⁵’According to ¹⁶’the tablet of the City … ¹⁷’together … ¹⁸’we … ¹⁹’your …,unclean,0.4317,0.6695,0.0,0.6695,0.0,0.0,0.12,0.0
+Innaya_Vol 2_Translations.txt,2282,¹¹honnête.,gold,0.4685,0.7063,0.0,0.7063,0.5,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,7444,⁴[é]toffes,unclean,0.4315,0.7937,0.0,0.7937,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,3163,"⁸′to Saladuwar,",gold,0.4691,0.6904,0.0,0.6904,0.0,0.0,0.0667,0.0
+Innaya_Vol 2_Translations.txt,3329,"²⁰et Adad-re’ï,",gold,0.4691,0.6904,0.0,0.6904,0.0,0.0,0.0667,0.0
+Innaya_Vol 2_Translations.txt,6290,⁴Sü-Bëlum,unclean,0.4305,0.6071,0.0,0.6071,0.6667,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,4875,⁷”Leave!”,unclean,0.4301,0.9214,0.0,0.9214,0.0,0.0,0.2222,0.4
+Innaya_Vol 2_Translations.txt,5037,⁷in Unibgum,gold,0.47,0.6528,0.0,0.6528,0.0,0.0,0.0,0.0
+Innaya_Vol 2_Translations.txt,1527,"¹⁹d’Ennam-Aššur,",unclean,0.4298,0.55,0.0,0.55,1.0,0.0,0.0625,0.4
+Innaya_Vol 2_Translations.txt,4089,"⁶qu’Ennum-Aššur,",unclean,0.4298,0.55,0.0,0.55,1.0,0.0,0.0625,0.4
+Innaya_Vol 2_Translations.txt,4723,"¹⁰³ étoffes d’Akkad,",gold,0.471,0.6833,0.0,0.6833,0.0,0.0,0.05,0.0
+Innaya_Vol 2_Translations.txt,6952,⁹déposez-(le),gold,0.472,0.85,0.0,0.85,0.0,0.0,0.0,0.4
+Innaya_Vol 2_Translations.txt,11981,¹⁵’Selon ¹⁶’la tablette de la Ville … ¹⁷’ensemble … ¹⁸’nous … ¹⁹’votre/vos …,unclean,0.428,0.6635,0.0,0.6635,0.0,0.0,0.1184,0.0
+Innaya_Vol 2_Translations.txt,2408,⁸′Nous [écrivons],unclean,0.4277,0.6283,0.0,0.6283,0.0,0.0,0.0588,0.0
+"5. II. Caravan Documents, 7-53.txt",2232,1 s —— —— Buṣû,unclean,0.4273,0.575,0.0,0.575,0.6667,0.0,0.2857,0.0
+10. VII.docx.txt,48,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+10. VII.docx.txt,55,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+10. VII.docx.txt,104,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+10. VII.docx.txt,147,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+10. VII.docx.txt,156,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+10. VII.docx.txt,189,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+10. VII.docx.txt,228,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+10. VII.docx.txt,233,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+10. VII.docx.txt,272,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+10. VII.docx.txt,306,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+10. VII.docx.txt,345,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+10. VII.docx.txt,350,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+10. VII.docx.txt,381,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",41,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",69,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",74,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",115,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",120,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",161,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",166,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",170,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",206,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",210,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",246,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",250,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",256,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",288,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",292,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",315,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",348,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",354,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",386,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",410,Seal,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",412,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",414,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",462,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"11. VIII. Lamassatum, 154-164.txt",467,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",50,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",92,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",101,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",146,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",148,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",166,Seal,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",168,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",207,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",296,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",344,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",347,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",354,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",394,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",400,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",458,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",465,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",505,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",540,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"12. IX. The children of Elamma, 165-178.txt",573,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"13. X. Ištar-lamassi, 179-188.txt",48,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"13. X. Ištar-lamassi, 179-188.txt",105,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"13. X. Ištar-lamassi, 179-188.txt",157,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"13. X. Ištar-lamassi, 179-188.txt",195,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"13. X. Ištar-lamassi, 179-188.txt",232,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"13. X. Ištar-lamassi, 179-188.txt",271,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"13. X. Ištar-lamassi, 179-188.txt",306,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"13. X. Ištar-lamassi, 179-188.txt",360,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"13. X. Ištar-lamassi, 179-188.txt",365,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"13. X. Ištar-lamassi, 179-188.txt",402,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"13. X. Ištar-lamassi, 179-188.txt",411,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"13. X. Ištar-lamassi, 179-188.txt",417,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"13. X. Ištar-lamassi, 179-188.txt",452,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",100,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",170,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",225,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",256,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",288,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",323,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",384,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",422,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",425,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",427,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",458,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",487,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",520,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",525,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",549,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",583,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",587,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",591,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",619,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",661,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",665,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",708,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"14. XI. Ir_am-Aššur, 189-205.txt",716,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"15. XII. Šalimma, 206-210.txt",70,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"15. XII. Šalimma, 206-210.txt",92,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"15. XII. Šalimma, 206-210.txt",105,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"15. XII. Šalimma, 206-210.txt",136,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"15. XII. Šalimma, 206-210.txt",174,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"15. XII. Šalimma, 206-210.txt",179,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"15. XII. Šalimma, 206-210.txt",184,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"15. XII. Šalimma, 206-210.txt",219,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"15. XII. Šalimma, 206-210.txt",223,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"15. XII. Šalimma, 206-210.txt",266,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"15. XII. Šalimma, 206-210.txt",275,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"15. XII. Šalimma, 206-210.txt",280,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,59,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,100,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,130,kam,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,133,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,182,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,191,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,237,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,272,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,305,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,342,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,375,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,425,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,476,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,513,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,557,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,601,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,607,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,650,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,678,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,706,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,709,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,743,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,765,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,769,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,799,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,832,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,864,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,869,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,915,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,920,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,963,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,968,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,1008,Seals,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,1013,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+16. XIII.docx.txt,1043,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"17. XIV. Šu-Ištar, 235-245.txt",54,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"17. XIV. Šu-Ištar, 235-245.txt",87,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"17. XIV. Šu-Ištar, 235-245.txt",91,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"17. XIV. Šu-Ištar, 235-245.txt",126,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"17. XIV. Šu-Ištar, 235-245.txt",170,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"17. XIV. Šu-Ištar, 235-245.txt",197,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"17. XIV. Šu-Ištar, 235-245.txt",235,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"17. XIV. Šu-Ištar, 235-245.txt",273,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"17. XIV. Šu-Ištar, 235-245.txt",304,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"17. XIV. Šu-Ištar, 235-245.txt",332,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"17. XIV. Šu-Ištar, 235-245.txt",337,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"17. XIV. Šu-Ištar, 235-245.txt",372,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"17. XIV. Šu-Ištar, 235-245.txt",399,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"17. XIV. Šu-Ištar, 235-245.txt",402,Comment,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7
+"4. I. Six Basic Documents, 1-6.txt",48,Notes,gold,0.475,1.0,0.0,1.0,0.0,0.0,0.0,0.7

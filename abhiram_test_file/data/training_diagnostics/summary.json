@@ -1,0 +1,10 @@
+{
+  "total_rows": 31592,
+  "gold_rows": 30687,
+  "unclean_rows": 905,
+  "threshold": 0.45,
+  "score_min": 0.0,
+  "score_max": 0.9867,
+  "score_mean": 0.7317,
+  "review_queue": "review_queue.csv"
+}

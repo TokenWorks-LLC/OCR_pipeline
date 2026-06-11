@@ -1,0 +1,12 @@
+DECISION TREE ESTIMATION OF TOXIC RISK
+NAME Paul Schickedantz, Jack Reid DATE 12- 4- 80
+COMPOUND NAME
+2-Hydroxycyclododecanone
+STRUCTURE
+OH
+O
+ESTIMATED TOXICITY CLASS II LORILLARD COMPOUND A41 CODE NUMBER
+COMMENTS
+This due to carbocyclic the direct keto attachment alcohol of was the placed ketone in to estimated the cyclic toxicity nucleus. class II
+00838511
+LORILLARD RESEARCH CENTER FORM 1 (580)

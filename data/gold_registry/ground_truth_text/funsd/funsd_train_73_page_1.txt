@@ -1,0 +1,32 @@
+RJR Mailfile Table Update Sheet
+Alert Number 970220
+To: RJR IR - Suz /Art
+From: Drew Huyett
+Date: 3/ 7/ 97
+Program Group 102- Eclipse
+System Corp/ Multibrand
+Mailfile ID: 3, 984 Mailfile Description Mail Order- Indy Responders
+Dataset Name
+(Complete by IR)
+Quantity: 273
+Program#: Maildate: 3/ 700418 17/ 97
+BRC Codes w81 carton order form
+T Codes NA
+Seeds 25
+Suppression 5
+Mailfile Cells
+1 HD home delivery
+2 SP sneak preview
+3
+4
+5
+6
+7
+8
+9
+10
+Notes
+This is for notes
+51673
+4300
+970220 XLS Mailfile

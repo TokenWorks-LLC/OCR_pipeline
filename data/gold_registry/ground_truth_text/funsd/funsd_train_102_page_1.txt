@@ -1,0 +1,14 @@
+COMPOUND STRUCTURE
+COMPOUND CODE B83 Litton Genetic Assay Bionetics No. 6692
+Chem Abstr# N/ A
+Compound Name Proprietary Mixture
+ASSAY RESULT M. Lymph: negative with S9 activation, positive without
+S9 activation; Rerun: negative without S9 activation, border-
+COMPOUND STRUCTURE line positive test with S9 activation -Technical problems with the
+Unknown Mixture
+PH (CALCULATED 50%) 5. 26
+PHYSICAL APPEARANCE Yellow liquid
+bp/mp N/ A C @ mm Hg
+REGULATORY STATUS N/ A
+Misc
+81310636

@@ -1,0 +1,32 @@
+{
+  "policy_version": "phase9_private_beta_scope_v1",
+  "notes": "Phase 9 narrow private-beta policy. Receipts and Latn,Hang remain excluded unless new validated evidence updates this file.",
+  "document_type_policy": {
+    "receipts_commercial_docs": "exclude_from_private_beta",
+    "typewritten_historical_directories": "allow_private_beta_with_mandatory_review",
+    "historical_book": "internal_only_with_review",
+    "historical_printed_books": "internal_only_with_review",
+    "scanned_forms": "internal_only_with_review"
+  },
+  "script_exclusions": [
+    "Latn,Hang"
+  ],
+  "export_rules": {
+    "allow_private_beta_with_mandatory_review": {
+      "review_required": true,
+      "export_requires_review_state": [
+        "accepted",
+        "corrected",
+        "exported"
+      ]
+    },
+    "internal_only_with_review": {
+      "review_required": true,
+      "private_beta_export_allowed": false
+    },
+    "exclude_from_private_beta": {
+      "review_required": true,
+      "private_beta_export_allowed": false
+    }
+  }
+}

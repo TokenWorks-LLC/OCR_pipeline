@@ -1,37 +1,69 @@
 # OCR Pipeline
 
-Production OCR pipeline with page-level text extraction, preprocessing, fortified OCR ensemble fallback, and Akkadian detection.
+This repository contains a document OCR pipeline for extracting page-level text from PDFs, routing difficult pages through OCR, and producing auditable outputs for downstream review, evaluation, and structured document modeling.
 
-This repository currently exposes two stable CLIs:
+## What The Pipeline Does
 
-- `run_pipeline.py`: compatibility entrypoint
-- `tools/run_page_text.py`: page-text pipeline entrypoint
+The current pipeline is built around `run_pipeline.py` and `tools/run_page_text.py`.
 
-`run_pipeline.py` maps to the page-text runner and keeps legacy flag compatibility where possible.
-With the default configuration, difficult pages fall back to a preprocessing-heavy OCR ensemble that preserves diacritics and rich scripts wherever possible.
+At a high level it:
+
+1. Reads PDFs from an input directory, single file, or manifest.
+2. Tries to use the PDF text layer when that text is usable.
+3. Runs page diagnostics to measure scan quality, layout complexity, and routing signals.
+4. Applies OCR when needed, including adaptive routing and optional multi-engine fallback.
+5. Postprocesses extracted text while preserving raw OCR output for auditability.
+6. Writes page text, progress telemetry, diagnostics, and quality artifacts to the output directory.
+
+## Core Runtime Shape
+
+- `run_pipeline.py`
+  Compatibility entrypoint. Supports legacy flags and can run a two-pass workflow.
+- `tools/run_page_text.py`
+  Stable page-text runner used by the compatibility entrypoint.
+- `production/page_diagnostics.py`
+  Produces per-page diagnostics before acceptance or OCR routing.
+- `production/ocr_strategy.py`
+  Selects text-layer, fast OCR, layout-first OCR, or conservative fallback behavior.
+- `production/postprocessing/`
+  Cleanup, adapter-based correction, and review-oriented postprocessing.
+- `production/quality_scoring.py`
+  Scores page, document, and run quality and applies launch-gate logic.
+- `production/document_model.py`
+  Converts pipeline output into a canonical structured document model.
+
+## Primary Outputs
+
+Every run centers on `client_page_text.csv`, with one row per page.
+
+Common artifacts include:
+
+- `client_page_text.csv`
+- `client_page_text.json`
+- `progress.csv`
+- `page_diagnostics.jsonl`
+- `layout_regions.jsonl`
+- `document_quality.jsonl`
+- `run_quality.json`
+
+Depending on OCR mode, the pipeline can also emit ensemble and disagreement analysis artifacts.
 
 ## Quick Start
 
-### Local (validated)
+Validate the environment and current entrypoints:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -U pip pytest
-
-# Verify environment and entrypoints
 python run_pipeline.py --help
 python run_pipeline.py --validate-only -c config.json
-python test_pipeline.py --allow-missing-engines
 ```
 
-### Run on input folder
+Run the compatibility entrypoint on a directory of PDFs:
 
 ```bash
 python run_pipeline.py --input-dir data/input --output-dir reports/output
 ```
 
-### Run page-text directly
+Run the page-text pipeline directly:
 
 ```bash
 python tools/run_page_text.py \
@@ -41,79 +73,54 @@ python tools/run_page_text.py \
   --ocr-fallback ensemble
 ```
 
-Output CSV:
-
-- `reports/output/client_page_text.csv`
-- Columns: `pdf_name,page,page_text,has_akkadian`
-
-Pipeline behavior:
-
-- PDF text layer first when available
-- preprocessing-heavy OCR fallback for harder pages
-- diacritic-aware ensemble fusion across available OCR backends
-- Akkadian detection on the fused page text
-
-## Canonical Commands
-
-Use these as the source of truth from repo root:
-
-- `python run_pipeline.py --help`
-- `python tools/run_page_text.py --help`
-- `python -m pytest tests -q`
-- `python test_pipeline.py --allow-missing-engines` (optional smoke convenience)
-- `python test_pipeline.py` (optional strict smoke)
-
-## CI
-
-GitHub Actions workflow `test_suite` runs on every `push` and `pull_request` and enforces:
-
-- `ruff` lint checks on active Python paths
-- `prettier --check` for Markdown/JSON/YAML files in active docs and workflow paths
-- `python -m pytest tests -q`
-- `python test_pipeline.py --allow-missing-engines`
-
-Use branch protection required check name: `test_suite`.
-
-## Local Hooks
-
-GitHub Actions does not run on `git commit`; it runs on `push` and `pull_request`.
-
-For local commit-time enforcement, this repo includes `.pre-commit-config.yaml`.
-Install the hook once per clone:
+Run the test suite:
 
 ```bash
-python -m pip install pre-commit
-pre-commit install
+python -m pytest tests -q
+python test_pipeline.py --allow-missing-engines
 ```
 
-That local `pre-commit` hook runs:
+## Documentation
 
-- `ruff` checks on active Python paths
-- `prettier --check` on active Markdown/JSON/YAML files
+The current canonical docs are:
 
-Detailed operations are in `docs/RUN_AND_TEST.md` and `docs/PAGE_TEXT_RUNBOOK.md`.
+- [Pipeline Overview](docs/PIPELINE_OVERVIEW.md)
+- [Docs Index](docs/README.md)
+- [Quickstart](QUICKSTART.md)
+- [Run And Test](docs/RUN_AND_TEST.md)
+- [Routes And Backends](docs/ROUTES_AND_BACKENDS.md)
+- [Page Text Runbook](docs/PAGE_TEXT_RUNBOOK.md)
+- [Page Diagnostics](docs/PAGE_DIAGNOSTICS.md)
+- [Postprocessing](docs/POSTPROCESSING.md)
+- [Quality Scoring](docs/QUALITY_SCORING.md)
+- [Document Model Schema](docs/document_model_schema.md)
+- [Gold-Set Evaluation](docs/GOLDSET_EVALUATION.md)
+- [Experiment Tracking](docs/EXPERIMENT_TRACKING.md)
 
-## Docker
+Only the docs listed above should be treated as the active description of the pipeline.
 
-Use `README_docker.md` for container commands. Docker commands are documented there but were not executed in the current environment because Docker is not installed in this dev container.
+## Repository Layout
 
-## Project Layout
-
-- `run_pipeline.py`: compatibility wrapper
-- `tools/run_page_text.py`: page-text extractor
-- `production/ensemble_ocr.py`: preprocessing + OCR ensemble + text fusion
-- `test_pipeline.py`: smoke checks
-- `tests/test_pipeline_e2e.py`: end-to-end regression tests for CLI workflows
-- `profiles/`: detection profiles
-- `config*.json`: run/evaluation configs
-- `docs/`: operational documentation
+- `production/`
+  Runtime modules for routing, diagnostics, postprocessing, quality scoring, and adapters.
+- `tools/`
+  CLI tools for extraction, evaluation, comparison, and experiments.
+- `tests/`
+  Regression, unit, and end-to-end coverage.
+- `profiles/`
+  Detection and preprocessing profile assets.
+- `config/`
+  Runtime schemas and policy/configuration files.
+- `data/`
+  Input and evaluation-support data.
+- `docs/`
+  Canonical technical documentation.
 
 ## Notes
 
-- There is no root `requirements.txt` or `setup.py` workflow in this repo.
-- Legacy top-level scripts `quick_start.py` and `gold_evaluation.py` were removed as redundant/stale.
-- Legacy archive/evaluation/cache artifacts were removed as part of repository cleanup.
-- Active PR coverage validates the supported page-text pipeline, command mapping, manifest building, and ensemble fusion logic.
+- `run_pipeline.py` remains the stable top-level command even though the maintained page-text implementation lives behind `tools/run_page_text.py`.
+- The repository does not currently provide a single pinned root install workflow such as `requirements.txt` or `pyproject.toml`.
+- `README_docker.md` remains the Docker-specific reference for container usage.
 
 ## License
 

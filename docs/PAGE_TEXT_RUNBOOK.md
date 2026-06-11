@@ -93,6 +93,45 @@ python tools/run_page_text.py \
 
 1. `client_page_text.csv` (main deliverable)
 2. `progress.csv` (timing + processing-path telemetry)
+3. `client_page_text.json` (final per-page JSON output)
+4. `page_diagnostics.jsonl`, `layout_regions.jsonl`, `ensemble_output.jsonl`, `per_engine_output.jsonl`
+5. `disagreement_report.json`, `confusion_matrix.json`
+6. `document_quality.jsonl`, `run_quality.json`
+
+Postprocessing metadata is attached per page and region:
+
+- `raw_text`, `cleaned_text`, `corrected_text`
+- `adapter_used`, `corrections_applied`, `correction_confidence`
+- `lexicon_coverage`, `unknown_token_rate`, `protected_character_changes`
+- `needs_human_review`
+- `page_quality_score`, `document_quality_score`, `quality_class`, `quality_reasons`
+- `failed_gate`, `gate_reason`
+
+Region-level layout metadata includes quality fields:
+
+- `region_quality_score`, `quality_class`, `needs_review`, `quality_reasons`
+
+Optional quality and launch-gate controls:
+
+- `--launch-gate-mode <internal|beta|production|strict>`
+- `--quality-config <path>`
+- `--quality-threshold-production <0..1>`
+- `--quality-threshold-usable <0..1>`
+- `--quality-threshold-weak <0..1>`
+- `--gate-max-empty-rate <0..1>`
+- `--gate-max-timeout-rate <0..1>`
+- `--gate-max-failed-rate <0..1>`
+- `--gate-min-avg-quality <0..1>`
+- `--gate-max-review-rate <0..1>`
+
+Optional postprocessing controls:
+
+- `--disable-postprocessing`
+- `--disable-rule-corrections`
+- `--enable-model-correction`
+- `--postprocess-adapter <name>`
+- `--postprocess-lexicon <domain=/path/to/words.txt>`
+- `--akkadian-lexicon-path <path>`
 
 ## Operational Checklist
 

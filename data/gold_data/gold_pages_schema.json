@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OCR Gold Set Page Record",
+  "type": "object",
+  "required": [
+    "pdf_name",
+    "page",
+    "ground_truth_text",
+    "language_primary",
+    "script_type",
+    "document_type",
+    "layout_type"
+  ],
+  "properties": {
+    "page_key": {
+      "type": "string",
+      "description": "Optional stable identifier; if omitted evaluator builds one from pdf_name+page"
+    },
+    "pdf_name": {
+      "type": "string",
+      "description": "PDF filename or source identifier"
+    },
+    "page": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "1-based page number"
+    },
+    "page_reference": {
+      "type": "string",
+      "description": "Optional image/page reference for non-PDF sources"
+    },
+    "ground_truth_text": {
+      "type": "string",
+      "description": "Human-verified reference text"
+    },
+    "language_primary": {
+      "type": "string",
+      "description": "Primary language for the page"
+    },
+    "languages_present": {
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      ],
+      "description": "List of languages (comma/pipe-separated string or JSON array)"
+    },
+    "script_type": {
+      "type": "string",
+      "description": "Primary or mixed script label (latin, arabic, mixed, transliteration, etc.)"
+    },
+    "document_type": {
+      "type": "string",
+      "description": "e.g. article, monograph, table, inscription"
+    },
+    "layout_type": {
+      "type": "string",
+      "description": "e.g. single_column, two_column, mixed"
+    },
+    "has_tables": { "type": ["boolean", "string"] },
+    "has_footnotes": { "type": ["boolean", "string"] },
+    "has_columns": { "type": ["boolean", "string"] },
+    "has_diacritics": { "type": ["boolean", "string"] },
+    "has_transliteration": { "type": ["boolean", "string"] },
+    "scan_quality": {
+      "type": "string",
+      "description": "e.g. high, medium, low, degraded"
+    },
+    "expected_difficulty": {
+      "type": "string",
+      "description": "e.g. easy, medium, hard"
+    },
+    "expected_special_handling": {
+      "type": "string",
+      "description": "Optional hints such as rtl, heavy_diacritics, transliteration"
+    }
+  },
+  "additionalProperties": true
+}

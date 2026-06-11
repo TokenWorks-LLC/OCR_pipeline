@@ -1,0 +1,15 @@
+MIS PROJECT REQUEST
+PART I - CLIENT REQUEST
+Requested by: Karl Hutchison Project Number: (assigned by MIS)
+Phone Department: Number: BD 7970 & SS Date Date Submitted: Required: 4/20/98 4/17/98
+System: x REQUEST 1. 5. 2. 4. 3. Enhancement Maintenance Ad Emergency Special Hoc Processing TYPE x 3. 4. 2. 5. 6. 1. 7. REASON Return Customer Government System Procedural Productivity Business On Error Change Impact Investment Error CODE Requirement Improvement X Immediate Medium Low Defer High PRIORITY
+PROBLEM DEFINITION
+Description Please Please run place job of output Request: FRMRXUM2 in the same for directory. GPC, Misty, and Kool against file b:\common\khutchi\r892unm.lst.
+Reason for Request:
+Calculation of 1997 STR volumes for these brands for allocation of Period 2A budgets.
+Request Authorized By: Karl Hutchison
+REQUEST 1. 2. 3. 4. 5. Special Enhancement functionality, Maintenance- Emergency- data Ad normal Hoc- correction TYPE: processing Processing reporting nice application fix which productivity to program requirement have high is not or feature volume error part technology improvement, of which new file normal maintenance business is failure not processing new part need of or REASON 2. 1. 3. 4. 5. 6. Productivity Return B&W's designed Customer Government Business process, System CODE: external on Error- or Change Impact Investment- implement Improvement Requirement customers System change requested strategic is dollar not in time required a functioning change savings business direction savings affects by law as
+7. Procedural operations, etc. Error caused by user, scheduling,
+REQUEST DESIGNATED AUTHORIZED SYSTEM OWNER BY MUST BEFORE BE SUBMISSION AUTHORIZED TO BY THE THE MIS DEPARTMENT CLIENT SYSTEMS DIRECTOR MANAGER. OR THE
+12009596
+PRODUCED FROM B&W WEB SITE

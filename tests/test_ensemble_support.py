@@ -130,6 +130,88 @@ def test_pdf_text_extractor_uses_ensemble_when_text_layer_fails(monkeypatch):
     assert meta["method"] == "ocr_ensemble"
 
 
+def test_pdf_text_extractor_accepts_text_layer_when_strategy_allows(monkeypatch):
+    module = _load_protected_runner_module()
+    extractor = module.PDFTextExtractor(
+        prefer_text_layer=True,
+        ocr_fallback=None,
+        profile_path=str(ROOT / "profiles" / "akkadian_strict.json"),
+    )
+
+    class StubDiagnostics:
+        def to_pipeline_metadata(self):
+            return {
+                "text_layer_char_count": "120",
+                "text_layer_word_count": "20",
+                "text_layer_usable": "true",
+                "text_layer_suspicious_reasons": "",
+                "estimated_column_count": "1",
+                "layout_complexity_score": "0.20",
+                "contrast_score": "0.20",
+                "noise_score": "0.04",
+                "recommended_preprocessing_profile": "clean_scan",
+                "language_hint": "unknown",
+            }
+
+    monkeypatch.setattr(
+        extractor.diagnostics,
+        "inspect_page",
+        lambda pdf_path, page_num, language_hint="unknown": (StubDiagnostics(), "Text-layer content"),
+    )
+
+    text, used_text_layer, meta = extractor.extract_page_text("dummy.pdf", 0)
+
+    assert text == "Text-layer content"
+    assert used_text_layer is True
+    assert meta["text_layer_acceptance"] == "accepted"
+    assert meta["method"] == "text_layer"
+
+
+def test_pdf_text_extractor_rejects_text_layer_and_uses_ocr_fallback(monkeypatch):
+    module = _load_protected_runner_module()
+    extractor = module.PDFTextExtractor(
+        prefer_text_layer=True,
+        ocr_fallback="ensemble",
+        profile_path=str(ROOT / "profiles" / "akkadian_strict.json"),
+    )
+
+    class StubDiagnostics:
+        def to_pipeline_metadata(self):
+            return {
+                "text_layer_char_count": "180",
+                "text_layer_word_count": "30",
+                "text_layer_usable": "true",
+                "text_layer_suspicious_reasons": "broken_unicode",
+                "estimated_column_count": "1",
+                "layout_complexity_score": "0.20",
+                "contrast_score": "0.20",
+                "noise_score": "0.04",
+                "recommended_preprocessing_profile": "clean_scan",
+                "language_hint": "unknown",
+            }
+
+    class StubEnsemble:
+        def extract_page_text(self, pdf_path: str, page_num: int):
+            return "OCR fallback text", {"engines_used": ["paddle"], "final_output_source": "paddle"}
+
+        def get_engine_performance_summary(self):
+            return {}
+
+    extractor.ensemble = StubEnsemble()
+    monkeypatch.setattr(
+        extractor.diagnostics,
+        "inspect_page",
+        lambda pdf_path, page_num, language_hint="unknown": (StubDiagnostics(), "Suspicious layer text"),
+    )
+
+    text, used_text_layer, meta = extractor.extract_page_text("dummy.pdf", 0)
+
+    assert text == "OCR fallback text"
+    assert used_text_layer is False
+    assert str(meta["text_layer_acceptance"]).startswith("rejected")
+    assert meta["method"] == "ocr_ensemble"
+
+
 def test_pdf_text_extractor_force_ocr_overrides_text_layer(monkeypatch):
     module = _load_protected_runner_module()
     extractor = module.PDFTextExtractor(

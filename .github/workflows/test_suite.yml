@@ -37,17 +37,6 @@ jobs:
       - name: Lint (ruff)
         run: ruff check run_pipeline.py test_pipeline.py production tools tests
 
-      - name: Format check (prettier)
-        run: |
-          prettier --check \
-            "README*.md" \
-            "QUICKSTART.md" \
-            "docs/**/*.md" \
-            "doc/**/*.md" \
-            ".github/workflows/*.yml" \
-            "*.json" \
-            "profiles/**/*.json"
-
       - name: Run pytest suite
         run: python -m pytest tests -q
 

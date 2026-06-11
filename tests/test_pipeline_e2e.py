@@ -71,8 +71,10 @@ def test_run_page_text_inputs_mode_generates_expected_outputs(tmp_path: Path):
 
     output_csv = output_dir / "client_page_text.csv"
     progress_csv = output_dir / "progress.csv"
+    layout_jsonl = output_dir / "layout_regions.jsonl"
     assert output_csv.exists()
     assert progress_csv.exists()
+    assert layout_jsonl.exists()
 
     rows = _read_csv(output_csv, encoding="utf-8-sig")
     assert len(rows) == 2
@@ -81,17 +83,59 @@ def test_run_page_text_inputs_mode_generates_expected_outputs(tmp_path: Path):
     assert rows[1]["pdf_name"] == sample_pdf.name
     assert rows[0]["has_akkadian"] == "false"
     assert rows[1]["has_akkadian"] == "true"
+    assert all(row["status"] == "success" for row in rows)
+    assert all(row["failure_reason"] == "" for row in rows)
+    assert all(row["extraction_method"] == "text_layer" for row in rows)
+    assert all(row["input_file"] == sample_pdf.name for row in rows)
+    assert [row["page_number"] for row in rows] == ["1", "2"]
+    assert all(row["document_id"] for row in rows)
+    assert all(row["page_id"] for row in rows)
+    assert all(int(row["output_text_length"]) > 0 for row in rows)
+    assert all(float(row["runtime_ms"]) >= 0.0 for row in rows)
 
     progress_rows = _read_csv(progress_csv)
     assert len(progress_rows) == 2
-    assert list(progress_rows[0].keys()) == [
+    header = list(progress_rows[0].keys())
+    required_fields = {
         "pdf_name",
         "page",
         "ms",
         "used_text_layer",
         "has_akkadian",
+        "status",
+        "failure_reason",
+        "extraction_method",
+        "engine_statuses",
+        "detected_orientation_angle",
+        "detected_orientation_class",
+        "detected_rotation_base_angle",
+        "detected_skew_angle",
+        "detected_layout_type",
+        "detected_column_count",
+        "detected_has_columns",
+        "is_born_digital",
+        "text_layer_char_count",
+        "text_layer_word_count",
+        "estimated_skew_degrees",
+        "layout_complexity_score",
+        "recommended_preprocessing_profile",
+        "recommended_ocr_strategy",
+        "language_hint",
+        "document_id",
+        "page_id",
+        "engine_used",
+        "runtime_ms",
+        "output_text_length",
+        "text_layer_usable",
+        "text_layer_suspicious_reasons",
+        "text_layer_acceptance",
+        "is_mostly_blank",
         "timestamp",
-    ]
+    }
+    assert required_fields.issubset(set(header))
+
+    layout_lines = [line for line in layout_jsonl.read_text(encoding="utf-8").splitlines() if line.strip()]
+    assert len(layout_lines) == 2
 
 
 def test_run_page_text_manifest_mode_parses_header_and_comments(tmp_path: Path):

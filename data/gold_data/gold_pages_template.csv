@@ -1,0 +1,5 @@
+page_key,pdf_name,page,page_reference,ground_truth_text,language_primary,languages_present,script_type,document_type,layout_type,has_tables,has_footnotes,has_columns,has_diacritics,has_transliteration,scan_quality,expected_difficulty,expected_special_handling
+sample_en_001,sample_english.pdf,1,,This is a clean single-column English sample page.,english,"english",latin,article,single_column,false,false,false,false,false,high,easy,
+sample_de_001,sample_german.pdf,1,,Über die Bedeutung der Überlieferung in wissenschaftlichen Texten.,german,"german,english",latin,article,single_column,false,true,false,true,false,medium,medium,heavy_diacritics
+sample_ar_001,sample_arabic.pdf,1,,هذا مثال لنص عربي لاختبار التوافق مع النصوص من اليمين إلى اليسار.,arabic,"arabic",arabic,article,single_column,false,false,false,false,false,medium,medium,rtl
+sample_akk_001,sample_translit.pdf,1,,a-na LUGAL i-na É.GAL ša qātīšu i-di-in,akkadian,"akkadian,english",transliteration,edition,two_column,false,true,true,true,true,low,hard,transliteration|diacritics

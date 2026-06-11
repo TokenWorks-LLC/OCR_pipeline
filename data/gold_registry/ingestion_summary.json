@@ -1,0 +1,20 @@
+{
+  "timestamp_utc": "2026-05-19T20:04:18Z",
+  "ingested_dataset_ids": [
+    "funsd",
+    "cord_v2",
+    "ocrd_gt_vd_sbb",
+    "dahn_corpus"
+  ],
+  "record_counts": {
+    "manifest_total": 687,
+    "funsd": 199,
+    "cord_v2": 260,
+    "ocrd_gt_vd_sbb": 120,
+    "dahn_corpus": 80,
+    "smoke": 50,
+    "validation": 140,
+    "test": 40,
+    "train": 429
+  }
+}

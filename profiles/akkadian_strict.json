@@ -22,14 +22,16 @@
   },
 
   "preprocessing": {
-    "rotation_search_degrees": [0],
+    "rotation_search_degrees": [0, 90, 180, 270],
     "enable_adaptive_threshold": true,
     "enable_denoise": true,
     "enable_morphology": true,
     "contrast_factor": 1.8,
     "sharpen_radius": 1.5,
     "sharpen_percent": 180,
-    "deskew": false
+    "deskew": true,
+    "deskew_min_abs_degrees": 0.2,
+    "deskew_max_abs_degrees": 45.0
   },
 
   "layout": {
@@ -44,6 +46,44 @@
     "min_confidence": 0.55,
     "per_engine_timeout_s": 30,
     "max_lines_per_page": 1000
+  },
+
+  "routing": {
+    "mode": "strict",
+    "max_engines_per_page": 2,
+    "max_fallback_engines": 2,
+    "layout_first_full_page_fallback": true,
+    "enable_akkadian_rule": true,
+    "quality_thresholds": {
+      "min_confidence": 0.3,
+      "min_text_chars": 12,
+      "min_alnum_ratio": 0.2,
+      "text_layer_min_chars": 24,
+      "layout_complexity_threshold": 0.55
+    },
+    "timeouts": {
+      "per_engine_timeout_s": 30,
+      "per_page_timeout_s": 0
+    },
+    "health": {
+      "max_consecutive_timeouts": 2,
+      "max_consecutive_failures": 3,
+      "skip_unhealthy_in_strict": true
+    },
+    "engine_priority": ["doctr", "kraken", "cured", "paddle", "mmocr"],
+    "fast_ocr_engines": ["doctr", "paddle"],
+    "layout_first_engines": ["doctr", "paddle", "mmocr"],
+    "diacritic_sensitive_engines": ["kraken", "cured", "doctr"],
+    "language_rules": [
+      {
+        "name": "akkadian_transliteration",
+        "enabled": true,
+        "when_any_hint_contains": ["akkadian", "transliteration", "cuneiform"],
+        "engine_priority": ["cured", "kraken", "doctr"],
+        "force_profile": "transliteration_or_diacritic_heavy",
+        "strategy": "high_dpi_conservative"
+      }
+    ]
   },
 
   "fusion": {

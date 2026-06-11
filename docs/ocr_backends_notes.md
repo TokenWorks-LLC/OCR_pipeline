@@ -1,51 +1,62 @@
 # OCR Backend Notes
 
-## Current State
+This note describes how backend availability fits into the current pipeline.
 
-This repository supports multiple OCR backends through the current page-text pipeline path:
+## Runtime Position
 
-- `run_pipeline.py` (compatibility wrapper)
-- `tools/run_page_text.py` (stable page-text runner)
-- `.merge_protect/tools/run_page_text.py` (protected implementation)
+The OCR system is centered on:
 
-Backends referenced by runtime checks:
+- `run_pipeline.py`
+- `tools/run_page_text.py`
+- the maintained implementation behind `.merge_protect/tools/run_page_text.py`
+
+The pipeline can work with multiple OCR backends, but backend selection is conditional and diagnostics-driven rather than hardwired.
+
+## Backends Referenced By Runtime Checks
 
 - `paddleocr`
 - `doctr`
 - `mmocr`
 - `kraken`
 
-The active fallback path can now run a fortified ensemble across the available backends for harder pages.
+Other backends may appear in adapters or experiments, but the list above is the practical set to treat as the active OCR backend surface.
 
 ## Validation Commands
 
+Portable validation:
+
 ```bash
 python test_pipeline.py --allow-missing-engines
+```
+
+Strict validation:
+
+```bash
 python test_pipeline.py
 ```
 
-- Portable mode (`--allow-missing-engines`) checks wiring without requiring every backend.
-- Strict mode requires all backends to be importable.
+Optional dependency and adapter checks:
 
-## Backend Selection
+```bash
+python tools/backend_optional_dependency_check.py
+```
 
-`tools/run_page_text.py` currently exposes OCR fallback as:
+## CLI Fallback Modes
 
+`tools/run_page_text.py` exposes:
+
+- `--ocr-fallback none`
 - `--ocr-fallback paddle`
 - `--ocr-fallback ensemble`
-- `--ocr-fallback none`
 
-Use `--prefer-text-layer` to prioritize PDF text extraction and minimize OCR use where possible.
+Use `--prefer-text-layer` when you want the pipeline to favor embedded PDF text before OCR.
 
-Use `--force-ocr` with an OCR fallback when benchmarking OCR engines on PDFs that already have a text layer.
+Use `--force-ocr` when you need OCR output even for PDFs that already contain selectable text.
 
-Ensemble mode:
+## Operational Guidance
 
-- preprocesses the rendered page into multiple image variants
-- runs best-effort inference across configured OCR backends
-- fuses outputs with diacritic-aware consensus scoring
-- prefers rich-script preservation for Akkadian, German, Arabic, and similar text
-
-## Notes on Historical Docs
-
-Older references to `src/` engine modules and `tools/run_enhanced_eval.py` do not match the current active runtime path and should be treated as historical.
+- treat backend availability as environment-dependent
+- validate engines before large runs
+- use portable checks for general development
+- use strict checks before backend-sensitive regression runs
+- use evaluation reports, not anecdotal spot checks, to compare backend behavior

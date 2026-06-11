@@ -8,6 +8,7 @@ import importlib
 import os
 import subprocess
 import sys
+import types
 from pathlib import Path
 
 
@@ -58,6 +59,35 @@ def check_validate_only() -> tuple[bool, str]:
     return (ok, "run_pipeline --validate-only passed" if ok else out + err)
 
 
+def _apply_doctr_torch_compat_shim() -> None:
+    """Provide minimal torch._dynamo members for docTR imports when absent."""
+    try:
+        import torch
+    except Exception:
+        return
+
+    dynamo_obj = getattr(torch, "_dynamo", None)
+    if dynamo_obj is None:
+        dynamo_obj = types.SimpleNamespace()
+
+    if not hasattr(dynamo_obj, "is_compiling"):
+        dynamo_obj.is_compiling = lambda: False
+    if not hasattr(dynamo_obj, "disable"):
+        dynamo_obj.disable = lambda fn=None, recursive=True: (fn if fn else (lambda f: f))
+
+    eval_frame = getattr(dynamo_obj, "eval_frame", None)
+    if eval_frame is None:
+        eval_frame = types.SimpleNamespace()
+    if not hasattr(eval_frame, "OptimizedModule"):
+        class OptimizedModule(torch.nn.Module):
+            pass
+
+        eval_frame.OptimizedModule = OptimizedModule
+
+    dynamo_obj.eval_frame = eval_frame
+    torch._dynamo = dynamo_obj
+
+
 def check_engine_imports(required: list[str]) -> tuple[bool, str]:
     missing: list[str] = []
     present: list[str] = []
@@ -65,6 +95,8 @@ def check_engine_imports(required: list[str]) -> tuple[bool, str]:
     for engine in required:
         module_name = ENGINE_MODULES[engine]
         try:
+            if engine == "doctr":
+                _apply_doctr_torch_compat_shim()
             importlib.import_module(module_name)
             present.append(engine)
         except Exception:

@@ -1,0 +1,348 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ocr_pipeline/page_diagnostics.schema.json",
+  "title": "PageDiagnosticsRecord",
+  "type": "object",
+  "required": [
+    "timestamp",
+    "pdf_name",
+    "page",
+    "status",
+    "failure_reason",
+    "extraction_method",
+    "used_text_layer",
+    "has_akkadian",
+    "page_number",
+    "input_file",
+    "width",
+    "height",
+    "dpi",
+    "render_scale",
+    "is_born_digital",
+    "text_layer_char_count",
+    "text_layer_word_count",
+    "text_density",
+    "foreground_ratio",
+    "estimated_skew_degrees",
+    "blur_score",
+    "contrast_score",
+    "noise_score",
+    "connected_component_count",
+    "estimated_column_count",
+    "has_large_images",
+    "has_tables_estimate",
+    "layout_complexity_score",
+    "recommended_preprocessing_profile",
+    "recommended_ocr_strategy",
+    "language_hint",
+    "page_image_rendered",
+    "render_failure_reason",
+    "page_has_usable_text_layer",
+    "text_layer_usable",
+    "text_layer_accepted",
+    "text_layer_rejected_reason",
+    "text_layer_quality_score",
+    "text_layer_suspicious_patterns",
+    "text_layer_suspicious_reasons",
+    "text_layer_acceptance",
+    "is_mostly_blank"
+  ],
+  "properties": {
+    "timestamp": {
+      "type": "string"
+    },
+    "pdf_name": {
+      "type": "string"
+    },
+    "page": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "type": "string"
+    },
+    "failure_reason": {
+      "type": "string"
+    },
+    "extraction_method": {
+      "type": "string"
+    },
+    "used_text_layer": {
+      "type": "boolean"
+    },
+    "has_akkadian": {
+      "type": "boolean"
+    },
+    "page_number": {
+      "type": ["string", "integer"]
+    },
+    "input_file": {
+      "type": "string"
+    },
+    "width": {
+      "type": ["string", "number"]
+    },
+    "height": {
+      "type": ["string", "number"]
+    },
+    "dpi": {
+      "type": ["string", "number"]
+    },
+    "render_scale": {
+      "type": ["string", "number"]
+    },
+    "is_born_digital": {
+      "type": ["string", "boolean"]
+    },
+    "text_layer_char_count": {
+      "type": ["string", "number"]
+    },
+    "text_layer_word_count": {
+      "type": ["string", "number"]
+    },
+    "text_density": {
+      "type": ["string", "number"]
+    },
+    "foreground_ratio": {
+      "type": ["string", "number"]
+    },
+    "estimated_skew_degrees": {
+      "type": ["string", "number", "null"]
+    },
+    "blur_score": {
+      "type": ["string", "number"]
+    },
+    "contrast_score": {
+      "type": ["string", "number"]
+    },
+    "noise_score": {
+      "type": ["string", "number"]
+    },
+    "connected_component_count": {
+      "type": ["string", "number"]
+    },
+    "estimated_column_count": {
+      "type": ["string", "number"]
+    },
+    "has_large_images": {
+      "type": ["string", "boolean"]
+    },
+    "has_tables_estimate": {
+      "type": ["string", "boolean"]
+    },
+    "layout_complexity_score": {
+      "type": ["string", "number"]
+    },
+    "recommended_preprocessing_profile": {
+      "type": "string"
+    },
+    "applied_preprocessing_profile": {
+      "type": "string"
+    },
+    "detected_page_layout_mode": {
+      "type": "string"
+    },
+    "detected_region_count": {
+      "type": ["string", "number"]
+    },
+    "detected_has_footnotes": {
+      "type": ["string", "boolean"]
+    },
+    "detected_has_table_interruptions": {
+      "type": ["string", "boolean"]
+    },
+    "reading_order_confidence": {
+      "type": ["string", "number"]
+    },
+    "reading_order_source": {
+      "type": "string"
+    },
+    "ordering_source": {
+      "type": "string"
+    },
+    "region_ocr_used": {
+      "type": ["string", "boolean"]
+    },
+    "region_ocr_attempted": {
+      "type": ["string", "boolean"]
+    },
+    "selected_strategy": {
+      "type": "string"
+    },
+    "strategy_mode": {
+      "type": "string"
+    },
+    "strategy_use_text_layer": {
+      "type": ["string", "boolean"]
+    },
+    "strategy_use_full_page_ocr": {
+      "type": ["string", "boolean"]
+    },
+    "strategy_use_region_ocr": {
+      "type": ["string", "boolean"]
+    },
+    "strategy_primary_engine": {
+      "type": "string"
+    },
+    "strategy_fallback_engines": {
+      "type": "string"
+    },
+    "strategy_ensemble_needed": {
+      "type": ["string", "boolean"]
+    },
+    "strategy_max_engines_per_page": {
+      "type": ["string", "number"]
+    },
+    "engines_attempted": {
+      "type": "string"
+    },
+    "engines_skipped": {
+      "type": "string"
+    },
+    "engine_skip_reasons": {
+      "type": "string"
+    },
+    "fallback_path": {
+      "type": "string"
+    },
+    "final_output_source": {
+      "type": "string"
+    },
+    "runtime_per_engine_ms": {
+      "type": "string"
+    },
+    "confidence_per_engine": {
+      "type": "string"
+    },
+    "consensus_used": {
+      "type": ["string", "boolean"]
+    },
+    "consensus_winner_engine": {
+      "type": "string"
+    },
+    "char_disagreement_rate": {
+      "type": ["string", "number"]
+    },
+    "token_disagreement_rate": {
+      "type": ["string", "number"]
+    },
+    "line_disagreement_rate": {
+      "type": ["string", "number"]
+    },
+    "engine_agreement_score": {
+      "type": ["string", "number"]
+    },
+    "consensus_entropy": {
+      "type": ["string", "number"]
+    },
+    "ensemble_uncertain": {
+      "type": ["string", "boolean"]
+    },
+    "human_review_recommended": {
+      "type": ["string", "boolean"]
+    },
+    "low_quality_ensemble": {
+      "type": ["string", "boolean"]
+    },
+    "raw_text": {
+      "type": "string"
+    },
+    "cleaned_text": {
+      "type": "string"
+    },
+    "corrected_text": {
+      "type": "string"
+    },
+    "adapter_used": {
+      "type": "string"
+    },
+    "corrections_applied": {
+      "type": "string"
+    },
+    "correction_diff": {
+      "type": "string"
+    },
+    "correction_confidence": {
+      "type": ["string", "number"]
+    },
+    "lexicon_coverage": {
+      "type": ["string", "number"]
+    },
+    "unknown_token_rate": {
+      "type": ["string", "number"]
+    },
+    "protected_character_changes": {
+      "type": ["string", "number"]
+    },
+    "needs_human_review": {
+      "type": ["string", "boolean"]
+    },
+    "postprocess_quality_score": {
+      "type": ["string", "number"]
+    },
+    "postprocess_quality_metrics": {
+      "type": "string"
+    },
+    "model_correction_reason": {
+      "type": "string"
+    },
+    "page_quality_score": {
+      "type": ["string", "number"]
+    },
+    "document_quality_score": {
+      "type": ["string", "number"]
+    },
+    "quality_class": {
+      "type": "string"
+    },
+    "quality_reasons": {
+      "type": "string"
+    },
+    "failed_gate": {
+      "type": "string"
+    },
+    "gate_reason": {
+      "type": "string"
+    },
+    "recommended_ocr_strategy": {
+      "type": "string"
+    },
+    "language_hint": {
+      "type": "string"
+    },
+    "page_image_rendered": {
+      "type": ["string", "boolean"]
+    },
+    "render_failure_reason": {
+      "type": "string"
+    },
+    "page_has_usable_text_layer": {
+      "type": ["string", "boolean"]
+    },
+    "text_layer_usable": {
+      "type": ["string", "boolean"]
+    },
+    "text_layer_accepted": {
+      "type": ["string", "boolean"]
+    },
+    "text_layer_rejected_reason": {
+      "type": "string"
+    },
+    "text_layer_quality_score": {
+      "type": ["string", "number"]
+    },
+    "text_layer_suspicious_patterns": {
+      "type": "string"
+    },
+    "text_layer_suspicious_reasons": {
+      "type": "string"
+    },
+    "text_layer_acceptance": {
+      "type": "string"
+    },
+    "is_mostly_blank": {
+      "type": ["string", "boolean"]
+    }
+  },
+  "additionalProperties": true
+}

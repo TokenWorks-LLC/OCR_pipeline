@@ -17,6 +17,7 @@ If a document is not listed here, it should not be treated as part of the canoni
 - [Routes And Backends](ROUTES_AND_BACKENDS.md)
 - [Page Diagnostics](PAGE_DIAGNOSTICS.md)
 - [Postprocessing](POSTPROCESSING.md)
+- [Citation / Bibliography Parsing](CITATION_PARSING.md)
 - [Quality Scoring](QUALITY_SCORING.md)
 - [Document Model Schema](document_model_schema.md)
 

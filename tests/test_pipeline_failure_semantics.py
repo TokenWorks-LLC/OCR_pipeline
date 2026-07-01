@@ -97,7 +97,16 @@ def test_empty_rate_threshold_breaches_return_nonzero(tmp_path: Path):
     assert "failed" in statuses
 
 
-def test_no_usable_ensemble_engine_returns_nonzero(tmp_path: Path):
+def test_no_usable_ensemble_engine_still_succeeds_for_text_layer_pages(tmp_path: Path):
+    """No usable OCR engine must not fail a run whose pages all used the text layer.
+
+    OCR fallback is opportunistic: the engine-availability gate should only fire
+    when a page actually needed OCR. A page served entirely by an accepted text
+    layer does not depend on the ensemble, so a broken/empty engine config must
+    not gate-fail the run in the default (non-strict) mode. Operators who require
+    full engine readiness opt in via ``--strict-readiness`` (covered by
+    ``test_strict_readiness_flag_emits_failure_reason``).
+    """
     input_dir = tmp_path / "inputs"
     input_dir.mkdir(parents=True)
     sample_pdf = input_dir / "sample.pdf"
@@ -120,10 +129,15 @@ def test_no_usable_ensemble_engine_returns_nonzero(tmp_path: Path):
         str(profile),
     )
 
-    assert proc.returncode != 0
+    assert proc.returncode == 0, proc.stdout + proc.stderr
+    assert "engine_availability_gate" not in (proc.stdout + proc.stderr)
+
     rows = _read_csv(output_dir / "client_page_text.csv", encoding="utf-8-sig")
     assert len(rows) == 1
     assert rows[0]["status"] == "success"
+
+    payload = json.loads((output_dir / "run_quality.json").read_text(encoding="utf-8"))
+    assert payload.get("launch_gate", {}).get("should_fail_run", True) is False
 
 
 def test_strict_readiness_flag_emits_failure_reason(tmp_path: Path):

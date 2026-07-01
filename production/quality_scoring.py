@@ -583,6 +583,7 @@ class OCRQualityScorer:
         run_summary: dict[str, Any],
         has_usable_engine: bool,
         strict_readiness_ok: bool,
+        ocr_required: bool = True,
     ) -> LaunchGateResult:
         reasons: list[str] = []
         failed_gate = ""
@@ -592,7 +593,12 @@ class OCRQualityScorer:
         mode = self.gate_mode
         thresholds = self.gate_thresholds
 
-        if not has_usable_engine:
+        # The engine-availability gate guards against shipping a run whose pages
+        # silently went un-OCR'd because no engine was usable. It must only fire
+        # when the run actually depended on OCR: a run whose pages were all
+        # served by the PDF text layer must not be failed just because no OCR
+        # engine is installed (see the text-layer-only CI regression).
+        if ocr_required and not has_usable_engine:
             failed_gate = "engine_availability_gate"
             gate_reason = "No usable OCR engine available"
             reasons.append(gate_reason)

@@ -1713,6 +1713,7 @@ class PageTextPipeline:
             run_summary=run_summary,
             has_usable_engine=self.extractor.has_usable_ocr_engine(),
             strict_readiness_ok=self.extractor.strict_readiness_ok(),
+            ocr_required=self._run_required_ocr(),
         )
 
         self.run_quality_summary = dict(run_summary)
@@ -2661,6 +2662,23 @@ class PageTextPipeline:
         else:
             self.stats["failed_pages"] += 1
 
+    def _run_required_ocr(self) -> bool:
+        """Return True if any processed page actually depended on OCR.
+
+        A page that was fully served by the PDF text layer does not need an OCR
+        engine. The engine-availability checks (both the launch gate and the
+        exit-code reason) must only fire when at least one processed page was not
+        satisfied by the text layer; otherwise a healthy text-layer-only run gets
+        false-failed simply because no OCR engine happens to be installed.
+        ``pages_processed`` counts every page that entered processing (including
+        empty/timeout/error paths), while ``text_layer_used`` counts only pages
+        the text layer resolved, so their difference is a conservative signal for
+        "OCR was required".
+        """
+        pages_processed = int(self.stats.get("pages_processed", 0))
+        text_layer_used = int(self.stats.get("text_layer_used", 0))
+        return (pages_processed - text_layer_used) > 0
+
     def _evaluate_exit_code(self) -> Tuple[int, List[str]]:
         failure_reasons: List[str] = []
 
@@ -2668,7 +2686,11 @@ class PageTextPipeline:
         if total_pages > 0 and self.stats.get("success_pages", 0) == 0:
             failure_reasons.append("all_pages_failed")
 
-        if self.args.ocr_fallback != 'none' and not self.extractor.has_usable_ocr_engine():
+        if (
+            self.args.ocr_fallback != 'none'
+            and self._run_required_ocr()
+            and not self.extractor.has_usable_ocr_engine()
+        ):
             failure_reasons.append("no_usable_ocr_engine")
 
         if self.args.strict_readiness and not self.extractor.strict_readiness_ok():

@@ -7,6 +7,7 @@ binary fixtures. They validate the real CLI entrypoints and CSV artifacts.
 from __future__ import annotations
 
 import csv
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -377,3 +378,70 @@ def test_build_manifest_strict_missing_pdf_returns_error(tmp_path: Path):
     text = proc.stdout + proc.stderr
     assert "Missing PDFs referenced in CSV" in text
     assert "missing.pdf" in text
+
+
+def test_text_layer_only_run_passes_without_usable_ocr_engine(tmp_path: Path):
+    """A fully text-layer run must succeed even when no OCR engine is usable.
+
+    Regression guard for the CI break on main: the engine-availability launch
+    gate previously failed every run without a usable OCR engine, even when
+    every page was resolved by the PDF text layer and no OCR was required.
+    """
+    # Pages need enough text to be accepted as a real text layer; short snippets
+    # are classified as mostly-blank and rerouted to OCR.
+    paragraph = (
+        "This is a substantial paragraph of English prose that exercises the "
+        "text-layer acceptance path so the page is treated as a real text page "
+        "rather than a mostly blank scan. "
+    )
+    page_body = "\n".join(paragraph[:80] for _ in range(12))
+
+    pdf_path = tmp_path / "text_layer_only.pdf"
+    output_dir = tmp_path / "outputs"
+    _write_pdf(pdf_path, [page_body, page_body])
+
+    # Force the CI condition: make every optional OCR engine unimportable so the
+    # ensemble has no usable backend, regardless of what is installed locally.
+    shim_dir = tmp_path / "no_engine_shim"
+    shim_dir.mkdir()
+    for engine_module in ("kraken", "paddleocr", "doctr", "mmocr"):
+        (shim_dir / f"{engine_module}.py").write_text(
+            'raise ImportError("engine disabled for regression test")\n',
+            encoding="utf-8",
+        )
+    env = dict(os.environ)
+    existing_pythonpath = env.get("PYTHONPATH", "")
+    env["PYTHONPATH"] = (
+        str(shim_dir) + (os.pathsep + existing_pythonpath if existing_pythonpath else "")
+    )
+
+    proc = subprocess.run(
+        [
+            PYTHON,
+            "run_pipeline.py",
+            "--input-file",
+            str(pdf_path),
+            "--output-dir",
+            str(output_dir),
+            "-c",
+            "config.json",
+        ],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        timeout=180,
+        check=False,
+        env=env,
+    )
+    combined = proc.stdout + proc.stderr
+
+    # The run genuinely had no usable OCR engine, yet must not be gate-failed
+    # because every page was served by the text layer.
+    assert "engine_availability_gate" not in combined, combined
+    assert proc.returncode == 0, combined
+
+    rows = _read_csv(output_dir / "client_page_text.csv", encoding="utf-8-sig")
+    assert len(rows) == 2
+    assert all(row["status"] == "success" for row in rows)
+    assert all(row["extraction_method"] == "text_layer" for row in rows)

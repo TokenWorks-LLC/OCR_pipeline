@@ -196,3 +196,59 @@ def test_launch_gate_strict_requires_readiness() -> None:
 
     assert result.should_fail_run is True
     assert result.failed_gate == "strict_readiness_gate"
+
+
+def _clean_run_summary() -> dict[str, float]:
+    return {
+        "empty_page_rate": 0.0,
+        "timeout_rate": 0.0,
+        "failed_page_rate": 0.0,
+        "average_quality_score": 0.65,
+        "review_percentage": 0.0,
+    }
+
+
+def test_launch_gate_skips_engine_gate_when_ocr_not_required() -> None:
+    # A healthy text-layer-only run (no page needed OCR) must not be failed just
+    # because no OCR engine is installed. Regression guard for the CI break where
+    # a fully text-layer run tripped engine_availability_gate.
+    scorer = OCRQualityScorer(gate_mode="internal")
+    result = scorer.evaluate_launch_gates(
+        run_summary=_clean_run_summary(),
+        has_usable_engine=False,
+        strict_readiness_ok=True,
+        ocr_required=False,
+    )
+
+    assert result.should_fail_run is False
+    assert result.failed_gate == ""
+    assert all("engine" not in reason.lower() for reason in result.reasons)
+
+
+def test_launch_gate_fires_engine_gate_when_ocr_required() -> None:
+    # When the run actually depended on OCR but no engine was usable, the gate
+    # must still fail the run.
+    scorer = OCRQualityScorer(gate_mode="internal")
+    result = scorer.evaluate_launch_gates(
+        run_summary=_clean_run_summary(),
+        has_usable_engine=False,
+        strict_readiness_ok=True,
+        ocr_required=True,
+    )
+
+    assert result.should_fail_run is True
+    assert result.failed_gate == "engine_availability_gate"
+
+
+def test_launch_gate_engine_gate_defaults_to_required() -> None:
+    # Backward compatibility: callers that do not pass ocr_required keep the
+    # original fail-closed behavior when no engine is usable.
+    scorer = OCRQualityScorer(gate_mode="internal")
+    result = scorer.evaluate_launch_gates(
+        run_summary=_clean_run_summary(),
+        has_usable_engine=False,
+        strict_readiness_ok=True,
+    )
+
+    assert result.should_fail_run is True
+    assert result.failed_gate == "engine_availability_gate"
